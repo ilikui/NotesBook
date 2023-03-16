@@ -1,8 +1,8 @@
 {
   "theme": "moonstone",
-  "cssTheme": "Obsidian You",
+  "cssTheme": "Minimal",
   "baseFontSizeAction": true,
-  "baseFontSize": 10,
+  "baseFontSize": 15,
   "interfaceFontFamily": "Academy Engraved LET",
   "accentColor": ""
 }

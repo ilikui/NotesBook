@@ -5,11 +5,11 @@
     "fontSize": 16,
     "iconColor": null,
     "recentlyUsedIcons": [
+      "FasWindowRestore",
+      "FabReadme",
+      "FasBook",
       "RiDoorLockBoxLine",
-      "FabDeezer",
-      "RiFolder3Line",
-      "FarFolder",
-      "FasFolder"
+      "FabDeezer"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -81,5 +81,11 @@
   "300工作管理/330 工作记录/33003": "RiFolderLine",
   "300工作管理/310 车身控制/3101 需求管理/310102 工作流": "RiFolderLine",
   "工作管理": "FarFolder",
-  "工作管理/工作计划.md": "RiDoorLockBoxLine"
+  "工作管理/工作计划.md": "RiDoorLockBoxLine",
+  "数字花园": "FasFolder",
+  "工作管理/工作流.md": "RiFolder3Line",
+  "读书管理": "FasFolder",
+  "读书管理/《JavaScript权威指南》.md": "FasBook",
+  "读书管理/读书管理.md": "FabReadme",
+  "数字花园/笔记管理.md": "FasWindowRestore"
 }
