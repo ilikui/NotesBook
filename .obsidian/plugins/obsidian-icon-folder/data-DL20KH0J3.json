@@ -1,0 +1,46 @@
+{
+  "settings": {
+    "migrated": true,
+    "iconPacksPath": "plugins/obsidian-icon-folder/icons",
+    "fontSize": 16,
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "FabPython",
+      "FasRss",
+      "FasBook",
+      "Fab500px",
+      "FabChromecast"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraPadding": {
+      "top": 2,
+      "right": 2,
+      "bottom": 2,
+      "left": 2
+    }
+  },
+  "A知识管理": "FabChromecast",
+  "B学习管理": "FabEmpire",
+  "C工作管理": "Fab500px",
+  "D读书管理": "FabElementor",
+  "E兴趣管理": "FabDeploydog",
+  "F搜藏管理": "FabDyalog",
+  "G考试管理": "FabBitcoin",
+  "I图片附件": "FarImage",
+  "H绘图附件": "FasDrawPolygon",
+  "J文档附件": "FasGraduationCap",
+  "B学习管理/B1Linux": "FabLinux",
+  "B学习管理/B2嵌入式": "RiCreativeCommonsByLine",
+  "A知识管理/A1Obsidian": "RiShoppingBasketFill",
+  "D读书管理/D1Malab": "FasMartiniGlass",
+  "D读书管理/D2Simulink": "FabSimplybuilt",
+  "B学习管理/B3Matalab": "FabEmpire",
+  "B学习管理/B3Matalab/MFile": "FabCodepen",
+  "C工作管理/C1车身控制": "FasCar",
+  "A知识管理/A2笔记收藏": "FasRss",
+  "C工作管理/C2Autosar笔记": "FabChromecast",
+  "C工作管理/C2Autosar笔记/C201CP": "Fab42Group",
+  "C工作管理/C2Autosar笔记/C202AP": "FabAffiliatetheme",
+  "B学习管理/B4Python": "FabPython"
+}

@@ -1,0 +1,229 @@
+{
+  "main": {
+    "id": "d6b45433551ba3de",
+    "type": "split",
+    "children": [
+      {
+        "id": "bb01a526921f64ba",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9bf0ec61b71f83c2",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          },
+          {
+            "id": "e6ab1ec868c48017",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "工作管理/工作计划.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "80d9f7966b794dec",
+    "type": "split",
+    "children": [
+      {
+        "id": "8103b309c37b3a33",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "92857f5eb2f41a2c",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "9741cc782992fbcf",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "aeed075e9d5bd40d",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "31fde607aedbd8b2",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 310.5
+  },
+  "right": {
+    "id": "08677e2de37ba7f1",
+    "type": "split",
+    "children": [
+      {
+        "id": "6c74609dec87a61f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b0ae05cba47563cd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "工作管理/工作计划.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "78e1b6ad6a81fa39",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "工作管理/工作计划.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "63fb50b63ebece56",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "e0e03f5885b7e7f4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "工作管理/工作计划.md"
+              }
+            }
+          },
+          {
+            "id": "411f8183af1b551b",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "f161671b2bec616a",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "canvas:新建白板": false,
+      "random-note:开始漫游笔记": false,
+      "obsidian-extract-pdf-highlights:PDF Highlights": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-advanced-slides:Show Slide Preview": false,
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
+    }
+  },
+  "active": "e6ab1ec868c48017",
+  "lastOpenFiles": [
+    "m.bat",
+    "工作管理/工作计划.md",
+    "未命名.canvas",
+    "未命名 1.canvas",
+    "100知识管理/130 自动控制理论/自动控制理论.md",
+    "100知识管理/120 笔记收藏/常用资源搜藏.md",
+    "200学习管理/280 汇编语言/汇编语言基础.md",
+    "200学习管理/260 C语言/C和指针.md",
+    "200学习管理/240 Python/Python学习手册.md",
+    "200学习管理/240 Python/simpread-Python 词云可视化.md",
+    "200学习管理/230 Matalab/Matlab版本.md",
+    "300工作管理/310 车身控制/3101 需求管理/310102 工作流/001 工作流.md",
+    "900图片附件/Pasted image 20230316103418.png",
+    "300工作管理/310 车身控制/3102 接口配置管理/VSB工具使用.md",
+    "300工作管理/310 车身控制/3101 需求管理/310102 工作流/工作流程.canvas",
+    "300工作管理/320 Autosar笔记/3201 CP/CP.excalidraw",
+    "300工作管理/320 Autosar笔记/3201 CP/General.md",
+    "300工作管理/320 Autosar笔记/3201 CP/未命名.canvas",
+    "300工作管理/320 Autosar笔记/3201 CP/Classic Platform.md",
+    "300工作管理/320 Autosar笔记/3201 CP/Body And Comfort.md",
+    "300工作管理/320 Autosar笔记/3201 CP/BSWGeneral.md",
+    "300工作管理/310 车身控制/3101 需求管理/310102 工作流/002 需求整理工作流.md",
+    "300工作管理/310 车身控制/3101 需求管理/310102 工作流/004 工具使用流.md",
+    "300工作管理/310 车身控制/3101 需求管理/310102 工作流/003 接口整理工作流.md",
+    "300工作管理/310 车身控制/3101 需求管理/310102 工作流/005 软件生成.md",
+    "100知识管理/110 Obsidian/Slider 帮助文档.md",
+    "100知识管理/110 Obsidian/Obsidian玩法介绍.md",
+    "300工作管理/310 车身控制/3101 需求管理/310101 功能需求/Requirment.md",
+    "300工作管理/310 车身控制/3101 需求管理/310101 功能需求/Structer.excalidraw",
+    "300工作管理/310 车身控制/3101 需求管理/310101 功能需求/31010103#Climate/Climate.md",
+    "300工作管理/310 车身控制/3101 需求管理/310101 功能需求/C102软件结构.md",
+    "300工作管理/330 工作记录/33001/C301问题总结.md",
+    "300工作管理/330 工作记录/33001/C302常用的术语.md",
+    "300工作管理/310 车身控制/3101 需求管理/310101 功能需求/31010101LockgMst/LockgMstCan.canvas",
+    "300工作管理/330 工作记录/33003/000 CEM.canvas",
+    "300工作管理/310 车身控制/3101 需求管理/310102 工作流"
+  ]
+}

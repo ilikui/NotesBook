@@ -1,0 +1,143 @@
+{
+  "main": {
+    "id": "032f6bfa08ae9dcc",
+    "type": "split",
+    "children": [
+      {
+        "id": "1c012a17c04b3de8",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "B学习管理/B3Matalab/Matalb学习笔记.md",
+            "mode": "preview",
+            "backlinks": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "61bf1f96c825faa8",
+    "type": "split",
+    "children": [
+      {
+        "id": "08e6c498502963f5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "322b23625869ad2b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "9a685e2a991b8b9d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#excalidraw",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "c67b8d60530a6bf8",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 345
+  },
+  "right": {
+    "id": "02a1b6ac3de92106",
+    "type": "split",
+    "children": [
+      {
+        "id": "32420507b8b5e7ca",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "aff03481b5a7921b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "B学习管理/B3Matalab/Matalb学习笔记.md",
+                "linksCollapsed": true,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b0bdfcc74bfc6640",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "378e73040f241dc2",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "97b42e2044a216b9",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          },
+          {
+            "id": "7db831e7d1b4cc55",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "B学习管理/B3Matalab/Matalb学习笔记.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 262
+  },
+  "active": "1c012a17c04b3de8",
+  "lastOpenFiles": [
+    "B学习管理/B3Matalab/Matalb学习笔记.md",
+    "H绘图附件/Drawing 2022-05-08 21.19.10.excalidraw.md",
+    "B学习管理/B4Python/Python学习手册.md",
+    "D读书管理/D1Malab/D101Matlab入门.md",
+    "I图片附件/I1Matlab/Matlab.PNG",
+    "I图片附件/I1Matlab/MatalbDesk.PNG",
+    "C工作管理/C2Autosar笔记/C201CP/Classic Platform Autosar.md",
+    "C工作管理/C2Autosar笔记/C201CP/CP.excalidraw",
+    "C工作管理/C1车身控制/Drawing 2022-05-08 20.20.34.excalidraw.md",
+    "C工作管理/C1车身控制/C101 需求管理.md"
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "main": {
+    "id": "d6b45433551ba3de",
+    "type": "split",
+    "children": [
+      {
+        "id": "f858c3742b4d65d0",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "B学习管理/B7Simulink/Simulink仿真及代码生成技术入门到精通.md",
+            "mode": "source",
+            "backlinks": true,
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "80d9f7966b794dec",
+    "type": "split",
+    "children": [
+      {
+        "id": "8103b309c37b3a33",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "92857f5eb2f41a2c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "9741cc782992fbcf",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "aeed075e9d5bd40d",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "08677e2de37ba7f1",
+    "type": "split",
+    "children": [
+      {
+        "id": "6c74609dec87a61f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7f62e4515466804c",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "b0ae05cba47563cd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "B学习管理/B7Simulink/Simulink仿真及代码生成技术入门到精通.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "78e1b6ad6a81fa39",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "B学习管理/B7Simulink/Simulink仿真及代码生成技术入门到精通.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "63fb50b63ebece56",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "e0e03f5885b7e7f4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "B学习管理/B7Simulink/Simulink仿真及代码生成技术入门到精通.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "f858c3742b4d65d0",
+  "lastOpenFiles": [
+    "B学习管理/B5Java/Java学习手册.md",
+    "C工作管理/C2Autosar笔记/C201CP/Classic Platform Autosar.md",
+    "C工作管理/C2Autosar笔记/C201CP/CP.excalidraw",
+    "B学习管理/B3Matalab/Matalb学习笔记.md",
+    "A知识管理/A2笔记收藏/常用资源搜藏.md",
+    "B学习管理/B1Linux/Linux基础使用.md",
+    "A知识管理/A3自动控制理论/自动控制理论.md",
+    "D读书管理/D1Malab/D101Matlab入门.md",
+    "B学习管理/B4Python/Python学习手册.md",
+    "I图片附件/I4Simulink/Sim.png"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "settings": {
+    "migrated": true,
+    "iconPacksPath": ".obsidian/plugins/obsidian-icon-folder/icons",
+    "fontSize": 16,
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "FarFolder",
+      "FasFolder",
+      "RiFolderLine"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraPadding": {
+      "top": 2,
+      "right": 2,
+      "bottom": 2,
+      "left": 2
+    },
+    "extraMargin": {
+      "top": 2,
+      "right": 2,
+      "bottom": 2,
+      "left": 2
+    }
+  },
+  "100知识管理": "FasFolder",
+  "200学习管理": "FasFolder",
+  "300工作管理": "FasFolder",
+  "400读书管理": "FasFolder",
+  "500兴趣管理": "FasFolder",
+  "600搜藏管理": "FasFolder",
+  "700考试管理": "FasFolder",
+  "800绘图附件": "FasFolder",
+  "900图片附件": "FasFolder",
+  "1000文档附件": "FasFolder",
+  "100知识管理/110Obsidian": "FarFolder",
+  "100知识管理/120笔记收藏": "FarFolder",
+  "100知识管理/130自动控制理论": "FarFolder",
+  "200学习管理/210Linux": "FarFolder",
+  "200学习管理/220嵌入式": "FarFolder",
+  "200学习管理/230Matalab": "FarFolder",
+  "200学习管理/240Python": "FarFolder",
+  "200学习管理/250Java": "FarFolder",
+  "200学习管理/260C语言": "FarFolder",
+  "200学习管理/270Simulink": "FarFolder",
+  "300工作管理/310车身控制": "FarFolder",
+  "300工作管理/320Autosar笔记": "FarFolder",
+  "300工作管理/330工作记录": "FarFolder",
+  "400读书管理/410Matlab": "FarFolder",
+  "400读书管理/D2Simulink": "FarFolder",
+  "900图片附件/910Matlab": "FarFolder"
+}

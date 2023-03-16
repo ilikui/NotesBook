@@ -1,0 +1,191 @@
+{
+  "main": {
+    "id": "d6b45433551ba3de",
+    "type": "split",
+    "children": [
+      {
+        "id": "3b01d3791d1fac2b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "089e8b74c153d344",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "300工作管理/310 车身控制/3101 需求管理/310101 功能需求/31010101LockgMst/LockingMgr.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "80d9f7966b794dec",
+    "type": "split",
+    "children": [
+      {
+        "id": "8103b309c37b3a33",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "92857f5eb2f41a2c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "200学习管理/210 Linux/Linux基础使用.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9741cc782992fbcf",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "aeed075e9d5bd40d",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "31fde607aedbd8b2",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 261.5
+  },
+  "right": {
+    "id": "08677e2de37ba7f1",
+    "type": "split",
+    "children": [
+      {
+        "id": "6c74609dec87a61f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b0ae05cba47563cd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "300工作管理/310 车身控制/3101 需求管理/310101 功能需求/31010101LockgMst/LockingMgr.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "78e1b6ad6a81fa39",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "300工作管理/310 车身控制/3101 需求管理/310101 功能需求/31010101LockgMst/LockingMgr.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "63fb50b63ebece56",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "e0e03f5885b7e7f4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "300工作管理/310 车身控制/3101 需求管理/310101 功能需求/31010101LockgMst/LockingMgr.md"
+              }
+            }
+          },
+          {
+            "id": "411f8183af1b551b",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-extract-pdf-highlights:PDF Highlights": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
+      "obsidian-advanced-slides:Show Slide Preview": false,
+      "markdown-importer:打开 Markdown 格式转换器": false
+    }
+  },
+  "active": "089e8b74c153d344",
+  "lastOpenFiles": [
+    "200学习管理/230 Matalab/Matalb学习笔记.md",
+    "100知识管理/110 Obsidian/Obsidian玩法介绍.md",
+    "200学习管理/210 Linux/Linux基础使用.md",
+    "未命名.canvas",
+    "100知识管理/120 笔记收藏/常用资源搜藏.md",
+    "400读书管理/410Matlab/411Matlab入门.md",
+    "200学习管理/280 汇编语言/281网络知识/寄存器的基本原理.md",
+    "200学习管理/270 Simulink/Simulink仿真及代码生成技术入门到精通.md",
+    "200学习管理/250 Java/Java学习手册.md",
+    "200学习管理/260 C语言/C和指针.md"
+  ]
+}

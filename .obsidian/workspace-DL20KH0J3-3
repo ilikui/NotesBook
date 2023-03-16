@@ -1,0 +1,135 @@
+{
+  "main": {
+    "id": "bc6047f30a2b0a07",
+    "type": "split",
+    "children": [
+      {
+        "id": "dec631b8a3ce181a",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "B学习管理/B4Python/Python学习手册.md",
+            "mode": "preview",
+            "backlinks": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3daf21fa1408305e",
+    "type": "split",
+    "children": [
+      {
+        "id": "135bd221f8cd69e0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "87903c946f5ead5a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "50197ccfdbf9f45b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "62eb88cd1125525e",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 324
+  },
+  "right": {
+    "id": "3c54485c74aa8da8",
+    "type": "split",
+    "children": [
+      {
+        "id": "5138bbb3e0e78303",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3fe35c219d1d05ff",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "B学习管理/B4Python/Python学习手册.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2f330fd0d5726ae7",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "8670cacff9c21f90",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "B学习管理/B4Python/Python学习手册.md"
+              }
+            }
+          },
+          {
+            "id": "1d5e371cd7eba1b6",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 122
+  },
+  "active": "dec631b8a3ce181a",
+  "lastOpenFiles": [
+    "B学习管理/B4Python/Python学习手册.md",
+    "B学习管理/B3Matalab/Matalb学习笔记.md",
+    "D读书管理/D1Malab/D101Matlab入门.md",
+    "C工作管理/C1车身控制/C102软件结构.md",
+    "C工作管理/C1车身控制/Requirment.md",
+    "C工作管理/C1车身控制/Structer.excalidraw",
+    "C工作管理/C1车身控制/C101 需求管理.md",
+    "H绘图附件/Drawing 2022-05-08 21.19.10.excalidraw.md",
+    "D读书管理/D1Malab/Untitled Diagram.svg",
+    "Excalidraw/Drawing 2022-06-09 11.54.09.excalidraw"
+  ]
+}

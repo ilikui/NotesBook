@@ -1,0 +1,176 @@
+{
+  "main": {
+    "id": "d6b45433551ba3de",
+    "type": "split",
+    "children": [
+      {
+        "id": "f7c7a09dfa8ab26d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b06f343a17ae3418",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "100知识管理/130 自动控制理论/自动控制理论.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "80d9f7966b794dec",
+    "type": "split",
+    "children": [
+      {
+        "id": "8103b309c37b3a33",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "92857f5eb2f41a2c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "200学习管理/210 Linux/Linux基础使用.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9741cc782992fbcf",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "aeed075e9d5bd40d",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "31fde607aedbd8b2",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 348.5
+  },
+  "right": {
+    "id": "08677e2de37ba7f1",
+    "type": "split",
+    "children": [
+      {
+        "id": "6c74609dec87a61f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b0ae05cba47563cd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "100知识管理/130 自动控制理论/自动控制理论.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "78e1b6ad6a81fa39",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "100知识管理/130 自动控制理论/自动控制理论.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "63fb50b63ebece56",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "e0e03f5885b7e7f4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "100知识管理/130 自动控制理论/自动控制理论.md"
+              }
+            }
+          },
+          {
+            "id": "411f8183af1b551b",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "b06f343a17ae3418",
+  "lastOpenFiles": [
+    "200学习管理/240 Python/Python学习手册.md",
+    "200学习管理/250 Java/Java学习手册.md",
+    "300工作管理/310 车身控制/3102 接口配置管理/VSB工具使用.md",
+    "400读书管理/410#Matlab/411Matlab入门.md",
+    "200学习管理/220#嵌入式/B201嵌入式开发手册/嵌入式C语言自我修养.md",
+    "200学习管理/280 汇编语言/汇编语言基础.md",
+    "300工作管理/330 工作记录/330#01/C303模块屏蔽.md",
+    "300工作管理/330 工作记录/330#01/C302常用的术语.md",
+    "300工作管理/330 工作记录/330#01/C301问题总结.md",
+    "100知识管理/130 自动控制理论/自动控制理论.md"
+  ]
+}

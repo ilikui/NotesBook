@@ -1,0 +1,135 @@
+{
+  "main": {
+    "id": "bc6047f30a2b0a07",
+    "type": "split",
+    "children": [
+      {
+        "id": "973c91086f4ebd5f",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "B学习管理/B3Matalab/Matalb学习笔记.md",
+            "mode": "preview",
+            "backlinks": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3daf21fa1408305e",
+    "type": "split",
+    "children": [
+      {
+        "id": "135bd221f8cd69e0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "87903c946f5ead5a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "50197ccfdbf9f45b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "62eb88cd1125525e",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 328
+  },
+  "right": {
+    "id": "3c54485c74aa8da8",
+    "type": "split",
+    "children": [
+      {
+        "id": "5138bbb3e0e78303",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3fe35c219d1d05ff",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "B学习管理/B3Matalab/Matalb学习笔记.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2f330fd0d5726ae7",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "8670cacff9c21f90",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "B学习管理/B3Matalab/Matalb学习笔记.md"
+              }
+            }
+          },
+          {
+            "id": "1d5e371cd7eba1b6",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "973c91086f4ebd5f",
+  "lastOpenFiles": [
+    "B学习管理/B3Matalab/Matalb学习笔记.md",
+    "B学习管理/B4Python/Python学习手册.md",
+    "C工作管理/C1车身控制/Structer.excalidraw",
+    "C工作管理/C1车身控制/Requirments.excalidraw.md",
+    "C工作管理/C1车身控制/C102软件结构.md",
+    "C工作管理/C1车身控制/C101 需求管理.md",
+    "J文档附件/J1Matlab/【09】visualize.pdf",
+    "G考试管理/未命名.md",
+    "I图片附件/I1Matlab/Matlab.PNG",
+    "I图片附件/I2Python/Python.png"
+  ]
+}

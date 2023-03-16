@@ -1,0 +1,174 @@
+{
+  "main": {
+    "id": "d6b45433551ba3de",
+    "type": "split",
+    "children": [
+      {
+        "id": "abab3455ae3986c8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "92e8d0ab3609b28c",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "80d9f7966b794dec",
+    "type": "split",
+    "children": [
+      {
+        "id": "8103b309c37b3a33",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "92857f5eb2f41a2c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "200学习管理/210Linux/Linux基础使用.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9741cc782992fbcf",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "aeed075e9d5bd40d",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "31fde607aedbd8b2",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 233.5
+  },
+  "right": {
+    "id": "08677e2de37ba7f1",
+    "type": "split",
+    "children": [
+      {
+        "id": "6c74609dec87a61f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b0ae05cba47563cd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "200学习管理/260C语言/C和指针.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "78e1b6ad6a81fa39",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "200学习管理/260C语言/C和指针.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "63fb50b63ebece56",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "e0e03f5885b7e7f4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "200学习管理/260C语言/C和指针.md"
+              }
+            }
+          },
+          {
+            "id": "411f8183af1b551b",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "92e8d0ab3609b28c",
+  "lastOpenFiles": [
+    "200学习管理/230Matalab/Matalb学习笔记.md",
+    "200学习管理/260C语言/C和指针.md",
+    "200学习管理/220嵌入式/B201嵌入式开发手册/嵌入式C语言自我修养.md",
+    "200学习管理/270Simulink/Simulink仿真及代码生成技术入门到精通.md",
+    "900图片附件/920Python/Python.png",
+    "900图片附件/I3Java/java.jpg",
+    "400读书管理/410Matlab/411Matlab入门.md",
+    "100知识管理/130自动控制理论/自动控制理论.md",
+    "300工作管理/330工作记录/C303模块屏蔽.pdf",
+    "300工作管理/330工作记录/C302常用的术语.md"
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "main": {
+    "id": "1c12e1d7423afa76",
+    "type": "split",
+    "children": [
+      {
+        "id": "2c2febaa01fd6495",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "B学习管理/B7Simulink/Simulink仿真及代码生成技术入门到精通.md",
+            "mode": "preview",
+            "backlinks": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e9a6da0b88a41b09",
+    "type": "split",
+    "children": [
+      {
+        "id": "b550e5fad33cb9c5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dc71c23af1a5cf76",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "1d8db9537b974ebd",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "01f151320e63683d",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "41a9989ce39b5f16",
+    "type": "split",
+    "children": [
+      {
+        "id": "fdb84d13e2b1ca6f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "615191aabc886be1",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "4c08f7dc67d370f6",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "B学习管理/B7Simulink/Simulink仿真及代码生成技术入门到精通.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "304550cc66ec8630",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "24c12a3a861dd653",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "B学习管理/B7Simulink/Simulink仿真及代码生成技术入门到精通.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "2c2febaa01fd6495",
+  "lastOpenFiles": [
+    "B学习管理/B7Simulink/Simulink仿真及代码生成技术入门到精通.md"
+  ]
+}

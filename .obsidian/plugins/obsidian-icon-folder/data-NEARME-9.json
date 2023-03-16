@@ -1,0 +1,50 @@
+{
+  "settings": {
+    "migrated": true,
+    "iconPacksPath": ".obsidian/plugins/obsidian-icon-folder/icons",
+    "fontSize": 16,
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "RiFolderLine",
+      "RiFolder2Fill",
+      "FarFolder",
+      "FabAvianex",
+      "FabAirbnb"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraPadding": {
+      "top": 2,
+      "right": 2,
+      "bottom": 2,
+      "left": 2
+    },
+    "extraMargin": {
+      "top": 2,
+      "right": 2,
+      "bottom": 2,
+      "left": 2
+    }
+  },
+  "100知识管理": "FasFolder",
+  "200学习管理": "FasFolder",
+  "300工作管理": "FasFolder",
+  "400读书管理": "FasFolder",
+  "500兴趣管理": "FasFolder",
+  "600搜藏管理": "FasFolder",
+  "700考试管理": "FasFolder",
+  "800绘图附件": "FasFolder",
+  "900图片附件": "FasFolder",
+  "1000文档附件": "FasFolder",
+  "900图片附件/910Matlab": "FarFolder",
+  "910笔记管理": "FasFolder",
+  "300工作管理/320#Autosar笔记": "FabAirbnb",
+  "300工作管理/330#工作记录": "FabAvianex",
+  "200学习管理/240#Python": "FarFolder",
+  "200学习管理/250#Java": "FarFolder",
+  "200学习管理/270#Simulink": "FarFolder",
+  "300工作管理/320#Autosar笔记/3201#CP": "RiFolder3Line",
+  "300工作管理/330#工作记录/330#01": "RiFolder2Fill",
+  "300工作管理/320#Autosar笔记/3202#AP": "FarFolder",
+  "300工作管理/330#工作记录/330#02": "RiFolder2Fill"
+}

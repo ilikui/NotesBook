@@ -1,0 +1,17 @@
+{
+  "fileSortOrder": "alphabetical",
+  "promptDelete": false,
+  "showFrontmatter": false,
+  "rightToLeft": false,
+  "foldIndent": false,
+  "pdfExportSettings": {
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "2",
+    "downscalePercent": 100
+  },
+  "readableLineLength": false,
+  "lineWrap": false,
+  "defaultViewMode": "preview",
+  "legacyEditor": true
+}
