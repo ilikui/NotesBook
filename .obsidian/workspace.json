@@ -24,14 +24,12 @@
             "id": "b8d02382b93c1a03",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "工作管理/工作流.canvas",
-                "viewState": {
-                  "x": 60.627858627858586,
-                  "y": 118.33679833679835,
-                  "zoom": -0.3568934569248593
-                }
+                "file": "工作管理/接口定义.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           }
@@ -196,9 +194,10 @@
   },
   "active": "b8d02382b93c1a03",
   "lastOpenFiles": [
+    "工作管理/工作流.canvas",
+    "Images",
     "工作管理/工作计划.md",
     "工作管理/接口定义.md",
-    "工作管理/工作流.canvas",
     "工作管理/工作流.md",
     "数字花园/数字花园.canvas",
     "读书管理/《JavaScript权威指南》.md",
