@@ -24,12 +24,14 @@
             "id": "b8d02382b93c1a03",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "工作管理/接口定义.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+                "file": "工作管理/工作流.canvas",
+                "viewState": {
+                  "x": 105.45114345114342,
+                  "y": 207.983367983368,
+                  "zoom": -0.3568934569248593
+                }
               }
             }
           }
@@ -109,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工作管理/接口定义.md",
+                "file": "工作管理/工作流.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工作管理/接口定义.md",
+                "file": "工作管理/工作流.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工作管理/接口定义.md"
+                "file": "工作管理/工作流.canvas"
               }
             }
           },
@@ -194,12 +196,12 @@
   },
   "active": "b8d02382b93c1a03",
   "lastOpenFiles": [
+    "工作管理/接口定义.md",
     "Images/20230320/2023032001.PNG",
     "Images/20230320",
     "工作管理/工作流.canvas",
     "Images",
     "工作管理/工作计划.md",
-    "工作管理/接口定义.md",
     "工作管理/工作流.md",
     "数字花园/数字花园.canvas",
     "读书管理/《JavaScript权威指南》.md",
