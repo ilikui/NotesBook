@@ -5,11 +5,11 @@
     "fontSize": 16,
     "iconColor": null,
     "recentlyUsedIcons": [
+      "RiFolderLine",
       "FasWindowRestore",
       "FabReadme",
       "FasBook",
-      "RiDoorLockBoxLine",
-      "FabDeezer"
+      "RiDoorLockBoxLine"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -87,5 +87,6 @@
   "读书管理": "FasFolder",
   "读书管理/《JavaScript权威指南》.md": "FasBook",
   "读书管理/读书管理.md": "FabReadme",
-  "数字花园/笔记管理.md": "FasWindowRestore"
+  "数字花园/笔记管理.md": "FasWindowRestore",
+  "工作管理/接口定义.md": "RiFolderLine"
 }

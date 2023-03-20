@@ -1,0 +1,11 @@
+{
+	"nodes":[
+		{"type":"file","file":"工作管理/工作流.md","id":"4454765cc8007ea8","x":60,"y":-220,"width":400,"height":400,"color":"4"},
+		{"type":"file","file":"工作管理/接口定义.md","id":"0423ea868b5dab98","x":-600,"y":-320,"width":400,"height":400,"color":"4"},
+		{"id":"b96b543884006523","x":-160,"y":400,"width":400,"height":400,"type":"file","file":"工作管理/工作计划.md"}
+	],
+	"edges":[
+		{"id":"fb6744f965961f53","fromNode":"4454765cc8007ea8","fromSide":"left","toNode":"0423ea868b5dab98","toSide":"right","color":"4"},
+		{"id":"428cfb8192003086","fromNode":"4454765cc8007ea8","fromSide":"bottom","toNode":"b96b543884006523","toSide":"top"}
+	]
+}
