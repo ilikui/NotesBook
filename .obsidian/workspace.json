@@ -19,24 +19,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "b8d02382b93c1a03",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "工作管理/工作流.canvas",
-                "viewState": {
-                  "x": 105.45114345114342,
-                  "y": 88.881496881497,
-                  "zoom": -0.3568934569248593
-                }
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -194,15 +178,18 @@
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
     }
   },
-  "active": "b8d02382b93c1a03",
+  "active": "4bf77fd89814f735",
   "lastOpenFiles": [
+    "学习管理/002硬件知识.md",
+    "学习管理/001工具分享.md",
+    "工作管理/工作流.canvas",
+    "学习管理",
+    "工作管理/工作流.md",
     "工作管理/接口定义.md",
+    "工作管理/工作计划.md",
     "Images/20230320/2023032001.PNG",
     "Images/20230320",
-    "工作管理/工作流.canvas",
     "Images",
-    "工作管理/工作计划.md",
-    "工作管理/工作流.md",
     "数字花园/数字花园.canvas",
     "读书管理/《JavaScript权威指南》.md",
     "读书管理/读书管理.md",
@@ -233,7 +220,6 @@
     "300工作管理/310 车身控制/3101 需求管理/310102 工作流/003 接口整理工作流.md",
     "300工作管理/310 车身控制/3101 需求管理/310102 工作流/005 软件生成.md",
     "100知识管理/110 Obsidian/Slider 帮助文档.md",
-    "100知识管理/110 Obsidian/Obsidian玩法介绍.md",
     "300工作管理/310 车身控制/3101 需求管理/310101 功能需求/Structer.excalidraw",
     "300工作管理/310 车身控制/3101 需求管理/310101 功能需求/31010101LockgMst/LockgMstCan.canvas",
     "300工作管理/330 工作记录/33003/000 CEM.canvas",
