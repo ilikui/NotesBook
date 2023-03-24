@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "学习管理/002硬件知识.md",
+                "file": "学习管理/001工具分享.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "学习管理/002硬件知识.md",
+                "file": "学习管理/001工具分享.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "学习管理/002硬件知识.md",
+                "file": "学习管理/001工具分享.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "学习管理/002硬件知识.md"
+                "file": "学习管理/001工具分享.md"
               }
             }
           },
@@ -180,8 +180,8 @@
   },
   "active": "4bf77fd89814f735",
   "lastOpenFiles": [
-    "学习管理/001工具分享.md",
     "学习管理/002硬件知识.md",
+    "学习管理/001工具分享.md",
     "工作管理/工作流.md",
     "工作管理/工作流.canvas",
     "学习管理",
