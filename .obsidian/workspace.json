@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "学习管理/001工具分享.md",
+                "file": "数字花园/笔记管理.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "学习管理/001工具分享.md",
+                "file": "数字花园/笔记管理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "学习管理/001工具分享.md",
+                "file": "数字花园/笔记管理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "学习管理/001工具分享.md"
+                "file": "数字花园/笔记管理.md"
               }
             }
           },
@@ -164,7 +164,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "canvas:Create new canvas": false,
+      "canvas:新建白板": false,
       "random-note:开始漫游笔记": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
@@ -180,6 +180,11 @@
   },
   "active": "4bf77fd89814f735",
   "lastOpenFiles": [
+    "数字花园/数字花园.canvas",
+    "数字花园/笔记管理.md",
+    "搜藏管理/000目录管理.md",
+    "学习管理/000目录大纲.md",
+    "学习管理/003GIT操作.md",
     "学习管理/002硬件知识.md",
     "学习管理/001工具分享.md",
     "工作管理/工作流.md",
@@ -190,10 +195,8 @@
     "Images/20230320/2023032001.PNG",
     "Images/20230320",
     "Images",
-    "数字花园/数字花园.canvas",
     "读书管理/《JavaScript权威指南》.md",
     "读书管理/读书管理.md",
-    "数字花园/笔记管理.md",
     "读书管理",
     "数字花园",
     "m.bat",
@@ -216,10 +219,6 @@
     "300工作管理/320 Autosar笔记/3201 CP/Body And Comfort.md",
     "300工作管理/320 Autosar笔记/3201 CP/BSWGeneral.md",
     "300工作管理/310 车身控制/3101 需求管理/310102 工作流/002 需求整理工作流.md",
-    "300工作管理/310 车身控制/3101 需求管理/310102 工作流/004 工具使用流.md",
-    "300工作管理/310 车身控制/3101 需求管理/310102 工作流/003 接口整理工作流.md",
-    "300工作管理/310 车身控制/3101 需求管理/310102 工作流/005 软件生成.md",
-    "100知识管理/110 Obsidian/Slider 帮助文档.md",
     "300工作管理/310 车身控制/3101 需求管理/310101 功能需求/Structer.excalidraw",
     "300工作管理/310 车身控制/3101 需求管理/310101 功能需求/31010101LockgMst/LockgMstCan.canvas",
     "300工作管理/330 工作记录/33003/000 CEM.canvas",
