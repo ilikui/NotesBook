@@ -13,14 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "数字花园/笔记管理.md",
+                "file": "数字花园/001笔记管理.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "afb51ee3c727b81d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "数字花园/002 卡片笔记.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -95,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "数字花园/笔记管理.md",
+                "file": "数字花园/002 卡片笔记.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "数字花园/笔记管理.md",
+                "file": "数字花园/002 卡片笔记.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "数字花园/笔记管理.md"
+                "file": "数字花园/002 卡片笔记.md"
               }
             }
           },
@@ -178,13 +192,18 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "4bf77fd89814f735",
+  "active": "afb51ee3c727b81d",
   "lastOpenFiles": [
+    "【笔记法】卡片盒笔记法 - 知乎.md",
+    "Attachment/20230326/【笔记法】卡片盒笔记法 - 知乎.pdf",
+    "Attachment/20230326",
+    "Attachment",
+    "数字花园/001笔记管理.md",
+    "数字花园/002 卡片笔记.md",
+    "数字花园/数字花园.canvas",
     "Images/20230326/20230302602.png",
     "学习管理/002硬件知识.pdf",
     "学习管理/002硬件知识_tmp.html",
-    "数字花园/数字花园.canvas",
-    "数字花园/笔记管理.md",
     "搜藏管理/000目录管理.md",
     "学习管理/000目录大纲.md",
     "学习管理/003GIT操作.md",
@@ -202,7 +221,6 @@
     "读书管理/读书管理.md",
     "读书管理",
     "数字花园",
-    "m.bat",
     "未命名 1.canvas",
     "100知识管理/130 自动控制理论/自动控制理论.md",
     "100知识管理/120 笔记收藏/常用资源搜藏.md",
@@ -215,14 +233,11 @@
     "900图片附件/Pasted image 20230316103418.png",
     "300工作管理/310 车身控制/3102 接口配置管理/VSB工具使用.md",
     "300工作管理/310 车身控制/3101 需求管理/310102 工作流/工作流程.canvas",
-    "300工作管理/320 Autosar笔记/3201 CP/CP.excalidraw",
     "300工作管理/320 Autosar笔记/3201 CP/General.md",
     "300工作管理/320 Autosar笔记/3201 CP/未命名.canvas",
     "300工作管理/320 Autosar笔记/3201 CP/Classic Platform.md",
     "300工作管理/320 Autosar笔记/3201 CP/Body And Comfort.md",
     "300工作管理/320 Autosar笔记/3201 CP/BSWGeneral.md",
-    "300工作管理/310 车身控制/3101 需求管理/310102 工作流/002 需求整理工作流.md",
-    "300工作管理/310 车身控制/3101 需求管理/310101 功能需求/Structer.excalidraw",
     "300工作管理/310 车身控制/3101 需求管理/310101 功能需求/31010101LockgMst/LockgMstCan.canvas",
     "300工作管理/330 工作记录/33003/000 CEM.canvas"
   ]
