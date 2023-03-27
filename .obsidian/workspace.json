@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "学习管理/000目录大纲.md",
+                "file": "读书管理/《JavaScript权威指南》.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "学习管理/000目录大纲.md",
+                "file": "读书管理/《JavaScript权威指南》.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "学习管理/000目录大纲.md",
+                "file": "读书管理/《JavaScript权威指南》.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "学习管理/000目录大纲.md"
+                "file": "读书管理/《JavaScript权威指南》.md"
               }
             }
           },
@@ -180,9 +180,10 @@
   },
   "active": "4bf77fd89814f735",
   "lastOpenFiles": [
+    "读书管理/读书管理.md",
+    "学习管理/000目录大纲.md",
     "学习管理/002硬件知识.md",
     "学习管理/001工具分享.md",
-    "学习管理/000目录大纲.md",
     "数字花园/002卡片笔记.md",
     "数字花园/002 卡片笔记.md",
     "数字花园/001笔记管理.md",
@@ -205,7 +206,6 @@
     "Images",
     "数字花园/数字花园.canvas",
     "读书管理/《JavaScript权威指南》.md",
-    "读书管理/读书管理.md",
     "数字花园/笔记管理.md",
     "读书管理",
     "数字花园",
