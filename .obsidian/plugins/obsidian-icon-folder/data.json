@@ -5,11 +5,11 @@
     "fontSize": 16,
     "iconColor": null,
     "recentlyUsedIcons": [
-      "RiFolderLine",
-      "FasWindowRestore",
-      "FabReadme",
-      "FasBook",
-      "RiDoorLockBoxLine"
+      "RiAttachment2",
+      "FarImages",
+      "FasFolder",
+      "RiBookLine",
+      "RiFolderLine"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -87,5 +87,9 @@
   "读书管理": "FasFolder",
   "读书管理/《JavaScript权威指南》.md": "FasBook",
   "读书管理/读书管理.md": "FabReadme",
-  "工作管理/接口定义.md": "RiFolderLine"
+  "工作管理/接口定义.md": "RiFolderLine",
+  "学习管理": "RiBookLine",
+  "搜藏管理": "FasFolder",
+  "Images": "FarImages",
+  "Attachment": "RiAttachment2"
 }

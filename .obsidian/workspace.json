@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "学习管理/001工具分享.md",
+                "file": "学习管理/000目录大纲.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "学习管理/001工具分享.md",
+                "file": "学习管理/000目录大纲.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "学习管理/001工具分享.md",
+                "file": "学习管理/000目录大纲.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "学习管理/001工具分享.md"
+                "file": "学习管理/000目录大纲.md"
               }
             }
           },
@@ -180,20 +180,21 @@
   },
   "active": "4bf77fd89814f735",
   "lastOpenFiles": [
+    "学习管理/002硬件知识.md",
+    "学习管理/001工具分享.md",
+    "学习管理/000目录大纲.md",
+    "数字花园/002卡片笔记.md",
     "数字花园/002 卡片笔记.md",
     "数字花园/001笔记管理.md",
     "搜藏管理/000目录管理.md",
     "搜藏管理",
     "学习管理/003GIT操作.md",
-    "学习管理/000目录大纲.md",
     "Images/20230326/20230302602.png",
     "Images/20230326/20230302601.png",
     "Images/20230326",
     "Attachment/20230326/【笔记法】卡片盒笔记法 .pdf",
     "Attachment/20230326",
     "Attachment",
-    "学习管理/002硬件知识.md",
-    "学习管理/001工具分享.md",
     "工作管理/工作流.md",
     "工作管理/工作流.canvas",
     "学习管理",
@@ -224,7 +225,6 @@
     "300工作管理/320 Autosar笔记/3201 CP/未命名.canvas",
     "300工作管理/320 Autosar笔记/3201 CP/Classic Platform.md",
     "300工作管理/320 Autosar笔记/3201 CP/Body And Comfort.md",
-    "300工作管理/320 Autosar笔记/3201 CP/BSWGeneral.md",
     "300工作管理/310 车身控制/3101 需求管理/310101 功能需求/31010101LockgMst/LockgMstCan.canvas",
     "300工作管理/330 工作记录/33003/000 CEM.canvas"
   ]
