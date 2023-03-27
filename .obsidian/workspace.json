@@ -13,28 +13,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "数字花园/001笔记管理.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "afb51ee3c727b81d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "数字花园/002 卡片笔记.md",
+                "file": "学习管理/001工具分享.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -109,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "数字花园/002 卡片笔记.md",
+                "file": "学习管理/001工具分享.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "数字花园/002 卡片笔记.md",
+                "file": "学习管理/001工具分享.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "数字花园/002 卡片笔记.md"
+                "file": "学习管理/001工具分享.md"
               }
             }
           },
@@ -178,35 +164,34 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "canvas:新建白板": false,
       "random-note:开始漫游笔记": false,
+      "obsidian-extract-pdf-highlights:PDF Highlights": false,
+      "canvas:新建白板": false,
       "switcher:打开快速切换": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "graph:查看关系图谱": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "markdown-importer:打开 Markdown 格式转换器": false,
-      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
-      "obsidian-extract-pdf-highlights:PDF Highlights": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-advanced-slides:Show Slide Preview": false
+      "obsidian-advanced-slides:Show Slide Preview": false,
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
     }
   },
-  "active": "afb51ee3c727b81d",
+  "active": "4bf77fd89814f735",
   "lastOpenFiles": [
-    "【笔记法】卡片盒笔记法 - 知乎.md",
-    "Attachment/20230326/【笔记法】卡片盒笔记法 - 知乎.pdf",
+    "数字花园/002 卡片笔记.md",
+    "数字花园/001笔记管理.md",
+    "搜藏管理/000目录管理.md",
+    "搜藏管理",
+    "学习管理/003GIT操作.md",
+    "学习管理/000目录大纲.md",
+    "Images/20230326/20230302602.png",
+    "Images/20230326/20230302601.png",
+    "Images/20230326",
+    "Attachment/20230326/【笔记法】卡片盒笔记法 .pdf",
     "Attachment/20230326",
     "Attachment",
-    "数字花园/001笔记管理.md",
-    "数字花园/002 卡片笔记.md",
-    "数字花园/数字花园.canvas",
-    "Images/20230326/20230302602.png",
-    "学习管理/002硬件知识.pdf",
-    "学习管理/002硬件知识_tmp.html",
-    "搜藏管理/000目录管理.md",
-    "学习管理/000目录大纲.md",
-    "学习管理/003GIT操作.md",
     "学习管理/002硬件知识.md",
     "学习管理/001工具分享.md",
     "工作管理/工作流.md",
@@ -217,8 +202,10 @@
     "Images/20230320/2023032001.PNG",
     "Images/20230320",
     "Images",
+    "数字花园/数字花园.canvas",
     "读书管理/《JavaScript权威指南》.md",
     "读书管理/读书管理.md",
+    "数字花园/笔记管理.md",
     "读书管理",
     "数字花园",
     "未命名 1.canvas",
