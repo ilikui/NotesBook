@@ -15,6 +15,9 @@
     * Global
     * noinitRam
 
-* 
-
+  
+* 如何维护自己的需求变更，与模型保持一致？
+  * 多加注释
+  * 与polar结合使用
+  * 借用simulink相关的工具
 
