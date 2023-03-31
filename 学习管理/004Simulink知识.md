@@ -10,5 +10,11 @@
 
 
 * Simulink中配置环境不一致怎么做？
+  * 接口配置 RPORT 或者 PPORT
+  * Simulink 配置的数据，保存到mat文件数据
+    * Global
+    * noinitRam
+
+* 
 
 
