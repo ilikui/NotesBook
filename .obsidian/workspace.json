@@ -11,8 +11,13 @@
             "id": "79b7403372995de2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "读书管理/读书管理.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -90,6 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "读书管理/读书管理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,6 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "读书管理/读书管理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +134,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "读书管理/读书管理.md"
+              }
             }
           },
           {
@@ -171,23 +180,24 @@
   },
   "active": "79b7403372995de2",
   "lastOpenFiles": [
-    "工作管理/WorkFlow.excalidraw",
-    "工作管理/WorkFlow.svg",
-    "搜藏管理/000目录管理.md",
-    "工作管理/接口定义.md",
-    "数字花园/002卡片笔记.pdf",
-    "数字花园/002卡片笔记_tmp.html",
+    "工作管理/工作计划.md",
+    "工作管理/工作流.canvas",
     "工作管理/工作流.md",
+    "工作管理/接口定义.md",
+    "工作管理/WorkFlow.excalidraw",
     "数字花园/001笔记管理.md",
     "数字花园/002卡片笔记.md",
     "数字花园/数字花园.canvas",
-    "工作管理/工作计划.md",
-    "工作管理/工作流.canvas",
-    "搜藏管理/002GitHub优秀仓库.md",
-    "学习管理/000目录大纲.md",
-    "学习管理/001工具分享.md",
-    "学习管理/002硬件知识.md",
+    "学习管理/00201电源类.md",
     "学习管理/003GIT操作.md",
+    "学习管理/002硬件知识.md",
+    "学习管理/001工具分享.md",
+    "学习管理/000目录大纲.md",
+    "工作管理/WorkFlow.svg",
+    "搜藏管理/000目录管理.md",
+    "数字花园/002卡片笔记.pdf",
+    "数字花园/002卡片笔记_tmp.html",
+    "搜藏管理/002GitHub优秀仓库.md",
     "Images/Common",
     "读书管理/《Java核心技术·卷 I》.md",
     "读书管理/《》",
@@ -212,7 +222,6 @@
     "200学习管理/240 Python/Python学习手册.md",
     "200学习管理/240 Python/simpread-Python 词云可视化.md",
     "200学习管理/230 Matalab/Matlab版本.md",
-    "300工作管理/310 车身控制/3101 需求管理/310102 工作流/001 工作流.md",
     "900图片附件/Pasted image 20230316103418.png",
     "300工作管理/310 车身控制/3101 需求管理/310102 工作流/工作流程.canvas",
     "300工作管理/320 Autosar笔记/3201 CP/未命名.canvas",

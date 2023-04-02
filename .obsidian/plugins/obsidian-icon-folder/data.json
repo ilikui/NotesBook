@@ -5,11 +5,11 @@
     "fontSize": 16,
     "iconColor": null,
     "recentlyUsedIcons": [
-      "FasDrawPolygon",
-      "RiFolder5Line",
-      "FasAddressBook",
-      "RiAttachment2",
-      "FarImages"
+      "FasCannabis",
+      "FasArrowsUpDownLeftRight",
+      "FabStickerMule",
+      "FabGit",
+      "FarHardDrive"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -94,5 +94,12 @@
   "Attachment": "RiAttachment2",
   "学习管理/000目录大纲.md": "FasAddressBook",
   "数字花园/001笔记管理.md": "RiFolder5Line",
-  "工作管理/WorkFlow.excalidraw": "FasDrawPolygon"
+  "工作管理/WorkFlow.excalidraw": "FasDrawPolygon",
+  "数字花园/002卡片笔记.md": "RiBookLine",
+  "学习管理/001工具分享.md": "RiTodoLine",
+  "学习管理/002硬件知识.md": "FarHardDrive",
+  "学习管理/003GIT操作.md": "FabGit",
+  "学习管理/004Simulink知识.md": "FabStickerMule",
+  "学习管理/00201电源类.md": "FasArrowsUpDownLeftRight",
+  "数字花园/数字花园.canvas": "FasCannabis"
 }
