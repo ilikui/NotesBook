@@ -4,17 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "eedd33d4dac0a666",
+        "id": "948535f74648b0d7",
         "type": "tabs",
         "children": [
           {
-            "id": "882bcf5105c25e1e",
+            "id": "79b7403372995de2",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "工作管理/WorkFlow.excalidraw"
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -92,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工作管理/WorkFlow.excalidraw",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +106,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工作管理/WorkFlow.excalidraw",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,9 +127,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "工作管理/WorkFlow.excalidraw"
-              }
+              "state": {}
             }
           },
           {
@@ -175,9 +169,10 @@
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
     }
   },
-  "active": "882bcf5105c25e1e",
+  "active": "79b7403372995de2",
   "lastOpenFiles": [
     "工作管理/WorkFlow.excalidraw",
+    "工作管理/WorkFlow.svg",
     "搜藏管理/000目录管理.md",
     "工作管理/接口定义.md",
     "数字花园/002卡片笔记.pdf",

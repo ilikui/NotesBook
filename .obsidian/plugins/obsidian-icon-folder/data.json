@@ -5,11 +5,11 @@
     "fontSize": 16,
     "iconColor": null,
     "recentlyUsedIcons": [
+      "FasDrawPolygon",
       "RiFolder5Line",
       "FasAddressBook",
       "RiAttachment2",
-      "FarImages",
-      "FasFolder"
+      "FarImages"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -93,5 +93,6 @@
   "Images": "FarImages",
   "Attachment": "RiAttachment2",
   "学习管理/000目录大纲.md": "FasAddressBook",
-  "数字花园/001笔记管理.md": "RiFolder5Line"
+  "数字花园/001笔记管理.md": "RiFolder5Line",
+  "工作管理/WorkFlow.excalidraw": "FasDrawPolygon"
 }
