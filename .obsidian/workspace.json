@@ -4,37 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "c5964f19f7f52d49",
+        "id": "562f75e9ccaabf0b",
         "type": "tabs",
         "children": [
           {
-            "id": "4bf77fd89814f735",
+            "id": "62ee65aa5e963f1e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "搜藏管理/000目录管理.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "949de165f4f29a04",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "工作管理/接口定义.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+                "file": "工作管理/WorkFlow.excalidraw"
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -109,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工作管理/接口定义.md",
+                "file": "工作管理/WorkFlow.excalidraw",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工作管理/接口定义.md",
+                "file": "工作管理/WorkFlow.excalidraw",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +132,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工作管理/接口定义.md"
+                "file": "工作管理/WorkFlow.excalidraw"
               }
             }
           },
@@ -192,20 +175,21 @@
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
     }
   },
-  "active": "949de165f4f29a04",
+  "active": "62ee65aa5e963f1e",
   "lastOpenFiles": [
+    "工作管理/WorkFlow.excalidraw",
+    "搜藏管理/000目录管理.md",
+    "工作管理/接口定义.md",
     "数字花园/002卡片笔记.pdf",
     "数字花园/002卡片笔记_tmp.html",
     "工作管理/工作流.md",
     "数字花园/001笔记管理.md",
     "数字花园/002卡片笔记.md",
     "数字花园/数字花园.canvas",
-    "工作管理/接口定义.md",
     "工作管理/工作计划.md",
     "工作管理/工作流.canvas",
     "搜藏管理/002GitHub优秀仓库.md",
     "学习管理/000目录大纲.md",
-    "搜藏管理/000目录管理.md",
     "学习管理/001工具分享.md",
     "学习管理/002硬件知识.md",
     "学习管理/003GIT操作.md",
@@ -223,9 +207,7 @@
     "Attachment/20230326/【笔记法】卡片盒笔记法 .pdf",
     "Attachment/20230326",
     "Attachment",
-    "学习管理",
     "Images/20230320/2023032001.PNG",
-    "Images/20230320",
     "数字花园/笔记管理.md",
     "未命名 1.canvas",
     "100知识管理/130 自动控制理论/自动控制理论.md",
