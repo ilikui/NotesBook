@@ -5,11 +5,11 @@
     "fontSize": 16,
     "iconColor": null,
     "recentlyUsedIcons": [
+      "RiFolder5Line",
       "FasAddressBook",
       "RiAttachment2",
       "FarImages",
-      "FasFolder",
-      "RiBookLine"
+      "FasFolder"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -92,5 +92,6 @@
   "搜藏管理": "FasFolder",
   "Images": "FarImages",
   "Attachment": "RiAttachment2",
-  "学习管理/000目录大纲.md": "FasAddressBook"
+  "学习管理/000目录大纲.md": "FasAddressBook",
+  "数字花园/001笔记管理.md": "RiFolder5Line"
 }
