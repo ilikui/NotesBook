@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "562f75e9ccaabf0b",
+        "id": "eedd33d4dac0a666",
         "type": "tabs",
         "children": [
           {
-            "id": "62ee65aa5e963f1e",
+            "id": "882bcf5105c25e1e",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
@@ -175,7 +175,7 @@
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
     }
   },
-  "active": "62ee65aa5e963f1e",
+  "active": "882bcf5105c25e1e",
   "lastOpenFiles": [
     "工作管理/WorkFlow.excalidraw",
     "搜藏管理/000目录管理.md",
