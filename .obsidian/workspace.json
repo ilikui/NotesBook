@@ -11,14 +11,12 @@
             "id": "4bf77fd89814f735",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "数字花园/数字花园.canvas",
-                "viewState": {
-                  "x": -20,
-                  "y": -30,
-                  "zoom": 0
-                }
+                "file": "数字花园/002卡片笔记.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           }
@@ -97,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "数字花园/数字花园.canvas",
+                "file": "数字花园/002卡片笔记.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "数字花园/数字花园.canvas",
+                "file": "数字花园/002卡片笔记.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "数字花园/数字花园.canvas"
+                "file": "数字花园/002卡片笔记.md"
               }
             }
           },
@@ -182,6 +180,10 @@
   },
   "active": "4bf77fd89814f735",
   "lastOpenFiles": [
+    "Images/Common",
+    "搜藏管理/002GitHub优秀仓库.md",
+    "数字花园/001笔记管理.md",
+    "数字花园/数字花园.canvas",
     "读书管理/《Java核心技术·卷 I》.md",
     "读书管理/《》",
     "搜藏管理/001资源网站.md",
@@ -192,7 +194,6 @@
     "学习管理/001工具分享.md",
     "数字花园/002卡片笔记.md",
     "数字花园/002 卡片笔记.md",
-    "数字花园/001笔记管理.md",
     "搜藏管理/000目录管理.md",
     "搜藏管理",
     "学习管理/003GIT操作.md",
@@ -210,7 +211,6 @@
     "Images/20230320/2023032001.PNG",
     "Images/20230320",
     "Images",
-    "数字花园/数字花园.canvas",
     "数字花园/笔记管理.md",
     "读书管理",
     "未命名 1.canvas",
@@ -223,9 +223,7 @@
     "200学习管理/230 Matalab/Matlab版本.md",
     "300工作管理/310 车身控制/3101 需求管理/310102 工作流/001 工作流.md",
     "900图片附件/Pasted image 20230316103418.png",
-    "300工作管理/310 车身控制/3102 接口配置管理/VSB工具使用.md",
     "300工作管理/310 车身控制/3101 需求管理/310102 工作流/工作流程.canvas",
-    "300工作管理/320 Autosar笔记/3201 CP/General.md",
     "300工作管理/320 Autosar笔记/3201 CP/未命名.canvas",
     "300工作管理/310 车身控制/3101 需求管理/310101 功能需求/31010101LockgMst/LockgMstCan.canvas",
     "300工作管理/330 工作记录/33003/000 CEM.canvas"
