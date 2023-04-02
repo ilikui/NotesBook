@@ -1066,8 +1066,8 @@
 		},
 		{
 			"type": "image",
-			"version": 216,
-			"versionNonce": 1421506585,
+			"version": 222,
+			"versionNonce": 1641086869,
 			"isDeleted": false,
 			"id": "Q2I1PKWF",
 			"fillStyle": "hachure",
@@ -1086,7 +1086,7 @@
 			"groupIds": [],
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1680406314150,
+			"updated": 1680435924388,
 			"link": null,
 			"locked": false,
 			"status": "pending",
@@ -1112,8 +1112,8 @@
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 633.5,
-		"scrollY": 1013.3429073629829,
+		"scrollX": 549,
+		"scrollY": 1083.835094862983,
 		"zoom": {
 			"value": 0.5
 		},
