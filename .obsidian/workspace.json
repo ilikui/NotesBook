@@ -13,11 +13,11 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "工作管理/工作流.canvas",
+                "file": "数字花园/数字花园.canvas",
                 "viewState": {
-                  "x": -70,
-                  "y": 240,
-                  "zoom": -0.36894108468938985
+                  "x": -130,
+                  "y": 41,
+                  "zoom": 0
                 }
               }
             }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工作管理/工作流.canvas",
+                "file": "数字花园/数字花园.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工作管理/工作流.canvas",
+                "file": "数字花园/数字花园.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工作管理/工作流.canvas"
+                "file": "数字花园/数字花园.canvas"
               }
             }
           },
@@ -182,6 +182,9 @@
   },
   "active": "176a91b13f0e7edd",
   "lastOpenFiles": [
+    "数字花园/002卡片笔记.md",
+    "数字花园/001笔记管理.md",
+    "工作管理/工作流.canvas",
     "工具学习/001OpenAI.md",
     "工具学习/001OpenAI",
     "工具学习/000工具学习.md",
@@ -189,12 +192,9 @@
     "学习管理/005Matlab学习规划.md",
     "工作管理/工作流.md",
     "工作管理/WorkFlow.excalidraw",
-    "数字花园/002卡片笔记.md",
-    "数字花园/001笔记管理.md",
     "数字花园/数字花园.canvas",
     "工作管理/未命名看板.md",
     "工作管理/接口定义.md",
-    "工作管理/工作流.canvas",
     "工作管理/工作计划.md",
     "读书管理/读书管理.md",
     "学习管理/00201电源类.md",
@@ -224,7 +224,6 @@
     "100知识管理/130 自动控制理论/自动控制理论.md",
     "100知识管理/120 笔记收藏/常用资源搜藏.md",
     "200学习管理/280 汇编语言/汇编语言基础.md",
-    "200学习管理/260 C语言/C和指针.md",
     "900图片附件/Pasted image 20230316103418.png",
     "300工作管理/310 车身控制/3101 需求管理/310102 工作流/工作流程.canvas",
     "300工作管理/320 Autosar笔记/3201 CP/未命名.canvas",
