@@ -4,17 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "b398ba2b822867c0",
+        "id": "b0b1a930d8b0dde4",
         "type": "tabs",
         "children": [
           {
-            "id": "176a91b13f0e7edd",
+            "id": "b9032424b0bc7115",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "工作管理/WorkFlow.excalidraw"
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -92,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工作管理/WorkFlow.excalidraw",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +106,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工作管理/WorkFlow.excalidraw",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,9 +127,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "工作管理/WorkFlow.excalidraw"
-              }
+              "state": {}
             }
           },
           {
@@ -175,8 +169,11 @@
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
     }
   },
-  "active": "176a91b13f0e7edd",
+  "active": "b9032424b0bc7115",
   "lastOpenFiles": [
+    "Attachment/Graph/Autosar.drawio",
+    "工作管理/WorkFlow.excalidraw",
+    "Attachment/Graph",
     "数字花园/数字花园.canvas",
     "数字花园/002卡片笔记.md",
     "数字花园/001笔记管理.md",
@@ -187,7 +184,6 @@
     "工具学习",
     "学习管理/005Matlab学习规划.md",
     "工作管理/工作流.md",
-    "工作管理/WorkFlow.excalidraw",
     "工作管理/未命名看板.md",
     "工作管理/接口定义.md",
     "工作管理/工作计划.md",
@@ -212,7 +208,6 @@
     "Images/20230326/20230302602.png",
     "Images/20230326/20230302601.png",
     "Images/20230326",
-    "Attachment/20230326/【笔记法】卡片盒笔记法 .pdf",
     "Images/20230320/2023032001.PNG",
     "数字花园/笔记管理.md",
     "未命名 1.canvas",
