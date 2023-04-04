@@ -1,6 +1,16 @@
 > Simulink知识
 
 
+---
+:car:
+
+
+
+
+
+
+
+---
 * Simulink生成代码的规则是什么？
 
   * [管理编译过程文件](https://ww2.mathworks.cn/help/rtw/ug/build-process-files.html)
@@ -20,4 +30,7 @@
   * 多加注释
   * 与polar结合使用
   * 借用simulink相关的工具
+
+---
+
 

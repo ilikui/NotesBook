@@ -11,14 +11,9 @@
             "id": "176a91b13f0e7edd",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "excalidraw",
               "state": {
-                "file": "数字花园/数字花园.canvas",
-                "viewState": {
-                  "x": -130,
-                  "y": 41,
-                  "zoom": 0
-                }
+                "file": "工作管理/WorkFlow.excalidraw"
               }
             }
           }
@@ -97,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "数字花园/数字花园.canvas",
+                "file": "工作管理/WorkFlow.excalidraw",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "数字花园/数字花园.canvas",
+                "file": "工作管理/WorkFlow.excalidraw",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +132,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "数字花园/数字花园.canvas"
+                "file": "工作管理/WorkFlow.excalidraw"
               }
             }
           },
@@ -182,6 +177,7 @@
   },
   "active": "176a91b13f0e7edd",
   "lastOpenFiles": [
+    "数字花园/数字花园.canvas",
     "数字花园/002卡片笔记.md",
     "数字花园/001笔记管理.md",
     "工作管理/工作流.canvas",
@@ -192,7 +188,6 @@
     "学习管理/005Matlab学习规划.md",
     "工作管理/工作流.md",
     "工作管理/WorkFlow.excalidraw",
-    "数字花园/数字花园.canvas",
     "工作管理/未命名看板.md",
     "工作管理/接口定义.md",
     "工作管理/工作计划.md",
