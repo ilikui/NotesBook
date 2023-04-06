@@ -13,14 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "读书管理/《Simulink仿真及代码生成技术入门到精通》.md",
+                "file": "读书管理/读书管理.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "466c309379ea82d4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "数字花园/002卡片笔记.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -94,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "读书管理/《Simulink仿真及代码生成技术入门到精通》.md",
+                "file": "数字花园/002卡片笔记.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "读书管理/《Simulink仿真及代码生成技术入门到精通》.md",
+                "file": "数字花园/002卡片笔记.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "读书管理/《Simulink仿真及代码生成技术入门到精通》.md"
+                "file": "数字花园/002卡片笔记.md"
               }
             }
           }
@@ -161,13 +175,19 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "f858c3742b4d65d0",
+  "active": "466c309379ea82d4",
   "lastOpenFiles": [
+    "数字花园/001笔记管理.md",
+    "工作管理/接口定义.md",
+    "工作管理/工作计划.md",
+    "学习管理/00201电源类.md",
+    "读书管理/《JavaScript权威指南》.md",
+    "读书管理/读书管理.md",
+    "读书管理/《Simulink仿真及代码生成技术入门到精通》.md",
     "学习管理/002硬件知识.md",
     "学习管理/001工具分享.md",
     "学习管理/000目录大纲.md",
     "工作管理/WorkFlow.excalidraw",
-    "工作管理/工作计划.md",
     "B学习管理/B5Java/Java学习手册.md",
     "C工作管理/C2Autosar笔记/C201CP/Classic Platform Autosar.md",
     "C工作管理/C2Autosar笔记/C201CP/CP.excalidraw",
