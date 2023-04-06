@@ -4,30 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "b398ba2b822867c0",
+        "id": "01a1b7005f706e4d",
         "type": "tabs",
         "children": [
           {
-            "id": "176a91b13f0e7edd",
+            "id": "f858c3742b4d65d0",
             "type": "leaf",
             "state": {
-<<<<<<< HEAD
               "type": "markdown",
               "state": {
-                "file": "读书管理/《JavaScript权威指南》.md",
+                "file": "读书管理/《Simulink仿真及代码生成技术入门到精通》.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
-=======
-              "type": "canvas",
-              "state": {
-                "file": "工作管理/工作流.canvas",
-                "viewState": {
-                  "x": -70,
-                  "y": 480.2012578616352,
-                  "zoom": -0.36894108468938985
-                }
->>>>>>> 9f91967adde00fa8f22e9389cfd85e70adcb59d1
               }
             }
           }
@@ -48,8 +37,10 @@
             "id": "92857f5eb2f41a2c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
             }
           },
           {
@@ -74,23 +65,12 @@
               "type": "starred",
               "state": {}
             }
-          },
-          {
-            "id": "31fde607aedbd8b2",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical"
-              }
-            }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300
   },
   "right": {
     "id": "08677e2de37ba7f1",
@@ -101,16 +81,20 @@
         "type": "tabs",
         "children": [
           {
+            "id": "7f62e4515466804c",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
             "id": "b0ae05cba47563cd",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-<<<<<<< HEAD
-                "file": "读书管理/《JavaScript权威指南》.md",
-=======
-                "file": "工作管理/工作流.canvas",
->>>>>>> 9f91967adde00fa8f22e9389cfd85e70adcb59d1
+                "file": "读书管理/《Simulink仿真及代码生成技术入门到精通》.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,11 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-<<<<<<< HEAD
-                "file": "读书管理/《JavaScript权威指南》.md",
-=======
-                "file": "工作管理/工作流.canvas",
->>>>>>> 9f91967adde00fa8f22e9389cfd85e70adcb59d1
+                "file": "读书管理/《Simulink仿真及代码生成技术入门到精通》.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,101 +134,49 @@
             "state": {
               "type": "outline",
               "state": {
-<<<<<<< HEAD
-                "file": "读书管理/《JavaScript权威指南》.md"
-=======
-                "file": "工作管理/工作流.canvas"
->>>>>>> 9f91967adde00fa8f22e9389cfd85e70adcb59d1
+                "file": "读书管理/《Simulink仿真及代码生成技术入门到精通》.md"
               }
             }
-          },
-          {
-            "id": "411f8183af1b551b",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {}
-            }
-          },
-          {
-            "id": "f161671b2bec616a",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {}
-            }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "random-note:开始漫游笔记": false,
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
       "obsidian-extract-pdf-highlights:PDF Highlights": false,
-      "canvas:新建白板": false,
-      "switcher:打开快速切换": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-advanced-slides:Show Slide Preview": false,
+      "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "markdown-importer:打开 Markdown 格式转换器": false,
-      "obsidian-advanced-slides:Show Slide Preview": false,
-      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
+      "random-note:开始漫游笔记": false
     }
   },
-  "active": "176a91b13f0e7edd",
+  "active": "f858c3742b4d65d0",
   "lastOpenFiles": [
-    "工作管理/工作计划.md",
-    "写作管理/markdown.dokuwiki",
-    "写作管理",
-    "工具学习/001OpenAI.md",
-    "读书管理/《Simulink仿真及代码生成技术入门到精通》.md",
-    "读书管理/《Simulink仿真及代码生成技术入门到精通》.pdf",
-    "读书管理/《Simulink仿真及代码生成技术入门到精通》_tmp.html",
-    "工作管理/工作流.canvas",
-    "数字花园/数字花园.canvas",
-    "读书管理/《JavaScript权威指南》.md",
-    "读书管理/《Java核心技术·卷 I》.md",
-    "读书管理/读书管理.md",
-    "读书管理/《Simulink》.md",
-    "读书管理/《Simulink》",
-    "Attachment/Graph/Autosar.drawio",
-    "Attachment/Graph",
-    "数字花园/002卡片笔记.md",
-    "数字花园/001笔记管理.md",
-    "工具学习/001OpenAI",
-    "工具学习/000工具学习.md",
-    "工具学习",
-    "学习管理/005Matlab学习规划.md",
-    "工作管理/工作流.md",
-    "工作管理/WorkFlow.excalidraw",
-    "工作管理/未命名看板.md",
-    "工作管理/接口定义.md",
-    "学习管理/00201电源类.md",
-    "学习管理/003GIT操作.md",
     "学习管理/002硬件知识.md",
     "学习管理/001工具分享.md",
     "学习管理/000目录大纲.md",
-    "工作管理/WorkFlow.svg",
-    "搜藏管理/000目录管理.md",
-    "搜藏管理/002GitHub优秀仓库.md",
-    "搜藏管理/001资源网站.md",
-    "数字花园/002 卡片笔记.md",
-    "Images/20230326/20230302602.png",
-    "Images/20230326/20230302601.png",
-    "Images/20230320/2023032001.PNG",
-    "数字花园/笔记管理.md",
-    "未命名 1.canvas",
-    "100知识管理/130 自动控制理论/自动控制理论.md",
-    "900图片附件/Pasted image 20230316103418.png",
-    "300工作管理/310 车身控制/3101 需求管理/310102 工作流/工作流程.canvas",
-    "300工作管理/320 Autosar笔记/3201 CP/未命名.canvas",
-    "300工作管理/310 车身控制/3101 需求管理/310101 功能需求/31010101LockgMst/LockgMstCan.canvas",
-    "300工作管理/330 工作记录/33003/000 CEM.canvas"
+    "工作管理/WorkFlow.excalidraw",
+    "工作管理/工作计划.md",
+    "B学习管理/B5Java/Java学习手册.md",
+    "C工作管理/C2Autosar笔记/C201CP/Classic Platform Autosar.md",
+    "C工作管理/C2Autosar笔记/C201CP/CP.excalidraw",
+    "B学习管理/B3Matalab/Matalb学习笔记.md",
+    "A知识管理/A2笔记收藏/常用资源搜藏.md",
+    "B学习管理/B1Linux/Linux基础使用.md",
+    "A知识管理/A3自动控制理论/自动控制理论.md",
+    "D读书管理/D1Malab/D101Matlab入门.md",
+    "B学习管理/B4Python/Python学习手册.md",
+    "I图片附件/I4Simulink/Sim.png"
   ]
 }
