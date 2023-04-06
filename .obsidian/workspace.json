@@ -24,12 +24,9 @@
             "id": "466c309379ea82d4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "数字花园/002卡片笔记.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+                "file": "工作管理/WorkFlow.excalidraw"
               }
             }
           }
@@ -108,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "数字花园/002卡片笔记.md",
+                "file": "工作管理/WorkFlow.excalidraw",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "数字花园/002卡片笔记.md",
+                "file": "工作管理/WorkFlow.excalidraw",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "数字花园/002卡片笔记.md"
+                "file": "工作管理/WorkFlow.excalidraw"
               }
             }
           }
@@ -177,6 +174,10 @@
   },
   "active": "466c309379ea82d4",
   "lastOpenFiles": [
+    "学习管理/004Simulink知识.md",
+    "学习管理/002硬件知识.md",
+    "学习管理/003GIT操作.md",
+    "数字花园/002卡片笔记.md",
     "数字花园/001笔记管理.md",
     "工作管理/接口定义.md",
     "工作管理/工作计划.md",
@@ -184,7 +185,6 @@
     "读书管理/《JavaScript权威指南》.md",
     "读书管理/读书管理.md",
     "读书管理/《Simulink仿真及代码生成技术入门到精通》.md",
-    "学习管理/002硬件知识.md",
     "学习管理/001工具分享.md",
     "学习管理/000目录大纲.md",
     "工作管理/WorkFlow.excalidraw",
