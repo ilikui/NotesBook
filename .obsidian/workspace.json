@@ -4,19 +4,30 @@
     "type": "split",
     "children": [
       {
-        "id": "b0b1a930d8b0dde4",
+        "id": "b398ba2b822867c0",
         "type": "tabs",
         "children": [
           {
-            "id": "b9032424b0bc7115",
+            "id": "176a91b13f0e7edd",
             "type": "leaf",
             "state": {
+<<<<<<< HEAD
               "type": "markdown",
               "state": {
                 "file": "读书管理/《JavaScript权威指南》.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
+=======
+              "type": "canvas",
+              "state": {
+                "file": "工作管理/工作流.canvas",
+                "viewState": {
+                  "x": -70,
+                  "y": 480.2012578616352,
+                  "zoom": -0.36894108468938985
+                }
+>>>>>>> 9f91967adde00fa8f22e9389cfd85e70adcb59d1
               }
             }
           }
@@ -95,7 +106,11 @@
             "state": {
               "type": "backlink",
               "state": {
+<<<<<<< HEAD
                 "file": "读书管理/《JavaScript权威指南》.md",
+=======
+                "file": "工作管理/工作流.canvas",
+>>>>>>> 9f91967adde00fa8f22e9389cfd85e70adcb59d1
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +127,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+<<<<<<< HEAD
                 "file": "读书管理/《JavaScript权威指南》.md",
+=======
+                "file": "工作管理/工作流.canvas",
+>>>>>>> 9f91967adde00fa8f22e9389cfd85e70adcb59d1
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +154,11 @@
             "state": {
               "type": "outline",
               "state": {
+<<<<<<< HEAD
                 "file": "读书管理/《JavaScript权威指南》.md"
+=======
+                "file": "工作管理/工作流.canvas"
+>>>>>>> 9f91967adde00fa8f22e9389cfd85e70adcb59d1
               }
             }
           },
@@ -178,25 +201,34 @@
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
     }
   },
-  "active": "b9032424b0bc7115",
+  "active": "176a91b13f0e7edd",
   "lastOpenFiles": [
-    "Attachment/Graph/Autosar.drawio",
-    "工作管理/WorkFlow.excalidraw",
-    "Attachment/Graph",
+    "工作管理/工作计划.md",
+    "写作管理/markdown.dokuwiki",
+    "写作管理",
+    "工具学习/001OpenAI.md",
+    "读书管理/《Simulink仿真及代码生成技术入门到精通》.md",
+    "读书管理/《Simulink仿真及代码生成技术入门到精通》.pdf",
+    "读书管理/《Simulink仿真及代码生成技术入门到精通》_tmp.html",
+    "工作管理/工作流.canvas",
     "数字花园/数字花园.canvas",
+    "读书管理/《JavaScript权威指南》.md",
+    "读书管理/《Java核心技术·卷 I》.md",
+    "读书管理/读书管理.md",
+    "读书管理/《Simulink》.md",
+    "读书管理/《Simulink》",
+    "Attachment/Graph/Autosar.drawio",
+    "Attachment/Graph",
     "数字花园/002卡片笔记.md",
     "数字花园/001笔记管理.md",
-    "工作管理/工作流.canvas",
-    "工具学习/001OpenAI.md",
     "工具学习/001OpenAI",
     "工具学习/000工具学习.md",
     "工具学习",
     "学习管理/005Matlab学习规划.md",
     "工作管理/工作流.md",
+    "工作管理/WorkFlow.excalidraw",
     "工作管理/未命名看板.md",
     "工作管理/接口定义.md",
-    "工作管理/工作计划.md",
-    "读书管理/读书管理.md",
     "学习管理/00201电源类.md",
     "学习管理/003GIT操作.md",
     "学习管理/002硬件知识.md",
@@ -204,25 +236,15 @@
     "学习管理/000目录大纲.md",
     "工作管理/WorkFlow.svg",
     "搜藏管理/000目录管理.md",
-    "数字花园/002卡片笔记.pdf",
-    "数字花园/002卡片笔记_tmp.html",
     "搜藏管理/002GitHub优秀仓库.md",
-    "Images/Common",
-    "读书管理/《Java核心技术·卷 I》.md",
-    "读书管理/《》",
     "搜藏管理/001资源网站.md",
-    "读书管理/《JavaScript权威指南》.md",
     "数字花园/002 卡片笔记.md",
-    "搜藏管理",
     "Images/20230326/20230302602.png",
     "Images/20230326/20230302601.png",
-    "Images/20230326",
     "Images/20230320/2023032001.PNG",
     "数字花园/笔记管理.md",
     "未命名 1.canvas",
     "100知识管理/130 自动控制理论/自动控制理论.md",
-    "100知识管理/120 笔记收藏/常用资源搜藏.md",
-    "200学习管理/280 汇编语言/汇编语言基础.md",
     "900图片附件/Pasted image 20230316103418.png",
     "300工作管理/310 车身控制/3101 需求管理/310102 工作流/工作流程.canvas",
     "300工作管理/320 Autosar笔记/3201 CP/未命名.canvas",
