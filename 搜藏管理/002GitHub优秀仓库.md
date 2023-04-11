@@ -7,3 +7,12 @@
 
 * [handwriting](https://saurabhdaware.github.io/text-to-handwriting/)
 
+
+>  :milky_way:  CS自学指南
+
+* [csdiy](https://csdiy.wiki/)
+
+> makefile自学指南
+
+* [makefiletutorial](https://makefiletutorial.com/)
+
