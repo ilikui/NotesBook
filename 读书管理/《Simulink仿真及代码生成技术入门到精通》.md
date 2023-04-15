@@ -52,6 +52,7 @@
     - [3.3.2Vector信号](#332vector信号)
     - [3.3.3Matrix信号](#333matrix信号)
     - [3.3.4Bus信号](#334bus信号)
+    - [3.3.5Functioncall信号](#335functioncall信号)
   - [第4章 Simulink子系统](#第4章-simulink子系统)
   - [第5章 Simulink模型的仿真](#第5章-simulink模型的仿真)
   - [第6章 Simulink模型保存为图片](#第6章-simulink模型保存为图片)
@@ -136,7 +137,7 @@
 ### 3.3.2Vector信号
 ### 3.3.3Matrix信号
 ### 3.3.4Bus信号
-3.3.5Functioncall信号
+### 3.3.5Functioncall信号
 3.3.6尺寸可变信号
 3.3.7未连接信号
 3.4Simulink信号的属性
