@@ -4,23 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "01a1b7005f706e4d",
+        "id": "d1150aad4c6dc038",
         "type": "tabs",
         "children": [
           {
-            "id": "f858c3742b4d65d0",
+            "id": "e799ddabfdb5a0bf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "学习管理/001工具分享.md",
-                "mode": "preview",
+                "file": "搜藏管理/000目录管理.md",
+                "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "stacked": true
       }
     ],
     "direction": "vertical"
@@ -94,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "学习管理/001工具分享.md",
+                "file": "搜藏管理/000目录管理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "学习管理/001工具分享.md",
+                "file": "搜藏管理/000目录管理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "学习管理/001工具分享.md"
+                "file": "搜藏管理/000目录管理.md"
               }
             }
           }
@@ -161,8 +162,23 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "f858c3742b4d65d0",
+  "active": "e799ddabfdb5a0bf",
   "lastOpenFiles": [
+    "数字花园/002卡片笔记.md",
+    "搜藏管理/000目录管理.md",
+    "搜藏管理/002GitHub优秀仓库.md",
+    "搜藏管理/001资源网站.md",
+    "数字花园/数字花园.canvas",
+    "读书管理/《Simulink仿真及代码生成技术入门到精通》.md",
+    "学习管理/005Matlab学习规划.md",
+    "学习管理/004Simulink知识.md",
+    "学习管理/003GIT操作.md",
+    "数字花园/001笔记管理.md",
+    "工作管理/WorkFlow.excalidraw",
+    "读书管理/《JavaScript权威指南》.md",
+    "学习管理/006Markdown知识.md",
+    "学习管理/006Markdown知识.pdf",
+    "学习管理/001工具分享.md",
     "工作管理/工作流.md",
     "工作管理/接口定义.md",
     "工作管理/工作流.canvas",
@@ -170,15 +186,8 @@
     "工具学习/001OpenAI.md",
     "工具学习/000工具学习.md",
     "读书管理/读书管理.md",
-    "数字花园/002卡片笔记.md",
-    "数字花园/001笔记管理.md",
-    "工作管理/WorkFlow.excalidraw",
-    "读书管理/《JavaScript权威指南》.md",
-    "读书管理/《Simulink仿真及代码生成技术入门到精通》.md",
-    "学习管理/003GIT操作.md",
     "学习管理/00201电源类.md",
     "学习管理/002硬件知识.md",
-    "学习管理/001工具分享.md",
     "学习管理/000目录大纲.md",
     "B学习管理/B5Java/Java学习手册.md",
     "C工作管理/C2Autosar笔记/C201CP/Classic Platform Autosar.md",
@@ -186,9 +195,6 @@
     "B学习管理/B3Matalab/Matalb学习笔记.md",
     "A知识管理/A2笔记收藏/常用资源搜藏.md",
     "B学习管理/B1Linux/Linux基础使用.md",
-    "A知识管理/A3自动控制理论/自动控制理论.md",
-    "D读书管理/D1Malab/D101Matlab入门.md",
-    "B学习管理/B4Python/Python学习手册.md",
     "I图片附件/I4Simulink/Sim.png"
   ]
 }
