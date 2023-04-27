@@ -104,5 +104,7 @@
   "数字花园/数字花园.canvas": "FasCannabis",
   "Attachment/20230326": "FarCalendarDays",
   "读书管理/《Java核心技术·卷 I》.md": "FasBook",
-  "读书管理/《Simulink仿真及代码生成技术入门到精通》.md": "FasBook"
+  "读书管理/《Simulink仿真及代码生成技术入门到精通》.md": "FasBook",
+  "工具学习": "FasFolder",
+  "写作管理": "FasFolder"
 }
