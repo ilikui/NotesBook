@@ -25,7 +25,8 @@
       "bottom": 2,
       "left": 2
     },
-    "emojiStyle": "none"
+    "emojiStyle": "none",
+    "iconInTabsEnabled": false
   },
   "100知识管理": "FasFolder",
   "200学习管理": "FasFolder",
