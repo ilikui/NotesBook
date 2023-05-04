@@ -5,11 +5,11 @@
     "fontSize": 16,
     "iconColor": null,
     "recentlyUsedIcons": [
+      "FabGalacticRepublic",
       "FasBook",
       "FasFolder",
       "FarCalendarDays",
-      "FasCannabis",
-      "FasArrowsUpDownLeftRight"
+      "FasCannabis"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -107,5 +107,6 @@
   "读书管理/《Java核心技术·卷 I》.md": "FasBook",
   "读书管理/《Simulink仿真及代码生成技术入门到精通》.md": "FasBook",
   "工具学习": "FasFolder",
-  "写作管理": "FasFolder"
+  "写作管理": "FasFolder",
+  "写作管理/001Latex学习.md": "FabGalacticRepublic"
 }

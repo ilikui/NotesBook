@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "学习管理/001工具分享.md",
+                "file": "写作管理/001Latex学习.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "学习管理/001工具分享.md",
+                "file": "写作管理/001Latex学习.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "学习管理/001工具分享.md",
+                "file": "写作管理/001Latex学习.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "学习管理/001工具分享.md"
+                "file": "写作管理/001Latex学习.md"
               }
             }
           }
@@ -167,10 +167,10 @@
     "学习管理/000目录大纲.md",
     "写作管理/001Latex学习.md",
     "学习管理/002硬件知识.md",
+    "学习管理/001工具分享.md",
     "学习管理/003GIT操作.md",
     "学习管理/005Matlab学习规划.md",
     "学习管理/004Simulink知识.md",
-    "学习管理/001工具分享.md",
     "学习管理/006Markdown知识.pdf",
     "工具学习/001OpenAI.md",
     "工具学习/000工具学习.md",
