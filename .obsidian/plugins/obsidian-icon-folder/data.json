@@ -108,5 +108,9 @@
   "读书管理/《Simulink仿真及代码生成技术入门到精通》.md": "FasBook",
   "工具学习": "FasFolder",
   "写作管理": "FasFolder",
-  "写作管理/001Latex学习.md": "FabGalacticRepublic"
+  "写作管理/001Latex学习.md": "FabGalacticRepublic",
+  "学习管理/005Matlab学习规划.md": "FasBook",
+  "学习管理/006Markdown知识.md": "FasBook",
+  "学习管理/006Markdown知识.pdf": "FasBook",
+  "学习管理/006NodeJs学习教程.md": "FasBook"
 }
