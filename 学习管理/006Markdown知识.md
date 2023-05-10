@@ -5,6 +5,10 @@
 
 ### 1.1.标题
 
+| 标题     | 符号 |
+| -------- | ---- |
+| 一级标题 | `#`  |
+
 
 ##  1.2.文本
 
@@ -183,6 +187,48 @@ mindmap
 
 
 # 3.UML
+
+
+## 3.1 时序图
+
+1. 基本例子
+
+```plantuml
+@startuml
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
+
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: Another authentication Response
+@enduml
+
+
+```
+
+2.声明参与者
+
+```plantuml
+
+@startuml
+participant Participant as Foo
+actor       Actor       as Foo1
+boundary    Boundary    as Foo2
+control     Control     as Foo3
+entity      Entity      as Foo4
+database    Database    as Foo5
+collections Collections as Foo6
+queue       Queue       as Foo7
+Foo -> Foo1 : To actor 
+Foo -> Foo2 : To boundary
+Foo -> Foo3 : To control
+Foo -> Foo4 : To entity
+Foo -> Foo5 : To database
+Foo -> Foo6 : To collections
+Foo -> Foo7: To queue
+@enduml
+
+```
+
 
 
 ```plantuml
