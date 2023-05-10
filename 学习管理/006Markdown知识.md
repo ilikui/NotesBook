@@ -246,3 +246,18 @@ Foo -> Foo7: To queue
     deactivate "login()"
 @enduml
 ```
+
+## 3.2 用例图
+
+```plantuml
+
+@startuml
+
+(First usecase)
+(Another usecase) as (UC2)
+usecase UC3
+usecase (Last\nusecase) as UC4
+
+@enduml
+
+```
