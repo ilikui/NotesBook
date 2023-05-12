@@ -4,19 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "fff3df03f37cf373",
+        "id": "81196f36e09962b7",
         "type": "tabs",
         "children": [
           {
-            "id": "36c35a25fc9c3f9b",
+            "id": "5debdc9f547a5794",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "搜藏管理/001资源网站.md",
-                "mode": "preview",
-                "backlinks": true,
-                "source": false
+                "file": "Attachment/cicd.excalidraw"
               }
             }
           }
@@ -102,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "搜藏管理/001资源网站.md",
+                "file": "Attachment/cicd.excalidraw",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "搜藏管理/001资源网站.md",
+                "file": "Attachment/cicd.excalidraw",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "搜藏管理/001资源网站.md"
+                "file": "Attachment/cicd.excalidraw"
               }
             }
           }
@@ -169,8 +166,12 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "36c35a25fc9c3f9b",
+  "active": "5debdc9f547a5794",
   "lastOpenFiles": [
+    "Images/20230512/2023051202.png",
+    "Attachment/cicd.excalidraw",
+    "工具学习/002CICD.md",
+    "搜藏管理/001资源网站.md",
     "Images/20230512/2023051201.png",
     "Images/20230512",
     "Excalidraw/Drawing 2023-05-04 10.30.38.excalidraw",
