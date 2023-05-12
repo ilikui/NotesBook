@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "读书管理/读书管理.md",
+                "file": "SUMMARY.md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": false
@@ -102,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "读书管理/读书管理.md",
+                "file": "SUMMARY.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "读书管理/读书管理.md",
+                "file": "SUMMARY.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "读书管理/读书管理.md"
+                "file": "SUMMARY.md"
               }
             }
           }
@@ -171,11 +171,14 @@
   },
   "active": "5debdc9f547a5794",
   "lastOpenFiles": [
+    "工具学习/000工具学习.md",
+    "工具学习/001OpenAI.md",
+    "工具学习/002CICD.md",
+    "工作管理/工作计划.md",
+    "读书管理/读书管理.md",
     "读书管理/《Java核心技术卷I》.md",
     "读书管理/《JavaScript权威指南》.md",
     "SUMMARY.md",
-    "工具学习/002CICD.md",
-    "工具学习/001OpenAI.md",
     "工作管理/工作流.canvas",
     "工作管理/接口定义.md",
     "Attachment/cicd.excalidraw",
@@ -186,7 +189,6 @@
     "Excalidraw/Drawing 2023-05-04 10.30.38.excalidraw",
     "学习管理/001工具分享.md",
     "工作管理/工作流.md",
-    "工作管理/工作计划.md",
     "工作管理/WorkFlow.excalidraw",
     "Attachment/20230326/卡片盒笔记法 .pdf",
     "Attachment/20230326/【笔记法】卡片盒笔记法 .pdf",
