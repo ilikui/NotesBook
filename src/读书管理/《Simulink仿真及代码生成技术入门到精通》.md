@@ -2,7 +2,6 @@
 
 ![](https://img9.doubanio.com/view/subject/s/public/s29114925.jpg)
 
-:wilted_flower::wilted_flower::wilted_flower::wilted_flower::wilted_flower::wilted_flower::wilted_flower::wilted_flower::wilted_flower::wilted_flower::wilted_flower::wilted_flower::wilted_flower::wilted_flower::wilted_flower::wilted_flower:
 ---
 
 - [入门篇](#入门篇)
