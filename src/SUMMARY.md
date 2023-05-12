@@ -11,6 +11,8 @@
 - [001工具分享](学习管理/001工具分享.md)
 - [002硬件知识](学习管理/002硬件知识.md)
   - [00201电源类](学习管理/00201电源类.md)
+- [003GIT操作](学习管理/003GIT操作.md)
+- [004Simulink知识](学习管理/004Simulink知识.md)
 
 - [Command Line Tool](cli/README.md)
     - [init](cli/init.md)
