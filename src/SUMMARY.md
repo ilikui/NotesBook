@@ -1,6 +1,6 @@
 # Summary
 
-[Introduction](README.md)
+[简介](README.md)
 
 # 写作管理
 - [001Latex学习](写作管理/001Latex学习.md)
@@ -8,6 +8,9 @@
 # 学习管理
 
 - [000目录大纲](学习管理/000目录大纲.md)
+- [001工具分享](学习管理/001工具分享.md)
+- [002硬件知识](学习管理/002硬件知识.md)
+  - [00201电源类](学习管理/00201电源类.md)
 
 - [Command Line Tool](cli/README.md)
     - [init](cli/init.md)
