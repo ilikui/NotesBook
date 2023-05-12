@@ -1,25 +1,18 @@
 {
   "main": {
-    "id": "d6b45433551ba3de",
+    "id": "7c368cbd2ac46d3b",
     "type": "split",
     "children": [
       {
-        "id": "13ca433ed201c721",
+        "id": "2baa4fef70fd375e",
         "type": "tabs",
         "children": [
           {
-            "id": "f858c3742b4d65d0",
+            "id": "326199320ae95b94",
             "type": "leaf",
             "state": {
-              "type": "canvas",
-              "state": {
-                "file": "工作管理/工作流.canvas",
-                "viewState": {
-                  "x": 157.28721174004193,
-                  "y": 280.0335429769392,
-                  "zoom": -0.36894108468938985
-                }
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -28,15 +21,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "80d9f7966b794dec",
+    "id": "2dfc7de4c027bd08",
     "type": "split",
     "children": [
       {
-        "id": "8103b309c37b3a33",
+        "id": "b8a3d8af48ddcbf5",
         "type": "tabs",
         "children": [
           {
-            "id": "92857f5eb2f41a2c",
+            "id": "023f64b2a7aa30f9",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -46,7 +39,7 @@
             }
           },
           {
-            "id": "9741cc782992fbcf",
+            "id": "3735bea7290a9010",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -61,15 +54,7 @@
             }
           },
           {
-            "id": "aeed075e9d5bd40d",
-            "type": "leaf",
-            "state": {
-              "type": "starred",
-              "state": {}
-            }
-          },
-          {
-            "id": "1820150365a79d50",
+            "id": "c68351849a2b57be",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -83,28 +68,19 @@
     "width": 300
   },
   "right": {
-    "id": "08677e2de37ba7f1",
+    "id": "302847517528e4c6",
     "type": "split",
     "children": [
       {
-        "id": "6c74609dec87a61f",
+        "id": "02a1af1dfd71a44a",
         "type": "tabs",
         "children": [
           {
-            "id": "7f62e4515466804c",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {}
-            }
-          },
-          {
-            "id": "b0ae05cba47563cd",
+            "id": "8c37b59ad3598f40",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工作管理/工作流.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,19 +92,18 @@
             }
           },
           {
-            "id": "78e1b6ad6a81fa39",
+            "id": "a55fbb8b6c447012",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工作管理/工作流.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "63fb50b63ebece56",
+            "id": "6e5a51194344a389",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -139,13 +114,11 @@
             }
           },
           {
-            "id": "e0e03f5885b7e7f4",
+            "id": "89dff95de667d94a",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "工作管理/工作流.canvas"
-              }
+              "state": {}
             }
           }
         ]
@@ -162,27 +135,9 @@
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
-      "markdown-importer:打开 Markdown 格式转换器": false,
-      "random-note:开始漫游笔记": false,
-      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
-      "obsidian-extract-pdf-highlights:PDF Highlights": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-advanced-slides:Show Slide Preview": false
+      "command-palette:打开命令面板": false
     }
   },
-  "active": "f858c3742b4d65d0",
-  "lastOpenFiles": [
-    "工具学习/001OpenAI.md",
-    "B学习管理/B5Java/Java学习手册.md",
-    "C工作管理/C2Autosar笔记/C201CP/Classic Platform Autosar.md",
-    "C工作管理/C2Autosar笔记/C201CP/CP.excalidraw",
-    "B学习管理/B3Matalab/Matalb学习笔记.md",
-    "A知识管理/A2笔记收藏/常用资源搜藏.md",
-    "B学习管理/B1Linux/Linux基础使用.md",
-    "A知识管理/A3自动控制理论/自动控制理论.md",
-    "D读书管理/D1Malab/D101Matlab入门.md",
-    "B学习管理/B4Python/Python学习手册.md",
-    "I图片附件/I4Simulink/Sim.png"
-  ]
+  "active": "023f64b2a7aa30f9",
+  "lastOpenFiles": []
 }
