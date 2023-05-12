@@ -8,8 +8,13 @@ language = "cn"
 edition = "2018"
 
 [output.html]
+default-theme = "rust"
 mathjax-support = true
+curly-quotes = true
 site-url = "/mdBook/"
+
+additional-css = ["custom.css", "custom2.css"]
+additional-js = ["custom.js"]
 git-repository-url = "https://github.com/rust-lang/mdBook/tree/master/guide"
 edit-url-template = "https://github.com/rust-lang/mdBook/edit/master/guide/{path}"
 
