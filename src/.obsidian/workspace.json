@@ -11,14 +11,9 @@
             "id": "f858c3742b4d65d0",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "excalidraw",
               "state": {
-                "file": "工作管理/工作流.canvas",
-                "viewState": {
-                  "x": 157.28721174004193,
-                  "y": 280.0335429769392,
-                  "zoom": -0.36894108468938985
-                }
+                "file": "工作管理/WorkFlow.excalidraw"
               }
             }
           }
@@ -104,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工作管理/工作流.canvas",
+                "file": "工作管理/WorkFlow.excalidraw",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工作管理/工作流.canvas",
+                "file": "工作管理/WorkFlow.excalidraw",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工作管理/工作流.canvas"
+                "file": "工作管理/WorkFlow.excalidraw"
               }
             }
           }
@@ -173,6 +168,7 @@
   },
   "active": "f858c3742b4d65d0",
   "lastOpenFiles": [
+    "工作管理/工作流.canvas",
     "工具学习/001OpenAI.md",
     "B学习管理/B5Java/Java学习手册.md",
     "C工作管理/C2Autosar笔记/C201CP/Classic Platform Autosar.md",
