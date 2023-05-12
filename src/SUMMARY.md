@@ -7,6 +7,8 @@
 
 # 学习管理
 
+- [000目录大纲](学习管理/000目录大纲.md)
+
 - [Command Line Tool](cli/README.md)
     - [init](cli/init.md)
     - [build](cli/build.md)
