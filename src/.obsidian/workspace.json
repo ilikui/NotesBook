@@ -11,9 +11,12 @@
             "id": "5debdc9f547a5794",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Attachment/cicd.excalidraw"
+                "file": "工作管理/接口定义.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           }
@@ -99,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Attachment/cicd.excalidraw",
+                "file": "工作管理/接口定义.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Attachment/cicd.excalidraw",
+                "file": "工作管理/接口定义.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Attachment/cicd.excalidraw"
+                "file": "工作管理/接口定义.md"
               }
             }
           }
@@ -168,8 +171,8 @@
   },
   "active": "5debdc9f547a5794",
   "lastOpenFiles": [
-    "Images/20230512/2023051202.png",
     "Attachment/cicd.excalidraw",
+    "Images/20230512/2023051202.png",
     "工具学习/002CICD.md",
     "搜藏管理/001资源网站.md",
     "Images/20230512/2023051201.png",
