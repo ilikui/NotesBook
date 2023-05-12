@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f1530d6232dfe358",
+        "id": "fff3df03f37cf373",
         "type": "tabs",
         "children": [
           {
-            "id": "77a15d22194fb05e",
+            "id": "36c35a25fc9c3f9b",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -160,13 +160,20 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "77a15d22194fb05e",
+  "active": "36c35a25fc9c3f9b",
   "lastOpenFiles": [
+    "Images/20230512/2023051201.png",
+    "Images/20230512",
+    "Excalidraw/Drawing 2023-05-04 10.30.38.excalidraw",
+    "学习管理/001工具分享.md",
+    "工作管理/工作流.md",
+    "工作管理/工作计划.md",
+    "工作管理/工作流.canvas",
+    "工作管理/接口定义.md",
+    "工作管理/WorkFlow.excalidraw",
     "Attachment/20230326/卡片盒笔记法 .pdf",
     "Attachment/20230326/【笔记法】卡片盒笔记法 .pdf",
     "数字花园/002卡片笔记.md",
-    "工作管理/WorkFlow.excalidraw",
-    "工作管理/工作流.canvas",
     "工具学习/001OpenAI.md",
     "B学习管理/B5Java/Java学习手册.md",
     "C工作管理/C2Autosar笔记/C201CP/Classic Platform Autosar.md",
