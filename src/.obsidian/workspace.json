@@ -11,9 +11,12 @@
             "id": "f858c3742b4d65d0",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "工作管理/WorkFlow.excalidraw"
+                "file": "数字花园/002卡片笔记.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           }
@@ -99,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工作管理/WorkFlow.excalidraw",
+                "file": "数字花园/002卡片笔记.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工作管理/WorkFlow.excalidraw",
+                "file": "数字花园/002卡片笔记.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工作管理/WorkFlow.excalidraw"
+                "file": "数字花园/002卡片笔记.md"
               }
             }
           }
@@ -168,6 +171,7 @@
   },
   "active": "f858c3742b4d65d0",
   "lastOpenFiles": [
+    "工作管理/WorkFlow.excalidraw",
     "工作管理/工作流.canvas",
     "工具学习/001OpenAI.md",
     "B学习管理/B5Java/Java学习手册.md",
