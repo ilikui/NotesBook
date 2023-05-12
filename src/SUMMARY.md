@@ -38,8 +38,7 @@
 # 读书管理
 
 - [《JavaScript权威指南》](读书管理/《JavaScript权威指南》.md)
-- [《Java核心技术·卷 I》](读书管理/《Java核心技术·卷 I》.md)
-- 
+- [《Java核心技术·卷 I》](读书管理/%E3%80%8AJava%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%C2%B7%E5%8D%B7%20I%E3%80%8B.md)
 
 
 -----------
