@@ -15,6 +15,7 @@
 - [004Simulink知识](学习管理/004Simulink知识.md)
 - [005Matlab学习规划](学习管理/005Matlab学习规划.md)
 - [006Markdown知识](学习管理/006Markdown知识.md)
+- [007Mermaid操作](学习管理/007Mermaid操作.md)
 
 
 
