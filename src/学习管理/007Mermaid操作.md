@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
 </head>
   <body>
     <pre class="mermaid">
