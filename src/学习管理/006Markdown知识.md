@@ -31,17 +31,48 @@ mermaid语法
 
 > 状态图
 
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <body>
+    <div  class="mermaid">
+      graph TD;
+          A-->B;
+          A-->C;
+          B-->D;
+          C-->D;
+    </div>
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    </script>
+  </body>
+</html>
+
+
+
 
 > 流程图
 
-```mermaid
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <body>
+    <div  class="mermaid">
+      flowchart LR
+      A[Hard] -->|Text| B(Round)
+      B --> C{Decision}
+      C -->|One| D[Result 1]
+      C -->|Two| E[Result 2]
+    </div>
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    </script>
+  </body>
+</html>
+
+```markdown
 flowchart LR
 A[Hard] -->|Text| B(Round)
 B --> C{Decision}
