@@ -1,0 +1,90 @@
+{
+	"type": "excalidraw",
+	"version": 2,
+	"source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/1.8.22",
+	"elements": [
+		{
+			"id": "OJdFdFmUAprtnih7QYWDV",
+			"type": "rectangle",
+			"x": -782,
+			"y": -531.2421875,
+			"width": 1257,
+			"height": 638,
+			"angle": 0,
+			"strokeColor": "#000000",
+			"backgroundColor": "transparent",
+			"fillStyle": "hachure",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1815130040,
+			"version": 68,
+			"versionNonce": 1606089912,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1684032772931,
+			"link": null,
+			"locked": false
+		},
+		{
+			"id": "xh90mrSkQcKMlT8kHXaPN",
+			"type": "rectangle",
+			"x": -659.5,
+			"y": -444.7265625,
+			"width": 127.99999999999996,
+			"height": 68,
+			"angle": 0,
+			"strokeColor": "#000000",
+			"backgroundColor": "transparent",
+			"fillStyle": "hachure",
+			"strokeWidth": 1,
+			"strokeStyle": "solid",
+			"roughness": 1,
+			"opacity": 100,
+			"groupIds": [],
+			"roundness": {
+				"type": 3
+			},
+			"seed": 1258965704,
+			"version": 25,
+			"versionNonce": 1222353592,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1684032779652,
+			"link": null,
+			"locked": false
+		}
+	],
+	"appState": {
+		"theme": "light",
+		"viewBackgroundColor": "#ffffff",
+		"currentItemStrokeColor": "#000000",
+		"currentItemBackgroundColor": "transparent",
+		"currentItemFillStyle": "hachure",
+		"currentItemStrokeWidth": 1,
+		"currentItemStrokeStyle": "solid",
+		"currentItemRoughness": 1,
+		"currentItemOpacity": 100,
+		"currentItemFontFamily": 1,
+		"currentItemFontSize": 20,
+		"currentItemTextAlign": "left",
+		"currentItemStartArrowhead": null,
+		"currentItemEndArrowhead": "arrow",
+		"scrollX": 1553.5,
+		"scrollY": 989.7578125,
+		"zoom": {
+			"value": 0.5
+		},
+		"currentItemRoundness": "round",
+		"gridSize": null,
+		"colorPalette": {},
+		"currentStrokeOptions": null,
+		"previousGridSize": null
+	},
+	"files": {}
+}

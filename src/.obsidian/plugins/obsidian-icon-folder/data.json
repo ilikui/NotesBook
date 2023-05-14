@@ -5,11 +5,11 @@
     "fontSize": 16,
     "iconColor": null,
     "recentlyUsedIcons": [
+      "RiDonutChartLine",
       "FabGalacticRepublic",
       "FasBook",
       "FasFolder",
-      "FarCalendarDays",
-      "FasCannabis"
+      "FarCalendarDays"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -112,5 +112,7 @@
   "学习管理/005Matlab学习规划.md": "FasBook",
   "学习管理/006Markdown知识.md": "FasBook",
   "学习管理/006Markdown知识.pdf": "FasBook",
-  "学习管理/006NodeJs学习教程.md": "FasBook"
+  "学习管理/006NodeJs学习教程.md": "FasBook",
+  "工作管理/001汽车电子.md": "RiDonutChartLine",
+  "计划管理": "FasFolder"
 }
