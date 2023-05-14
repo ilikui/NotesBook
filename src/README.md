@@ -1,8 +1,13 @@
 # 主页
+---
 
-* 本WIKI通过 mbook搭建
 
-帮助文档  `https://www.likui.info/wiki/`
+## 简介
+---
+
+分享个人知识库文件，本WIKI通过 mbook搭建，首页链接为[<mark style="background: #BBFABBA6;">notesbook</mark>](https://www.likui.info/notesbook/index.html)
+
+
 
 ---
 
@@ -44,7 +49,7 @@
 
 
 
-
+---
 > 参考链接
 
 * [ 1 ] https://mermaid.js.org/
@@ -52,6 +57,29 @@
 * [ 3 ] https://www.runoob.com/font-awesome
 * [ 4 ] https://emoji-css.afeld.me/
   
+
+
+  ---
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <body>
+    <div  class="mermaid">
+      flowchart LR
+      A[Hard] -->|Text| B(Round)
+      B --> C{Decision}
+      C -->|One| D[Result 1]
+      C -->|Two| E[Result 2]
+    </div>
+
+  </body>
+</html>
+
+
+
+
+
 
 
 
