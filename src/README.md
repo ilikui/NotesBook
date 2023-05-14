@@ -16,21 +16,25 @@
       mindmap
         root((NotesBook))
         ::icon(fa fa-book)
-          Origins
+          读书管理
             Long history
             ::icon(fa fa-book)
             Popularisation
               British popular psychology author Tony Buzan
-          Research
+          工具学习
             On effectiveness<br/>and features
             On Automatic creation
               Uses
                   Creative techniques
                   Strategic planning
                   Argument mapping
-          Tools
+          工作管理
             Pen and paper
             Mermaid
+          数字花园
+            Pen and paper
+            Mermaid
+          搜藏管理
     </div>
     <script type="module">
       import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
