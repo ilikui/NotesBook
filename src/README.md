@@ -17,24 +17,24 @@
         root((NotesBook))
         ::icon(fa fa-book)
           读书管理
-            Long history
+            《Java核心技术卷I》
             ::icon(fa fa-book)
             Popularisation
               British popular psychology author Tony Buzan
           工具学习
-            On effectiveness<br/>and features
-            On Automatic creation
-              Uses
-                  Creative techniques
-                  Strategic planning
-                  Argument mapping
+            000工具学习<a href="http://www.w3school.com.cn">W3School</a>
+            001OpenAI
           工作管理
             Pen and paper
             Mermaid
           数字花园
-            Pen and paper
-            Mermaid
+            001笔记管理
+            002卡片笔记
           搜藏管理
+          写作管理
+            001Latex学习
+          学习管理
+            000目录大纲
     </div>
     <script type="module">
       import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
