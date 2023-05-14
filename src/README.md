@@ -20,7 +20,7 @@
             ::icon(fa fa-book)
           工具学习
           工作管理
-            ::icon(fa-lightbulb-o)
+            ::icon(fa fa-lightbulb-o)
             Pen and paper
             Mermaid
           数字花园
