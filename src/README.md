@@ -1,5 +1,17 @@
 # 主页
 ---
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<body>
+ 
+<i class="fa fa-user" style="font-size:38px;"><a href="https://www.likui.info"> HomePage<a/></i>
+
+<i class="fa fa-car" style="font-size:38px;"></i>
+</body>
+</html>
 
 
 ## 简介
@@ -59,21 +71,6 @@
   
 
 
-  ---
-
-
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
-</head>
-<body>
- 
-<i class="fa fa-user" style="font-size:38px;"><a href="https://www.likui.info"> HomePage<a/></i>
-
-<i class="fa fa-car" style="font-size:38px;"></i>
-</body>
-</html>
 
 
 
