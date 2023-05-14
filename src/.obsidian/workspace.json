@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "24ffc2edf232cbd7",
+        "id": "222a0c1f17ca6e35",
         "type": "tabs",
         "children": [
           {
-            "id": "1d9e949aacf5301e",
+            "id": "e81db0e5051f84bc",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "工作管理/接口定义.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -97,6 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "工作管理/接口定义.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,6 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "工作管理/接口定义.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +141,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "工作管理/接口定义.md"
+              }
             }
           }
         ]
@@ -160,15 +169,21 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "1d9e949aacf5301e",
+  "active": "e81db0e5051f84bc",
   "lastOpenFiles": [
+    "计划管理/001TODO.md",
+    "计划管理",
+    "Images/20230514/2023051401.png",
+    "Images/20230514",
+    "工作管理/工作流.canvas",
+    "工作管理/工作流.md",
+    "工作管理/工作计划.md",
     "读书管理/读书管理.md",
     "读书管理/《JavaScript权威指南》.md",
     "读书管理/《Simulink仿真及代码生成技术入门到精通》.md",
     "工具学习/002CICD.md",
     "工具学习/001OpenAI.md",
     "工具学习/000工具学习.md",
-    "工作管理/工作计划.md",
     "数字花园/002卡片笔记.md",
     "数字花园/001笔记管理.md",
     "搜藏管理/001资源网站.md",
@@ -182,7 +197,6 @@
     "学习管理/007Mermaid操作.md",
     "SUMMARY.md",
     "读书管理/《Java核心技术卷I》.md",
-    "工作管理/工作流.canvas",
     "工作管理/接口定义.md",
     "Attachment/cicd.excalidraw",
     "Images/20230512/2023051202.png",
@@ -190,7 +204,6 @@
     "Images/20230512",
     "Excalidraw/Drawing 2023-05-04 10.30.38.excalidraw",
     "学习管理/001工具分享.md",
-    "工作管理/工作流.md",
     "工作管理/WorkFlow.excalidraw",
     "Attachment/20230326/卡片盒笔记法 .pdf",
     "Attachment/20230326/【笔记法】卡片盒笔记法 .pdf",
@@ -198,7 +211,6 @@
     "C工作管理/C2Autosar笔记/C201CP/Classic Platform Autosar.md",
     "C工作管理/C2Autosar笔记/C201CP/CP.excalidraw",
     "B学习管理/B3Matalab/Matalb学习笔记.md",
-    "A知识管理/A2笔记收藏/常用资源搜藏.md",
     "I图片附件/I4Simulink/Sim.png"
   ]
 }
