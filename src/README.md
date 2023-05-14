@@ -15,12 +15,12 @@
     <div  class="mermaid">    
       mindmap
         root((NotesBook))
-        ::icon(fa fa-book)
           读书管理
             《Java核心技术卷I》
             ::icon(fa fa-book)
           工具学习
           工作管理
+            ::icon(fa-lightbulb-o)
             Pen and paper
             Mermaid
           数字花园
