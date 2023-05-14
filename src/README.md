@@ -50,6 +50,7 @@
 * [ 1 ] https://mermaid.js.org/
 * [ 2 ] https://fontawesome.com/
 * [ 3 ] https://www.runoob.com/font-awesome
+* [ 4 ] https://emoji-css.afeld.me/
   
 
 
