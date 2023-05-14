@@ -19,11 +19,7 @@
           读书管理
             《Java核心技术卷I》
             ::icon(fa fa-book)
-            Popularisation
-              British popular psychology author Tony Buzan
           工具学习
-            000工具学习<a href="http://www.w3school.com.cn">W3School</a>
-            001OpenAI
           工作管理
             Pen and paper
             Mermaid
@@ -31,6 +27,8 @@
             001笔记管理
             002卡片笔记
           搜藏管理
+            000目录管理
+            001资源网站
           写作管理
             001Latex学习
           学习管理
@@ -41,6 +39,10 @@
     </script>
   </body>
 </html>
+
+
+
+
 
 
 
