@@ -61,26 +61,19 @@
 
   ---
 
+
 <!DOCTYPE html>
-<html lang="en">
-
-
+<html>
 <head>
-
 <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
-
 </head>
+<body>
+ 
+<i class="fa fa-user" style="font-size:38px;"><a href="https://www.likui.info"> HomePage<a/></i>
 
-
-  <body>
-
-  <h3 class="fal fa-user-injured><a href ="https://www.likui.info">HomePage</a></h3>
-
-
-  </body>
+<i class="fa fa-car" style="font-size:38px;"></i>
+</body>
 </html>
-
-
 
 
 
