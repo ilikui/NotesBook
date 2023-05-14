@@ -90,7 +90,30 @@ C -->|Two| E[Result 2]
 ```
 
 > 时序图
-```mermaid
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <body>
+    <div  class="mermaid">
+      sequenceDiagram
+      Alice->>John: Hello John, how are you?
+      loop Healthcheck
+          John->>John: Fight against hypochondria
+      end
+      Note right of John: Rational thoughts!
+      John-->>Alice: Great!
+      John->>Bob: How about you?
+      Bob-->>John: Jolly good!
+    </div>
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    </script>
+  </body>
+</html>
+
+
+```markdown
 sequenceDiagram
 Alice->>John: Hello John, how are you?
 loop Healthcheck
