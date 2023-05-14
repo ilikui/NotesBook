@@ -64,9 +64,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+<head>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
+</head>
+
+
   <body>
-
-
 
   <h3 class="fal fa-user-injured><a href ="https://www.likui.info">HomePage</a></h3>
 
