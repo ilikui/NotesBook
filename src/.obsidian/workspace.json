@@ -11,13 +11,8 @@
             "id": "1d9e949aacf5301e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "学习管理/004Simulink知识.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -102,7 +97,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "学习管理/004Simulink知识.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +113,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "学习管理/004Simulink知识.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,9 +134,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "学习管理/004Simulink知识.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -171,26 +162,30 @@
   },
   "active": "1d9e949aacf5301e",
   "lastOpenFiles": [
+    "读书管理/读书管理.md",
+    "读书管理/《JavaScript权威指南》.md",
+    "读书管理/《Simulink仿真及代码生成技术入门到精通》.md",
+    "工具学习/002CICD.md",
+    "工具学习/001OpenAI.md",
+    "工具学习/000工具学习.md",
+    "工作管理/工作计划.md",
+    "数字花园/002卡片笔记.md",
+    "数字花园/001笔记管理.md",
+    "搜藏管理/001资源网站.md",
+    "搜藏管理/000目录管理.md",
+    "写作管理/001Latex学习.md",
+    "学习管理/004Simulink知识.md",
     "学习管理/005Matlab学习规划.md",
     "学习管理/006Markdown知识.pdf",
     "学习管理/006Markdown知识.md",
-    "学习管理/004Simulink知识.md",
     "学习管理/002硬件知识.md",
     "学习管理/007Mermaid操作.md",
-    "工具学习/000工具学习.md",
-    "数字花园/001笔记管理.md",
     "SUMMARY.md",
-    "工具学习/001OpenAI.md",
-    "工具学习/002CICD.md",
-    "工作管理/工作计划.md",
-    "读书管理/读书管理.md",
     "读书管理/《Java核心技术卷I》.md",
-    "读书管理/《JavaScript权威指南》.md",
     "工作管理/工作流.canvas",
     "工作管理/接口定义.md",
     "Attachment/cicd.excalidraw",
     "Images/20230512/2023051202.png",
-    "搜藏管理/001资源网站.md",
     "Images/20230512/2023051201.png",
     "Images/20230512",
     "Excalidraw/Drawing 2023-05-04 10.30.38.excalidraw",
@@ -199,14 +194,11 @@
     "工作管理/WorkFlow.excalidraw",
     "Attachment/20230326/卡片盒笔记法 .pdf",
     "Attachment/20230326/【笔记法】卡片盒笔记法 .pdf",
-    "数字花园/002卡片笔记.md",
     "B学习管理/B5Java/Java学习手册.md",
     "C工作管理/C2Autosar笔记/C201CP/Classic Platform Autosar.md",
     "C工作管理/C2Autosar笔记/C201CP/CP.excalidraw",
     "B学习管理/B3Matalab/Matalb学习笔记.md",
     "A知识管理/A2笔记收藏/常用资源搜藏.md",
-    "B学习管理/B1Linux/Linux基础使用.md",
-    "A知识管理/A3自动控制理论/自动控制理论.md",
     "I图片附件/I4Simulink/Sim.png"
   ]
 }
