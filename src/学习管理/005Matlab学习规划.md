@@ -9,16 +9,17 @@
     <title>Font Awesome 图标</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
-    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
   </head>
 
 </html>
 
 
-<h1 class="em em-bar_chart">MATLAB 学习<h1/>
+<h1 class="fa fa-bar-chart">MATLAB 学习<h1/>
+
 
 
 这个项目是一个 MATLAB 学习的资源汇总。它包括 MATLAB 的基本概念、语法和数据结构，以及一些常用的 MATLAB 工具箱和应用案例等。
+
 
 
 
@@ -33,7 +34,7 @@
 - MATLAB 中文社区：一个活跃的 MATLAB 中文社区，提供了许多 MATLAB 的教程和应用案例等。
 
 
-<h2 class ="em em-magnet">代码示例</h2>
+<h2 class ="fa fa-code">代码示例</h2>
 
 这个项目中包含了一些 MATLAB 的代码示例，包括基本语法、数据结构、函数和应用案例等。以下是一些主要的示例：
 
@@ -43,7 +44,7 @@
 - MATLAB 应用案例：包括信号处理、图像处理、控制系统和机器学习等。
 
 
-<h2 class = "em hammer_and_wrench"></h2>
+<h2 class = "fa fa-anchor"></h2>
 
 
 这个项目中包含了一些常用的 MATLAB 工具箱，包括统计学工具箱、优化工具箱、信号处理工具箱和图像处理工具箱等。以下是一些主要的工具箱：
@@ -54,7 +55,7 @@
 - 图像处理工具箱：包括图像增强、图像分割和图像识别等。
 
 
-<h2 class = "em em-bulb">使用建议</h2>
+<h2 class = "fa fa-bell">使用建议</h2>
 
 
 
