@@ -568,6 +568,26 @@ a,
   font-family: var(--font-links);
   font-variant-ligatures: none;
 }
+a:hover,
+.cm-url:hover,
+.cm-hmd-internal-link:hover,
+.cm-s-obsidian span.cm-hmd-internal-link:hover,
+.cm-link:hover,
+.markdown-rendered .internal-link:hover,
+.markdown-preview-view .internal-link:hover {
+  filter: brightness(1.15);
+}
+
+.theme-light a:hover,
+.theme-light .cm-url:hover,
+.theme-light .cm-hmd-internal-link:hover,
+.theme-light .cm-s-obsidian span.cm-hmd-internal-link:hover,
+.theme-light .cm-link:hover,
+.theme-light .markdown-rendered .internal-link:hover,
+.theme-light .markdown-preview-view .internal-link:hover {
+  filter: saturate(30%);
+  filter: brightness(0.6);
+}
 
 .markdown-rendered .internal-link:hover {
   text-decoration: underline;
@@ -609,6 +629,12 @@ body.ss-links-sans {
 .markdown-rendered .external-link,
 .is-live-preview .external-link {
   background-position-y: 0;
+}
+
+.ss-hide-external-link-icon .markdown-rendered .external-link,
+.ss-hide-external-link-icon .is-live-preview .external-link {
+  background-image: none;
+  padding-right: 0;
 }
 
 /* Lists START */
@@ -1094,7 +1120,6 @@ body {
 
 .theme-light {
   --code-normal: #4db95a;
-  --link-color-hover: #8177eb;
   --link-external-color: #2f9bb7;
   --link-external-color-hover: rgb(72, 191, 224);
   --tag-color: var(--text-normal);
@@ -1104,8 +1129,7 @@ body {
 }
 
 .theme-dark {
-  --link-color: hsl(248, 75%, 79%);
-  --link-color-hover: #8177eb;
+  --accent-l: 79%;
   --link-external-color: #7fcae6;
   --link-external-color-hover: #89ebe5;
 }
@@ -1149,7 +1173,7 @@ b,
 /* Wrap long nav text*/
 .nav-file-title,
 .nav-folder-title,
-.nav-file-title-content,
+.nav-file-title-content:not(.mk-tree-text),
 .nav-folder-title-content {
   white-space: normal;
   width: auto;
@@ -1296,6 +1320,10 @@ settings:
 			-
 				label: Justified
 				value: align-justified
+	-
+		id: ss-hide-external-link-icon
+		title: Hide external link icons
+		type: class-toggle
 	*/
 /* Change inline mhchem equations font to better blend with the text */
 .mathjax-font-typomagical mjx-container mjx-math mjx-texatom {
