@@ -9,11 +9,7 @@
 
 
 
-<!DOCTYPE html>
-<html lang="en">
-
-  <body>
-    <div  class="mermaid">
+```mermaid
       gantt
           section Section
           Completed :done,    des1, 2023-05-14,2023-12-31
@@ -22,12 +18,8 @@
           Parallel 2   :         des4, after des1, 1d
           Parallel 3   :         des5, after des3, 1d
     Parallel 4   :         des6, after des4, 1d
-   </div>
-    <script type="module">
-      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-    </script>
-  </body>
-</html>
+
+```
 
 
 
