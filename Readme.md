@@ -8,5 +8,8 @@
 ![](Image/Banner.PNG)
 
 
+<div align =center>
+  <imge src= "Image/Banner.PNG">
+</div>
 
 
