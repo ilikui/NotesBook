@@ -11,14 +11,12 @@
             "id": "1612b38c76f1db1f",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "工具学习/工具学习.canvas",
-                "viewState": {
-                  "x": 872.1290322580644,
-                  "y": -112.32831541218638,
-                  "zoom": -0.9441195494836335
-                }
+                "file": "工具学习/002CICD.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           }
@@ -120,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具学习/工具学习.canvas",
+                "file": "工具学习/002CICD.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具学习/工具学习.canvas",
+                "file": "工具学习/002CICD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具学习/工具学习.canvas"
+                "file": "工具学习/002CICD.md"
               }
             }
           }
@@ -190,17 +188,17 @@
   },
   "active": "1612b38c76f1db1f",
   "lastOpenFiles": [
-    "搜藏管理/000目录管理.md",
+    "工具学习/003 UML.md",
     "工具学习/002CICD.md",
     "工具学习/001OpenAI.md",
-    "工具学习/000工具学习.md",
     "工具学习/004 设计模式.md",
-    "工作管理/工作流.md",
     "工具学习/工具学习.canvas",
+    "搜藏管理/000目录管理.md",
+    "工具学习/000工具学习.md",
+    "工作管理/工作流.md",
     "工具学习/Untitled Diagram.svg",
     "未命名.canvas",
     "2023-06-07.md",
-    "工具学习/003 UML.md",
     "工作管理/接口定义.md",
     "工作管理/工作计划.md",
     "工作管理/001汽车电子.md",
