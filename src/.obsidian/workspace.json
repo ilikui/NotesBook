@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "工作管理/工作计划.md",
+                "file": "学习管理/000目录大纲.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -102,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工作管理/工作计划.md",
+                "file": "学习管理/000目录大纲.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工作管理/工作计划.md",
+                "file": "学习管理/000目录大纲.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工作管理/工作计划.md"
+                "file": "学习管理/000目录大纲.md"
               }
             }
           }
@@ -172,6 +172,7 @@
   },
   "active": "dc65876e9acb23fc",
   "lastOpenFiles": [
+    "工作管理/工作计划.md",
     "工作管理/工作流.md",
     "工作管理/工作流.canvas",
     "工作管理/WorkFlow.excalidraw",
@@ -186,7 +187,6 @@
     "数字花园/数字花园.canvas",
     "学习管理/007Mermaid操作.md",
     "工作管理/接口定义.md",
-    "工作管理/工作计划.md",
     "搜藏管理/002GitHub优秀仓库.md",
     "README.md",
     "SUMMARY.md",
