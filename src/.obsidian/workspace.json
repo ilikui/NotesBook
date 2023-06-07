@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "工具学习/002CICD.md",
-                "mode": "source",
+                "file": "SUMMARY.md",
+                "mode": "preview",
                 "backlinks": true,
                 "source": false
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具学习/002CICD.md",
+                "file": "SUMMARY.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具学习/002CICD.md",
+                "file": "SUMMARY.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具学习/002CICD.md"
+                "file": "SUMMARY.md"
               }
             }
           }
@@ -188,12 +188,22 @@
   },
   "active": "1612b38c76f1db1f",
   "lastOpenFiles": [
+    "README.md",
+    "读书管理/读书管理.md",
+    "读书管理/《Simulink仿真及代码生成技术入门到精通》.md",
+    "读书管理/《Java核心技术卷I》.md",
+    "读书管理/《JavaScript权威指南》.md",
+    "计划管理/001TODO.md",
+    "数字花园/001笔记管理.md",
+    "数字花园/002卡片笔记.md",
+    "搜藏管理/002GitHub优秀仓库.md",
+    "搜藏管理/001资源网站.md",
+    "搜藏管理/000目录管理.md",
+    "工具学习/004 设计模式.md",
+    "工具学习/工具学习.canvas",
     "工具学习/003 UML.md",
     "工具学习/002CICD.md",
     "工具学习/001OpenAI.md",
-    "工具学习/004 设计模式.md",
-    "工具学习/工具学习.canvas",
-    "搜藏管理/000目录管理.md",
     "工具学习/000工具学习.md",
     "工作管理/工作流.md",
     "工具学习/Untitled Diagram.svg",
@@ -202,21 +212,12 @@
     "工作管理/接口定义.md",
     "工作管理/工作计划.md",
     "工作管理/001汽车电子.md",
-    "读书管理/《JavaScript权威指南》.md",
-    "计划管理/001TODO.md",
     "数字花园/数字花园.canvas",
-    "数字花园/002卡片笔记.md",
-    "数字花园/001笔记管理.md",
-    "搜藏管理/002GitHub优秀仓库.md",
-    "搜藏管理/001资源网站.md",
     "工作管理/WorkFlow.excalidraw",
     "工作管理/工作流.canvas",
     "学习管理/002硬件知识.md",
     "学习管理/001工具分享.md",
     "学习管理/000目录大纲.md",
-    "读书管理/读书管理.md",
-    "读书管理/《Java核心技术卷I》.md",
-    "README.md",
     "学习管理/007Mermaid操作.md",
     "SUMMARY.md",
     "学习管理/006Markdown知识.pdf",
