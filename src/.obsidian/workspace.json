@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "读书管理/《Java核心技术卷I》.md",
+                "file": "工作管理/001汽车电子.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -102,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "读书管理/《Java核心技术卷I》.md",
+                "file": "工作管理/001汽车电子.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "读书管理/《Java核心技术卷I》.md",
+                "file": "工作管理/001汽车电子.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "读书管理/《Java核心技术卷I》.md"
+                "file": "工作管理/001汽车电子.md"
               }
             }
           }
@@ -170,9 +170,15 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "92857f5eb2f41a2c",
+  "active": "dc65876e9acb23fc",
   "lastOpenFiles": [
+    "工具学习/002CICD.md",
+    "工具学习/001OpenAI.md",
+    "工具学习/000工具学习.md",
+    "数字花园/002卡片笔记.md",
+    "读书管理/读书管理.md",
     "计划管理/001TODO.md",
+    "读书管理/《Java核心技术卷I》.md",
     "数字花园/数字花园.canvas",
     "学习管理/007Mermaid操作.md",
     "工作管理/接口定义.md",
@@ -181,12 +187,10 @@
     "工作管理/工作流.canvas",
     "工作管理/WorkFlow.excalidraw",
     "搜藏管理/002GitHub优秀仓库.md",
-    "工具学习/000工具学习.md",
     "README.md",
     "SUMMARY.md",
     "学习管理/000目录大纲.md",
     "学习管理/001工具分享.md",
-    "数字花园/002卡片笔记.md",
     "数字花园/001笔记管理.md",
     "搜藏管理/000目录管理.md",
     "工作管理/001汽车电子.md",
@@ -197,14 +201,11 @@
     "学习管理/006NodeJs学习教程.md",
     "学习管理/006Markdown知识.pdf",
     "学习管理/002硬件知识.md",
-    "工具学习/002CICD.md",
-    "工具学习/001OpenAI.md",
     "Excalidraw/Drawing 2023-05-04 10.30.38.excalidraw",
     "Excalidraw/汽车电子.excalidraw",
     "Attachment/cicd.excalidraw",
     "Attachment/Requirements.excalidraw.md",
     "Attachment/20230326/卡片盒笔记法 .pdf",
-    "学习管理/006Markdown知识.md",
     "计划管理/未命名.canvas",
     "计划管理",
     "Images/20230514/2023051401.png",
