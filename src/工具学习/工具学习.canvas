@@ -2,8 +2,8 @@
 	"nodes":[
 		{"id":"80ee685205b94885","x":-360,"y":-780,"width":400,"height":400,"type":"file","file":"工具学习/000工具学习.md"},
 		{"id":"b87860d66643b68f","x":480,"y":-440,"width":400,"height":400,"type":"file","file":"工具学习/001OpenAI.md"},
-		{"id":"a1ea0cdc90fc8edc","x":-920,"y":240,"width":400,"height":400,"type":"file","file":"工具学习/003 UML.md"},
-		{"id":"ca4f6afa6998181a","x":-1560,"y":-160,"width":400,"height":400,"type":"file","file":"工具学习/004 设计模式.md"},
+		{"id":"a1ea0cdc90fc8edc","x":-920,"y":240,"width":400,"height":400,"type":"file","file":"工具学习/003UML.md"},
+		{"id":"ca4f6afa6998181a","x":-1560,"y":-160,"width":400,"height":400,"type":"file","file":"工具学习/004设计模式.md"},
 		{"id":"ae1b68559ca52ec4","x":200,"y":200,"width":400,"height":400,"type":"file","file":"工具学习/002CICD.md"}
 	],
 	"edges":[
