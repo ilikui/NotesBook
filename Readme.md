@@ -4,12 +4,9 @@
 
 
 
-<html> 
+
+![](Image/Banner.PNG)
 
 
 
-<img alt="" src="../Image/Banner.PNG" style="margin: 0 auto;" />
-
-
-</html>
 
