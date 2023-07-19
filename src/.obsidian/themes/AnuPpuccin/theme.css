@@ -370,6 +370,9 @@ settings:
       -
         label: Highlight + Border
         value: anp-current-line-border
+      -
+        label: Border Only
+        value: anp-current-line-border-only
 
 # File Editor & Markdown Elements :: Callouts
   -
@@ -557,6 +560,70 @@ settings:
     type: variable-number
     default: 0.075
     format: em
+  -
+    id: list-marker-color
+    title: Unordered list bullet color
+    type: variable-themed-color
+    default-light: '#'
+    default-dark: '#'
+    format: 'hex'
+  -
+    id: list-numbered-style
+    title: Ordered list style
+    type: variable-select
+    default: decimal
+    options:
+      -
+        label: "Decimal"
+        value: decimal
+      -
+        label: "Decimal with leading zeroes"
+        value: decimal-leading-zero
+      -
+        label: "Lowercase alphabetical"
+        value: lower-alpha
+      -
+        label: "Uppercase alphabetical"
+        value: upper-alpha
+      -
+        label: "Lowercase Roman Numerals"
+        value: lower-roman
+      -
+        label: "Uppercase Roman Numerals"
+        value: upper-roman
+      -
+        label: "Lowercase Latin"
+        value: lower-latin
+      -
+        label: "Uppercase Latin"
+        value: upper-latin
+      -
+        label: "Lowercase Greek"
+        value: lower-greek
+      -
+        label: "Uppercase Greek"
+        value: upper-greek
+      -
+        label: "Hiragana"
+        value: hiragana
+      -
+        label: "Hiragana Iroha"
+        value: hiragana-iroha
+      -
+        label: "Katakana"
+        value: armenian
+      -
+        label: "Katakana Iroha"
+        value: katakana-iroha
+      -
+        label: "Armenian"
+        value: armenian
+      -
+        label: "CJK Ideographic"
+        value: cjk-ideographic
+      -
+        label: "Hebrew"
+        value: hebrew
 
 # File Editor & Markdown Elements :: Tables
 
@@ -582,7 +649,7 @@ settings:
     description: Use anp-table-auto for yaml syntax
     type: class-toggle
   -
-    id: anp-th-highlight
+    id: anp-table-th-highlight
     title: <th> Highlight
     type: class-toggle
   -
@@ -594,19 +661,19 @@ settings:
     options:
       -
         label: None
-        value: anp-td-none
+        value: none
       -
         label: Alternate Rows
-        value: anp-td-alt-rows
+        value: anp-table-row-alt
       -
         label: Alternate Columns
-        value: anp-td-alt-cols
+        value: anp-table-col-alt
       -
         label: Checkered
-        value: anp-td-checkered
+        value: anp-table-checkered
       -
         label: Full
-        value: anp-td-full
+        value: anp-table-full
   -
     id: anp-table-highlight-opacity
     title: Highlight Opacity
@@ -1869,7 +1936,7 @@ settings:
   -
     id: anp-custom-background-header
     title: Background
-    description: Custom workspace bacgkrounds
+    description: Custom workspace backgrounds
     type: heading
     level: 2
     collapsed: true
@@ -2040,6 +2107,26 @@ settings:
       -
         label: Left
         value: 0
+
+# Workspace :: PDF Viewer
+
+  -
+    id: anp-pdf-viewer-header
+    title: PDF Viewer
+    description: 
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: anp-pdf-blend-toggle-dark
+    title: Toggle PDF background blending - Dark Mode
+    desc: Blends PDF viewer background with obsidian background in dark mode
+    type: class-toggle
+  -
+    id: anp-pdf-blend-toggle-light
+    title: Toggle PDF background blending - Light Mode
+    desc: Blends PDF viewer background with obsidian background in light mode
+    type: class-toggle
 
 # Workspace :: Rainbow Folders
 
@@ -3109,6 +3196,11 @@ body {
   --callout-title-padding: var(--size-4-2);
   --callout-content-padding: var(--size-4-2);
   --background-modifier-active: hsla(var(--color-accent-hsl), 0.1);
+  --pdf-background: var(--background-primary);
+  --pdf-dark-opacity: 1;
+  --pdf-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 8px transparent;
+  --pdf-sidebar-background: var(--background-primary);
+  --pdf-thumbnail-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 8px transparent;
 }
 body.theme-light {
   --anp-background-image: var(--anp-background-image-light);
@@ -3132,6 +3224,19 @@ body.theme-dark {
   border-left: 2px solid var(--interactive-accent);
   margin-left: -2px !important;
   background-color: rgba(var(--ctp-surface1), 0.4);
+}
+
+.anp-current-line-border-only .markdown-source-view .cm-active.cm-line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -1.5rem;
+  width: 2px;
+  background-color: rgba(var(--interactive-accent-rgb), 0.3);
+}
+.anp-current-line-border-only .markdown-source-view .cm-focused .cm-active.cm-line::before {
+  background-color: var(--interactive-accent);
 }
 
 /*-Custom editor font-*/
@@ -3193,42 +3298,6 @@ body.theme-dark {
 
 .ͼp .cm-vim-panel {
   font-family: var(--font-monospace);
-}
-
-/*-LaTeX color implementation-*/
-/* Syntax highlighting */
-.cm-math.token.comment, .cm-math.token.prolog, .cm-math.token.doctype, .cm-math.token.cdata, .cm-math.cm-comment, .cm-math.cm-meta {
-  color: var(--code-comment);
-}
-.cm-math.token.namespace {
-  opacity: 0.7;
-}
-.cm-math.token.tag, .cm-math.token.constant, .cm-math.token.symbol, .cm-math.token.deleted, .cm-math.cm-tag {
-  color: var(--code-tag);
-}
-.cm-math.token.punctuation, .cm-math.cm-punctuation, .cm-math.cm-bracket, .cm-math.cm-hr {
-  color: var(--code-punctuation);
-}
-.cm-math.token.boolean, .cm-math.token.number, .cm-math.cm-number {
-  color: var(--code-value);
-}
-.cm-math.token.selector, .cm-math.token.attr-name, .cm-math.token.string, .cm-math.token.char, .cm-math.token.inserted, .cm-math.cm-qualifier, .cm-math.cm-string, .cm-math.cm-string-2 {
-  color: var(--code-string);
-}
-.cm-math.token.operator, .cm-math.cm-operator {
-  color: var(--code-operator);
-}
-.cm-math.token.entity, .cm-math.token.parameter, .cm-math.token.property, .cm-math.token.url, .cm-math.language-css .token.string, .cm-math.style .token.string, .cm-math.token.variable, .cm-math.cm-link, .cm-math.cm-variable, .cm-math.cm-variable-2, .cm-math.cm-variable-3 {
-  color: var(--code-property);
-}
-.cm-math.token.atrule, .cm-math.token.attr-value, .cm-math.token.builtin, .cm-math.token.function, .cm-math.token.class-name, .cm-math.token.property-access, .cm-math.cm-builtin, .cm-math.cm-property, .cm-math.cm-attribute, .cm-math.cm-type {
-  color: var(--code-function);
-}
-.cm-math.token.keyword, .cm-math.cm-keyword {
-  color: var(--code-keyword);
-}
-.cm-math.token.regex, .cm-math.token.important {
-  color: var(--code-important);
 }
 
 .workspace-tab-header,
@@ -3421,6 +3490,33 @@ input.slider,
     color: rgb(var(--ctp-text));
   }
 }
+.theme-dark.anp-pdf-blend-toggle-dark,
+.theme-light.anp-pdf-blend-toggle-light {
+  --pdf-background: var(--background-secondary);
+  --pdf-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 8px transparent;
+  --pdf-thumbnail-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 8px transparent;
+}
+.theme-dark.anp-pdf-blend-toggle-dark .pdf-viewer .canvasWrapper,
+.theme-dark.anp-pdf-blend-toggle-dark .pdf-thumbnail-view .thumbnailImage,
+.theme-light.anp-pdf-blend-toggle-light .pdf-viewer .canvasWrapper,
+.theme-light.anp-pdf-blend-toggle-light .pdf-thumbnail-view .thumbnailImage {
+  filter: invert(1) hue-rotate(180deg);
+  mix-blend-mode: screen;
+}
+.theme-dark.anp-pdf-blend-toggle-dark .pdf-viewer,
+.theme-light.anp-pdf-blend-toggle-light .pdf-viewer {
+  background-color: var(--pdf-background);
+}
+.theme-dark.anp-pdf-blend-toggle-dark .pdf-viewer .page,
+.theme-light.anp-pdf-blend-toggle-light .pdf-viewer .page {
+  background-color: var(--background-primary);
+  border-color: var(--pdf-background);
+}
+
+.textLayer ::selection {
+  background: var(--color-accent);
+}
+
 .canvas-card-menu {
   box-shadow: none;
   border: 1px solid var(--background-modifier-border);
@@ -3661,7 +3757,9 @@ body.is-translucent {
 .anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header {
   margin-top: calc(var(--title-bar-translate-y) * -1);
   position: relative;
-  transition: transform var(--title-bar-duration) var(--title-bar-delay), margin-right 0s calc(var(--title-bar-duration) + var(--title-bar-delay)), padding 0s calc(var(--title-bar-duration) + var(--title-bar-delay));
+  transition: transform var(--title-bar-duration) var(--title-bar-delay), margin-right 0s calc(var(--title-bar-duration) + var(--title-bar-delay)), margin-right 0s calc(var(--title-bar-duration) + var(--title-bar-delay)), margin-left 0s calc(var(--title-bar-duration) + var(--title-bar-delay)), padding 0s calc(var(--title-bar-duration) + var(--title-bar-delay));
+  margin-left: 80px;
+  margin-right: 80px;
 }
 .anp-autohide-titlebar:not(.is-mobile):not(.mod-macos) .workspace-tabs:is(.mod-top-right-space, .mod-top-left-space) .workspace-leaf-content .view-header {
   margin-right: calc(var(--title-bar-windows-fix) * var(--frame-right-space));
@@ -3679,21 +3777,26 @@ body.is-translucent {
 .anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header::before {
   bottom: calc(var(--title-bar-target-translate-y) * -1);
   content: "";
-  left: 0;
+  left: -80px;
   position: absolute;
   top: 0;
   transition: transform var(--title-bar-duration) var(--title-bar-delay);
-  width: 100%;
+  width: calc(100% + 160px);
 }
 .anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-content {
   transition: transform var(--title-bar-duration) var(--title-bar-delay);
 }
 .anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header:is(:hover, :focus-within)::before {
   transform: translateY(var(--title-bar-target-translate-y));
+  left: 0px;
+  width: 100%;
 }
 .anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header:is(:hover, :focus-within),
 .anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header:is(:hover, :focus-within) + .view-content {
+  transition: transform var(--title-bar-duration) var(--title-bar-delay), margin-right 0s, margin-left 0s, padding 0s calc(var(--title-bar-duration) + var(--title-bar-delay));
   transform: translateY(var(--title-bar-translate-y));
+  margin-left: 0;
+  margin-right: 0;
 }
 .anp-autohide-titlebar:not(.is-mobile) .workspace-leaf-content .view-header:not(:hover, :focus-within) .clickable-icon {
   app-region: drag;
@@ -3973,6 +4076,9 @@ body.anp-card-layout {
 body.anp-card-layout.anp-hide-borders {
   --tab-outline-color: transparent;
 }
+body.anp-card-layout.anp-hide-borders .menu {
+  border: 0px !important;
+}
 body.anp-card-layout .sidebar-toggle-button, body.anp-card-layout .workspace-tabs.mod-top {
   --tab-container-background: var(--card-background-color);
 }
@@ -4217,6 +4323,9 @@ body.anp-border-layout .workspace-ribbon.mod-left:before {
 }
 body.anp-border-layout .workspace-ribbon.mod-left, body.anp-border-layout .workspace-ribbon.mod-left.is-focused {
   border-right-color: var(--card-background-color);
+}
+body.anp-border-layout.is-popout-window .workspace {
+  margin-left: var(--anp-border-padding, 20px);
 }
 
 .anp-bg-fix .workspace,
@@ -4507,14 +4616,6 @@ Support me: https://buymeacoffee.com/AnubisNekhet
   --text-highlight-bg: rgba(var(--anp-highlight-color, var(--ctp-yellow)), 0.2);
 }
 
-/*-Make it so that mark overwrites italic and bold colors-*/
-.markdown-rendered mark {
-  --italic-color: rgb(var(--ctp-text));
-  --bold-color: rgb(var(--ctp-text));
-  border-radius: 4px;
-  padding: 2px;
-}
-
 .markdown-rendered .internal-link {
   text-decoration-line: none;
 }
@@ -4524,6 +4625,12 @@ Support me: https://buymeacoffee.com/AnubisNekhet
 
 .cm-formatting-link-string {
   color: var(--text-normal);
+}
+
+.cm-hmd-internal-link {
+  --link-decoration: none;
+  --link-decoration-hover: none;
+  --link-decoration-active: none;
 }
 
 .external-link,
@@ -5059,20 +5166,20 @@ hr {
 }
 
 .anp-list-toggle div.el-ul > ul.has-list-bullet > li > ul.has-list-bullet > li > .list-bullet::after {
-  border: 1px solid var(--list-marker-color);
+  --list-bullet-border: 1px solid var(--list-marker-color);
   background-color: transparent;
   width: calc(var(--list-bullet-size) - 1px);
   height: calc(var(--list-bullet-size) - 1px);
 }
 .anp-list-toggle div.el-ul > ul.has-list-bullet > li > ul.has-list-bullet > li > ul.has-list-bullet > li > .list-bullet::after {
-  border-radius: 0;
+  --list-bullet-radius: 0;
   background-color: var(--list-marker-color);
 }
 .anp-list-toggle div.el-ul > ul.has-list-bullet > li > ul.has-list-bullet > li > ul.has-list-bullet > li > ul.has-list-bullet > li > .list-bullet::after {
   width: calc(var(--list-bullet-size) - 1px);
   height: calc(var(--list-bullet-size) - 1px);
-  border-radius: 0;
-  border: 1px solid var(--list-marker-color);
+  --list-bullet-radius: 0;
+  --list-bullet-border: 1px solid var(--list-marker-color);
   background-color: transparent;
 }
 
@@ -5087,12 +5194,18 @@ hr {
 .anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table thead tr > th:first-child,
 .anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table thead tr > th,
 .anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table thead tr > th:last-child,
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table,
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table td,
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table th,
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th:first-child,
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th,
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th:last-child,
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview),
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) td,
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) th,
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) thead tr > th:first-child,
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) thead tr > th,
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) thead tr > th:last-child,
+.anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table,
+.anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table td,
+.anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table th,
+.anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th:first-child,
+.anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th,
+.anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th:last-child,
 .anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview),
 .anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) td,
 .anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) th,
@@ -5105,10 +5218,14 @@ hr {
 .anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table thead tr > th:first-child:not([align]),
 .anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table thead tr > th:not([align]),
 .anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table thead tr > th:last-child:not([align]),
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table th:not([align]),
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th:first-child:not([align]),
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th:not([align]),
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th:last-child:not([align]),
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) th:not([align]),
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) thead tr > th:first-child:not([align]),
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) thead tr > th:not([align]),
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) thead tr > th:last-child:not([align]),
+.anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table th:not([align]),
+.anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th:first-child:not([align]),
+.anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th:not([align]),
+.anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table thead tr > th:last-child:not([align]),
 .anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) th:not([align]),
 .anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) thead tr > th:first-child:not([align]),
 .anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) thead tr > th:not([align]),
@@ -5116,7 +5233,8 @@ hr {
   text-align: var(--anp-table-align-th, center);
 }
 .anp-table-toggle .markdown-preview-view:not(.cards):not(.table-disable) table td:not([align]),
-.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table td:not([align]),
+.anp-table-toggle .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) td:not([align]),
+.anp-table-toggle .is-live-preview:not(.cards):not(.table-disable) table td:not([align]),
 .anp-table-toggle .is-live-preview.cards:not(.table-disable) table:not(.dataview) td:not([align]) {
   text-align: var(--anp-table-align-td, center);
 }
@@ -5125,27 +5243,76 @@ table.dataview.table-view-table > tbody > tr:hover {
   background-color: rgba(var(--ctp-surface1), 0.1) !important;
 }
 
-.anp-table-toggle.anp-th-highlight .markdown-preview-view:not(.cards):not(.table-disable) th, .anp-table-toggle.anp-th-highlight .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) th, .anp-table-toggle.anp-th-highlight .is-live-preview:not(.cards):not(.table-disable) th, .anp-table-toggle.anp-th-highlight .is-live-preview.cards:not(.table-disable) table:not(.dataview) th {
+.anp-table-toggle.anp-table-th-highlight .markdown-preview-view:not(.cards):not(.table-disable) th,
+.anp-table-toggle.anp-table-th-highlight .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) th,
+.anp-table-toggle.anp-table-th-highlight .is-live-preview:not(.cards):not(.table-disable) th,
+.anp-table-toggle.anp-table-th-highlight .is-live-preview.cards:not(.table-disable) table:not(.dataview) th {
   background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
 }
-.anp-table-toggle.anp-td-alt-rows .markdown-preview-view:not(.cards):not(.table-disable) table tr:nth-child(2n) td, .anp-table-toggle.anp-td-alt-rows .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td, .anp-table-toggle.anp-td-alt-rows .is-live-preview:not(.cards):not(.table-disable) table tr:nth-child(2n) td, .anp-table-toggle.anp-td-alt-rows .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td {
+
+.th-highlight.markdown-preview-view:not(.cards):not(.table-disable) th, .th-highlight.markdown-preview-view.cards:not(.table-disable) table:not(.dataview) th, .th-highlight.is-live-preview:not(.cards):not(.table-disable) th, .th-highlight.is-live-preview.cards:not(.table-disable) table:not(.dataview) th {
   background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
 }
-.anp-table-toggle.anp-td-alt-cols .markdown-preview-view:not(.cards):not(.table-disable) table tr td:nth-child(2n), .anp-table-toggle.anp-td-alt-cols .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n), .anp-table-toggle.anp-td-alt-cols .is-live-preview:not(.cards):not(.table-disable) table tr td:nth-child(2n), .anp-table-toggle.anp-td-alt-cols .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n) {
+
+.anp-table-toggle.anp-table-row-alt .markdown-preview-view:not(.cards):not(.table-disable) tr:nth-child(2n) td,
+.anp-table-toggle.anp-table-row-alt .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td,
+.anp-table-toggle.anp-table-row-alt .is-live-preview:not(.cards):not(.table-disable) tr:nth-child(2n) td,
+.anp-table-toggle.anp-table-row-alt .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td {
   background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
 }
-.anp-table-toggle.anp-td-checkered .markdown-preview-view:not(.cards):not(.table-disable) table tr td:nth-child(2n),
-.anp-table-toggle.anp-td-checkered .markdown-preview-view:not(.cards):not(.table-disable) table tr:nth-child(2n) td, .anp-table-toggle.anp-td-checkered .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n),
-.anp-table-toggle.anp-td-checkered .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td, .anp-table-toggle.anp-td-checkered .is-live-preview:not(.cards):not(.table-disable) table tr td:nth-child(2n),
-.anp-table-toggle.anp-td-checkered .is-live-preview:not(.cards):not(.table-disable) table tr:nth-child(2n) td, .anp-table-toggle.anp-td-checkered .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n),
-.anp-table-toggle.anp-td-checkered .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td {
+
+.row-alt.markdown-preview-view:not(.cards):not(.table-disable) tr:nth-child(2n) td, .row-alt.markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td, .row-alt.is-live-preview:not(.cards):not(.table-disable) tr:nth-child(2n) td, .row-alt.is-live-preview.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td {
   background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
 }
-.anp-table-toggle.anp-td-checkered .markdown-preview-view:not(.cards):not(.table-disable) table tr:nth-child(2n) td:nth-child(2n), .anp-table-toggle.anp-td-checkered .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td:nth-child(2n), .anp-table-toggle.anp-td-checkered .is-live-preview:not(.cards):not(.table-disable) table tr:nth-child(2n) td:nth-child(2n), .anp-table-toggle.anp-td-checkered .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td:nth-child(2n) {
+
+.anp-table-toggle.anp-table-col-alt .markdown-preview-view:not(.cards):not(.table-disable) tr td:nth-child(2n),
+.anp-table-toggle.anp-table-col-alt .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n),
+.anp-table-toggle.anp-table-col-alt .is-live-preview:not(.cards):not(.table-disable) tr td:nth-child(2n),
+.anp-table-toggle.anp-table-col-alt .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n) {
+  background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
+}
+
+.col-alt.markdown-preview-view:not(.cards):not(.table-disable) tr td:nth-child(2n), .col-alt.markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n), .col-alt.is-live-preview:not(.cards):not(.table-disable) tr td:nth-child(2n), .col-alt.is-live-preview.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n) {
+  background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
+}
+
+.anp-table-toggle.anp-table-full .markdown-preview-view:not(.cards):not(.table-disable) td,
+.anp-table-toggle.anp-table-full .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) td,
+.anp-table-toggle.anp-table-full .is-live-preview:not(.cards):not(.table-disable) td,
+.anp-table-toggle.anp-table-full .is-live-preview.cards:not(.table-disable) table:not(.dataview) td {
+  background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
+}
+
+.table-full.markdown-preview-view:not(.cards):not(.table-disable) td, .table-full.markdown-preview-view.cards:not(.table-disable) table:not(.dataview) td, .table-full.is-live-preview:not(.cards):not(.table-disable) td, .table-full.is-live-preview.cards:not(.table-disable) table:not(.dataview) td {
+  background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
+}
+
+.anp-table-toggle.anp-table-checkered .markdown-preview-view:not(.cards):not(.table-disable) tr td:nth-child(2n),
+.anp-table-toggle.anp-table-checkered .markdown-preview-view:not(.cards):not(.table-disable) tr:nth-child(2n) td,
+.anp-table-toggle.anp-table-checkered .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n),
+.anp-table-toggle.anp-table-checkered .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td,
+.anp-table-toggle.anp-table-checkered .is-live-preview:not(.cards):not(.table-disable) tr td:nth-child(2n),
+.anp-table-toggle.anp-table-checkered .is-live-preview:not(.cards):not(.table-disable) tr:nth-child(2n) td,
+.anp-table-toggle.anp-table-checkered .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n),
+.anp-table-toggle.anp-table-checkered .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td {
+  background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
+}
+.anp-table-toggle.anp-table-checkered .markdown-preview-view:not(.cards):not(.table-disable) tr:nth-child(2n) td:nth-child(2n),
+.anp-table-toggle.anp-table-checkered .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td:nth-child(2n),
+.anp-table-toggle.anp-table-checkered .is-live-preview:not(.cards):not(.table-disable) tr:nth-child(2n) td:nth-child(2n),
+.anp-table-toggle.anp-table-checkered .is-live-preview.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td:nth-child(2n) {
   background-color: rgba(var(--ctp-crust), var(--anp-table-highlight-opacity, 0.5));
 }
-.anp-table-toggle.anp-td-full .markdown-preview-view:not(.cards):not(.table-disable) table td, .anp-table-toggle.anp-td-full .markdown-preview-view.cards:not(.table-disable) table:not(.dataview) td, .anp-table-toggle.anp-td-full .is-live-preview:not(.cards:not(.table-disable)) table td, .anp-table-toggle.anp-td-full .is-live-preview.cards:not(.table-disable) table:not(.dataview) td {
+
+.checkered.markdown-preview-view:not(.cards):not(.table-disable) tr td:nth-child(2n),
+.checkered.markdown-preview-view:not(.cards):not(.table-disable) tr:nth-child(2n) td, .checkered.markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n),
+.checkered.markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td, .checkered.is-live-preview:not(.cards):not(.table-disable) tr td:nth-child(2n),
+.checkered.is-live-preview:not(.cards):not(.table-disable) tr:nth-child(2n) td, .checkered.is-live-preview.cards:not(.table-disable) table:not(.dataview) tr td:nth-child(2n),
+.checkered.is-live-preview.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td {
   background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
+}
+.checkered.markdown-preview-view:not(.cards):not(.table-disable) tr:nth-child(2n) td:nth-child(2n), .checkered.markdown-preview-view.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td:nth-child(2n), .checkered.is-live-preview:not(.cards):not(.table-disable) tr:nth-child(2n) td:nth-child(2n), .checkered.is-live-preview.cards:not(.table-disable) table:not(.dataview) tr:nth-child(2n) td:nth-child(2n) {
+  background-color: rgba(var(--ctp-crust), var(--anp-table-highlight-opacity, 0.5));
 }
 
 .anp-table-auto.markdown-rendered:not(.cards):not(.table-disable) table,
@@ -5218,7 +5385,8 @@ body.rainbow-tags {
   --r7-color-light: rgba(var(--ctp-mauve), var(--rainbow-tags-opacity));
 }
 
-.anp-collapse-folders .nav-folder .nav-folder-collapse-indicator {
+.anp-collapse-folders .nav-folder .nav-folder-collapse-indicator,
+.anp-collapse-folders [data-type=bookmarks] .tree-item .collapse-icon {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 24' fill='none' stroke='currentColor' stroke-linejoin='round' stroke-linecap='round' stroke-width='2'%3E%3Cpath d='M6 14l1.45-2.9A2 2 0 0 1 9.24 10H22a2 2 0 0 1 1.94 2.5l-1.55 6a2 2 0 0 1-1.94 1.5H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H20a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E%0A");
   -webkit-mask-repeat: no-repeat;
   background-color: currentColor;
@@ -5226,12 +5394,12 @@ body.rainbow-tags {
   width: 17px;
   margin-right: 4px;
 }
-
-.anp-collapse-folders .nav-folder.is-collapsed .nav-folder-collapse-indicator {
+.anp-collapse-folders .nav-folder.is-collapsed .nav-folder-collapse-indicator,
+.anp-collapse-folders [data-type=bookmarks] .tree-item.is-collapsed .collapse-icon {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 24' fill='none' stroke='currentColor' stroke-linejoin='round' stroke-linecap='round' stroke-width='2'%3E%3Cpath d='M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2z'/%3E%3Cpath d='M2 10h20' /%3E%3C/svg%3E%0A");
 }
-
-.anp-collapse-folders .nav-folder-collapse-indicator svg.svg-icon {
+.anp-collapse-folders .nav-folder-collapse-indicator svg.svg-icon,
+.anp-collapse-folders [data-type=bookmarks] .collapse-icon svg.svg-icon {
   color: transparent !important;
 }
 
@@ -5252,14 +5420,14 @@ body.rainbow-tags {
   --h4-font: var(--font-text);
   --h5-font: var(--font-text);
   --h6-font: var(--font-text);
-  --h1-color: var(--font-normal);
-  --h2-color: var(--font-normal);
-  --h3-color: var(--font-normal);
-  --h4-color: var(--font-normal);
-  --h5-color: var(--font-normal);
-  --h6-color: var(--font-normal);
-  --italic-color: var(--font-normal);
-  --bold-color: var(--font-normal);
+  --h1-color: var(--text-normal);
+  --h2-color: var(--text-normal);
+  --h3-color: var(--text-normal);
+  --h4-color: var(--text-normal);
+  --h5-color: var(--text-normal);
+  --h6-color: var(--text-normal);
+  --italic-color: var(--text-normal);
+  --bold-color: var(--text-normal);
 }
 
 .callout[data-callout=capacities-index] {
@@ -6551,41 +6719,53 @@ None of the original code was used and the feature was implemented from scratch.
 
 /*------------RAINBOW FOLDERS-------------*/
 /* Rainbow colors */
-.nav-folder-children > .nav-folder:nth-child(11n+2) {
+.nav-folder-children > .nav-folder:nth-child(11n+2),
+[data-type=bookmarks] .tree-item:nth-child(11n+2) {
   --rainbow-folder-color: var(--ctp-red);
 }
-.nav-folder-children > .nav-folder:nth-child(11n+3) {
+.nav-folder-children > .nav-folder:nth-child(11n+3),
+[data-type=bookmarks] .tree-item:nth-child(11n+3) {
   --rainbow-folder-color: var(--ctp-maroon);
 }
-.nav-folder-children > .nav-folder:nth-child(11n+4) {
+.nav-folder-children > .nav-folder:nth-child(11n+4),
+[data-type=bookmarks] .tree-item:nth-child(11n+4) {
   --rainbow-folder-color: var(--ctp-peach);
 }
-.nav-folder-children > .nav-folder:nth-child(11n+5) {
+.nav-folder-children > .nav-folder:nth-child(11n+5),
+[data-type=bookmarks] .tree-item:nth-child(11n+5) {
   --rainbow-folder-color: var(--ctp-yellow);
 }
-.nav-folder-children > .nav-folder:nth-child(11n+6) {
+.nav-folder-children > .nav-folder:nth-child(11n+6),
+[data-type=bookmarks] .tree-item:nth-child(11n+6) {
   --rainbow-folder-color: var(--ctp-green);
 }
-.nav-folder-children > .nav-folder:nth-child(11n+7) {
+.nav-folder-children > .nav-folder:nth-child(11n+7),
+[data-type=bookmarks] .tree-item:nth-child(11n+7) {
   --rainbow-folder-color: var(--ctp-teal);
 }
-.nav-folder-children > .nav-folder:nth-child(11n+8) {
+.nav-folder-children > .nav-folder:nth-child(11n+8),
+[data-type=bookmarks] .tree-item:nth-child(11n+8) {
   --rainbow-folder-color: var(--ctp-sky);
 }
-.nav-folder-children > .nav-folder:nth-child(11n+9) {
+.nav-folder-children > .nav-folder:nth-child(11n+9),
+[data-type=bookmarks] .tree-item:nth-child(11n+9) {
   --rainbow-folder-color: var(--ctp-sapphire);
 }
-.nav-folder-children > .nav-folder:nth-child(11n+10) {
+.nav-folder-children > .nav-folder:nth-child(11n+10),
+[data-type=bookmarks] .tree-item:nth-child(11n+10) {
   --rainbow-folder-color: var(--ctp-blue);
 }
-.nav-folder-children > .nav-folder:nth-child(11n+11) {
+.nav-folder-children > .nav-folder:nth-child(11n+11),
+[data-type=bookmarks] .tree-item:nth-child(11n+11) {
   --rainbow-folder-color: var(--ctp-lavender);
 }
-.nav-folder-children > .nav-folder:nth-child(11n+12) {
+.nav-folder-children > .nav-folder:nth-child(11n+12),
+[data-type=bookmarks] .tree-item:nth-child(11n+12) {
   --rainbow-folder-color: var(--ctp-mauve);
 }
 
-.anp-rainbow-subfolder-color-toggle .nav-folder.mod-root .nav-folder.nav-folder .nav-folder {
+.anp-rainbow-subfolder-color-toggle .nav-folder.mod-root .nav-folder.nav-folder .nav-folder,
+.anp-rainbow-subfolder-color-toggle [data-type=bookmarks] .tree-item .tree-item {
   --rainbow-folder-color: inherit;
 }
 
@@ -6665,13 +6845,14 @@ None of the original code was used and the feature was implemented from scratch.
 }
 
 /*-Simple rainbow theme-*/
-.anp-simple-rainbow-color-toggle.anp-simple-rainbow-title-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title {
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-title-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title,
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-title-toggle [data-type=bookmarks] > .view-content > div > .tree-item .tree-item-inner {
   transition: color 0.4s;
   color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
   --nav-item-background-hover: rgba(var(--rainbow-folder-color), 0.1);
   --nav-item-background-active: rgba(var(--rainbow-folder-color), 0.1) ;
 }
-.anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:after {
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:after, .anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-toggle [data-type=bookmarks] > .view-content > div > .tree-item .tree-item-inner:after {
   transition: color 0.4s;
   color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
   content: "⬤";
@@ -6680,12 +6861,14 @@ None of the original code was used and the feature was implemented from scratch.
   top: 1px;
   opacity: 0.5;
 }
-.anp-simple-rainbow-color-toggle.anp-simple-rainbow-indentation-toggle .nav-folder.mod-root .nav-folder > .nav-folder-children {
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-indentation-toggle .nav-folder.mod-root .nav-folder > .nav-folder-children, .anp-simple-rainbow-color-toggle.anp-simple-rainbow-indentation-toggle [data-type=bookmarks] > .view-content > div > .tree-item .tree-item-children {
   transition: color 0.4s;
   border-color: rgba(var(--rainbow-folder-color), 0.5);
 }
 .anp-simple-rainbow-color-toggle.anp-simple-rainbow-collapse-toggle .tree-item-self .tree-item-icon {
   --icon-color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
+  --nav-collapse-icon-color: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
+  --nav-collapse-icon-color-collapsed: rgba(var(--rainbow-folder-color), var(--anp-simple-rainbow-opacity, 1));
 }
 
 .modal {
@@ -7933,5 +8116,3 @@ body.theme-dark.theme-dark {
   padding-bottom: 0;
   padding-top: 0;
 }
-
-/*# sourceMappingURL=theme.css.map */
