@@ -1,0 +1,11 @@
+{
+	"nodes":[
+		{"id":"382869f26816208b","x":-20,"y":-314,"width":400,"height":400,"type":"file","file":"学习管理/008Autosar/008Autosar学习.md"},
+		{"id":"2726f847aebde1a3","x":-540,"y":0,"width":400,"height":400,"type":"file","file":"学习管理/008Autosar/Application Layer.md"},
+		{"id":"f41ade40d4a5900b","x":-875,"y":794,"width":400,"height":400,"type":"file","file":"学习管理/008Autosar/BodyAndComfort.md"}
+	],
+	"edges":[
+		{"id":"01b3fa30d07d5627","fromNode":"382869f26816208b","fromSide":"left","toNode":"2726f847aebde1a3","toSide":"right"},
+		{"id":"a50cc37f994b9d4d","fromNode":"2726f847aebde1a3","fromSide":"bottom","toNode":"f41ade40d4a5900b","toSide":"top"}
+	]
+}
