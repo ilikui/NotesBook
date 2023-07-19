@@ -1,11 +1,23 @@
 {
 	"nodes":[
-		{"id":"382869f26816208b","x":-20,"y":-314,"width":400,"height":400,"type":"file","file":"学习管理/008Autosar/008Autosar学习.md"},
-		{"id":"2726f847aebde1a3","x":-540,"y":0,"width":400,"height":400,"type":"file","file":"学习管理/008Autosar/Application Layer.md"},
-		{"id":"f41ade40d4a5900b","x":-875,"y":794,"width":400,"height":400,"type":"file","file":"学习管理/008Autosar/BodyAndComfort.md"}
+		{"type":"file","file":"学习管理/008Autosar/008Autosar学习.md","id":"382869f26816208b","x":-20,"y":-314,"width":400,"height":400},
+		{"type":"file","file":"学习管理/008Autosar/RTE.md","id":"1028265c7e772b05","x":-420,"y":600,"width":400,"height":400},
+		{"type":"file","file":"学习管理/008Autosar/Services.md","id":"35e208d69457b32d","x":480,"y":619,"width":400,"height":400},
+		{"type":"file","file":"学习管理/008Autosar/Abstraction.md","id":"443390cac98b7434","x":1200,"y":660,"width":400,"height":400},
+		{"type":"file","file":"学习管理/008Autosar/Drivers.md","id":"607d67daee41ef7d","x":1840,"y":660,"width":400,"height":400},
+		{"type":"file","file":"学习管理/008Autosar/Microcontroller.md","id":"4bf57c30d3f2ca8f","x":2520,"y":86,"width":400,"height":400},
+		{"type":"file","file":"学习管理/008Autosar/Application Layer.md","id":"2726f847aebde1a3","x":-1715,"y":400,"width":400,"height":400},
+		{"type":"file","file":"学习管理/008Autosar/BodyAndComfort.md","id":"f41ade40d4a5900b","x":-2240,"y":1219,"width":400,"height":400},
+		{"type":"file","file":"学习管理/008Autosar/Powertrain.md","id":"1f9c455046ea999d","x":-1515,"y":1219,"width":400,"height":400}
 	],
 	"edges":[
 		{"id":"01b3fa30d07d5627","fromNode":"382869f26816208b","fromSide":"left","toNode":"2726f847aebde1a3","toSide":"right"},
-		{"id":"a50cc37f994b9d4d","fromNode":"2726f847aebde1a3","fromSide":"bottom","toNode":"f41ade40d4a5900b","toSide":"top"}
+		{"id":"a50cc37f994b9d4d","fromNode":"2726f847aebde1a3","fromSide":"bottom","toNode":"f41ade40d4a5900b","toSide":"top"},
+		{"id":"bc7662e695301b36","fromNode":"2726f847aebde1a3","fromSide":"bottom","toNode":"1f9c455046ea999d","toSide":"top"},
+		{"id":"e273b535370511c0","fromNode":"382869f26816208b","fromSide":"bottom","toNode":"1028265c7e772b05","toSide":"top"},
+		{"id":"a42d878c4a2af664","fromNode":"382869f26816208b","fromSide":"bottom","toNode":"35e208d69457b32d","toSide":"top"},
+		{"id":"7393a1b624fce5a1","fromNode":"382869f26816208b","fromSide":"bottom","toNode":"443390cac98b7434","toSide":"top"},
+		{"id":"74627203c89267e7","fromNode":"382869f26816208b","fromSide":"bottom","toNode":"607d67daee41ef7d","toSide":"top"},
+		{"id":"2a3bbf900892db74","fromNode":"382869f26816208b","fromSide":"right","toNode":"4bf57c30d3f2ca8f","toSide":"top"}
 	]
 }

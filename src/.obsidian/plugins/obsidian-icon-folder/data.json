@@ -103,7 +103,6 @@
   "工具学习": "FasFolder",
   "写作管理": "FasFolder",
   "写作管理/001Latex学习.md": "FasBook",
-  "学习管理/006NodeJs学习教程.md": "FasBook",
   "工作管理/001汽车电子.md": "FasBook",
   "计划管理": "FasFolder",
   "搜藏管理/000目录管理.md": "FasBook",
@@ -144,5 +143,12 @@
   "学习管理/008Autosar/Application Layer.md": "FasBook",
   "学习管理/008Autosar/BodyAndComfort.md": "FasBook",
   "学习管理/008Autosar/Autosar.canvas": "FasBook",
-  "学习管理/008Autosar/RTE.md": "FasBook"
+  "学习管理/008Autosar/RTE.md": "FasBook",
+  "学习管理/008Autosar/Powertrain.md": "FasBook",
+  "学习管理/009NodeJs学习教程/009NodeJs学习教程.md": "FasBook",
+  "学习管理/009NodeJs学习教程": "FasFolder",
+  "学习管理/008Autosar/Services.md": "FasBook",
+  "学习管理/008Autosar/Abstraction.md": "FasBook",
+  "学习管理/008Autosar/Drivers.md": "FasBook",
+  "学习管理/008Autosar/Microcontroller.md": "FasBook"
 }

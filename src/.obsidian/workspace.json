@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "7297b9ebac6f29e6",
+        "id": "532db21e0407ba82",
         "type": "tabs",
         "children": [
           {
-            "id": "917a8c81d4379678",
+            "id": "4efa8f4fb73e757a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "学习管理/008Autosar/008Autosar学习.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+                "file": "学习管理/008Autosar/Autosar.canvas",
+                "viewState": {
+                  "x": 3395.6514295573506,
+                  "y": -130.2321165526498,
+                  "zoom": -2.333333333333333
+                }
               }
             }
           }
@@ -94,7 +96,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 363.5
   },
   "right": {
     "id": "08677e2de37ba7f1",
@@ -186,24 +188,31 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "917a8c81d4379678",
+  "active": "4efa8f4fb73e757a",
   "lastOpenFiles": [
-    "学习管理/008Autosar/RTE.md",
-    "学习管理/008Autosar/008Autosar学习.md",
-    "学习管理/008Autosar/Autosar.canvas",
-    "学习管理/008Autosar/Application Layer.md",
     "学习管理/008Autosar/BodyAndComfort.md",
-    "README.md",
-    "学习管理/008Autosar/未命名看板.md",
-    "学习管理/006NodeJs学习教程.md",
-    "学习管理/002硬件知识/002硬件知识.md",
-    "学习管理/006Markdown知识/006Markdown知识.md",
-    "学习管理/006Markdown知识",
+    "学习管理/008Autosar/Powertrain.md",
+    "学习管理/008Autosar/Application Layer.md",
+    "学习管理/008Autosar/Abstraction.md",
+    "学习管理/008Autosar/008Autosar学习.md",
+    "学习管理/008Autosar/Services.md",
+    "学习管理/008Autosar/Autosar.canvas",
+    "学习管理/008Autosar/Microcontroller.md",
+    "学习管理/008Autosar/Drivers.md",
+    "学习管理/008Autosar/RTE.md",
+    "学习管理/003GIT操作/003GIT操作.md",
     "学习管理/005Matlab学习规划/005Matlab学习规划.md",
     "学习管理/007Mermaid操作/004Simulink知识.md",
+    "学习管理/006Markdown知识/006Markdown知识.pdf",
+    "学习管理/006Markdown知识/006Markdown知识.md",
+    "学习管理/002硬件知识/002硬件知识.md",
+    "学习管理/009NodeJs学习教程/009NodeJs学习教程.md",
+    "学习管理/009NodeJs学习教程",
+    "README.md",
+    "学习管理/008Autosar/未命名看板.md",
+    "学习管理/006Markdown知识",
     "学习管理/005Matlab学习规划",
     "学习管理/004Simulink知识",
-    "学习管理/003GIT操作/003GIT操作.md",
     "学习管理/003GIT操作",
     "学习管理/002硬件知识",
     "学习管理/000目录大纲/000目录大纲.md",
@@ -212,20 +221,12 @@
     "学习管理/001工具分享",
     "学习管理/007Mermaid操作",
     "学习管理/007Mermaid操作/007Mermaid操作.md",
-    "学习管理/008Autosar",
     "SUMMARY.md",
     "学习管理/00201电源类.md",
-    "学习管理/006Markdown知识/006Markdown知识.pdf",
     "工作管理/001汽车电子.md",
     "工作管理/接口定义.md",
     "工作管理/工作计划.md",
-    "工作管理/工作流.md",
     "工作管理/工作流.canvas",
-    "搜藏管理/001资源网站.md",
-    "搜藏管理/000目录管理.md",
-    "搜藏管理/002GitHub优秀仓库.md",
-    "计划管理/001TODO.md",
-    "工作管理/TPMS.md",
     "工作管理/Untitled Diagram.svg",
     "工具学习/工具学习.canvas",
     "数字花园/数字花园.canvas",
