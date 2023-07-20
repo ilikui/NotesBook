@@ -10,9 +10,11 @@
 | 后视镜调节 | Mirror Adjustment & Tinting |
 | 内灯       | Interior Light              |
 | 座椅调节   | Seat Adjustment             |
-|     中控锁       |  Central Locking                           |
-|            |                             |
-|            |                             |
+| 中控锁     | Central Locking             |
+|            | Antitheft Warning System    |
+|            | Horn                        |
+|            | Defrost Control             |
+|            | Termincal Clamp Control     |
 |            |                             |
 |            |                             |
 |            |                             |
