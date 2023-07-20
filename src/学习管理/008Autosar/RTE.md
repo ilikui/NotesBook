@@ -21,3 +21,11 @@ A  software-component is delivered
 * SW-Component Internal Behavior Description
 * The actual SW-Component implementation and/or compiled SW-Component
 * SW-Component Implementation Description
+
+---
+API Function
+
+
+|  API Function   |     |
+| --- | --- |
+|     |     |

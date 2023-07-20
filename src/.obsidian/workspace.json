@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "532db21e0407ba82",
+        "id": "b31e2e8f235f75ba",
         "type": "tabs",
         "children": [
           {
-            "id": "4efa8f4fb73e757a",
+            "id": "ed926f0802a1ad88",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "学习管理/008Autosar/Autosar.canvas",
-                "viewState": {
-                  "x": 3395.6514295573506,
-                  "y": -130.2321165526498,
-                  "zoom": -2.333333333333333
-                }
+                "file": "学习管理/008Autosar/BodyAndComfort.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
               }
             }
           }
@@ -120,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "学习管理/008Autosar/008Autosar学习.md",
+                "file": "学习管理/008Autosar/BodyAndComfort.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "学习管理/008Autosar/008Autosar学习.md",
+                "file": "学习管理/008Autosar/BodyAndComfort.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "学习管理/008Autosar/008Autosar学习.md"
+                "file": "学习管理/008Autosar/BodyAndComfort.md"
               }
             }
           }
@@ -188,23 +186,27 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "4efa8f4fb73e757a",
+  "active": "ed926f0802a1ad88",
   "lastOpenFiles": [
-    "学习管理/008Autosar/BodyAndComfort.md",
-    "学习管理/008Autosar/Powertrain.md",
     "学习管理/008Autosar/Application Layer.md",
-    "学习管理/008Autosar/Abstraction.md",
     "学习管理/008Autosar/008Autosar学习.md",
-    "学习管理/008Autosar/Services.md",
-    "学习管理/008Autosar/Autosar.canvas",
-    "学习管理/008Autosar/Microcontroller.md",
-    "学习管理/008Autosar/Drivers.md",
-    "学习管理/008Autosar/RTE.md",
-    "学习管理/003GIT操作/003GIT操作.md",
-    "学习管理/005Matlab学习规划/005Matlab学习规划.md",
-    "学习管理/007Mermaid操作/004Simulink知识.md",
-    "学习管理/006Markdown知识/006Markdown知识.pdf",
     "学习管理/006Markdown知识/006Markdown知识.md",
+    "学习管理/005Matlab学习规划/005Matlab学习规划.md",
+    "学习管理/003GIT操作/003GIT操作.md",
+    "学习管理/008Autosar/Autosar.canvas",
+    "学习管理/008Autosar/Abstraction.md",
+    "学习管理/008Autosar/RTE.md",
+    "学习管理/007Mermaid操作/004Simulink知识.md",
+    "学习管理/007Mermaid操作/007Mermaid操作.md",
+    "学习管理/00201电源类.md",
+    "SUMMARY.md",
+    "工具学习/003UML.md",
+    "学习管理/006Markdown知识/006Markdown知识.pdf",
+    "学习管理/008Autosar/BodyAndComfort.md",
+    "学习管理/008Autosar/Drivers.md",
+    "学习管理/008Autosar/Microcontroller.md",
+    "学习管理/008Autosar/Powertrain.md",
+    "学习管理/008Autosar/Services.md",
     "学习管理/002硬件知识/002硬件知识.md",
     "学习管理/009NodeJs学习教程/009NodeJs学习教程.md",
     "学习管理/009NodeJs学习教程",
@@ -220,12 +222,8 @@
     "学习管理/001工具分享/001工具分享.md",
     "学习管理/001工具分享",
     "学习管理/007Mermaid操作",
-    "学习管理/007Mermaid操作/007Mermaid操作.md",
-    "SUMMARY.md",
-    "学习管理/00201电源类.md",
     "工作管理/001汽车电子.md",
     "工作管理/接口定义.md",
-    "工作管理/工作计划.md",
     "工作管理/工作流.canvas",
     "工作管理/Untitled Diagram.svg",
     "工具学习/工具学习.canvas",
