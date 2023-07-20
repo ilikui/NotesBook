@@ -1,5 +1,24 @@
 
 
+| Abbreviations | Meanning                  |
+| ------------- | ------------------------- |
+| ATWS          | Anti-Theft Warning System |
+| BBS           | Battery Backed Sensor     |
+| CAN           | Controller Area Network   |
+| CHLH          | Coming Home/Leaving Home  |
+| CL            | Central Locking           |
+| ECM           | Engine Control Module     |
+| GBS              |   Glass Brake Sensor                        |
+|               |                           |
+|               |                           |
+|               |                           |
+|               |                           |
+|               |                           |
+
+
+
+
+
 
 
 * Compositions and Components
@@ -11,7 +30,7 @@
 | 内灯       | Interior Light              |
 | 座椅调节   | Seat Adjustment             |
 | 中控锁     | Central Locking             |
-|            | Antitheft Warning System    |
+|  防盗报警系统          | Antitheft Warning System    |
 |            | Horn                        |
 |            | Defrost Control             |
 |            | Termincal Clamp Control     |
