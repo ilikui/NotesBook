@@ -3,12 +3,26 @@ name: Deploy Quartz site to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - gh-pages
  
 permissions:
   contents: read
   pages: write
   id-token: write
+  actions: write
+  checks:  write
+  contents: write
+  deployments: write
+  id-token: write
+  issues: write
+  discussions: write
+  packages: write
+  pages: write
+  pull-requests: write
+  repository-projects: write
+  security-events: write
+  statuses: write
+
  
 concurrency:
   group: "pages"
