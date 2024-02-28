@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>Search</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="Search"/><meta property="og:description" content="Search has co-opted the citation, vis-à-vis the hyperlink The post-WWII ‘information explosion’ meant that we have a lot of info and not great means of looking through it to find what we want."/><meta property="og:image" content="https://jzhao.xyz/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="Search has co-opted the citation, vis-à-vis the hyperlink The post-WWII ‘information explosion’ meant that we have a lot of info and not great means of looking through it to find what we want."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="../static/font/font-style.css" rel="stylesheet" type="text/css" spa-preserve/><link href="../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=JetBrains Mono&amp;family=DM Serif Text:wght@400;700&amp;family=Bricolage Grotesque:ital,wght@0,350;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="thoughts/search"><div id="texture"></div><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h1 class="page-title"><a href="..">jzhao.xyz</a></h1><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="search-layout" data-preview="true"></div></div></div></div><div class="darkmode"><input class="toggle" id="darkmode-toggle" type="checkbox" tabindex="-1"/><label id="toggle-label-light" for="darkmode-toggle" tabindex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabindex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></label></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../thoughts/">thoughts</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Search</a></div></nav><h1 class="article-title">Search</h1><p class="content-meta">Oct 12, 2021, 8 min read</p><ul class="tags"><li><a href="../tags/sapling" class="internal tag-link">#sapling</a></li></ul></div></div><article class="popover-hint"><blockquote>
+<p>Search has co-opted the citation, vis-à-vis the hyperlink</p>
+</blockquote>
+<p>The post-WWII ‘information explosion’ meant that we have a lot of info and not great means of looking through it to find what we want. This is a form of <a href="../thoughts/information-retrieval" class="internal alias" data-slug="thoughts/information-retrieval">information retrieval</a> and way of answering <a href="../thoughts/questions" class="internal alias" data-slug="thoughts/questions">questions</a>.</p>
+<p>Inefficient search leads to</p>
+<ol>
+<li>knowledge gaps</li>
+<li>errors</li>
+<li>repeating research</li>
+<li>times spent searching</li>
+<li>knowledge silos</li>
+</ol>
+<p>Finding stuff is hard because</p>
+<ol>
+<li>theres a lot of things (large haystack, small needle)</li>
+<li>semantic meaning and intention is hard to extract/understand</li>
+<li>search systems are not complete</li>
+<li>individuals have different requirements for what they are looking for (is it possible to create personalized search engines?)</li>
+</ol>
+<p>Good way to prototype search system is to analyze the typical dimensions that users search for things along and build those in. There should be support the five interaction strategies</p>
+<ol>
+<li>browsing</li>
+<li>known item searching</li>
+<li>analytical searching on one or more of the facets</li>
+<li>empirical searching based on user profiles</li>
+<li>similarity searching</li>
+</ol>
+<p>Search is a form of <a href="../thoughts/recommendation-system" class="internal alias" data-slug="thoughts/recommendation-system">recommendation system</a></p>
+<p>Essay on <a href="../thoughts/Bias-in-Search" class="internal alias" data-slug="thoughts/Bias-in-Search">Bias in Search</a></p>
+<h3 id="queries-on-information">Queries on <a href="../thoughts/information" class="internal alias" data-slug="thoughts/information">information</a><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#queries-on-information" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>How do we convert a query into subject words and then locate these words in the catalogue if people describe things differently? How do we resolve synonyms?</p>
+<p>Increasing number of words that describe an item will increase recall at the cost of precision.</p>
+<h4 id="precisionrecall-trade-off">Precision/recall trade-off<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#precisionrecall-trade-off" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>The trade-off between recall and precision decides whether a search finds all relevant documents (high recall) or only relevant documents (high precision).</p>
+<h3 id="on-ads">On Ads<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#on-ads" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>When you monetize via ads, curation takes a backseat to featuring advertisers - there is just less digital real estate available to curate your own recommendations. This creates <a href="../thoughts/trust" class="internal alias" data-slug="thoughts/trust">trust</a> gaps between users and search engines.</p>
+<p>The search box versus the feed; intentional browsing vs being served by an algorithm</p>
+<p>Is it possible to move away from the ‘feed’-based model of browsing the social internet?</p>
+<blockquote>
+<p>The “feed”–an archaic form of content consumption that is effectively just a direct visual manifestation of the data structure that powers it – is a medium that is effectively designed to be consumed alone. –Humphrey Obuobi</p>
+</blockquote>
+<p>“I realized that the experience of research is exactly opposite to the way I usually often encounter information online. When you research a subject, you make a series of important decisions, not least what it is you want to research, and you make a commitment to spend time finding information that doesn’t immediately present itself. You seek out different sources that you understand may be biased for various reasons. The very structure of the library… allows for browsing and close attention. Nothing could be more different from the news feed, where these aspects of information—provenance, trustworthiness, or what the hell it’s even about—are neither internally coherent nor subject to my judgment. Instead this information throws itself at me in no particular order, auto-playing videos and grabbing me with headlines. And behind the scenes, it’s me who’s being researched.”</p>
+<h2 id="boutique-search-engines">Boutique Search Engines<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#boutique-search-engines" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://sariazout.mirror.xyz/7gSSTJ96SEyvXeljymglO3zN4H6DCgVnrNZq8_2NX1A" class="external">Source: Re-Organizing the World’s Information: Why we need more Boutique Search Engines by <em>Sari Azout</em></a></p>
+<p>We’ve returned to the <em>curated web</em> with Notion, Airtable, and Readwise collections.</p>
+<blockquote>
+<p>What started as a well-intentioned way to organize the world’s information has turned into a business focusing most of its resources on monetizing clicks to support advertisers rather than focusing on the search experience for people.</p>
+</blockquote>
+<p>The big thing here is that horizontal/‘universal search’ sites like Google use the same interface to search everything, relying on natural language to decipher user intentions. Vertical search players like Yelp/Zillow filled the functionality and relevancy gaps by using more structured search formats appropriate to the medium.</p>
+<p>Curation, when thought of in the context of sharing bite-sized, isolated bits in feed-like architectures, is predominantly about entertainment, not utility. <strong>How do we move beyond the search bar in an <a href="../thoughts/attention-economy" class="internal alias" data-slug="thoughts/attention-economy">attention economy</a>?</strong></p>
+<p>But if we curate, who curates the curators? We then run into a meta-governance problem. Mirror’s <a href="https://dev.mirror.xyz/dLLIq4Iebg5DLWJbOWa3sU6oQuwbogkmqPnz-ZbzPUg" class="external alias">Token Race</a> appears to be a good start to answering this question.</p>
+<h2 id="search-engine-to-oracle">Search Engine to Oracle<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#search-engine-to-oracle" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://outline.com/ZhCArb" class="external">Source: Language models like GPT-3 could herald a new type of search engine in <em>MIT Technology Review</em></a></p>
+<p>Transition from aggregator of information to oracle</p>
+<ul>
+<li>Pagerank: rank literally whats relevant, asks the user to determine what info they want to actually use</li>
+<li>Oracle: just tells you the ‘right’ answer</li>
+</ul>
+<p>“The idea is that instead of searching for information in a vast list of web pages, users would ask questions and have a language model trained on those pages answer them directly. The approach could change not only how search engines work, but what they do—and how we interact with them”</p>
+<p>Metzler and his colleagues are interested in a search engine that behaves like a human expert. It should produce answers in natural language, synthesized from more than one document, and back up its answers with references to supporting evidence, as Wikipedia articles aim to do.</p>
+<p>See also: <a href="../thoughts/LLMs" class="internal" data-slug="thoughts/LLMs">LLMs</a></p>
+<h2 id="search-engines-as-faith">Search Engines as Faith<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#search-engines-as-faith" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>They freely provide, it seems, a sorting of the wheat from the chaff, and answer our most profound and most trivial questions. They have become an object of faith. Many view the results of search as <em>objective</em>.</p>
+<p>“Like gods, these mathematical models were opaque, their workings invisible to all but the highest priests in their domain: mathematicians and computer scientists.” (Cathy O’Neil)</p>
+<p>They are the database of our intentions. We search for things we are hoping to know, hoping to do, and hoping to become</p>
+<h2 id="federated-search">Federated Search<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#federated-search" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Federated search is a technique used to search multiple data sources at once. With federated search, you can retrieve information from many different content locations with just one query and one search interface.</p>
+<p>See: <a href="../thoughts/Prolly-Trees" class="internal alias" data-slug="thoughts/Prolly-Trees">Prolly Trees</a></p>
+<h2 id="internet-topology-as-shaped-by-search-engines">Internet topology as shaped by search engines<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#internet-topology-as-shaped-by-search-engines" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://louisedrulhe.fr/internet-atlas/" class="external alias">Source: Critical Atlas of the Internet</a></p>
+<p><img src="../thoughts/images/internet-atlas.png" width="600" height="auto" alt/></p>
+<p><img src="../thoughts/images/search-engine-space.png" width="400" height="auto" alt/></p>
+<p><em>The first cone represents the loss of distance. As shown in the picture previous hypothesis, terrestrial space converges at a specific point. On Internet, distance is not relevant. Everything is potentially one click away. The second cone reintroduces the notion of non-physical distances. On the Internet, distance has no relevance, but the notion of space nevertheless remains.</em></p>
+<p>See also: <a href="../thoughts/internet-computing" class="internal alias" data-slug="thoughts/internet-computing">internet computing</a>, <a href="../thoughts/Internet" class="internal alias" data-slug="thoughts/Internet">Internet</a></p>
+<p>Search engines create an embedding space for the world that maps from physical to digital. Page ranking is the function that maps and remaps the ‘location’ and relatedness of real concepts.</p>
+<h2 id="the-vocabulary-problem">The Vocabulary Problem<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-vocabulary-problem" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Is this a form of <a href="../thoughts/hermeneutical-injustice" class="internal alias" data-slug="thoughts/hermeneutical-injustice">hermeneutical injustice</a>?</p>
+<ol>
+<li>Lexical Ambiguity: the <a href="../thoughts/meaning" class="internal alias" data-slug="thoughts/meaning">meaning</a> of human language is not specific</li>
+<li>Polysemy: one word has many meanings</li>
+<li>Synonymy: many words mean approximately the same thing</li>
+</ol>
+<h3 id="text-processing">Text Processing<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#text-processing" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Similar to practices in <a href="../thoughts/reflect" class="internal alias" data-slug="thoughts/reflect">reflect</a> NLP processing actually!</p>
+<ul>
+<li>Lexical Analysis: break text into tokens
+<ul>
+<li>Bag of Words</li>
+</ul>
+</li>
+<li>Transformations
+<ul>
+<li>Case folding: convert all to lower case</li>
+<li>Stopwords: remove words that contribute semantic meaning/indexing value
+<ul>
+<li>e.g. words that don’t reduce information entropy</li>
+<li>for example, words that appear in <em>all</em> documents are not very helpful</li>
+<li>zipf’s law, first ~5% are stop words, next ~45% are meaning content words and the last ~50% are long tail rare words</li>
+</ul>
+</li>
+<li>Stemming: grouping of related words (e.g. cats/cattiness <span>→</span> cat)</li>
+<li>Term Weighting: assigns weights on basis of importance to document
+<ul>
+<li>term frequency (TF): occurrences in a</li>
+<li>document frequenc (DF): # of docs containing the term</li>
+<li>term weight is usually <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2173em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8723em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">TF</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">D</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">F</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span> where <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> is the total word count</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Index: unique id to a single document</li>
+<li>Inverted Index: index which each entry holds list of pointers to all items with a certain property (e.g. title)</li>
+</ul>
+<h2 id="generations">Generations<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#generations" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>Pre-1998: keyword frequency and boolean operators</li>
+<li>1998-2010: link structure (page rank), keywords</li>
+<li>2010-2015: user data, personalization, NLP</li>
+<li>2015-now: AI, deep learning</li>
+</ol>
+<h2 id="ethics">Ethics<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ethics" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Major issues:</p>
+<ol>
+<li>Access to information: value of information and knowledge, <a href="../thoughts/democracy" class="internal alias" data-slug="thoughts/democracy">democracy</a>, gatekeeping, <a href="../thoughts/censorship" class="internal alias" data-slug="thoughts/censorship">censorship</a></li>
+<li>Equity, accuracy (truth) and transparency: search-engine bias and the problem of opacity/non-<a href="../thoughts/transparency" class="internal alias" data-slug="thoughts/transparency">transparency</a></li>
+<li><a href="../thoughts/privacy" class="internal alias" data-slug="thoughts/privacy">Privacy</a> and freedom: personal privacy and informed consent; monitoring and surveillance</li>
+<li>Property rights: how do crawlers/search engines respect property, ownership, free market competition</li>
+</ol>
+<p>Search is a form of <a href="../thoughts/Data-Capitalism" class="internal alias" data-slug="thoughts/Data-Capitalism">data capitalism</a></p>
+<h2 id="regulation">Regulation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#regulation" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="google-books">Google Books<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#google-books" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Goal to scan 1 million books in 3 years
+<ul>
+<li>Bypassed copyright, which is highly problematic</li>
+<li>Tried to fix this by partnering with 20 major libraries through their Publisher Program</li>
+<li>Secretive; tried to tell libraries not to tell each other about this partnership</li>
+</ul>
+</li>
+<li>Aiming to create a large scale digital <a href="../thoughts/library" class="internal alias" data-slug="thoughts/library">library</a> that included <em>historical</em> knowledge</li>
+<li>Critiques
+<ul>
+<li>Poor quality of scanning</li>
+<li><a href="../thoughts/privacy" class="internal alias" data-slug="thoughts/privacy">Privacy</a> — Google would gain access into detailed insights about what people were reading
+<ul>
+<li>Historically, librarians focussed heavily on this, sometimes even going to jail due to resisting handing over library records</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>2005 Class Action Lawsuit by author and copyright holders’ organizations: theft of books
+<ul>
+<li>2008 settlement: Google agreed to pay copyright holders; revenue from orphan works; access through libraries</li>
+<li>2011 settlement thrown out over concerns of monopoly, privacy, European opposition</li>
+<li>2013 appealed</li>
+<li>2016 Supreme Court of US ruled that Google Books was legal under the Fair Use exception (claiming it expands public knowledge and understanding)</li>
+</ul>
+</li>
+<li>Competition policies
+<ul>
+<li>Sherman Act (1890): outlaws “monopolization, attempted monopolization, or conspiracy or combination to monopolize”</li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Aaron_Swartz" class="external alias">Aaron Swartz</a>
+<ul>
+<li>In 2011, Swartz was arrested MIT police on state breaking-and-entering charges, after connecting a computer to the MIT network in an unmarked and unlocked closet, and setting it to download academic journal articles systematically from JSTOR in the hopes of freer access of information</li>
+<li>Federal prosecutors, led by Carmen Ortiz, later charged him with two counts of wire fraud and eleven violations of the Computer Fraud and Abuse Act</li>
+<li>Swartz was found dead supposedly by suicide in his Brooklyn apartment, though this is still disputed</li>
+</ul>
+</li>
+</ul></article></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:false,&quot;removeTags&quot;:[]}"></div><svg version="1.1" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+	s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+	c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+	C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+	c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+	v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+	s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+	C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+	S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+	s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+	s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></div><div id="global-graph-outer"><div id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:false,&quot;removeTags&quot;:[]}"></div></div></div><div class="backlinks"><h3>Backlinks</h3><ul class="overflow"><li><a href="../posts/networked-thought" class="internal">Networked Thought</a></li><li><a href="../thoughts/Algorithms-of-Oppression" class="internal">Algorithms of Oppression</a></li><li><a href="../thoughts/Bluesky" class="internal">Bluesky</a></li><li><a href="../thoughts/Prolly-Trees" class="internal">Prolly Trees</a></li><li><a href="../thoughts/RDF" class="internal">RDF</a></li><li><a href="../thoughts/idea-list" class="internal">Idea List</a></li><li><a href="../thoughts/information-behaviour" class="internal">Information Behaviour</a></li><li><a href="../thoughts/information-retrieval" class="internal">Information Retrieval</a></li><li><a href="../thoughts/lost-knowledge" class="internal">Lost knowledge</a></li><li><a href="../thoughts/map-as-territory" class="internal">Map as territory</a></li><li><a href="../thoughts/organizing-system" class="internal">Organizing Systems</a></li><li><a href="../thoughts/the-garden-and-the-stream" class="internal">The Garden and the Stream</a></li></ul></div></div></div><footer class><hr/><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.2.2</a> © 2024</p><ul><li><a href="https://github.com/jackyzha0">GitHub</a></li><li><a href="https://twitter.com/_jzhao">Twitter</a></li></ul></footer></div></body><script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script type="application/javascript">function c(){let t=this.parentElement;t.classList.toggle("is-collapsed");let l=t.classList.contains("is-collapsed")?this.scrollHeight:t.scrollHeight;t.style.maxHeight=l+"px";let o=t,e=t.parentElement;for(;e;){if(!e.classList.contains("callout"))return;let n=e.classList.contains("is-collapsed")?e.scrollHeight:e.scrollHeight+o.scrollHeight;e.style.maxHeight=n+"px",o=e,e=e.parentElement}}function i(){let t=document.getElementsByClassName("callout is-collapsible");for(let s of t){let l=s.firstElementChild;if(l){l.addEventListener("click",c),window.addCleanup(()=>l.removeEventListener("click",c));let e=s.classList.contains("is-collapsed")?l.scrollHeight:s.scrollHeight;s.style.maxHeight=e+"px"}}}document.addEventListener("nav",i);window.addEventListener("resize",i);
+</script><script type="module">
+          let mermaidImport = undefined
+          document.addEventListener('nav', async () => {
+            if (document.querySelector("code.mermaid")) {
+              mermaidImport ||= await import('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs')
+              const mermaid = mermaidImport.default
+              const darkMode = document.documentElement.getAttribute('saved-theme') === 'dark'
+              mermaid.initialize({
+                startOnLoad: false,
+                securityLevel: 'loose',
+                theme: darkMode ? 'dark' : 'default'
+              })
+
+              await mermaid.run({
+                querySelector: '.mermaid'
+              })
+            }
+          });
+          </script><script src="../postscript.js" type="module"></script></html>

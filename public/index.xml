@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>jzhao.xyz</title>
+      <link>https://jzhao.xyz</link>
+      <description>Last 10 notes on jzhao.xyz</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>Writing</title>
+    <link>https://jzhao.xyz/tags/writing</link>
+    <guid>https://jzhao.xyz/tags/writing</guid>
+    <description>A small collection of some of the writing I've been experimenting with. These are mostly unpolished experiments with fiction and poetry that I've been playing around with.</description>
+    <pubDate>Wed, 28 Feb 2024 12:28:37 GMT</pubDate>
+  </item><item>
+    <title>Seed</title>
+    <link>https://jzhao.xyz/tags/seed</link>
+    <guid>https://jzhao.xyz/tags/seed</guid>
+    <description>I tend to generally bookmark things for later then revisit them when I have time. These are collections of notes on articles, books, and readings. They are the seeds that form the basis of my ideas and thoughts.</description>
+    <pubDate>Wed, 28 Feb 2024 12:28:37 GMT</pubDate>
+  </item><item>
+    <title>Technical</title>
+    <link>https://jzhao.xyz/tags/technical</link>
+    <guid>https://jzhao.xyz/tags/technical</guid>
+    <description>Notes and blog posts on technical subjects. Though there are a lot of technical notes in this garden, these ones are generally ready for public consumption.</description>
+    <pubDate>Wed, 28 Feb 2024 12:28:37 GMT</pubDate>
+  </item><item>
+    <title>Sapling</title>
+    <link>https://jzhao.xyz/tags/sapling</link>
+    <guid>https://jzhao.xyz/tags/sapling</guid>
+    <description>Saplings are single nodes or thoughts. These are generally topics I've spent a decent number of hours thinking about and contain substantial original thought.</description>
+    <pubDate>Wed, 28 Feb 2024 12:28:37 GMT</pubDate>
+  </item><item>
+    <title>Rhizome</title>
+    <link>https://jzhao.xyz/tags/rhizome</link>
+    <guid>https://jzhao.xyz/tags/rhizome</guid>
+    <description>My independent research practice focused on data-neutrality.</description>
+    <pubDate>Wed, 28 Feb 2024 12:28:37 GMT</pubDate>
+  </item><item>
+    <title>PHIL451A</title>
+    <link>https://jzhao.xyz/tags/PHIL451A</link>
+    <guid>https://jzhao.xyz/tags/PHIL451A</guid>
+    <description>Course notes for PHIL451A: Philsophy of Mind taught by Prof. Evan Thompson at UBC. All content sourced from slides or course materials are cited as such.</description>
+    <pubDate>Wed, 28 Feb 2024 12:28:37 GMT</pubDate>
+  </item><item>
+    <title>PHIL240A</title>
+    <link>https://jzhao.xyz/tags/PHIL240A</link>
+    <guid>https://jzhao.xyz/tags/PHIL240A</guid>
+    <description>Course notes and essays for PHIL240A: Epistemology.</description>
+    <pubDate>Wed, 28 Feb 2024 12:28:37 GMT</pubDate>
+  </item><item>
+    <title>Personal</title>
+    <link>https://jzhao.xyz/tags/personal</link>
+    <guid>https://jzhao.xyz/tags/personal</guid>
+    <description>Personal reflections and musings about my life. I really like to write feelings down as a way to process them and sometimes they take the form of blogposts like these.</description>
+    <pubDate>Wed, 28 Feb 2024 12:28:37 GMT</pubDate>
+  </item><item>
+    <title>Fruit</title>
+    <link>https://jzhao.xyz/tags/fruit</link>
+    <guid>https://jzhao.xyz/tags/fruit</guid>
+    <description>Of course, a knowledge index isn’t much use if it doesn’t inform future thinking and output. Fruits are what I like to call derivative or ’new’ pieces of content.</description>
+    <pubDate>Wed, 28 Feb 2024 12:28:37 GMT</pubDate>
+  </item><item>
+    <title>Pattern</title>
+    <link>https://jzhao.xyz/tags/pattern</link>
+    <guid>https://jzhao.xyz/tags/pattern</guid>
+    <description>A pattern in my own pattern language. These represent atomic concepts and observations that appear and reappear within my thinking and work. See the note on 'A Pattern Language' for more information.</description>
+    <pubDate>Wed, 28 Feb 2024 12:28:37 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>
