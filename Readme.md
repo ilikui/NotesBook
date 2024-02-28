@@ -1,48 +1,18 @@
-#  知识管理文档
----
+# Quartz v4
 
+> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
 
+Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
+Quartz v4 features a from-the-ground rewrite focusing on end-user extensibility and ease-of-use.
 
+🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
 
+[Join the Discord Community](https://discord.gg/cRFFHYye7t)
 
-![](Image/Banner.PNG)
+## Sponsors
 
-
----
-
-## 写作管理
-
-
-* [001Latex学习](./src/写作管理/001Latex学习.md)
-
-
-## 学习管理
-
-* [000目录大纲](./src/学习管理/000目录大纲.md)
-* [001工具分享](./src/学习管理/001工具分享.md)
-* [002工具分享](./src/学习管理/002硬件知识.md)
-* [003GIT操作](./src/学习管理/003GIT操作.md)
-
-  
-
-
-## 工作管理
-
-
-## 工具学习
-
-
-## 搜藏管理
-
-
-## 数字花园
-
-
-## 计划管理
-
-
-## 读书管理
-
-
-
-
+<p align="center">
+  <a href="https://github.com/sponsors/jackyzha0">
+    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
+  </a>
+</p>

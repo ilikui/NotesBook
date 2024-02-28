@@ -1,9 +1,0 @@
-{
-	"nodes":[
-		{"id":"f004c32704b8a80a","x":-580,"y":-340,"width":340,"height":360,"type":"file","file":"数字花园/002卡片笔记.md"},
-		{"type":"file","file":"数字花园/001笔记管理.md","id":"8f687bed7078fcc9","x":-40,"y":-210,"width":360,"height":260,"color":"3"}
-	],
-	"edges":[
-		{"id":"2cc71c9276bb998e","fromNode":"8f687bed7078fcc9","fromSide":"left","toNode":"f004c32704b8a80a","toSide":"right"}
-	]
-}
