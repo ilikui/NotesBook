@@ -6,10 +6,16 @@
       <description>Last 10 notes on 知识库</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Software</title>
+    <link>https://wiki.likui.info/tags/Software</link>
+    <guid>https://wiki.likui.info/tags/Software</guid>
+    <description>相关的软件学习.</description>
+    <pubDate>Wed, 28 Feb 2024 13:54:24 GMT</pubDate>
+  </item><item>
     <title>wiki</title>
     <link>https://wiki.likui.info/</link>
     <guid>https://wiki.likui.info/</guid>
-    <description> Welcome! I’m Jacky. This is my little hypertext garden on the Internet — make yourself at home! Currently, I’m exploring what agentic and communal technology looks like at Replit and through my independent research practice.</description>
+    <description> 这里记录一些永久笔记，使用的是quartz搭建的永久笔记。 更多的数据，你也可以访问: 我的学习笔记 .</description>
     <pubDate>Wed, 28 Feb 2024 12:39:59 GMT</pubDate>
   </item><item>
     <title>Writing</title>
@@ -58,12 +64,6 @@
     <link>https://wiki.likui.info/tags/personal</link>
     <guid>https://wiki.likui.info/tags/personal</guid>
     <description>Personal reflections and musings about my life. I really like to write feelings down as a way to process them and sometimes they take the form of blogposts like these.</description>
-    <pubDate>Wed, 28 Feb 2024 12:39:59 GMT</pubDate>
-  </item><item>
-    <title>Fruit</title>
-    <link>https://wiki.likui.info/tags/fruit</link>
-    <guid>https://wiki.likui.info/tags/fruit</guid>
-    <description>Of course, a knowledge index isn’t much use if it doesn’t inform future thinking and output. Fruits are what I like to call derivative or ’new’ pieces of content.</description>
     <pubDate>Wed, 28 Feb 2024 12:39:59 GMT</pubDate>
   </item>
     </channel>
