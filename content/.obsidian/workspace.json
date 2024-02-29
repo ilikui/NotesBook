@@ -1,0 +1,189 @@
+{
+  "main": {
+    "id": "9a24928eba03f504",
+    "type": "split",
+    "children": [
+      {
+        "id": "7860b6c32f4149ab",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "05162e579eff0455",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_index.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c319fff952b3ac57",
+    "type": "split",
+    "children": [
+      {
+        "id": "de43bee9d6a8df56",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "97ad9258b53da5af",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8ad29a948cf15d6e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "2f42b6c6d610e741",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "6daaad3aece3a3b9",
+    "type": "split",
+    "children": [
+      {
+        "id": "8cfffaacf854b665",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2d3d1550b815ecaa",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_index.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "42c70e8f07bd0887",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "_index.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "3cd58dec6bbc266c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "10992257e4f2cf19",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "_index.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "markdown-importer:打开 Markdown 格式转换器": false
+    }
+  },
+  "active": "05162e579eff0455",
+  "lastOpenFiles": [
+    "books.md",
+    "_index.md",
+    "banner.svg",
+    "posts/a-failure-resume.md",
+    "posts/cm/搜藏管理.md",
+    "posts/cm",
+    "posts/新建文件夹",
+    "posts/pm/计划管理.md",
+    "posts/pm",
+    "posts/em/考试管理.md",
+    "posts/em",
+    "posts/bm/博客管理.md",
+    "posts/bm",
+    "posts/nm/笔记管理.md",
+    "posts/nm",
+    "posts/wm/工作管理.md",
+    "posts/wm",
+    "posts/rm/阅读管理.md",
+    "posts/rm",
+    "posts/km/知识管理.md",
+    "posts/km",
+    "posts/博客管理.md",
+    "posts/2021.md",
+    "posts/2024.md",
+    "posts/笔记管理.md",
+    "posts/工作管理.md",
+    "posts/考试管理.md",
+    "posts/计划管理.md",
+    "posts/2022.md",
+    "posts/2023.md",
+    "posts/知识管理.md",
+    "posts/阅读管理.md",
+    "tags/PHIL451A.md",
+    "tags/personal.md",
+    "tags/fruit.md",
+    "thoughts/33 percent Impossibility Result.md",
+    "posts/未命名.canvas"
+  ]
+}
