@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "templates/post.md",
+                "file": "thoughts/games.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "templates/post.md",
+                "file": "thoughts/games.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "templates/post.md",
+                "file": "thoughts/games.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "templates/post.md"
+                "file": "thoughts/games.md"
               }
             }
           }
@@ -146,8 +146,17 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "97ad9258b53da5af",
+  "active": "05162e579eff0455",
   "lastOpenFiles": [
+    "posts/wm/工作管理.md",
+    "posts/rm/阅读管理.md",
+    "posts/pm/计划管理.md",
+    "posts/nm/笔记管理.md",
+    "posts/km/知识管理.md",
+    "posts/bm/博客管理.md",
+    "posts/cm/搜藏管理.md",
+    "posts/em/考试管理.md",
+    "templates/post.md",
     "books.md",
     "banner.svg",
     "_index.md",
@@ -156,22 +165,14 @@
     "tags/evergreen.md",
     "posts/index.md",
     "posts/a-failure-resume.md",
-    "posts/cm/搜藏管理.md",
     "posts/cm",
     "posts/新建文件夹",
-    "posts/pm/计划管理.md",
     "posts/pm",
-    "posts/em/考试管理.md",
     "posts/em",
-    "posts/bm/博客管理.md",
     "posts/bm",
-    "posts/nm/笔记管理.md",
     "posts/nm",
-    "posts/wm/工作管理.md",
     "posts/wm",
-    "posts/rm/阅读管理.md",
     "posts/rm",
-    "posts/km/知识管理.md",
     "posts/km",
     "posts/博客管理.md",
     "posts/2021.md",
