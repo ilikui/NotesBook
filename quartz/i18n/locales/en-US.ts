@@ -22,7 +22,7 @@ export default {
       quote: "Quote",
     },
     backlinks: {
-      title: "Backlinks",
+      title: "反向链接",
       noBacklinksFound: "No backlinks found",
     },
     themeToggle: {
@@ -36,7 +36,7 @@ export default {
       createdWith: "Created with",
     },
     graph: {
-      title: "Graph View",
+      title: "图谱视角",
     },
     recentNotes: {
       title: "Recent Notes",
