@@ -8,6 +8,21 @@ tags:
 
 这里记录一些永久笔记，使用的是[quartz](https://quartz.jzhao.xyz/)搭建的永久笔记。
 
+
+我的笔记库：
+
+* [知识管理](posts/知识管理.md)
+* [笔记管理](posts/笔记管理.md)
+* [工作管理](posts/工作管理.md)
+* [阅读管理](posts/阅读管理.md)
+* [博客管理](posts/博客管理.md)
+* [搜藏管理](posts/搜藏管理.md)
+* [计划管理](posts/计划管理.md)
+* [考试管理](posts/考试管理.md)
+  
+
+
+
 更多的数据，你也可以访问:
 * [我的学习笔记](https://note.likui.info/)
 

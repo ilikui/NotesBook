@@ -1,4 +1,5 @@
 ---
+---
 title: "A Failure Resume"
 date: 2020-08-21T14:02:48-07:00
 tags:
