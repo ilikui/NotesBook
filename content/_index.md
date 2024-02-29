@@ -1,5 +1,5 @@
 ---
-title: wiki
+title: 知识管理
 tags:
   - evergreen
 ---
