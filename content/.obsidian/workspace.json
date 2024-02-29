@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/index.md",
+                "file": "templates/post.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/index.md",
+                "file": "templates/post.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/index.md",
+                "file": "templates/post.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/index.md"
+                "file": "templates/post.md"
               }
             }
           }
@@ -146,11 +146,15 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "05162e579eff0455",
+  "active": "97ad9258b53da5af",
   "lastOpenFiles": [
-    "_index.md",
     "books.md",
     "banner.svg",
+    "_index.md",
+    "tags/pattern.md",
+    "tags/fruit.md",
+    "tags/evergreen.md",
+    "posts/index.md",
     "posts/a-failure-resume.md",
     "posts/cm/搜藏管理.md",
     "posts/cm",
@@ -179,11 +183,6 @@
     "posts/2022.md",
     "posts/2023.md",
     "posts/知识管理.md",
-    "posts/阅读管理.md",
-    "tags/PHIL451A.md",
-    "tags/personal.md",
-    "tags/fruit.md",
-    "thoughts/33 percent Impossibility Result.md",
     "posts/未命名.canvas"
   ]
 }

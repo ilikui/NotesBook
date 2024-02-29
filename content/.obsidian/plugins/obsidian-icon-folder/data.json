@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "BoBxMap",
-      "FabBlogger",
-      "📇",
-      "OcTag16",
-      "FabCreativeCommonsPdAlt"
+      "FarNoteSticky",
+      "📚",
+      "🥝",
+      "📓",
+      "FarImage"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -32,5 +32,17 @@
   "tags": "OcTag16",
   "_index.md": "📇",
   "posts": "FabBlogger",
-  "posts/bm": "BoBxMap"
+  "posts/bm": "RaBook",
+  "posts/em": "RaBook",
+  "posts/cm": "RaBook",
+  "posts/wm": "RaBook",
+  "posts/rm": "RaBook",
+  "posts/pm": "RaBook",
+  "posts/nm": "RaBook",
+  "posts/images": "FarImage",
+  "posts/km": "RaBook",
+  "tags/evergreen.md": "📓",
+  "tags/fruit.md": "🥝",
+  "books.md": "📚",
+  "templates/post.md": "FarNoteSticky"
 }
