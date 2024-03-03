@@ -48,6 +48,12 @@
     <description> 阅读管理 .</description>
     <pubDate>Thu, 29 Feb 2024 00:00:00 GMT</pubDate>
   </item><item>
+    <title>汽车电子</title>
+    <link>https://wiki.likui.info/posts/wm/AUTOSAR</link>
+    <guid>https://wiki.likui.info/posts/wm/AUTOSAR</guid>
+    <description></description>
+    <pubDate>Thu, 29 Feb 2024 00:00:00 GMT</pubDate>
+  </item><item>
     <title>工作管理</title>
     <link>https://wiki.likui.info/posts/wm/%E5%B7%A5%E4%BD%9C%E7%AE%A1%E7%90%86</link>
     <guid>https://wiki.likui.info/posts/wm/%E5%B7%A5%E4%BD%9C%E7%AE%A1%E7%90%86</guid>
@@ -57,14 +63,8 @@
     <title>汽车电子</title>
     <link>https://wiki.likui.info/posts/wm/%E6%B1%BD%E8%BD%A6%E7%94%B5%E5%AD%90</link>
     <guid>https://wiki.likui.info/posts/wm/%E6%B1%BD%E8%BD%A6%E7%94%B5%E5%AD%90</guid>
-    <description>相关的笔记记录.</description>
+    <description> 软件架构 AUTOSAR .</description>
     <pubDate>Thu, 29 Feb 2024 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Software</title>
-    <link>https://wiki.likui.info/tags/Software</link>
-    <guid>https://wiki.likui.info/tags/Software</guid>
-    <description>相关的软件学习.</description>
-    <pubDate>Wed, 28 Feb 2024 13:54:24 GMT</pubDate>
   </item>
     </channel>
   </rss>
