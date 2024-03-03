@@ -6,6 +6,12 @@
       <description>Last 10 notes on 知识库</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>汽车电子</title>
+    <link>https://wiki.likui.info/posts/wm/AUTOSAR</link>
+    <guid>https://wiki.likui.info/posts/wm/AUTOSAR</guid>
+    <description></description>
+    <pubDate>Sun, 03 Mar 2024 00:00:00 GMT</pubDate>
+  </item><item>
     <title>博客管理</title>
     <link>https://wiki.likui.info/posts/bm/%E5%8D%9A%E5%AE%A2%E7%AE%A1%E7%90%86</link>
     <guid>https://wiki.likui.info/posts/bm/%E5%8D%9A%E5%AE%A2%E7%AE%A1%E7%90%86</guid>
@@ -46,12 +52,6 @@
     <link>https://wiki.likui.info/posts/rm/%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86</link>
     <guid>https://wiki.likui.info/posts/rm/%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86</guid>
     <description> 阅读管理 .</description>
-    <pubDate>Thu, 29 Feb 2024 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>汽车电子</title>
-    <link>https://wiki.likui.info/posts/wm/AUTOSAR</link>
-    <guid>https://wiki.likui.info/posts/wm/AUTOSAR</guid>
-    <description></description>
     <pubDate>Thu, 29 Feb 2024 00:00:00 GMT</pubDate>
   </item><item>
     <title>工作管理</title>
