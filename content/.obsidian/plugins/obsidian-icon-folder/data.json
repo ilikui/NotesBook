@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "RiFileImageFill",
       "BoBxsInbox",
       "LiBookImage",
       "FasBookAtlas",
-      "🧑",
-      "BoBxsLeftTopArrowCircle"
+      "🧑"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -49,5 +49,6 @@
   "tags/personal.md": "🧑",
   "posts/km/知识管理.md": "FasBookAtlas",
   "posts/images/2020": "LiBookImage",
-  "posts/images/km": "BoBxsInbox"
+  "posts/images/km": "BoBxsInbox",
+  "posts/images/bias-bug": "RiFileImageFill"
 }
