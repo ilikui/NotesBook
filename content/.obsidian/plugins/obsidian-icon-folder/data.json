@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "🧑",
+      "BoBxsLeftTopArrowCircle",
       "FarNoteSticky",
       "📚",
-      "🥝",
-      "📓",
-      "FarImage"
+      "🥝"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -44,5 +44,7 @@
   "tags/evergreen.md": "📓",
   "tags/fruit.md": "🥝",
   "books.md": "📚",
-  "templates/post.md": "FarNoteSticky"
+  "templates/post.md": "FarNoteSticky",
+  "tags/pattern.md": "BoBxsLeftTopArrowCircle",
+  "tags/personal.md": "🧑"
 }

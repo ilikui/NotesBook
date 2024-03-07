@@ -11,12 +11,8 @@
             "id": "05162e579eff0455",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/pm/计划管理.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -69,7 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 248.5
   },
   "right": {
     "id": "6daaad3aece3a3b9",
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/pm/计划管理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/pm/计划管理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "posts/pm/计划管理.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,9 +138,27 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "97ad9258b53da5af",
+  "active": "05162e579eff0455",
   "lastOpenFiles": [
+    "posts/km/知识管理.md",
     "posts/bm/博客管理.md",
+    "tags/writing.md",
+    "tags/technical.md",
+    "tags/Software.md",
+    "tags/seed.md",
+    "tags/sapling.md",
+    "tags/rhizome.md",
+    "tags/PHIL451A.md",
+    "tags/PHIL240A.md",
+    "tags/personal.md",
+    "tags/pattern.md",
+    "templates/post.md",
+    "posts/2023.md",
+    "posts/2022.md",
+    "posts/2020.md",
+    "books.md",
+    "posts/a-failure-resume.md",
+    "posts/pm/计划管理.md",
     "posts/cm/搜藏管理.md",
     "posts/wm/AUTOSAR.md",
     "posts/wm/汽车电子.md",
@@ -156,20 +166,7 @@
     "posts/index.md",
     "posts/wm/工作管理.md",
     "posts/rm/阅读管理.md",
-    "posts/pm/计划管理.md",
-    "posts/nm/笔记管理.md",
-    "posts/em/考试管理.md",
-    "posts/km/知识管理.md",
-    "thoughts/writing.md",
-    "thoughts/internet computing.md",
-    "thoughts/games.md",
-    "templates/post.md",
-    "books.md",
     "banner.svg",
-    "tags/pattern.md",
-    "tags/fruit.md",
-    "tags/evergreen.md",
-    "posts/a-failure-resume.md",
     "posts/cm",
     "posts/新建文件夹",
     "posts/pm",
@@ -179,11 +176,6 @@
     "posts/wm",
     "posts/rm",
     "posts/km",
-    "posts/博客管理.md",
-    "posts/2021.md",
-    "posts/2024.md",
-    "posts/笔记管理.md",
-    "posts/工作管理.md",
     "posts/未命名.canvas"
   ]
 }

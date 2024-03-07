@@ -12,12 +12,6 @@
     <description></description>
     <pubDate>Mon, 04 Mar 2024 01:04:25 GMT</pubDate>
   </item><item>
-    <title>a-failure-resume</title>
-    <link>https://wiki.likui.info/posts/a-failure-resume</link>
-    <guid>https://wiki.likui.info/posts/a-failure-resume</guid>
-    <description>title: “A Failure Resume” date: 2020-08-21T14:02:48-07:00 tags: personal evergreen The nature of resumes means that most people only choose to highlight their successes and wins, but rarely the work, effort, and failures on the way.</description>
-    <pubDate>Mon, 04 Mar 2024 01:04:25 GMT</pubDate>
-  </item><item>
     <title>知识管理</title>
     <link>https://wiki.likui.info/</link>
     <guid>https://wiki.likui.info/</guid>
@@ -64,6 +58,12 @@
     <link>https://wiki.likui.info/tags/personal</link>
     <guid>https://wiki.likui.info/tags/personal</guid>
     <description>Personal reflections and musings about my life. I really like to write feelings down as a way to process them and sometimes they take the form of blogposts like these.</description>
+    <pubDate>Thu, 29 Feb 2024 07:23:20 GMT</pubDate>
+  </item><item>
+    <title>Pattern</title>
+    <link>https://wiki.likui.info/tags/pattern</link>
+    <guid>https://wiki.likui.info/tags/pattern</guid>
+    <description>A pattern in my own pattern language. These represent atomic concepts and observations that appear and reappear within my thinking and work. See the note on 'A Pattern Language' for more information.</description>
     <pubDate>Thu, 29 Feb 2024 07:23:20 GMT</pubDate>
   </item>
     </channel>
