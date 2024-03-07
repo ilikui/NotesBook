@@ -6,6 +6,12 @@
       <description>Last 10 notes on 知识库</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>工作管理</title>
+    <link>https://wiki.likui.info/posts/wm/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1</link>
+    <guid>https://wiki.likui.info/posts/wm/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1</guid>
+    <description> 系统设计 .</description>
+    <pubDate>Thu, 07 Mar 2024 00:00:00 GMT</pubDate>
+  </item><item>
     <title>所有文章</title>
     <link>https://wiki.likui.info/posts/</link>
     <guid>https://wiki.likui.info/posts/</guid>
@@ -58,12 +64,6 @@
     <link>https://wiki.likui.info/tags/personal</link>
     <guid>https://wiki.likui.info/tags/personal</guid>
     <description>Personal reflections and musings about my life. I really like to write feelings down as a way to process them and sometimes they take the form of blogposts like these.</description>
-    <pubDate>Thu, 29 Feb 2024 07:23:20 GMT</pubDate>
-  </item><item>
-    <title>Pattern</title>
-    <link>https://wiki.likui.info/tags/pattern</link>
-    <guid>https://wiki.likui.info/tags/pattern</guid>
-    <description>A pattern in my own pattern language. These represent atomic concepts and observations that appear and reappear within my thinking and work. See the note on 'A Pattern Language' for more information.</description>
     <pubDate>Thu, 29 Feb 2024 07:23:20 GMT</pubDate>
   </item>
     </channel>

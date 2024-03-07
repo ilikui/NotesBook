@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "7860b6c32f4149ab",
+        "id": "51ab06d7095d8c04",
         "type": "tabs",
         "children": [
           {
-            "id": "05162e579eff0455",
+            "id": "5e5b64c5fe921fc9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/km/知识管理.md",
+                "file": "posts/wm/系统设计.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/km/知识管理.md",
+                "file": "posts/wm/系统设计.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/km/知识管理.md",
+                "file": "posts/wm/系统设计.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/km/知识管理.md"
+                "file": "posts/wm/系统设计.md"
               }
             }
           }
@@ -143,11 +143,20 @@
       "canvas:新建白板": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "markdown-importer:打开 Markdown 格式转换器": false
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "publish:发布更改": false,
+      "workspaces:管理工作区布局": false
     }
   },
-  "active": "05162e579eff0455",
+  "active": "5e5b64c5fe921fc9",
   "lastOpenFiles": [
+    "posts/wm/汽车电子.md",
+    "posts/wm/系统设计.md",
+    "posts/wm/工作管理 - Copy.md",
+    "posts/wm/工作管理.md",
+    "posts/wm/AUTOSAR.md",
+    "posts/images/km/SystemDesign.webp",
+    "templates/post.md",
     "posts/km/知识管理.md",
     "posts/bm/博客管理.md",
     "tags/writing.md",
@@ -160,7 +169,6 @@
     "tags/PHIL240A.md",
     "tags/personal.md",
     "tags/pattern.md",
-    "templates/post.md",
     "posts/2023.md",
     "posts/2022.md",
     "posts/2020.md",
@@ -168,12 +176,7 @@
     "posts/a-failure-resume.md",
     "posts/pm/计划管理.md",
     "posts/cm/搜藏管理.md",
-    "posts/wm/AUTOSAR.md",
-    "posts/wm/汽车电子.md",
     "_index.md",
-    "posts/index.md",
-    "posts/wm/工作管理.md",
-    "posts/rm/阅读管理.md",
     "banner.svg",
     "posts/cm",
     "posts/新建文件夹",
