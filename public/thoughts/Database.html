@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>Database</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="Database"/><meta property="og:description" content="Excerpts from Designing Data-Intensive Applications Data Models Data models are perhaps the most important part of developing software, because they have such a profound effect: not only on how the software is written, but also on how we think about the problem that we are solving."/><meta property="og:image" content="https://wiki.likui.info/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="Excerpts from Designing Data-Intensive Applications Data Models Data models are perhaps the most important part of developing software, because they have such a profound effect: not only on how the software is written, but also on how we think about the problem that we are solving."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="../static/font/font-style.css" rel="stylesheet" type="text/css" spa-preserve/><link href="../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=JetBrains Mono&amp;family=DM Serif Text:wght@400;700&amp;family=Bricolage Grotesque:ital,wght@0,350;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="thoughts/Database"><div id="texture"></div><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h1 class="page-title"><a href="..">知识库</a></h1><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="search-layout" data-preview="true"></div></div></div></div><div class="darkmode"><input class="toggle" id="darkmode-toggle" type="checkbox" tabindex="-1"/><label id="toggle-label-light" for="darkmode-toggle" tabindex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabindex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></label></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../thoughts/">thoughts</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Database</a></div></nav><h1 class="article-title">Database</h1><p class="content-meta">Jan 27, 2024, 5 min read</p><ul class="tags"><li><a href="../tags/seed" class="internal tag-link">#seed</a></li></ul></div></div><article class="popover-hint"><p>Excerpts from <a href="../thoughts/Designing-Data-Intensive-Applications" class="internal alias" data-slug="thoughts/Designing-Data-Intensive-Applications">Designing Data-Intensive Applications</a></p>
+<h2 id="data-models">Data Models<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#data-models" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Data models are perhaps the most important part of developing software, because they have such a profound effect: not only on how the software is written, but also on how we think about the problem that we are solving.</p>
+<h3 id="relational-model">Relational model<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#relational-model" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Data is organized into relations (called tables in SQL), where each relation is an unordered collection of tuples (rows in SQL).</p>
+<ul>
+<li>Upsides
+<ul>
+<li>Better support for joins, many-to-one, and many-to-many relationships</li>
+</ul>
+</li>
+<li>Downsides
+<ul>
+<li>Much application development today is done in object-oriented programming languages, which leads to a common criticism of the SQL data model: if data is stored in relational tables, an awkward translation layer is required between the objects in the application code and the database model of tables, rows, and columns. We generally use ORMs to reduce the boilerplate for this translation layer.</li>
+<li>In relational databases there isn’t a standard way of representing reorderable lists, and various tricks are used</li>
+</ul>
+</li>
+</ul>
+<h3 id="document-model">Document Model<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#document-model" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Usually represents data as JSON.</p>
+<ul>
+<li>Upsides
+<ul>
+<li>Schema flexibility</li>
+<li>Better performance due to locality</li>
+<li>The relational technique of shredding — splitting a document-like structure into multiple tables — can lead to cumbersome schemas and complicated application code</li>
+</ul>
+</li>
+<li>Downsides
+<ul>
+<li>Many-to-one and many-to-many relationships do not easily fit within one self-contained JSON document</li>
+</ul>
+</li>
+</ul>
+<p>Document databases are sometimes called schemaless but a more accurate term is schema-on-read (the structure of the data is implicit, and only interpreted when the data is read)</p>
+<h3 id="graph-model">Graph Model<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#graph-model" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>What if many-to-many relationships are very common in your data? As the connections within your data become more complex, it becomes more natural to start modeling your data as a graph.</p>
+<p>A graph consists of two kinds of objects: vertices (also known as nodes or entities) and edges (also known as relationships or arcs).</p>
+<p>Graph models lets us ask questions that contain a variable number of joins which is very difficult to express in traditional SQL (requires the use of recursive common table expressions).</p>
+<h4 id="property-graphs">Property Graphs<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#property-graphs" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>In the property graph (also known as labeled property graph) model:</p>
+<p>Each vertex consists of:</p>
+<ul>
+<li>A unique identifier</li>
+<li>A label (string) to describe what type of object this vertex represents</li>
+<li>A set of outgoing edges</li>
+<li>A set of incoming edges</li>
+<li>A collection of properties (key-value pairs)</li>
+</ul>
+<p>Each edge consists of:</p>
+<ul>
+<li>A unique identifier</li>
+<li>The vertex at which the edge starts (the tail vertex)</li>
+<li>The vertex at which the edge ends (the head vertex)</li>
+<li>A label to describe the kind of relationship between the two vertices</li>
+<li>A collection of properties (key-value pairs)</li>
+</ul>
+<p>Important notes:</p>
+<ul>
+<li>Any vertex can have an edge connecting it with any other vertex. There is no schema that restricts which kinds of things can or cannot be associated.</li>
+<li>Given any vertex, you can efficiently find both its incoming and its outgoing edges, and thus traverse the graph—i.e., follow a path through a chain of verti‐ ces—both forward and backward.</li>
+</ul>
+<h4 id="triple-stores">Triple Stores<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#triple-stores" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>See also <a href="../thoughts/RDF" class="internal" data-slug="thoughts/RDF">RDF</a></p>
+<p>In a triple-store, all information is stored in the form of very simple three-part statements: (subject, predicate, object).</p>
+<p>For example, in the triple (Jim, likes, bananas), Jim is the subject, likes is the predicate (verb), and bananas is the object.</p>
+<p>Generally queried by making a set of constraints.</p>
+<h3 id="event-sourcing">Event Sourcing<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#event-sourcing" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>In complex applications it can sometimes be difficult to find a single data representation that is able to satisfy all the different ways that the data needs to be queried and presented.</p>
+<p>In such situations, it can be beneficial to write data in one form, and then to derive from it several representations that are optimized for different types of reads.</p>
+<p>The simplest, fastest, and most expressive way of writing data is an event log: every time you want to write some data, you encode it as a self-contained string (perhaps as JSON), including a timestamp, and then append it to a sequence of events. Events in this log are immutable: you never change or delete them, you only ever append more events to the log (which may supersede earlier events).</p>
+<p>The principle of maintaining separate read-optimized representations and deriving them from the write-optimized representation is called command query responsibility segregation. Similar ideas can be found in <a href="../thoughts/State-Machine-Replication-(SMR)" class="internal alias" data-slug="thoughts/State-Machine-Replication-(SMR)">SMR</a></p>
+<h3 id="normalization">Normalization<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#normalization" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Normalization refers to how many ways there are of representation the same underlying information. This is typically done by giving an ID to each piece of data so that there is only one ‘canonical’ way of referring to it.</p>
+<p>Looking up an ID and replacing it with the actual information it refers to is often called <em>hydration</em></p>
+<ul>
+<li>When you use an ID, your data is more normalized: the information that is meaningful to humans is stored in only one place, and everything that refers to it uses an ID.</li>
+<li>When you store the text directly, you are duplicating the human-meaningful information in every record that uses it; this representation is denormalized, there are multiple potential referring to the same information.</li>
+</ul>
+<p>Tradeoffs:</p>
+<ul>
+<li>In a denormalized representation, the information in each document is self-contained meaning we don’t need to make another lookup to figure out what the ID refers to. However, if we do need to change the underlying information, we then need to go and find all the occurrences of the old information and update it.
+<ul>
+<li>TLDR; faster read, slower write</li>
+</ul>
+</li>
+<li>In a normalized representation, updating the information is as easy as changing the information that the ID refers to. However, each reference to the ID requires looking the ID up to get the corresponding information.
+<ul>
+<li>TLDR; faster write, slower read</li>
+</ul>
+</li>
+</ul>
+<h2 id="query-languages">Query Languages<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#query-languages" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>Declarative Query Languages allow you to specify the pattern of the data you want—what conditions the results must meet, and how you want the data to be transformed (e.g., sorted, grouped, and aggregated)—but not how to achieve that goal</li>
+<li>Imperative Query Languages require you to write an algorithm —i.e., telling the computer which operations to perform in which order</li>
+</ul></article></div><div class="right sidebar"><div class="graph"><h3>图谱视角</h3><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:false,&quot;removeTags&quot;:[]}"></div><svg version="1.1" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+	s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+	c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+	C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+	c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+	v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+	s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+	C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+	S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+	s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+	s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></div><div id="global-graph-outer"><div id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:false,&quot;removeTags&quot;:[]}"></div></div></div><div class="backlinks"><h3>反向链接</h3><ul class="overflow"><li><a href="../thoughts/SQL" class="internal">SQL</a></li></ul></div></div></div><footer class><hr/><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.2.2</a> © 2024</p><ul><li><a href="https://github.com/ilikui">GitHub</a></li><li><a href="https://twitter.com/kico">Twitter</a></li></ul></footer></div></body><script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script type="application/javascript">function c(){let t=this.parentElement;t.classList.toggle("is-collapsed");let l=t.classList.contains("is-collapsed")?this.scrollHeight:t.scrollHeight;t.style.maxHeight=l+"px";let o=t,e=t.parentElement;for(;e;){if(!e.classList.contains("callout"))return;let n=e.classList.contains("is-collapsed")?e.scrollHeight:e.scrollHeight+o.scrollHeight;e.style.maxHeight=n+"px",o=e,e=e.parentElement}}function i(){let t=document.getElementsByClassName("callout is-collapsible");for(let s of t){let l=s.firstElementChild;if(l){l.addEventListener("click",c),window.addCleanup(()=>l.removeEventListener("click",c));let e=s.classList.contains("is-collapsed")?l.scrollHeight:s.scrollHeight;s.style.maxHeight=e+"px"}}}document.addEventListener("nav",i);window.addEventListener("resize",i);
+</script><script type="module">
+          let mermaidImport = undefined
+          document.addEventListener('nav', async () => {
+            if (document.querySelector("code.mermaid")) {
+              mermaidImport ||= await import('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs')
+              const mermaid = mermaidImport.default
+              const darkMode = document.documentElement.getAttribute('saved-theme') === 'dark'
+              mermaid.initialize({
+                startOnLoad: false,
+                securityLevel: 'loose',
+                theme: darkMode ? 'dark' : 'default'
+              })
+
+              await mermaid.run({
+                querySelector: '.mermaid'
+              })
+            }
+          });
+          </script><script src="../postscript.js" type="module"></script></html>

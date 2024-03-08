@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>Idea List</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="Idea List"/><meta property="og:description" content="Technical block based text editor allow you to rip paragraph apart and rearrange sentences spatially paragraph should be able to have hierarchy like bullet points the ‘bullet points’ should be purely visual (easy toggle to turn it into paragraph/prose mode) column based drafts throughout history (save as draft button but also rewindable history) fuzzy rip grep hoogle for rdf shapes optimizing network topology for crdts codemirror but CRDT + TreeSitter smart git merges https://www."/><meta property="og:image" content="https://wiki.likui.info/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="Technical block based text editor allow you to rip paragraph apart and rearrange sentences spatially paragraph should be able to have hierarchy like bullet points the ‘bullet points’ should be purely visual (easy toggle to turn it into paragraph/prose mode) column based drafts throughout history (save as draft button but also rewindable history) fuzzy rip grep hoogle for rdf shapes optimizing network topology for crdts codemirror but CRDT + TreeSitter smart git merges https://www."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="../static/font/font-style.css" rel="stylesheet" type="text/css" spa-preserve/><link href="../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=JetBrains Mono&amp;family=DM Serif Text:wght@400;700&amp;family=Bricolage Grotesque:ital,wght@0,350;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="thoughts/idea-list"><div id="texture"></div><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h1 class="page-title"><a href="..">知识库</a></h1><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="search-layout" data-preview="true"></div></div></div></div><div class="darkmode"><input class="toggle" id="darkmode-toggle" type="checkbox" tabindex="-1"/><label id="toggle-label-light" for="darkmode-toggle" tabindex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabindex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></label></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../thoughts/">thoughts</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Idea List</a></div></nav><h1 class="article-title">Idea List</h1><p class="content-meta">Jun 17, 2021, 8 min read</p><ul class="tags"><li><a href="../tags/evergreen" class="internal tag-link">#evergreen</a></li></ul></div></div><article class="popover-hint"><h2 id="technical">Technical<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#technical" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>block based text editor
+<ul>
+<li>allow you to rip paragraph apart and rearrange sentences spatially
+<ul>
+<li>paragraph should be able to have hierarchy like bullet points</li>
+<li>the ‘bullet points’ should be purely visual (easy toggle to turn it into paragraph/prose mode)</li>
+</ul>
+</li>
+<li>column based drafts throughout history (save as draft button but also rewindable history)</li>
+</ul>
+</li>
+<li>fuzzy rip grep</li>
+<li>hoogle for rdf shapes</li>
+<li>optimizing network topology for crdts</li>
+<li><a href="../thoughts/CodeMirror" class="internal alias" data-slug="thoughts/CodeMirror">codemirror</a> but CRDT + TreeSitter
+<ul>
+<li>smart <a href="../thoughts/git" class="internal alias" data-slug="thoughts/git">git</a> merges</li>
+<li><a href="https://www.wilfred.me.uk/blog/2022/09/06/difftastic-the-fantastic-diff/" class="external">https://www.wilfred.me.uk/blog/2022/09/06/difftastic-the-fantastic-diff/</a></li>
+</ul>
+</li>
+<li>markup any site with a webcrawler + yjs + tldraw
+<ul>
+<li>maybe use webrecorder</li>
+<li>markupthis.site is not taken!!</li>
+<li>backed by content-addressed cdn store?</li>
+</ul>
+</li>
+<li>daily link share
+<ul>
+<li>inventory packing simulator but its with tabs… what would affect tab size? length of article == perceived weight in bag?</li>
+<li>what if you could bring your little backpack of tabs with you to a square or market and trade your tabs with other people</li>
+<li>list building primitive</li>
+</ul>
+</li>
+<li><a href="../thoughts/WebAssembly" class="internal alias" data-slug="thoughts/WebAssembly">WASM</a>-based val.town with <a href="../thoughts/CID" class="internal alias" data-slug="thoughts/CID">CIDs</a> distributed using a <a href="../thoughts/Sloppy-Hashing-DHT" class="internal alias" data-slug="thoughts/Sloppy-Hashing-DHT">Sloppy Hashing DHT</a>
+<ul>
+<li><a href="../thoughts/IPFS" class="internal" data-slug="thoughts/IPFS">IPFS</a> as a versioned package manager for all software</li>
+<li>good example: <a href="https://github.com/dylibso/wasmstore" class="external">https://github.com/dylibso/wasmstore</a></li>
+</ul>
+</li>
+<li>rotmg but actually good lol
+<ul>
+<li>dodge mechanic</li>
+<li>no instakill, should be iframes and way less health (similar to EtG)</li>
+<li>keep soulbound mechanic</li>
+<li>no screen rotation</li>
+<li>multi-floor dungeons, take more inspo from roguelites</li>
+<li>crowdsources levels + bossfights - community rating system like how Geometry Dash does it</li>
+<li>should have one free key a day</li>
+<li>actual good graveyard mechanics to look at past runs/chars</li>
+</ul>
+</li>
+<li>latency based quorum sensing, similar to how bacteria release a particular molecule and behave differently if sensors of the molecule are particularly active
+<ul>
+<li>see also: <a href="../thoughts/Sloppy-Hashing-DHT" class="internal alias" data-slug="thoughts/Sloppy-Hashing-DHT">Sloppy Hashing DHT</a></li>
+</ul>
+</li>
+<li><a href="https://openai.com/blog/webgpt/" class="external alias">webgpt</a> but its for tools for thought
+<ul>
+<li>“A <a href="https://escapingflatland.substack.com/p/reader-generated-essays" class="external alias">reader-generated essay</a> is what you get when you can go into someone else’s knowledge graph and make a linear journey through the network, while GPT-5 generates a just-in-time essay that is human-readable.”</li>
+<li>turning a graph traversal into a beautiful essay</li>
+</ul>
+</li>
+<li>what does entropy + erosion of data look like?
+<ul>
+<li>is they ways to make <a href="../thoughts/cryptography" class="internal alias" data-slug="thoughts/cryptography">cryptography</a> that are valid in time windows?</li>
+</ul>
+</li>
+<li>big touchscreen desk
+<ul>
+<li>what if i just got a huge old flatscreen tv</li>
+<li>mounted 4 pressure sensors on each corner and then got a big sheet of thin glass</li>
+<li>4 points is enough to pinpoint single-point touch accurately for dragging</li>
+<li>what if you could use it like a scratch space? like an always available figjam/muse board that also supports linking and trails a la <a href="../thoughts/tools-for-thought#memex" class="internal alias" data-slug="thoughts/tools-for-thought">memex</a>
+<ul>
+<li>a vision of <a href="https://interconnected.org/home/2021/12/21/sage" class="external alias">communal computing</a> perhaps</li>
+<li>a shared screen which anyone can ‘connect’ to as an external display</li>
+<li>anyone can drag windows/files to and from it</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>wave function collapse for poetry
+<ul>
+<li>bringing shape-shifting text to its most literal form</li>
+<li><a href="https://oskarstalberg.com/Townscaper/" title="https://oskarstalberg.com/Townscaper/" class="external">https://oskarstalberg.com/Townscaper/</a> for words</li>
+<li>base representation is word vectors
+<ul>
+<li>you can jiggle word vectors around</li>
+<li>apply transformations to vectors (e.g. the past tense vector)</li>
+<li>some sort of 1d marching cubes which modifies a vector depending on context?
+<ul>
+<li>potentially transformer related</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>image <span>←</span>> text interop using CLIP/unCLIP/DALL-E?</li>
+</ul>
+</li>
+<li>procedural city + building generation in minecraft + rtx using a codified version of <a href="../thoughts/A-Pattern-Language" class="internal alias" data-slug="thoughts/A-Pattern-Language">A Pattern Language</a>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Constraint_satisfaction_problem" class="external">https://en.wikipedia.org/wiki/Constraint_satisfaction_problem</a></li>
+</ul>
+</li>
+<li>procedural visualization of digital garden as an actual garden to help you tend to it better</li>
+<li>better search
+<ul>
+<li>searching through vectors
+<ul>
+<li>(no clue if this would work) integral images but applied to vector similarity search in text documents</li>
+<li>viola-jones for text <a href="../thoughts/latent-factor-model" class="internal alias" data-slug="thoughts/latent-factor-model">embeddings</a></li>
+<li><a href="https://github.com/facebookresearch/faiss" class="external">https://github.com/facebookresearch/faiss</a>
+<ul>
+<li><a href="https://arxiv.org/pdf/1702.08734.pdf" class="external">https://arxiv.org/pdf/1702.08734.pdf</a></li>
+<li><a href="https://crates.io/crates/kd-tree" class="external">https://crates.io/crates/kd-tree</a></li>
+<li><a href="https://dl.acm.org/doi/10.1145/3154273.3154307" class="external">https://dl.acm.org/doi/10.1145/3154273.3154307</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>how do we encode sentences/paragraphs/documents as vectors?
+<ul>
+<li><a href="https://beta.openai.com/docs/guides/embeddings/text-search-using-embeddings" class="external">https://beta.openai.com/docs/guides/embeddings/text-search-using-embeddings</a></li>
+<li><a href="https://github.com/ryankiros/skip-thoughts" class="external">https://github.com/ryankiros/skip-thoughts</a></li>
+<li><a href="https://github.com/pytorch/fairseq/tree/main/examples/data2vec" class="external">https://github.com/pytorch/fairseq/tree/main/examples/data2vec</a></li>
+</ul>
+</li>
+<li>wasm-based in-browser
+<ul>
+<li>open question: how do we get the query <span>→</span> vector??</li>
+<li>compute vectors for documents ahead of time and compile it into a single static binary file</li>
+<li>frontend will just load this</li>
+<li>in the browser, use webgl for fast dot-products
+<ul>
+<li>write a fragment shader to compute similarity between search vector and indexed vectors (<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> image where <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> is number of documents and output is value in <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mclose">]</span></span></span></span> for similarity)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>data provenance
+<ul>
+<li><a href="https://www.cs.cmu.edu/~NatProg/whyline.html" class="external">https://www.cs.cmu.edu/~NatProg/whyline.html</a></li>
+</ul>
+</li>
+<li>LayoutLM + screenshots → auto-categorization of knowledge
+<ul>
+<li><a href="https://screenotate.com/" class="external">https://screenotate.com/</a> but with atlas recall</li>
+<li>maybe turn this into an app which auto-extracts semantic info from screenshots/images on webpages and does something w it idk</li>
+<li>how do we prevent <a href="https://twitter.com/rsnous/status/1130910375795277824" class="external">https://twitter.com/rsnous/status/1130910375795277824</a></li>
+</ul>
+</li>
+<li>Marginalia for the web? browser as a graph database, chronological browsing?
+<ul>
+<li>what if you could 3 finger swipe up on a browser to see what pages this page is connected to in a graph</li>
+<li>and you could write on the margins of pages and share those with friends
+<ul>
+<li>a little annotated web</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Conversational GPS: why do we even look at a screen when we can just ask for directions as if it was a normal person lol</li>
+<li>google photos + olo radio (see <a href="../thoughts/attention-economy" class="internal alias" data-slug="thoughts/attention-economy">attention economy</a>)</li>
+</ul>
+<ul>
+<li>DreamCoder boolsat
+<ul>
+<li>Creating a LISP-like higher-order language to exploit reusable sub-proofs in specific domains (e.g. graph colouring)</li>
+<li>kinda iffy on the sat problem solver using dreamcoder, not a lot of exploitable structure in the proofs (otherwise we’d have a more reliable human method)</li>
+<li>Background:
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Boolean_satisfiability_problem" class="external">https://en.wikipedia.org/wiki/Boolean_satisfiability_problem</a></li>
+<li><a href="https://searchworks.stanford.edu/view/13250178" class="external">https://searchworks.stanford.edu/view/13250178</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>NeuroSAT Paper:
+<ul>
+<li><a href="https://arxiv.org/pdf/1802.03685.pdf" class="external">https://arxiv.org/pdf/1802.03685.pdf</a></li>
+</ul>
+</li>
+<li>DreamCoder Paper:
+<ul>
+<li><a href="https://arxiv.org/pdf/2006.08381.pdf" class="external">https://arxiv.org/pdf/2006.08381.pdf</a></li>
+<li><a href="https://www.youtube.com/watch?v=qtu0aSTDE2I" class="external">https://www.youtube.com/watch?v=qtu0aSTDE2I</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>tabfs but for emails
+<ul>
+<li><a href="https://bazil.org/fuse/" class="external">https://bazil.org/fuse/</a></li>
+</ul>
+<ul>
+<li><a href="https://blog.gopheracademy.com/advent-2014/fuse-zipfs/" class="external">https://blog.gopheracademy.com/advent-2014/fuse-zipfs/</a></li>
+<li>listen on any email server</li>
+</ul>
+</li>
+<li>deep foveal VR rendering</li>
+</ul>
+<h2 id="writing">Writing<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#writing" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>Short stories/speculative fiction
+<ul>
+<li><a href="../thoughts/CID" class="internal alias" data-slug="thoughts/CID">CID</a> as the library of babel</li>
+<li>Interplanetary communication / state machine</li>
+<li>Packet switched electricity</li>
+<li>saving sun for later (make something we take for granted extremely scarce)</li>
+</ul>
+</li>
+<li>Essays
+<ul>
+<li>Analog software: software by analogy and by atomic building blocks that interface with each other
+<ul>
+<li>We should be able to directly manipulate them, like files, rather than only indirectly work with them, like layer activations in a neural network.</li>
+<li>Software representations for similar ideas should be obviously similar in some way – they should click together, or look similar, or feel similar to the touch.</li>
+<li>Ideas should remember where they came from – what blog I copied it from, which author I quoted it from, and so on.</li>
+</ul>
+</li>
+<li>Essay on epistemic play + <a href="../thoughts/Jestermaxxing" class="internal" data-slug="thoughts/Jestermaxxing">Jestermaxxing</a> + mill’s take on why censorship is unethical</li>
+<li>limits to <a href="../thoughts/Byzantine-Faults" class="internal alias" data-slug="thoughts/Byzantine-Faults">BFT</a>
+<ul>
+<li>some malicious activity is indistinguishable from legitimate activity (e.g. deleting a document)
+<ul>
+<li><em>semantic</em> byzantine fault tolerance vs protocol byzantine fault tolerance</li>
+</ul>
+</li>
+<li>Making distributed systems reliable is inherently impossible; we cling to Byzantine fault tolerance like Charlton Heston clings to his guns, hoping that a series of complex software protocols will somehow protect us from the oncoming storm of furious apes who have somehow learned how to wear pants and maliciously tamper with our network packets. (<em><a href="https://scholar.harvard.edu/files/mickens/files/thesaddestmoment.pdf" class="external alias">The Saddest Moment</a></em> by James Mickens)</li>
+<li>“I have never had a real-life experience that resembled a Byzantine fault tolerant protocol.”</li>
+</ul>
+</li>
+<li>two axes of collaborative vs local-first software
+<ul>
+<li>ultimately about state reconciliation</li>
+<li>one is temporally (offline-first) the other is spatially (collaboration across multiple computers)</li>
+<li>two axes, not mutually exclusive</li>
+<li>maybe worth plotting where everything sits lol</li>
+<li>data is either
+<ul>
+<li>collaborative: co-editing</li>
+<li>persistent: saved somewhere (as opposed to ephemeral)</li>
+<li>versioned: can time travel</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="../thoughts/independent-research" class="internal alias" data-slug="thoughts/independent-research">independent research</a> is applied <a href="../thoughts/taste" class="internal" data-slug="thoughts/taste">taste</a>
+<ul>
+<li>Aesthetics as a heuristic for non obvious optimality</li>
+</ul>
+</li>
+<li>Good <a href="../thoughts/search" class="internal alias" data-slug="thoughts/search">search</a> (aggregators) turns random networks into scale-free networks (see: <a href="../thoughts/Network-Theory" class="internal alias" data-slug="thoughts/Network-Theory">network theory</a>)</li>
+<li>The sequel to SQL (Against table databases)
+<ul>
+<li>Data interoperability is really hard with SQL
+<ul>
+<li>I think interoperability in the context of the web means being able to transparently understand and share data, agnostic of platform.</li>
+<li>Closed platforms disallow this as they curate the information they present to end-users/devs through the frontend but close off access to the actual data itself.</li>
+<li>This forces one ‘correct’ way of looking at data (which is often not the case!)</li>
+</ul>
+</li>
+<li>What about evolution of applications?</li>
+<li>Taking evolution to its natural extension, a different application all together?</li>
+<li>How do we create sources of truth that are <em>legible outside of the application</em>, possibly in ways that the application developer never anticipated?</li>
+<li>Well, we’ve done this already once! The applications on our computers ‘share’ data between them is through the file system
+<ul>
+<li>An application then is a specific view on types of data rather than a standalone thing. Data can be dragged through different applications. Each data is annotated with a type.</li>
+</ul>
+</li>
+<li>How might we do this for more general data?</li>
+<li>Recent years has seen a revival of academic and research interest in the tuple store which will allow us to pull out structure when we need it. It embraces a pluriversal view of data — a world where multiple alternatives co-exist
+<ul>
+<li>We can think of a <a href="https://jzhao.xyz/thoughts/RDF" class="external alias">triple store</a> as a distributed and fragmented SQL database, where instead of tables with rows and value, we have entities with attributes and values. Any application can declare new attributes or alias an attribute to a more common one. The most important part is that applications that share attributes can automatically interoperate their data by using the same attributes</li>
+<li>This type of ‘decentralized’ database means there is no canonical schema. You can’t mistake the map for the territory because everyone has their own map and can’t force others to view the ’truth’ of the world through your map</li>
+<li>See more: <a href="https://jzhao.xyz/thoughts/Rhizome-Research-Log#october-19th" class="external">https://jzhao.xyz/thoughts/Rhizome-Research-Log#october-19th</a></li>
+<li>(Inkandswitch explored this with Cambria)</li>
+</ul>
+</li>
+<li>One common critique of this is that we lose efficiency and that by knowing the structure of the data ahead of time, we can better optimize queries, etc.</li>
+<li>Using tuples doesn’t prevent us from creating indices and using incremental view maintenance! A lot of really good recent research on differential data flow</li>
+<li>Importantly, this gives us moldable data which enables people to have the raw material to sculpt and play with
+<ul>
+<li>(AtProto making the data and schema public means that we’ve seen an explosion of clients and projects that use BlueSky data)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></article></div><div class="right sidebar"><div class="graph"><h3>图谱视角</h3><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:false,&quot;removeTags&quot;:[]}"></div><svg version="1.1" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+	s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+	c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+	C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+	c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+	v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+	s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+	C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+	S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+	s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+	s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></div><div id="global-graph-outer"><div id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:false,&quot;removeTags&quot;:[]}"></div></div></div><div class="backlinks"><h3>反向链接</h3><ul class="overflow"><li><a href="../posts/networked-thought" class="internal">Networked Thought</a></li><li><a href="../thoughts/Lattice-Proposal" class="internal">Lattice Proposal</a></li><li><a href="../thoughts/Projects" class="internal">Projects</a></li><li><a href="../thoughts/Rhizome-Research-Log" class="internal">Rhizome Research Log</a></li><li><a href="../thoughts/context" class="internal">Context</a></li><li><a href="../thoughts/interoperability" class="internal">Interoperability</a></li><li><a href="../thoughts/knowledge-distillation" class="internal">Knowledge Distillation + Teaching</a></li><li><a href="../thoughts/research-institutions" class="internal">Research Institutions</a></li><li><a href="../thoughts/writing" class="internal">Writing</a></li></ul></div></div></div><footer class><hr/><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.2.2</a> © 2024</p><ul><li><a href="https://github.com/ilikui">GitHub</a></li><li><a href="https://twitter.com/kico">Twitter</a></li></ul></footer></div></body><script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script type="application/javascript">function c(){let t=this.parentElement;t.classList.toggle("is-collapsed");let l=t.classList.contains("is-collapsed")?this.scrollHeight:t.scrollHeight;t.style.maxHeight=l+"px";let o=t,e=t.parentElement;for(;e;){if(!e.classList.contains("callout"))return;let n=e.classList.contains("is-collapsed")?e.scrollHeight:e.scrollHeight+o.scrollHeight;e.style.maxHeight=n+"px",o=e,e=e.parentElement}}function i(){let t=document.getElementsByClassName("callout is-collapsible");for(let s of t){let l=s.firstElementChild;if(l){l.addEventListener("click",c),window.addCleanup(()=>l.removeEventListener("click",c));let e=s.classList.contains("is-collapsed")?l.scrollHeight:s.scrollHeight;s.style.maxHeight=e+"px"}}}document.addEventListener("nav",i);window.addEventListener("resize",i);
+</script><script type="module">
+          let mermaidImport = undefined
+          document.addEventListener('nav', async () => {
+            if (document.querySelector("code.mermaid")) {
+              mermaidImport ||= await import('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs')
+              const mermaid = mermaidImport.default
+              const darkMode = document.documentElement.getAttribute('saved-theme') === 'dark'
+              mermaid.initialize({
+                startOnLoad: false,
+                securityLevel: 'loose',
+                theme: darkMode ? 'dark' : 'default'
+              })
+
+              await mermaid.run({
+                querySelector: '.mermaid'
+              })
+            }
+          });
+          </script><script src="../postscript.js" type="module"></script></html>
