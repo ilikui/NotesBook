@@ -11,9 +11,11 @@
             "id": "5e5b64c5fe921fc9",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "banner.svg"
+                "file": "posts/km/知识管理.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "banner.svg",
+                "file": "posts/km/知识管理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "banner.svg",
+                "file": "posts/km/知识管理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "banner.svg"
+                "file": "posts/km/知识管理.md"
               }
             }
           }
@@ -148,6 +150,7 @@
   },
   "active": "5e5b64c5fe921fc9",
   "lastOpenFiles": [
+    "banner.svg",
     "_index.md",
     "posts/bm/博客管理.md",
     "posts/cm/搜藏管理.md",
@@ -174,8 +177,6 @@
     "posts/2022.md",
     "posts/2020.md",
     "books.md",
-    "posts/a-failure-resume.md",
-    "banner.svg",
     "posts/cm",
     "posts/新建文件夹",
     "posts/pm",

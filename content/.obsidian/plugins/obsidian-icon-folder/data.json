@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "BoBxsThermometer",
       "RiFileImageFill",
       "BoBxsInbox",
       "LiBookImage",
-      "FasBookAtlas",
-      "🧑"
+      "FasBookAtlas"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -50,5 +50,6 @@
   "posts/km/知识管理.md": "FasBookAtlas",
   "posts/images/2020": "LiBookImage",
   "posts/images/km": "BoBxsInbox",
-  "posts/images/bias-bug": "RiFileImageFill"
+  "posts/images/bias-bug": "RiFileImageFill",
+  "posts/images/collaborative-thinking": "BoBxsThermometer"
 }
