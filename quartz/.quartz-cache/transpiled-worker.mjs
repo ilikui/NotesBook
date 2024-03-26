@@ -4212,7 +4212,7 @@ import chalk4 from "chalk";
 // quartz.config.ts
 var config = {
   configuration: {
-    pageTitle: "\u77E5\u8BC6\u5E93",
+    pageTitle: "\u6570\u5B57\u82B1\u56ED",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
