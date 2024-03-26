@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/km/知识管理.md",
+                "file": "posts/wm/系统设计.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/km/知识管理.md",
+                "file": "posts/wm/系统设计.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/km/知识管理.md",
+                "file": "posts/wm/系统设计.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/km/知识管理.md"
+                "file": "posts/wm/系统设计.md"
               }
             }
           }
@@ -150,19 +150,19 @@
   },
   "active": "5e5b64c5fe921fc9",
   "lastOpenFiles": [
+    "posts/wm/汽车电子.md",
+    "posts/wm/工作管理.md",
+    "posts/wm/AUTOSAR.md",
+    "posts/km/知识管理.md",
     "banner.svg",
     "_index.md",
     "posts/bm/博客管理.md",
     "posts/cm/搜藏管理.md",
     "posts/em/考试管理.md",
     "posts/wm/系统设计.md",
-    "posts/wm/汽车电子.md",
     "posts/wm/工作管理 - Copy.md",
-    "posts/wm/工作管理.md",
-    "posts/wm/AUTOSAR.md",
     "posts/images/km/SystemDesign.webp",
     "templates/post.md",
-    "posts/km/知识管理.md",
     "tags/writing.md",
     "tags/technical.md",
     "tags/Software.md",
