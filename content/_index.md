@@ -15,13 +15,13 @@ tags:
 我的笔记库：
 
 * [知识管理](posts/Area/km/知识管理.md)
-* [笔记管理](posts/nm/笔记管理.md)
-* [工作管理](posts/wm/工作管理.md)
+* [笔记管理](posts/Area/nm/笔记管理.md)
+* [工作管理](posts/Area/wm/工作管理.md)
 * [阅读管理](posts/rm/阅读管理.md)
 * [博客管理](posts/bm/博客管理.md)
 * [搜藏管理](posts/cm/搜藏管理.md)
 * [计划管理](posts/pm/计划管理.md)
-* [考试管理](posts/em/考试管理.md)
+* [考试管理](posts/Project/em/考试管理.md)
   
 
 
