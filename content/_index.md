@@ -14,7 +14,7 @@ tags:
 
 我的笔记库：
 
-* [知识管理](posts/km/知识管理.md)
+* [知识管理](posts/Area/km/知识管理.md)
 * [笔记管理](posts/nm/笔记管理.md)
 * [工作管理](posts/wm/工作管理.md)
 * [阅读管理](posts/rm/阅读管理.md)
