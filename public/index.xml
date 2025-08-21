@@ -6,6 +6,36 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Archive</title>
+    <link>https://wiki.likui.info/Archive/</link>
+    <guid>https://wiki.likui.info/Archive/</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Thu, 21 Aug 2025 11:55:17 GMT</pubDate>
+  </item><item>
+    <title>Hosting</title>
+    <link>https://wiki.likui.info/Archive/hosting</link>
+    <guid>https://wiki.likui.info/Archive/hosting</guid>
+    <description><![CDATA[ Quartz effectively turns your Markdown files and other resources into a bundle of HTML, JS, and CSS files (a website!). ]]></description>
+    <pubDate>Thu, 21 Aug 2025 11:54:28 GMT</pubDate>
+  </item><item>
+    <title>Authoring Content</title>
+    <link>https://wiki.likui.info/Archive/authoring-content</link>
+    <guid>https://wiki.likui.info/Archive/authoring-content</guid>
+    <description><![CDATA[ All of the content in your Quartz should go in the /content folder. The content for the home page of your Quartz lives in content/index.md. ]]></description>
+    <pubDate>Thu, 21 Aug 2025 11:54:28 GMT</pubDate>
+  </item><item>
+    <title>Upgrading Quartz</title>
+    <link>https://wiki.likui.info/Archive/upgrading</link>
+    <guid>https://wiki.likui.info/Archive/upgrading</guid>
+    <description><![CDATA[  Note This is specifically a guide for upgrading Quartz 4 version to a more recent update. ]]></description>
+    <pubDate>Thu, 21 Aug 2025 11:54:14 GMT</pubDate>
+  </item><item>
+    <title>Layout</title>
+    <link>https://wiki.likui.info/Archive/layout</link>
+    <guid>https://wiki.likui.info/Archive/layout</guid>
+    <description><![CDATA[ Certain emitters may also output HTML files. To enable easy customization, these emitters allow you to fully rearrange the layout of the page. ]]></description>
+    <pubDate>Thu, 21 Aug 2025 11:54:00 GMT</pubDate>
+  </item><item>
     <title>Citations</title>
     <link>https://wiki.likui.info/Area/Citations</link>
     <guid>https://wiki.likui.info/Area/Citations</guid>
@@ -34,36 +64,6 @@
     <link>https://wiki.likui.info/Area/Obsidian-compatibility</link>
     <guid>https://wiki.likui.info/Area/Obsidian-compatibility</guid>
     <description><![CDATA[ Quartz was originally designed as a tool to publish Obsidian vaults as websites. ]]></description>
-    <pubDate>Thu, 21 Aug 2025 11:50:05 GMT</pubDate>
-  </item><item>
-    <title>OxHugo Compatibility</title>
-    <link>https://wiki.likui.info/Area/OxHugo-compatibility</link>
-    <guid>https://wiki.likui.info/Area/OxHugo-compatibility</guid>
-    <description><![CDATA[ org-roam is a plain-text personal knowledge management system for emacs. ]]></description>
-    <pubDate>Thu, 21 Aug 2025 11:50:05 GMT</pubDate>
-  </item><item>
-    <title>RSS Feed</title>
-    <link>https://wiki.likui.info/Area/RSS-Feed</link>
-    <guid>https://wiki.likui.info/Area/RSS-Feed</guid>
-    <description><![CDATA[ Quartz emits an RSS feed for all the content on your site by generating an index.xml file that RSS readers can subscribe to. ]]></description>
-    <pubDate>Thu, 21 Aug 2025 11:50:05 GMT</pubDate>
-  </item><item>
-    <title>Roam Research Compatibility</title>
-    <link>https://wiki.likui.info/Area/Roam-Research-compatibility</link>
-    <guid>https://wiki.likui.info/Area/Roam-Research-compatibility</guid>
-    <description><![CDATA[ Roam Research is a note-taking tool that organizes your knowledge graph in a unique and interconnected way. ]]></description>
-    <pubDate>Thu, 21 Aug 2025 11:50:05 GMT</pubDate>
-  </item><item>
-    <title>SPA Routing</title>
-    <link>https://wiki.likui.info/Area/SPA-Routing</link>
-    <guid>https://wiki.likui.info/Area/SPA-Routing</guid>
-    <description><![CDATA[ Single-page-app style rendering. This prevents flashes of unstyled content and improves the smoothness of Quartz. ]]></description>
-    <pubDate>Thu, 21 Aug 2025 11:50:05 GMT</pubDate>
-  </item><item>
-    <title>Backlinks</title>
-    <link>https://wiki.likui.info/Area/backlinks</link>
-    <guid>https://wiki.likui.info/Area/backlinks</guid>
-    <description><![CDATA[ A backlink for a note is a link from another note to that note. ]]></description>
     <pubDate>Thu, 21 Aug 2025 11:50:05 GMT</pubDate>
   </item>
     </channel>

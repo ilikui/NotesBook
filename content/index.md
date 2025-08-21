@@ -2,7 +2,7 @@
 title: 欢迎来到数字花园
 ---
 
-Quartz is a fast, batteries-included static-site generator that transforms Markdown content into fully functional websites. Thousands of students, developers, and teachers are [[showcase|already using Quartz]] to publish personal notes, websites, and [digital gardens](https://jzhao.xyz/posts/networked-thought) to the web.
+Quartz is a fast, batteries-included static-site generator that transforms Markdown content into fully functional websites. Thousands of students, developers, and teachers are [[Archive/showcase|already using Quartz]] to publish personal notes, websites, and [digital gardens](https://jzhao.xyz/posts/networked-thought) to the web.
 
 ## 🪴 Get Started
 
@@ -41,6 +41,6 @@ For a comprehensive list of features, visit the [features page](./features/). Yo
 
 ### 🚧 Troubleshooting + Updating
 
-Having trouble with Quartz? Try searching for your issue using the search feature. If you haven't already, [[upgrading|upgrade]] to the newest version of Quartz to see if this fixes your issue.
+Having trouble with Quartz? Try searching for your issue using the search feature. If you haven't already, [[Archive/upgrading|upgrade]] to the newest version of Quartz to see if this fixes your issue.
 
 If you're still having trouble, feel free to [submit an issue](https://github.com/jackyzha0/quartz/issues) if you feel you found a bug or ask for help in our [Discord Community](https://discord.gg/cRFFHYye7t).
