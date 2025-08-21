@@ -1,70 +1,70 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
     <channel>
-      <title>数字花园</title>
-      <link>https://wiki.likui.info</link>
-      <description>Last 10 notes on 数字花园</description>
+      <title>Quartz 4</title>
+      <link>https://quartz.jzhao.xyz</link>
+      <description>Last 10 notes on Quartz 4</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Seed</title>
-    <link>https://wiki.likui.info/tags/seed</link>
-    <guid>https://wiki.likui.info/tags/seed</guid>
-    <description>I tend to generally bookmark things for later then revisit them when I have time. These are collections of notes on articles, books, and readings. They are the seeds that form the basis of my ideas and thoughts.</description>
-    <pubDate>Fri, 26 Jul 2024 06:51:45 GMT</pubDate>
+    <title>Plugins</title>
+    <link>https://quartz.jzhao.xyz/tags/plugin</link>
+    <guid>https://quartz.jzhao.xyz/tags/plugin</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Thu, 21 Aug 2025 10:51:03 GMT</pubDate>
   </item><item>
-    <title>Technical</title>
-    <link>https://wiki.likui.info/tags/technical</link>
-    <guid>https://wiki.likui.info/tags/technical</guid>
-    <description>Notes and blog posts on technical subjects. Though there are a lot of technical notes in this garden, these ones are generally ready for public consumption.</description>
-    <pubDate>Fri, 26 Jul 2024 06:51:45 GMT</pubDate>
+    <title>Upgrading Quartz</title>
+    <link>https://quartz.jzhao.xyz/upgrading</link>
+    <guid>https://quartz.jzhao.xyz/upgrading</guid>
+    <description><![CDATA[  Note This is specifically a guide for upgrading Quartz 4 version to a more recent update. ]]></description>
+    <pubDate>Thu, 21 Aug 2025 10:51:03 GMT</pubDate>
   </item><item>
-    <title>Writing</title>
-    <link>https://wiki.likui.info/tags/writing</link>
-    <guid>https://wiki.likui.info/tags/writing</guid>
-    <description>A small collection of some of the writing I've been experimenting with. These are mostly unpolished experiments with fiction and poetry that I've been playing around with.</description>
-    <pubDate>Fri, 26 Jul 2024 06:51:45 GMT</pubDate>
+    <title>Setting up your GitHub repository</title>
+    <link>https://quartz.jzhao.xyz/setting-up-your-GitHub-repository</link>
+    <guid>https://quartz.jzhao.xyz/setting-up-your-GitHub-repository</guid>
+    <description><![CDATA[ First, make sure you have Quartz cloned and setup locally. Then, create a new repository on GitHub.com. ]]></description>
+    <pubDate>Thu, 21 Aug 2025 10:51:03 GMT</pubDate>
   </item><item>
-    <title>Rhizome</title>
-    <link>https://wiki.likui.info/tags/rhizome</link>
-    <guid>https://wiki.likui.info/tags/rhizome</guid>
-    <description>My independent research practice focused on data-neutrality.</description>
-    <pubDate>Fri, 26 Jul 2024 06:51:45 GMT</pubDate>
+    <title>Quartz Showcase</title>
+    <link>https://quartz.jzhao.xyz/showcase</link>
+    <guid>https://quartz.jzhao.xyz/showcase</guid>
+    <description><![CDATA[ Want to see what Quartz can do? Here are some cool community gardens: Quartz Documentation (this site!) Jacky Zhao’s Garden Aaron Pham’s Garden The Pond Eilleen’s Everything Notebook Morrowind Modding Wiki Stanford CME 302 Numerical Linear Algebra Socratica Toolbox A Pattern Language - Christopher A... ]]></description>
+    <pubDate>Thu, 21 Aug 2025 10:51:03 GMT</pubDate>
   </item><item>
-    <title>Sapling</title>
-    <link>https://wiki.likui.info/tags/sapling</link>
-    <guid>https://wiki.likui.info/tags/sapling</guid>
-    <description>Saplings are single nodes or thoughts. These are generally topics I've spent a decent number of hours thinking about and contain substantial original thought.</description>
-    <pubDate>Fri, 26 Jul 2024 06:51:45 GMT</pubDate>
+    <title>Components</title>
+    <link>https://quartz.jzhao.xyz/tags/component</link>
+    <guid>https://quartz.jzhao.xyz/tags/component</guid>
+    <description><![CDATA[ Want to create your own custom component? Check out the advanced guide on creating components for more information. ]]></description>
+    <pubDate>Thu, 21 Aug 2025 10:51:03 GMT</pubDate>
   </item><item>
-    <title>Pattern</title>
-    <link>https://wiki.likui.info/tags/pattern</link>
-    <guid>https://wiki.likui.info/tags/pattern</guid>
-    <description>A pattern in my own pattern language. These represent atomic concepts and observations that appear and reappear within my thinking and work. See the note on 'A Pattern Language' for more information.</description>
-    <pubDate>Fri, 26 Jul 2024 06:51:45 GMT</pubDate>
+    <title>Static</title>
+    <link>https://quartz.jzhao.xyz/plugins/Static</link>
+    <guid>https://quartz.jzhao.xyz/plugins/Static</guid>
+    <description><![CDATA[ This plugin emits all static resources needed by Quartz. ]]></description>
+    <pubDate>Thu, 21 Aug 2025 10:51:03 GMT</pubDate>
   </item><item>
-    <title>Personal</title>
-    <link>https://wiki.likui.info/tags/personal</link>
-    <guid>https://wiki.likui.info/tags/personal</guid>
-    <description>Personal reflections and musings about my life. I really like to write feelings down as a way to process them and sometimes they take the form of blogposts like these.</description>
-    <pubDate>Fri, 26 Jul 2024 06:51:45 GMT</pubDate>
+    <title>SyntaxHighlighting</title>
+    <link>https://quartz.jzhao.xyz/plugins/SyntaxHighlighting</link>
+    <guid>https://quartz.jzhao.xyz/plugins/SyntaxHighlighting</guid>
+    <description><![CDATA[ This plugin is used to add syntax highlighting to code blocks in Quartz. See syntax highlighting for more information. ]]></description>
+    <pubDate>Thu, 21 Aug 2025 10:51:03 GMT</pubDate>
   </item><item>
-    <title>Evergreen</title>
-    <link>https://wiki.likui.info/tags/evergreen</link>
-    <guid>https://wiki.likui.info/tags/evergreen</guid>
-    <description>These are notes that are always relevant and constantly being updated and grown throughout the year.</description>
-    <pubDate>Fri, 26 Jul 2024 06:51:45 GMT</pubDate>
+    <title>TableOfContents</title>
+    <link>https://quartz.jzhao.xyz/plugins/TableOfContents</link>
+    <guid>https://quartz.jzhao.xyz/plugins/TableOfContents</guid>
+    <description><![CDATA[ This plugin generates a table of contents (TOC) for Markdown documents. See table of contents for more information. ]]></description>
+    <pubDate>Thu, 21 Aug 2025 10:51:03 GMT</pubDate>
   </item><item>
-    <title>Fruit</title>
-    <link>https://wiki.likui.info/tags/fruit</link>
-    <guid>https://wiki.likui.info/tags/fruit</guid>
-    <description>Of course, a knowledge index isn’t much use if it doesn’t inform future thinking and output. Fruits are what I like to call derivative or ’new’ pieces of content.</description>
-    <pubDate>Fri, 26 Jul 2024 06:51:45 GMT</pubDate>
+    <title>TagPage</title>
+    <link>https://quartz.jzhao.xyz/plugins/TagPage</link>
+    <guid>https://quartz.jzhao.xyz/plugins/TagPage</guid>
+    <description><![CDATA[ This plugin emits dedicated pages for each tag used in the content. See folder and tag listings for more information. ]]></description>
+    <pubDate>Thu, 21 Aug 2025 10:51:03 GMT</pubDate>
   </item><item>
-    <title>PHIL240A</title>
-    <link>https://wiki.likui.info/tags/PHIL240A</link>
-    <guid>https://wiki.likui.info/tags/PHIL240A</guid>
-    <description>Course notes and essays for PHIL240A: Epistemology.</description>
-    <pubDate>Fri, 26 Jul 2024 06:51:45 GMT</pubDate>
+    <title>Plugins</title>
+    <link>https://quartz.jzhao.xyz/plugins/</link>
+    <guid>https://quartz.jzhao.xyz/plugins/</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Thu, 21 Aug 2025 10:51:03 GMT</pubDate>
   </item>
     </channel>
   </rss>
