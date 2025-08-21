@@ -6,65 +6,65 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>KM</title>
-    <link>https://wiki.likui.info/Area/EE/</link>
-    <guid>https://wiki.likui.info/Area/EE/</guid>
-    <description><![CDATA[ 学习电子基础. ]]></description>
-    <pubDate>Thu, 21 Aug 2025 12:47:23 GMT</pubDate>
+    <title>Citations</title>
+    <link>https://wiki.likui.info/Area/EE/Citations</link>
+    <guid>https://wiki.likui.info/Area/EE/Citations</guid>
+    <description><![CDATA[ Quartz uses rehype-citation to support parsing of a BibTex bibliography file. ]]></description>
+    <pubDate>Thu, 21 Aug 2025 12:47:56 GMT</pubDate>
   </item><item>
-    <title>电子基础</title>
-    <link>https://wiki.likui.info/Area/EE/%E7%94%B5%E5%AD%90%E5%9F%BA%E7%A1%80</link>
-    <guid>https://wiki.likui.info/Area/EE/%E7%94%B5%E5%AD%90%E5%9F%BA%E7%A1%80</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 21 Aug 2025 12:47:06 GMT</pubDate>
+    <title>Docker Support</title>
+    <link>https://wiki.likui.info/Area/EE/Docker-Support</link>
+    <guid>https://wiki.likui.info/Area/EE/Docker-Support</guid>
+    <description><![CDATA[ Quartz comes shipped with a Docker image that will allow you to preview your Quartz locally without installing Node. ]]></description>
+    <pubDate>Thu, 21 Aug 2025 12:47:56 GMT</pubDate>
   </item><item>
-    <title>KM</title>
-    <link>https://wiki.likui.info/Area/KM/</link>
-    <guid>https://wiki.likui.info/Area/KM/</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 21 Aug 2025 12:33:21 GMT</pubDate>
+    <title>LaTeX</title>
+    <link>https://wiki.likui.info/Area/EE/Latex</link>
+    <guid>https://wiki.likui.info/Area/EE/Latex</guid>
+    <description><![CDATA[ Quartz uses Katex by default to typeset both inline and block math expressions at build time. ]]></description>
+    <pubDate>Thu, 21 Aug 2025 12:47:56 GMT</pubDate>
   </item><item>
-    <title>数字花园</title>
-    <link>https://wiki.likui.info/Area/KM/%E6%95%B0%E5%AD%97%E8%8A%B1%E5%9B%AD</link>
-    <guid>https://wiki.likui.info/Area/KM/%E6%95%B0%E5%AD%97%E8%8A%B1%E5%9B%AD</guid>
-    <description><![CDATA[ 数字花园. ]]></description>
-    <pubDate>Thu, 21 Aug 2025 12:33:21 GMT</pubDate>
+    <title>Mermaid Diagrams</title>
+    <link>https://wiki.likui.info/Area/EE/Mermaid-diagrams</link>
+    <guid>https://wiki.likui.info/Area/EE/Mermaid-diagrams</guid>
+    <description><![CDATA[ Quartz supports Mermaid which allows you to add diagrams and charts to your notes. ]]></description>
+    <pubDate>Thu, 21 Aug 2025 12:47:56 GMT</pubDate>
   </item><item>
-    <title>欢迎来到数字花园</title>
-    <link>https://wiki.likui.info/</link>
-    <guid>https://wiki.likui.info/</guid>
-    <description><![CDATA[ 使用PARA搭建数字花园 🪴 Get Started Quartz requires at least Node v22 and npm v10.9.2 to function correctly. ]]></description>
-    <pubDate>Thu, 21 Aug 2025 12:33:21 GMT</pubDate>
+    <title>Obsidian Compatibility</title>
+    <link>https://wiki.likui.info/Area/EE/Obsidian-compatibility</link>
+    <guid>https://wiki.likui.info/Area/EE/Obsidian-compatibility</guid>
+    <description><![CDATA[ Quartz was originally designed as a tool to publish Obsidian vaults as websites. ]]></description>
+    <pubDate>Thu, 21 Aug 2025 12:47:56 GMT</pubDate>
   </item><item>
-    <title>AUTOSAR</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 21 Aug 2025 12:29:56 GMT</pubDate>
+    <title>OxHugo Compatibility</title>
+    <link>https://wiki.likui.info/Area/EE/OxHugo-compatibility</link>
+    <guid>https://wiki.likui.info/Area/EE/OxHugo-compatibility</guid>
+    <description><![CDATA[ org-roam is a plain-text personal knowledge management system for emacs. ]]></description>
+    <pubDate>Thu, 21 Aug 2025 12:47:56 GMT</pubDate>
   </item><item>
-    <title>Authoring Content</title>
-    <link>https://wiki.likui.info/Archive/authoring-content</link>
-    <guid>https://wiki.likui.info/Archive/authoring-content</guid>
-    <description><![CDATA[ All of the content in your Quartz should go in the /content folder. The content for the home page of your Quartz lives in content/index.md. ]]></description>
-    <pubDate>Thu, 21 Aug 2025 11:55:57 GMT</pubDate>
+    <title>RSS Feed</title>
+    <link>https://wiki.likui.info/Area/EE/RSS-Feed</link>
+    <guid>https://wiki.likui.info/Area/EE/RSS-Feed</guid>
+    <description><![CDATA[ Quartz emits an RSS feed for all the content on your site by generating an index.xml file that RSS readers can subscribe to. ]]></description>
+    <pubDate>Thu, 21 Aug 2025 12:47:56 GMT</pubDate>
   </item><item>
-    <title>Building your Quartz</title>
-    <link>https://wiki.likui.info/Archive/build</link>
-    <guid>https://wiki.likui.info/Archive/build</guid>
-    <description><![CDATA[ Once you’ve initialized Quartz, let’s see what it looks like locally: npx quartz build --serve This will start a local web server to run your Quartz on your computer. ]]></description>
-    <pubDate>Thu, 21 Aug 2025 11:55:57 GMT</pubDate>
+    <title>Roam Research Compatibility</title>
+    <link>https://wiki.likui.info/Area/EE/Roam-Research-compatibility</link>
+    <guid>https://wiki.likui.info/Area/EE/Roam-Research-compatibility</guid>
+    <description><![CDATA[ Roam Research is a note-taking tool that organizes your knowledge graph in a unique and interconnected way. ]]></description>
+    <pubDate>Thu, 21 Aug 2025 12:47:56 GMT</pubDate>
   </item><item>
-    <title>Configuration</title>
-    <link>https://wiki.likui.info/Archive/configuration</link>
-    <guid>https://wiki.likui.info/Archive/configuration</guid>
-    <description><![CDATA[ Quartz is meant to be extremely configurable, even if you don’t know any coding. ]]></description>
-    <pubDate>Thu, 21 Aug 2025 11:55:57 GMT</pubDate>
+    <title>SPA Routing</title>
+    <link>https://wiki.likui.info/Area/EE/SPA-Routing</link>
+    <guid>https://wiki.likui.info/Area/EE/SPA-Routing</guid>
+    <description><![CDATA[ Single-page-app style rendering. This prevents flashes of unstyled content and improves the smoothness of Quartz. ]]></description>
+    <pubDate>Thu, 21 Aug 2025 12:47:56 GMT</pubDate>
   </item><item>
-    <title>Hosting</title>
-    <link>https://wiki.likui.info/Archive/hosting</link>
-    <guid>https://wiki.likui.info/Archive/hosting</guid>
-    <description><![CDATA[ Quartz effectively turns your Markdown files and other resources into a bundle of HTML, JS, and CSS files (a website!). ]]></description>
-    <pubDate>Thu, 21 Aug 2025 11:55:57 GMT</pubDate>
+    <title>Backlinks</title>
+    <link>https://wiki.likui.info/Area/EE/backlinks</link>
+    <guid>https://wiki.likui.info/Area/EE/backlinks</guid>
+    <description><![CDATA[ A backlink for a note is a link from another note to that note. ]]></description>
+    <pubDate>Thu, 21 Aug 2025 12:47:56 GMT</pubDate>
   </item>
     </channel>
   </rss>
