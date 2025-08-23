@@ -109,7 +109,7 @@ Some plugins are included by default in the [`quartz.config.ts`](https://github.
 
 You can see a list of all plugins and their configuration options [[tags/Project|here]].
 
-If you'd like to make your own plugins, see the [[making plugins|making custom plugins]] guide.
+If you'd like to make your own plugins, see the [[应用领域|making custom plugins]] guide.
 
 ## Fonts
 

@@ -6,6 +6,48 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>标准与规范</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/%E6%A0%87%E5%87%86%E4%B8%8E%E8%A7%84%E8%8C%83</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/%E6%A0%87%E5%87%86%E4%B8%8E%E8%A7%84%E8%8C%83</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Sat, 23 Aug 2025 23:31:48 GMT</pubDate>
+  </item><item>
+    <title>应用领域</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/%E5%BA%94%E7%94%A8%E9%A2%86%E5%9F%9F</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/%E5%BA%94%E7%94%A8%E9%A2%86%E5%9F%9F</guid>
+    <description><![CDATA[  Warning This part of the documentation will assume you have working knowledge in TypeScript and will include code snippets that describe the interface of what Quartz plugins should look like. ]]></description>
+    <pubDate>Sat, 23 Aug 2025 23:30:25 GMT</pubDate>
+  </item><item>
+    <title>软件架构</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84</guid>
+    <description><![CDATA[ Quartz is a static site generator. ]]></description>
+    <pubDate>Sat, 23 Aug 2025 23:30:00 GMT</pubDate>
+  </item><item>
+    <title>方法论</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/%E6%96%B9%E6%B3%95%E8%AE%BA</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/%E6%96%B9%E6%B3%95%E8%AE%BA</guid>
+    <description><![CDATA[  Warning This guide assumes you have experience writing JavaScript and are familiar with TypeScript. ]]></description>
+    <pubDate>Sat, 23 Aug 2025 23:30:00 GMT</pubDate>
+  </item><item>
+    <title>核心理念</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/%E6%A0%B8%E5%BF%83%E7%90%86%E5%BF%B5</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/%E6%A0%B8%E5%BF%83%E7%90%86%E5%BF%B5</guid>
+    <description><![CDATA[ Paths are pretty complex to reason about because, especially for a static site generator, they can come from so many places. ]]></description>
+    <pubDate>Sat, 23 Aug 2025 23:27:57 GMT</pubDate>
+  </item><item>
+    <title>C语言</title>
+    <link>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80</link>
+    <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80</guid>
+    <description><![CDATA[  C语言学习资源 第一章 初识C语言 第二章 C语言概述 第一章 初识C语言 第二章 C语言概述. ]]></description>
+    <pubDate>Sat, 23 Aug 2025 23:22:06 GMT</pubDate>
+  </item><item>
+    <title>测试</title>
+    <link>https://wiki.likui.info/Area/EE/%E6%B5%8B%E8%AF%95</link>
+    <guid>https://wiki.likui.info/Area/EE/%E6%B5%8B%E8%AF%95</guid>
+    <description><![CDATA[ Quartz supports darkmode out of the box that respects the user’s theme preference. ]]></description>
+    <pubDate>Sat, 23 Aug 2025 23:22:06 GMT</pubDate>
+  </item><item>
     <title>电子基础</title>
     <link>https://wiki.likui.info/Area/EE/%E7%94%B5%E5%AD%90%E5%9F%BA%E7%A1%80</link>
     <guid>https://wiki.likui.info/Area/EE/%E7%94%B5%E5%AD%90%E5%9F%BA%E7%A1%80</guid>
@@ -23,48 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/%E8%A1%8C%E4%B8%9A%E6%8A%A5%E5%91%8A</guid>
     <description><![CDATA[ Quartz features a graph-view that can show both a local graph view and a global graph view. ]]></description>
     <pubDate>Sat, 23 Aug 2025 11:58:49 GMT</pubDate>
-  </item><item>
-    <title>Area</title>
-    <link>https://wiki.likui.info/Area/Area</link>
-    <guid>https://wiki.likui.info/Area/Area</guid>
-    <description><![CDATA[  EE EE C语言 KM 数字花园 . ]]></description>
-    <pubDate>Sat, 23 Aug 2025 11:53:57 GMT</pubDate>
-  </item><item>
-    <title>EE</title>
-    <link>https://wiki.likui.info/Area/EE/EE</link>
-    <guid>https://wiki.likui.info/Area/EE/EE</guid>
-    <description><![CDATA[  00-电子基础 《电路·邱关源》 01-C语言 《C程序设计语言(K&amp;R)清晰中文版》 《C_Primer_Plus_第五版》 02-数据结构与算法 03-计算机组成原理 04-处理器架构 05-操作系统 06-计算机网络 07-常用芯片手册 08-测试 09-程序员修养 10-数学 11-设计模式 12-面向对象 13-CPP . ]]></description>
-    <pubDate>Sat, 23 Aug 2025 11:53:57 GMT</pubDate>
-  </item><item>
-    <title>EE</title>
-    <link>https://wiki.likui.info/Area/EE/</link>
-    <guid>https://wiki.likui.info/Area/EE/</guid>
-    <description><![CDATA[ 学习EE kanban [1.电子基础] [第一章 概述] [2.C语言] [Design grammar]@{ ticket: &#039;knsv&#039; } [3.数据结构与算法] [Create parsing tests] [4.计算机组成原理] [define getData] [5.处理器架构] [ARM] [RISC-V] . ]]></description>
-    <pubDate>Sat, 23 Aug 2025 11:53:57 GMT</pubDate>
-  </item><item>
-    <title>ARM</title>
-    <link>https://wiki.likui.info/Area/EE/ARM</link>
-    <guid>https://wiki.likui.info/Area/EE/ARM</guid>
-    <description><![CDATA[ Internationalization allows users to translate text in the Quartz interface into various supported languages without needing to make extensive code changes. ]]></description>
-    <pubDate>Sat, 23 Aug 2025 11:03:52 GMT</pubDate>
-  </item><item>
-    <title>Linux</title>
-    <link>https://wiki.likui.info/Area/EE/Linux</link>
-    <guid>https://wiki.likui.info/Area/EE/Linux</guid>
-    <description><![CDATA[ Quartz uses Katex by default to typeset both inline and block math expressions at build time. ]]></description>
-    <pubDate>Sat, 23 Aug 2025 11:03:52 GMT</pubDate>
-  </item><item>
-    <title>MCU</title>
-    <link>https://wiki.likui.info/Area/EE/MCU</link>
-    <guid>https://wiki.likui.info/Area/EE/MCU</guid>
-    <description><![CDATA[ org-roam is a plain-text personal knowledge management system for emacs. ]]></description>
-    <pubDate>Sat, 23 Aug 2025 11:03:52 GMT</pubDate>
-  </item><item>
-    <title>STM32</title>
-    <link>https://wiki.likui.info/Area/EE/STM32</link>
-    <guid>https://wiki.likui.info/Area/EE/STM32</guid>
-    <description><![CDATA[ Syntax highlighting in Quartz is completely done at build-time. ]]></description>
-    <pubDate>Sat, 23 Aug 2025 11:03:52 GMT</pubDate>
   </item>
     </channel>
   </rss>
