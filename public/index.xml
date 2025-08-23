@@ -6,11 +6,29 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Area</title>
+    <link>https://wiki.likui.info/Area/Area</link>
+    <guid>https://wiki.likui.info/Area/Area</guid>
+    <description><![CDATA[  EE EE C语言 KM 数字花园 . ]]></description>
+    <pubDate>Sat, 23 Aug 2025 11:53:57 GMT</pubDate>
+  </item><item>
     <title>EE</title>
     <link>https://wiki.likui.info/Area/EE/EE</link>
     <guid>https://wiki.likui.info/Area/EE/EE</guid>
     <description><![CDATA[  00-电子基础 《电路·邱关源》 01-C语言 《C程序设计语言(K&amp;R)清晰中文版》 《C_Primer_Plus_第五版》 02-数据结构与算法 03-计算机组成原理 04-处理器架构 05-操作系统 06-计算机网络 07-常用芯片手册 08-测试 09-程序员修养 10-数学 11-设计模式 12-面向对象 13-CPP . ]]></description>
-    <pubDate>Sat, 23 Aug 2025 11:51:41 GMT</pubDate>
+    <pubDate>Sat, 23 Aug 2025 11:53:57 GMT</pubDate>
+  </item><item>
+    <title>EE</title>
+    <link>https://wiki.likui.info/Area/EE/</link>
+    <guid>https://wiki.likui.info/Area/EE/</guid>
+    <description><![CDATA[ 学习EE kanban [1.电子基础] [第一章 概述] [2.C语言] [Design grammar]@{ ticket: &#039;knsv&#039; } [3.数据结构与算法] [Create parsing tests] [4.计算机组成原理] [define getData] [5.处理器架构] [ARM] [RISC-V] . ]]></description>
+    <pubDate>Sat, 23 Aug 2025 11:53:57 GMT</pubDate>
+  </item><item>
+    <title>电子基础</title>
+    <link>https://wiki.likui.info/Area/EE/%E7%94%B5%E5%AD%90%E5%9F%BA%E7%A1%80</link>
+    <guid>https://wiki.likui.info/Area/EE/%E7%94%B5%E5%AD%90%E5%9F%BA%E7%A1%80</guid>
+    <description><![CDATA[ 学习EE kanban [第一章] [1.1 概述] [第二章] [Design grammar]@{ ticket: &#039;knsv&#039; } [第三章] [Create parsing tests] [第四章] [define getData] [第五章] [ARM] [RISC-V] [第六章] [ARM] [RISC-V] [第七章] [第八章] [第九章] . ]]></description>
+    <pubDate>Sat, 23 Aug 2025 11:53:57 GMT</pubDate>
   </item><item>
     <title>ARM</title>
     <link>https://wiki.likui.info/Area/EE/ARM</link>
@@ -46,24 +64,6 @@
     <link>https://wiki.likui.info/Area/EE/%E5%B7%A5%E5%85%B7</link>
     <guid>https://wiki.likui.info/Area/EE/%E5%B7%A5%E5%85%B7</guid>
     <description><![CDATA[ Full-text search in Quartz is powered by Flexsearch. ]]></description>
-    <pubDate>Sat, 23 Aug 2025 11:03:52 GMT</pubDate>
-  </item><item>
-    <title>操作系统</title>
-    <link>https://wiki.likui.info/Area/EE/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F</link>
-    <guid>https://wiki.likui.info/Area/EE/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F</guid>
-    <description><![CDATA[ Quartz uses rehype-citation to support parsing of a BibTex bibliography file. ]]></description>
-    <pubDate>Sat, 23 Aug 2025 11:03:52 GMT</pubDate>
-  </item><item>
-    <title>数字电路</title>
-    <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF</link>
-    <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF</guid>
-    <description><![CDATA[ Reader Mode is a feature that allows users to focus on the content by hiding the sidebars and other UI elements. ]]></description>
-    <pubDate>Sat, 23 Aug 2025 11:03:52 GMT</pubDate>
-  </item><item>
-    <title>数学</title>
-    <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6</link>
-    <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6</guid>
-    <description><![CDATA[ Quartz features an explorer that allows you to navigate all files and folders on your site. It supports nested folders and is highly customizable. ]]></description>
     <pubDate>Sat, 23 Aug 2025 11:03:52 GMT</pubDate>
   </item>
     </channel>
