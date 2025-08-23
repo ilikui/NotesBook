@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>电子基础</title>
+    <link>https://wiki.likui.info/Area/EE/%E7%94%B5%E5%AD%90%E5%9F%BA%E7%A1%80</link>
+    <guid>https://wiki.likui.info/Area/EE/%E7%94%B5%E5%AD%90%E5%9F%BA%E7%A1%80</guid>
+    <description><![CDATA[ 学习EE kanban [第一章] [1.1 概述] [1.2 半导体基础知识] [1.3 PN结及其特性] [1.4 二极管的分类与特性] [1.5 二极管基本电路及其分析法] [1.6 二极管的使用常识] [1.7 万用表测量二极管] [1.8 特殊二极管] [1.9 概并联型硅稳压管稳压电路] [第二章] [Design grammar] [第三章] [Create parsing tests] [第四章] [define getData] [第五章] [ARM] [RISC-V] [第六章] [ARM] [RISC-V] [第七章] [第八章] [第九章] . ]]></description>
+    <pubDate>Sat, 23 Aug 2025 11:58:49 GMT</pubDate>
+  </item><item>
+    <title>行业报告</title>
+    <link>https://wiki.likui.info/Area/EE/%E8%A1%8C%E4%B8%9A%E6%8A%A5%E5%91%8A</link>
+    <guid>https://wiki.likui.info/Area/EE/%E8%A1%8C%E4%B8%9A%E6%8A%A5%E5%91%8A</guid>
+    <description><![CDATA[ Quartz features a graph-view that can show both a local graph view and a global graph view. ]]></description>
+    <pubDate>Sat, 23 Aug 2025 11:58:49 GMT</pubDate>
+  </item><item>
     <title>Area</title>
     <link>https://wiki.likui.info/Area/Area</link>
     <guid>https://wiki.likui.info/Area/Area</guid>
@@ -22,12 +34,6 @@
     <link>https://wiki.likui.info/Area/EE/</link>
     <guid>https://wiki.likui.info/Area/EE/</guid>
     <description><![CDATA[ 学习EE kanban [1.电子基础] [第一章 概述] [2.C语言] [Design grammar]@{ ticket: &#039;knsv&#039; } [3.数据结构与算法] [Create parsing tests] [4.计算机组成原理] [define getData] [5.处理器架构] [ARM] [RISC-V] . ]]></description>
-    <pubDate>Sat, 23 Aug 2025 11:53:57 GMT</pubDate>
-  </item><item>
-    <title>电子基础</title>
-    <link>https://wiki.likui.info/Area/EE/%E7%94%B5%E5%AD%90%E5%9F%BA%E7%A1%80</link>
-    <guid>https://wiki.likui.info/Area/EE/%E7%94%B5%E5%AD%90%E5%9F%BA%E7%A1%80</guid>
-    <description><![CDATA[ 学习EE kanban [第一章] [1.1 概述] [第二章] [Design grammar]@{ ticket: &#039;knsv&#039; } [第三章] [Create parsing tests] [第四章] [define getData] [第五章] [ARM] [RISC-V] [第六章] [ARM] [RISC-V] [第七章] [第八章] [第九章] . ]]></description>
     <pubDate>Sat, 23 Aug 2025 11:53:57 GMT</pubDate>
   </item><item>
     <title>ARM</title>
@@ -58,12 +64,6 @@
     <link>https://wiki.likui.info/Area/EE/%E5%B7%A5%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91</link>
     <guid>https://wiki.likui.info/Area/EE/%E5%B7%A5%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91</guid>
     <description><![CDATA[ Quartz was originally designed as a tool to publish Obsidian vaults as websites. ]]></description>
-    <pubDate>Sat, 23 Aug 2025 11:03:52 GMT</pubDate>
-  </item><item>
-    <title>工具</title>
-    <link>https://wiki.likui.info/Area/EE/%E5%B7%A5%E5%85%B7</link>
-    <guid>https://wiki.likui.info/Area/EE/%E5%B7%A5%E5%85%B7</guid>
-    <description><![CDATA[ Full-text search in Quartz is powered by Flexsearch. ]]></description>
     <pubDate>Sat, 23 Aug 2025 11:03:52 GMT</pubDate>
   </item>
     </channel>
