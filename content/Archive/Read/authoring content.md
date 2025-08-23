@@ -10,7 +10,7 @@ Got everything setup? Let's [[build]] and preview your Quartz locally!
 
 ## Syntax
 
-As Quartz uses Markdown files as the main way of writing content, it fully supports Markdown syntax. By default, Quartz also ships with a few syntax extensions like [Github Flavored Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) (footnotes, strikethrough, tables, tasklists) and [Obsidian Flavored Markdown](https://help.obsidian.md/Editing+and+formatting/Obsidian+Flavored+Markdown) ([[callouts]], [[wikilinks]]).
+As Quartz uses Markdown files as the main way of writing content, it fully supports Markdown syntax. By default, Quartz also ships with a few syntax extensions like [Github Flavored Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) (footnotes, strikethrough, tables, tasklists) and [Obsidian Flavored Markdown](https://help.obsidian.md/Editing+and+formatting/Obsidian+Flavored+Markdown) ([[计算机组成原理]], [[处理器架构]]).
 
 Additionally, Quartz also allows you to specify additional metadata in your notes called **frontmatter**.
 
@@ -32,7 +32,7 @@ Some common frontmatter fields that are natively supported by Quartz:
 - `permalink`: A custom URL for the page that will remain constant even if the path to the file changes.
 - `aliases`: Other names for this note. This is a list of strings.
 - `tags`: Tags for this note.
-- `draft`: Whether to publish the page or not. This is one way to make [[private pages|pages private]] in Quartz.
+- `draft`: Whether to publish the page or not. This is one way to make [[英语|pages private]] in Quartz.
 - `date`: A string representing the day the note was published. Normally uses `YYYY-MM-DD` format.
 
 See [[Frontmatter]] for a complete list of frontmatter.

@@ -34,7 +34,7 @@ When running `npx quartz create`, you will be prompted as to how to initialize y
 
 - You will need to update your deploy scripts. See the [[hosting]] guide for more details.
 - Ensure that your default branch on GitHub is updated from `hugo` to `v4`.
-- [[folder and tag listings|Folder and tag listings]] have also changed.
+- [[CPP|Folder and tag listings]] have also changed.
   - Folder descriptions should go under `content/<folder-name>/index.md` where `<folder-name>` is the name of the folder.
   - Tag descriptions should go under `content/tags/<tag-name>.md` where `<tag-name>` is the name of the tag.
 - Some HTML layout may not be the same between Quartz 3 and Quartz 4. If you depended on a particular HTML hierarchy or class names, you may need to update your custom CSS to reflect these changes.
