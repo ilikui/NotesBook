@@ -1,15 +1,18 @@
 ---
 title: C语言
 tags:
-  - Area/Program
+  - Area
+  - Program
 ---
 
-A backlink for a note is a link from another note to that note. Links in the backlink pane also feature rich [[求职招聘]] if you have that feature enabled.
+> C语言学习资源
 
-## Customization
+---
 
-- Removing backlinks: delete all usages of `Component.Backlinks()` from `quartz.layout.ts`.
-- Hide when empty: hide `Backlinks` if given page doesn't contain any backlinks (default to `true`). To disable this, use `Component.Backlinks({ hideWhenEmpty: false })`.
-- Component: `quartz/components/Backlinks.tsx`
-- Style: `quartz/components/styles/backlinks.scss`
-- Script: `quartz/components/scripts/search.inline.ts`
+- [第一章 初识C语言](#第一章-初识c语言)
+- [第二章 C语言概述](#第二章-c语言概述)
+
+
+## 第一章 初识C语言
+
+## 第二章 C语言概述
