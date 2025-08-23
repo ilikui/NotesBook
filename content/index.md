@@ -1,5 +1,5 @@
 ---
-title: 欢迎来到数字花园
+title: 数字花园
 ---
 
 使用`PARA`搭建[[数字花园]]
@@ -21,13 +21,21 @@ title: 欢迎来到数字花园
 
 ## 🔧 PARA
 
- - [[Project]]
- - [[Area]]
 
-For a comprehensive list of features, visit the [features page](./features/). You can read more about the _why_ behind these features on the [[philosophy]] page and a technical overview on the [[architecture]] page.
+```mermaid
+kanban
+  [Project]
+    [AUTOSAR]
+    [汽车电子]
+  [Area]
+    [知识管理]
+  [Resource]
+    id8[Design grammar]@{ assigned: 'knsv' }
+  [Archive]
+    id5[define getData]
+    id2[Title of diagram is more than 100 chars when user duplicates diagram with 100 char]@{ ticket: MC-2036, priority: 'Very High'}
+    id3[Update DB function]@{ ticket: MC-2037, assigned: knsv, priority: 'High' }
+```
+### 🚧 关于
 
-### 🚧 Troubleshooting + Updating
 
-Having trouble with Quartz? Try searching for your issue using the search feature. If you haven't already, [[Archive/upgrading|upgrade]] to the newest version of Quartz to see if this fixes your issue.
-
-If you're still having trouble, feel free to [submit an issue](https://github.com/jackyzha0/quartz/issues) if you feel you found a bug or ask for help in our [Discord Community](https://discord.gg/cRFFHYye7t).
