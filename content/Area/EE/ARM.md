@@ -1,5 +1,5 @@
 ---
-title: Internationalization
+title: ARM
 ---
 
 Internationalization allows users to translate text in the Quartz interface into various supported languages without needing to make extensive code changes. This can be changed via the `locale` [[configuration]] field in `quartz.config.ts`.

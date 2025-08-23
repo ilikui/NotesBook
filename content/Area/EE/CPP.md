@@ -1,7 +1,8 @@
 ---
-title: Folder and Tag Listings
+title: CPP
 tags:
-  - feature/emitter
+  - AREA
+  - Program
 ---
 
 Quartz emits listing pages for any folders and tags you have.
