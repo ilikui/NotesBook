@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>AUTOSAR</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/AUTOSAR</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/AUTOSAR</guid>
+    <description><![CDATA[ AUTOSAR的知识体系 flowchart TD A[AUTOSAR 知识体系] A --&gt; B[核心理念与方法论] A --&gt; C[软件架构标准] A --&gt; D[方法论与流程] A --&gt; E[标准与规范文档] B --&gt; B1[分层架构] B --&gt; B2[虚拟功能总线&lt;br&gt;VFB] B --&gt; B3[软件组件&lt;br&gt;SWC] B --&gt; B4[接口与端口] subgraph C [软件架构标准] direction LR C1[经典平台&lt;br&gt;CP] C2[自适应平台&lt;br&gt;AP] en... ]]></description>
+    <pubDate>Sat, 23 Aug 2025 02:27:53 GMT</pubDate>
+  </item><item>
     <title>Authoring Content</title>
     <link>https://wiki.likui.info/Archive/Read/authoring-content</link>
     <guid>https://wiki.likui.info/Archive/Read/authoring-content</guid>
@@ -58,12 +64,6 @@
     <link>https://wiki.likui.info/Archive/Read/setting-up-your-GitHub-repository</link>
     <guid>https://wiki.likui.info/Archive/Read/setting-up-your-GitHub-repository</guid>
     <description><![CDATA[ First, make sure you have Quartz cloned and setup locally. Then, create a new repository on GitHub.com. ]]></description>
-    <pubDate>Sat, 23 Aug 2025 02:22:07 GMT</pubDate>
-  </item><item>
-    <title>Quartz Showcase</title>
-    <link>https://wiki.likui.info/Archive/Read/showcase</link>
-    <guid>https://wiki.likui.info/Archive/Read/showcase</guid>
-    <description><![CDATA[ Want to see what Quartz can do? Here are some cool community gardens: Quartz Documentation (this site!) Jacky Zhao’s Garden Aaron Pham’s Garden The Pond Eilleen’s Everything Notebook Morrowind Modding Wiki Stanford CME 302 Numerical Linear Algebra Socratica Toolbox A Pattern Language - Christopher A... ]]></description>
     <pubDate>Sat, 23 Aug 2025 02:22:07 GMT</pubDate>
   </item>
     </channel>
