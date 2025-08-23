@@ -6,16 +6,34 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Area</title>
-    <link>https://wiki.likui.info/Area/Area</link>
-    <guid>https://wiki.likui.info/Area/Area</guid>
-    <description><![CDATA[  电子基础 . ]]></description>
-    <pubDate>Sat, 23 Aug 2025 01:38:19 GMT</pubDate>
+    <title>AI</title>
+    <link>https://wiki.likui.info/Area/AI/</link>
+    <guid>https://wiki.likui.info/Area/AI/</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Sat, 23 Aug 2025 02:05:49 GMT</pubDate>
+  </item><item>
+    <title>AUTOSAR</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/AUTOSAR</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/AUTOSAR</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Sat, 23 Aug 2025 02:03:40 GMT</pubDate>
+  </item><item>
+    <title>数字花园</title>
+    <link>https://wiki.likui.info/Area/KM/%E6%95%B0%E5%AD%97%E8%8A%B1%E5%9B%AD</link>
+    <guid>https://wiki.likui.info/Area/KM/%E6%95%B0%E5%AD%97%E8%8A%B1%E5%9B%AD</guid>
+    <description><![CDATA[ 数字花园 Note 数字花园原文是“Digital Garden”。 这是最近在国外兴起的一个概念，比较小众，不过还蛮有意思的。与其说是方法，不如说是一种理念。 简单来说，数字花园是通过借助网络数字工具，对想法、笔记和思考等一切你感兴趣的信息或进行收集、整理和创作，文字之间用标签或链接创建连接，形成一座独具个人浓厚色彩的信息与知识型花园。 这个花园可以是开放的，也可以作为仅你可见的私人庭院。但不管选择什么方式，在搭建花园的过程中，不可避免地至少要经历这几个步骤， 即： 播种： 选取高质量的“种子”为你的花园播种。这些可以是网络上看到的有价值的信息，也可以是自己的思考、想法和念头。 照料： 种子... ]]></description>
+    <pubDate>Sat, 23 Aug 2025 01:49:46 GMT</pubDate>
   </item><item>
     <title>数字花园</title>
     <link>https://wiki.likui.info/</link>
     <guid>https://wiki.likui.info/</guid>
     <description><![CDATA[ 使用PARA搭建数字花园 🪴 数字花园 层级英文全称中文含义描述示例PProject项目有明确目标、截止日期的一系列任务。 这是你当前正在积极推动的工作。- 完成季度财报 - 撰写一篇博客文章 - 策划一场婚礼AArea领域需要长期维持并关注标准的重要活动领域。 它们没有终点，但需要持续投入。- 健康管理 - 个人财务 - 学习法语RResource资源来可能感兴趣的主题或素材。 这是你的知识库或灵感池，目前没有明确项目与之关联。- 关于区块链的阅读清单 - 网页设计灵感图库AArchive存档来自其他三个类别的非活动项目。 已完成的项目、不再负责的领域、不再感兴趣的资源。- 已完成的项目文... ]]></description>
+    <pubDate>Sat, 23 Aug 2025 01:49:46 GMT</pubDate>
+  </item><item>
+    <title>Area</title>
+    <link>https://wiki.likui.info/Area/Area</link>
+    <guid>https://wiki.likui.info/Area/Area</guid>
+    <description><![CDATA[  电子基础 . ]]></description>
     <pubDate>Sat, 23 Aug 2025 01:38:19 GMT</pubDate>
   </item><item>
     <title>Archive</title>
@@ -27,7 +45,7 @@
     <title>Project</title>
     <link>https://wiki.likui.info/Project/Project</link>
     <guid>https://wiki.likui.info/Project/Project</guid>
-    <description><![CDATA[  ]]></description>
+    <description><![CDATA[  AUTOSAR . ]]></description>
     <pubDate>Sat, 23 Aug 2025 01:23:04 GMT</pubDate>
   </item><item>
     <title>Resource</title>
@@ -47,24 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/</guid>
     <description><![CDATA[ 学习电子基础 kanban Todo [Create Documentation] docs[Create Blog about the new diagram] [In progress] id6[Create renderer so that it works in all cases. ]]></description>
     <pubDate>Thu, 21 Aug 2025 12:52:28 GMT</pubDate>
-  </item><item>
-    <title>Citations</title>
-    <link>https://wiki.likui.info/Area/EE/Citations</link>
-    <guid>https://wiki.likui.info/Area/EE/Citations</guid>
-    <description><![CDATA[ Quartz uses rehype-citation to support parsing of a BibTex bibliography file. ]]></description>
-    <pubDate>Thu, 21 Aug 2025 12:47:56 GMT</pubDate>
-  </item><item>
-    <title>Docker Support</title>
-    <link>https://wiki.likui.info/Area/EE/Docker-Support</link>
-    <guid>https://wiki.likui.info/Area/EE/Docker-Support</guid>
-    <description><![CDATA[ Quartz comes shipped with a Docker image that will allow you to preview your Quartz locally without installing Node. ]]></description>
-    <pubDate>Thu, 21 Aug 2025 12:47:56 GMT</pubDate>
-  </item><item>
-    <title>LaTeX</title>
-    <link>https://wiki.likui.info/Area/EE/Latex</link>
-    <guid>https://wiki.likui.info/Area/EE/Latex</guid>
-    <description><![CDATA[ Quartz uses Katex by default to typeset both inline and block math expressions at build time. ]]></description>
-    <pubDate>Thu, 21 Aug 2025 12:47:56 GMT</pubDate>
   </item>
     </channel>
   </rss>
