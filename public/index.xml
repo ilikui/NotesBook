@@ -6,65 +6,65 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>标准与规范</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/%E6%A0%87%E5%87%86%E4%B8%8E%E8%A7%84%E8%8C%83</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/%E6%A0%87%E5%87%86%E4%B8%8E%E8%A7%84%E8%8C%83</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Sat, 23 Aug 2025 23:31:48 GMT</pubDate>
+    <title>Configuration</title>
+    <link>https://wiki.likui.info/Archive/Read/configuration</link>
+    <guid>https://wiki.likui.info/Archive/Read/configuration</guid>
+    <description><![CDATA[ Quartz is meant to be extremely configurable, even if you don’t know any coding. ]]></description>
+    <pubDate>Sat, 23 Aug 2025 23:32:52 GMT</pubDate>
+  </item><item>
+    <title>Layout</title>
+    <link>https://wiki.likui.info/Archive/Read/layout</link>
+    <guid>https://wiki.likui.info/Archive/Read/layout</guid>
+    <description><![CDATA[ Certain emitters may also output HTML files. To enable easy customization, these emitters allow you to fully rearrange the layout of the page. ]]></description>
+    <pubDate>Sat, 23 Aug 2025 23:32:52 GMT</pubDate>
+  </item><item>
+    <title>Migrating from Quartz 3</title>
+    <link>https://wiki.likui.info/Archive/Read/migrating-from-Quartz-3</link>
+    <guid>https://wiki.likui.info/Archive/Read/migrating-from-Quartz-3</guid>
+    <description><![CDATA[ As you already have Quartz locally, you don’t need to fork or clone it again. ]]></description>
+    <pubDate>Sat, 23 Aug 2025 23:32:52 GMT</pubDate>
+  </item><item>
+    <title>求职招聘</title>
+    <link>https://wiki.likui.info/Area/EE/%E6%B1%82%E8%81%8C%E6%8B%9B%E8%81%98</link>
+    <guid>https://wiki.likui.info/Area/EE/%E6%B1%82%E8%81%8C%E6%8B%9B%E8%81%98</guid>
+    <description><![CDATA[ Like Wikipedia, when you hover over a link in Quartz, there is a popup of a page preview that you can scroll to see the entire content. ]]></description>
+    <pubDate>Sat, 23 Aug 2025 23:32:52 GMT</pubDate>
+  </item><item>
+    <title>英语</title>
+    <link>https://wiki.likui.info/Area/EE/%E8%8B%B1%E8%AF%AD</link>
+    <guid>https://wiki.likui.info/Area/EE/%E8%8B%B1%E8%AF%AD</guid>
+    <description><![CDATA[ There may be some notes you want to avoid publishing as a website. ]]></description>
+    <pubDate>Sat, 23 Aug 2025 23:32:52 GMT</pubDate>
+  </item><item>
+    <title>AUTOSAR</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/AUTOSAR</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/AUTOSAR</guid>
+    <description><![CDATA[ AUTOSAR的知识体系 flowchart TD A[AUTOSAR 知识体系] A --&gt; B[核心理念与方法论] A --&gt; C[软件架构标准] A --&gt; D[方法论与流程] A --&gt; E[标准与规范文档] B --&gt; B1[分层架构] B --&gt; B2[虚拟功能总线&lt;br&gt;VFB] B --&gt; B3[软件组件&lt;br&gt;SWC] B --&gt; B4[接口与端口] subgraph C [软件架构标准] direction LR C1[经典平台&lt;br&gt;CP] C2[自适应平台&lt;br&gt;AP] en... ]]></description>
+    <pubDate>Sat, 23 Aug 2025 23:32:52 GMT</pubDate>
   </item><item>
     <title>应用领域</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/%E5%BA%94%E7%94%A8%E9%A2%86%E5%9F%9F</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/%E5%BA%94%E7%94%A8%E9%A2%86%E5%9F%9F</guid>
     <description><![CDATA[  Warning This part of the documentation will assume you have working knowledge in TypeScript and will include code snippets that describe the interface of what Quartz plugins should look like. ]]></description>
-    <pubDate>Sat, 23 Aug 2025 23:30:25 GMT</pubDate>
-  </item><item>
-    <title>软件架构</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84</guid>
-    <description><![CDATA[ Quartz is a static site generator. ]]></description>
-    <pubDate>Sat, 23 Aug 2025 23:30:00 GMT</pubDate>
+    <pubDate>Sat, 23 Aug 2025 23:32:52 GMT</pubDate>
   </item><item>
     <title>方法论</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/%E6%96%B9%E6%B3%95%E8%AE%BA</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/%E6%96%B9%E6%B3%95%E8%AE%BA</guid>
     <description><![CDATA[  Warning This guide assumes you have experience writing JavaScript and are familiar with TypeScript. ]]></description>
-    <pubDate>Sat, 23 Aug 2025 23:30:00 GMT</pubDate>
+    <pubDate>Sat, 23 Aug 2025 23:32:52 GMT</pubDate>
+  </item><item>
+    <title>标准与规范</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/%E6%A0%87%E5%87%86%E4%B8%8E%E8%A7%84%E8%8C%83</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/%E6%A0%87%E5%87%86%E4%B8%8E%E8%A7%84%E8%8C%83</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Sat, 23 Aug 2025 23:32:52 GMT</pubDate>
   </item><item>
     <title>核心理念</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/%E6%A0%B8%E5%BF%83%E7%90%86%E5%BF%B5</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/%E6%A0%B8%E5%BF%83%E7%90%86%E5%BF%B5</guid>
     <description><![CDATA[ Paths are pretty complex to reason about because, especially for a static site generator, they can come from so many places. ]]></description>
-    <pubDate>Sat, 23 Aug 2025 23:27:57 GMT</pubDate>
-  </item><item>
-    <title>C语言</title>
-    <link>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80</link>
-    <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80</guid>
-    <description><![CDATA[  C语言学习资源 第一章 初识C语言 第二章 C语言概述 第一章 初识C语言 第二章 C语言概述. ]]></description>
-    <pubDate>Sat, 23 Aug 2025 23:22:06 GMT</pubDate>
-  </item><item>
-    <title>测试</title>
-    <link>https://wiki.likui.info/Area/EE/%E6%B5%8B%E8%AF%95</link>
-    <guid>https://wiki.likui.info/Area/EE/%E6%B5%8B%E8%AF%95</guid>
-    <description><![CDATA[ Quartz supports darkmode out of the box that respects the user’s theme preference. ]]></description>
-    <pubDate>Sat, 23 Aug 2025 23:22:06 GMT</pubDate>
-  </item><item>
-    <title>电子基础</title>
-    <link>https://wiki.likui.info/Area/EE/%E7%94%B5%E5%AD%90%E5%9F%BA%E7%A1%80</link>
-    <guid>https://wiki.likui.info/Area/EE/%E7%94%B5%E5%AD%90%E5%9F%BA%E7%A1%80</guid>
-    <description><![CDATA[  NOTE 链接地址：电子基础 学习EE kanban [第一章] [1.1 概述] [1.2 半导体基础知识] [1.3 PN结及其特性] [1.4 二极管的分类与特性] [1.5 二极管基本电路及其分析法] [1.6 二极管的使用常识] [1.7 万用表测量二极管] [1.8 特殊二极管] [1.9 概并联型硅稳压管稳压电路] [第二章] [Design grammar] [第三章] [Create parsing tests] [第四章] [define getData] [第五章] [ARM] [RISC-V] [第六章] [ARM] [RISC-V] [第七章] [第八章] [第九章... ]]></description>
-    <pubDate>Sat, 23 Aug 2025 12:15:34 GMT</pubDate>
-  </item><item>
-    <title>计算机组成原理</title>
-    <link>https://wiki.likui.info/Area/EE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86</link>
-    <guid>https://wiki.likui.info/Area/EE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86</guid>
-    <description><![CDATA[ Quartz supports the same Admonition-callout syntax as Obsidian. ]]></description>
-    <pubDate>Sat, 23 Aug 2025 12:15:34 GMT</pubDate>
-  </item><item>
-    <title>行业报告</title>
-    <link>https://wiki.likui.info/Area/EE/%E8%A1%8C%E4%B8%9A%E6%8A%A5%E5%91%8A</link>
-    <guid>https://wiki.likui.info/Area/EE/%E8%A1%8C%E4%B8%9A%E6%8A%A5%E5%91%8A</guid>
-    <description><![CDATA[ Quartz features a graph-view that can show both a local graph view and a global graph view. ]]></description>
-    <pubDate>Sat, 23 Aug 2025 11:58:49 GMT</pubDate>
+    <pubDate>Sat, 23 Aug 2025 23:32:52 GMT</pubDate>
   </item>
     </channel>
   </rss>
