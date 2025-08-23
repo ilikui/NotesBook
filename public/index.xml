@@ -6,17 +6,29 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Static</title>
+    <link>https://wiki.likui.info/Resource/GitHub/Static</link>
+    <guid>https://wiki.likui.info/Resource/GitHub/Static</guid>
+    <description><![CDATA[ This plugin emits all static resources needed by Quartz. ]]></description>
+    <pubDate>Sat, 23 Aug 2025 02:13:43 GMT</pubDate>
+  </item><item>
     <title>AI</title>
     <link>https://wiki.likui.info/Area/AI/</link>
     <guid>https://wiki.likui.info/Area/AI/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sat, 23 Aug 2025 02:05:49 GMT</pubDate>
+    <pubDate>Sat, 23 Aug 2025 02:07:29 GMT</pubDate>
   </item><item>
     <title>AUTOSAR</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/AUTOSAR</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/AUTOSAR</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sat, 23 Aug 2025 02:03:40 GMT</pubDate>
+    <pubDate>Sat, 23 Aug 2025 02:07:29 GMT</pubDate>
+  </item><item>
+    <title>Project</title>
+    <link>https://wiki.likui.info/Project/Project</link>
+    <guid>https://wiki.likui.info/Project/Project</guid>
+    <description><![CDATA[  AUTOSAR . ]]></description>
+    <pubDate>Sat, 23 Aug 2025 02:07:29 GMT</pubDate>
   </item><item>
     <title>数字花园</title>
     <link>https://wiki.likui.info/Area/KM/%E6%95%B0%E5%AD%97%E8%8A%B1%E5%9B%AD</link>
@@ -42,29 +54,17 @@
     <description><![CDATA[  ]]></description>
     <pubDate>Sat, 23 Aug 2025 01:23:04 GMT</pubDate>
   </item><item>
-    <title>Project</title>
-    <link>https://wiki.likui.info/Project/Project</link>
-    <guid>https://wiki.likui.info/Project/Project</guid>
-    <description><![CDATA[  AUTOSAR . ]]></description>
-    <pubDate>Sat, 23 Aug 2025 01:23:04 GMT</pubDate>
-  </item><item>
     <title>Resource</title>
-    <link>https://wiki.likui.info/Resource/Resource</link>
-    <guid>https://wiki.likui.info/Resource/Resource</guid>
+    <link>https://wiki.likui.info/Resource/GitHub/Resource</link>
+    <guid>https://wiki.likui.info/Resource/GitHub/Resource</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sat, 23 Aug 2025 01:23:04 GMT</pubDate>
+    <pubDate>Sat, 23 Aug 2025 01:21:04 GMT</pubDate>
   </item><item>
-    <title>电子基础</title>
-    <link>https://wiki.likui.info/Area/EE/%E7%94%B5%E5%AD%90%E5%9F%BA%E7%A1%80</link>
-    <guid>https://wiki.likui.info/Area/EE/%E7%94%B5%E5%AD%90%E5%9F%BA%E7%A1%80</guid>
-    <description><![CDATA[  00-电子基础 《电路·邱关源》 01-C语言 《C程序设计语言(K&amp;R)清晰中文版》 《C_Primer_Plus_第五版》 . ]]></description>
-    <pubDate>Thu, 21 Aug 2025 12:57:52 GMT</pubDate>
-  </item><item>
-    <title>EE</title>
-    <link>https://wiki.likui.info/Area/EE/</link>
-    <guid>https://wiki.likui.info/Area/EE/</guid>
-    <description><![CDATA[ 学习电子基础 kanban Todo [Create Documentation] docs[Create Blog about the new diagram] [In progress] id6[Create renderer so that it works in all cases. ]]></description>
-    <pubDate>Thu, 21 Aug 2025 12:52:28 GMT</pubDate>
+    <title>TagPage</title>
+    <link>https://wiki.likui.info/Resource/GitHub/TagPage</link>
+    <guid>https://wiki.likui.info/Resource/GitHub/TagPage</guid>
+    <description><![CDATA[ This plugin emits dedicated pages for each tag used in the content. See folder and tag listings for more information. ]]></description>
+    <pubDate>Sat, 23 Aug 2025 00:34:32 GMT</pubDate>
   </item>
     </channel>
   </rss>
