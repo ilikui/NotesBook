@@ -4,7 +4,7 @@ title: 欢迎来到数字花园
 
 使用`PARA`搭建[[数字花园]]
 
-## 🪴 Get Started
+## 🪴 数字花园
 
 Quartz requires **at least [Node](https://nodejs.org/) v22** and `npm` v10.9.2 to function correctly. Ensure you have this installed on your machine before continuing.
 
@@ -29,7 +29,7 @@ This will guide you through initializing your Quartz with content. Once you've d
 If you prefer instructions in a video format you can try following Nicole van der Hoeven's
 [video guide on how to set up Quartz!](https://www.youtube.com/watch?v=6s6DT1yN4dw&t=227s)
 
-## 🔧 Features
+## 🔧 PARA
 
 - [[Obsidian compatibility]], [[full-text search]], [[graph view]], [[wikilinks|wikilinks, transclusions]], [[backlinks]], [[features/Latex|Latex]], [[syntax highlighting]], [[popover previews]], [[Docker Support]], [[i18n|internationalization]], [[comments]] and [many more](./features/) right out of the box
 - Hot-reload on configuration edits and incremental rebuilds for content edits
