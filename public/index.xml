@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>EE</title>
+    <link>https://wiki.likui.info/Area/EE/EE</link>
+    <guid>https://wiki.likui.info/Area/EE/EE</guid>
+    <description><![CDATA[  Hint 来源：github.com/Poo1o/Embed-Books 00-电子基础 《电路·邱关源》 01-C语言 《C程序设计语言(K&amp;R)清晰中文版》 《C_Primer_Plus_第五版》 02-数据结构与算法 03-计算机组成原理 04-处理器架构 05-操作系统 06-计算机网络 07-常用芯片手册 08-测试 09-程序员修养 10-数学 11-设计模式 12-面向对象 13-CPP 14-工具 15-行业报告 . ]]></description>
+    <pubDate>Sun, 24 Aug 2025 03:15:42 GMT</pubDate>
+  </item><item>
+    <title>EE</title>
+    <link>https://wiki.likui.info/Area/EE/</link>
+    <guid>https://wiki.likui.info/Area/EE/</guid>
+    <description><![CDATA[ 学习EE kanban [1.电子基础] [《电路_邱关源》] [《模拟电子技术基础_童诗白》] [《数字电子技术基础_阎石》] [《图解数字电路》] [2.C语言] [《C程序设计语言K&amp;R清晰中文版》] [《C_Primer_Plus_第五版》] [《C和指针（第二版）》] [《C陷阱与缺陷》] [《经典C程序100例》] [《C专家编程》] [《彻底搞定C指针》] [《短码之美：编程达人的心得技法》] [3.数据结构与算法] [《编程珠玑》] [《经典算法大全_C语言描述》] [《数据结构C语言版_严蔚敏_吴伟民》] [《数据结构与算法分析：C语言描述_原书第2版_高清版》] [... ]]></description>
+    <pubDate>Sun, 24 Aug 2025 03:15:42 GMT</pubDate>
+  </item><item>
     <title>CS</title>
     <link>https://wiki.likui.info/Area/CS/CS</link>
     <guid>https://wiki.likui.info/Area/CS/CS</guid>
@@ -53,18 +65,6 @@
     <guid>https://wiki.likui.info/tags/Archive</guid>
     <description><![CDATA[  ]]></description>
     <pubDate>Sun, 24 Aug 2025 00:01:02 GMT</pubDate>
-  </item><item>
-    <title>Resource</title>
-    <link>https://wiki.likui.info/tags/Resource</link>
-    <guid>https://wiki.likui.info/tags/Resource</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 24 Aug 2025 00:01:02 GMT</pubDate>
-  </item><item>
-    <title>Area</title>
-    <link>https://wiki.likui.info/Area/Area</link>
-    <guid>https://wiki.likui.info/Area/Area</guid>
-    <description><![CDATA[  EE EE C语言 操作系统 KM 数字花园 . ]]></description>
-    <pubDate>Sat, 23 Aug 2025 23:41:26 GMT</pubDate>
   </item>
     </channel>
   </rss>
