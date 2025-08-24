@@ -36,6 +36,6 @@ kanban
     id2[Title of diagram is more than 100 chars when user duplicates diagram with 100 char]@{ ticket: MC-2036, priority: 'Very High'}
     id3[Update DB function]@{ ticket: MC-2037, assigned: knsv, priority: 'High' }
 ```
-## 🚧 关于
+## 🧠 关于
 
 
