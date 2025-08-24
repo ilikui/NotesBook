@@ -6,11 +6,17 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>CS</title>
+    <link>https://wiki.likui.info/Area/CS/CS</link>
+    <guid>https://wiki.likui.info/Area/CS/CS</guid>
+    <description><![CDATA[  flowchart TD A[CS自学路径] --&gt; B[阶段一：编程与导论] A --&gt; C[阶段二：核心基础] A --&gt; D[阶段三：系统基础] A --&gt; E[阶段四：进阶领域] A --&gt; F[实践与社区] B --&gt; B1[编程入门&lt;br&gt;（Python/Java）] B --&gt; B2[计算机导论&lt;br&gt;（CS50）] B2 --&gt; C C --&gt; C1[数据结构与算法] C --&gt; C2[计算机组成&lt;br&gt;（CSAPP）] C --&gt; C3[操作系统&lt;br&gt;（OST... ]]></description>
+    <pubDate>Sun, 24 Aug 2025 02:58:18 GMT</pubDate>
+  </item><item>
     <title>必学工具</title>
     <link>https://wiki.likui.info/Area/CS/%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7</link>
     <guid>https://wiki.likui.info/Area/CS/%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 24 Aug 2025 02:55:47 GMT</pubDate>
+    <pubDate>Sun, 24 Aug 2025 02:58:18 GMT</pubDate>
   </item><item>
     <title>数字花园</title>
     <link>https://wiki.likui.info/</link>
@@ -41,12 +47,6 @@
     <guid>https://wiki.likui.info/Resource/Education/%E4%B8%80%E5%B9%B4%E7%BA%A7%E8%AF%AD%E6%96%87</guid>
     <description><![CDATA[ mindmap root(小学语文) 汉语拼音 声母 23个 b p m f d t n l g k h j q x zh ch sh r z c s y w 例子 b和a拼读为ba 练习 拼读b和a m和a 韵母 单韵母 6个 a o e i u ü 复韵母 ai ei ui ao ou iu 鼻韵母 an en in un ün ang eng ing ong 例子 m和a拼读为ma 练习 区分a和an 整体认读音节 16个 zhi chi shi ri zi ci si yi wu yu ye yue yuan yin yun ying 例子 yi衣 wu五 练习 认读整体认读音节 声调... ]]></description>
     <pubDate>Sun, 24 Aug 2025 02:04:57 GMT</pubDate>
-  </item><item>
-    <title>CS</title>
-    <link>https://wiki.likui.info/Area/CS/CS</link>
-    <guid>https://wiki.likui.info/Area/CS/CS</guid>
-    <description><![CDATA[  flowchart TD A[CS自学路径] --&gt; B[阶段一：编程与导论] A --&gt; C[阶段二：核心基础] A --&gt; D[阶段三：系统基础] A --&gt; E[阶段四：进阶领域] A --&gt; F[实践与社区] B --&gt; B1[编程入门&lt;br&gt;（Python/Java）] B --&gt; B2[计算机导论&lt;br&gt;（CS50）] B2 --&gt; C C --&gt; C1[数据结构与算法] C --&gt; C2[计算机组成&lt;br&gt;（CSAPP）] C --&gt; C3[操作系统&lt;br&gt;（OST... ]]></description>
-    <pubDate>Sun, 24 Aug 2025 00:01:02 GMT</pubDate>
   </item><item>
     <title>Archive</title>
     <link>https://wiki.likui.info/tags/Archive</link>
