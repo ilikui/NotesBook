@@ -46,7 +46,12 @@ kanban
 
 ---
 
-| 链接                             | 说明     | 标签   |
-| -------------------------------- | -------- | ------ |
-| [note](https://note.likui.info/) | 笔记软件 | `note` |
-| [KM](https://km.yueya.info/)     | 知识管理 | `KM`   |
+| 链接                             | 说明     | 标签        |
+| -------------------------------- | -------- | ----------- |
+| [note](https://note.likui.info/) | 笔记软件 | `note`      |
+| [KM](https://km.yueya.info/)     | 知识管理 | `KM`        |
+| [R](https://r.likui.info/)       | 参考手册 | `Reference` |
+| [NAV](https://hao.likui.info/)       | 导航 | `nav` |
+
+
+
