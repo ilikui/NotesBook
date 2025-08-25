@@ -1,11 +1,13 @@
 name: Deploy Quartz site to GitHub Pages
  
 on:
-  push:
-    branches:
-      - gh-pages
-  workflow_dispatch: on demand
- 
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to deploy'
+        required: true
+        default: 'gh-pages'
+
 permissions:
   pages: write
   id-token: write
