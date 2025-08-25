@@ -5,7 +5,6 @@ on:
   push:
     branches: [ main, master ]
 
-# 简化权限设置
 permissions:
   contents: read
   pages: write
@@ -32,6 +31,9 @@ jobs:
           
       - name: Install Dependencies
         run: npm ci
+        
+      - name: Fix permissions (可选)
+        run: chmod +x node_modules/.bin/*
         
       - name: Build Quartz
         run: npx quartz build
