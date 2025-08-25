@@ -32,11 +32,8 @@ jobs:
       - name: Install Dependencies
         run: npm ci
         
-      - name: Fix permissions (可选)
-        run: chmod +x node_modules/.bin/*
-        
       - name: Build Quartz
-        run: npx quartz build
+        run: npm run build  # 使用 npm run 而不是 npx
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
