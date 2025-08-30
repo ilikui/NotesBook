@@ -18,10 +18,10 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 22
-          cache: 'npm'  # 添加 npm 缓存
+          node-version: '22.x' # 指定使用 Node.js 22.x
+          cache: 'npm'
 
-      - name: Verify Node versions
+      - name: Verify Node and npm versions
         run: |
           echo "Node.js version: $(node -v)"
           echo "npm version: $(npm -v)"
@@ -41,22 +41,8 @@ jobs:
       - name: Fix execution permissions
         run: |
           echo "修复执行权限..."
-          # 检查并修复 node_modules/.bin 权限
-          if [ -d "node_modules/.bin" ]; then
-            echo "修复 node_modules/.bin 权限"
-            chmod -R +x node_modules/.bin/
-            ls -la node_modules/.bin/ | head -10
-          fi
-          
-          # 查找并修复所有 quartz 相关文件的权限
-          echo "查找 quartz 相关文件..."
-          find . -name "*quartz*" -type f | while read file; do
-            echo "修复权限: $file"
-            chmod +x "$file"
-          done
-          
-          # 特别查找名为 quartz 的文件
-          find . -name "quartz" -type f -exec chmod +x {} \; -exec ls -la {} \;
+          chmod -R +x node_modules/.bin/
+          find . -name "quartz" -type f -exec chmod +x {} \; || true
           echo "权限修复完成"
 
       - name: Format code with Prettier
@@ -70,16 +56,12 @@ jobs:
           # 尝试多种方式运行 quartz
           echo "尝试运行 quartz 构建..."
           if [ -f "node_modules/.bin/quartz" ]; then
+            echo "使用本地安装的 quartz..."
             ./node_modules/.bin/quartz build -d content -v
           else
+            echo "使用 npx 运行 quartz..."
             npx quartz build -d content -v
           fi
-
-      - name: Verify build output
-        run: |
-          echo "构建输出内容:"
-          ls -la public/ || echo "public 目录不存在"
-          find public/ -type f | head -10 || true
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
