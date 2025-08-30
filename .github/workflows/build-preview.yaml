@@ -38,6 +38,9 @@ jobs:
 
       - run: npm ci
 
+      - name: Dependency
+        run: npx i
+
       - name: Fix execution permissions
         run: |
           echo "修复执行权限..."
