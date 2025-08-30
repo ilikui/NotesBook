@@ -18,35 +18,22 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '22.x' # 指定使用 Node.js 22.x
-          cache: 'npm'
-
-      - name: Verify Node and npm versions
-        run: |
-          echo "Node.js version: $(node -v)"
-          echo "npm version: $(npm -v)"
+          node-version: 22
 
       - name: Cache dependencies
         uses: actions/cache@v4
         with:
-          path: |
-            ~/.npm
-            node_modules
+          path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
 
       - run: npm ci
 
-      - name: Dependency
-        run: npm install
-
-      - name: Fix execution permissions
+      - name: Check package.json scripts
         run: |
-          echo "修复执行权限..."
-          chmod -R +x node_modules/.bin/
-          find . -name "quartz" -type f -exec chmod +x {} \; || true
-          echo "权限修复完成"
+          echo "package.json 中的脚本:"
+          node -e "console.log(JSON.stringify(require('./package.json').scripts, null, 2))"
 
       - name: Format code with Prettier
         run: npx prettier --write .
@@ -54,17 +41,33 @@ jobs:
       - name: Check types and style
         run: npm run check
 
-      - name: Build Quartz
+      - name: Build Quartz (尝试多种方法)
         run: |
-          # 尝试多种方式运行 quartz
-          echo "尝试运行 quartz 构建..."
-          if [ -f "node_modules/.bin/quartz" ]; then
-            echo "使用本地安装的 quartz..."
-            ./node_modules/.bin/quartz build -d content -v
-          else
-            echo "使用 npx 运行 quartz..."
-            npx quartz build -d content -v
-          fi
+          # 方法 1: 使用 package.json 中的构建脚本
+          echo "尝试方法 1: 使用 npm run build..."
+          npm run build && exit 0
+          
+          # 方法 2: 编译 TypeScript 然后运行
+          echo "方法 1 失败，尝试方法 2: 编译 TypeScript..."
+          npx tsc
+          node quartz/build.js -d content -v && exit 0
+          
+          # 方法 3: 尝试直接运行 bootstrap 文件
+          echo "方法 2 失败，尝试方法 3: 运行 bootstrap 文件..."
+          node quartz/bootstrap-cli.mjs build -d content -v && exit 0
+          
+          # 方法 4: 尝试使用 npx 和本地 Quartz
+          echo "方法 3 失败，尝试方法 4: 使用 npx 和本地 Quartz..."
+          npx --prefix . quartz build -d content -v && exit 0
+          
+          echo "所有构建方法都失败了!"
+          exit 1
+
+      - name: Verify build output
+        run: |
+          echo "构建输出内容:"
+          ls -la public/ || echo "public 目录不存在"
+          find public/ -type f | head -10 || true
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
