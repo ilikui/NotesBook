@@ -51,8 +51,8 @@ jobs:
           npx tsc
           node quartz/build.js -d content -v && echo "方法 2 成功" && exit 0
           
-          # echo "方法 2 失败，尝试方法 3: 运行 bootstrap 文件..."
-          # node quartz/bootstrap-cli.mjs build -d content -v && echo "方法 3 成功" && exit 0
+          echo "方法 2 失败，尝试方法 3: 运行 bootstrap 文件..."
+          node quartz/bootstrap-cli.mjs build -d content -v && echo "方法 3 成功" && exit 0
           
           echo "方法 3 失败，尝试方法 4: 使用 npx 和本地 Quartz..."
           npx --prefix . quartz build -d content -v && echo "方法 4 成功" && exit 0
