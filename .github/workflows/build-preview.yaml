@@ -1,6 +1,9 @@
 name: Build and Deploy Preview
 
 on:
+  push:
+    branches:
+      - main 
   pull_request:
     types: [opened, synchronize]
   workflow_dispatch:
