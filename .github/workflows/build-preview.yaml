@@ -1,4 +1,4 @@
-name: Build Preview Deployment
+name: Build and Deploy Preview
 
 on:
   pull_request:
@@ -43,22 +43,19 @@ jobs:
 
       - name: Build Quartz (尝试多种方法)
         run: |
-          # 方法 1: 使用 package.json 中的构建脚本
+          set +e  # 防止某一步失败导致整个脚本退出
           echo "尝试方法 1: 使用 npm run build..."
-          npm run build && exit 0
+          npm run build && echo "方法 1 成功" && exit 0
           
-          # 方法 2: 编译 TypeScript 然后运行
-          echo "方法 1 失败，尝试方法 2: 编译 TypeScript..."
+          echo "方法 1 失败，尝试方法 2: 编译 TypeScript 然后运行..."
           npx tsc
-          node quartz/build.js -d content -v && exit 0
+          node quartz/build.js -d content -v && echo "方法 2 成功" && exit 0
           
-          # 方法 3: 尝试直接运行 bootstrap 文件
-          echo "方法 2 失败，尝试方法 3: 运行 bootstrap 文件..."
-          node quartz/bootstrap-cli.mjs build -d content -v && exit 0
+          # echo "方法 2 失败，尝试方法 3: 运行 bootstrap 文件..."
+          # node quartz/bootstrap-cli.mjs build -d content -v && echo "方法 3 成功" && exit 0
           
-          # 方法 4: 尝试使用 npx 和本地 Quartz
           echo "方法 3 失败，尝试方法 4: 使用 npx 和本地 Quartz..."
-          npx --prefix . quartz build -d content -v && exit 0
+          npx --prefix . quartz build -d content -v && echo "方法 4 成功" && exit 0
           
           echo "所有构建方法都失败了!"
           exit 1
@@ -74,3 +71,24 @@ jobs:
         with:
           name: public-build
           path: public
+
+  deploy-to-github-pages:
+    if: ${{ github.repository == 'ilikui/NotesBook' }} # 可选：根据需要添加条件，例如只在 main 分支触发
+    runs-on: ubuntu-latest
+    needs: build-preview  # 确保在 build-preview 任务成功完成后运行
+    name: Deploy to GitHub Pages
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: public-build
+          path: public  # 下载产物到 public 目录
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3  # 一个流行的部署到 gh-pages 分支的 Action
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # GitHub 自动提供的 token，无需手动创建
+          publish_dir: ./public  # 将指定目录的内容推送到 gh-pages 分支
+          # user_name: 'github-actions[bot]'  # 可选：提交者用户名
+          # user_email: 'github-actions[bot]@users.noreply.github.com'  # 可选：提交者邮箱
+          # commit_message: 'Deploy from GitHub Actions'  # 可选：自定义提交信息
