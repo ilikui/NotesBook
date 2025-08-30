@@ -15,16 +15,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Node.js 22
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '22.x'
-          cache: 'npm'
-
-      - name: Verify Node.js and npm versions
-        run: |
-          echo "Node.js version: $(node -v)"
-          echo "npm version: $(npm -v)"
+          node-version: 22
 
       - name: Cache dependencies
         uses: actions/cache@v4
@@ -38,10 +32,10 @@ jobs:
 
       - name: Fix execution permissions
         run: |
-          # 为 node_modules/.bin 下的所有文件添加执行权限
+          echo "修复执行权限..."
           chmod -R +x node_modules/.bin/
-          # 查找 quartz 可执行文件并确保有权限
           find . -name "quartz" -type f -exec chmod +x {} \; || true
+          echo "权限修复完成"
 
       - name: Format code with Prettier
         run: npx prettier --write .
