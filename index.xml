@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>51单片机</title>
+    <link>https://wiki.likui.info/Area/EE/51%E5%8D%95%E7%89%87%E6%9C%BA</link>
+    <guid>https://wiki.likui.info/Area/EE/51%E5%8D%95%E7%89%87%E6%9C%BA</guid>
+    <description><![CDATA[  51单片机学习指南 . ]]></description>
+    <pubDate>Mon, 01 Sep 2025 11:15:31 GMT</pubDate>
+  </item><item>
+    <title>数学</title>
+    <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6</link>
+    <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Mon, 01 Sep 2025 11:15:31 GMT</pubDate>
+  </item><item>
     <title>测试</title>
     <link>https://wiki.likui.info/Area/EE/%E6%B5%8B%E8%AF%95</link>
     <guid>https://wiki.likui.info/Area/EE/%E6%B5%8B%E8%AF%95</guid>
@@ -53,18 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F</guid>
     <description><![CDATA[ 概述 在计算机中，操作系统是其最基本也是最为重要的基础性系统软件。从计算机用户的角度来说，计算机操作系统体现为其提供的各项服务；从程序员的角度来说，其主要是指用户登录的界面或者接口；如果从设计人员的角度来说，就是指各式各样模块和单元之间的联系。事实上，全新操作系统的设计和改良的关键工作就是对体系结构的设计，经过几十年以来的发展，计算机操作系统已经由一开始的简单控制循环体发展成为较为复杂的分布式操作系统，再加上计算机用户需求的愈发多样化，计算机操作系统已经成为既复杂而又庞大的计算机软件系统之一。 操作系统 第一章 操作系统引论 第二章 进程的描述与控制 第三章 处理机调度与死锁 第四章 存储器管... ]]></description>
     <pubDate>Sun, 24 Aug 2025 03:41:44 GMT</pubDate>
-  </item><item>
-    <title>EE</title>
-    <link>https://wiki.likui.info/Area/EE/EE</link>
-    <guid>https://wiki.likui.info/Area/EE/EE</guid>
-    <description><![CDATA[  Hint 来源：github.com/Poo1o/Embed-Books 00-电子基础 《电路·邱关源》 01-C语言 《C程序设计语言(K&amp;R)清晰中文版》 《CPrimer_Plus第五版》 02-数据结构与算法 03-计算机组成原理 04-处理器架构 05-操作系统 06-计算机网络 07-常用芯片手册 08-测试 09-程序员修养 10-数学 11-设计模式 12-面向对象 13-CPP 14-工具 15-行业报告 . ]]></description>
-    <pubDate>Sun, 24 Aug 2025 03:15:42 GMT</pubDate>
-  </item><item>
-    <title>EE</title>
-    <link>https://wiki.likui.info/Area/EE/</link>
-    <guid>https://wiki.likui.info/Area/EE/</guid>
-    <description><![CDATA[ 学习EE kanban [1.电子基础] [《电路_邱关源》] [《模拟电子技术基础_童诗白》] [《数字电子技术基础_阎石》] [《图解数字电路》] [2.C语言] [《C程序设计语言K&amp;R清晰中文版》] [《C_Primer_Plus_第五版》] [《C和指针（第二版）》] [《C陷阱与缺陷》] [《经典C程序100例》] [《C专家编程》] [《彻底搞定C指针》] [《短码之美：编程达人的心得技法》] [3.数据结构与算法] [《编程珠玑》] [《经典算法大全_C语言描述》] [《数据结构C语言版_严蔚敏_吴伟民》] [《数据结构与算法分析：C语言描述_原书第2版_高清版》] [... ]]></description>
-    <pubDate>Sun, 24 Aug 2025 03:15:42 GMT</pubDate>
   </item>
     </channel>
   </rss>
