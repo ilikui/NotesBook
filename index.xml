@@ -6,16 +6,16 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>单片机介绍</title>
+    <link>https://wiki.likui.info/Area/EE/%E5%8D%95%E7%89%87%E6%9C%BA%E4%BB%8B%E7%BB%8D</link>
+    <guid>https://wiki.likui.info/Area/EE/%E5%8D%95%E7%89%87%E6%9C%BA%E4%BB%8B%E7%BB%8D</guid>
+    <description><![CDATA[  单片机介绍 有哪些单片机？ 什么是51单片机 关于80C51内核 有哪些单片机开发的产品？ 单片机介绍 单片机是一种集成电路芯片，简称MCU，它包含了一个或多个中央处理器（CPU）核心、存储器、输入/输出接口和各种外设电路。单片机的优点是体积小、功耗低、成本低，可以实现高效的控制和处理任务。常见的单片机品牌包括Atmel、Microchip、STMicroelectronics、Texas Instruments等。 有哪些单片机？ 国产宏晶的STC系列单片机 TI公司的MSP430单片机 Atmel公司的AVR系列单片机 ST公司的STM32系列单片机 国产的GD32系列单片机 什么是51... ]]></description>
+    <pubDate>Mon, 01 Sep 2025 12:24:26 GMT</pubDate>
+  </item><item>
     <title>51单片机</title>
     <link>https://wiki.likui.info/Area/EE/51%E5%8D%95%E7%89%87%E6%9C%BA</link>
     <guid>https://wiki.likui.info/Area/EE/51%E5%8D%95%E7%89%87%E6%9C%BA</guid>
     <description><![CDATA[  51单片机学习指南 Todo Aliases: “todo” 51单片机 1.单片机介绍 2.环境搭建 3.创建工程 4.固件烧录 5.点亮LED 6.按键 7.数码管 8.中断 9.定时器 10.串口通讯 11.蜂鸣器 12.IIC、温度传感器 13.PWM 呼吸灯 直流电机 14.看门狗 . ]]></description>
-    <pubDate>Mon, 01 Sep 2025 12:20:34 GMT</pubDate>
-  </item><item>
-    <title>单片机介绍</title>
-    <link>https://wiki.likui.info/Area/EE/%E5%8D%95%E7%89%87%E6%9C%BA%E4%BB%8B%E7%BB%8D</link>
-    <guid>https://wiki.likui.info/Area/EE/%E5%8D%95%E7%89%87%E6%9C%BA%E4%BB%8B%E7%BB%8D</guid>
-    <description><![CDATA[  ]]></description>
     <pubDate>Mon, 01 Sep 2025 12:20:34 GMT</pubDate>
   </item><item>
     <title>看门狗</title>
