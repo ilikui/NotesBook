@@ -19,7 +19,7 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: 22
 
@@ -70,7 +70,7 @@ jobs:
           find public/ -type f | head -10 || true
 
       - name: Upload build artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: public-build
           path: public
@@ -82,13 +82,13 @@ jobs:
     name: Deploy to GitHub Pages
     steps:
       - name: Download build artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           name: public-build
           path: public  # 下载产物到 public 目录
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3  # 一个流行的部署到 gh-pages 分支的 Action
+        uses: peaceiris/actions-gh-pages@v4  # 一个流行的部署到 gh-pages 分支的 Action
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}  # GitHub 自动提供的 token，无需手动创建
           publish_dir: ./public  # 将指定目录的内容推送到 gh-pages 分支
