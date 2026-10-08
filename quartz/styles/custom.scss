@@ -1,5 +1,24 @@
 @use "./base.scss";
+@use "./variables.scss" as *;
 
+/* ==================================================================
+ * 0. 布局参数
+ * ==================================================================
+ * $bp-mobile   ≤800px  手机：单栏
+ * $bp-tablet   801–1199px  平板：左栏 + 内容
+ * $page-max    页面最大宽度：PC 端铺满视口，超宽屏封顶 2560px
+ * $sidebar-*   两侧栏用 vw 自适应：窄屏收窄把空间让给正文，
+ *              超宽屏变宽抑制正文行宽无限拉长（改善可读性）
+ * ================================================================== */
+$bp-mobile: 800px;
+$bp-tablet: 1200px;
+$page-max: min(2560px, 100%);
+$sidebar-left: clamp(196px, 11vw, 288px);
+$sidebar-right: clamp(212px, 12vw, 312px);
+
+/* ==================================================================
+ * 1. 配色（浅色 / 深色）
+ * ================================================================== */
 html:root,
 html:root[saved-theme="light"] {
   --light: #fffdf2;
@@ -27,24 +46,46 @@ html:root[saved-theme="dark"] {
   --textHighlight: #ac985c50;
 }
 
+/* ==================================================================
+ * 2. 全局排版
+ * ================================================================== */
 body {
   font-size: 16px;
-  line-height: 1.65;
+  line-height: 1.68;
   letter-spacing: 0;
 }
 
+/* 宽屏上略微放大字号：页面变宽后同步放大，视觉比例更饱满、也不至于行宽过长 */
+@media (min-width: 1600px) {
+  body {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 2100px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* ==================================================================
+ * 3. 页面骨架：整体宽度 + 三栏栅格
+ * ================================================================== */
 .page {
-  max-width: 1440px;
+  max-width: $page-max;
+  margin: 0 auto;
 
   > #quartz-body {
-    grid-template-columns: 260px minmax(0, 1fr) 280px;
+    display: grid;
+    grid-template-columns: $sidebar-left minmax(0, 1fr) $sidebar-right;
     grid-template-rows: auto auto auto;
     grid-template-areas:
       "grid-sidebar-left grid-header grid-sidebar-right"
       "grid-sidebar-left grid-center grid-sidebar-right"
       "grid-sidebar-left grid-footer grid-sidebar-right";
-    column-gap: 32px;
-    padding: 0 24px 0 0;
+    column-gap: clamp(16px, 1.5vw, 56px);
+    row-gap: 5px;
+    padding: 0 clamp(14px, 1.1vw, 40px);
 
     .sidebar.left {
       gap: 1.25rem;
@@ -55,6 +96,7 @@ body {
 
     .sidebar.right {
       position: sticky;
+      top: 0;
       height: 100vh;
       min-width: 0;
       padding: 48px 0 24px;
@@ -121,6 +163,9 @@ body {
   }
 }
 
+/* ==================================================================
+ * 4. 通用组件
+ * ================================================================== */
 .page-title {
   text-align: center;
   font-size: 1.2rem;
@@ -238,16 +283,56 @@ footer {
   outline-offset: 4px;
 }
 
-@media (min-width: 801px) and (max-width: 1100px) {
+/* 代码块 / 表格：窄屏可横向滑动，不撑破整页 */
+pre,
+.table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 图片、视频、图表一律不超出内容列 */
+article {
+  img,
+  video,
+  audio,
+  iframe,
+  svg,
+  .mermaid {
+    max-width: 100%;
+  }
+}
+
+/* 1200–1479px：三栏刚成立时进一步收窄两侧栏，把空间尽量让给正文列 */
+@media (min-width: 1200px) and (max-width: 1479px) {
   .page > #quartz-body {
-    grid-template-columns: 220px minmax(0, 1fr);
+    grid-template-columns: 192px minmax(0, 1fr) 208px;
+    column-gap: 18px;
+    padding: 0 clamp(14px, 1.5vw, 22px);
+
+    .sidebar.left {
+      padding: 28px 12px 24px;
+    }
+
+    .sidebar.right {
+      padding: 44px 0 24px;
+    }
+  }
+}
+
+/* ==================================================================
+ * 5. 平板：801–1199px（两栏，去掉 TOC 侧栏，避免中间列被挤窄）
+ * ================================================================== */
+@media (min-width: 801px) and (max-width: 1199px) {
+  .page > #quartz-body {
+    grid-template-columns: clamp(216px, 21vw, 248px) minmax(0, 1fr);
     grid-template-rows: auto auto auto auto;
     grid-template-areas:
       "grid-sidebar-left grid-header"
       "grid-sidebar-left grid-center"
       "grid-sidebar-left grid-sidebar-right"
       "grid-sidebar-left grid-footer";
-    column-gap: 24px;
+    column-gap: clamp(18px, 2vw, 26px);
+    padding: 0 clamp(14px, 1.8vw, 24px);
 
     .sidebar.right {
       position: static;
@@ -264,9 +349,15 @@ footer {
   }
 }
 
+/* ==================================================================
+ * 6. 手机：≤800px（单栏，全宽利用）
+ * ================================================================== */
 @media (max-width: 800px) {
+  .page {
+    max-width: 100%;
+  }
+
   .page > #quartz-body {
-    display: grid;
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto auto auto auto auto;
     grid-template-areas:
@@ -275,37 +366,61 @@ footer {
       "grid-center"
       "grid-sidebar-right"
       "grid-footer";
-    padding: 0 20px;
+    padding: 0 max(16px, env(safe-area-inset-left)) 0 max(16px, env(safe-area-inset-right));
     column-gap: 0;
+    row-gap: 6px;
 
     .sidebar.left {
       border-right: 0;
       border-bottom: 1px solid var(--lightgray);
-      padding: 16px 0;
-      gap: 12px;
+      padding: 12px 0;
+      gap: 10px;
       align-items: center;
       height: auto;
+      min-height: 0;
       flex-direction: row;
-
-      .explorer-content {
-        left: -20px;
-      }
     }
 
     .page-header {
-      margin-top: 28px;
+      margin-top: 24px;
     }
 
     .sidebar.right {
       position: static;
       height: auto;
-      padding: 32px 0;
+      padding: 28px 0 max(28px, env(safe-area-inset-bottom));
       flex-direction: column;
       border-top: 1px solid var(--lightgray);
 
       > * {
         flex-basis: auto;
+        max-height: none;
       }
+    }
+
+    .center {
+      width: 100%;
+      min-width: 0;
+    }
+  }
+
+  article {
+    font-size: 1rem;
+    line-height: 1.75;
+
+    h1 {
+      font-size: 1.5rem;
+      margin-top: 1.8rem;
+    }
+
+    h2 {
+      font-size: 1.24rem;
+      margin-top: 2rem;
+    }
+
+    h3 {
+      font-size: 1.08rem;
+      margin-top: 1.6rem;
     }
   }
 
@@ -316,6 +431,26 @@ footer {
   }
 
   .article-title {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  .search > .search-button {
+    height: 32px;
+
+    p {
+      display: none; /* 手机上只留放大镜图标，避免顶栏拥挤 */
+    }
+  }
+}
+
+/* 超小屏（≤420px）进一步收紧内边距与标题 */
+@media (max-width: 420px) {
+  .page > #quartz-body {
+    padding: 0 max(12px, env(safe-area-inset-left)) 0 max(12px, env(safe-area-inset-right));
+  }
+
+  .article-title {
+    font-size: 1.35rem;
   }
 }
