@@ -8,6 +8,7 @@ import { i18n } from "../i18n"
 import { FileTrieNode } from "../util/fileTrie"
 import OverflowListFactory from "./OverflowList"
 import { concatenateResources } from "../util/resources"
+import { FileText, FolderClosed } from "lucide-preact"
 
 type OrderEntries = "sort" | "filter" | "map"
 
@@ -124,7 +125,10 @@ export default ((userOpts?: Partial<Options>) => {
         </div>
         <template id="template-file">
           <li>
-            <a href="#"></a>
+            <a href="#">
+              <FileText class="explorer-entry-icon" size={14} aria-hidden="true" />
+              <span class="file-title"></span>
+            </a>
           </li>
         </template>
         <template id="template-folder">
@@ -145,6 +149,7 @@ export default ((userOpts?: Partial<Options>) => {
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
               <div>
+                <FolderClosed class="explorer-entry-icon" size={14} aria-hidden="true" />
                 <button class="folder-button">
                   <span class="folder-title"></span>
                 </button>

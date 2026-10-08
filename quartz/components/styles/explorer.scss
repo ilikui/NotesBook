@@ -125,6 +125,12 @@ button.desktop-explorer {
       opacity: 0.75;
       pointer-events: all;
 
+      &:has(.explorer-entry-icon) {
+        display: flex;
+        align-items: baseline;
+        gap: 6px;
+      }
+
       &.active {
         opacity: 1;
         color: var(--tertiary);
@@ -155,6 +161,13 @@ button.desktop-explorer {
   display: flex;
   align-items: center;
   user-select: none;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 0;
+  }
 
   & div > a {
     color: var(--secondary);
@@ -191,6 +204,14 @@ button.desktop-explorer {
       pointer-events: none;
     }
   }
+}
+
+.explorer .explorer-entry-icon {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+  color: var(--gray);
+  pointer-events: none;
 }
 
 .folder-icon {

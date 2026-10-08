@@ -229,7 +229,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
         l.active = false
       }
     } else {
-      hoveredNeighbours = new Set()
+      hoveredNeighbours = new Set([newHoveredId])
       for (const l of linkRenderData) {
         const linkData = l.simulationData
         if (linkData.source.id === newHoveredId || linkData.target.id === newHoveredId) {
@@ -259,10 +259,10 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
       // if we are hovering over a node, we want to highlight the immediate neighbours
       // with full alpha and the rest with default alpha
       if (hoveredNodeId) {
-        alpha = l.active ? 1 : 0.2
+        alpha = l.active ? 1 : 0.08
       }
 
-      l.color = l.active ? computedStyleMap["--gray"] : computedStyleMap["--lightgray"]
+      l.color = l.active ? computedStyleMap["--dark"] : computedStyleMap["--lightgray"]
       tweenGroup.add(new Tweened<LinkRenderData>(l).to({ alpha }, 200))
     }
 
@@ -324,10 +324,29 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
       let alpha = 1
 
       // if we are hovering over a node, we want to highlight the immediate neighbours
-      if (hoveredNodeId !== null && focusOnHover) {
-        alpha = n.active ? 1 : 0.2
+      if (
+        hoveredNodeId !== null &&
+        (focusOnHover || graph.classList.contains("global-graph-container"))
+      ) {
+        alpha = n.active ? 1 : 0.12
       }
 
+      const node = n.simulationData
+      const isTagNode = node.id.startsWith("tags/")
+      n.gfx
+        .clear()
+        .circle(0, 0, nodeRadius(node))
+        .fill({
+          color: n.active
+            ? computedStyleMap["--dark"]
+            : isTagNode
+              ? computedStyleMap["--light"]
+              : color(node),
+        })
+      if (isTagNode && !n.active) {
+        n.gfx.stroke({ width: 2, color: computedStyleMap["--tertiary"] })
+      }
+      n.gfx.scale.set(hoveredNodeId === node.id ? 1.35 : 1)
       tweenGroup.add(new Tweened<Graphics>(n.gfx, tweenGroup).to({ alpha }, 200))
     }
 
@@ -369,7 +388,70 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   const labelsContainer = new Container<Text>({ zIndex: 3, isRenderGroup: true })
   const nodesContainer = new Container<Graphics>({ zIndex: 2, isRenderGroup: true })
   const linkContainer = new Container<Graphics>({ zIndex: 1, isRenderGroup: true })
-  stage.addChild(nodesContainer, labelsContainer, linkContainer)
+  stage.addChild(linkContainer, nodesContainer, labelsContainer)
+
+  const particleGraphics = new Graphics({ eventMode: "none" })
+  stage.addChild(particleGraphics)
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)")
+  const particles: {
+    source: NodeData
+    target: NodeData
+    color: string
+    radius: number
+    started: number
+  }[] = []
+  const particleDuration = 2800
+  const particleColors = ["#39b8a0", "#4299e1", "#e85d75", "#e9aa38"]
+
+  function emitNodeParticles(node: NodeData) {
+    particles.length = 0
+    if (reduceMotion.matches) return false
+    const neighbours = new Map<SimpleSlug, NodeData>()
+    for (const link of graphData.links) {
+      if (link.source.id === node.id && link.target.id !== node.id) {
+        neighbours.set(link.target.id, link.target)
+      } else if (link.target.id === node.id && link.source.id !== node.id) {
+        neighbours.set(link.source.id, link.source)
+      }
+    }
+    const started = performance.now()
+    let neighbourIndex = 0
+    for (const neighbour of neighbours.values()) {
+      for (let index = 0; index < 6; index++) {
+        particles.push({
+          source: node,
+          target: neighbour,
+          color: particleColors[(neighbourIndex + index) % particleColors.length],
+          radius: 2.2,
+          started: started + (index * particleDuration) / 6,
+        })
+      }
+      neighbourIndex++
+    }
+    return particles.length > 0
+  }
+
+  function getParticlePosition(particle: (typeof particles)[number], time: number) {
+    const progress = (time - particle.started) / particleDuration
+    if (progress < 0 || progress >= 1) return null
+    const sourceX = (particle.source.x ?? 0) + width / 2
+    const sourceY = (particle.source.y ?? 0) + height / 2
+    const deltaX = (particle.target.x ?? 0) - (particle.source.x ?? 0)
+    const deltaY = (particle.target.y ?? 0) - (particle.source.y ?? 0)
+    const trailProgress = Math.max(0, progress - 0.08)
+    return {
+      x: sourceX + deltaX * progress,
+      y: sourceY + deltaY * progress,
+      trailX: sourceX + deltaX * trailProgress,
+      trailY: sourceY + deltaY * trailProgress,
+      alpha: Math.min(1, (1 - progress) * 5),
+    }
+  }
+
+  function navigateToNode(node: NodeData) {
+    const target = new URL(resolveRelative(fullSlug, node.id), window.location.toString())
+    window.spaNavigate(target)
+  }
 
   for (const n of graphData.nodes) {
     const nodeId = n.id
@@ -404,11 +486,13 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
         updateHoverInfo(e.target.label)
         oldLabelOpacity = label.alpha
         if (!dragging) {
+          emitNodeParticles(n)
           renderPixiFromD3()
         }
       })
       .on("pointerleave", () => {
         updateHoverInfo(null)
+        particles.length = 0
         label.alpha = oldLabelOpacity
         if (!dragging) {
           renderPixiFromD3()
@@ -482,16 +566,14 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
           // if the time between mousedown and mouseup is short, we consider it a click
           if (Date.now() - dragStartTime < 500) {
             const node = graphData.nodes.find((n) => n.id === event.subject.id) as NodeData
-            const targ = resolveRelative(fullSlug, node.id)
-            window.spaNavigate(new URL(targ, window.location.toString()))
+            navigateToNode(node)
           }
         }),
     )
   } else {
     for (const node of nodeRenderData) {
       node.gfx.on("click", () => {
-        const targ = resolveRelative(fullSlug, node.simulationData.id)
-        window.spaNavigate(new URL(targ, window.location.toString()))
+        navigateToNode(node.simulationData)
       })
     }
   }
@@ -544,6 +626,28 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
         .stroke({ alpha: l.alpha, width: 1, color: l.color })
     }
 
+    particleGraphics.clear()
+    for (let index = particles.length - 1; index >= 0; index--) {
+      const particle = particles[index]
+      if (particle.source.id !== hoveredNodeId || reduceMotion.matches) {
+        particles.splice(index, 1)
+        continue
+      }
+      if (time - particle.started >= particleDuration) {
+        particle.started = time - ((time - particle.started) % particleDuration)
+      }
+      const position = getParticlePosition(particle, time)
+      if (!position) continue
+      particleGraphics
+        .moveTo(position.trailX, position.trailY)
+        .lineTo(position.x, position.y)
+        .stroke({ color: particle.color, alpha: position.alpha * 0.6, width: 1.5 })
+        .circle(position.x, position.y, particle.radius * 2.5)
+        .fill({ color: particle.color, alpha: position.alpha * 0.14 })
+        .circle(position.x, position.y, particle.radius)
+        .fill({ color: particle.color, alpha: position.alpha })
+    }
+
     tweens.forEach((t) => t.update(time))
     app.renderer.render(stage)
     requestAnimationFrame(animate)
@@ -552,6 +656,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   requestAnimationFrame(animate)
   return () => {
     stopAnimation = true
+    particles.length = 0
     app.destroy()
   }
 }

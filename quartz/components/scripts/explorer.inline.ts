@@ -86,7 +86,8 @@ function createFileNode(currentSlug: FullSlug, node: FileTrieNode): HTMLLIElemen
   const a = li.querySelector("a") as HTMLAnchorElement
   a.href = resolveRelative(currentSlug, node.slug)
   a.dataset.for = node.slug
-  a.textContent = node.displayName
+  const title = a.querySelector(".file-title") as HTMLElement
+  title.textContent = node.displayName
 
   if (currentSlug === node.slug) {
     a.classList.add("active")
