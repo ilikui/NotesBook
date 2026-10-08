@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>智能体</title>
+    <link>https://wiki.likui.info/Area/AI/%E6%99%BA%E8%83%BD%E4%BD%93</link>
+    <guid>https://wiki.likui.info/Area/AI/%E6%99%BA%E8%83%BD%E4%BD%93</guid>
+    <description><![CDATA[  什么是智能体？ . ]]></description>
+    <pubDate>Thu, 08 Oct 2026 01:46:18 GMT</pubDate>
+  </item><item>
     <title>单片机介绍</title>
     <link>https://wiki.likui.info/Area/EE/%E5%8D%95%E7%89%87%E6%9C%BA%E4%BB%8B%E7%BB%8D</link>
     <guid>https://wiki.likui.info/Area/EE/%E5%8D%95%E7%89%87%E6%9C%BA%E4%BB%8B%E7%BB%8D</guid>
@@ -58,12 +64,6 @@
     <link>https://wiki.likui.info/Area/CS/%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7</link>
     <guid>https://wiki.likui.info/Area/CS/%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7</guid>
     <description><![CDATA[  VIM Emacs Git Github GNU Make CMake . ]]></description>
-    <pubDate>Sat, 30 Aug 2025 13:19:45 GMT</pubDate>
-  </item><item>
-    <title>数字花园</title>
-    <link>https://wiki.likui.info/Area/KM/%E6%95%B0%E5%AD%97%E8%8A%B1%E5%9B%AD</link>
-    <guid>https://wiki.likui.info/Area/KM/%E6%95%B0%E5%AD%97%E8%8A%B1%E5%9B%AD</guid>
-    <description><![CDATA[ 数字花园 Note 数字花园原文是“Digital Garden”。 这是最近在国外兴起的一个概念，比较小众，不过还蛮有意思的。与其说是方法，不如说是一种理念。 简单来说，数字花园是通过借助网络数字工具，对想法、笔记和思考等一切你感兴趣的信息或进行收集、整理和创作，文字之间用标签或链接创建连接，形成一座独具个人浓厚色彩的信息与知识型花园。 这个花园可以是开放的，也可以作为仅你可见的私人庭院。但不管选择什么方式，在搭建花园的过程中，不可避免地至少要经历这几个步骤， 即： 播种： 选取高质量的“种子”为你的花园播种。这些可以是网络上看到的有价值的信息，也可以是自己的思考、想法和念头。 照料： 种子... ]]></description>
     <pubDate>Sat, 30 Aug 2025 13:19:45 GMT</pubDate>
   </item>
     </channel>
