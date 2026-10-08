@@ -6,65 +6,65 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>C语言</title>
-    <link>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80</link>
-    <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80</guid>
-    <description><![CDATA[  C语言学习资源 第一章 初识C语言 第二章 C语言概述 第三章 数据和C 第四章 字符串和格式化输入/输出 第五章 运算符、表达式和语句 第六章 C控制语句：循环 第七章 C控制语句：分支和跳转 第一章 初识C语言 C与 第二章 C语言概述 第三章 数据和C 第四章 字符串和格式化输入/输出 第五章 运算符、表达式和语句 第六章 C控制语句：循环 第七章 C控制语句：分支和跳转. ]]></description>
-    <pubDate>Fri, 29 Aug 2025 23:44:33 GMT</pubDate>
+    <title>单片机介绍</title>
+    <link>https://wiki.likui.info/Area/EE/%E5%8D%95%E7%89%87%E6%9C%BA%E4%BB%8B%E7%BB%8D</link>
+    <guid>https://wiki.likui.info/Area/EE/%E5%8D%95%E7%89%87%E6%9C%BA%E4%BB%8B%E7%BB%8D</guid>
+    <description><![CDATA[  单片机介绍 有哪些单片机？ 什么是51单片机 关于80C51内核 有哪些单片机开发的产品？ 单片机介绍 单片机是一种集成电路芯片，简称MCU，它包含了一个或多个中央处理器（CPU）核心、存储器、输入/输出接口和各种外设电路。单片机的优点是体积小、功耗低、成本低，可以实现高效的控制和处理任务。常见的单片机品牌包括Atmel、Microchip、STMicroelectronics、Texas Instruments等。 有哪些单片机？ 国产宏晶的STC系列单片机 TI公司的MSP430单片机 Atmel公司的AVR系列单片机 ST公司的STM32系列单片机 国产的GD32系列单片机 什么是51... ]]></description>
+    <pubDate>Mon, 01 Sep 2025 12:24:26 GMT</pubDate>
   </item><item>
-    <title>操作系统</title>
-    <link>https://wiki.likui.info/Area/EE/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F</link>
-    <guid>https://wiki.likui.info/Area/EE/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F</guid>
-    <description><![CDATA[ 概述 在计算机中，操作系统是其最基本也是最为重要的基础性系统软件。从计算机用户的角度来说，计算机操作系统体现为其提供的各项服务；从程序员的角度来说，其主要是指用户登录的界面或者接口；如果从设计人员的角度来说，就是指各式各样模块和单元之间的联系。事实上，全新操作系统的设计和改良的关键工作就是对体系结构的设计，经过几十年以来的发展，计算机操作系统已经由一开始的简单控制循环体发展成为较为复杂的分布式操作系统，再加上计算机用户需求的愈发多样化，计算机操作系统已经成为既复杂而又庞大的计算机软件系统之一。 操作系统 第一章 操作系统引论 第二章 进程的描述与控制 第三章 处理机调度与死锁 第四章 存储器管... ]]></description>
-    <pubDate>Sun, 24 Aug 2025 03:41:44 GMT</pubDate>
+    <title>51单片机</title>
+    <link>https://wiki.likui.info/Area/EE/51%E5%8D%95%E7%89%87%E6%9C%BA</link>
+    <guid>https://wiki.likui.info/Area/EE/51%E5%8D%95%E7%89%87%E6%9C%BA</guid>
+    <description><![CDATA[  51单片机学习指南 Todo Aliases: “todo” 51单片机 1.单片机介绍 2.环境搭建 3.创建工程 4.固件烧录 5.点亮LED 6.按键 7.数码管 8.中断 9.定时器 10.串口通讯 11.蜂鸣器 12.IIC、温度传感器 13.PWM 呼吸灯 直流电机 14.看门狗 . ]]></description>
+    <pubDate>Mon, 01 Sep 2025 12:20:34 GMT</pubDate>
   </item><item>
-    <title>EE</title>
-    <link>https://wiki.likui.info/Area/EE/EE</link>
-    <guid>https://wiki.likui.info/Area/EE/EE</guid>
-    <description><![CDATA[  Hint 来源：github.com/Poo1o/Embed-Books 00-电子基础 《电路·邱关源》 01-C语言 《C程序设计语言(K&amp;R)清晰中文版》 《C_Primer_Plus_第五版》 02-数据结构与算法 03-计算机组成原理 04-处理器架构 05-操作系统 06-计算机网络 07-常用芯片手册 08-测试 09-程序员修养 10-数学 11-设计模式 12-面向对象 13-CPP 14-工具 15-行业报告 . ]]></description>
-    <pubDate>Sun, 24 Aug 2025 03:15:42 GMT</pubDate>
-  </item><item>
-    <title>EE</title>
-    <link>https://wiki.likui.info/Area/EE/</link>
-    <guid>https://wiki.likui.info/Area/EE/</guid>
-    <description><![CDATA[ 学习EE kanban [1.电子基础] [《电路_邱关源》] [《模拟电子技术基础_童诗白》] [《数字电子技术基础_阎石》] [《图解数字电路》] [2.C语言] [《C程序设计语言K&amp;R清晰中文版》] [《C_Primer_Plus_第五版》] [《C和指针（第二版）》] [《C陷阱与缺陷》] [《经典C程序100例》] [《C专家编程》] [《彻底搞定C指针》] [《短码之美：编程达人的心得技法》] [3.数据结构与算法] [《编程珠玑》] [《经典算法大全_C语言描述》] [《数据结构C语言版_严蔚敏_吴伟民》] [《数据结构与算法分析：C语言描述_原书第2版_高清版》] [... ]]></description>
-    <pubDate>Sun, 24 Aug 2025 03:15:42 GMT</pubDate>
-  </item><item>
-    <title>CS</title>
-    <link>https://wiki.likui.info/Area/CS/CS</link>
-    <guid>https://wiki.likui.info/Area/CS/CS</guid>
-    <description><![CDATA[  flowchart TD A[CS自学路径] --&gt; B[阶段一：编程与导论] A --&gt; C[阶段二：核心基础] A --&gt; D[阶段三：系统基础] A --&gt; E[阶段四：进阶领域] A --&gt; F[实践与社区] B --&gt; B1[编程入门&lt;br&gt;（Python/Java）] B --&gt; B2[计算机导论&lt;br&gt;（CS50）] B2 --&gt; C C --&gt; C1[数据结构与算法] C --&gt; C2[计算机组成&lt;br&gt;（CSAPP）] C --&gt; C3[操作系统&lt;br&gt;（OST... ]]></description>
-    <pubDate>Sun, 24 Aug 2025 02:58:18 GMT</pubDate>
-  </item><item>
-    <title>必学工具</title>
-    <link>https://wiki.likui.info/Area/CS/%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7</link>
-    <guid>https://wiki.likui.info/Area/CS/%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7</guid>
+    <title>看门狗</title>
+    <link>https://wiki.likui.info/Area/EE/%E7%9C%8B%E9%97%A8%E7%8B%97</link>
+    <guid>https://wiki.likui.info/Area/EE/%E7%9C%8B%E9%97%A8%E7%8B%97</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 24 Aug 2025 02:58:18 GMT</pubDate>
+    <pubDate>Mon, 01 Sep 2025 12:18:34 GMT</pubDate>
   </item><item>
-    <title>数字花园</title>
-    <link>https://wiki.likui.info/</link>
-    <guid>https://wiki.likui.info/</guid>
-    <description><![CDATA[ 使用PARA搭建数字花园 🪴 数字花园 层级英文全称中文含义描述示例PProject项目有明确目标、截止日期的一系列任务。 这是你当前正在积极推动的工作。- 完成季度财报 - 撰写一篇博客文章 - 策划一场婚礼AArea领域需要长期维持并关注标准的重要活动领域。 它们没有终点，但需要持续投入。- 健康管理 - 个人财务 - 学习法语RResource资源来可能感兴趣的主题或素材。 这是你的知识库或灵感池，目前没有明确项目与之关联。- 关于区块链的阅读清单 - 网页设计灵感图库AArchive存档来自其他三个类别的非活动项目。 已完成的项目、不再负责的领域、不再感兴趣的资源。- 已完成的项目文... ]]></description>
-    <pubDate>Sun, 24 Aug 2025 02:50:15 GMT</pubDate>
+    <title>数学</title>
+    <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6</link>
+    <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Mon, 01 Sep 2025 11:15:31 GMT</pubDate>
   </item><item>
-    <title>一年级数学</title>
-    <link>https://wiki.likui.info/Resource/Education/%E4%B8%80%E5%B9%B4%E7%BA%A7%E6%95%B0%E5%AD%A6</link>
-    <guid>https://wiki.likui.info/Resource/Education/%E4%B8%80%E5%B9%B4%E7%BA%A7%E6%95%B0%E5%AD%A6</guid>
-    <description><![CDATA[ mindmap root(小学数学) 数与代数 数的认识 1-100的读写 例子 35读作三十五 练习 写出68和100 数位 十位和个位 例子 25的十位是2个位是5 数的大小比较 例子 19小于21 练习 15和20比较 30和30比较 数的运算 20以内加法 例子 5加3等于8 练习 7加6等于 20以内减法 例子 9减4等于5 练习 15减8等于 凑十法 例子 9加5等于9加1加4等于14 破十法 例子 15减8等于10减8加5等于7 简单应用题 例子 小明有5个苹果妈妈又给他3个现在有几个 图形与几何 认识图形 平面图形 长方形 正方形 三角形 圆形 立体图形 长方体 正方体 圆柱 ... ]]></description>
-    <pubDate>Sun, 24 Aug 2025 02:16:43 GMT</pubDate>
-  </item><item>
-    <title>Education</title>
-    <link>https://wiki.likui.info/Resource/Education/</link>
-    <guid>https://wiki.likui.info/Resource/Education/</guid>
-    <description><![CDATA[  小学一年级 一年级数学 一年级英语 一年级语文 . ]]></description>
-    <pubDate>Sun, 24 Aug 2025 02:04:57 GMT</pubDate>
+    <title>测试</title>
+    <link>https://wiki.likui.info/Area/EE/%E6%B5%8B%E8%AF%95</link>
+    <guid>https://wiki.likui.info/Area/EE/%E6%B5%8B%E8%AF%95</guid>
+    <description><![CDATA[ 一、软件测试的分类 1、按开发阶段：单元测试、集成测试、系统测试、验收测试 2、按测试实施组织：α、β、第三方 3、按测试执行方式：静态测试、动态测试 4、按是否查看代码：黑盒测试、白盒测试、灰盒测试 5、按是否手工执行划分：手工测试、自动化测试 6、按测试对象划分：性能测试、安全测试、兼容性测试、文档测试、易用性测试（用户体验测试）、业务测试、界面测试、安装测试 7、按测试地域划分：本地化测试、国际化测试 二、按开发阶段划分 1、UI界面层（用户界面测试）：功能性验证测试、兼容性与用户测试 2、业务逻辑层（API层面）：客户端模拟测试、内外接口测试、SDK接口测试（Software Deve... ]]></description>
+    <pubDate>Mon, 01 Sep 2025 04:42:23 GMT</pubDate>
   </item><item>
     <title>一年级英语</title>
     <link>https://wiki.likui.info/Resource/Education/%E4%B8%80%E5%B9%B4%E7%BA%A7%E8%8B%B1%E8%AF%AD</link>
     <guid>https://wiki.likui.info/Resource/Education/%E4%B8%80%E5%B9%B4%E7%BA%A7%E8%8B%B1%E8%AF%AD</guid>
     <description><![CDATA[ mindmap root(小学英语) 字母 字母名 Letter Name A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 例子 A-B-C Song 练习 按顺序说出字母 字母音 Letter Sound A for Apple B for Ball C for Cat 例子 发音练习 a a apple 练习 说出以B开头的单词 大小写书写 大写 A B C D 小写 a b c d 例子 正确书写字母Aa 练习 抄写字母E-H 词汇 动物 Animals cat猫 dog狗 bird鸟 fish鱼 tiger老虎 panda熊猫 例... ]]></description>
-    <pubDate>Sun, 24 Aug 2025 02:04:57 GMT</pubDate>
+    <pubDate>Sat, 30 Aug 2025 13:34:08 GMT</pubDate>
+  </item><item>
+    <title>一年级语文</title>
+    <link>https://wiki.likui.info/Resource/Education/%E4%B8%80%E5%B9%B4%E7%BA%A7%E8%AF%AD%E6%96%87</link>
+    <guid>https://wiki.likui.info/Resource/Education/%E4%B8%80%E5%B9%B4%E7%BA%A7%E8%AF%AD%E6%96%87</guid>
+    <description><![CDATA[ mindmap root(小学语文) 汉语拼音 声母 23个 b p m f d t n l g k h j q x zh ch sh r z c s y w 例子 b和a拼读为ba 练习 拼读b和a m和a 韵母 单韵母 6个 a o e i u ü 复韵母 ai ei ui ao ou iu 鼻韵母 an en in un ün ang eng ing ong 例子 m和a拼读为ma 练习 区分a和an 整体认读音节 16个 zhi chi shi ri zi ci si yi wu yu ye yue yuan yin yun ying 例子 yi衣 wu五 练习 认读整体认读音节 声调... ]]></description>
+    <pubDate>Sat, 30 Aug 2025 13:34:08 GMT</pubDate>
+  </item><item>
+    <title>一年级数学</title>
+    <link>https://wiki.likui.info/Resource/Education/%E4%B8%80%E5%B9%B4%E7%BA%A7%E6%95%B0%E5%AD%A6</link>
+    <guid>https://wiki.likui.info/Resource/Education/%E4%B8%80%E5%B9%B4%E7%BA%A7%E6%95%B0%E5%AD%A6</guid>
+    <description><![CDATA[ mindmap root(小学数学) 数与代数 数的认识 1-100的读写 例子 35读作三十五 练习 写出68和100 数位 十位和个位 例子 25的十位是2个位是5 数的大小比较 例子 19小于21 练习 15和20比较 30和30比较 数的运算 20以内加法 例子 5加3等于8 练习 7加6等于 20以内减法 例子 9减4等于5 练习 15减8等于 凑十法 例子 9加5等于9加1加4等于14 破十法 例子 15减8等于10减8加5等于7 简单应用题 例子 小明有5个苹果妈妈又给他3个现在有几个 图形与几何 认识图形 平面图形 长方形 正方形 三角形 圆形 立体图形 长方体 正方体 圆柱 ... ]]></description>
+    <pubDate>Sat, 30 Aug 2025 13:32:10 GMT</pubDate>
+  </item><item>
+    <title>必学工具</title>
+    <link>https://wiki.likui.info/Area/CS/%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7</link>
+    <guid>https://wiki.likui.info/Area/CS/%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7</guid>
+    <description><![CDATA[  VIM Emacs Git Github GNU Make CMake . ]]></description>
+    <pubDate>Sat, 30 Aug 2025 13:19:45 GMT</pubDate>
+  </item><item>
+    <title>数字花园</title>
+    <link>https://wiki.likui.info/Area/KM/%E6%95%B0%E5%AD%97%E8%8A%B1%E5%9B%AD</link>
+    <guid>https://wiki.likui.info/Area/KM/%E6%95%B0%E5%AD%97%E8%8A%B1%E5%9B%AD</guid>
+    <description><![CDATA[ 数字花园 Note 数字花园原文是“Digital Garden”。 这是最近在国外兴起的一个概念，比较小众，不过还蛮有意思的。与其说是方法，不如说是一种理念。 简单来说，数字花园是通过借助网络数字工具，对想法、笔记和思考等一切你感兴趣的信息或进行收集、整理和创作，文字之间用标签或链接创建连接，形成一座独具个人浓厚色彩的信息与知识型花园。 这个花园可以是开放的，也可以作为仅你可见的私人庭院。但不管选择什么方式，在搭建花园的过程中，不可避免地至少要经历这几个步骤， 即： 播种： 选取高质量的“种子”为你的花园播种。这些可以是网络上看到的有价值的信息，也可以是自己的思考、想法和念头。 照料： 种子... ]]></description>
+    <pubDate>Sat, 30 Aug 2025 13:19:45 GMT</pubDate>
   </item>
     </channel>
   </rss>
