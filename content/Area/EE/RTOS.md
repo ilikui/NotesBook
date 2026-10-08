@@ -4,31 +4,62 @@ tags:
   - feature/transformer
 ---
 
-Quartz supports Mermaid which allows you to add diagrams and charts to your notes. Mermaid supports a range of diagrams, such as [flow charts](https://mermaid.js.org/syntax/flowchart.html), [sequence diagrams](https://mermaid.js.org/syntax/sequenceDiagram.html), and [timelines](https://mermaid.js.org/syntax/timeline.html). This is enabled as a part of [[工业互联网]] and can be configured and enabled/disabled from that plugin.
+RTOS（Real-Time Operating System，实时操作系统）是面向嵌入式场景裁剪过的操作系统。它的核心目标不是「吞吐量最大」，而是**任务响应时间的可预测性**——保证关键任务在确定的时限内得到执行。
 
-By default, Quartz will render Mermaid diagrams to match the site theme.
+> [!info] 一句话定位
+> RTOS = 能跑在单片机上、以「确定性」和「实时性」为第一目标的迷你操作系统。
 
-> [!warning]
-> Wondering why Mermaid diagrams may not be showing up even if you have them enabled? You may need to reorder your plugins so that [[ObsidianFlavoredMarkdown]] is _after_ [[SyntaxHighlighting]].
-
-## Syntax
-
-To add a Mermaid diagram, create a mermaid code block.
-
-````
-```mermaid
-sequenceDiagram
-    Alice->>+John: Hello John, how are you?
-    Alice->>+John: John, can you hear me?
-    John-->>-Alice: Hi Alice, I can hear you!
-    John-->>-Alice: I feel great!
-```
-````
+## 知识体系
 
 ```mermaid
-sequenceDiagram
-    Alice->>+John: Hello John, how are you?
-    Alice->>+John: John, can you hear me?
-    John-->>-Alice: Hi Alice, I can hear you!
-    John-->>-Alice: I feel great!
+flowchart TD
+    A[RTOS] --> B[核心概念]
+    A --> C[调度机制]
+    A --> D[任务间通信]
+    A --> E[常见 RTOS]
+
+    B --> B1["任务 Task / 线程"]
+    B --> B2["优先级 Priority"]
+    B --> B3["阻塞 / 就绪 / 运行"]
+    B --> B4["时间片与滴答 Tick"]
+
+    C --> C1["抢占式调度"]
+    C --> C2["优先级反转与继承"]
+    C --> C3["临界区与关中断"]
+
+    D --> D1["信号量 Semaphore"]
+    D --> D2["互斥量 Mutex"]
+    D --> D3["消息队列 Queue"]
+    D --> D4["事件标志组 / 邮箱"]
+
+    E --> E1["FreeRTOS 最流行"]
+    E --> E2["RT-Thread 国产"]
+    E --> E3["μC/OS-II III"]
+    E --> E4["Zephyr / ThreadX"]
 ```
+
+## 核心要点
+
+- **硬实时 vs 软实时**：硬实时（如刹车控制）超时即失败；软实时（如视频播放）偶有超时可接受。
+- **任务与优先级**：RTOS 把程序拆成多个独立任务，每个任务有优先级，高优先级任务可**抢占**低优先级任务。
+- **调度器**：抢占式 + 时间片轮转是主流；就绪表中总是运行最高优先级任务。
+- **优先级反转**：低优先级任务持有高优先级任务需要的锁时会导致高优先级阻塞，用**优先级继承**解决。
+- **任务通信**：任务间不直接共享变量，而是用信号量、互斥量、消息队列、事件标志组来同步与传数据。
+- **裸机 vs RTOS**：裸机的「前后台 + 状态机」简单但难扩展；任务一多、实时性要求一高，就该上 RTOS。
+- **最小系统**：Tick 定时器 + 调度器 + 任务栈管理，是 RTOS 的心脏。
+
+## 与前后台架构对比
+
+| 维度 | 裸机前后台 | RTOS |
+| --- | --- | --- |
+| 结构 | 主循环 + 中断 | 多任务并发 |
+| 实时性 | 靠中断和拆分 | 靠优先级抢占 |
+| 可扩展性 | 差 | 好 |
+| 内存开销 | 极小 | 较大 |
+
+## 相关
+
+- [[操作系统]]
+- [[STM32]]
+- [[MCU]]
+- [[看门狗]]

@@ -2,4 +2,12 @@
 title: Area
 ---
 
-Want to create your own custom component? Check out the advanced guide on [[方法论]] for more information.
+**Area（领域）** 标签用于标记「需要长期维护、持续投入」的笔记，对应 PARA 方法中的领域层。
+
+> [!note]
+> 该标签下的笔记请在 [[Area/index|Area 领域总览]] 中查看完整导航。
+
+被标记为 `Area` 的代表性笔记：
+
+- [[EE]]、[[操作系统]]、[[数据结构与算法]]、[[设计模式]]、[[面对对象]]
+- [[51单片机]]、[[STM32]]、[[RTOS]]、[[看门狗]]

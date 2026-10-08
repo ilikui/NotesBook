@@ -5,140 +5,59 @@ tags:
   - ARM
 ---
 
-Syntax highlighting in Quartz is completely done at build-time. This means that Quartz only ships pre-calculated CSS to highlight the right words so there is no heavy client-side bundle that does the syntax highlighting.
+STM32 是意法半导体（STMicroelectronics，ST）基于 **ARM Cortex-M 内核**推出的 32 位微控制器（MCU）家族，是当前嵌入式领域应用最广、生态最成熟的 MCU 之一。它以「内核 + 丰富外设 + 完善工具链」著称，从学生实验到工业量产都能覆盖。
 
-And, unlike some client-side highlighters, it has a full TextMate parser grammar instead of using Regexes, allowing for highly accurate code highlighting.
+> [!info] 一句话定位
+> STM32 = 一颗 ARM Cortex-M 核心 + 一堆可配置外设（GPIO/UART/SPI/I2C/ADC/TIM…）+ ST 的 HAL 库与 CubeMX 工具。
 
-In short, it generates HTML that looks exactly like your code in an editor like VS Code. Under the hood, it's powered by [Rehype Pretty Code](https://rehype-pretty-code.netlify.app/) which uses [Shiki](https://github.com/shikijs/shiki).
+## 知识体系
 
-> [!warning]
-> Syntax highlighting does have an impact on build speed if you have a lot of code snippets in your notes.
+```mermaid
+flowchart TD
+    A[STM32] --> B[内核与系列]
+    A --> C[外设资源]
+    A --> D[开发方式]
+    A --> E[时钟与启动]
 
-## Formatting
+    B --> B1["Cortex-M0 / M0+ 入门"]
+    B --> B2["Cortex-M3 / M4 主流"]
+    B --> B3["Cortex-M7 高性能"]
+    B --> B4["F1 / F4 / H7 / L 低功耗 等系列"]
 
-Text inside `backticks` on a line will be formatted like code.
+    C --> C1["GPIO 通用输入输出"]
+    C --> C2["UART 串口 / SPI / I2C"]
+    C --> C3["TIM 定时器与 PWM"]
+    C --> C4["ADC / DAC 模拟量"]
+    C --> C5["NVIC 中断控制器"]
+    C --> C6["DMA 直接内存访问"]
 
-````
-```ts
-export function trimPathSuffix(fp: string): string {
-  fp = clientSideSlug(fp)
-  let [cleanPath, anchor] = fp.split("#", 2)
-  anchor = anchor === undefined ? "" : "#" + anchor
+    D --> D1["寄存器直接编程"]
+    D --> D2["标准外设库 SPL"]
+    D --> D3["HAL 库 + CubeMX 图形化配置"]
+    D --> D4["LL 库 轻量高效"]
 
-  return cleanPath + anchor
-}
-```
-````
-
-```ts
-export function trimPathSuffix(fp: string): string {
-  fp = clientSideSlug(fp)
-  let [cleanPath, anchor] = fp.split("#", 2)
-  anchor = anchor === undefined ? "" : "#" + anchor
-
-  return cleanPath + anchor
-}
-```
-
-### Titles
-
-Add a file title to your code block, with text inside double quotes (`""`):
-
-````
-```js title="..."
-
-```
-````
-
-```ts title="quartz/path.ts"
-export function trimPathSuffix(fp: string): string {
-  fp = clientSideSlug(fp)
-  let [cleanPath, anchor] = fp.split("#", 2)
-  anchor = anchor === undefined ? "" : "#" + anchor
-
-  return cleanPath + anchor
-}
+    E --> E1["HSE / HSI 时钟树"]
+    E --> E2["PLL 倍频"]
+    E --> E3["启动文件与向量表"]
 ```
 
-### Line highlighting
+## 核心要点
 
-Place a numeric range inside `{}`.
+- **内核与外设分离**：内核由 ARM 授权（IP 厂商），外设由 ST 设计（IC 厂商），这也是 [[单片机介绍]] 中讲的 IP 模式。
+- **GPIO 八种模式**：输入（浮空/上拉/下拉/模拟）、输出（推挽/开漏）、复用、模拟，配置错了现象就不对。
+- **时钟树**：STM32 上电默认用内部高速时钟（HSI），工程里几乎都要配置 PLL 把主频拉到最高，**忘记开外设时钟**是新手最常见错误。
+- **中断与 NVIC**：Cortex-M 的嵌套向量中断控制器支持优先级抢占，是实时响应外设的关键。
+- **DMA**：让外设和内存直接搬数据，不占用 CPU，串口高速收发、ADC 连续采样必备。
+- **HAL + CubeMX**：图形化生成初始化代码，大幅降低门槛；想抠性能再回到寄存器或 LL 库。
 
-````
-```js {1-3,4}
+## 学习路径
 
-```
-````
+1. GPIO 点灯与按键 → 2. 中断与 EXTI → 3. 定时器与 PWM → 4. 串口 UART 通信 → 5. ADC 采集 → 6. I2C/SPI 驱动传感器与屏幕 → 7. DMA → 8. [[RTOS]] 多任务。
 
-```ts {2-3,6}
-export function trimPathSuffix(fp: string): string {
-  fp = clientSideSlug(fp)
-  let [cleanPath, anchor] = fp.split("#", 2)
-  anchor = anchor === undefined ? "" : "#" + anchor
+## 相关
 
-  return cleanPath + anchor
-}
-```
-
-### Word highlighting
-
-A series of characters, like a literal regex.
-
-````
-```js /useState/
-const [age, setAge] = useState(50);
-const [name, setName] = useState('Taylor');
-```
-````
-
-```js /useState/
-const [age, setAge] = useState(50)
-const [name, setName] = useState("Taylor")
-```
-
-### Inline Highlighting
-
-Append {:lang} to the end of inline code to highlight it like a regular code block.
-
-```
-This is an array `[1, 2, 3]{:js}` of numbers 1 through 3.
-```
-
-This is an array `[1, 2, 3]{:js}` of numbers 1 through 3.
-
-### Line numbers
-
-Syntax highlighting has line numbers configured automatically. If you want to start line numbers at a specific number, use `showLineNumbers{number}`:
-
-````
-```js showLineNumbers{number}
-
-```
-````
-
-```ts showLineNumbers{20}
-export function trimPathSuffix(fp: string): string {
-  fp = clientSideSlug(fp)
-  let [cleanPath, anchor] = fp.split("#", 2)
-  anchor = anchor === undefined ? "" : "#" + anchor
-
-  return cleanPath + anchor
-}
-```
-
-### Escaping code blocks
-
-You can format a codeblock inside of a codeblock by wrapping it with another level of backtick fences that has one more backtick than the previous fence.
-
-`````
-````
-```js /useState/
-const [age, setAge] = useState(50);
-const [name, setName] = useState('Taylor');
-```
-````
-`````
-
-## Customization
-
-Syntax highlighting is a functionality of the [[SyntaxHighlighting]] plugin. See the plugin page for customization options.
+- [[ARM]]
+- [[MCU]]
+- [[51单片机]]
+- [[RTOS]]
+- [[常用芯片手册]]
