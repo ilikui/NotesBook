@@ -14,7 +14,7 @@ Additionally, Quartz will also generate pages for subfolders. Say you have a not
 
 You can link to the folder listing by referencing its name, plus a trailing slash, like this: `[[advanced/]]` (results in [[advanced/]]).
 
-By default, Quartz will title the page `Folder: <folder name>` and no description. You can override this by creating an `index.md` file in the folder with the `title` [[authoring content#Syntax|frontmatter]] field. Any content you write in this file will also be used in the folder description.
+By default, Quartz will title the page `Folder: <folder name>` and no description. You can override this by creating an `index.md` file in the folder with the `title` [[豆瓣阅读#Syntax|frontmatter]] field. Any content you write in this file will also be used in the folder description.
 
 For example, for the folder `content/posts`, you can add another file `content/posts/index.md` to add a specific description for it.
 

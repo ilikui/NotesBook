@@ -19,7 +19,7 @@ npx quartz create
 
 This will guide you through initializing your Quartz with content. Once you've done so, see how to:
 
-1. [[authoring content|Writing content]] in Quartz
+1. [[豆瓣阅读|Writing content]] in Quartz
 2. [[configuration|Configure]] Quartz's behaviour
 3. Change Quartz's [[layout]]
 4. [[build|Build and preview]] Quartz
