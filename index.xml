@@ -6,17 +6,47 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>设计模式</title>
-    <link>https://wiki.likui.info/Area/EE/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F</link>
-    <guid>https://wiki.likui.info/Area/EE/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F</guid>
-    <description><![CDATA[ 在 Python 中，设计模式通常被分为三大类（创建型、结构型、行为型），共有 23 种经典模式。由于 Python 具备强大的动态特性（如函数作为一等公民、动态类型、元编程、new、鸭子类型等），许多在 Java 或 C++ 中需要复杂结构的设计模式，在 Python 中可以实现得非常优雅、简练。 以下是 Python 实现的全部 23 种经典设计模式的完整指南，划分为三大模块，每个模式都包含核心定义与最精简的 Python 骨架代码。 一、 创建型模式 (Creational Patterns) - 5种 核心目的：优雅地创建对象，将对象的创建与使用解耦。 1. ]]></description>
-    <pubDate>Thu, 08 Oct 2026 02:18:50 GMT</pubDate>
+    <title>豆瓣阅读</title>
+    <link>https://wiki.likui.info/Archive/Read/%E8%B1%86%E7%93%A3%E9%98%85%E8%AF%BB</link>
+    <guid>https://wiki.likui.info/Archive/Read/%E8%B1%86%E7%93%A3%E9%98%85%E8%AF%BB</guid>
+    <description><![CDATA[  豆瓣阅读 . ]]></description>
+    <pubDate>Thu, 08 Oct 2026 02:42:11 GMT</pubDate>
+  </item><item>
+    <title>CPP</title>
+    <link>https://wiki.likui.info/Area/EE/CPP</link>
+    <guid>https://wiki.likui.info/Area/EE/CPP</guid>
+    <description><![CDATA[ 学习 C++ 是一条从理解底层硬件机制到掌握高层抽象艺术的修行之路。C++ 既有 C 语言操作内存的极致性能，又有现代面向对象、泛型编程的高级特性，被誉为编程语言中的“瑞士军刀”。 为了让你能高效、不踩坑地精通 C++，我为你梳理了一份从零基础到进阶的结构化学习路线。 🗺️ 第一阶段：语法筑基（攻克 C++ 的“硬核”底层） 这个阶段的核心是把基础打牢，特别是 C++ 区别于其他高层语言（如 Python、Java）的独有特性。 四大核心基础： 控制结构与基本语法：数据类型、条件分支、循环。 函数：理解值传递（Pass by Value）、指针传递与引用传递（Pass by Referenc... ]]></description>
+    <pubDate>Thu, 08 Oct 2026 02:42:11 GMT</pubDate>
   </item><item>
     <title>面向对象</title>
     <link>https://wiki.likui.info/Area/EE/%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1</link>
     <guid>https://wiki.likui.info/Area/EE/%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1</guid>
     <description><![CDATA[ 面向对象程序设计（Object-Oriented Programming，简称 OOP）是一种以“对象”为中心的核心编程范式与抽象方针。它将计算机程序视为一组彼此相关的对象集合，每个对象将数据（属性）与操作数据的函数（方法）封装在一起，通过对象之间传递消息来解决复杂的软件开发问题。 [1, 2] 相比传统的面向过程编程（如 C 语言），OOP 的诞生是为了提高软件的重用性、灵活性和扩展性，使其更适合开发大型复杂系统。 [1] 🧱 核心概念：类与对象 理解 OOP 的第一步是分清“类”和“对象”的区别： [3] 类（Class）：是创建对象的模板或蓝图。它定义了一类事物共同拥有的属性和行为，属... ]]></description>
-    <pubDate>Thu, 08 Oct 2026 02:10:53 GMT</pubDate>
+    <pubDate>Thu, 08 Oct 2026 02:42:11 GMT</pubDate>
+  </item><item>
+    <title>CreatedModifiedDate</title>
+    <link>https://wiki.likui.info/Resource/RSS/CreatedModifiedDate</link>
+    <guid>https://wiki.likui.info/Resource/RSS/CreatedModifiedDate</guid>
+    <description><![CDATA[ This plugin determines the created, modified, and published dates for a document using three potential data sources: frontmatter metadata, Git history, and the filesystem. ]]></description>
+    <pubDate>Thu, 08 Oct 2026 02:42:11 GMT</pubDate>
+  </item><item>
+    <title>Description</title>
+    <link>https://wiki.likui.info/Resource/RSS/Description</link>
+    <guid>https://wiki.likui.info/Resource/RSS/Description</guid>
+    <description><![CDATA[ This plugin generates descriptions that are used as metadata for the HTML head, the RSS Feed and in CPP if there is no main body content, the description is used as the text between the title and the listing. ]]></description>
+    <pubDate>Thu, 08 Oct 2026 02:42:11 GMT</pubDate>
+  </item><item>
+    <title>Frontmatter</title>
+    <link>https://wiki.likui.info/Resource/RSS/Frontmatter</link>
+    <guid>https://wiki.likui.info/Resource/RSS/Frontmatter</guid>
+    <description><![CDATA[ This plugin parses the frontmatter of the page using the gray-matter library. See Syntax, 工业互联网 and MCU for more information. ]]></description>
+    <pubDate>Thu, 08 Oct 2026 02:42:11 GMT</pubDate>
+  </item><item>
+    <title>设计模式</title>
+    <link>https://wiki.likui.info/Area/EE/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F</link>
+    <guid>https://wiki.likui.info/Area/EE/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F</guid>
+    <description><![CDATA[ 在 Python 中，设计模式通常被分为三大类（创建型、结构型、行为型），共有 23 种经典模式。由于 Python 具备强大的动态特性（如函数作为一等公民、动态类型、元编程、new、鸭子类型等），许多在 Java 或 C++ 中需要复杂结构的设计模式，在 Python 中可以实现得非常优雅、简练。 以下是 Python 实现的全部 23 种经典设计模式的完整指南，划分为三大模块，每个模式都包含核心定义与最精简的 Python 骨架代码。 一、 创建型模式 (Creational Patterns) - 5种 核心目的：优雅地创建对象，将对象的创建与使用解耦。 1. ]]></description>
+    <pubDate>Thu, 08 Oct 2026 02:18:50 GMT</pubDate>
   </item><item>
     <title>工具</title>
     <link>https://wiki.likui.info/Area/EE/%E5%B7%A5%E5%85%B7</link>
@@ -35,36 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/%E5%8D%95%E7%89%87%E6%9C%BA%E4%BB%8B%E7%BB%8D</guid>
     <description><![CDATA[  单片机介绍 有哪些单片机？ 什么是51单片机 关于80C51内核 有哪些单片机开发的产品？ 单片机介绍 单片机是一种集成电路芯片，简称MCU，它包含了一个或多个中央处理器（CPU）核心、存储器、输入/输出接口和各种外设电路。单片机的优点是体积小、功耗低、成本低，可以实现高效的控制和处理任务。常见的单片机品牌包括Atmel、Microchip、STMicroelectronics、Texas Instruments等。 有哪些单片机？ 国产宏晶的STC系列单片机 TI公司的MSP430单片机 Atmel公司的AVR系列单片机 ST公司的STM32系列单片机 国产的GD32系列单片机 什么是51... ]]></description>
     <pubDate>Mon, 01 Sep 2025 12:24:26 GMT</pubDate>
-  </item><item>
-    <title>51单片机</title>
-    <link>https://wiki.likui.info/Area/EE/51%E5%8D%95%E7%89%87%E6%9C%BA</link>
-    <guid>https://wiki.likui.info/Area/EE/51%E5%8D%95%E7%89%87%E6%9C%BA</guid>
-    <description><![CDATA[  51单片机学习指南 Todo Aliases: “todo” 51单片机 1.单片机介绍 2.环境搭建 3.创建工程 4.固件烧录 5.点亮LED 6.按键 7.数码管 8.中断 9.定时器 10.串口通讯 11.蜂鸣器 12.IIC、温度传感器 13.PWM 呼吸灯 直流电机 14.看门狗 . ]]></description>
-    <pubDate>Mon, 01 Sep 2025 12:20:34 GMT</pubDate>
-  </item><item>
-    <title>看门狗</title>
-    <link>https://wiki.likui.info/Area/EE/%E7%9C%8B%E9%97%A8%E7%8B%97</link>
-    <guid>https://wiki.likui.info/Area/EE/%E7%9C%8B%E9%97%A8%E7%8B%97</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 01 Sep 2025 12:18:34 GMT</pubDate>
-  </item><item>
-    <title>数学</title>
-    <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6</link>
-    <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 01 Sep 2025 11:15:31 GMT</pubDate>
-  </item><item>
-    <title>测试</title>
-    <link>https://wiki.likui.info/Area/EE/%E6%B5%8B%E8%AF%95</link>
-    <guid>https://wiki.likui.info/Area/EE/%E6%B5%8B%E8%AF%95</guid>
-    <description><![CDATA[ 一、软件测试的分类 1、按开发阶段：单元测试、集成测试、系统测试、验收测试 2、按测试实施组织：α、β、第三方 3、按测试执行方式：静态测试、动态测试 4、按是否查看代码：黑盒测试、白盒测试、灰盒测试 5、按是否手工执行划分：手工测试、自动化测试 6、按测试对象划分：性能测试、安全测试、兼容性测试、文档测试、易用性测试（用户体验测试）、业务测试、界面测试、安装测试 7、按测试地域划分：本地化测试、国际化测试 二、按开发阶段划分 1、UI界面层（用户界面测试）：功能性验证测试、兼容性与用户测试 2、业务逻辑层（API层面）：客户端模拟测试、内外接口测试、SDK接口测试（Software Deve... ]]></description>
-    <pubDate>Mon, 01 Sep 2025 04:42:23 GMT</pubDate>
-  </item><item>
-    <title>一年级英语</title>
-    <link>https://wiki.likui.info/Resource/Education/%E4%B8%80%E5%B9%B4%E7%BA%A7%E8%8B%B1%E8%AF%AD</link>
-    <guid>https://wiki.likui.info/Resource/Education/%E4%B8%80%E5%B9%B4%E7%BA%A7%E8%8B%B1%E8%AF%AD</guid>
-    <description><![CDATA[ mindmap root(小学英语) 字母 字母名 Letter Name A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 例子 A-B-C Song 练习 按顺序说出字母 字母音 Letter Sound A for Apple B for Ball C for Cat 例子 发音练习 a a apple 练习 说出以B开头的单词 大小写书写 大写 A B C D 小写 a b c d 例子 正确书写字母Aa 练习 抄写字母E-H 词汇 动物 Animals cat猫 dog狗 bird鸟 fish鱼 tiger老虎 panda熊猫 例... ]]></description>
-    <pubDate>Sat, 30 Aug 2025 13:34:08 GMT</pubDate>
   </item>
     </channel>
   </rss>
