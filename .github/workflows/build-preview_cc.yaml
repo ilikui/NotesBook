@@ -33,7 +33,7 @@ jobs:
         run: node -v
 
       - name: Build Quartz
-        run: npx quartz build -d content -v
+        run: node ./quartz/bootstrap-cli.mjs build -d content -v
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
