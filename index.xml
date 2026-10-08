@@ -9,8 +9,8 @@
     <title>计算机组成原理</title>
     <link>https://wiki.likui.info/Area/EE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86</link>
     <guid>https://wiki.likui.info/Area/EE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86</guid>
-    <description><![CDATA[ graph TD 中央处理器 CPU subgraph CPU [中央处理器 CPU] subgraph ALU_Sub [运算器] ALU[算术逻辑单元 ALU] ACC[累加器 ACC / 通用寄存器组] ALU &lt;--&gt; ACC end subgraph CU_Sub [控制器] PC[程序计数器 PC] IR[指令寄存器 IR] CU[控制单元 CU] PC --&gt; IR IR --&gt; CU end end class CPU,ALU,ACC,PC,IR,CU cpuStyle; I/O 系统 subgraph IOSystem [I/O 系统] IO_Inte... ]]></description>
-    <pubDate>Thu, 08 Oct 2026 08:30:29 GMT</pubDate>
+    <description><![CDATA[ graph TD classDef cpuStyle fill:#f9f,stroke:#333,stroke-width:2px; classDef memStyle fill:#bbf,stroke:#333,stroke-width:2px; classDef ioStyle fill:#fbf,stroke:#333,stroke-width:2px; classDef busStyle fill:#f96,stroke:#333,stroke-width:1px,stroke-dasharray: 5 5; subgraph CPU [中央处理器 CPU] subgraph ALU_... ]]></description>
+    <pubDate>Thu, 08 Oct 2026 08:38:33 GMT</pubDate>
   </item><item>
     <title>人工智能</title>
     <link>https://wiki.likui.info/Area/EE/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD</link>
