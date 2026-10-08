@@ -10,7 +10,7 @@
     <link>https://wiki.likui.info/Area/EE/%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1</link>
     <guid>https://wiki.likui.info/Area/EE/%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1</guid>
     <description><![CDATA[ 面向对象程序设计（Object-Oriented Programming，简称 OOP）是一种以“对象”为中心的核心编程范式与抽象方针。它将计算机程序视为一组彼此相关的对象集合，每个对象将数据（属性）与操作数据的函数（方法）封装在一起，通过对象之间传递消息来解决复杂的软件开发问题。 [1, 2] 相比传统的面向过程编程（如 C 语言），OOP 的诞生是为了提高软件的重用性、灵活性和扩展性，使其更适合开发大型复杂系统。 [1] 🧱 核心概念：类与对象 理解 OOP 的第一步是分清“类”和“对象”的区别： [3] 类（Class）：是创建对象的模板或蓝图。它定义了一类事物共同拥有的属性和行为，属... ]]></description>
-    <pubDate>Thu, 08 Oct 2026 02:08:13 GMT</pubDate>
+    <pubDate>Thu, 08 Oct 2026 02:10:53 GMT</pubDate>
   </item><item>
     <title>工具</title>
     <link>https://wiki.likui.info/Area/EE/%E5%B7%A5%E5%85%B7</link>
