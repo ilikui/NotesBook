@@ -10,7 +10,7 @@
     <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/NVM%E5%B8%B8%E8%A7%81%E8%A7%A3%E7%AD%94</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/NVM%E5%B8%B8%E8%A7%81%E8%A7%A3%E7%AD%94</guid>
     <description><![CDATA[ graph TD classDef ram fill:#e1f5fe,stroke:#0288d1,stroke-width:2px; classDef nv fill:#ffe0b2,stroke:#f57c00,stroke-width:2px; classDef rom fill:#f1f8e9,stroke:#689f38,stroke-width:2px; subgraph Native_Block [Native 类型: 1对1经典映射] N_RAM[1x RAM Block]:::ram --- N_NV[1x NV Block]:::nv N_ROM[1x ROM Block ... ]]></description>
-    <pubDate>Fri, 09 Oct 2026 07:56:56 GMT</pubDate>
+    <pubDate>Fri, 09 Oct 2026 08:00:42 GMT</pubDate>
   </item><item>
     <title>NVRAMManager</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/NVRAMManager</link>
