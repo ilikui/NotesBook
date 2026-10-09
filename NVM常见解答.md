@@ -7,6 +7,86 @@ tags:
   - NVM
 ---
 
+
+
+```mermaid
+graph TD
+    classDef ram fill:#e1f5fe,stroke:#0288d1,stroke-width:2px;
+    classDef nv fill:#ffe0b2,stroke:#f57c00,stroke-width:2px;
+    classDef rom fill:#f1f8e9,stroke:#689f38,stroke-width:2px;
+
+    subgraph Native_Block [Native 类型: 1对1经典映射]
+        N_RAM[1x RAM Block]:::ram --- N_NV[1x NV Block]:::nv
+        N_ROM[1x ROM Block 可选]:::rom -.-> N_RAM
+    end
+
+    subgraph Redundant_Block [Redundant 类型: 双物理备份]
+        R_RAM[1x RAM Block]:::ram --- R_NV1[NV Block 1]:::nv
+        R_RAM --- R_NV2[NV Block 2]:::nv
+        R_ROM[1x ROM Block 可选]:::rom -.-> R_RAM
+    end
+
+    subgraph Dataset_Block [Dataset 类型: 数组/多配置切换]
+        D_RAM[1x RAM Block]:::ram
+        
+        %% NV 阵列
+        D_RAM -- Data Index --- D_NV1[NV Block 0]:::nv
+        D_RAM -- Data Index --- D_NV2[NV Block 1]:::nv
+        D_RAM -- Data Index --- D_NVM[NV Block M-1]:::nv
+        
+        %% ROM 阵列
+        D_ROM1[ROM Block 0]:::rom -.-> D_RAM
+        D_ROM2[ROM Block 1]:::rom -.-> D_RAM
+        D_ROMN[ROM Block N-1]:::rom -.-> D_RAM
+    end
+
+
+```
+
+
+
+
+```mermaid
+
+sequenceDiagram
+    autonumber
+    actor App as Application (SWC)
+    participant AR as Application RAM Block
+    participant NM as NvM RAM Mirror (可选)
+    participant NV as NV Block (Flash/EEPROM)
+    participant ROM as ROM Block (默认参数)
+
+    %% 场景A：正常读取
+    rect rgb(225, 245, 254)
+        note right of App: 场景 A: NvM_ReadBlock (读取数据)
+        App->>NV: 发起读请求 (指定 Block ID / Index)
+        NV-->>NM: 1. 从物理介质读取至 NvM 镜像
+        NM-->>AR: 2. 复制到应用层 RAM (同步/异步)
+        AR-->>App: 应用层直接使用最新数据
+    end
+
+    %% 场景B：Redundant 容错恢复
+    rect rgb(255, 235, 204)
+        note right of App: 场景 B: Redundant 块第一侧损坏容错
+        App->>NV: 读取 Redundant 块
+        NV->>NV: 1. 检测到 NV Block 1 CRC 错误!
+        NV->>NV: 2. 自动切换读取 NV Block 2 (成功)
+        NV-->>NM: 3. 将正确数据送入 RAM Mirror
+        NM-->>NV: 4. 异步自动修复/重写 NV Block 1
+    end
+
+    %% 场景C：CRC失效或空片加载默认值
+    rect rgb(241, 248, 233)
+        note right of App: 场景 C: 初次上电或物理损坏 (加载 ROM)
+        App->>NV: 读取 Native / Redundant 块
+        NV->>NV: CRC 校验均失败 或 块处于空状态(UNINIT)
+        ROM-->>NM: 1. 引导加载预设的 ROM 默认值
+        NM-->>AR: 2. 刷新应用层 RAM，确保系统不崩溃
+    end
+
+```
+
+
 - NvM 的区块类型——Native、Redundant、Dataset 在什么场景下各有用处
 
   1.在 AUTOSAR 架构的 NvM（非易失性存储管理器） 模块中，Native、Redundant 和 Dataset 是三种核心的块管理类型（Block Management Types）。它们通过不同的 NV 存储结构设计，平衡了存储成本、数据可靠性以及多配置灵活性。 ^[1, 2, 3]
@@ -61,6 +141,7 @@ tags:
 
 >参考链接： 
 ---
+
 * [1] [https://bbs.csdn.net](https://bbs.csdn.net/weixin_32349093/article/details/100251078)
 * [2] [https://www.eet-china.com](https://www.eet-china.com/mp/a65142.html)
 * [3] [https://www.eet-china.com](https://www.eet-china.com/mp/a125404.html)
