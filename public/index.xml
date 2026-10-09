@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>NVM常见解答</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/NVM%E5%B8%B8%E8%A7%81%E8%A7%A3%E7%AD%94</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/NVM%E5%B8%B8%E8%A7%81%E8%A7%A3%E7%AD%94</guid>
+    <description><![CDATA[ graph TD classDef ram fill:#e1f5fe,stroke:#0288d1,stroke-width:2px; classDef nv fill:#ffe0b2,stroke:#f57c00,stroke-width:2px; classDef rom fill:#f1f8e9,stroke:#689f38,stroke-width:2px; subgraph Native_Block [Native 类型: 1对1经典映射] N_RAM[1x RAM Block]:::ram --- N_NV[1x NV Block]:::nv N_ROM[1x ROM Block ... ]]></description>
+    <pubDate>Fri, 09 Oct 2026 07:56:56 GMT</pubDate>
+  </item><item>
+    <title>NVRAMManager</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/NVRAMManager</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/NVRAMManager</guid>
+    <description><![CDATA[ NvM（NVRAM Manager，非易失 RAM 管理） 是 CP 基础软件模块，负责按各自需求存储与维护非易失（NV）数据，可管理 EEPROM 与 Flash EEPROM 仿真设备上的 NV 数据，并提供同步 / 异步的初始化、读、写、控制服务。 一句话定位 「掉电不丢」的数据管家：汽车环境下按块管理 NV 数据，屏蔽底层 EEPROM / Flash 差异。 规范信息 项目内容平台CP类别SWS — 软件模块规范（Software Specification）UID033版本R25-11本地 PDFAUTOSAR_CP_SWS_NVRAMManager.pdf纯文本全文CP_SWS_... ]]></description>
+    <pubDate>Fri, 09 Oct 2026 07:47:17 GMT</pubDate>
+  </item><item>
     <title>新能源汽车</title>
     <link>https://wiki.likui.info/Area/EE/%E6%96%B0%E8%83%BD%E6%BA%90%E6%B1%BD%E8%BD%A6</link>
     <guid>https://wiki.likui.info/Area/EE/%E6%96%B0%E8%83%BD%E6%BA%90%E6%B1%BD%E8%BD%A6</guid>
@@ -52,18 +64,6 @@
     <link>https://wiki.likui.info/Area/Area</link>
     <guid>https://wiki.likui.info/Area/Area</guid>
     <description><![CDATA[  Area（领域） 是 PARA 方法中需要长期维护、持续投入的能力与责任范围，没有截止日期。完整导航见 Area 领域总览。 领域清单 EE —— 电子与嵌入式 EE 电子基础 C语言 操作系统 单片机介绍 AI —— 人工智能 人工智能 智能体 CS —— 计算机科学 CS KM —— 知识管理 数字花园 . ]]></description>
-    <pubDate>Thu, 08 Oct 2026 11:00:46 GMT</pubDate>
-  </item><item>
-    <title>51单片机</title>
-    <link>https://wiki.likui.info/Area/EE/51%E5%8D%95%E7%89%87%E6%9C%BA</link>
-    <guid>https://wiki.likui.info/Area/EE/51%E5%8D%95%E7%89%87%E6%9C%BA</guid>
-    <description><![CDATA[ 51 单片机泛指以 Intel 80C51 内核为基础的一系列 8 位单片机，因指令系统简单、资料丰富、价格低廉，长期作为嵌入式入门的首选平台。课程中常用的国产型号是 STC（宏晶）的 STC8052RC。 一句话定位 51 单片机 = 80C51 内核的 8 位 MCU，是理解「寄存器编程 + 外设驱动」的最佳入门载体。 知识体系 flowchart TD A[51 单片机] --&gt; B[内核基础] A --&gt; C[外设模块] A --&gt; D[开发流程] A --&gt; E[进阶方向] B --&gt; B1[&quot;80C51 内核&quot;] B --&gt; ... ]]></description>
-    <pubDate>Thu, 08 Oct 2026 11:00:46 GMT</pubDate>
-  </item><item>
-    <title>ARM</title>
-    <link>https://wiki.likui.info/Area/EE/ARM</link>
-    <guid>https://wiki.likui.info/Area/EE/ARM</guid>
-    <description><![CDATA[ ARM 是一家英国芯片 IP 设计公司（ARM Holdings），它本身不生产芯片，而是把处理器内核设计授权给芯片厂商。ARM 架构是当今嵌入式与移动领域的绝对主流：手机、单片机、汽车 ECU、服务器（如 Graviton、鲲鹏）中都能见到它。 一句话定位 ARM = 一家做「CPU 内核图纸」的公司 + 一套以低功耗著称的 RISC 指令集架构。 知识体系 flowchart TD A[ARM] --&gt; B[商业模式] A --&gt; C[架构分类] A --&gt; D[核心技术] A --&gt; E[生态与工具] B --&gt; B1[&quot;IP 授权: 内核卖给芯片... ]]></description>
     <pubDate>Thu, 08 Oct 2026 11:00:46 GMT</pubDate>
   </item>
     </channel>

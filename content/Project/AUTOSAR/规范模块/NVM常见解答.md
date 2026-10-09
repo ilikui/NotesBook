@@ -29,12 +29,10 @@ graph TD
     subgraph Dataset_Block [Dataset 类型: 数组/多配置切换]
         D_RAM[1x RAM Block]:::ram
         
-        %% NV 阵列
-        D_RAM -- Data Index --- D_NV1[NV Block 0]:::nv
-        D_RAM -- Data Index --- D_NV2[NV Block 1]:::nv
-        D_RAM -- Data Index --- D_NVM[NV Block M-1]:::nv
+        D_RAM -- Data Index --> D_NV1[NV Block 0]:::nv
+        D_RAM -- Data Index --> D_NV2[NV Block 1]:::nv
+        D_RAM -- Data Index --> D_NVM[NV Block M-1]:::nv
         
-        %% ROM 阵列
         D_ROM1[ROM Block 0]:::rom -.-> D_RAM
         D_ROM2[ROM Block 1]:::rom -.-> D_RAM
         D_ROMN[ROM Block N-1]:::rom -.-> D_RAM
@@ -56,7 +54,6 @@ sequenceDiagram
     participant NV as NV Block (Flash/EEPROM)
     participant ROM as ROM Block (默认参数)
 
-    %% 场景A：正常读取
     rect rgb(225, 245, 254)
         note right of App: 场景 A: NvM_ReadBlock (读取数据)
         App->>NV: 发起读请求 (指定 Block ID / Index)
@@ -65,7 +62,6 @@ sequenceDiagram
         AR-->>App: 应用层直接使用最新数据
     end
 
-    %% 场景B：Redundant 容错恢复
     rect rgb(255, 235, 204)
         note right of App: 场景 B: Redundant 块第一侧损坏容错
         App->>NV: 读取 Redundant 块
@@ -75,7 +71,6 @@ sequenceDiagram
         NM-->>NV: 4. 异步自动修复/重写 NV Block 1
     end
 
-    %% 场景C：CRC失效或空片加载默认值
     rect rgb(241, 248, 233)
         note right of App: 场景 C: 初次上电或物理损坏 (加载 ROM)
         App->>NV: 读取 Native / Redundant 块
