@@ -13,13 +13,13 @@ tags:
 
 ## 规范信息
 
-| 项目 | 内容 |
-| --- | --- |
-| 平台 | CP |
-| 类别 | SWS — 软件模块规范（Software Specification） |
-| UID | 033 |
-| 版本 | R25-11 |
-| 本地 PDF | [AUTOSAR_CP_SWS_NVRAMManager.pdf](file:///F:/Work/Standards/01_Sources/CP_SWS_NVRAMManager_033/AUTOSAR_CP_SWS_NVRAMManager.pdf) |
+| 项目       | 内容                                                                                                                                    |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| 平台       | CP                                                                                                                                      |
+| 类别       | SWS — 软件模块规范（Software Specification）                                                                                            |
+| UID        | 033                                                                                                                                     |
+| 版本       | R25-11                                                                                                                                  |
+| 本地 PDF   | [AUTOSAR_CP_SWS_NVRAMManager.pdf](file:///F:/Work/Standards/01_Sources/CP_SWS_NVRAMManager_033/AUTOSAR_CP_SWS_NVRAMManager.pdf)         |
 | 纯文本全文 | [CP_SWS_NVRAMManager.complete.txt](file:///F:/Work/Standards/01_Sources/CP_SWS_NVRAMManager_033/zzgen/CP_SWS_NVRAMManager.complete.txt) |
 
 ## 知识体系
@@ -55,9 +55,12 @@ flowchart TD
 
 - 通过 MemIf / EA / Fee 访问底层存储；被 [[DiagnosticEventManager]]（保存 DTC）、[[RTE]]（NvBlock）等使用。
 
+
+
 ## 相关
 
 - [[DiagnosticEventManager]]
 - [[RTE]]
 - [[CP]]
 - [[规范模块]]
+- [[NVM常见解答]]
