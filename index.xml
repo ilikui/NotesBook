@@ -6,6 +6,24 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>新能源汽车</title>
+    <link>https://wiki.likui.info/Area/EE/%E6%96%B0%E8%83%BD%E6%BA%90%E6%B1%BD%E8%BD%A6</link>
+    <guid>https://wiki.likui.info/Area/EE/%E6%96%B0%E8%83%BD%E6%BA%90%E6%B1%BD%E8%BD%A6</guid>
+    <description><![CDATA[ 新能源汽车（New Energy Vehicle，NEV）指以非常规车用燃料为动力源、综合车辆动力控制和驱动方面的先进技术形成的汽车，主要包含**纯电动（BEV）、插电混动（PHEV）、增程式（EREV）和燃料电池（FCEV）**四类。它是「汽车 + 电子 + 软件」深度融合的典型，也是嵌入式与汽车电子工程师的核心赛道。 一句话定位 新能源汽车 = 三电系统（电池、电机、电控）+ 智能座舱 + 智能驾驶，本质是一台「带四个轮子的大电脑」。 知识体系 flowchart TD A[新能源汽车] --&gt; B[三电系统] A --&gt; C[整车电子电气架构] A --&gt; D[智能驾驶... ]]></description>
+    <pubDate>Fri, 09 Oct 2026 05:16:34 GMT</pubDate>
+  </item><item>
+    <title>模拟电路</title>
+    <link>https://wiki.likui.info/Area/EE/%E6%A8%A1%E6%8B%9F%E7%94%B5%E8%B7%AF</link>
+    <guid>https://wiki.likui.info/Area/EE/%E6%A8%A1%E6%8B%9F%E7%94%B5%E8%B7%AF</guid>
+    <description><![CDATA[ 模拟电路处理的是连续变化的电压和电流信号。它是数字电路的「上游」：现实世界的温度、声音、光照都是模拟量，必须先经传感器和模拟前端变成电信号，再经 ADC 数字化后交给数字系统。可以说，没有模拟电路，数字世界就没有入口。 一句话定位 数字电路管「0 和 1」，模拟电路管「0 和 1 之间的所有值」。 知识体系 flowchart TD A[模拟电路] --&gt; B[基础元件] A --&gt; C[核心器件] A --&gt; D[经典电路] A --&gt; E[与数字系统的接口] B --&gt; B1[&quot;电阻 / 电容 / 电感&quot;] B --&gt; B2[&quo... ]]></description>
+    <pubDate>Fri, 09 Oct 2026 05:16:34 GMT</pubDate>
+  </item><item>
+    <title>自动驾驶</title>
+    <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6</link>
+    <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6</guid>
+    <description><![CDATA[ mindmap root((自动驾驶)) 自动驾驶分级 L1 驾驶辅助::icon(fa fa-car) :::结合单项辅助（如ACC自适应巡航、LKA车道保持） L2 部分自动化 :::人类全程监管（如Tesla FSD、主流城市NOA） L3 条件自动化 :::特定场景系统驾驶（系统请求时人类接管） L4 高度自动化 :::限定区域完全无须人类接管（如Robotaxi无人出租车） L5 完全自动化 :::全场景、全天候无条件完全自动驾驶（终极形态） 核心技术架构 环境感知层 传感器硬件::icon(fa fa-microchip) :::激光雷达 LiDAR :::高精摄像头 Camera... ]]></description>
+    <pubDate>Fri, 09 Oct 2026 05:16:34 GMT</pubDate>
+  </item><item>
     <title>Archive</title>
     <link>https://wiki.likui.info/Archive/Archive</link>
     <guid>https://wiki.likui.info/Archive/Archive</guid>
@@ -46,24 +64,6 @@
     <link>https://wiki.likui.info/Area/EE/ARM</link>
     <guid>https://wiki.likui.info/Area/EE/ARM</guid>
     <description><![CDATA[ ARM 是一家英国芯片 IP 设计公司（ARM Holdings），它本身不生产芯片，而是把处理器内核设计授权给芯片厂商。ARM 架构是当今嵌入式与移动领域的绝对主流：手机、单片机、汽车 ECU、服务器（如 Graviton、鲲鹏）中都能见到它。 一句话定位 ARM = 一家做「CPU 内核图纸」的公司 + 一套以低功耗著称的 RISC 指令集架构。 知识体系 flowchart TD A[ARM] --&gt; B[商业模式] A --&gt; C[架构分类] A --&gt; D[核心技术] A --&gt; E[生态与工具] B --&gt; B1[&quot;IP 授权: 内核卖给芯片... ]]></description>
-    <pubDate>Thu, 08 Oct 2026 11:00:46 GMT</pubDate>
-  </item><item>
-    <title>CPP</title>
-    <link>https://wiki.likui.info/Area/EE/CPP</link>
-    <guid>https://wiki.likui.info/Area/EE/CPP</guid>
-    <description><![CDATA[  一句话定位 C++ = C 的性能 + 面向对象 + 泛型编程 + 现代内存管理，一把「既底层又高层」的瑞士军刀。 知识体系 flowchart TD A[&quot;C++ 学习路线&quot;] --&gt; B[&quot;语法筑基&quot;] A --&gt; C[&quot;STL 与标准库&quot;] A --&gt; D[&quot;现代 C++&quot;] A --&gt; E[&quot;实战进阶&quot;] B --&gt; B1[&quot;数据类型与流程控制&quot;] B --&gt; B2[&quot;函数: 值 / 指针 / 引用传参&quot;] B... ]]></description>
-    <pubDate>Thu, 08 Oct 2026 11:00:46 GMT</pubDate>
-  </item><item>
-    <title>C语言</title>
-    <link>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80</link>
-    <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80</guid>
-    <description><![CDATA[ C 语言是嵌入式与系统编程的通用语言：它贴近硬件、语法精简、可移植性强，几乎所有操作系统内核、编译器和 MCU 固件都由 C 写成。学 C 不只是学语法，更是理解「内存、指针、编译链接」的入口。 一句话定位 C = 一门「小而深」的语言：语法少，但指针与内存模型足够陪你走完整个职业生涯。 知识体系 flowchart TD A[C 语言] --&gt; B[基础语法] A --&gt; C[核心难点] A --&gt; D[模块化] A --&gt; E[工程实践] B --&gt; B1[&quot;数据类型与变量&quot;] B --&gt; B2[&quot;运算符与表达式&quot;... ]]></description>
-    <pubDate>Thu, 08 Oct 2026 11:00:46 GMT</pubDate>
-  </item><item>
-    <title>MCU</title>
-    <link>https://wiki.likui.info/Area/EE/MCU</link>
-    <guid>https://wiki.likui.info/Area/EE/MCU</guid>
-    <description><![CDATA[ MCU（Microcontroller Unit，微控制器）俗称单片机，是把 CPU 核心、存储器（Flash / RAM）、各种外设（GPIO、定时器、串口、ADC…）集成到一块芯片上的微型计算机。它的使命是「控制」——体积小、功耗低、成本低、实时性强。 一句话定位 MCU = CPU + 存储 + 外设，集成在一颗芯片上，专为嵌入式控制而生。 知识体系 flowchart TD A[MCU 微控制器] --&gt; B[核心组成] A --&gt; C[主流平台] A --&gt; D[关键指标] A --&gt; E[选型思路] B --&gt; B1[&quot;CPU 内核&quot... ]]></description>
     <pubDate>Thu, 08 Oct 2026 11:00:46 GMT</pubDate>
   </item>
     </channel>
