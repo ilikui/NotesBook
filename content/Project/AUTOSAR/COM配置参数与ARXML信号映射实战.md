@@ -204,6 +204,22 @@ python arxml_signal_report.py System.arxml EcuExtract.arxml Ecuc -o signal_repor
 
 **边界说明：** 这是通用盘点脚本，不会自动把分散在多个 ARXML 中的引用全部解析成闭合模型，也不保证字段对每个 AUTOSAR Release 或工具输出都相同。它不会校验 XSD、引用目标是否存在、ECUC 参数是否合法，也不会自动计算 Motorola 位布局。对大型文件应先在副本上运行，并用项目工具进行模型校验。
 
+### 3.1 仓库内可复用的审查脚本
+
+上面的简化示例用于解释字段提取思路。仓库还提供了独立 CLI 工具：[scripts/arxml_signal_audit.py](https://github.com/ilikui/NotesBook/blob/main/scripts/arxml_signal_audit.py)。它可跨多个 ARXML 文件建立对象路径索引，导出对象盘点和引用审查结果，并可选用警告作为 CI 失败条件。
+
+~~~bash
+# 输出 CSV，方便在 Excel 中筛选
+python scripts/arxml_signal_audit.py ./path/to/arxml -o reports/arxml-audit.csv
+
+# 输出 JSON，方便后续自动化处理
+python scripts/arxml_signal_audit.py ./path/to/arxml --format json -o reports/arxml-audit.json
+
+# 存在审查发现时返回非零退出码，可接入 CI
+python scripts/arxml_signal_audit.py ./path/to/arxml --fail-on-warn
+~~~
+
+该 CLI 同样是只读审查工具。引用解析仅对本次输入文件中已建立的 AUTOSAR 对象路径进行匹配；未解析项可能意味着依赖文件未提供、路径不一致或工具变体差异，不应直接认定为规范错误。建议先用项目的完整 ARXML 输入集合运行，再人工复核告警。
 ## 4. 从报告到可验证结论
 
 ~~~mermaid
