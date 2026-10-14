@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>RTE 与 SWC 工程实现</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/RTE%E4%B8%8ESWC%E5%B7%A5%E7%A8%8B%E5%AE%9E%E7%8E%B0</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/RTE%E4%B8%8ESWC%E5%B7%A5%E7%A8%8B%E5%AE%9E%E7%8E%B0</guid>
+    <description><![CDATA[ RTE 与 SWC 工程实现：从端口建模到 Runnable 执行 一句话定位 SWC 描述功能与接口，系统描述组件如何连接和部署，RTE Generator 将模型与 ECU 配置转成目标 ECU 可编译的通信与调度代码。 1. ]]></description>
+    <pubDate>Wed, 14 Oct 2026 14:01:35 GMT</pubDate>
+  </item><item>
     <title>微信读书</title>
     <link>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</link>
     <guid>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</guid>
@@ -58,12 +64,6 @@
     <link>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/%E4%B9%A6%E7%B1%8D/%E5%B5%8C%E5%85%A5%E5%BC%8Fc%E8%AF%AD%E8%A8%80%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB%E4%BB%8E%E8%8A%AF%E7%89%87%E7%BC%96%E8%AF%91%E5%99%A8%E5%88%B0%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-d73f9473</link>
     <guid>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/%E4%B9%A6%E7%B1%8D/%E5%B5%8C%E5%85%A5%E5%BC%8Fc%E8%AF%AD%E8%A8%80%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB%E4%BB%8E%E8%8A%AF%E7%89%87%E7%BC%96%E8%AF%91%E5%99%A8%E5%88%B0%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-d73f9473</guid>
     <description><![CDATA[ 嵌入式C语言自我修养：从芯片、编译器到操作系统 作者： 王利涛 编著 分类： 未分类 个人划线与想法： 131 条 阅读记录 当前页面同步书籍信息与记录数量（共 131 条），未公开原始划线和个人批注。 如需在公开网站展示具体记录，请在仓库 Settings → Secrets and variables → Actions → Variables 中将 WEREAD_PUBLISH_NOTES 设置为 true。开启后，个人划线和批注会公开发布。 来源：微信读书. ]]></description>
-    <pubDate>Wed, 14 Oct 2026 13:51:43 GMT</pubDate>
-  </item><item>
-    <title>嵌入式Linux与物联网软件开发：C语言内核深度解析</title>
-    <link>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/%E4%B9%A6%E7%B1%8D/%E5%B5%8C%E5%85%A5%E5%BC%8Flinux%E4%B8%8E%E7%89%A9%E8%81%94%E7%BD%91%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91c%E8%AF%AD%E8%A8%80%E5%86%85%E6%A0%B8%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90-d39d992a</link>
-    <guid>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/%E4%B9%A6%E7%B1%8D/%E5%B5%8C%E5%85%A5%E5%BC%8Flinux%E4%B8%8E%E7%89%A9%E8%81%94%E7%BD%91%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91c%E8%AF%AD%E8%A8%80%E5%86%85%E6%A0%B8%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90-d39d992a</guid>
-    <description><![CDATA[ 嵌入式Linux与物联网软件开发：C语言内核深度解析 作者： 朱有鹏 张先凤 分类： 未分类 个人划线与想法： 1 条 阅读记录 当前页面同步书籍信息与记录数量（共 1 条），未公开原始划线和个人批注。 如需在公开网站展示具体记录，请在仓库 Settings → Secrets and variables → Actions → Variables 中将 WEREAD_PUBLISH_NOTES 设置为 true。开启后，个人划线和批注会公开发布。 来源：微信读书. ]]></description>
     <pubDate>Wed, 14 Oct 2026 13:51:43 GMT</pubDate>
   </item>
     </channel>
