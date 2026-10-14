@@ -42,6 +42,7 @@ jobs:
           git clone --depth 1 https://github.com/ilikui/WeRead.git "$RUNNER_TEMP/WeRead"
           python -m pip install --upgrade pip
           python -m pip install requests flomo
+          rm -f "$RUNNER_TEMP/WeRead/static/data/weread_notes.json"
 
       - name: Export WeRead records
         env:
