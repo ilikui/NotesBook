@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>搜集箱</title>
+    <link>https://wiki.likui.info/Area/KM/inbox</link>
+    <guid>https://wiki.likui.info/Area/KM/inbox</guid>
+    <description><![CDATA[ 搜集箱（Inbox） 这里用于快速捕捉、暂存和待处理的灵感、网页、问题与任务。搜集箱不是长期仓库，也不要求记录时就完成分类。 使用原则 先捕捉，后处理；定期清空，不把搜集箱变成第二个永远整理不完的收藏夹。 快速记录模板 ```markdown 一句话标题 来源： 记录时间： 为什么值得关注： 下一步： ``` 不需要每项都填。灵感刚出现时，至少留下标题、核心内容或来源中的一项，确保未来能够理解。 处理流程 ```mermaid flowchart TD A[新信息 / 灵感] ⇒ B[放入搜集箱] B ⇒ C{下一步是什么?} C ⇒|需要执行| D[转成任务或项目行动] C ⇒|值得理解| ... ]]></description>
+    <pubDate>Wed, 14 Oct 2026 13:35:26 GMT</pubDate>
+  </item><item>
     <title>知识管理</title>
     <link>https://wiki.likui.info/Area/KM/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86</link>
     <guid>https://wiki.likui.info/Area/KM/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86</guid>
@@ -47,12 +53,6 @@
     <guid>https://wiki.likui.info/Area/KM/%E6%B8%90%E8%BF%9B%E9%98%85%E8%AF%BB</guid>
     <description><![CDATA[ 发展渐进阅读（Incremental Reading，简称 IR）是一种高度系统化的超速学习与长效记忆技术。它由著名的记忆软件 SuperMemo 的创始人 Piotr Woźniak 发明，是目前公认最强大的知识内化方法之一。 简单来说，渐进阅读就是把“阅读”与“间隔重复记忆（闪卡卡片）”完美融合。它改变了传统“从头读到尾”的线性读书方式，而是将文章拆碎、分批、循环渐进地阅读和记忆。 💡 核心工作流程：从文章到永久记忆 渐进阅读通常分为以下 4 个核心步骤，像流水线一样处理知识： 导入（Import） • 将你想读的大量长篇文章、论文、电子书、网页批量导入到支持渐进阅读的软件中（如 Sup... ]]></description>
     <pubDate>Wed, 14 Oct 2026 03:23:25 GMT</pubDate>
-  </item><item>
-    <title>搜集箱</title>
-    <link>https://wiki.likui.info/Area/KM/inbox</link>
-    <guid>https://wiki.likui.info/Area/KM/inbox</guid>
-    <description><![CDATA[  收藏夹 ZhiHuArchive . ]]></description>
-    <pubDate>Wed, 14 Oct 2026 02:26:40 GMT</pubDate>
   </item><item>
     <title>工具</title>
     <link>https://wiki.likui.info/Area/KM/%E5%B7%A5%E5%85%B7</link>
