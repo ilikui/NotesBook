@@ -53,6 +53,7 @@ flowchart TD
 ## 工程实践扩展
 
 - [[COM 信号编码与发送接收机制]]：位宽、Intel / Motorola 端序、Factor / Offset、发送与接收流程、超时和更新状态、C 数值转换示例及测试向量。
+- [[COM 配置参数与 ARXML 信号映射实战]]：使用 Python 标准库盘点 ARXML 中的信号、I-PDU 与映射，输出 CSV 供工程审查。
 - [[通信栈工程实战与 CANoe 验证]]：从 RTE 到 CAN 总线的端到端跟踪与 CANoe 测试。
 
 ## 依赖关系
