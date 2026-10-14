@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>KM</title>
+    <link>https://wiki.likui.info/Area/KM/</link>
+    <guid>https://wiki.likui.info/Area/KM/</guid>
+    <description><![CDATA[ KM（Knowledge Management，知识管理） 关注如何高效地收集、理解、组织、连接和复用个人知识。它不只是工具问题，更是一套帮助思考与行动持续改进的方法。 一句话定位 让知识「进得来、找得到、连得上、用得上」，并最终转化为判断、作品与行动。 知识管理地图 flowchart TD A[知识输入] --&gt; B[捕捉与收集] B --&gt; C[阅读与理解] C --&gt; D[提炼为自己的表达] D --&gt; E[组织与连接] E --&gt; F[检索与复用] F --&gt; G[输出与行动] G --&gt; H[复盘与更新] H --&gt; E 本区域导航 ... ]]></description>
+    <pubDate>Wed, 14 Oct 2026 13:34:39 GMT</pubDate>
+  </item><item>
     <title>知识管理</title>
     <link>https://wiki.likui.info/Area/KM/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86</link>
     <guid>https://wiki.likui.info/Area/KM/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86</guid>
@@ -58,12 +64,6 @@
     <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6</link>
     <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6</guid>
     <description><![CDATA[ mindmap root((自动驾驶)) 自动驾驶分级 L1 驾驶辅助::icon(fa fa-car) :::结合单项辅助（如ACC自适应巡航、LKA车道保持） L2 部分自动化 :::人类全程监管（如Tesla FSD、主流城市NOA） L3 条件自动化 :::特定场景系统驾驶（系统请求时人类接管） L4 高度自动化 :::限定区域完全无须人类接管（如Robotaxi无人出租车） L5 完全自动化 :::全场景、全天候无条件完全自动驾驶（终极形态） 核心技术架构 环境感知层 传感器硬件::icon(fa fa-microchip) :::激光雷达 LiDAR :::高精摄像头 Camera... ]]></description>
-    <pubDate>Sat, 10 Oct 2026 00:06:37 GMT</pubDate>
-  </item><item>
-    <title>自动驾驶学习</title>
-    <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E5%AD%A6%E4%B9%A0</link>
-    <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E5%AD%A6%E4%B9%A0</guid>
-    <description><![CDATA[ mindmap root((自动驾驶技术栈)) 软件 自动驾驶软件 基础软件 编程语言 c++ python node.js bash 基础库 opencv 点云PCL 坐标转换(transform) 容器 机器学习 tensorflow pytorch 实时操作系统 ROS 任务调度 中间件 DDS服务 分布式消息队列 定位 RTK 先验地图(点云)定位 SLAM V2X定位 融合定位 功能 辅助功能 疲劳检测 人脸识别 感知 红绿灯识别 车道线、可行驶区域识别 交通标志识别 障碍物检测 技术 目标检测 目标跟踪 场景分割 规划 全局规划routing A* Dijkstra 决策规划 有限... ]]></description>
     <pubDate>Sat, 10 Oct 2026 00:06:37 GMT</pubDate>
   </item>
     </channel>
