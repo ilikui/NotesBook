@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>知识管理工作流</title>
+    <link>https://wiki.likui.info/Area/KM/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E5%B7%A5%E4%BD%9C%E6%B5%81</link>
+    <guid>https://wiki.likui.info/Area/KM/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E5%B7%A5%E4%BD%9C%E6%B5%81</guid>
+    <description><![CDATA[ 从信息输入到可复用知识的轻量化流程。 ]]></description>
+    <pubDate>Wed, 14 Oct 2026 13:33:03 GMT</pubDate>
+  </item><item>
     <title>数字花园</title>
     <link>https://wiki.likui.info/</link>
     <guid>https://wiki.likui.info/</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E5%AD%A6%E4%B9%A0</guid>
     <description><![CDATA[ mindmap root((自动驾驶技术栈)) 软件 自动驾驶软件 基础软件 编程语言 c++ python node.js bash 基础库 opencv 点云PCL 坐标转换(transform) 容器 机器学习 tensorflow pytorch 实时操作系统 ROS 任务调度 中间件 DDS服务 分布式消息队列 定位 RTK 先验地图(点云)定位 SLAM V2X定位 融合定位 功能 辅助功能 疲劳检测 人脸识别 感知 红绿灯识别 车道线、可行驶区域识别 交通标志识别 障碍物检测 技术 目标检测 目标跟踪 场景分割 规划 全局规划routing A* Dijkstra 决策规划 有限... ]]></description>
     <pubDate>Sat, 10 Oct 2026 00:06:37 GMT</pubDate>
-  </item><item>
-    <title>NVM常见解答</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/NVM%E5%B8%B8%E8%A7%81%E8%A7%A3%E7%AD%94</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/NVM%E5%B8%B8%E8%A7%81%E8%A7%A3%E7%AD%94</guid>
-    <description><![CDATA[ graph TD classDef ram fill:#e1f5fe,stroke:#0288d1,stroke-width:2px; classDef nv fill:#ffe0b2,stroke:#f57c00,stroke-width:2px; classDef rom fill:#f1f8e9,stroke:#689f38,stroke-width:2px; subgraph Native_Block [Native 类型: 1对1经典映射] N_RAM[1x RAM Block]:::ram --- N_NV[1x NV Block]:::nv N_ROM[1x ROM Block ... ]]></description>
-    <pubDate>Fri, 09 Oct 2026 08:00:42 GMT</pubDate>
   </item>
     </channel>
   </rss>
