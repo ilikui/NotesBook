@@ -46,6 +46,37 @@ flowchart TD
 - [[应用领域]] —— 车身、底盘、动力、ADAS、信息娱乐与车联网
 - [[规范模块]] —— 规范模块库总索引：CP / AP / FO 三平台与 27 个核心模块笔记
 
+## 工程实践专题
+
+概念与规范模块之外，以下专题把模型、生成代码和运行时故障串成可执行的工程流程：
+
+~~~mermaid
+flowchart LR
+    A["SWC / Interface / ARXML"] --> B["System Description / ECU Mapping"]
+    B --> C["RTE Contract 与代码生成"]
+    C --> D["OS Task / Runnable 执行"]
+    C --> E["COM → PduR → CanIf"]
+    D --> F["集成测试与故障定位"]
+    E --> F
+~~~
+
+- [[RTE 与 SWC 工程实现]] —— Port、Interface、Runnable、Event、Rte_Read / Rte_Write、Rte_Call 与任务映射。
+- [[ARXML 与 RTE 代码生成实战]] —— ARXML 分层、引用校验、Contract Phase、RTE Generation、增量生成和版本追溯。
+- [[AUTOSAR 故障排查手册]] —— Runnable 不执行、信号不更新、总线无报文、UDS / NvM 异常等分层排查。
+- [[Classic平台学习路线与面试题]] —— 学习顺序、三条核心调用链、面试问答与工程化表达模板。
+
+### 推荐阅读顺序
+
+1. 建立全局认知：[[软件架构]] → [[核心理念]]。
+2. 理解 SWC 模型：[[规范模块/SoftwareComponentTemplate]] → [[RTE 与 SWC 工程实现]]。
+3. 理解生成输入与约束：[[规范模块/SystemTemplate]] → [[规范模块/ECUConfiguration]] → [[ARXML 与 RTE 代码生成实战]]。
+4. 打通信号链路：[[规范模块/RTE]] → [[规范模块/COM]] → [[规范模块/PDURouter]] → [[规范模块/CANInterface]]。
+5. 用真实现象验证：[[AUTOSAR 故障排查手册]]，最后完成 [[Classic平台学习路线与面试题]]。
+
+> [!warning] 版本与供应商边界
+> AUTOSAR Release、生成器版本、供应商扩展和项目配置会影响 API 签名、参数可用性、生成文件布局与诊断行为。示例用于理解机制，落地时应以项目实际生成头文件、配置和官方规范为准。
+
+
 ## 为什么值得学
 
 - 汽车电子是目前嵌入式领域**最稳定、需求最大**的赛道之一；
