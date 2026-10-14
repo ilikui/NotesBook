@@ -1,0 +1,90 @@
+name: Sync WeRead Reading Records
+
+on:
+  # 每天北京时间 00:15（UTC 16:15）同步微信读书
+  schedule:
+    - cron: "15 16 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weread-sync
+  cancel-in-progress: false
+
+jobs:
+  sync-build-deploy:
+    if: ${{ github.repository == 'ilikui/NotesBook' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout NotesBook
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Check WeRead API key
+        env:
+          WEREAD_API_KEY: ${{ secrets.WEREAD_API_KEY }}
+        run: |
+          if [ -z "$WEREAD_API_KEY" ]; then
+            echo "::error::请在 NotesBook 仓库 Settings → Secrets and variables → Actions 中添加 WEREAD_API_KEY。"
+            exit 1
+          fi
+
+      - name: Fetch WeRead exporter
+        run: |
+          git clone --depth 1 https://github.com/ilikui/WeRead.git "$RUNNER_TEMP/WeRead"
+          python -m pip install --upgrade pip
+          python -m pip install requests flomo
+
+      - name: Export WeRead records
+        env:
+          WEREAD_API_KEY: ${{ secrets.WEREAD_API_KEY }}
+          WEREAD_API_GATEWAY: ${{ vars.WEREAD_API_GATEWAY || 'https://i.weread.qq.com/api/agent/gateway' }}
+        run: |
+          python "$RUNNER_TEMP/WeRead/weread_hugo_exporter.py" --site-dir "$RUNNER_TEMP/WeRead" --skip-memos --skip-markdown
+          test -s "$RUNNER_TEMP/WeRead/static/data/weread_notes.json"
+
+      - name: Import records into Quartz content
+        env:
+          WEREAD_PUBLISH_NOTES: ${{ vars.WEREAD_PUBLISH_NOTES || 'false' }}
+        run: |
+          python scripts/import_weread_to_quartz.py "$RUNNER_TEMP/WeRead/static/data/weread_notes.json" "content/Resource/微信读书"
+
+      - name: Commit synchronized reading records
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/Resource/微信读书/
+          if git diff --cached --quiet; then
+            echo "阅读记录没有变化。"
+          else
+            git commit -m "chore: sync WeRead reading records [skip ci]"
+            git push origin HEAD:main
+          fi
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install Quartz dependencies
+        run: npm ci
+
+      - name: Build digital garden
+        run: node ./quartz/bootstrap-cli.mjs build -d content -v
+
+      - name: Deploy digital garden
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
+          commit_message: "Deploy digital garden with synced WeRead records"
