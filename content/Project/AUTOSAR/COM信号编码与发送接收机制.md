@@ -273,5 +273,6 @@ bool RawU16ToPhysical(uint16_t raw,
 - [[规范模块/RTE]]
 - [[规范模块/PDURouter]]
 - [[规范模块/CANInterface]]
+- [[COM 配置参数与 ARXML 信号映射实战]]
 - [[通信栈工程实战与 CANoe 验证]]
 - [[AUTOSAR 故障排查手册]]
