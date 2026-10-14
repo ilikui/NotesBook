@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>搜集箱</title>
+    <link>https://wiki.likui.info/Area/KM/inbox</link>
+    <guid>https://wiki.likui.info/Area/KM/inbox</guid>
+    <description><![CDATA[  收藏夹 ZhiHuArchive . ]]></description>
+    <pubDate>Wed, 14 Oct 2026 02:26:40 GMT</pubDate>
+  </item><item>
     <title>工具</title>
     <link>https://wiki.likui.info/Area/KM/%E5%B7%A5%E5%85%B7</link>
     <guid>https://wiki.likui.info/Area/KM/%E5%B7%A5%E5%85%B7</guid>
@@ -58,12 +64,6 @@
     <link>https://wiki.likui.info/Archive/</link>
     <guid>https://wiki.likui.info/Archive/</guid>
     <description><![CDATA[ Archive（存档） 存放已完成的项目、不再维护的领域与过期资源。它不是垃圾桶，而是可检索的历史——需要时仍能翻出来。 一句话定位 Archive = 不再活跃，但值得留存的过去。 本区域导航 Archive —— 存档区说明 Read —— 阅读资料与建站参考文档 相关 Area Project Resource . ]]></description>
-    <pubDate>Thu, 08 Oct 2026 11:00:46 GMT</pubDate>
-  </item><item>
-    <title>AI</title>
-    <link>https://wiki.likui.info/Area/AI/</link>
-    <guid>https://wiki.likui.info/Area/AI/</guid>
-    <description><![CDATA[ AI（人工智能） 领域跟踪机器学习、深度学习与大模型的最新技术与应用。它是当前技术变革的核心引擎，也是嵌入式与软件工程师都需要了解的方向。 一句话定位 AI 领域 = 让机器具备感知、理解与决策能力的技术集合。 本区域导航 人工智能：AI 整体知识体系与学习路线 智能体：AI Agent（智能体）原理与开发 相关 Area 数学 CS . ]]></description>
     <pubDate>Thu, 08 Oct 2026 11:00:46 GMT</pubDate>
   </item>
     </channel>
