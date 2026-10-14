@@ -96,4 +96,5 @@ AUTOSAR Release / 工具链版本：
 - [[规范模块/DiagnosticCommunicationManager]]
 - [[规范模块/NVRAMManager]]
 - [[RTE 与 SWC 工程实现]]
+- [[通信栈工程实战与 CANoe 验证]]
 - [[ARXML 与 RTE 代码生成实战]]
