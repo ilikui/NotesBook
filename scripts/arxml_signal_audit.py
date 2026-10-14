@@ -184,6 +184,14 @@ def audit(objects: List[dict], refs: List[dict], path_index: Dict[str, List[dict
             })
 
     for ref in refs:
+        if ref.get("rule") == "XML_PARSE":
+            findings.append({
+                "severity": "ERROR", "rule": "XML_PARSE",
+                "source_file": ref["source_file"], "object_path": "",
+                "reference_type": "", "reference": "",
+                "message": ref["message"],
+            })
+            continue
         value = ref["reference"]
         if not value or not value.startswith("/"):
             continue
