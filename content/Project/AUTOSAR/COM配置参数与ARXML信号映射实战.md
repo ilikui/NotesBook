@@ -206,7 +206,7 @@ python arxml_signal_report.py System.arxml EcuExtract.arxml Ecuc -o signal_repor
 
 ### 3.1 仓库内可复用的审查脚本
 
-上面的简化示例用于解释字段提取思路。仓库还提供了独立 CLI 工具：[scripts/arxml_signal_audit.py](https://github.com/ilikui/NotesBook/blob/main/scripts/arxml_signal_audit.py)。它可跨多个 ARXML 文件建立对象路径索引，导出对象盘点和引用审查结果，并可选用警告作为 CI 失败条件。
+上面的简化示例用于解释字段提取思路。仓库还提供了独立 CLI 工具：[scripts/arxml_signal_audit.py](https://github.com/ilikui/NotesBook/blob/main/scripts/arxml_signal_audit.py)。它可跨多个 ARXML 文件建立对象路径索引，导出对象盘点和引用审查结果；同时尝试从 I-SIGNAL-TO-I-PDU-MAPPING 的父级对象与 I-SIGNAL-REF 提取映射链路。CSV 中会出现 OBJECT、SIGNAL_MAPPING、FINDING 三类记录，JSON 则单独提供 signal_mappings 数组。该链路提取依赖常见 ARXML 嵌套结构，仍需用实际项目模型复核。工具还可选用警告作为 CI 失败条件。
 
 ~~~bash
 # 输出 CSV，方便在 Excel 中筛选
