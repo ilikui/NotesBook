@@ -123,20 +123,28 @@ def parse_inputs(inputs: Iterable[Path]) -> Tuple[List[dict], List[dict], Dict[s
                 if parent is not None and lname(parent.tag) == "AR-PACKAGES":
                     walk_package(node, "", str(file_path), objects, path_index)
         for obj in objects[before:]:
-            # xml_path is a navigational hint; canonical matching uses AUTOSAR path.
-            obj["xml_path"] = paths.get(root, "/" + lname(root.tag))
+            # Canonical AUTOSAR paths are used as primary locators; XML nesting varies by tool.
+        parents = {child: parent for parent in root.iter() for child in list(parent)}
         for node in root.iter():
-            owner = child_text(node, OBJECT_NAME)
-            for ref_type, ref_value in refs_in(node):
-                all_refs.append({
-                    "severity": "INFO",
-                    "rule": "REFERENCE",
-                    "source_file": str(file_path),
-                    "object_path": owner,
-                    "reference_type": ref_type,
-                    "reference": ref_value,
-                    "message": "Reference discovered; resolution is checked after all input files are indexed.",
-                })
+            ref_type = lname(node.tag)
+            if not ref_type.endswith(REF_SUFFIXES):
+                continue
+            ref_value = (node.text or "").strip()
+            if not ref_value:
+                continue
+            owner_node = parents.get(node)
+            while owner_node is not None and not child_text(owner_node, OBJECT_NAME):
+                owner_node = parents.get(owner_node)
+            owner = child_text(owner_node, OBJECT_NAME) if owner_node is not None else ""
+            all_refs.append({
+                "severity": "INFO",
+                "rule": "REFERENCE",
+                "source_file": str(file_path),
+                "object_path": owner,
+                "reference_type": ref_type,
+                "reference": ref_value,
+                "message": "Reference discovered; resolution is checked after all input files are indexed.",
+            })
 
     # Deduplicate package walks when a parser encounters nested package containers.
     unique = {}
