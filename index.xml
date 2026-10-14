@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>知识管理</title>
+    <link>https://wiki.likui.info/Area/KM/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86</link>
+    <guid>https://wiki.likui.info/Area/KM/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86</guid>
+    <description><![CDATA[ 知识管理：从信息收集到可复用的思考 知识管理不是把资料尽可能多地存起来，而是建立一套可持续的机制，让有价值的信息经过理解、加工、连接，最终参与判断、表达和行动。 核心原则 收集是入口，理解是加工，连接是增值，输出与行动才是检验。 知识流转的完整链路 flowchart TD A[信息输入] --&gt; B[临时收集] B --&gt; C{是否值得保留?} C -- 否 --&gt; D[删除或归档] C -- 是 --&gt; E[理解与提炼] E --&gt; F[形成自己的表达] F --&gt; G[连接已有知识] G --&gt; H[形成可复用的笔记] H --&gt; I[写作... ]]></description>
+    <pubDate>Wed, 14 Oct 2026 13:34:25 GMT</pubDate>
+  </item><item>
     <title>知识管理工作流</title>
     <link>https://wiki.likui.info/Area/KM/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E5%B7%A5%E4%BD%9C%E6%B5%81</link>
     <guid>https://wiki.likui.info/Area/KM/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E5%B7%A5%E4%BD%9C%E6%B5%81</guid>
@@ -34,12 +40,6 @@
     <link>https://wiki.likui.info/Area/KM/%E6%B8%90%E8%BF%9B%E9%98%85%E8%AF%BB</link>
     <guid>https://wiki.likui.info/Area/KM/%E6%B8%90%E8%BF%9B%E9%98%85%E8%AF%BB</guid>
     <description><![CDATA[ 发展渐进阅读（Incremental Reading，简称 IR）是一种高度系统化的超速学习与长效记忆技术。它由著名的记忆软件 SuperMemo 的创始人 Piotr Woźniak 发明，是目前公认最强大的知识内化方法之一。 简单来说，渐进阅读就是把“阅读”与“间隔重复记忆（闪卡卡片）”完美融合。它改变了传统“从头读到尾”的线性读书方式，而是将文章拆碎、分批、循环渐进地阅读和记忆。 💡 核心工作流程：从文章到永久记忆 渐进阅读通常分为以下 4 个核心步骤，像流水线一样处理知识： 导入（Import） • 将你想读的大量长篇文章、论文、电子书、网页批量导入到支持渐进阅读的软件中（如 Sup... ]]></description>
-    <pubDate>Wed, 14 Oct 2026 03:23:25 GMT</pubDate>
-  </item><item>
-    <title>知识管理</title>
-    <link>https://wiki.likui.info/Area/KM/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86</link>
-    <guid>https://wiki.likui.info/Area/KM/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86</guid>
-    <description><![CDATA[  ]]></description>
     <pubDate>Wed, 14 Oct 2026 03:23:25 GMT</pubDate>
   </item><item>
     <title>搜集箱</title>
