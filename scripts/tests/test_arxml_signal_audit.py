@@ -66,6 +66,15 @@ class ArxmlAuditTests(unittest.TestCase):
         self.assertEqual(findings[0]["rule"], "UNRESOLVED_REFERENCE")
         self.assertEqual(findings[0]["severity"], "WARN")
 
+    def test_malformed_xml_becomes_error_finding(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            source = Path(tmp) / "broken.arxml"
+            source.write_text("<AUTOSAR><AR-PACKAGES>", encoding="utf-8")
+            objects, refs, index = audit_tool.parse_inputs([source])
+            findings = audit_tool.audit(objects, refs, index)
+            self.assertTrue(any(item["rule"] == "XML_PARSE" and item["severity"] == "ERROR"
+                                for item in findings))
+
 
 if __name__ == "__main__":
     unittest.main()
