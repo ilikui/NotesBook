@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Resource</title>
+    <link>https://wiki.likui.info/Resource/</link>
+    <guid>https://wiki.likui.info/Resource/</guid>
+    <description><![CDATA[ 暂无明确项目归属、但值得持续探索的主题与参考材料。 ]]></description>
+    <pubDate>Wed, 14 Oct 2026 13:38:35 GMT</pubDate>
+  </item><item>
+    <title>EE</title>
+    <link>https://wiki.likui.info/Area/EE/</link>
+    <guid>https://wiki.likui.info/Area/EE/</guid>
+    <description><![CDATA[ 电子、电气与嵌入式系统的学习地图。 ]]></description>
+    <pubDate>Wed, 14 Oct 2026 13:38:32 GMT</pubDate>
+  </item><item>
     <title>工具</title>
     <link>https://wiki.likui.info/Area/KM/%E5%B7%A5%E5%85%B7</link>
     <guid>https://wiki.likui.info/Area/KM/%E5%B7%A5%E5%85%B7</guid>
@@ -53,18 +65,6 @@
     <guid>https://wiki.likui.info/</guid>
     <description><![CDATA[ 以 PARA 为骨架、以双向链接为脉络的个人知识系统入口。 ]]></description>
     <pubDate>Wed, 14 Oct 2026 13:33:00 GMT</pubDate>
-  </item><item>
-    <title>Commit Message Guidelines</title>
-    <link>https://wiki.likui.info/Area/KM/Git%E6%8F%90%E4%BA%A4%E8%A7%84%E8%8C%83</link>
-    <guid>https://wiki.likui.info/Area/KM/Git%E6%8F%90%E4%BA%A4%E8%A7%84%E8%8C%83</guid>
-    <description><![CDATA[ Commit Message Guidelines 本仓库提供 Git 提交信息格式的规范和示例，旨在提高提交信息的可读性和项目的可维护性。 常见的提交关键词 feat：新功能 ： feat: 添加用户登录功能 fix：修复 bug fix: 修复登录页面的错误提示 docs：文档变更 docs: 更新 API 文档 style：代码格式（不影响代码运行的变动） style: 调整代码格式，删除多余空格 refactor：重构（即不是新增功能，也不是修复 bug 的代码变动） refactor: 重命名变量以提高代码可读性 test：增加测试 test: 添加用户登录功能的单元测试 chore... ]]></description>
-    <pubDate>Wed, 14 Oct 2026 03:29:18 GMT</pubDate>
-  </item><item>
-    <title>自动驾驶</title>
-    <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6</link>
-    <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6</guid>
-    <description><![CDATA[ mindmap root((自动驾驶)) 自动驾驶分级 L1 驾驶辅助::icon(fa fa-car) :::结合单项辅助（如ACC自适应巡航、LKA车道保持） L2 部分自动化 :::人类全程监管（如Tesla FSD、主流城市NOA） L3 条件自动化 :::特定场景系统驾驶（系统请求时人类接管） L4 高度自动化 :::限定区域完全无须人类接管（如Robotaxi无人出租车） L5 完全自动化 :::全场景、全天候无条件完全自动驾驶（终极形态） 核心技术架构 环境感知层 传感器硬件::icon(fa fa-microchip) :::激光雷达 LiDAR :::高精摄像头 Camera... ]]></description>
-    <pubDate>Sat, 10 Oct 2026 00:06:37 GMT</pubDate>
   </item>
     </channel>
   </rss>
