@@ -6,12 +6,6 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Resource</title>
-    <link>https://wiki.likui.info/Resource/</link>
-    <guid>https://wiki.likui.info/Resource/</guid>
-    <description><![CDATA[ 暂无明确项目归属、但值得持续探索的主题与参考材料。 ]]></description>
-    <pubDate>Wed, 14 Oct 2026 13:47:29 GMT</pubDate>
-  </item><item>
     <title>微信读书</title>
     <link>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</link>
     <guid>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</guid>
@@ -29,6 +23,12 @@
     <guid>https://wiki.likui.info/Area/Area</guid>
     <description><![CDATA[ PARA 中需要长期维护的能力、职责与知识领域。 ]]></description>
     <pubDate>Wed, 14 Oct 2026 13:39:05 GMT</pubDate>
+  </item><item>
+    <title>Resource</title>
+    <link>https://wiki.likui.info/Resource/</link>
+    <guid>https://wiki.likui.info/Resource/</guid>
+    <description><![CDATA[ 暂无明确项目归属、但值得持续探索的主题与参考材料。 ]]></description>
+    <pubDate>Wed, 14 Oct 2026 13:38:35 GMT</pubDate>
   </item><item>
     <title>EE</title>
     <link>https://wiki.likui.info/Area/EE/</link>
