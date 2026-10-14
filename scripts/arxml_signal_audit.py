@@ -69,6 +69,7 @@ def walk_named_objects(node: ET.Element, base_path: str, source: str,
             "object_type": kind,
             "short_name": name,
             "autosar_path": current_path,
+            "parent_path": base_path,
             "xml_path": "",
             "start_position": child_text(node, "START-POSITION"),
             "packing_byte_order": child_text(node, "PACKING-BYTE-ORDER"),
@@ -116,11 +117,16 @@ def parse_inputs(inputs: Iterable[Path]) -> Tuple[List[dict], List[dict], Dict[s
             })
             continue
 
-        # Standard AUTOSAR structure: AR-PACKAGES / AR-PACKAGE / ELEMENTS.
+        # Start only from package roots. Recursion handles nested AR-PACKAGES,
+        # avoiding duplicate indexing of nested packages.
+        parents = {child: parent for parent in root.iter() for child in list(parent)}
         for node in root.iter():
-            if lname(node.tag) == "AR-PACKAGE":
-                parent = next((p for p in root.iter() if node in list(p)), None)
-                if parent is not None and lname(parent.tag) == "AR-PACKAGES":
+            if lname(node.tag) != "AR-PACKAGE":
+                continue
+            parent = parents.get(node)
+            if parent is not None and lname(parent.tag) == "AR-PACKAGES":
+                grandparent = parents.get(parent)
+                if grandparent is None or lname(grandparent.tag) != "AR-PACKAGE":
                     walk_package(node, "", str(file_path), objects, path_index)
         parents = {child: parent for parent in root.iter() for child in list(parent)}
         for node in root.iter():
@@ -150,6 +156,11 @@ def parse_inputs(inputs: Iterable[Path]) -> Tuple[List[dict], List[dict], Dict[s
         key = (obj["source_file"], obj["autosar_path"], obj["object_type"])
         unique[key] = obj
     objects = list(unique.values())
+    # Rebuild the index after deduplication so repeated package traversal cannot
+    # create duplicate resolution hits.
+    path_index = defaultdict(list)
+    for obj in objects:
+        path_index[obj["autosar_path"]].append(obj)
     return objects, all_refs, path_index
 
 
@@ -209,6 +220,24 @@ def main() -> int:
 
     objects, refs, path_index = parse_inputs(files)
     findings = audit(objects, refs, path_index)
+    object_by_path = {o["autosar_path"]: o for o in objects}
+    signal_mappings = []
+    for obj in objects:
+        if obj["object_type"] != "I-SIGNAL-TO-I-PDU-MAPPING":
+            continue
+        signal_ref = next((value for kind, value in obj["references"]
+                           if kind == "I-SIGNAL-REF"), "")
+        pdu = object_by_path.get(obj["parent_path"], {})
+        signal_mappings.append({
+            "mapping": obj["autosar_path"],
+            "signal_ref": signal_ref,
+            "signal_resolved": bool(signal_ref and signal_ref in path_index),
+            "i_pdu": pdu.get("autosar_path", ""),
+            "i_pdu_resolved": pdu.get("object_type") == "I-SIGNAL-I-PDU",
+            "start_position": obj["start_position"],
+            "packing_byte_order": obj["packing_byte_order"],
+            "length": obj["length"],
+        })
     result = {
         "summary": {
             "files_scanned": len(files),
@@ -216,11 +245,13 @@ def main() -> int:
             "references_discovered": len(refs),
             "findings": len(findings),
             "signal_related_objects": sum(o["object_type"] in SIGNAL_TYPES for o in objects),
+            "signal_mappings": len(signal_mappings),
         },
         "objects": [
             {**o, "references": [{"type": t, "value": v} for t, v in o["references"]]}
             for o in objects
         ],
+        "signal_mappings": signal_mappings,
         "findings": findings,
     }
 
