@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>COM</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/COM</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/COM</guid>
+    <description><![CDATA[ Com（Communication，通信） 是 CP 基础软件模块，位于其使用者（RTE、SwCluC）与 PDURouter 之间，提供**面向信号（Signal）**的数据接口：把信号打包成 I-PDU 发送、把收到的 I-PDU 解包成信号，并控制发送行为。 一句话定位 「信号 ↔ 报文」的翻译官：管打包 / 解包与发送模式，是通信栈里最贴近应用语义的一层。 规范信息 项目内容平台CP类别SWS — 软件模块规范（Software Specification）UID015版本R25-11本地 PDFAUTOSAR_CP_SWS_COM.pdf纯文本全文CP_SWS_COM.complet... ]]></description>
+    <pubDate>Wed, 14 Oct 2026 14:07:28 GMT</pubDate>
+  </item><item>
     <title>COM 信号编码与发送接收机制</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/COM%E4%BF%A1%E5%8F%B7%E7%BC%96%E7%A0%81%E4%B8%8E%E5%8F%91%E9%80%81%E6%8E%A5%E6%94%B6%E6%9C%BA%E5%88%B6</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/COM%E4%BF%A1%E5%8F%B7%E7%BC%96%E7%A0%81%E4%B8%8E%E5%8F%91%E9%80%81%E6%8E%A5%E6%94%B6%E6%9C%BA%E5%88%B6</guid>
@@ -58,12 +64,6 @@
     <link>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/%E4%B9%A6%E7%B1%8D/32%E4%BD%8D%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E4%B8%8Esoc%E8%AE%BE%E8%AE%A1%E5%AF%BC%E8%AE%BA-940ceb4e</link>
     <guid>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/%E4%B9%A6%E7%B1%8D/32%E4%BD%8D%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E4%B8%8Esoc%E8%AE%BE%E8%AE%A1%E5%AF%BC%E8%AE%BA-940ceb4e</guid>
     <description><![CDATA[ 32位嵌入式系统与SoC设计导论 作者： 杨刚等编著 分类： 未分类 个人划线与想法： 5 条 阅读记录 当前页面同步书籍信息与记录数量（共 5 条），未公开原始划线和个人批注。 如需在公开网站展示具体记录，请在仓库 Settings → Secrets and variables → Actions → Variables 中将 WEREAD_PUBLISH_NOTES 设置为 true。开启后，个人划线和批注会公开发布。 来源：微信读书. ]]></description>
-    <pubDate>Wed, 14 Oct 2026 13:51:43 GMT</pubDate>
-  </item><item>
-    <title>CPrimer Plus（第6版）中文版</title>
-    <link>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/%E4%B9%A6%E7%B1%8D/cprimer-plus%E7%AC%AC6%E7%89%88%E4%B8%AD%E6%96%87%E7%89%88-bb695f44</link>
-    <guid>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/%E4%B9%A6%E7%B1%8D/cprimer-plus%E7%AC%AC6%E7%89%88%E4%B8%AD%E6%96%87%E7%89%88-bb695f44</guid>
-    <description><![CDATA[ CPrimer Plus（第6版）中文版 作者： [美]史蒂芬·普拉达（Stephen Prata） 分类： 未分类 个人划线与想法： 73 条 阅读记录 当前页面同步书籍信息与记录数量（共 73 条），未公开原始划线和个人批注。 如需在公开网站展示具体记录，请在仓库 Settings → Secrets and variables → Actions → Variables 中将 WEREAD_PUBLISH_NOTES 设置为 true。开启后，个人划线和批注会公开发布。 来源：微信读书. ]]></description>
     <pubDate>Wed, 14 Oct 2026 13:51:43 GMT</pubDate>
   </item>
     </channel>
