@@ -57,42 +57,44 @@ def xml_path_map(root: ET.Element) -> Dict[ET.Element, str]:
     return paths
 
 
+def walk_named_objects(node: ET.Element, base_path: str, source: str,
+                       objects: List[dict], path_index: Dict[str, List[dict]]) -> None:
+    """Index named objects recursively beneath package ELEMENTS."""
+    name = child_text(node, OBJECT_NAME)
+    current_path = base_path.rstrip("/") + "/" + name if name else base_path
+    if name:
+        kind = lname(node.tag)
+        row = {
+            "source_file": source,
+            "object_type": kind,
+            "short_name": name,
+            "autosar_path": current_path,
+            "xml_path": "",
+            "start_position": child_text(node, "START-POSITION"),
+            "packing_byte_order": child_text(node, "PACKING-BYTE-ORDER"),
+            "length": child_text(node, "LENGTH"),
+            "references": refs_in(node),
+        }
+        objects.append(row)
+        path_index[current_path].append(row)
+    for child in list(node):
+        if lname(child.tag) not in {"AR-PACKAGES", "AR-PACKAGE"}:
+            walk_named_objects(child, current_path, source, objects, path_index)
+
+
 def walk_package(package: ET.Element, parent_path: str, source: str,
                  objects: List[dict], path_index: Dict[str, List[dict]]) -> None:
     package_name = child_text(package, OBJECT_NAME)
     package_path = parent_path.rstrip("/") + "/" + package_name if package_name else parent_path
     elements = next((c for c in list(package) if lname(c.tag) == "ELEMENTS"), None)
     subpackages = next((c for c in list(package) if lname(c.tag) == "AR-PACKAGES"), None)
-
     if elements is not None:
-        for obj in list(elements):
-            name = child_text(obj, OBJECT_NAME)
-            if not name:
-                continue
-            kind = lname(obj.tag)
-            full_path = package_path.rstrip("/") + "/" + name
-            row = {
-                "source_file": source,
-                "object_type": kind,
-                "short_name": name,
-                "autosar_path": full_path,
-                "xml_path": "",
-                "start_position": child_text(obj, "START-POSITION"),
-                "packing_byte_order": child_text(obj, "PACKING-BYTE-ORDER"),
-                "length": child_text(obj, "LENGTH"),
-                "references": refs_in(obj),
-            }
-            objects.append(row)
-            path_index[full_path].append(row)
-            # A package may contain nested AR-PACKAGE nodes in vendor variants.
-            if kind == "AR-PACKAGE":
-                walk_package(obj, package_path, source, objects, path_index)
-
+        for element in list(elements):
+            walk_named_objects(element, package_path, source, objects, path_index)
     if subpackages is not None:
         for subpackage in list(subpackages):
             if lname(subpackage.tag) == "AR-PACKAGE":
                 walk_package(subpackage, package_path, source, objects, path_index)
-
 
 def parse_inputs(inputs: Iterable[Path]) -> Tuple[List[dict], List[dict], Dict[str, List[dict]]]:
     objects: List[dict] = []
