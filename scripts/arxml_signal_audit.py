@@ -116,16 +116,12 @@ def parse_inputs(inputs: Iterable[Path]) -> Tuple[List[dict], List[dict], Dict[s
             })
             continue
 
-        paths = xml_path_map(root)
-        before = len(objects)
         # Standard AUTOSAR structure: AR-PACKAGES / AR-PACKAGE / ELEMENTS.
         for node in root.iter():
             if lname(node.tag) == "AR-PACKAGE":
                 parent = next((p for p in root.iter() if node in list(p)), None)
                 if parent is not None and lname(parent.tag) == "AR-PACKAGES":
                     walk_package(node, "", str(file_path), objects, path_index)
-        for obj in objects[before:]:
-            # Canonical AUTOSAR paths are used as primary locators; XML nesting varies by tool.
         parents = {child: parent for parent in root.iter() for child in list(parent)}
         for node in root.iter():
             ref_type = lname(node.tag)
