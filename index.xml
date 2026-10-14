@@ -6,6 +6,24 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>数字花园</title>
+    <link>https://wiki.likui.info/Area/KM/%E6%95%B0%E5%AD%97%E8%8A%B1%E5%9B%AD</link>
+    <guid>https://wiki.likui.info/Area/KM/%E6%95%B0%E5%AD%97%E8%8A%B1%E5%9B%AD</guid>
+    <description><![CDATA[ 数字花园 Note 数字花园原文是“Digital Garden”。 这是最近在国外兴起的一个概念，比较小众，不过还蛮有意思的。与其说是方法，不如说是一种理念。 简单来说，数字花园是通过借助网络数字工具，对想法、笔记和思考等一切你感兴趣的信息或进行收集、整理和创作，文字之间用标签或链接创建连接，形成一座独具个人浓厚色彩的信息与知识型花园。 这个花园可以是开放的，也可以作为仅你可见的私人庭院。但不管选择什么方式，在搭建花园的过程中，不可避免地至少要经历这几个步骤， 即： 播种： 选取高质量的“种子”为你的花园播种。这些可以是网络上看到的有价值的信息，也可以是自己的思考、想法和念头。 照料： 种子... ]]></description>
+    <pubDate>Wed, 14 Oct 2026 03:23:25 GMT</pubDate>
+  </item><item>
+    <title>渐进阅读</title>
+    <link>https://wiki.likui.info/Area/KM/%E6%B8%90%E8%BF%9B%E9%98%85%E8%AF%BB</link>
+    <guid>https://wiki.likui.info/Area/KM/%E6%B8%90%E8%BF%9B%E9%98%85%E8%AF%BB</guid>
+    <description><![CDATA[ 发展渐进阅读（Incremental Reading，简称 IR）是一种高度系统化的超速学习与长效记忆技术。它由著名的记忆软件 SuperMemo 的创始人 Piotr Woźniak 发明，是目前公认最强大的知识内化方法之一。 简单来说，渐进阅读就是把“阅读”与“间隔重复记忆（闪卡卡片）”完美融合。它改变了传统“从头读到尾”的线性读书方式，而是将文章拆碎、分批、循环渐进地阅读和记忆。 💡 核心工作流程：从文章到永久记忆 渐进阅读通常分为以下 4 个核心步骤，像流水线一样处理知识： 导入（Import） • 将你想读的大量长篇文章、论文、电子书、网页批量导入到支持渐进阅读的软件中（如 Sup... ]]></description>
+    <pubDate>Wed, 14 Oct 2026 03:23:25 GMT</pubDate>
+  </item><item>
+    <title>知识管理</title>
+    <link>https://wiki.likui.info/Area/KM/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86</link>
+    <guid>https://wiki.likui.info/Area/KM/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Wed, 14 Oct 2026 03:23:25 GMT</pubDate>
+  </item><item>
     <title>搜集箱</title>
     <link>https://wiki.likui.info/Area/KM/inbox</link>
     <guid>https://wiki.likui.info/Area/KM/inbox</guid>
@@ -47,24 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/%E6%96%B0%E8%83%BD%E6%BA%90%E6%B1%BD%E8%BD%A6</guid>
     <description><![CDATA[ 新能源汽车（New Energy Vehicle，NEV）指以非常规车用燃料为动力源、综合车辆动力控制和驱动方面的先进技术形成的汽车，主要包含**纯电动（BEV）、插电混动（PHEV）、增程式（EREV）和燃料电池（FCEV）**四类。它是「汽车 + 电子 + 软件」深度融合的典型，也是嵌入式与汽车电子工程师的核心赛道。 一句话定位 新能源汽车 = 三电系统（电池、电机、电控）+ 智能座舱 + 智能驾驶，本质是一台「带四个轮子的大电脑」。 知识体系 flowchart TD A[新能源汽车] --&gt; B[三电系统] A --&gt; C[整车电子电气架构] A --&gt; D[智能驾驶... ]]></description>
     <pubDate>Fri, 09 Oct 2026 05:16:34 GMT</pubDate>
-  </item><item>
-    <title>模拟电路</title>
-    <link>https://wiki.likui.info/Area/EE/%E6%A8%A1%E6%8B%9F%E7%94%B5%E8%B7%AF</link>
-    <guid>https://wiki.likui.info/Area/EE/%E6%A8%A1%E6%8B%9F%E7%94%B5%E8%B7%AF</guid>
-    <description><![CDATA[ 模拟电路处理的是连续变化的电压和电流信号。它是数字电路的「上游」：现实世界的温度、声音、光照都是模拟量，必须先经传感器和模拟前端变成电信号，再经 ADC 数字化后交给数字系统。可以说，没有模拟电路，数字世界就没有入口。 一句话定位 数字电路管「0 和 1」，模拟电路管「0 和 1 之间的所有值」。 知识体系 flowchart TD A[模拟电路] --&gt; B[基础元件] A --&gt; C[核心器件] A --&gt; D[经典电路] A --&gt; E[与数字系统的接口] B --&gt; B1[&quot;电阻 / 电容 / 电感&quot;] B --&gt; B2[&quo... ]]></description>
-    <pubDate>Fri, 09 Oct 2026 05:16:34 GMT</pubDate>
-  </item><item>
-    <title>Archive</title>
-    <link>https://wiki.likui.info/Archive/Archive</link>
-    <guid>https://wiki.likui.info/Archive/Archive</guid>
-    <description><![CDATA[  Archive（存档） 是 PARA 中「非活跃」部分的归处：已完成的项目、不再负责的领域、不再感兴趣的资源。 内容清单 Read —— 阅读与建站参考资料 豆瓣阅读 说明 归档不等于删除。把内容移到这里，是为了让 Area 与 Project 保持当前有效的信息密度。. ]]></description>
-    <pubDate>Thu, 08 Oct 2026 11:00:46 GMT</pubDate>
-  </item><item>
-    <title>Archive</title>
-    <link>https://wiki.likui.info/Archive/</link>
-    <guid>https://wiki.likui.info/Archive/</guid>
-    <description><![CDATA[ Archive（存档） 存放已完成的项目、不再维护的领域与过期资源。它不是垃圾桶，而是可检索的历史——需要时仍能翻出来。 一句话定位 Archive = 不再活跃，但值得留存的过去。 本区域导航 Archive —— 存档区说明 Read —— 阅读资料与建站参考文档 相关 Area Project Resource . ]]></description>
-    <pubDate>Thu, 08 Oct 2026 11:00:46 GMT</pubDate>
   </item>
     </channel>
   </rss>
