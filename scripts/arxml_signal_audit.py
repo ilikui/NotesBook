@@ -261,8 +261,10 @@ def main() -> int:
         output.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     else:
         columns = ["record_type", "severity", "rule", "source_file", "object_type",
-                   "short_name", "autosar_path", "start_position", "packing_byte_order",
-                   "length", "reference_type", "reference", "message"]
+                   "short_name", "autosar_path", "mapping_path", "signal_ref",
+                   "signal_resolved", "i_pdu_path", "i_pdu_resolved",
+                   "start_position", "packing_byte_order", "length",
+                   "reference_type", "reference", "message"]
         with output.open("w", newline="", encoding="utf-8-sig") as stream:
             writer = csv.DictWriter(stream, fieldnames=columns)
             writer.writeheader()
@@ -274,11 +276,24 @@ def main() -> int:
                     "packing_byte_order": obj["packing_byte_order"], "length": obj["length"],
                     "message": "对象盘点记录；字段只读取对象的直接子元素。",
                 })
+            for mapping in signal_mappings:
+                writer.writerow({
+                    "record_type": "SIGNAL_MAPPING",
+                    "mapping_path": mapping["mapping"],
+                    "signal_ref": mapping["signal_ref"],
+                    "signal_resolved": mapping["signal_resolved"],
+                    "i_pdu_path": mapping["i_pdu"],
+                    "i_pdu_resolved": mapping["i_pdu_resolved"],
+                    "start_position": mapping["start_position"],
+                    "packing_byte_order": mapping["packing_byte_order"],
+                    "length": mapping["length"],
+                    "message": "映射链路基于本次解析到的包路径和对象引用；请结合实际工具模型复核。",
+                })
             for item in findings:
                 writer.writerow({"record_type": "FINDING", **item})
 
-    print("Scanned {files} file(s); indexed {objects} object(s); found {findings} finding(s).".format(
-        files=len(files), objects=len(objects), findings=len(findings)))
+    print("Scanned {files} file(s); indexed {objects} object(s); traced {mappings} signal mapping(s); found {findings} finding(s).".format(
+        files=len(files), objects=len(objects), mappings=len(signal_mappings), findings=len(findings)))
     print(f"Report: {output}")
     if args.fail_on_warn and findings:
         return 1
