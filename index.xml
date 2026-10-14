@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>微信读书</title>
+    <link>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</link>
+    <guid>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</guid>
+    <description><![CDATA[ 从微信读书自动同步的个人书架与阅读记录索引。 ]]></description>
+    <pubDate>Wed, 14 Oct 2026 20:14:44 GMT</pubDate>
+  </item><item>
     <title>COM 配置参数与 ARXML 信号映射实战</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/COM%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0%E4%B8%8EARXML%E4%BF%A1%E5%8F%B7%E6%98%A0%E5%B0%84%E5%AE%9E%E6%88%98</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/COM%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0%E4%B8%8EARXML%E4%BF%A1%E5%8F%B7%E6%98%A0%E5%B0%84%E5%AE%9E%E6%88%98</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/RTE%E4%B8%8ESWC%E5%B7%A5%E7%A8%8B%E5%AE%9E%E7%8E%B0</guid>
     <description><![CDATA[ RTE 与 SWC 工程实现：从端口建模到 Runnable 执行 一句话定位 SWC 描述功能与接口，系统描述组件如何连接和部署，RTE Generator 将模型与 ECU 配置转成目标 ECU 可编译的通信与调度代码。 1. ]]></description>
     <pubDate>Wed, 14 Oct 2026 14:01:35 GMT</pubDate>
-  </item><item>
-    <title>微信读书</title>
-    <link>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</link>
-    <guid>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</guid>
-    <description><![CDATA[ 从微信读书自动同步的个人书架与阅读记录索引。 ]]></description>
-    <pubDate>Wed, 14 Oct 2026 13:51:43 GMT</pubDate>
   </item>
     </channel>
   </rss>
