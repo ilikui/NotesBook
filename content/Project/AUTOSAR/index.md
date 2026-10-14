@@ -61,6 +61,7 @@ flowchart LR
 ~~~
 
 - [[RTE 与 SWC 工程实现]] —— Port、Interface、Runnable、Event、Rte_Read / Rte_Write、Rte_Call 与任务映射。
+- [[通信栈工程实战与 CANoe 验证]] —— 从 RTE、COM、PduR、CanIf 到 CAN 总线，附 CANoe Trace 分层验证与测试用例。
 - [[ARXML 与 RTE 代码生成实战]] —— ARXML 分层、引用校验、Contract Phase、RTE Generation、增量生成和版本追溯。
 - [[AUTOSAR 故障排查手册]] —— Runnable 不执行、信号不更新、总线无报文、UDS / NvM 异常等分层排查。
 - [[Classic平台学习路线与面试题]] —— 学习顺序、三条核心调用链、面试问答与工程化表达模板。
@@ -70,7 +71,7 @@ flowchart LR
 1. 建立全局认知：[[软件架构]] → [[核心理念]]。
 2. 理解 SWC 模型：[[规范模块/SoftwareComponentTemplate]] → [[RTE 与 SWC 工程实现]]。
 3. 理解生成输入与约束：[[规范模块/SystemTemplate]] → [[规范模块/ECUConfiguration]] → [[ARXML 与 RTE 代码生成实战]]。
-4. 打通信号链路：[[规范模块/RTE]] → [[规范模块/COM]] → [[规范模块/PDURouter]] → [[规范模块/CANInterface]]。
+4. 打通信号链路：[[通信栈工程实战与 CANoe 验证]] → [[规范模块/RTE]] → [[规范模块/COM]] → [[规范模块/PDURouter]] → [[规范模块/CANInterface]]。
 5. 用真实现象验证：[[AUTOSAR 故障排查手册]]，最后完成 [[Classic平台学习路线与面试题]]。
 
 > [!warning] 版本与供应商边界
