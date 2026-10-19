@@ -10,7 +10,13 @@
     <link>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</link>
     <guid>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</guid>
     <description><![CDATA[ 从微信读书自动同步的个人书架与阅读记录索引。 ]]></description>
-    <pubDate>Sat, 17 Oct 2026 18:33:03 GMT</pubDate>
+    <pubDate>Mon, 19 Oct 2026 21:08:00 GMT</pubDate>
+  </item><item>
+    <title>认知觉醒：伴随一生的学习方法论（青少年学习版）</title>
+    <link>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/%E4%B9%A6%E7%B1%8D/%E8%AE%A4%E7%9F%A5%E8%A7%89%E9%86%92%E4%BC%B4%E9%9A%8F%E4%B8%80%E7%94%9F%E7%9A%84%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E8%AE%BA%E9%9D%92%E5%B0%91%E5%B9%B4%E5%AD%A6%E4%B9%A0%E7%89%88-e2b779e3</link>
+    <guid>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/%E4%B9%A6%E7%B1%8D/%E8%AE%A4%E7%9F%A5%E8%A7%89%E9%86%92%E4%BC%B4%E9%9A%8F%E4%B8%80%E7%94%9F%E7%9A%84%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E8%AE%BA%E9%9D%92%E5%B0%91%E5%B9%B4%E5%AD%A6%E4%B9%A0%E7%89%88-e2b779e3</guid>
+    <description><![CDATA[ 认知觉醒：伴随一生的学习方法论（青少年学习版） 作者： 周岭 分类： 未分类 个人划线与想法： 6 条 阅读记录 当前页面同步书籍信息与记录数量（共 6 条），未公开原始划线和个人批注。 如需在公开网站展示具体记录，请在仓库 Settings → Secrets and variables → Actions → Variables 中将 WEREAD_PUBLISH_NOTES 设置为 true。开启后，个人划线和批注会公开发布。 来源：微信读书. ]]></description>
+    <pubDate>Mon, 19 Oct 2026 21:08:00 GMT</pubDate>
   </item><item>
     <title>COM 配置参数与 ARXML 信号映射实战</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/COM%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0%E4%B8%8EARXML%E4%BF%A1%E5%8F%B7%E6%98%A0%E5%B0%84%E5%AE%9E%E6%88%98</link>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/ARXML%E4%B8%8ERTE%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E5%AE%9E%E6%88%98</guid>
     <description><![CDATA[ ARXML 与 RTE 代码生成实战 核心原则 ARXML 是模型交换与配置描述，不是简单的 XML 转 C。RTE 生成依赖多层模型、引用关系、ECU 映射、配置约束和具体生成器的输入规则。 1. ]]></description>
     <pubDate>Wed, 14 Oct 2026 14:01:38 GMT</pubDate>
-  </item><item>
-    <title>RTE 与 SWC 工程实现</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/RTE%E4%B8%8ESWC%E5%B7%A5%E7%A8%8B%E5%AE%9E%E7%8E%B0</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/RTE%E4%B8%8ESWC%E5%B7%A5%E7%A8%8B%E5%AE%9E%E7%8E%B0</guid>
-    <description><![CDATA[ RTE 与 SWC 工程实现：从端口建模到 Runnable 执行 一句话定位 SWC 描述功能与接口，系统描述组件如何连接和部署，RTE Generator 将模型与 ECU 配置转成目标 ECU 可编译的通信与调度代码。 1. ]]></description>
-    <pubDate>Wed, 14 Oct 2026 14:01:35 GMT</pubDate>
   </item>
     </channel>
   </rss>
