@@ -20,8 +20,15 @@ tags:
 
 ## 阅读记录
 
-当前页面同步书籍信息与记录数量（共 1 条），未公开原始划线和个人批注。
+### 1. 1.2 计算机程序运行的目的
 
-如需在公开网站展示具体记录，请在仓库 Settings → Secrets and variables → Actions → Variables 中将 WEREAD_PUBLISH_NOTES 设置为 true。开启后，个人划线和批注会公开发布。
+<small>记录日期：2026-09-14</small>
+
+**划线**
+
+> 最为直观的表达就是：程序=数据+算法
+
+---
+
 
 来源：[微信读书](https://weread.qq.com/)
