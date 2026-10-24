@@ -4,6 +4,10 @@ on:
   # 每天北京时间 00:15（UTC 16:15）同步微信读书
   schedule:
     - cron: "15 16 * * *"
+  # 修改同步工作流时自动执行一次，便于验证仓库变量及发布结果
+  push:
+    paths:
+      - ".github/workflows/sync-weread.yml"
   workflow_dispatch:
 
 permissions:
@@ -56,7 +60,19 @@ jobs:
         env:
           WEREAD_PUBLISH_NOTES: ${{ vars.WEREAD_PUBLISH_NOTES || 'false' }}
         run: |
+          echo "WEREAD_PUBLISH_NOTES=$WEREAD_PUBLISH_NOTES"
           python scripts/import_weread_to_quartz.py "$RUNNER_TEMP/WeRead/static/data/weread_notes.json" "content/Resource/微信读书"
+
+      - name: Verify target book note rendering
+        run: |
+          target="content/Resource/微信读书/书籍/打造第二大脑-00d7d705.md"
+          test -s "$target"
+          if grep -q "当前页面同步书籍信息与记录数量" "$target"; then
+            echo "::error::目标书籍页面仍处于仅元数据模式；请检查 WEREAD_PUBLISH_NOTES 仓库变量是否为 true。"
+            exit 1
+          fi
+          grep -q "^### 1\." "$target"
+          echo "目标书籍的具体记录已生成。"
 
       - name: Commit synchronized reading records
         run: |
@@ -81,6 +97,11 @@ jobs:
 
       - name: Build digital garden
         run: node ./quartz/bootstrap-cli.mjs build -d content -v
+
+      - name: Verify published HTML includes note records
+        run: |
+          test -s "public/Resource/微信读书/书籍/打造第二大脑-00d7d705.html"
+          grep -q "阅读记录" "public/Resource/微信读书/书籍/打造第二大脑-00d7d705.html"
 
       - name: Deploy digital garden
         uses: peaceiris/actions-gh-pages@v4
