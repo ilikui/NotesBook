@@ -58,9 +58,11 @@ jobs:
 
       - name: Import records into Quartz content
         env:
-          WEREAD_PUBLISH_NOTES: ${{ vars.WEREAD_PUBLISH_NOTES || 'false' }}
+          # 用户已明确要求公开微信读书划线与批注；固定启用，避免仓库变量未传入时静默退回元数据模式。
+          WEREAD_PUBLISH_NOTES: 'true'
         run: |
           echo "WEREAD_PUBLISH_NOTES=$WEREAD_PUBLISH_NOTES"
+          test "$(printf '%s' "$WEREAD_PUBLISH_NOTES" | tr '[:upper:]' '[:lower:]')" = "true"
           python scripts/import_weread_to_quartz.py "$RUNNER_TEMP/WeRead/static/data/weread_notes.json" "content/Resource/微信读书"
 
       - name: Verify target book note rendering
@@ -68,10 +70,17 @@ jobs:
           target="content/Resource/微信读书/书籍/打造第二大脑-00d7d705.md"
           test -s "$target"
           if grep -q "当前页面同步书籍信息与记录数量" "$target"; then
-            echo "::error::目标书籍页面仍处于仅元数据模式；请检查 WEREAD_PUBLISH_NOTES 仓库变量是否为 true。"
+            echo "::error::目标书籍页面仍处于仅元数据模式。"
             exit 1
           fi
-          grep -q "^### 1\." "$target"
+          if grep -q "这本书目前没有可导出的划线或批注。" "$target"; then
+            echo "::error::目标书籍未导出具体划线或批注；请检查 WeRead API 返回的数据。"
+            exit 1
+          fi
+          if ! grep -Eq '^### [0-9]+\.' "$target"; then
+            echo "::error::目标书籍没有生成任何具体记录标题。"
+            exit 1
+          fi
           echo "目标书籍的具体记录已生成。"
 
       - name: Commit synchronized reading records
