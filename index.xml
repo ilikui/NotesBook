@@ -6,6 +6,24 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>KM</title>
+    <link>https://wiki.likui.info/Area/KM/</link>
+    <guid>https://wiki.likui.info/Area/KM/</guid>
+    <description><![CDATA[ KM（Knowledge Management，知识管理） 关注如何高效地收集、理解、组织、连接和复用个人知识。它不只是工具问题，更是一套帮助思考与行动持续改进的方法。 一句话定位 让知识「进得来、找得到、连得上、用得上」，并最终转化为判断、作品与行动。 知识管理地图 flowchart TD A[&quot;知识输入&quot;] --&gt; B[&quot;捕捉与收集&quot;] B --&gt; C[&quot;阅读与理解&quot;] C --&gt; D[&quot;提炼为自己的表达&quot;] D --&gt; E[&quot;组织与连接&quot;] E --&gt; F[... ]]></description>
+    <pubDate>Sat, 24 Oct 2026 01:37:27 GMT</pubDate>
+  </item><item>
+    <title>微信读书到永久笔记：从摘录到知识</title>
+    <link>https://wiki.likui.info/Area/KM/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6%E5%88%B0%E6%B0%B8%E4%B9%85%E7%AC%94%E8%AE%B0</link>
+    <guid>https://wiki.likui.info/Area/KM/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6%E5%88%B0%E6%B0%B8%E4%B9%85%E7%AC%94%E8%AE%B0</guid>
+    <description><![CDATA[ 将微信读书的书籍、划线与批注加工成可连接、可复用的永久笔记。 ]]></description>
+    <pubDate>Sat, 24 Oct 2026 01:37:10 GMT</pubDate>
+  </item><item>
+    <title>Resource</title>
+    <link>https://wiki.likui.info/Resource/</link>
+    <guid>https://wiki.likui.info/Resource/</guid>
+    <description><![CDATA[ 暂无明确项目归属、但值得持续探索的主题与参考材料。 ]]></description>
+    <pubDate>Sat, 24 Oct 2026 01:37:08 GMT</pubDate>
+  </item><item>
     <title>微信读书</title>
     <link>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</link>
     <guid>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</guid>
@@ -47,24 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/AUTOSAR%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%89%8B%E5%86%8C</guid>
     <description><![CDATA[ AUTOSAR 故障排查手册：从现象到证据链 排查原则 沿着“模型与配置 → 生成代码 → 调度执行 → 模块 API → 硬件 / 网络 → 对端行为”建立证据链。先确认故障在哪一层，再修改对应配置，避免一次改动多个模块。 1. ]]></description>
     <pubDate>Wed, 14 Oct 2026 14:04:42 GMT</pubDate>
-  </item><item>
-    <title>通信栈工程实战与 CANoe 验证</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/%E9%80%9A%E4%BF%A1%E6%A0%88%E5%B7%A5%E7%A8%8B%E5%AE%9E%E6%88%98%E4%B8%8ECANoe%E9%AA%8C%E8%AF%81</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/%E9%80%9A%E4%BF%A1%E6%A0%88%E5%B7%A5%E7%A8%8B%E5%AE%9E%E6%88%98%E4%B8%8ECANoe%E9%AA%8C%E8%AF%81</guid>
-    <description><![CDATA[ 通信栈工程实战与 CANoe 验证 学习目标 能从应用层的一个信号开始，沿着 RTE、COM、PduR、CanIf、CanDrv 追踪到总线，再从 CANoe 抓包反向定位接收链路。本文中的对象名和 API 是概念示例，实际项目以生成代码、ARXML、通信矩阵与供应商配置为准。 1. ]]></description>
-    <pubDate>Wed, 14 Oct 2026 14:04:26 GMT</pubDate>
-  </item><item>
-    <title>Classic 平台学习路线与面试题</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/Classic%E5%B9%B3%E5%8F%B0%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E4%B8%8E%E9%9D%A2%E8%AF%95%E9%A2%98</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/Classic%E5%B9%B3%E5%8F%B0%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E4%B8%8E%E9%9D%A2%E8%AF%95%E9%A2%98</guid>
-    <description><![CDATA[ AUTOSAR Classic 平台学习路线与面试题 1. ]]></description>
-    <pubDate>Wed, 14 Oct 2026 14:01:43 GMT</pubDate>
-  </item><item>
-    <title>ARXML 与 RTE 代码生成实战</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/ARXML%E4%B8%8ERTE%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E5%AE%9E%E6%88%98</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/ARXML%E4%B8%8ERTE%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E5%AE%9E%E6%88%98</guid>
-    <description><![CDATA[ ARXML 与 RTE 代码生成实战 核心原则 ARXML 是模型交换与配置描述，不是简单的 XML 转 C。RTE 生成依赖多层模型、引用关系、ECU 映射、配置约束和具体生成器的输入规则。 1. ]]></description>
-    <pubDate>Wed, 14 Oct 2026 14:01:38 GMT</pubDate>
   </item>
     </channel>
   </rss>
