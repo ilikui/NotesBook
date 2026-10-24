@@ -6,12 +6,6 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Archive</title>
-    <link>https://wiki.likui.info/Archive/Archive</link>
-    <guid>https://wiki.likui.info/Archive/Archive</guid>
-    <description><![CDATA[ Archive｜归档区说明 Archive（归档区）用于保存已经停止维护、暂时不再活跃，但仍有长期参考价值的内容。它不是临时收件箱，也不是无差别堆放文件的目录。 归档判断 flowchart TD A[一条笔记或一个项目] --&gt; B{是否仍在使用或持续建设？} B -- 是 --&gt; C[保留在 Project / Area / Resource] B -- 否 --&gt; D{未来是否仍有检索价值？} D -- 是 --&gt; E[归档到 Archive] D -- 否 --&gt; F[确认无价值后再删除] 当前状态 目前已清理此目录中与个人知识主题无直接关系的 Quart... ]]></description>
-    <pubDate>Sat, 24 Oct 2026 01:42:11 GMT</pubDate>
-  </item><item>
     <title>KM</title>
     <link>https://wiki.likui.info/Area/KM/</link>
     <guid>https://wiki.likui.info/Area/KM/</guid>
@@ -65,6 +59,12 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/COM</guid>
     <description><![CDATA[ Com（Communication，通信） 是 CP 基础软件模块，位于其使用者（RTE、SwCluC）与 PDURouter 之间，提供**面向信号（Signal）**的数据接口：把信号打包成 I-PDU 发送、把收到的 I-PDU 解包成信号，并控制发送行为。 一句话定位 「信号 ↔ 报文」的翻译官：管打包 / 解包与发送模式，是通信栈里最贴近应用语义的一层。 规范信息 项目内容平台CP类别SWS — 软件模块规范（Software Specification）UID015版本R25-11本地 PDFAUTOSAR_CP_SWS_COM.pdf纯文本全文CP_SWS_COM.complet... ]]></description>
     <pubDate>Wed, 14 Oct 2026 14:10:58 GMT</pubDate>
+  </item><item>
+    <title>AUTOSAR 故障排查手册</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/AUTOSAR%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%89%8B%E5%86%8C</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/AUTOSAR%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%89%8B%E5%86%8C</guid>
+    <description><![CDATA[ AUTOSAR 故障排查手册：从现象到证据链 排查原则 沿着“模型与配置 → 生成代码 → 调度执行 → 模块 API → 硬件 / 网络 → 对端行为”建立证据链。先确认故障在哪一层，再修改对应配置，避免一次改动多个模块。 1. ]]></description>
+    <pubDate>Wed, 14 Oct 2026 14:04:42 GMT</pubDate>
   </item>
     </channel>
   </rss>
