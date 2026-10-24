@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Resource</title>
+    <link>https://wiki.likui.info/Resource/</link>
+    <guid>https://wiki.likui.info/Resource/</guid>
+    <description><![CDATA[ 暂无明确项目归属、但值得持续探索的主题与参考材料。 ]]></description>
+    <pubDate>Sat, 24 Oct 2026 01:37:08 GMT</pubDate>
+  </item><item>
     <title>微信读书</title>
     <link>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</link>
     <guid>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/Classic%E5%B9%B3%E5%8F%B0%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E4%B8%8E%E9%9D%A2%E8%AF%95%E9%A2%98</guid>
     <description><![CDATA[ AUTOSAR Classic 平台学习路线与面试题 1. ]]></description>
     <pubDate>Wed, 14 Oct 2026 14:01:43 GMT</pubDate>
-  </item><item>
-    <title>ARXML 与 RTE 代码生成实战</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/ARXML%E4%B8%8ERTE%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E5%AE%9E%E6%88%98</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/ARXML%E4%B8%8ERTE%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E5%AE%9E%E6%88%98</guid>
-    <description><![CDATA[ ARXML 与 RTE 代码生成实战 核心原则 ARXML 是模型交换与配置描述，不是简单的 XML 转 C。RTE 生成依赖多层模型、引用关系、ECU 映射、配置约束和具体生成器的输入规则。 1. ]]></description>
-    <pubDate>Wed, 14 Oct 2026 14:01:38 GMT</pubDate>
   </item>
     </channel>
   </rss>
