@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>微信读书</title>
+    <link>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</link>
+    <guid>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</guid>
+    <description><![CDATA[ 从微信读书自动同步的个人书架与阅读记录索引。 ]]></description>
+    <pubDate>Sat, 24 Oct 2026 18:50:11 GMT</pubDate>
+  </item><item>
     <title>智能体</title>
     <link>https://wiki.likui.info/Area/AI/%E6%99%BA%E8%83%BD%E4%BD%93</link>
     <guid>https://wiki.likui.info/Area/AI/%E6%99%BA%E8%83%BD%E4%BD%93</guid>
@@ -41,12 +47,6 @@
     <guid>https://wiki.likui.info/%E5%85%B3%E7%B3%BB%E5%9B%BE%E8%B0%B1</guid>
     <description><![CDATA[ 基于 NotesBook 现有笔记、双向链接和主题索引整理的知识关系总览。 ]]></description>
     <pubDate>Sat, 24 Oct 2026 02:18:26 GMT</pubDate>
-  </item><item>
-    <title>微信读书</title>
-    <link>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</link>
-    <guid>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</guid>
-    <description><![CDATA[ 从微信读书自动同步的个人书架与阅读记录索引。 ]]></description>
-    <pubDate>Sat, 24 Oct 2026 02:12:26 GMT</pubDate>
   </item><item>
     <title>32位嵌入式系统与SoC设计导论</title>
     <link>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/%E4%B9%A6%E7%B1%8D/32%E4%BD%8D%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E4%B8%8Esoc%E8%AE%BE%E8%AE%A1%E5%AF%BC%E8%AE%BA-940ceb4e</link>
