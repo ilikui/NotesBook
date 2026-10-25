@@ -69,7 +69,10 @@ flowchart LR
 - [[AUTOSAR 故障排查手册]] —— Runnable 不执行、信号不更新、总线无报文、UDS / NvM 异常等分层排查。
 - [[Classic平台学习路线与面试题]] —— 学习顺序、三条核心调用链、面试问答与工程化表达模板。
 
-### 推荐阅读顺序
+- [[诊断栈 Dcm Dem UDS 工程实战]] —— UDS 服务、NRC、P2/P2*、Dem/DTC 与诊断链路故障定位。
+- [[NvM MemIf Fee Ea 非易失存储实战]] —— NvM 请求状态、存储抽象、掉电恢复、CRC 与 Flash 磨损。
+- [[OS 调度 多核与 Runnable 实战]] —— Runnable/Event/Task 映射、实时性、多核同步与 Exclusive Area。
+\n### 推荐阅读顺序
 
 1. 建立全局认知：[[软件架构]] → [[核心理念]]。
 2. 理解 SWC 模型：[[规范模块/SoftwareComponentTemplate]] → [[RTE 与 SWC 工程实现]]。
