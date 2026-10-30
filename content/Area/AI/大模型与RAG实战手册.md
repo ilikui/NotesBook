@@ -167,6 +167,12 @@ for item in retrieve("How does retrieval augmented generation work?"):
 - 权限过滤、删除同步、日志脱敏和基本安全测试。
 - 记录模型版本、Embedding 版本、索引参数、Prompt 版本和成本。
 
+## 推荐阅读
+
+- [Hands-On Large Language Models](https://www.oreilly.com/library/view/hands-on-large-language/9781098150952/)：Embedding、语义搜索和 LLM 基础。
+- [Knowledge Graphs and LLMs in Action](https://www.manning.com/books/knowledge-graphs-and-llms-in-action)：知识图谱与大模型结合，拓展到 GraphRAG。
+- 完整书单见 [[AI书籍与课程]]。
+
 ## 相关
 
 - [[生成式AI与大模型]]
