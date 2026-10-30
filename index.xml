@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>AI 书籍与课程</title>
+    <link>https://wiki.likui.info/Area/AI/AI%E4%B9%A6%E7%B1%8D%E4%B8%8E%E8%AF%BE%E7%A8%8B</link>
+    <guid>https://wiki.likui.info/Area/AI/AI%E4%B9%A6%E7%B1%8D%E4%B8%8E%E8%AF%BE%E7%A8%8B</guid>
+    <description><![CDATA[ AI 书籍与课程 本页整理人工智能领域的经典教材、工程实践书籍、前沿方向读物与公开课程。书籍按知识主题归档，优先链接作者、出版社、官方配套代码和合法在线阅读入口。 关于电子书下载与版权 GitHub 中只收录书目信息、官方购买/试读入口、作者公开的合法全文，以及配套代码和课程。出版社付费电子书、受版权保护的 PDF/EPUB 不复制到仓库，也不提供未经授权的网盘或盗版下载地址。页面标注“免费在线版”时，表示作者或出版社公开提供阅读/下载；仍应遵守原站许可。 一、本次精选：十本 AI 进阶书单 这十本书覆盖机器学习原理、Transformer、大模型、AI 工程、知识图谱、生成模型、强化学习、A... ]]></description>
+    <pubDate>Fri, 30 Oct 2026 10:40:01 GMT</pubDate>
+  </item><item>
     <title>人工智能学习中心</title>
     <link>https://wiki.likui.info/Area/AI/</link>
     <guid>https://wiki.likui.info/Area/AI/</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/AI/AI%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98%E8%B7%AF%E7%BA%BF</guid>
     <description><![CDATA[ AI 项目实战路线 本路线用项目验证能力，而不是按“看完多少课程”衡量进度。每个项目都要提交代码、README、数据说明、实验结果、错误分析和可复现步骤。 项目阶梯 阶段项目核心能力完成标准入门鸢尾花/房价预测Python、数据清洗、基线可运行脚本、指标与图表机器学习客户流失/信用风险分类Pipeline、交叉验证、阈值PR-AUC、混淆矩阵、错误分析深度学习Fashion-MNIST/CIFAR 分类PyTorch、训练循环、调参checkpoint、曲线、混淆矩阵NLP文本分类/语义检索Tokenizer、Embedding、评估固定测试集与错误样本LLM文档问答 RAG切分、召回、重排、... ]]></description>
     <pubDate>Fri, 30 Oct 2026 10:22:04 GMT</pubDate>
-  </item><item>
-    <title>大模型与 RAG 实战手册</title>
-    <link>https://wiki.likui.info/Area/AI/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E4%B8%8ERAG%E5%AE%9E%E6%88%98%E6%89%8B%E5%86%8C</link>
-    <guid>https://wiki.likui.info/Area/AI/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E4%B8%8ERAG%E5%AE%9E%E6%88%98%E6%89%8B%E5%86%8C</guid>
-    <description><![CDATA[ 大模型与 RAG 实战手册 本手册以“构建一个能够回答内部文档问题、给出来源证据的知识助手”为目标。RAG（检索增强生成）不是简单地把文档塞进提示词，而是一条需要单独评估的数据与检索链路。 1. ]]></description>
-    <pubDate>Fri, 30 Oct 2026 10:21:42 GMT</pubDate>
   </item>
     </channel>
   </rss>
