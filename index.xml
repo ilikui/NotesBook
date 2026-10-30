@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Resource</title>
+    <link>https://wiki.likui.info/Resource/</link>
+    <guid>https://wiki.likui.info/Resource/</guid>
+    <description><![CDATA[ 暂无明确项目归属、但值得持续探索的主题与参考材料。 ]]></description>
+    <pubDate>Fri, 30 Oct 2026 12:32:14 GMT</pubDate>
+  </item><item>
     <title>提问的智慧</title>
     <link>https://wiki.likui.info/Resource/%E6%B2%9F%E9%80%9A%E4%B8%8E%E5%8D%8F%E4%BD%9C/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7</link>
     <guid>https://wiki.likui.info/Resource/%E6%B2%9F%E9%80%9A%E4%B8%8E%E5%8D%8F%E4%BD%9C/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7</guid>
@@ -58,12 +64,6 @@
     <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/CommunicationManagement</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/CommunicationManagement</guid>
     <description><![CDATA[ Communication Management（通信管理，ara::com） 是 AP 的基础功能簇，在自适应应用之间实现面向服务的通信（SOA），覆盖进程内、进程间、跨机各层级。它由生成的服务提供者骨架（Skeleton）与服务请求者代理（Proxy）、以及可选的通用通信管理器构成，并提供内建的E2E 保护安全机制。 一句话定位 AP 的「服务总线」：应用之间不点对点连线，而是按服务（Event / Method / Field）收发。 规范信息 项目内容平台AP类别SWS — 软件模块规范（Software Specification）UID717版本R25-11本地 PDFAUTOSA... ]]></description>
-    <pubDate>Fri, 30 Oct 2026 11:26:38 GMT</pubDate>
-  </item><item>
-    <title>Core</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/Core</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/Core</guid>
-    <description><![CDATA[ Core（ara::core，自适应平台核心） 是 AP 的基础功能簇，定义适用于整个框架的功能，并定义一组被多个功能簇作为公共接口使用的通用数据类型。 一句话定位 AP 的「标准库底座」：整个框架通用的类型与基础设施，其它功能簇都建立在它之上。 规范信息 项目内容平台AP类别SWS — 软件模块规范（Software Specification）UID903版本R25-11本地 PDFAUTOSAR_AP_SWS_Core.pdf纯文本全文AP_SWS_Core.complete.txt 知识体系 flowchart TD A[&quot;ara::core&quot;] --&gt; B[... ]]></description>
     <pubDate>Fri, 30 Oct 2026 11:26:38 GMT</pubDate>
   </item>
     </channel>
