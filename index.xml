@@ -6,6 +6,30 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>大模型与 RAG 实战手册</title>
+    <link>https://wiki.likui.info/Area/AI/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E4%B8%8ERAG%E5%AE%9E%E6%88%98%E6%89%8B%E5%86%8C</link>
+    <guid>https://wiki.likui.info/Area/AI/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E4%B8%8ERAG%E5%AE%9E%E6%88%98%E6%89%8B%E5%86%8C</guid>
+    <description><![CDATA[ 大模型与 RAG 实战手册 本手册以“构建一个能够回答内部文档问题、给出来源证据的知识助手”为目标。RAG（检索增强生成）不是简单地把文档塞进提示词，而是一条需要单独评估的数据与检索链路。 1. ]]></description>
+    <pubDate>Fri, 30 Oct 2026 10:21:42 GMT</pubDate>
+  </item><item>
+    <title>深度学习实验手册</title>
+    <link>https://wiki.likui.info/Area/AI/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%AE%9E%E9%AA%8C%E6%89%8B%E5%86%8C</link>
+    <guid>https://wiki.likui.info/Area/AI/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%AE%9E%E9%AA%8C%E6%89%8B%E5%86%8C</guid>
+    <description><![CDATA[ 深度学习实验手册 目标：从张量、自动微分和训练循环开始，建立一个可复用的 PyTorch 实验模板，再逐步扩展到 CNN、Transformer 和论文复现。 1. ]]></description>
+    <pubDate>Fri, 30 Oct 2026 10:21:38 GMT</pubDate>
+  </item><item>
+    <title>机器学习实验手册</title>
+    <link>https://wiki.likui.info/Area/AI/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AE%9E%E9%AA%8C%E6%89%8B%E5%86%8C</link>
+    <guid>https://wiki.likui.info/Area/AI/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AE%9E%E9%AA%8C%E6%89%8B%E5%86%8C</guid>
+    <description><![CDATA[ 机器学习实验手册 本手册把机器学习知识变成可重复的实验。建议每个实验都保留：问题定义、数据版本、训练/验证/测试划分、基线、指标、错误分析和结论。 1. ]]></description>
+    <pubDate>Fri, 30 Oct 2026 10:21:35 GMT</pubDate>
+  </item><item>
+    <title>人工智能学习中心</title>
+    <link>https://wiki.likui.info/Area/AI/</link>
+    <guid>https://wiki.likui.info/Area/AI/</guid>
+    <description><![CDATA[ 人工智能学习中心 从数学、编程和经典算法出发，逐步掌握机器学习、深度学习、大模型、智能体与 AI 工程。这里不仅收集资料，更强调读懂原理、运行代码、复现论文、完成项目、评估结果。 推荐学习方式 每个主题按「概念 → 数学直觉 → 代码实验 → 论文/数据 → 项目复盘」学习。不要只收藏链接；至少留下一个可运行实验和一篇自己的总结。 知识地图 flowchart TD A[&quot;人工智能 AI&quot;] --&gt; B[&quot;数学与编程基础&quot;] B --&gt; C[&quot;AI 基础与搜索推理&quot;] C --&gt; D[&quot;机器学习&quot;... ]]></description>
+    <pubDate>Fri, 30 Oct 2026 09:36:06 GMT</pubDate>
+  </item><item>
     <title>AI 专业方向</title>
     <link>https://wiki.likui.info/Area/AI/AI%E4%B8%93%E4%B8%9A%E6%96%B9%E5%90%91</link>
     <guid>https://wiki.likui.info/Area/AI/AI%E4%B8%93%E4%B8%9A%E6%96%B9%E5%90%91</guid>
@@ -24,12 +48,6 @@
     <description><![CDATA[ 人工智能学习专题 人工智能专题已统一整理到知识库的 AI 专区，避免在嵌入式（EE）和人工智能（AI）两个目录维护重复内容。 请从这里进入完整学习路线： 人工智能学习中心 人工智能：从入门到精通 数学与 Python 基础 机器学习 深度学习 生成式 AI 与大模型 AI 工程与部署 AI 论文与数据集 AI 书籍与课程 GitHub 开源学习项目 智能体 原有嵌入式目录保留此入口，后续 AI 知识内容以 content/Area/AI/ 为唯一主目录。. ]]></description>
     <pubDate>Fri, 30 Oct 2026 09:35:31 GMT</pubDate>
   </item><item>
-    <title>人工智能学习中心</title>
-    <link>https://wiki.likui.info/Area/AI/</link>
-    <guid>https://wiki.likui.info/Area/AI/</guid>
-    <description><![CDATA[ 人工智能学习中心 从数学、编程和经典算法出发，逐步掌握机器学习、深度学习、大模型、智能体与 AI 工程。这里不仅收集资料，更强调读懂原理、运行代码、复现论文、完成项目、评估结果。 推荐学习方式 每个主题按「概念 → 数学直觉 → 代码实验 → 论文/数据 → 项目复盘」学习。不要只收藏链接；至少留下一个可运行实验和一篇自己的总结。 知识地图 flowchart TD A[&quot;人工智能 AI&quot;] --&gt; B[&quot;数学与编程基础&quot;] B --&gt; C[&quot;AI 基础与搜索推理&quot;] C --&gt; D[&quot;机器学习&quot;... ]]></description>
-    <pubDate>Fri, 30 Oct 2026 09:35:28 GMT</pubDate>
-  </item><item>
     <title>GitHub 开源 AI 学习项目</title>
     <link>https://wiki.likui.info/Area/AI/GitHub%E5%BC%80%E6%BA%90%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE</link>
     <guid>https://wiki.likui.info/Area/AI/GitHub%E5%BC%80%E6%BA%90%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE</guid>
@@ -47,24 +65,6 @@
     <guid>https://wiki.likui.info/Area/AI/AI%E8%AE%BA%E6%96%87%E4%B8%8E%E6%95%B0%E6%8D%AE%E9%9B%86</guid>
     <description><![CDATA[ AI 论文与数据集 本页提供论文检索、公开数据集、基准评测和复现实验入口。公开可访问不代表可任意商用、训练或再分发；使用前必须核对数据集卡、论文说明、原始网站和许可证。 1. ]]></description>
     <pubDate>Fri, 30 Oct 2026 09:35:02 GMT</pubDate>
-  </item><item>
-    <title>AI 工程与部署</title>
-    <link>https://wiki.likui.info/Area/AI/AI%E5%B7%A5%E7%A8%8B%E4%B8%8E%E9%83%A8%E7%BD%B2</link>
-    <guid>https://wiki.likui.info/Area/AI/AI%E5%B7%A5%E7%A8%8B%E4%B8%8E%E9%83%A8%E7%BD%B2</guid>
-    <description><![CDATA[ AI 工程与部署 模型能力只是 AI 产品的一部分。生产系统还需要数据治理、服务接口、评测、可观测性、安全、成本控制和持续迭代。 端到端工程架构 flowchart TB U[&quot;用户 / 业务系统&quot;] --&gt; API[&quot;API Gateway / Auth / Rate Limit&quot;] API --&gt; APP[&quot;应用编排层&quot;] APP --&gt; RAG[&quot;检索层：BM25 + Vector + Rerank&quot;] APP --&gt; LLM[&quot;模型服务&quot;] APP --&gt; ... ]]></description>
-    <pubDate>Fri, 30 Oct 2026 09:34:59 GMT</pubDate>
-  </item><item>
-    <title>生成式 AI 与大语言模型</title>
-    <link>https://wiki.likui.info/Area/AI/%E7%94%9F%E6%88%90%E5%BC%8FAI%E4%B8%8E%E5%A4%A7%E6%A8%A1%E5%9E%8B</link>
-    <guid>https://wiki.likui.info/Area/AI/%E7%94%9F%E6%88%90%E5%BC%8FAI%E4%B8%8E%E5%A4%A7%E6%A8%A1%E5%9E%8B</guid>
-    <description><![CDATA[ 生成式 AI 与大语言模型 生成式模型学习数据分布并生成新样本。大语言模型通常以 token 序列建模为核心，通过预训练获得通用表示，再通过指令微调、偏好优化和工具使用适配任务。 大模型技术栈 flowchart TD Data[&quot;语料、清洗、去重、过滤&quot;] --&gt; Tok[&quot;Tokenizer / Token&quot;] Tok --&gt; Pre[&quot;预训练：Next Token Prediction&quot;] Pre --&gt; Base[&quot;Base Model&quot;] Base --&gt; SFT[&quot;指令... ]]></description>
-    <pubDate>Fri, 30 Oct 2026 09:34:56 GMT</pubDate>
-  </item><item>
-    <title>深度学习</title>
-    <link>https://wiki.likui.info/Area/AI/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0</link>
-    <guid>https://wiki.likui.info/Area/AI/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0</guid>
-    <description><![CDATA[ 深度学习 深度学习通过多层神经网络学习数据表示。真正掌握它，需要能解释前向传播、损失函数、反向传播、优化器、正则化和训练稳定性，并能独立实现训练与评估流程。 神经网络训练流程 flowchart LR X[&quot;输入与标签&quot;] --&gt; F[&quot;前向传播&quot;] F --&gt; Y[&quot;预测输出&quot;] Y --&gt; L[&quot;计算损失&quot;] L --&gt; B[&quot;反向传播求梯度&quot;] B --&gt; O[&quot;优化器更新参数&quot;] O --&gt; F Y --&gt; E[&quot;验... ]]></description>
-    <pubDate>Fri, 30 Oct 2026 09:34:53 GMT</pubDate>
   </item>
     </channel>
   </rss>
