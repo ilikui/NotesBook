@@ -1,0 +1,17 @@
+# Netlify 部署配置
+# 之前构建命令、Node 版本全靠面板手配，一旦默认 Node 版本或缓存变化，
+# 构建会静默失败并继续展示上一次成功的产物（表现为线上内容长期不更新）。
+[build]
+  command = "npx quartz build -d content -o public"
+  publish = "public"
+
+[build.environment]
+  # Quartz 4 要求 Node >= 22
+  NODE_VERSION = "22"
+  NPM_FLAGS = "--no-audit --no-fund"
+  # 笔记数量较多，放宽堆内存，避免构建中途被 OOM 杀掉
+  NODE_OPTIONS = "--max-old-space-size=4096"
+
+# Quartz 生成的是 x.html，站内链接为无扩展名形式。
+# Netlify 的 Pretty URLs 会把 /x.html 映射到 /x，并 301 纠正大小写，
+# 这里显式保留该行为，避免以后关掉面板选项导致全站 404。
