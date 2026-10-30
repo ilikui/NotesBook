@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>人工智能学习中心</title>
+    <link>https://wiki.likui.info/Area/AI/</link>
+    <guid>https://wiki.likui.info/Area/AI/</guid>
+    <description><![CDATA[ 人工智能学习中心 从数学、编程和经典算法出发，逐步掌握机器学习、深度学习、大模型、智能体与 AI 工程。这里不仅收集资料，更强调读懂原理、运行代码、复现论文、完成项目、评估结果。 推荐学习方式 每个主题按「概念 → 数学直觉 → 代码实验 → 论文/数据 → 项目复盘」学习。不要只收藏链接；至少留下一个可运行实验和一篇自己的总结。 知识地图 flowchart TD A[&quot;人工智能 AI&quot;] --&gt; B[&quot;数学与编程基础&quot;] B --&gt; C[&quot;AI 基础与搜索推理&quot;] C --&gt; D[&quot;机器学习&quot;... ]]></description>
+    <pubDate>Fri, 30 Oct 2026 09:36:06 GMT</pubDate>
+  </item><item>
+    <title>AI 专业方向</title>
+    <link>https://wiki.likui.info/Area/AI/AI%E4%B8%93%E4%B8%9A%E6%96%B9%E5%90%91</link>
+    <guid>https://wiki.likui.info/Area/AI/AI%E4%B8%93%E4%B8%9A%E6%96%B9%E5%90%91</guid>
+    <description><![CDATA[ AI 专业方向 完成机器学习与深度学习基础后，选择一个主方向深入。不要同时追逐所有热点；建议以一个真实任务、一个公开数据集和一个可复现实验作为主线。 方向总览 mindmap root((AI 专业方向)) 计算机视觉 分类 检测 分割 视觉语言模型 自然语言处理 文本分类 信息抽取 机器翻译 LLM 语音与音频 ASR TTS 说话人识别 音频理解 推荐与搜索 召回 排序 推荐系统 向量检索 强化学习 MDP Q-Learning Policy Gradient RLHF 多模态 图文对齐 视频理解 跨模态生成 机器人与具身智能 感知 定位 规划 控制 1. ]]></description>
+    <pubDate>Fri, 30 Oct 2026 09:36:01 GMT</pubDate>
+  </item><item>
     <title>智能体</title>
     <link>https://wiki.likui.info/Area/AI/%E6%99%BA%E8%83%BD%E4%BD%93</link>
     <guid>https://wiki.likui.info/Area/AI/%E6%99%BA%E8%83%BD%E4%BD%93</guid>
@@ -17,12 +29,6 @@
     <guid>https://wiki.likui.info/Area/EE/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD</guid>
     <description><![CDATA[ 人工智能学习专题 人工智能专题已统一整理到知识库的 AI 专区，避免在嵌入式（EE）和人工智能（AI）两个目录维护重复内容。 请从这里进入完整学习路线： 人工智能学习中心 人工智能：从入门到精通 数学与 Python 基础 机器学习 深度学习 生成式 AI 与大模型 AI 工程与部署 AI 论文与数据集 AI 书籍与课程 GitHub 开源学习项目 智能体 原有嵌入式目录保留此入口，后续 AI 知识内容以 content/Area/AI/ 为唯一主目录。. ]]></description>
     <pubDate>Fri, 30 Oct 2026 09:35:31 GMT</pubDate>
-  </item><item>
-    <title>人工智能学习中心</title>
-    <link>https://wiki.likui.info/Area/AI/</link>
-    <guid>https://wiki.likui.info/Area/AI/</guid>
-    <description><![CDATA[ 人工智能学习中心 从数学、编程和经典算法出发，逐步掌握机器学习、深度学习、大模型、智能体与 AI 工程。这里不仅收集资料，更强调读懂原理、运行代码、复现论文、完成项目、评估结果。 推荐学习方式 每个主题按「概念 → 数学直觉 → 代码实验 → 论文/数据 → 项目复盘」学习。不要只收藏链接；至少留下一个可运行实验和一篇自己的总结。 知识地图 flowchart TD A[&quot;人工智能 AI&quot;] --&gt; B[&quot;数学与编程基础&quot;] B --&gt; C[&quot;AI 基础与搜索推理&quot;] C --&gt; D[&quot;机器学习&quot;... ]]></description>
-    <pubDate>Fri, 30 Oct 2026 09:35:28 GMT</pubDate>
   </item><item>
     <title>GitHub 开源 AI 学习项目</title>
     <link>https://wiki.likui.info/Area/AI/GitHub%E5%BC%80%E6%BA%90%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE</link>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/AI/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0</guid>
     <description><![CDATA[ 深度学习 深度学习通过多层神经网络学习数据表示。真正掌握它，需要能解释前向传播、损失函数、反向传播、优化器、正则化和训练稳定性，并能独立实现训练与评估流程。 神经网络训练流程 flowchart LR X[&quot;输入与标签&quot;] --&gt; F[&quot;前向传播&quot;] F --&gt; Y[&quot;预测输出&quot;] Y --&gt; L[&quot;计算损失&quot;] L --&gt; B[&quot;反向传播求梯度&quot;] B --&gt; O[&quot;优化器更新参数&quot;] O --&gt; F Y --&gt; E[&quot;验... ]]></description>
     <pubDate>Fri, 30 Oct 2026 09:34:53 GMT</pubDate>
-  </item><item>
-    <title>机器学习</title>
-    <link>https://wiki.likui.info/Area/AI/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0</link>
-    <guid>https://wiki.likui.info/Area/AI/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0</guid>
-    <description><![CDATA[ 机器学习 机器学习的目标是从样本中学习可泛化的规律。学习重点不是背算法名称，而是理解数据假设、损失函数、优化方式、泛化能力和适用边界。 知识地图 flowchart TD ML[&quot;机器学习&quot;] --&gt; S[&quot;监督学习&quot;] ML --&gt; U[&quot;无监督学习&quot;] ML --&gt; R[&quot;强化学习&quot;] S --&gt; Reg[&quot;回归：线性 / Ridge / Lasso&quot;] S --&gt; Cls[&quot;分类：逻辑回归 / SVM / KNN&quot;] S --&gt; Tr... ]]></description>
-    <pubDate>Fri, 30 Oct 2026 09:34:50 GMT</pubDate>
   </item>
     </channel>
   </rss>
