@@ -6,65 +6,65 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>人工智能：从入门到精通</title>
-    <link>https://wiki.likui.info/Area/AI/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD</link>
-    <guid>https://wiki.likui.info/Area/AI/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD</guid>
-    <description><![CDATA[ 人工智能：从入门到精通 1. ]]></description>
-    <pubDate>Fri, 30 Oct 2026 10:41:10 GMT</pubDate>
+    <title>Archive</title>
+    <link>https://wiki.likui.info/Archive/Archive</link>
+    <guid>https://wiki.likui.info/Archive/Archive</guid>
+    <description><![CDATA[ Archive｜归档区说明 Archive（归档区）用于保存已经停止维护、暂时不再活跃，但仍有长期参考价值的内容。它不是临时收件箱，也不是无差别堆放文件的目录。 归档判断 flowchart TD A[一条笔记或一个项目] --&gt; B{是否仍在使用或持续建设？} B -- 是 --&gt; C[保留在 Project / Area / Resource] B -- 否 --&gt; D{未来是否仍有检索价值？} D -- 是 --&gt; E[归档到 Archive] D -- 否 --&gt; F[确认无价值后再删除] 当前状态 目前已清理此目录中与个人知识主题无直接关系的 Quart... ]]></description>
+    <pubDate>Fri, 30 Oct 2026 11:26:38 GMT</pubDate>
   </item><item>
-    <title>机器人与具身智能实战</title>
-    <link>https://wiki.likui.info/Area/AI/%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%B8%8E%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD%E5%AE%9E%E6%88%98</link>
-    <guid>https://wiki.likui.info/Area/AI/%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%B8%8E%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD%E5%AE%9E%E6%88%98</guid>
-    <description><![CDATA[ 机器人与具身智能实战 机器人系统把感知、状态估计、规划、控制和执行器连接成闭环。具身智能进一步研究智能体如何通过身体与环境交互学习和完成任务。 1. ]]></description>
-    <pubDate>Fri, 30 Oct 2026 10:41:02 GMT</pubDate>
+    <title>ARAComAPI</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/ARAComAPI</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/ARAComAPI</guid>
+    <description><![CDATA[ ARAComAPI 是 AP 通信管理 API（ara::com）的入门解释文档。因为直接读正式规范不易理解，本文档专为两类读者做入口：AP 应用开发者（用 ara::com 与其它应用 / 服务交互）与 AP 平台供应商（为 ara::com 实现优化的 IPC 绑定的实现者）。 一句话定位 学 ara::com 之前必读的引导文档：先懂设计意图与行为，再看 SWS 的形式化细节。 规范信息 项目内容平台AP类别EXP — 解释性指南（Explanation）UID846版本R25-11本地 PDFAUTOSAR_AP_EXP_ARAComAPI.pdf纯文本全文AP_EXP_ARAComA... ]]></description>
+    <pubDate>Fri, 30 Oct 2026 11:26:38 GMT</pubDate>
   </item><item>
-    <title>强化学习实战路线</title>
-    <link>https://wiki.likui.info/Area/AI/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%AE%9E%E6%88%98%E8%B7%AF%E7%BA%BF</link>
-    <guid>https://wiki.likui.info/Area/AI/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%AE%9E%E6%88%98%E8%B7%AF%E7%BA%BF</guid>
-    <description><![CDATA[ 强化学习实战路线 强化学习（RL）研究智能体如何通过与环境交互，根据奖励信号学习策略。与监督学习不同，动作会影响后续状态和未来可获得的奖励。 1. ]]></description>
-    <pubDate>Fri, 30 Oct 2026 10:40:58 GMT</pubDate>
+    <title>BSWDistributionGuide</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/BSWDistributionGuide</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/BSWDistributionGuide</guid>
+    <description><![CDATA[ BSWDistributionGuide 是 CP 解释性指南（EXP），讲清一个核心问题：基础软件（BSW）如何分布到多核 CPU 的不同分区（Partition）上，以及在功能安全场景下如何做分区隔离与内存保护。它分两部分：多核分布与安全分布。 一句话定位 学 CP 的第一站：先理解「BSW 怎么摆到多核 / 分区分核」，后面所有模块的部署都以它为背景。 规范信息 项目内容平台CP类别EXP — 解释性指南（Explanation）UID631版本R25-11本地 PDFAUTOSAR_CP_EXP_BSWDistributionGuide.pdf纯文本全文CP_EXP_BSWDistri... ]]></description>
+    <pubDate>Fri, 30 Oct 2026 11:26:38 GMT</pubDate>
   </item><item>
-    <title>大模型与 RAG 实战手册</title>
-    <link>https://wiki.likui.info/Area/AI/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E4%B8%8ERAG%E5%AE%9E%E6%88%98%E6%89%8B%E5%86%8C</link>
-    <guid>https://wiki.likui.info/Area/AI/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E4%B8%8ERAG%E5%AE%9E%E6%88%98%E6%89%8B%E5%86%8C</guid>
-    <description><![CDATA[ 大模型与 RAG 实战手册 本手册以“构建一个能够回答内部文档问题、给出来源证据的知识助手”为目标。RAG（检索增强生成）不是简单地把文档塞进提示词，而是一条需要单独评估的数据与检索链路。 1. ]]></description>
-    <pubDate>Fri, 30 Oct 2026 10:40:55 GMT</pubDate>
+    <title>BSWModeManager</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/BSWModeManager</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/BSWModeManager</guid>
+    <description><![CDATA[ BswM（BSW Mode Manager，BSW 模式管理） 是 CP 基础软件模块，实现整车模式管理（Vehicle Mode Management）与应用模式管理（Application Mode Management）中位于 BSW 的那一部分：它按简单规则仲裁来自应用层 SWC 或其它 BSW 模块的模式请求，并依据仲裁结果执行动作。 一句话定位 模式管理的「规则引擎」：把各方模式请求按规则裁决，再触发一串配置好的动作。 规范信息 项目内容平台CP类别SWS — 软件模块规范（Software Specification）UID313版本R25-11本地 PDFAUTOSAR_CP_... ]]></description>
+    <pubDate>Fri, 30 Oct 2026 11:26:38 GMT</pubDate>
   </item><item>
-    <title>AI 工程与部署</title>
-    <link>https://wiki.likui.info/Area/AI/AI%E5%B7%A5%E7%A8%8B%E4%B8%8E%E9%83%A8%E7%BD%B2</link>
-    <guid>https://wiki.likui.info/Area/AI/AI%E5%B7%A5%E7%A8%8B%E4%B8%8E%E9%83%A8%E7%BD%B2</guid>
-    <description><![CDATA[ AI 工程与部署 模型能力只是 AI 产品的一部分。生产系统还需要数据治理、服务接口、评测、可观测性、安全、成本控制和持续迭代。 端到端工程架构 flowchart TB U[&quot;用户 / 业务系统&quot;] --&gt; API[&quot;API Gateway / Auth / Rate Limit&quot;] API --&gt; APP[&quot;应用编排层&quot;] APP --&gt; RAG[&quot;检索层：BM25 + Vector + Rerank&quot;] APP --&gt; LLM[&quot;模型服务&quot;] APP --&gt; ... ]]></description>
-    <pubDate>Fri, 30 Oct 2026 10:40:52 GMT</pubDate>
+    <title>CANInterface</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/CANInterface</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/CANInterface</guid>
+    <description><![CDATA[ CanIf（CAN Interface，CAN 接口） 位于 CAN 设备驱动（CanDrv、CanTrcv）与上层通信服务（CanSM、CanNm、CanTp、PduR）之间，为上层提供统一的 CAN 硬件抽象：屏蔽不同 CAN 控制器 / 收发器的差异，用「物理 CAN 通道」的视角统一管理。 一句话定位 CAN 通信栈的「中间层」：向下管控制器、向上报事件与转数据。 规范信息 项目内容平台CP类别SWS — 软件模块规范（Software Specification）UID012版本R25-11本地 PDFAUTOSAR_CP_SWS_CANInterface.pdf纯文本全文CP_SW... ]]></description>
+    <pubDate>Fri, 30 Oct 2026 11:26:38 GMT</pubDate>
   </item><item>
-    <title>生成式 AI 与大语言模型</title>
-    <link>https://wiki.likui.info/Area/AI/%E7%94%9F%E6%88%90%E5%BC%8FAI%E4%B8%8E%E5%A4%A7%E6%A8%A1%E5%9E%8B</link>
-    <guid>https://wiki.likui.info/Area/AI/%E7%94%9F%E6%88%90%E5%BC%8FAI%E4%B8%8E%E5%A4%A7%E6%A8%A1%E5%9E%8B</guid>
-    <description><![CDATA[ 生成式 AI 与大语言模型 生成式模型学习数据分布并生成新样本。大语言模型通常以 token 序列建模为核心，通过预训练获得通用表示，再通过指令微调、偏好优化和工具使用适配任务。 大模型技术栈 flowchart TD Data[&quot;语料、清洗、去重、过滤&quot;] --&gt; Tok[&quot;Tokenizer / Token&quot;] Tok --&gt; Pre[&quot;预训练：Next Token Prediction&quot;] Pre --&gt; Base[&quot;Base Model&quot;] Base --&gt; SFT[&quot;指令... ]]></description>
-    <pubDate>Fri, 30 Oct 2026 10:40:49 GMT</pubDate>
+    <title>COM</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/COM</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/COM</guid>
+    <description><![CDATA[ Com（Communication，通信） 是 CP 基础软件模块，位于其使用者（RTE、SwCluC）与 PDURouter 之间，提供**面向信号（Signal）**的数据接口：把信号打包成 I-PDU 发送、把收到的 I-PDU 解包成信号，并控制发送行为。 一句话定位 「信号 ↔ 报文」的翻译官：管打包 / 解包与发送模式，是通信栈里最贴近应用语义的一层。 规范信息 项目内容平台CP类别SWS — 软件模块规范（Software Specification）UID015版本R25-11本地 PDFAUTOSAR_CP_SWS_COM.pdf纯文本全文CP_SWS_COM.complet... ]]></description>
+    <pubDate>Fri, 30 Oct 2026 11:26:38 GMT</pubDate>
   </item><item>
-    <title>深度学习</title>
-    <link>https://wiki.likui.info/Area/AI/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0</link>
-    <guid>https://wiki.likui.info/Area/AI/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0</guid>
-    <description><![CDATA[ 深度学习 深度学习通过多层神经网络学习数据表示。真正掌握它，需要能解释前向传播、损失函数、反向传播、优化器、正则化和训练稳定性，并能独立实现训练与评估流程。 神经网络训练流程 flowchart LR X[&quot;输入与标签&quot;] --&gt; F[&quot;前向传播&quot;] F --&gt; Y[&quot;预测输出&quot;] Y --&gt; L[&quot;计算损失&quot;] L --&gt; B[&quot;反向传播求梯度&quot;] B --&gt; O[&quot;优化器更新参数&quot;] O --&gt; F Y --&gt; E[&quot;验... ]]></description>
-    <pubDate>Fri, 30 Oct 2026 10:40:45 GMT</pubDate>
+    <title>COMManager</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/COMManager</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/COMManager</guid>
+    <description><![CDATA[ ComM（Communication Manager，通信管理器） 是 CP 基础软件中的资源管理器，封装对底层通信服务的控制。它面向「通信请求者（User）」而不是具体 SWC / Runnable，收集并协调整条总线的通信访问请求。 一句话定位 「能不能用总线」的总开关：用户只说想要「通信模式」，ComM 负责把对应通道的通信能力开 / 关。 规范信息 项目内容平台CP类别SWS — 软件模块规范（Software Specification）UID079版本R25-11本地 PDFAUTOSAR_CP_SWS_COMManager.pdf纯文本全文CP_SWS_COMManager.co... ]]></description>
+    <pubDate>Fri, 30 Oct 2026 11:26:38 GMT</pubDate>
   </item><item>
-    <title>机器学习</title>
-    <link>https://wiki.likui.info/Area/AI/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0</link>
-    <guid>https://wiki.likui.info/Area/AI/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0</guid>
-    <description><![CDATA[ 机器学习 机器学习的目标是从样本中学习可泛化的规律。学习重点不是背算法名称，而是理解数据假设、损失函数、优化方式、泛化能力和适用边界。 知识地图 flowchart TD ML[&quot;机器学习&quot;] --&gt; S[&quot;监督学习&quot;] ML --&gt; U[&quot;无监督学习&quot;] ML --&gt; R[&quot;强化学习&quot;] S --&gt; Reg[&quot;回归：线性 / Ridge / Lasso&quot;] S --&gt; Cls[&quot;分类：逻辑回归 / SVM / KNN&quot;] S --&gt; Tr... ]]></description>
-    <pubDate>Fri, 30 Oct 2026 10:40:41 GMT</pubDate>
+    <title>CommunicationManagement</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/CommunicationManagement</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/CommunicationManagement</guid>
+    <description><![CDATA[ Communication Management（通信管理，ara::com） 是 AP 的基础功能簇，在自适应应用之间实现面向服务的通信（SOA），覆盖进程内、进程间、跨机各层级。它由生成的服务提供者骨架（Skeleton）与服务请求者代理（Proxy）、以及可选的通用通信管理器构成，并提供内建的E2E 保护安全机制。 一句话定位 AP 的「服务总线」：应用之间不点对点连线，而是按服务（Event / Method / Field）收发。 规范信息 项目内容平台AP类别SWS — 软件模块规范（Software Specification）UID717版本R25-11本地 PDFAUTOSA... ]]></description>
+    <pubDate>Fri, 30 Oct 2026 11:26:38 GMT</pubDate>
   </item><item>
-    <title>AI 书籍与课程</title>
-    <link>https://wiki.likui.info/Area/AI/AI%E4%B9%A6%E7%B1%8D%E4%B8%8E%E8%AF%BE%E7%A8%8B</link>
-    <guid>https://wiki.likui.info/Area/AI/AI%E4%B9%A6%E7%B1%8D%E4%B8%8E%E8%AF%BE%E7%A8%8B</guid>
-    <description><![CDATA[ AI 书籍与课程 本页整理人工智能领域的经典教材、工程实践书籍、前沿方向读物与公开课程。书籍按知识主题归档，优先链接作者、出版社、官方配套代码和合法在线阅读入口。 关于电子书下载与版权 GitHub 中只收录书目信息、官方购买/试读入口、作者公开的合法全文，以及配套代码和课程。出版社付费电子书、受版权保护的 PDF/EPUB 不复制到仓库，也不提供未经授权的网盘或盗版下载地址。页面标注“免费在线版”时，表示作者或出版社公开提供阅读/下载；仍应遵守原站许可。 一、本次精选：十本 AI 进阶书单 这十本书覆盖机器学习原理、Transformer、大模型、AI 工程、知识图谱、生成模型、强化学习、A... ]]></description>
-    <pubDate>Fri, 30 Oct 2026 10:40:07 GMT</pubDate>
+    <title>Core</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/Core</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/Core</guid>
+    <description><![CDATA[ Core（ara::core，自适应平台核心） 是 AP 的基础功能簇，定义适用于整个框架的功能，并定义一组被多个功能簇作为公共接口使用的通用数据类型。 一句话定位 AP 的「标准库底座」：整个框架通用的类型与基础设施，其它功能簇都建立在它之上。 规范信息 项目内容平台AP类别SWS — 软件模块规范（Software Specification）UID903版本R25-11本地 PDFAUTOSAR_AP_SWS_Core.pdf纯文本全文AP_SWS_Core.complete.txt 知识体系 flowchart TD A[&quot;ara::core&quot;] --&gt; B[... ]]></description>
+    <pubDate>Fri, 30 Oct 2026 11:26:38 GMT</pubDate>
   </item><item>
-    <title>人工智能学习中心</title>
-    <link>https://wiki.likui.info/Area/AI/</link>
-    <guid>https://wiki.likui.info/Area/AI/</guid>
-    <description><![CDATA[ 人工智能学习中心 从数学、编程和经典算法出发，逐步掌握机器学习、深度学习、大模型、智能体与 AI 工程。这里不仅收集资料，更强调读懂原理、运行代码、复现论文、完成项目、评估结果。 推荐学习方式 每个主题按「概念 → 数学直觉 → 代码实验 → 论文/数据 → 项目复盘」学习。不要只收藏链接；至少留下一个可运行实验和一篇自己的总结。 知识地图 flowchart TD A[&quot;人工智能 AI&quot;] --&gt; B[&quot;数学与编程基础&quot;] B --&gt; C[&quot;AI 基础与搜索推理&quot;] C --&gt; D[&quot;机器学习&quot;... ]]></description>
-    <pubDate>Fri, 30 Oct 2026 10:27:49 GMT</pubDate>
+    <title>CryptoServiceManager</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/CryptoServiceManager</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/CryptoServiceManager</guid>
+    <description><![CDATA[ CSM（Crypto Service Manager，加密服务管理器） 是 CP 的加密栈顶层模块，为所有软件模块提供唯一的加密功能访问入口：以标准化接口向高层屏蔽底层加密库与硬件的差异，并可为每个软件模块单独配置加密服务。 一句话定位 加密能力的「统一窗口」：上层只调 CSM，具体用软件库还是硬件加密由下层决定。 规范信息 项目内容平台CP类别SWS — 软件模块规范（Software Specification）UID402版本R25-11本地 PDFAUTOSAR_CP_SWS_CryptoServiceManager.pdf纯文本全文CP_SWS_CryptoServiceManage... ]]></description>
+    <pubDate>Fri, 30 Oct 2026 11:26:38 GMT</pubDate>
   </item>
     </channel>
   </rss>
