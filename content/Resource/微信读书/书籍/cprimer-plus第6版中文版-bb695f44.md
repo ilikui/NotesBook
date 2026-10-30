@@ -566,7 +566,7 @@ C语言诞生日期
 
 **划线**
 
-> `#include`这行代码是一条C预处理器指令（preprocessor directive）。通常，C编译器在编译前会对源代码做一些准备工作，即预处理（preprocessing）。
+> `#include这行代码是一条C预处理器指令`（preprocessor directive）。通常，C编译器在编译前会对源代码做一些准备工作，即预处理（preprocessing）。
 
 ---
 
