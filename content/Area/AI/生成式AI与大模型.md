@@ -74,6 +74,13 @@ flowchart TD
 
 开放权重不等于无限制开源。使用模型前应核对模型卡、权重许可证、训练数据说明、商用限制、地域限制和安全政策。不要将机密数据、个人信息或未授权数据上传到第三方模型服务。
 
+## 推荐阅读
+
+- [Hands-On Large Language Models](https://www.oreilly.com/library/view/hands-on-large-language/9781098150952/)：理解 Token、Embedding、Transformer 与语义检索，配套代码见[GitHub](https://github.com/HandsOnLLM/Hands-On-Large-Language-Models)。
+- [Natural Language Processing with Transformers](https://www.oreilly.com/library/view/natural-language-processing/9781098103231/)：Hugging Face 与 Transformer 实践，配套代码见[GitHub](https://github.com/nlp-with-transformers/notebooks)。
+- [Generative Deep Learning](https://www.oreilly.com/library/view/generative-deep-learning/9781098134174/)：VAE、GAN、扩散模型等生成式方法。
+- 完整书单见 [[AI书籍与课程]]。
+
 ## 相关
 
 - [[深度学习]]
