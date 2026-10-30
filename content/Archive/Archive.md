@@ -1,5 +1,7 @@
 ---
 title: Archive
+tags:
+  - Archive
 ---
 
 # Archive｜归档区说明

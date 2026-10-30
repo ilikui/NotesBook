@@ -22,7 +22,14 @@ import checkboxScript from "../../components/scripts/checkbox.inline"
 // @ts-ignore
 import mermaidScript from "../../components/scripts/mermaid.inline"
 import mermaidStyle from "../../components/styles/mermaid.inline.scss"
-import { FilePath, pathToRoot, slugTag, slugifyFilePath } from "../../util/path"
+import {
+  FilePath,
+  FullSlug,
+  pathToRoot,
+  resolveLinkTarget,
+  slugTag,
+  slugifyFilePath,
+} from "../../util/path"
 import { toHast } from "mdast-util-to-hast"
 import { toHtml } from "hast-util-to-html"
 import { capitalize } from "../../util/lang"
@@ -277,10 +284,14 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
                   // otherwise, fall through to regular link
                 }
 
-                // treat as broken link if slug not in ctx.allSlugs
+                // treat as broken link if the target can not be resolved in the vault
                 if (opts.disableBrokenWikilinks) {
-                  const slug = slugifyFilePath(fp as FilePath)
-                  const exists = ctx.allSlugs && ctx.allSlugs.includes(slug)
+                  // the target may be a bare name, a partial path or differ in spacing,
+                  // so use the same resolution the link transformer uses
+                  const target = fp.replace(/^\.?\/+/, "").replace(/\.md$/, "")
+                  const exists =
+                    ctx.allSlugs !== undefined &&
+                    resolveLinkTarget("" as FullSlug, target, ctx.allSlugs) !== undefined
                   if (!exists) {
                     return {
                       type: "html",

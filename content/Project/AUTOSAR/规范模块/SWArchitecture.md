@@ -19,8 +19,8 @@ tags:
 | 类别 | EXP — 解释性指南（Explanation） |
 | UID | 982 |
 | 版本 | R25-11 |
-| 本地 PDF | [AUTOSAR_AP_EXP_SWArchitecture.pdf](file:///F:/Work/Standards/01_Sources/AP_EXP_SWArchitecture_982/AUTOSAR_AP_EXP_SWArchitecture.pdf) |
-| 纯文本全文 | [AP_EXP_SWArchitecture.complete.txt](file:///F:/Work/Standards/01_Sources/AP_EXP_SWArchitecture_982/zzgen/AP_EXP_SWArchitecture.complete.txt) |
+| 本地 PDF | `AUTOSAR_AP_EXP_SWArchitecture.pdf` |
+| 纯文本全文 | `AP_EXP_SWArchitecture.complete.txt` |
 
 ## 知识体系
 
@@ -45,7 +45,7 @@ flowchart TD
 
 - **文档目标**：识别 AP 的利益相关者及其关注点；界定系统范围并给出总览；定义所用架构视点并把关注点映射到视点；为每个视点给出架构视图与模型；提供视图间的一致性规则（correspondence rules）；给出高层架构决策依据（rationale）。
 - **依赖倒置原则（DIP）**：高层构建块不应依赖低层构建块，二者都应依赖抽象（接口）；抽象不应依赖细节，细节（具体实现）应依赖抽象。该原则带来**实现解耦**，有利于扩展实现工作与开展集成测试。
-- **更深入的内容**：更详细的决策说明另见架构决策文档 [SWArchitecturalDecisions](file:///F:/Work/AUTOSAR_Module_Notes/FO/EXP/SWArchitecturalDecisions.md)。
+- **更深入的内容**：更详细的决策说明另见架构决策文档 `SWArchitecturalDecisions`。
 
 ## 依赖关系
 

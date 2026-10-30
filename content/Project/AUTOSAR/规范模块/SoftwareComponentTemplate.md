@@ -19,8 +19,8 @@ tags:
 | 类别 | TPS — 模板规范（Template Specification） |
 | UID | 062 |
 | 版本 | R25-11 |
-| 本地 PDF | [AUTOSAR_CP_TPS_SoftwareComponentTemplate.pdf](file:///F:/Work/Standards/01_Sources/CP_TPS_SoftwareComponentTemplate_062/AUTOSAR_CP_TPS_SoftwareComponentTemplate.pdf) |
-| 纯文本全文 | [CP_TPS_SoftwareComponentTemplate.complete.txt](file:///F:/Work/Standards/01_Sources/CP_TPS_SoftwareComponentTemplate_062/zzgen/CP_TPS_SoftwareComponentTemplate.complete.txt) |
+| 本地 PDF | `AUTOSAR_CP_TPS_SoftwareComponentTemplate.pdf` |
+| 纯文本全文 | `CP_TPS_SoftwareComponentTemplate.complete.txt` |
 
 ## 知识体系
 

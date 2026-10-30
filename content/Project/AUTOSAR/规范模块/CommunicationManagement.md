@@ -19,8 +19,8 @@ tags:
 | 类别 | SWS — 软件模块规范（Software Specification） |
 | UID | 717 |
 | 版本 | R25-11 |
-| 本地 PDF | [AUTOSAR_AP_SWS_CommunicationManagement.pdf](file:///F:/Work/Standards/01_Sources/AP_SWS_CommunicationManagement_717/AUTOSAR_AP_SWS_CommunicationManagement.pdf) |
-| 纯文本全文 | [AP_SWS_CommunicationManagement.complete.txt](file:///F:/Work/Standards/01_Sources/AP_SWS_CommunicationManagement_717/zzgen/AP_SWS_CommunicationManagement.complete.txt) |
+| 本地 PDF | `AUTOSAR_AP_SWS_CommunicationManagement.pdf` |
+| 纯文本全文 | `AP_SWS_CommunicationManagement.complete.txt` |
 
 ## 知识体系
 

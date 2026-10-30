@@ -226,34 +226,164 @@ export interface TransformOptions {
   allSlugs: FullSlug[]
 }
 
+/**
+ * Normalizes a path so that cosmetic differences in note naming do not break links.
+ * "AUTOSAR 故障排查手册" and "AUTOSAR-故障排查手册" describe the same note, because
+ * spaces are turned into dashes when slugs are created.
+ */
+function normalizeLinkKey(s: string): string {
+  return s.toLowerCase().replace(/[\s\-_]+/g, "")
+}
+
+/**
+ * All the ways a single slug can be addressed: the file itself, the folder it is an
+ * index for (`a/b/index` -> `a/b`) and every folder that contains it.
+ */
+function candidateForms(slug: string): string[] {
+  const forms = [slug]
+  if (slug.endsWith("/index")) {
+    forms.push(slug.slice(0, -"/index".length))
+  }
+
+  const segments = slug.split("/")
+  for (let i = segments.length - 1; i > 0; i--) {
+    forms.push(segments.slice(0, i).join("/") + "/index")
+  }
+  return forms
+}
+
+/**
+ * Prefers targets that live next to the linking file, then targets that share the
+ * longest folder prefix, then the shallowest one. Ties are broken alphabetically so
+ * builds stay deterministic.
+ */
+function proximityScore(src: FullSlug, slug: string): number {
+  const srcFolder = src.split("/").slice(0, -1)
+  const folder = slug.split("/").slice(0, -1)
+
+  let shared = 0
+  while (
+    shared < Math.min(srcFolder.length, folder.length) &&
+    srcFolder[shared] === folder[shared]
+  ) {
+    shared++
+  }
+  return -shared * 1000 + slug.split("/").length
+}
+
+/**
+ * Resolves a link target written in a note (e.g. `[[人工智能]]`, `[[规范模块/RTE]]`)
+ * to a slug that actually exists. Supports bare file names, partial paths relative to
+ * the note, and names that only differ by spaces / dashes.
+ */
+export function resolveLinkTarget(
+  src: FullSlug,
+  target: string,
+  allSlugs: FullSlug[],
+): FullSlug | undefined {
+  if (!target || allSlugs.length === 0) {
+    return undefined
+  }
+
+  const normalizedTarget = normalizeLinkKey(target)
+  const matches: { slug: FullSlug; rank: number }[] = []
+
+  for (const slug of allSlugs) {
+    let bestRank: number | undefined
+    for (const form of candidateForms(slug)) {
+      const normalizedForm = normalizeLinkKey(form)
+      let rank: number | undefined
+      if (form === target) {
+        rank = 0
+      } else if (form.endsWith("/" + target)) {
+        rank = 1
+      } else if (normalizedForm === normalizedTarget) {
+        rank = 2
+      } else if (normalizedForm.endsWith("/" + normalizedTarget)) {
+        rank = 3
+      }
+
+      if (rank !== undefined && (bestRank === undefined || rank < bestRank)) {
+        bestRank = rank
+      }
+      if (bestRank === 0) break
+    }
+
+    if (bestRank !== undefined) {
+      matches.push({ slug, rank: bestRank })
+    }
+  }
+
+  if (matches.length === 0) {
+    return undefined
+  }
+
+  const bestRank = Math.min(...matches.map((m) => m.rank))
+  return matches
+    .filter((m) => m.rank === bestRank)
+    .sort((a, b) => {
+      const scoreA = proximityScore(src, a.slug)
+      const scoreB = proximityScore(src, b.slug)
+      return scoreA === scoreB ? a.slug.localeCompare(b.slug) : scoreA - scoreB
+    })[0].slug
+}
+
+/**
+ * Resolves a relative target (`../foo`, `./bar`) against the folder of the linking note
+ * so it can be looked up in the vault. Relative paths written by hand in notes are not
+ * vault-absolute, which used to produce links pointing outside the site.
+ */
+function toVaultPath(src: FullSlug, target: string): string {
+  const segments = src.split("/").slice(0, -1)
+  for (const part of target.split("/")) {
+    if (part === "" || part === ".") continue
+    if (part === "..") {
+      segments.pop()
+    } else {
+      segments.push(part)
+    }
+  }
+  return segments.join("/")
+}
+
 export function transformLink(src: FullSlug, target: string, opts: TransformOptions): RelativeURL {
   let targetSlug = transformInternalLink(target)
 
   if (opts.strategy === "relative") {
     return targetSlug as RelativeURL
-  } else {
-    const folderTail = isFolderPath(targetSlug) ? "/" : ""
-    const canonicalSlug = stripSlashes(targetSlug.slice(".".length))
-    let [targetCanonical, targetAnchor] = splitAnchor(canonicalSlug)
+  }
 
-    if (opts.strategy === "shortest") {
-      // if the file name is unique, then it's just the filename
-      const matchingFileNames = opts.allSlugs.filter((slug) => {
-        const parts = slug.split("/")
-        const fileName = parts.at(-1)
-        return targetCanonical === fileName
-      })
+  const folderTail = isFolderPath(targetSlug) ? "/" : ""
+  const canonicalSlug = stripSlashes(targetSlug.slice(".".length))
+  let [targetCanonical, targetAnchor] = splitAnchor(canonicalSlug)
 
-      // only match, just use it
-      if (matchingFileNames.length === 1) {
-        const targetSlug = matchingFileNames[0]
-        return (resolveRelative(src, targetSlug) + targetAnchor) as RelativeURL
+  if (opts.strategy === "shortest") {
+    // links written by hand as `../foo` are relative to the note, not to the vault,
+    // so resolve them against the note's folder before searching the vault
+    const [rawPath, rawAnchor] = splitAnchor(target)
+    const isRelativeTarget = /^\.{1,2}(\/|$)/.test(rawPath)
+    const lookup = stripSlashes(
+      (isRelativeTarget ? toVaultPath(src, rawPath) : targetCanonical).replace(/\.md$/, ""),
+    )
+    const anchor = isRelativeTarget ? rawAnchor : targetAnchor
+
+    // resolve the target against the vault: same folder first, then path suffixes,
+    // then names that only differ by spaces / dashes
+    const resolvedSlug = resolveLinkTarget(src, lookup, opts.allSlugs)
+    if (resolvedSlug !== undefined) {
+      let href = resolveRelative(src, resolvedSlug) as string
+      const resolvedIsFolderPage = resolvedSlug === "index" || resolvedSlug.endsWith("/index")
+      if (resolvedIsFolderPage && !href.endsWith("/")) {
+        href += "/"
       }
+      return (href + anchor) as RelativeURL
     }
 
-    // if it's not unique, then it's the absolute path from the vault root
-    return (joinSegments(pathToRoot(src), canonicalSlug) + folderTail) as RelativeURL
+    // if it can not be found anywhere in the vault, treat it as a path from the root
+    return (joinSegments(pathToRoot(src), lookup + anchor) + folderTail) as RelativeURL
   }
+
+  return (joinSegments(pathToRoot(src), canonicalSlug) + folderTail) as RelativeURL
 }
 
 // path helpers

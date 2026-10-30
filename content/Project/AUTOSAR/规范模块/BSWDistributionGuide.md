@@ -19,8 +19,8 @@ tags:
 | 类别 | EXP — 解释性指南（Explanation） |
 | UID | 631 |
 | 版本 | R25-11 |
-| 本地 PDF | [AUTOSAR_CP_EXP_BSWDistributionGuide.pdf](file:///F:/Work/Standards/01_Sources/CP_EXP_BSWDistributionGuide_631/AUTOSAR_CP_EXP_BSWDistributionGuide.pdf) |
-| 纯文本全文 | [CP_EXP_BSWDistributionGuide.complete.txt](file:///F:/Work/Standards/01_Sources/CP_EXP_BSWDistributionGuide_631/zzgen/CP_EXP_BSWDistributionGuide.complete.txt) |
+| 本地 PDF | `AUTOSAR_CP_EXP_BSWDistributionGuide.pdf` |
+| 纯文本全文 | `CP_EXP_BSWDistributionGuide.complete.txt` |
 
 ## 知识体系
 

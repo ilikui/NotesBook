@@ -19,8 +19,8 @@ tags:
 | 类别 | SWS — 软件模块规范（Software Specification） |
 | UID | 908 |
 | 版本 | R25-11 |
-| 本地 PDF | [AUTOSAR_AP_SWS_StateManagement.pdf](file:///F:/Work/Standards/01_Sources/AP_SWS_StateManagement_908/AUTOSAR_AP_SWS_StateManagement.pdf) |
-| 纯文本全文 | [AP_SWS_StateManagement.complete.txt](file:///F:/Work/Standards/01_Sources/AP_SWS_StateManagement_908/zzgen/AP_SWS_StateManagement.complete.txt) |
+| 本地 PDF | `AUTOSAR_AP_SWS_StateManagement.pdf` |
+| 纯文本全文 | `AP_SWS_StateManagement.complete.txt` |
 
 ## 知识体系
 

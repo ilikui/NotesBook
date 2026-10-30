@@ -19,8 +19,8 @@ tags:
 | 类别 | EXP — 解释性指南（Explanation） |
 | UID | 706 |
 | 版本 | R25-11 |
-| 本地 PDF | [AUTOSAR_AP_EXP_PlatformDesign.pdf](file:///F:/Work/Standards/01_Sources/AP_EXP_PlatformDesign_706/AUTOSAR_AP_EXP_PlatformDesign.pdf) |
-| 纯文本全文 | [AP_EXP_PlatformDesign.complete.txt](file:///F:/Work/Standards/01_Sources/AP_EXP_PlatformDesign_706/zzgen/AP_EXP_PlatformDesign.complete.txt) |
+| 本地 PDF | `AUTOSAR_AP_EXP_PlatformDesign.pdf` |
+| 纯文本全文 | `AP_EXP_PlatformDesign.complete.txt` |
 
 ## 知识体系
 

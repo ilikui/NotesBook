@@ -16,7 +16,18 @@ def yaml_string(value: object) -> str:
 
 def markdown_quote(value: str) -> str:
     value = (value or "").strip()
-    return "\n".join("> " + line if line else ">" for line in value.splitlines()) if value else ""
+    if not value: return ""
+    lines: list[str] = []
+    for line in value.splitlines():
+        if not line:
+            lines.append(">")
+            continue
+        # 划线常以 # 开头（如 #include），直接输出会被当成标题或标签，
+        # 这里把开头的 #token 包成行内代码，既能保留原文又不会污染标题与标签
+        if line.lstrip().startswith("#"):
+            line = re.sub(r"#([-\w]+)", r"`#\1`", line, count=1)
+        lines.append("> " + line)
+    return "\n".join(lines)
 
 def format_date(value: object) -> str:
     if value in (None, ""): return ""

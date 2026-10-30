@@ -19,8 +19,8 @@ tags:
 | 类别 | SWS — 软件模块规范（Software Specification） |
 | UID | 428 |
 | 版本 | R25-11 |
-| 本地 PDF | [AUTOSAR_CP_SWS_E2ELibrary.pdf](file:///F:/Work/Standards/01_Sources/CP_SWS_E2ELibrary_428/AUTOSAR_CP_SWS_E2ELibrary.pdf) |
-| 纯文本全文 | [CP_SWS_E2ELibrary.complete.txt](file:///F:/Work/Standards/01_Sources/CP_SWS_E2ELibrary_428/zzgen/CP_SWS_E2ELibrary.complete.txt) |
+| 本地 PDF | `AUTOSAR_CP_SWS_E2ELibrary.pdf` |
+| 纯文本全文 | `CP_SWS_E2ELibrary.complete.txt` |
 
 ## 知识体系
 
@@ -52,7 +52,7 @@ flowchart TD
 
 ## 依赖关系
 
-- 功能规范主体在 FO 文档《E2E Protocol Specification》（[E2EProtocol](file:///F:/Work/AUTOSAR_Module_Notes/FO/PRS/E2EProtocol.md)）；与 [[RTE]]、[[COM]]、E2E Transformer 紧密相关。
+- 功能规范主体在 FO 文档《E2E Protocol Specification》（`E2EProtocol`）；与 [[RTE]]、[[COM]]、E2E Transformer 紧密相关。
 
 ## 相关
 

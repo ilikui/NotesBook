@@ -3,6 +3,7 @@ title: Resource
 description: 暂无明确项目归属、但值得持续探索的主题与参考材料。
 tags:
   - 资源管理
+  - Resource
 ---
 
 # Resource（资源）

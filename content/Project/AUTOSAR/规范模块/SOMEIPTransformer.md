@@ -19,8 +19,8 @@ tags:
 | 类别 | SWS — 软件模块规范（Software Specification） |
 | UID | 660 |
 | 版本 | R25-11 |
-| 本地 PDF | [AUTOSAR_CP_SWS_SOMEIPTransformer.pdf](file:///F:/Work/Standards/01_Sources/CP_SWS_SOMEIPTransformer_660/AUTOSAR_CP_SWS_SOMEIPTransformer.pdf) |
-| 纯文本全文 | [CP_SWS_SOMEIPTransformer.complete.txt](file:///F:/Work/Standards/01_Sources/CP_SWS_SOMEIPTransformer_660/zzgen/CP_SWS_SOMEIPTransformer.complete.txt) |
+| 本地 PDF | `AUTOSAR_CP_SWS_SOMEIPTransformer.pdf` |
+| 纯文本全文 | `CP_SWS_SOMEIPTransformer.complete.txt` |
 
 ## 核心要点
 
@@ -35,7 +35,7 @@ tags:
 
 ## 依赖关系
 
-- 依赖 [[RTE]]；协议本体见 FO 文档 [SOMEIPProtocol](file:///F:/Work/AUTOSAR_Module_Notes/FO/PRS/SOMEIPProtocol.md)。
+- 依赖 [[RTE]]；协议本体见 FO 文档 `SOMEIPProtocol`。
 
 ## 相关
 

@@ -19,8 +19,8 @@ tags:
 | 类别 | SWS — 软件模块规范（Software Specification） |
 | UID | 034 |
 | 版本 | R25-11 |
-| 本地 PDF | [AUTOSAR_CP_SWS_OS.pdf](file:///F:/Work/Standards/01_Sources/CP_SWS_OS_034/AUTOSAR_CP_SWS_OS.pdf) |
-| 纯文本全文 | [CP_SWS_OS.complete.txt](file:///F:/Work/Standards/01_Sources/CP_SWS_OS_034/zzgen/CP_SWS_OS.complete.txt) |
+| 本地 PDF | `AUTOSAR_CP_SWS_OS.pdf` |
+| 纯文本全文 | `CP_SWS_OS.complete.txt` |
 
 ## 知识体系
 

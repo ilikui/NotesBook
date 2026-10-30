@@ -40,36 +40,18 @@ jobs:
       - name: Build Quartz
         run: node ./quartz/bootstrap-cli.mjs build -d content -v
 
-      - name: Generate clean URL routes for AI pages
-        run: |
-          set -euo pipefail
-          # Quartz emits flat *.html files, while its links use extensionless URLs.
-          # GitHub Pages needs directory index files for these clean URLs.
-          while IFS= read -r -d '' page; do
-            route="${page%.html}"
-            mkdir -p "$route"
-            # The copied page is one directory deeper; make its internal links root-relative.
-            sed -E 's@(href|src)="\.\./\.\./@\1="/@g' "$page" > "$route/index.html"
-          done < <(find public/Area/AI -maxdepth 1 -type f -name '*.html' ! -name 'index.html' -print0)
-
       - name: Verify build output
         run: |
           set -euo pipefail
           test -s public/index.html
           test -s public/static/contentIndex.json
           test -s public/Area/AI/index.html
-          test -s public/Area/AI/人工智能.html
-          test -s public/Area/AI/AI专业方向.html
+          test -s public/Area/AI/智能体.html
           test -s public/Area/AI/机器学习.html
-          test -s public/Area/AI/深度学习.html
-          test -s public/Area/AI/智能体/index.html
-          test -s public/Area/AI/机器学习/index.html
-          test -s public/Area/AI/深度学习/index.html
-          AI_PAGE_COUNT=$(find public/Area/AI -maxdepth 1 -type f -name '*.html' | wc -l)
-          echo "AI 页面生成数量：$AI_PAGE_COUNT"
-          test "$AI_PAGE_COUNT" -ge 15
-          echo "首页、搜索索引及 AI 专题页面检查通过"
-          find public/Area/AI -maxdepth 1 -type f -name '*.html' | sort
+          # 全站链接自检：Quartz 的链接不带 .html 后缀，必须能对应到实际产物，
+          # 否则点击后会落到 404。任何失效链接都会让构建失败。
+          python3 scripts/check_links.py public
+          echo "页面数量：$(find public -name '*.html' | wc -l)"
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4

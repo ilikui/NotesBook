@@ -19,8 +19,8 @@ tags:
 | 类别 | SWS — 软件模块规范（Software Specification） |
 | UID | 018 |
 | 版本 | R26-11 |
-| 本地 PDF | [AUTOSAR_CP_SWS_DiagnosticCommunicationManager.pdf](file:///F:/Work/Standards/01_Sources/CP_SWS_DiagnosticCommunicationManager_018/AUTOSAR_CP_SWS_DiagnosticCommunicationManager.pdf) |
-| 纯文本全文 | [CP_SWS_DiagnosticCommunicationManager.complete.txt](file:///F:/Work/Standards/01_Sources/CP_SWS_DiagnosticCommunicationManager_018/zzgen/CP_SWS_DiagnosticCommunicationManager.complete.txt) |
+| 本地 PDF | `AUTOSAR_CP_SWS_DiagnosticCommunicationManager.pdf` |
+| 纯文本全文 | `CP_SWS_DiagnosticCommunicationManager.complete.txt` |
 
 ## 知识体系
 

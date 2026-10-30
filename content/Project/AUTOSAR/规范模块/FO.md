@@ -49,15 +49,15 @@ flowchart TD
 
 | 文档 | 主题 | 类别 |
 | --- | --- | --- |
-| [Glossary](file:///F:/Work/AUTOSAR_Module_Notes/FO/TR/Glossary.md) | AUTOSAR 术语表（查概念必看） | TR |
-| [Features](file:///F:/Work/AUTOSAR_Module_Notes/FO/TR/Features.md) | 各版本特性总览 | TR |
-| [SWArchitecturalDecisions](file:///F:/Work/AUTOSAR_Module_Notes/FO/EXP/SWArchitecturalDecisions.md) | CP / AP 架构决策说明 | EXP |
-| [SecurityOverview](file:///F:/Work/AUTOSAR_Module_Notes/FO/EXP/SecurityOverview.md) | 安全总览 | EXP |
-| [SafetyOverview](file:///F:/Work/AUTOSAR_Module_Notes/FO/EXP/SafetyOverview.md) | 功能安全总览 | EXP |
-| [TimeSensitiveNetworkFeatures](file:///F:/Work/AUTOSAR_Module_Notes/FO/EXP/TimeSensitiveNetworkFeatures.md) | TSN 时间敏感网络 | EXP |
-| [E2EProtocol](file:///F:/Work/AUTOSAR_Module_Notes/FO/PRS/E2EProtocol.md) | E2E 端到端保护协议 | PRS |
-| [SOMEIPProtocol](file:///F:/Work/AUTOSAR_Module_Notes/FO/PRS/SOMEIPProtocol.md) | SOME/IP 协议 | PRS |
-| [XMLSchemaSupplement](file:///F:/Work/AUTOSAR_Module_Notes/FO/TR/XMLSchemaSupplement.md) | ARXML 的 XSD 补充说明 | TR |
+| `Glossary` | AUTOSAR 术语表（查概念必看） | TR |
+| `Features` | 各版本特性总览 | TR |
+| `SWArchitecturalDecisions` | CP / AP 架构决策说明 | EXP |
+| `SecurityOverview` | 安全总览 | EXP |
+| `SafetyOverview` | 功能安全总览 | EXP |
+| `TimeSensitiveNetworkFeatures` | TSN 时间敏感网络 | EXP |
+| `E2EProtocol` | E2E 端到端保护协议 | PRS |
+| `SOMEIPProtocol` | SOME/IP 协议 | PRS |
+| `XMLSchemaSupplement` | ARXML 的 XSD 补充说明 | TR |
 
 > [!note] 与 CP / AP 的关系
 > FO 里的 **E2E 协议** 由 CP 的 [[E2ELibrary]] 与 AP 的 [[CommunicationManagement]] 实现；**SOME/IP** 在 CP 由 [[SOMEIPTransformer]] 序列化，在 AP 由 ara::com 承载。

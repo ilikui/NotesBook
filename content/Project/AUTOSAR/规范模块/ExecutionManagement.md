@@ -19,8 +19,8 @@ tags:
 | 类别 | SWS — 软件模块规范（Software Specification） |
 | UID | 721 |
 | 版本 | R25-11 |
-| 本地 PDF | [AUTOSAR_AP_SWS_ExecutionManagement.pdf](file:///F:/Work/Standards/01_Sources/AP_SWS_ExecutionManagement_721/AUTOSAR_AP_SWS_ExecutionManagement.pdf) |
-| 纯文本全文 | [AP_SWS_ExecutionManagement.complete.txt](file:///F:/Work/Standards/01_Sources/AP_SWS_ExecutionManagement_721/zzgen/AP_SWS_ExecutionManagement.complete.txt) |
+| 本地 PDF | `AUTOSAR_AP_SWS_ExecutionManagement.pdf` |
+| 纯文本全文 | `AP_SWS_ExecutionManagement.complete.txt` |
 
 ## 知识体系
 

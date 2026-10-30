@@ -19,8 +19,8 @@ tags:
 | 类别 | TPS — 模板规范（Template Specification） |
 | UID | 063 |
 | 版本 | R26-11 |
-| 本地 PDF | [AUTOSAR_CP_TPS_SystemTemplate.pdf](file:///F:/Work/Standards/01_Sources/CP_TPS_SystemTemplate_063/AUTOSAR_CP_TPS_SystemTemplate.pdf) |
-| 纯文本全文 | [CP_TPS_SystemTemplate.complete.txt](file:///F:/Work/Standards/01_Sources/CP_TPS_SystemTemplate_063/zzgen/CP_TPS_SystemTemplate.complete.txt) |
+| 本地 PDF | `AUTOSAR_CP_TPS_SystemTemplate.pdf` |
+| 纯文本全文 | `CP_TPS_SystemTemplate.complete.txt` |
 
 ## 知识体系
 

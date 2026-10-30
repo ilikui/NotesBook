@@ -19,8 +19,8 @@ tags:
 | 类别 | EXP — 解释性指南（Explanation） |
 | UID | 440 |
 | 版本 | R25-11 |
-| 本地 PDF | [AUTOSAR_CP_EXP_ModeManagementGuide.pdf](file:///F:/Work/Standards/01_Sources/CP_EXP_ModeManagementGuide_440/AUTOSAR_CP_EXP_ModeManagementGuide.pdf) |
-| 纯文本全文 | [CP_EXP_ModeManagementGuide.complete.txt](file:///F:/Work/Standards/01_Sources/CP_EXP_ModeManagementGuide_440/zzgen/CP_EXP_ModeManagementGuide.complete.txt) |
+| 本地 PDF | `AUTOSAR_CP_EXP_ModeManagementGuide.pdf` |
+| 纯文本全文 | `CP_EXP_ModeManagementGuide.complete.txt` |
 
 ## 知识体系
 

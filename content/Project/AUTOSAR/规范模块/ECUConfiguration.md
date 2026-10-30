@@ -19,8 +19,8 @@ tags:
 | 类别 | TPS — 模板规范（Template Specification） |
 | UID | 087 |
 | 版本 | R26-11 |
-| 本地 PDF | [AUTOSAR_CP_TPS_ECUConfiguration.pdf](file:///F:/Work/Standards/01_Sources/CP_TPS_ECUConfiguration_087/AUTOSAR_CP_TPS_ECUConfiguration.pdf) |
-| 纯文本全文 | [CP_TPS_ECUConfiguration.complete.txt](file:///F:/Work/Standards/01_Sources/CP_TPS_ECUConfiguration_087/zzgen/CP_TPS_ECUConfiguration.complete.txt) |
+| 本地 PDF | `AUTOSAR_CP_TPS_ECUConfiguration.pdf` |
+| 纯文本全文 | `CP_TPS_ECUConfiguration.complete.txt` |
 
 ## 知识体系
 
