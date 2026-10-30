@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>人工智能学习中心</title>
+    <link>https://wiki.likui.info/Area/AI/</link>
+    <guid>https://wiki.likui.info/Area/AI/</guid>
+    <description><![CDATA[ 人工智能学习中心 从数学、编程和经典算法出发，逐步掌握机器学习、深度学习、大模型、智能体与 AI 工程。这里不仅收集资料，更强调读懂原理、运行代码、复现论文、完成项目、评估结果。 推荐学习方式 每个主题按「概念 → 数学直觉 → 代码实验 → 论文/数据 → 项目复盘」学习。不要只收藏链接；至少留下一个可运行实验和一篇自己的总结。 知识地图 flowchart TD A[&quot;人工智能 AI&quot;] --&gt; B[&quot;数学与编程基础&quot;] B --&gt; C[&quot;AI 基础与搜索推理&quot;] C --&gt; D[&quot;机器学习&quot;... ]]></description>
+    <pubDate>Fri, 30 Oct 2026 10:27:49 GMT</pubDate>
+  </item><item>
     <title>AI 专业方向</title>
     <link>https://wiki.likui.info/Area/AI/AI%E4%B8%93%E4%B8%9A%E6%96%B9%E5%90%91</link>
     <guid>https://wiki.likui.info/Area/AI/AI%E4%B8%93%E4%B8%9A%E6%96%B9%E5%90%91</guid>
@@ -47,12 +53,6 @@
     <guid>https://wiki.likui.info/Area/AI/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%AE%9E%E6%88%98%E8%B7%AF%E7%BA%BF</guid>
     <description><![CDATA[ 计算机视觉实战路线 计算机视觉（Computer Vision, CV）研究如何让机器从图像和视频中提取信息。学习时应先掌握图像数据与评估方法，再进入分类、检测、分割、跟踪和视觉语言模型。 1. ]]></description>
     <pubDate>Fri, 30 Oct 2026 10:27:23 GMT</pubDate>
-  </item><item>
-    <title>人工智能学习中心</title>
-    <link>https://wiki.likui.info/Area/AI/</link>
-    <guid>https://wiki.likui.info/Area/AI/</guid>
-    <description><![CDATA[ 人工智能学习中心 从数学、编程和经典算法出发，逐步掌握机器学习、深度学习、大模型、智能体与 AI 工程。这里不仅收集资料，更强调读懂原理、运行代码、复现论文、完成项目、评估结果。 推荐学习方式 每个主题按「概念 → 数学直觉 → 代码实验 → 论文/数据 → 项目复盘」学习。不要只收藏链接；至少留下一个可运行实验和一篇自己的总结。 知识地图 flowchart TD A[&quot;人工智能 AI&quot;] --&gt; B[&quot;数学与编程基础&quot;] B --&gt; C[&quot;AI 基础与搜索推理&quot;] C --&gt; D[&quot;机器学习&quot;... ]]></description>
-    <pubDate>Fri, 30 Oct 2026 10:22:07 GMT</pubDate>
   </item><item>
     <title>AI 项目实战路线</title>
     <link>https://wiki.likui.info/Area/AI/AI%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98%E8%B7%AF%E7%BA%BF</link>
