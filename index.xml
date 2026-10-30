@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>生成式 AI 与大语言模型</title>
+    <link>https://wiki.likui.info/Area/AI/%E7%94%9F%E6%88%90%E5%BC%8FAI%E4%B8%8E%E5%A4%A7%E6%A8%A1%E5%9E%8B</link>
+    <guid>https://wiki.likui.info/Area/AI/%E7%94%9F%E6%88%90%E5%BC%8FAI%E4%B8%8E%E5%A4%A7%E6%A8%A1%E5%9E%8B</guid>
+    <description><![CDATA[ 生成式 AI 与大语言模型 生成式模型学习数据分布并生成新样本。大语言模型通常以 token 序列建模为核心，通过预训练获得通用表示，再通过指令微调、偏好优化和工具使用适配任务。 大模型技术栈 flowchart TD Data[&quot;语料、清洗、去重、过滤&quot;] --&gt; Tok[&quot;Tokenizer / Token&quot;] Tok --&gt; Pre[&quot;预训练：Next Token Prediction&quot;] Pre --&gt; Base[&quot;Base Model&quot;] Base --&gt; SFT[&quot;指令... ]]></description>
+    <pubDate>Fri, 30 Oct 2026 10:40:49 GMT</pubDate>
+  </item><item>
+    <title>深度学习</title>
+    <link>https://wiki.likui.info/Area/AI/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0</link>
+    <guid>https://wiki.likui.info/Area/AI/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0</guid>
+    <description><![CDATA[ 深度学习 深度学习通过多层神经网络学习数据表示。真正掌握它，需要能解释前向传播、损失函数、反向传播、优化器、正则化和训练稳定性，并能独立实现训练与评估流程。 神经网络训练流程 flowchart LR X[&quot;输入与标签&quot;] --&gt; F[&quot;前向传播&quot;] F --&gt; Y[&quot;预测输出&quot;] Y --&gt; L[&quot;计算损失&quot;] L --&gt; B[&quot;反向传播求梯度&quot;] B --&gt; O[&quot;优化器更新参数&quot;] O --&gt; F Y --&gt; E[&quot;验... ]]></description>
+    <pubDate>Fri, 30 Oct 2026 10:40:45 GMT</pubDate>
+  </item><item>
     <title>机器学习</title>
     <link>https://wiki.likui.info/Area/AI/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0</link>
     <guid>https://wiki.likui.info/Area/AI/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0</guid>
@@ -53,18 +65,6 @@
     <guid>https://wiki.likui.info/Area/AI/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%AE%9E%E6%88%98%E8%B7%AF%E7%BA%BF</guid>
     <description><![CDATA[ 强化学习实战路线 强化学习（RL）研究智能体如何通过与环境交互，根据奖励信号学习策略。与监督学习不同，动作会影响后续状态和未来可获得的奖励。 1. ]]></description>
     <pubDate>Fri, 30 Oct 2026 10:27:28 GMT</pubDate>
-  </item><item>
-    <title>NLP 与自然语言处理实战</title>
-    <link>https://wiki.likui.info/Area/AI/NLP%E4%B8%8E%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86%E5%AE%9E%E6%88%98</link>
-    <guid>https://wiki.likui.info/Area/AI/NLP%E4%B8%8E%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86%E5%AE%9E%E6%88%98</guid>
-    <description><![CDATA[ NLP 与自然语言处理实战 自然语言处理（NLP）研究如何让机器处理文本、语言和语义。现代 NLP 的主线是从规则与统计方法，发展到神经网络、Transformer、预训练模型和大语言模型。 1. ]]></description>
-    <pubDate>Fri, 30 Oct 2026 10:27:25 GMT</pubDate>
-  </item><item>
-    <title>计算机视觉实战路线</title>
-    <link>https://wiki.likui.info/Area/AI/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%AE%9E%E6%88%98%E8%B7%AF%E7%BA%BF</link>
-    <guid>https://wiki.likui.info/Area/AI/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%AE%9E%E6%88%98%E8%B7%AF%E7%BA%BF</guid>
-    <description><![CDATA[ 计算机视觉实战路线 计算机视觉（Computer Vision, CV）研究如何让机器从图像和视频中提取信息。学习时应先掌握图像数据与评估方法，再进入分类、检测、分割、跟踪和视觉语言模型。 1. ]]></description>
-    <pubDate>Fri, 30 Oct 2026 10:27:23 GMT</pubDate>
   </item>
     </channel>
   </rss>
