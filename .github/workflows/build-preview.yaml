@@ -42,9 +42,19 @@ jobs:
 
       - name: Verify build output
         run: |
+          set -euo pipefail
           test -s public/index.html
-          echo "构建产物检查通过"
-          find public/ -type f | head -10
+          test -s public/static/contentIndex.json
+          test -s public/Area/AI/index.html
+          test -s public/Area/AI/人工智能.html
+          test -s public/Area/AI/AI专业方向.html
+          test -s public/Area/AI/机器学习.html
+          test -s public/Area/AI/深度学习.html
+          AI_PAGE_COUNT=$(find public/Area/AI -maxdepth 1 -type f -name '*.html' | wc -l)
+          echo "AI 页面生成数量：$AI_PAGE_COUNT"
+          test "$AI_PAGE_COUNT" -ge 15
+          echo "首页、搜索索引及 AI 专题页面检查通过"
+          find public/Area/AI -maxdepth 1 -type f -name '*.html' | sort
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
@@ -78,3 +88,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+          cname: wiki.likui.info
