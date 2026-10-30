@@ -6,6 +6,24 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>微信读书</title>
+    <link>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</link>
+    <guid>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</guid>
+    <description><![CDATA[ 从微信读书自动同步的个人书架与阅读记录索引。 ]]></description>
+    <pubDate>Fri, 30 Oct 2026 20:51:23 GMT</pubDate>
+  </item><item>
+    <title>CPrimer Plus（第6版）中文版</title>
+    <link>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/%E4%B9%A6%E7%B1%8D/cprimer-plus%E7%AC%AC6%E7%89%88%E4%B8%AD%E6%96%87%E7%89%88-bb695f44</link>
+    <guid>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/%E4%B9%A6%E7%B1%8D/cprimer-plus%E7%AC%AC6%E7%89%88%E4%B8%AD%E6%96%87%E7%89%88-bb695f44</guid>
+    <description><![CDATA[ CPrimer Plus（第6版）中文版 作者： [美]史蒂芬·普拉达（Stephen Prata） 分类： 未分类 个人划线与想法： 73 条 阅读记录 1. ]]></description>
+    <pubDate>Fri, 30 Oct 2026 20:51:23 GMT</pubDate>
+  </item><item>
+    <title>KM</title>
+    <link>https://wiki.likui.info/Area/KM/</link>
+    <guid>https://wiki.likui.info/Area/KM/</guid>
+    <description><![CDATA[ KM（Knowledge Management，知识管理） 关注如何高效地收集、理解、组织、连接和复用个人知识。它不只是工具问题，更是一套帮助思考与行动持续改进的方法。 一句话定位 让知识「进得来、找得到、连得上、用得上」，并最终转化为判断、作品与行动。 知识管理地图 flowchart TD A[&quot;知识输入&quot;] --&gt; B[&quot;捕捉与收集&quot;] B --&gt; C[&quot;阅读与理解&quot;] C --&gt; D[&quot;提炼为自己的表达&quot;] D --&gt; E[&quot;组织与连接&quot;] E --&gt; F[... ]]></description>
+    <pubDate>Fri, 30 Oct 2026 12:32:19 GMT</pubDate>
+  </item><item>
     <title>知识关系图谱</title>
     <link>https://wiki.likui.info/%E5%85%B3%E7%B3%BB%E5%9B%BE%E8%B0%B1</link>
     <guid>https://wiki.likui.info/%E5%85%B3%E7%B3%BB%E5%9B%BE%E8%B0%B1</guid>
@@ -46,24 +64,6 @@
     <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/BSWModeManager</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/BSWModeManager</guid>
     <description><![CDATA[ BswM（BSW Mode Manager，BSW 模式管理） 是 CP 基础软件模块，实现整车模式管理（Vehicle Mode Management）与应用模式管理（Application Mode Management）中位于 BSW 的那一部分：它按简单规则仲裁来自应用层 SWC 或其它 BSW 模块的模式请求，并依据仲裁结果执行动作。 一句话定位 模式管理的「规则引擎」：把各方模式请求按规则裁决，再触发一串配置好的动作。 规范信息 项目内容平台CP类别SWS — 软件模块规范（Software Specification）UID313版本R25-11本地 PDFAUTOSAR_CP_... ]]></description>
-    <pubDate>Fri, 30 Oct 2026 11:26:38 GMT</pubDate>
-  </item><item>
-    <title>CANInterface</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/CANInterface</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/CANInterface</guid>
-    <description><![CDATA[ CanIf（CAN Interface，CAN 接口） 位于 CAN 设备驱动（CanDrv、CanTrcv）与上层通信服务（CanSM、CanNm、CanTp、PduR）之间，为上层提供统一的 CAN 硬件抽象：屏蔽不同 CAN 控制器 / 收发器的差异，用「物理 CAN 通道」的视角统一管理。 一句话定位 CAN 通信栈的「中间层」：向下管控制器、向上报事件与转数据。 规范信息 项目内容平台CP类别SWS — 软件模块规范（Software Specification）UID012版本R25-11本地 PDFAUTOSAR_CP_SWS_CANInterface.pdf纯文本全文CP_SW... ]]></description>
-    <pubDate>Fri, 30 Oct 2026 11:26:38 GMT</pubDate>
-  </item><item>
-    <title>COM</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/COM</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/COM</guid>
-    <description><![CDATA[ Com（Communication，通信） 是 CP 基础软件模块，位于其使用者（RTE、SwCluC）与 PDURouter 之间，提供**面向信号（Signal）**的数据接口：把信号打包成 I-PDU 发送、把收到的 I-PDU 解包成信号，并控制发送行为。 一句话定位 「信号 ↔ 报文」的翻译官：管打包 / 解包与发送模式，是通信栈里最贴近应用语义的一层。 规范信息 项目内容平台CP类别SWS — 软件模块规范（Software Specification）UID015版本R25-11本地 PDFAUTOSAR_CP_SWS_COM.pdf纯文本全文CP_SWS_COM.complet... ]]></description>
-    <pubDate>Fri, 30 Oct 2026 11:26:38 GMT</pubDate>
-  </item><item>
-    <title>COMManager</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/COMManager</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/COMManager</guid>
-    <description><![CDATA[ ComM（Communication Manager，通信管理器） 是 CP 基础软件中的资源管理器，封装对底层通信服务的控制。它面向「通信请求者（User）」而不是具体 SWC / Runnable，收集并协调整条总线的通信访问请求。 一句话定位 「能不能用总线」的总开关：用户只说想要「通信模式」，ComM 负责把对应通道的通信能力开 / 关。 规范信息 项目内容平台CP类别SWS — 软件模块规范（Software Specification）UID079版本R25-11本地 PDFAUTOSAR_CP_SWS_COMManager.pdf纯文本全文CP_SWS_COMManager.co... ]]></description>
     <pubDate>Fri, 30 Oct 2026 11:26:38 GMT</pubDate>
   </item>
     </channel>
