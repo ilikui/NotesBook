@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>机器学习</title>
+    <link>https://wiki.likui.info/Area/AI/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0</link>
+    <guid>https://wiki.likui.info/Area/AI/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0</guid>
+    <description><![CDATA[ 机器学习 机器学习的目标是从样本中学习可泛化的规律。学习重点不是背算法名称，而是理解数据假设、损失函数、优化方式、泛化能力和适用边界。 知识地图 flowchart TD ML[&quot;机器学习&quot;] --&gt; S[&quot;监督学习&quot;] ML --&gt; U[&quot;无监督学习&quot;] ML --&gt; R[&quot;强化学习&quot;] S --&gt; Reg[&quot;回归：线性 / Ridge / Lasso&quot;] S --&gt; Cls[&quot;分类：逻辑回归 / SVM / KNN&quot;] S --&gt; Tr... ]]></description>
+    <pubDate>Fri, 30 Oct 2026 10:40:41 GMT</pubDate>
+  </item><item>
     <title>AI 书籍与课程</title>
     <link>https://wiki.likui.info/Area/AI/AI%E4%B9%A6%E7%B1%8D%E4%B8%8E%E8%AF%BE%E7%A8%8B</link>
     <guid>https://wiki.likui.info/Area/AI/AI%E4%B9%A6%E7%B1%8D%E4%B8%8E%E8%AF%BE%E7%A8%8B</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/AI/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%AE%9E%E6%88%98%E8%B7%AF%E7%BA%BF</guid>
     <description><![CDATA[ 计算机视觉实战路线 计算机视觉（Computer Vision, CV）研究如何让机器从图像和视频中提取信息。学习时应先掌握图像数据与评估方法，再进入分类、检测、分割、跟踪和视觉语言模型。 1. ]]></description>
     <pubDate>Fri, 30 Oct 2026 10:27:23 GMT</pubDate>
-  </item><item>
-    <title>AI 项目实战路线</title>
-    <link>https://wiki.likui.info/Area/AI/AI%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98%E8%B7%AF%E7%BA%BF</link>
-    <guid>https://wiki.likui.info/Area/AI/AI%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98%E8%B7%AF%E7%BA%BF</guid>
-    <description><![CDATA[ AI 项目实战路线 本路线用项目验证能力，而不是按“看完多少课程”衡量进度。每个项目都要提交代码、README、数据说明、实验结果、错误分析和可复现步骤。 项目阶梯 阶段项目核心能力完成标准入门鸢尾花/房价预测Python、数据清洗、基线可运行脚本、指标与图表机器学习客户流失/信用风险分类Pipeline、交叉验证、阈值PR-AUC、混淆矩阵、错误分析深度学习Fashion-MNIST/CIFAR 分类PyTorch、训练循环、调参checkpoint、曲线、混淆矩阵NLP文本分类/语义检索Tokenizer、Embedding、评估固定测试集与错误样本LLM文档问答 RAG切分、召回、重排、... ]]></description>
-    <pubDate>Fri, 30 Oct 2026 10:22:04 GMT</pubDate>
   </item>
     </channel>
   </rss>
