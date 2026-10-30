@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>人工智能：从入门到精通</title>
+    <link>https://wiki.likui.info/Area/AI/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD</link>
+    <guid>https://wiki.likui.info/Area/AI/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD</guid>
+    <description><![CDATA[ 人工智能：从入门到精通 1. ]]></description>
+    <pubDate>Fri, 30 Oct 2026 09:34:44 GMT</pubDate>
+  </item><item>
     <title>人工智能学习中心</title>
     <link>https://wiki.likui.info/Area/AI/</link>
     <guid>https://wiki.likui.info/Area/AI/</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C</guid>
     <description><![CDATA[ 计算机网络研究的是「如何把地理上分散的计算机连接起来，可靠、高效地交换数据」。它的核心思想只有一个：分层（Layering）——把复杂的通信问题拆成若干层，每层只解决自己的问题，并为上层提供服务。 一句话定位 计算机网络 = 分层模型 + 每层的协议。学它的关键在于理解「数据从应用层一路封装到物理层，再在对端一层层解封装」的全过程。 知识体系 flowchart TD A[计算机网络] --&gt; B[分层模型] A --&gt; C[各层协议] A --&gt; D[核心机制] subgraph B [分层模型] B1[&quot;OSI 七层模型&quot;] B2[&quot;TCP/... ]]></description>
     <pubDate>Sat, 24 Oct 2026 03:10:25 GMT</pubDate>
-  </item><item>
-    <title>知识管理工作流</title>
-    <link>https://wiki.likui.info/Area/KM/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E5%B7%A5%E4%BD%9C%E6%B5%81</link>
-    <guid>https://wiki.likui.info/Area/KM/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E5%B7%A5%E4%BD%9C%E6%B5%81</guid>
-    <description><![CDATA[ 从信息输入到可复用知识的轻量化流程。 ]]></description>
-    <pubDate>Sat, 24 Oct 2026 03:10:23 GMT</pubDate>
   </item>
     </channel>
   </rss>
