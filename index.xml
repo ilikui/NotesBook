@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>AI 工程与部署</title>
+    <link>https://wiki.likui.info/Area/AI/AI%E5%B7%A5%E7%A8%8B%E4%B8%8E%E9%83%A8%E7%BD%B2</link>
+    <guid>https://wiki.likui.info/Area/AI/AI%E5%B7%A5%E7%A8%8B%E4%B8%8E%E9%83%A8%E7%BD%B2</guid>
+    <description><![CDATA[ AI 工程与部署 模型能力只是 AI 产品的一部分。生产系统还需要数据治理、服务接口、评测、可观测性、安全、成本控制和持续迭代。 端到端工程架构 flowchart TB U[&quot;用户 / 业务系统&quot;] --&gt; API[&quot;API Gateway / Auth / Rate Limit&quot;] API --&gt; APP[&quot;应用编排层&quot;] APP --&gt; RAG[&quot;检索层：BM25 + Vector + Rerank&quot;] APP --&gt; LLM[&quot;模型服务&quot;] APP --&gt; ... ]]></description>
+    <pubDate>Fri, 30 Oct 2026 10:40:52 GMT</pubDate>
+  </item><item>
     <title>生成式 AI 与大语言模型</title>
     <link>https://wiki.likui.info/Area/AI/%E7%94%9F%E6%88%90%E5%BC%8FAI%E4%B8%8E%E5%A4%A7%E6%A8%A1%E5%9E%8B</link>
     <guid>https://wiki.likui.info/Area/AI/%E7%94%9F%E6%88%90%E5%BC%8FAI%E4%B8%8E%E5%A4%A7%E6%A8%A1%E5%9E%8B</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/AI/%E8%AF%AD%E9%9F%B3%E4%B8%8E%E9%9F%B3%E9%A2%91AI%E5%AE%9E%E6%88%98</guid>
     <description><![CDATA[ 语音与音频 AI 实战 语音与音频 AI 不仅是把声音转成文字，还包括语音合成、说话人识别、声音事件检测、音乐理解和实时语音交互。 1. ]]></description>
     <pubDate>Fri, 30 Oct 2026 10:27:31 GMT</pubDate>
-  </item><item>
-    <title>强化学习实战路线</title>
-    <link>https://wiki.likui.info/Area/AI/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%AE%9E%E6%88%98%E8%B7%AF%E7%BA%BF</link>
-    <guid>https://wiki.likui.info/Area/AI/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%AE%9E%E6%88%98%E8%B7%AF%E7%BA%BF</guid>
-    <description><![CDATA[ 强化学习实战路线 强化学习（RL）研究智能体如何通过与环境交互，根据奖励信号学习策略。与监督学习不同，动作会影响后续状态和未来可获得的奖励。 1. ]]></description>
-    <pubDate>Fri, 30 Oct 2026 10:27:28 GMT</pubDate>
   </item>
     </channel>
   </rss>
