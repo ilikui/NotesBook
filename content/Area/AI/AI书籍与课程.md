@@ -22,7 +22,7 @@ tags:
 - **作者**：Anil Ananthaswamy
 - **主题**：机器学习原理、数学直觉、算法思想
 - **推荐理由**：从数学与科学思想解释机器如何学习，帮助建立对机器学习底层机制的整体理解。
-- **阅读入口**：[Princeton University Press 图书页](https://press.princeton.edu/books/hardcover/978069124્ઠ?utm_source=notesbook)（请以出版社检索页为准）、[Google Books 检索](https://books.google.com/books?q=Why+Machines+Learn+Anil+Ananthaswamy)
+- **阅读入口**：[Princeton University Press 官方检索](https://press.princeton.edu/search?query=Why%20Machines%20Learn)、[Google Books 检索](https://books.google.com/books?q=Why+Machines+Learn+Anil+Ananthaswamy)
 - **建议配合**：[[数学与Python基础]]、[[机器学习]]
 
 ### 2. Hands-On Large Language Models
