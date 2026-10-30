@@ -87,6 +87,13 @@ Agent 不只是模型循环调用工具。需要定义状态、工具契约、�
 4. 构建只能读取指定目录的 Agent 工具，加入调用审计和人工确认。
 5. 进行并发压测，记录吞吐、P50/P95 延迟、显存与单位请求成本。
 
+## 推荐阅读
+
+- [Designing Machine Learning Systems — Chip Huyen](https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/)：数据、部署、监控与机器学习系统设计。
+- [Practical Deep Learning for Cloud, Mobile, and Edge](https://books.google.com/books?q=Practical+Deep+Learning+for+Cloud+Mobile+and+Edge)：关注云端、移动端和边缘设备的模型部署。
+- [AI Engineering — Chip Huyen](https://github.com/chiphuyen/aie-book)：基础模型应用、评估、RAG 与 Agent 的配套资源。
+- 完整书单见 [[AI书籍与课程]]。
+
 ## 相关
 
 - [[生成式AI与大模型]]
