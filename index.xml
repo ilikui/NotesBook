@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>NLP 与自然语言处理实战</title>
+    <link>https://wiki.likui.info/Area/AI/NLP%E4%B8%8E%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86%E5%AE%9E%E6%88%98</link>
+    <guid>https://wiki.likui.info/Area/AI/NLP%E4%B8%8E%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86%E5%AE%9E%E6%88%98</guid>
+    <description><![CDATA[ NLP 与自然语言处理实战 自然语言处理（NLP）研究如何让机器处理文本、语言和语义。现代 NLP 的主线是从规则与统计方法，发展到神经网络、Transformer、预训练模型和大语言模型。 1. ]]></description>
+    <pubDate>Fri, 30 Oct 2026 10:27:25 GMT</pubDate>
+  </item><item>
+    <title>计算机视觉实战路线</title>
+    <link>https://wiki.likui.info/Area/AI/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%AE%9E%E6%88%98%E8%B7%AF%E7%BA%BF</link>
+    <guid>https://wiki.likui.info/Area/AI/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%AE%9E%E6%88%98%E8%B7%AF%E7%BA%BF</guid>
+    <description><![CDATA[ 计算机视觉实战路线 计算机视觉（Computer Vision, CV）研究如何让机器从图像和视频中提取信息。学习时应先掌握图像数据与评估方法，再进入分类、检测、分割、跟踪和视觉语言模型。 1. ]]></description>
+    <pubDate>Fri, 30 Oct 2026 10:27:23 GMT</pubDate>
+  </item><item>
     <title>人工智能学习中心</title>
     <link>https://wiki.likui.info/Area/AI/</link>
     <guid>https://wiki.likui.info/Area/AI/</guid>
@@ -53,18 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD</guid>
     <description><![CDATA[ 人工智能学习专题 人工智能专题已统一整理到知识库的 AI 专区，避免在嵌入式（EE）和人工智能（AI）两个目录维护重复内容。 请从这里进入完整学习路线： 人工智能学习中心 人工智能：从入门到精通 数学与 Python 基础 机器学习 深度学习 生成式 AI 与大模型 AI 工程与部署 AI 论文与数据集 AI 书籍与课程 GitHub 开源学习项目 智能体 原有嵌入式目录保留此入口，后续 AI 知识内容以 content/Area/AI/ 为唯一主目录。. ]]></description>
     <pubDate>Fri, 30 Oct 2026 09:35:31 GMT</pubDate>
-  </item><item>
-    <title>GitHub 开源 AI 学习项目</title>
-    <link>https://wiki.likui.info/Area/AI/GitHub%E5%BC%80%E6%BA%90%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE</link>
-    <guid>https://wiki.likui.info/Area/AI/GitHub%E5%BC%80%E6%BA%90%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE</guid>
-    <description><![CDATA[ GitHub 开源 AI 学习项目 本页按学习阶段整理可运行、可阅读的开源项目。项目活跃度、依赖和 API 会变化，开始学习前先查看仓库 README、License、Release 和最近提交；不要只按 Star 数选择。 1. ]]></description>
-    <pubDate>Fri, 30 Oct 2026 09:35:20 GMT</pubDate>
-  </item><item>
-    <title>AI 书籍与课程</title>
-    <link>https://wiki.likui.info/Area/AI/AI%E4%B9%A6%E7%B1%8D%E4%B8%8E%E8%AF%BE%E7%A8%8B</link>
-    <guid>https://wiki.likui.info/Area/AI/AI%E4%B9%A6%E7%B1%8D%E4%B8%8E%E8%AF%BE%E7%A8%8B</guid>
-    <description><![CDATA[ AI 书籍与课程 书单按学习阶段排列。建议先选一本主教材配合一个实践仓库，不必同时购买或阅读所有书籍。部分书籍有作者或出版社提供的免费配套资料，但不代表整本书可以免费传播。 一、入门与通识 书籍作者适合人群价值Artificial Intelligence: A Modern ApproachStuart Russell / Peter Norvig希望系统理解 AI 全景搜索、逻辑、规划、概率推理与机器学习的经典教材Artificial Intelligence: Foundations of Computational AgentsDavid Poole / Alan Mackworth想... ]]></description>
-    <pubDate>Fri, 30 Oct 2026 09:35:06 GMT</pubDate>
   </item>
     </channel>
   </rss>
