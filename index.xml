@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>专栏⑰·第6篇：线性代数实战——矩阵变换 × DBC 解析 / Park 变换 / RTE</title>
+    <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC6%E7%AF%87-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%B7%A5%E7%A8%8B%E5%AE%9E%E6%88%98</link>
+    <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC6%E7%AF%87-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%B7%A5%E7%A8%8B%E5%AE%9E%E6%88%98</guid>
+    <description><![CDATA[ 专栏⑰·第6篇：线性代数实战——矩阵变换 × DBC 解析 / Park 变换 / RTE 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·第6篇：线性代数实战——矩阵变换 × DBC 解析 / Park 变换 / RTE 📎 第5篇：极限与导数实战 → v.flomoapp.com/mine/ 数学三问其一已经立了核心论点： 线代的”矩阵变换 = 坐标系统一”是跟嵌入式思维最深的连接。这篇把三个工程场景展开讲透——每个都是”一个坐标系下的表示，翻译到另一个坐标系”。 一、DBC 解析——“总线坐标 → 应用坐标”的变换 CAN 总线上传的是 bit0~bit63 的原始... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 08:37:21 GMT</pubDate>
+  </item><item>
     <title>专栏⑰·第5篇：极限与导数实战——微积分 × ADC 采样离散化</title>
     <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC5%E7%AF%87-%E6%9E%81%E9%99%90%E4%B8%8E%E5%AF%BC%E6%95%B0%E5%B7%A5%E7%A8%8B%E5%AE%9E%E6%88%98</link>
     <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC5%E7%AF%87-%E6%9E%81%E9%99%90%E4%B8%8E%E5%AF%BC%E6%95%B0%E5%B7%A5%E7%A8%8B%E5%AE%9E%E6%88%98</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/%E9%80%9A%E4%BF%A1/1000%E9%97%AE/CAN%E7%BD%91%E7%BB%9C%E9%80%9A%E7%94%A8%E6%A6%82%E5%BF%B5</guid>
     <description><![CDATA[ CAN网络（通用概念参考，来自Kimi） 原始 Flomo：v.flomoapp.com/mine/ CAN网络（通用概念参考，来自Kimi） 📎 你的实战排查内容在此 → CAN终端电阻物理含义 v.flomoapp.com/mine/ 📎 CAN排查工具箱清单 v.flomoapp.com/mine/ 📎 CAN通信栈七层数据流 v.flomoapp.com/mine/ （原文为2024-06-11 Kimi生成的CAN总线基础介绍，已被后续实战笔记覆盖） 通信. ]]></description>
     <pubDate>Sat, 31 Oct 2026 08:33:42 GMT</pubDate>
-  </item><item>
-    <title>自动驾驶 1000问 · 五 · 第 15 题：轨迹规划为什么常用 Frenet 坐标系？</title>
-    <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/1000%E9%97%AE/%E7%AC%AC15%E9%A2%98-Frenet%E5%9D%90%E6%A0%87%E7%B3%BB%E4%B8%8E%E8%BD%A8%E8%BF%B9%E8%A7%84%E5%88%92</link>
-    <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/1000%E9%97%AE/%E7%AC%AC15%E9%A2%98-Frenet%E5%9D%90%E6%A0%87%E7%B3%BB%E4%B8%8E%E8%BD%A8%E8%BF%B9%E8%A7%84%E5%88%92</guid>
-    <description><![CDATA[ 自动驾驶 1000问 · 五 · 第 15 题：轨迹规划为什么常用 Frenet 坐标系？ 原始 Flomo：v.flomoapp.com/mine/ 自动驾驶 1000问 · 五 · 第 15 题：轨迹规划为什么常用 Frenet 坐标系？ 先定义：Frenet 坐标（SL / 赛道坐标）以道路中心线为参考——s = 沿中心线的纵向弧长，d = 相对中心线的横向偏移。 为什么用它： 纵横向解耦（降维）：笛卡尔下是 2D 自由空间搜索，复杂。Frenet 下纵向（s）和横向（d）天然分开——纵向管速度 / 跟车，横向管换道 / 避让。于是规划被拆成一维纵向 + 一维横向两个简单问题。 贴合道路... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 08:33:38 GMT</pubDate>
   </item>
     </channel>
   </rss>
