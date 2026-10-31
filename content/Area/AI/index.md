@@ -30,6 +30,22 @@ flowchart TD
     J -.-> I
 ```
 
+## AI 1000问逐题解答
+
+- [[1000问/大模型RAG与智能体基础]] —— 知识管理、Embedding、RAG、Transformer、GPT/BERT、训练流程、Agent、本地模型、提示工程和微调。
+
+~~~~mermaid
+flowchart TD
+  A[AI 1000问] --> B[模型基础与训练]
+  A --> C[知识表示与 RAG]
+  A --> D[Agent 与工具调用]
+  A --> E[本地部署 / 微调 / 多模态]
+  B --> F[逐题解答与工程评估]
+  C --> F
+  D --> F
+  E --> F
+~~~~
+
 ## 专题导航
 
 | 专题 | 学习内容 | 入口 |
