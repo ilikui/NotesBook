@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>性能优化-多SWC调度表与Runnable顺序</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-%E5%A4%9ASWC%E8%B0%83%E5%BA%A6%E8%A1%A8%E4%B8%8ERunnable%E9%A1%BA%E5%BA%8F</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-%E5%A4%9ASWC%E8%B0%83%E5%BA%A6%E8%A1%A8%E4%B8%8ERunnable%E9%A1%BA%E5%BA%8F</guid>
+    <description><![CDATA[ AUTOSAR 性能优化 Q2：多 SW-C 调度表与 Runnable 顺序 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 性能优化 Q2：ECU 部署 50+ 个 SW-C——RTE 生成的 Schedule Table 什么样？Runnable 顺序怎么保证实时性？ 先明确：Schedule Table 是 OS 层的调度机制，RTE（SchM）负责把 runnable 组织进 Task。所以它不是「每个 SW-C 一个表项」，而是按 Task 组织 + 时间轴排布。 Schedule Table 长什么样： RTE 把大量 runnable 映射到若干 T... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:58:36 GMT</pubDate>
+  </item><item>
+    <title>BswM 模式管理深入 Q1：BswM 的「规则」在配置工具里怎么描述——if-then-else 还是状态机？</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/BswM-%E8%A7%84%E5%88%99%E4%B8%8E%E6%A8%A1%E5%BC%8F%E4%BB%B2%E8%A3%81</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/BswM-%E8%A7%84%E5%88%99%E4%B8%8E%E6%A8%A1%E5%BC%8F%E4%BB%B2%E8%A3%81</guid>
+    <description><![CDATA[ BswM 模式管理深入 Q1：BswM 的「规则」在配置工具里怎么描述——if-then-else 还是状态机？ 原始 Flomo：v.flomoapp.com/mine/ BswM 模式管理深入 Q1：BswM 的「规则」在配置工具里怎么描述——if-then-else 还是状态机？ 答：更接近 if-then-else 规则引擎，而不是状态机。 BswM 核心配置结构（都是条件-动作）： 模式请求源（BswMModeRequestSource / ModeRequestPort）：谁在请求模式——如 CanNm 请求通信模式、EcuM 请求运行模式。 规则（BswMRule）+ 条件（Bs... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:58:19 GMT</pubDate>
+  </item><item>
     <title>BswM 模式管理深入 Q2：Action List 能触发哪些操作？只改模式值，还是真能调用其他 BSW 模块接口？</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/BswM-ActionList%E5%8A%A8%E4%BD%9C%E8%8C%83%E5%9B%B4</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/BswM-ActionList%E5%8A%A8%E4%BD%9C%E8%8C%83%E5%9B%B4</guid>
@@ -53,18 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E4%B8%8EECU%E6%A8%A1%E5%BC%8F%E6%84%9F%E7%9F%A5</guid>
     <description><![CDATA[ SW-C 生命周期与状态管理 Q2：SW-C 能感知 ECU 正在唤醒 / 运行 / 休眠 / 关机吗？通过什么接口？ 原始 Flomo：v.flomoapp.com/mine/ SW-C 生命周期与状态管理 Q2：SW-C 能感知 ECU 正在唤醒 / 运行 / 休眠 / 关机吗？通过什么接口？ 答：可以。SW-C 通过 RTE 的 Mode 接口（Mode Management）感知外部模式，途径是 ECU 模式（由 EcuM 管理）经 RTE 广播给 SW-C。 具体接口： Mode Port：SW-C 上配一个 Mode 类型的 Receiver Port，接收来自模式源（EcuM /... ]]></description>
     <pubDate>Sat, 31 Oct 2026 07:56:33 GMT</pubDate>
-  </item><item>
-    <title>ARXML 解析与自动化脚本 Q1：用 Python + lxml 自动生成 / 检查 AUTOSAR 配置？常见自动化场景有哪些？</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/ARXML-Python%E4%B8%8Elxml%E8%87%AA%E5%8A%A8%E5%8C%96</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/ARXML-Python%E4%B8%8Elxml%E8%87%AA%E5%8A%A8%E5%8C%96</guid>
-    <description><![CDATA[ ARXML 解析与自动化脚本 Q1：用 Python + lxml 自动生成 / 检查 AUTOSAR 配置？常见自动化场景有哪些？ 原始 Flomo：v.flomoapp.com/mine/ ARXML 解析与自动化脚本 Q1：用 Python + lxml 自动生成 / 检查 AUTOSAR 配置？常见自动化场景有哪些？ 答：可以。ARXML 本质是 XML，用 lxml / xml.etree + XPath 就能解析、生成、检查。 常见自动化场景： 批量重命名 / 修改：批量给 PDU 名称加前后缀、批量改 PDU 的 CAN ID / DLC、批量给 SW-C 加端口。 一致性 / ... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:56:30 GMT</pubDate>
-  </item><item>
-    <title>ARXML 解析与自动化脚本 Q2：两个版本 ARXML 做 diff——哪些是真正影响行为的「语义差异」？怎么在 CI 里自动检测？</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/ARXML%E8%AF%AD%E4%B9%89Diff%E4%B8%8ECI%E6%A3%80%E6%B5%8B</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/ARXML%E8%AF%AD%E4%B9%89Diff%E4%B8%8ECI%E6%A3%80%E6%B5%8B</guid>
-    <description><![CDATA[ ARXML 解析与自动化脚本 Q2：两个版本 ARXML 做 diff——哪些是真正影响行为的「语义差异」？怎么在 CI 里自动检测？ 原始 Flomo：v.flomoapp.com/mine/ ARXML 解析与自动化脚本 Q2：两个版本 ARXML 做 diff——哪些是真正影响行为的「语义差异」？怎么在 CI 里自动检测？ 文本 diff（git diff）看到的是行级变化，但 ARXML 大量是引用、顺序、结构——很多行变不改变行为，很多隐藏语义变化却看不出。 真正影响行为的语义差异： 引用（REF）指向的目标变了：某个 REF 从指向 A 变成指向 B——只是路径字符串变化，行为完全... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:55:26 GMT</pubDate>
   </item>
     </channel>
   </rss>
