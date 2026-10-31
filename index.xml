@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>CEM工作问题清单</title>
+    <link>https://wiki.likui.info/Project/CEM/100%E9%97%AE/CEM%E5%B7%A5%E4%BD%9C%E9%97%AE%E9%A2%98%E6%B8%85%E5%8D%95</link>
+    <guid>https://wiki.likui.info/Project/CEM/100%E9%97%AE/CEM%E5%B7%A5%E4%BD%9C%E9%97%AE%E9%A2%98%E6%B8%85%E5%8D%95</guid>
+    <description><![CDATA[ CEM 工作问题清单 原始 Flomo：v.flomoapp.com/mine/ CEM工作的100个问题 接口的配置操作？ 休眠唤醒的相关逻辑是什么？ CEM. ]]></description>
+    <pubDate>Sat, 31 Oct 2026 09:06:28 GMT</pubDate>
+  </item><item>
     <title>KM</title>
     <link>https://wiki.likui.info/Area/KM/</link>
     <guid>https://wiki.likui.info/Area/KM/</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%A2%A8%E6%B0%B4%E5%B1%8F%E5%8D%95%E8%AF%8D%E8%AE%B0%E5%BF%86%E5%B0%8F%E6%B8%B8%E6%88%8F%E6%9E%84%E6%83%B3</guid>
     <description><![CDATA[ 做一个记忆单词的小游戏 原始 Flomo：v.flomoapp.com/mine/ 做一个记忆单词的小游戏 通过手动输入单词，通关游戏 桌面小辞典软件开发 类似： github.com/NovaShang/DicDic 💡想法：将单词记录在墨水屏里面，通过记忆算法实现记忆功能 PARA. ]]></description>
     <pubDate>Sat, 31 Oct 2026 08:59:56 GMT</pubDate>
-  </item><item>
-    <title>Zettelkasten入门资源</title>
-    <link>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/Zettelkasten%E5%85%A5%E9%97%A8%E8%B5%84%E6%BA%90</link>
-    <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/Zettelkasten%E5%85%A5%E9%97%A8%E8%B5%84%E6%BA%90</guid>
-    <description><![CDATA[ - 原始 Flomo：v.flomoapp.com/mine/ zettelkasten.de/introduction/zh/ 卡片盒笔记系统：英文/德语 Zettelkasten，将笔记相互连接形成一个网状结构的超文本笔记系统，它是一个工具，是你的伙伴。 卡片盒笔记法：英文 Zettelkasten Method，建立卢曼笔记系统用到的的一些具体方法 笔记卡片：英文/德语 Zettel，原指一张用来记录笔记的小纸片，现指使用卢曼笔记法记录的一条单独的笔记 想法：英文 Thought，卢曼笔记法要求每条笔记只记录一个 thought，thought 在中文中含义非常丰富，可以是一个术语、概念... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 08:58:40 GMT</pubDate>
   </item>
     </channel>
   </rss>
