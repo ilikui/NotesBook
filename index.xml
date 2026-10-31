@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>OS内存保护与可信分区</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/OS%E5%86%85%E5%AD%98%E4%BF%9D%E6%8A%A4%E4%B8%8E%E5%8F%AF%E4%BF%A1%E5%88%86%E5%8C%BA</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/OS%E5%86%85%E5%AD%98%E4%BF%9D%E6%8A%A4%E4%B8%8E%E5%8F%AF%E4%BF%A1%E5%88%86%E5%8C%BA</guid>
+    <description><![CDATA[ AUTOSAR OS 内存保护与可信分区 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR OS 的 Memory Protection（MPU 配置）与 Trusted / Non-Trusted 差异 MPU 怎么配： AUTOSAR OS 用 MPU 实现内存分区（Memory Partitioning），跟 OS-Application 绑定。每个 OS-Application 分到一个或多个内存分区，各分区有自己的代码 / 数据 / 堆栈段。 OS 为每个任务 / ISR、每个 OS-Application 维护一组访问权限，翻译成 MPU 寄存器配置（re... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 09:17:51 GMT</pubDate>
+  </item><item>
     <title>ECUExtract与SystemDescription映射</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/ECUExtract%E4%B8%8ESystemDescription%E6%98%A0%E5%B0%84</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/ECUExtract%E4%B8%8ESystemDescription%E6%98%A0%E5%B0%84</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90Q1-undefined-reference%E9%93%BE%E6%8E%A5%E9%94%99%E8%AF%AF</guid>
     <description><![CDATA[ 生成代码分析与集成 Q1：编译报「undefined reference」——模块没配全还是链接脚本没加源文件？第一步查什么？ 原始 Flomo：v.flomoapp.com/mine/ 生成代码分析与集成 Q1：编译报「undefined reference」——模块没配全还是链接脚本没加源文件？第一步查什么？ undefined reference 通常两类来源： 配置 / 生成问题：生成代码引用了某个函数 / 变量，但配置没配全，导致那个符号根本没被生成——比如某模块的源文件没生成、某个配置未启用（对应函数没被编译进去）。 链接 / 编译清单问题：符号确实生成了，但对应的 .c 文件没被... ]]></description>
     <pubDate>Sat, 31 Oct 2026 09:13:11 GMT</pubDate>
-  </item><item>
-    <title>生成代码分析Q2-BSW条件编译宏判断</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90Q2-BSW%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91%E5%AE%8F%E5%88%A4%E6%96%AD</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90Q2-BSW%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91%E5%AE%8F%E5%88%A4%E6%96%AD</guid>
-    <description><![CDATA[ 生成代码分析与集成 Q2：BSW 生成代码用宏控制条件编译——怎么确定某配置参数对应宏是 ENABLED 还是 DISABLED？ 原始 Flomo：v.flomoapp.com/mine/ 生成代码分析与集成 Q2：BSW 生成代码用宏控制条件编译——怎么确定某配置参数对应宏是 ENABLED 还是 DISABLED？ 生成器把每个配置参数翻译成预处理器宏，命名有规律（如 XXX_ENABLED / XXX_ACTIVE / XXX_USE_…），值为 STD_ON / STD_OFF 或 TRUE / FALSE。 三个直接手段： 看生成的配置头文件（_Cfg.h）：在生成目录里搜宏名（如... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 09:13:08 GMT</pubDate>
   </item>
     </channel>
   </rss>
