@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="zh"><head><title>Makefile 100问：从 GNU Make 语法到嵌入式 AUTOSAR 构建</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="数字花园"/><meta property="og:title" content="Makefile 100问：从 GNU Make 语法到嵌入式 AUTOSAR 构建"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Makefile 100问：从 GNU Make 语法到嵌入式 AUTOSAR 构建"/><meta name="twitter:description" content="Makefile 100问：从 GNU Make 语法到嵌入式 AUTOSAR 构建 本篇迁移 Flomo「Makefile 100问」三阶题库。原始导航标记为 30/30 完成：第一阶语法、第二阶工程、第三阶嵌入式与 AUTOSAR 实战。以下逐题保留原问题与答案卡内容，并补充构建链路图、依赖关系图和工程化边界。示例以 GNU Make 为主；不同 Make 版本、Shell、编译器和供应商生成工具的行为需以实际环境验证。 学习路线 flowchart TD A[第一阶：Make 语法] --> B[第二阶：工程组织] B --> C[第三阶：嵌入式实战] C --> D[..."/><meta property="og:description" content="Makefile 100问：从 GNU Make 语法到嵌入式 AUTOSAR 构建 本篇迁移 Flomo「Makefile 100问」三阶题库。原始导航标记为 30/30 完成：第一阶语法、第二阶工程、第三阶嵌入式与 AUTOSAR 实战。以下逐题保留原问题与答案卡内容，并补充构建链路图、依赖关系图和工程化边界。示例以 GNU Make 为主；不同 Make 版本、Shell、编译器和供应商生成工具的行为需以实际环境验证。 学习路线 flowchart TD A[第一阶：Make 语法] --> B[第二阶：工程组织] B --> C[第三阶：嵌入式实战] C --> D[..."/><meta property="og:image:alt" content="Makefile 100问：从 GNU Make 语法到嵌入式 AUTOSAR 构建 本篇迁移 Flomo「Makefile 100问」三阶题库。原始导航标记为 30/30 完成：第一阶语法、第二阶工程、第三阶嵌入式与 AUTOSAR 实战。以下逐题保留原问题与答案卡内容，并补充构建链路图、依赖关系图和工程化边界。示例以 GNU Make 为主；不同 Make 版本、Shell、编译器和供应商生成工具的行为需以实际环境验证。 学习路线 flowchart TD A[第一阶：Make 语法] --> B[第二阶：工程组织] B --> C[第三阶：嵌入式实战] C --> D[..."/><meta property="og:image" content="https://wiki.likui.info/static/og-image.png"/><meta property="og:image:url" content="https://wiki.likui.info/static/og-image.png"/><meta name="twitter:image" content="https://wiki.likui.info/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="wiki.likui.info"/><meta property="og:url" content="https://wiki.likui.info/Area/EE/构建系统/Makefile100问"/><meta property="twitter:url" content="https://wiki.likui.info/Area/EE/构建系统/Makefile100问"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="Makefile 100问：从 GNU Make 语法到嵌入式 AUTOSAR 构建 本篇迁移 Flomo「Makefile 100问」三阶题库。原始导航标记为 30/30 完成：第一阶语法、第二阶工程、第三阶嵌入式与 AUTOSAR 实战。以下逐题保留原问题与答案卡内容，并补充构建链路图、依赖关系图和工程化边界。示例以 GNU Make 为主；不同 Make 版本、Shell、编译器和供应商生成工具的行为需以实际环境验证。 学习路线 flowchart TD A[第一阶：Make 语法] --> B[第二阶：工程组织] B --> C[第三阶：嵌入式实战] C --> D[..."/><meta name="generator" content="Quartz"/><link href="../../../index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  padding: 2rem;
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcnVubmVyL3dvcmsvTm90ZXNCb29rL05vdGVzQm9vay9xdWFydHovY29tcG9uZW50cy9zdHlsZXMiLCJzb3VyY2VzIjpbIm1lcm1haWQuaW5saW5lLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUdGO0VBQ0U7OztBQUtGO0VBQ0U7RUFDQTs7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcGFkZGluZzogMnJlbTtcbiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgIHRyYW5zZm9ybS1vcmlnaW46IDAgMDtcbiAgICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjFzIGVhc2U7XG4gICAgICBvdmVyZmxvdzogdmlzaWJsZTtcbiAgICAgIG1pbi1oZWlnaHQ6IDIwMHB4O1xuICAgICAgbWluLXdpZHRoOiAyMDBweDtcblxuICAgICAgcHJlIHtcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICB9XG5cbiAgICAgIHN2ZyB7XG4gICAgICAgIG1heC13aWR0aDogbm9uZTtcbiAgICAgICAgaGVpZ2h0OiBhdXRvO1xuICAgICAgfVxuICAgIH1cblxuICAgICYgPiAubWVybWFpZC1jb250cm9scyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBib3R0b206IDIwcHg7XG4gICAgICByaWdodDogMjBweDtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBnYXA6IDhweDtcbiAgICAgIHBhZGRpbmc6IDhweDtcbiAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICBib3JkZXItcmFkaXVzOiA2cHg7XG4gICAgICBib3gtc2hhZG93OiAwIDJweCA0cHggcmdiYSgwLCAwLCAwLCAwLjEpO1xuICAgICAgei1pbmRleDogMjtcblxuICAgICAgLm1lcm1haWQtY29udHJvbC1idXR0b24ge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgd2lkdGg6IDMycHg7XG4gICAgICAgIGhlaWdodDogMzJweDtcbiAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgICBjb2xvcjogdmFyKC0tZGFyayk7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtZmFtaWx5OiB2YXIoLS1ib2R5Rm9udCk7XG4gICAgICAgIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XG5cbiAgICAgICAgJjpob3ZlciB7XG4gICAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgfVxuXG4gICAgICAgICY6YWN0aXZlIHtcbiAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMXB4KTtcbiAgICAgICAgfVxuXG4gICAgICAgIC8vIFN0eWxlIHRoZSByZXNldCBidXR0b24gZGlmZmVyZW50bHlcbiAgICAgICAgJjpudGgtY2hpbGQoMikge1xuICAgICAgICAgIHdpZHRoOiBhdXRvO1xuICAgICAgICAgIHBhZGRpbmc6IDAgMTJweDtcbiAgICAgICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cbiJdfQ== */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://wiki.likui.info/index.xml"/></head><body data-slug="Area/EE/构建系统/Makefile100问"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">数字花园</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><p>搜索</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索些什么" placeholder="搜索些什么"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-172"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>PARA</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-172" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text explorer-entry-icon" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg><span class="file-title"></span></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder-closed explorer-entry-icon" aria-hidden="true"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path><path d="M2 10h20"></path></svg><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../Area/">Area</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../Area/EE/">EE</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../Area/EE/构建系统/">构建系统</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Makefile 100问：从 GNU Make 语法到嵌入式 AUTOSAR 构建</a></div></nav><h1 class="article-title">Makefile 100问：从 GNU Make 语法到嵌入式 AUTOSAR 构建</h1><p show-comma="true" class="content-meta"><time datetime="2026-10-31T01:34:05.000Z">2026年10月31日</time><span>57分钟阅读</span></p><ul class="tags"><li><a href="../../../tags/Makefile" class="internal tag-link">Makefile</a></li><li><a href="../../../tags/GNU-Make" class="internal tag-link">GNU-Make</a></li><li><a href="../../../tags/嵌入式" class="internal tag-link">嵌入式</a></li><li><a href="../../../tags/AUTOSAR" class="internal tag-link">AUTOSAR</a></li><li><a href="../../../tags/100问" class="internal tag-link">100问</a></li></ul></div></div><article class="popover-hint"><h1 id="makefile-100问从-gnu-make-语法到嵌入式-autosar-构建">Makefile 100问：从 GNU Make 语法到嵌入式 AUTOSAR 构建<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#makefile-100问从-gnu-make-语法到嵌入式-autosar-构建" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>本篇迁移 Flomo「Makefile 100问」三阶题库。原始导航标记为 <strong>30/30 完成</strong>：第一阶语法、第二阶工程、第三阶嵌入式与 AUTOSAR 实战。以下逐题保留原问题与答案卡内容，并补充构建链路图、依赖关系图和工程化边界。示例以 GNU Make 为主；不同 Make 版本、Shell、编译器和供应商生成工具的行为需以实际环境验证。</p>
+<h2 id="学习路线">学习路线<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#学习路线" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n  A[第一阶：Make 语法] --> B[第二阶：工程组织]\n  B --> C[第三阶：嵌入式实战]\n  C --> D[裸机工程]\n  C --> E[AUTOSAR 多层构建]\n  D --> F[编译 / 链接 / 镜像]\n  E --> F\n  F --> G[自动依赖与增量构建]\n  G --> H[CI 与可复现构建]&quot;">flowchart TD
+  A[第一阶：Make 语法] --> B[第二阶：工程组织]
+  B --> C[第三阶：嵌入式实战]
+  C --> D[裸机工程]
+  C --> E[AUTOSAR 多层构建]
+  D --> F[编译 / 链接 / 镜像]
+  E --> F
+  F --> G[自动依赖与增量构建]
+  G --> H[CI 与可复现构建]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h2 id="第一阶语法与规则10题">第一阶：语法与规则（10题）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#第一阶语法与规则10题" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="11-一阶q1目标必须得是文件名吗phony-干嘛的">1.1 一阶Q1：目标必须得是文件名吗？.PHONY 干嘛的？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#11-一阶q1目标必须得是文件名吗phony-干嘛的" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（根据 Flomo 原始答案卡整理）</strong></p>
+<p>▎ 五大学习法：西蒙学习法——把「make 凭什么判定要不要干活」这一个点钻透，.PHONY 只是它的衍生品</p>
+<p><strong>核心认知：make 默认把目标当「文件名」对待</strong></p>
+<ul>
+<li>判定逻辑 = 比较目标和依赖的修改时间：磁盘上有同名文件、且比所有依赖新 → 认为目标已最新，跳过命令</li>
+<li>clean / all / flash 这类目标是「动作名」，本来就不对应文件。没有同名文件时 make 每次都会执行</li>
+</ul>
+<p><strong>.PHONY 是干嘛的</strong></p>
+<ul>
+<li>声明某目标是伪目标：告诉 make「别去查时间戳，每次无条件执行」</li>
+<li>防的幺蛾子：哪天目录里碰巧出现同名文件（clean.log、all.c），make 一看「目标已存在、又没依赖」直接跳过——clean 静默失效，还没人报错，最阴的那种 bug</li>
+</ul>
+<p><strong>一句话总结</strong>：目标不一定是文件，但 make 一律按文件对待；.PHONY 就是交底「这不是文件，别查时间戳」。</p>
+<p>📎 题目（一阶）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTA5" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTA5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 Makefile 学习规则 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ5MzQ2MDcy" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ5MzQ2MDcy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyMTU3NTQ2" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMTU3NTQ2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="12-一阶q2-什么区别嵌入式为什么全是-">1.2 一阶Q2：=、:=、?=、+= 什么区别？嵌入式为什么全是 :=？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#12-一阶q2-什么区别嵌入式为什么全是-" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（根据 Flomo 原始答案卡整理）</strong></p>
+<p>▎ 五大学习法：费曼学习法——把四种赋值讲成「四个时间点的快照」，能讲清就真懂了</p>
+<p><strong>四种赋值</strong></p>
+<ul>
+<li><strong>=</strong> 递归展开（懒）：赋值时不展开，引用时才展开、取当时的当前值。能引用后定义的变量，灵活但值会随上下文漂移，排错难</li>
+<li><strong>:=</strong> 立即展开（勤）：赋值那一刻就展开成最终字符串，之后再改引用变量不影响它。值确定、可预测</li>
+<li><strong>?=</strong> 条件赋值：变量还没定义过才赋值。经典用途是默认值：CC ?= gcc，命令行或环境变量能覆盖</li>
+<li><strong>+=</strong> 追加：在现值后追加。追加的语义跟原变量类型走：原 := 则立即展开追加，原 = 则递归追加</li>
+</ul>
+<p><strong>嵌入式为什么到处是 :=</strong></p>
+<ul>
+<li>嵌入式 Makefile 变量高度交叉：CFLAGS 依赖 ARCH、TOOLCHAIN、BOARD……用 = 的话，取值时点不同结果不同，规则一多就变成「为什么我改了 FLAGS 没生效」的玄学</li>
+<li>:= 把每个变量钉死在赋值那一刻：行为确定、依赖清晰，配 += 追加也安全</li>
+<li>一句口诀：要确定的值用 :=，要默认值用 ?=，要增量用 +=，要递归才用 =（99% 的场景用不到）</li>
+</ul>
+<p><strong>一句话总结</strong>：= 是懒展开（引用时才算），:= 是勤展开（赋值时就定）；嵌入式工程追求可预测，所以到处是 :=。</p>
+<p>📎 题目（一阶）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTA5" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTA5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 一阶Q1（目标与.PHONY）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyMTU3NTQ2" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMTU3NTQ2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyMTU3NTU0" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMTU3NTU0<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="13-一阶q3自动变量--各代表什么_">1.3 一阶Q3：自动变量 $@、$&lt;、$^、$ 各代表什么？_\<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#13-一阶q3自动变量--各代表什么_" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（根据 Flomo 原始答案卡整理）</strong></p>
+<p>▎ 五大学习法：费曼学习法——把自动变量当「make 替你填好的占位符」，一条规则讲清</p>
+<p><strong>四个自动变量</strong></p>
+<ul>
+<li><strong>$@</strong> 当前规则的目标名（target）</li>
+<li><strong>$&lt;</strong> 依赖列表里的第一个依赖</li>
+<li><strong>$^</strong> 所有依赖的完整列表（去重）</li>
+<li><strong>$</strong>\* 模式规则里 % 匹配到的部分（stem，词干）</li>
+</ul>
+<p><strong>一条规则全用上</strong></p>
+<p>%.o: %.c<br/>
+$(CC) -c $&lt; -o $@</p>
+<ul>
+<li>对 src/main.c 编译出 src/main.o 时：$@ = src/main.o，$&lt; = src/main.c，$* = src/main</li>
+<li>多依赖场景用 $^：app.elf: a.o b.o c.o → $(LD) $^ -o $@ 一次带上全部 .o</li>
+<li>注意 $&lt; 只取第一个；想要「第一个以外的」，用 $(wordlist 2,$(words $^),$^)</li>
+</ul>
+<p><strong>一句话总结</strong>：$@ 是我要造的，$&lt; 是第一个原料，$^ 是所有原料，$\* 是通配符抓到的那截。</p>
+<p>📎 题目（一阶）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTA5" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTA5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 一阶Q2（变量赋值）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyMTU3NTU0" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMTU3NTU0<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyMTYxMjM3" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMTYxMjM3<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="14-一阶q4模式规则-o-c-怎么匹配和显式规则共存时-make-用谁">1.4 一阶Q4：模式规则 %.o: %.c 怎么匹配？和显式规则共存时 make 用谁？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#14-一阶q4模式规则-o-c-怎么匹配和显式规则共存时-make-用谁" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（根据 Flomo 原始答案卡整理）</strong></p>
+<p>▎ 五大学习法：西蒙学习法——把「make 选规则」的优先级钻透</p>
+<p><strong>%.o: %.c 怎么匹配</strong></p>
+<ul>
+<li>% 是通配符，匹配任意字符串（含路径）：main.o 匹配 %=main，src/main.o 匹配 %=src/main</li>
+<li>匹配到的值就是 $*（stem），规则内可用</li>
+<li>它跟 shell 的 *.c 不一样：模式规则的 % 在目标和依赖两侧对齐匹配，不是文件名展开</li>
+</ul>
+<p><strong>和显式规则共存时 make 用谁</strong></p>
+<ul>
+<li>优先级：显式规则 > 模式规则。同一目标有显式规则，模式规则就靠边</li>
+<li>显式规则只要「存在」就赢，哪怕它写得更粗糙</li>
+<li>标准写法：特殊文件（boot.o 要特殊编译选项）写显式规则覆盖，其余交给 %.o: %.c 兜底</li>
+<li>陷阱：显式规则漏写了命令（recipe），make 会用模式规则补命令——「隐式规则补全」，容易让人困惑</li>
+</ul>
+<p><strong>一句话总结</strong>：% 是对齐匹配的通配符；显式规则一票否决模式规则，特殊文件显式覆盖、普通文件模式兜底。</p>
+<p>📎 题目（一阶）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTA5" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTA5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 一阶Q3（自动变量）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyMTYxMjM3" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMTYxMjM3<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyMTYxMjQ0" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMTYxMjQ0<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="15-一阶q5make-凭什么判断这个目标要不要重新编">1.5 一阶Q5：make 凭什么判断「这个目标要不要重新编」？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#15-一阶q5make-凭什么判断这个目标要不要重新编" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（根据 Flomo 原始答案卡整理）</strong></p>
+<p>▎ 五大学习法：西蒙学习法——把 make 最核心的判定依据钻透，后面所有规则都是它的延伸</p>
+<p><strong>核心：只比时间戳，不比内容</strong></p>
+<ul>
+<li>目标文件不存在 → 必须重建</li>
+<li>目标存在、但比任一依赖旧（依赖被改过）→ 重建</li>
+<li>目标比所有依赖都新 → 跳过，什么都不做</li>
+<li>判定顺序：先递归处理依赖——依赖要重建就先重建依赖，拿新时间戳回来再比</li>
+</ul>
+<p><strong>几个容易踩的坑</strong></p>
+<ul>
+<li>秒级精度：同一秒内 touch 依赖和目标，make 分不出谁新谁旧，可能漏编</li>
+<li>cp 保留时间戳：拷进来的文件时间比目标还旧，改了等于没改</li>
+<li>.PHONY 依赖：依赖里有伪目标时，伪目标每次都执行，连带规则每次都跑——常被拿来当「强制重编」的 hack</li>
+<li>头文件依赖：-MMD 生成的 .d 文件也是依赖，漏了它头文件改了不重编</li>
+</ul>
+<p><strong>一句话总结</strong>：make 只看「目标有没有比原料旧」，不看内容改没改；想强制就删目标或挂 .PHONY。</p>
+<p>📎 题目（一阶）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTA5" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTA5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 一阶Q4（模式规则）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyMTYxMjQ0" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMTYxMjQ0<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyMTY5MjY0" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMTY5MjY0<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="16-一阶q6-i-d-wall-这些选项塞进哪个变量cflags-和-ldflags-为什么要分开">1.6 一阶Q6：-I、-D、-Wall 这些选项塞进哪个变量？CFLAGS 和 LDFLAGS 为什么要分开？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#16-一阶q6-i-d-wall-这些选项塞进哪个变量cflags-和-ldflags-为什么要分开" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（根据 Flomo 原始答案卡整理）</strong></p>
+<p>▎ 五大学习法：西蒙学习法——把「编译期和链接期」两个阶段的变量分清楚</p>
+<p><strong>编译选项放哪</strong></p>
+<ul>
+<li>-I（头文件路径）、-D（宏定义）、-Wall（告警）、-O（优化）、-g（调试）这些是编译期的，塞进 CFLAGS（C 编译）或 CXXFLAGS（C++ 编译）</li>
+<li>头文件路径 -I 通常单独放 CPPFLAGS，方便整体覆盖</li>
+<li>汇编用 ASFLAGS，链接用 LDFLAGS，库名用 LDLIBS</li>
+</ul>
+<p><strong>CFLAGS 和 LDFLAGS 为什么必须分开</strong></p>
+<ul>
+<li>阶段不同：CFLAGS 喂给编译（.c → .o），LDFLAGS 喂给链接（.o → elf/bin）</li>
+<li>混在一起会出事：-Wall 对链接器毫无意义，-T 链接脚本对编译器毫无意义；塞错变量要么报 unrecognized option，要么静默忽略</li>
+<li>分开才能分别覆盖：嵌入式里常有「编译 -O2、链接加 -Wl,—gc-sections」这种需求，混在一个变量里没法单独调</li>
+<li>惯例：CFLAGS 管编译选项、LDFLAGS 管链接选项、LDLIBS 管库名（-lm -lpthread）</li>
+</ul>
+<p><strong>一句话总结</strong>：编译期的给 CFLAGS，链接期的给 LDFLAGS，库名给 LDLIBS——分开才能独立覆盖，混用必然出幺蛾子。</p>
+<p>📎 题目（一阶）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTA5" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTA5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 一阶Q5（重编判定）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyMTY5MjY0" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMTY5MjY0<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyMTY5Mzk5" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMTY5Mzk5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="17-一阶q7cc-和-cc-差在哪什么时候-cc-会解析错">1.7 一阶Q7：$(CC) 和 $CC 差在哪？什么时候 $CC 会解析错？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#17-一阶q7cc-和-cc-差在哪什么时候-cc-会解析错" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（根据 Flomo 原始答案卡整理）</strong></p>
+<p>▎ 五大学习法：费曼学习法——把 make 的展开规则和 shell 区分开，一讲就通</p>
+<p><strong>核心：make 只认 $(XXX)，$CC 会被拆成 $(C)C</strong></p>
+<ul>
+<li>$CC 在 make 眼里 = 变量 C 的值 + 字面 C。C 没定义时结果是空 + C = “C”</li>
+<li>正确写法是 $(CC)。$X 这种单字母形式只留给自动变量（$@、$&lt;、$^、$*）和特殊变量</li>
+<li>从 shell 抄来的命令最容易踩：$PATH、$HOME、$CC 在 make 里全不是你想的意思</li>
+</ul>
+<p><strong>recipe 里想让 shell 展开怎么办</strong></p>
+<ul>
+<li>写成 $$VAR：make 先把 $$ 转成 $，再把结果交给 shell 展开</li>
+<li>例：recipe 里 echo $$HOME → shell 展开成 /root</li>
+<li>判断口诀：这一层要谁展开就写谁——make 层用 $(…)，shell 层用 $$(…)</li>
+</ul>
+<p><strong>一句话总结</strong>：make 里多字符变量必须 $(XXX)；$CC 是 $(C)C；recipe 里给 shell 的变量要写 $$XXX。</p>
+<p>📎 题目（一阶）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTA5" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTA5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 一阶Q6（CFLAGS/LDFLAGS）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyMTY5Mzk5" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMTY5Mzk5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyMTY5Mjcy" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMTY5Mjcy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="18-一阶q8make-默认构建哪个目标第一个目标是-clean-会发生什么">1.8 一阶Q8：make 默认构建哪个目标？第一个目标是 clean 会发生什么？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#18-一阶q8make-默认构建哪个目标第一个目标是-clean-会发生什么" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（根据 Flomo 原始答案卡整理）</strong></p>
+<p>▎ 五大学习法：费曼学习法——把「默认目标 = 第一个目标」这个规则讲成事故现场</p>
+<p><strong>make 默认构建哪个目标</strong></p>
+<ul>
+<li>不带参数执行 make：构建「第一个目标」（准确说是第一个非特殊目标），不是 all</li>
+<li>所以 Makefile 第一条规则通常是 all:，且 all 一般声明为 .PHONY</li>
+</ul>
+<p><strong>第一个目标恰好是 clean 会发生什么</strong></p>
+<ul>
+<li>你 make 一下，它把整个工程清掉了——rm 所有产物，当场事故</li>
+<li>更深一层：clean 通常是 .PHONY 且永远执行，默认目标=clean 意味着每次 make 都先删文件</li>
+<li>常见防护：all 放第一、clean 放最后；或用 .DEFAULT_GOAL := all 显式指定默认目标</li>
+</ul>
+<p><strong>一句话总结</strong>：make 不认 all 认「第一个目标」；clean 放第一 = make 一下清掉工程。</p>
+<p>📎 题目（一阶）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTA5" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTA5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 一阶Q7（$(CC) vs $CC）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyMTY5Mjcy" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMTY5Mjcy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyMTY5NDAy" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMTY5NDAy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="19-一阶q9include-xxxmk-干嘛的include-的文件不存在会怎样-include-解决什么">1.9 一阶Q9：include xxx.mk 干嘛的？include 的文件不存在会怎样？-include 解决什么？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#19-一阶q9include-xxxmk-干嘛的include-的文件不存在会怎样-include-解决什么" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（根据 Flomo 原始答案卡整理）</strong></p>
+<p>▎ 五大学习法：西蒙学习法——把 make 的「读入期」机制钻透</p>
+<p><strong>include 干嘛的</strong></p>
+<ul>
+<li>把其他文件的内容原样展开进当前 Makefile，像 C 语言的 include 指令</li>
+<li>用途：拆分大工程（变量放 config.mk、规则放 rules.mk）、共享公共片段、读入自动生成的依赖文件（.d）</li>
+</ul>
+<p><strong>include 的文件不存在会怎样</strong></p>
+<ul>
+<li>make 会先尝试重新生成它（如果它有生成规则），生成不了就直接报错退出——即使你根本没用到里面的变量</li>
+<li>经典场景：首次构建时 .d 文件还不存在，include 直接炸</li>
+<li>报错信息很误导：「No rule to make target xxx.mk」</li>
+</ul>
+<p><strong>-include 解决什么</strong></p>
+<ul>
+<li>-include（等价 sinclude）：文件不存在或生成失败时静默跳过，不报错</li>
+<li>配合「先编译生成 .d、下次构建再 include」的经典流程</li>
+<li>口诀：自动生成的依赖文件用 -include，自己维护的配置文件用 include（缺了就该报错）</li>
+</ul>
+<p><strong>一句话总结</strong>：include 是静态展开，文件缺失会炸；-include 容忍缺失，专治首次构建的 .d 文件。</p>
+<p>📎 题目（一阶）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTA5" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTA5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 一阶Q8（默认目标）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyMTY5NDAy" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMTY5NDAy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyMjA5ODI1" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMjA5ODI1<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="110-一阶q10命令前面的--是干嘛的make--s-和它是什么关系">1.10 一阶Q10：命令前面的 @ 是干嘛的？make -s 和它是什么关系？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#110-一阶q10命令前面的--是干嘛的make--s-和它是什么关系" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（根据 Flomo 原始答案卡整理）</strong></p>
+<p>▎ 五大学习法：费曼学习法——把「回显控制」讲成两个层级</p>
+<p><strong>@ 干嘛的</strong></p>
+<ul>
+<li>默认 make 会先把命令回显（echo）再执行；行首加 @ 表示这条命令不回显</li>
+<li>典型用法：@echo “Building…”——只显示你的提示语，不显示命令本身</li>
+<li>只在 recipe 行首生效，一行一个 @</li>
+</ul>
+<p><strong>make -s 和 @ 的关系</strong></p>
+<ul>
+<li>-s（silent）是全局开关：所有命令都不回显，等效于每行都加 @</li>
+<li>区别：@ 是单条局部控制（可读性好、可控），-s 是全局粗粒度（命令行临时用，不写进文件）</li>
+<li>更细的控制：-n 只打印不执行、-B 强制全部重建</li>
+<li>回显控制层级：make 默认回显 → @ 关掉单条 → -s 关掉全部</li>
+</ul>
+<p><strong>一句话总结</strong>：@ 是单条命令的静音键，make -s 是全局静音；@ 写在 Makefile 里，-s 留在命令行。</p>
+<p>📎 题目（一阶）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTA5" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTA5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 一阶Q9（include）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyMjA5ODI1" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMjA5ODI1<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyMjA5ODMw" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMjA5ODMw<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h2 id="第二阶工程组织与调试10题">第二阶：工程组织与调试（10题）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#第二阶工程组织与调试10题" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="21-二阶q1foreach-var-list-text-怎么用list-元素含空格怎么不踩坑">2.1 二阶Q1：$(foreach var, list, text) 怎么用？list 元素含空格怎么不踩坑？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#21-二阶q1foreach-var-list-text-怎么用list-元素含空格怎么不踩坑" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（根据 Flomo 原始答案卡整理）</strong></p>
+<p>▎ 五大学习法：费曼学习法——把 foreach 讲成「make 自己的循环展开器」</p>
+<p><strong>基本用法</strong></p>
+<ul>
+<li>$(foreach var, list, text)：对 list 里每个元素，把 var 设为该元素，展开 text，把所有结果用空格连起来</li>
+<li>例：$(foreach f, a.c b.c, $(f).o) → a.c.o b.c.o</li>
+<li>典型场景：批量生成变量、批量拼接路径、遍历子目录生成 -I 参数</li>
+</ul>
+<p><strong>list 元素含空格怎么踩坑</strong></p>
+<ul>
+<li>list 的分隔符是空格，元素本身不能含空格——路径带空格的元素会被直接拆成两个</li>
+<li>解法：list 里存变量名，text 里用 $(var) 间接引用；或元素间用别的符号拼</li>
+<li>例：DIRS = dir1 dir2；$(foreach d, $(DIRS), $(wildcard $(d)/*.c))</li>
+<li>另一个坑：foreach 参数用逗号分隔，text 里再出现逗号容易把参数拆乱</li>
+</ul>
+<p><strong>一句话总结</strong>：foreach 是 make 的循环展开器，list 靠空格分元素——路径别带空格，要绕就用变量间接引用。</p>
+<p>📎 题目（二阶）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTg1" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTg1<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 一阶Q10（@ 与 make -s）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyMjA5ODMw" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMjA5ODMw<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyMjM0NjY2" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMjM0NjY2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="22--_makefile-100问--二阶q2wildcard-srcc-和-shell-的-c-展开差在哪">2.2 * _Makefile 100问 · 二阶Q2：$(wildcard src/*.c) 和 shell 的 .c 展开差在哪？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#22--_makefile-100问--二阶q2wildcard-srcc-和-shell-的-c-展开差在哪" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（根据 Flomo 原始答案卡整理）</strong></p>
+<p>▎ 五大学习法：西蒙学习法——把「make 不展开通配符」这个事实钻透</p>
+<p><strong>核心差异</strong></p>
+<ul>
+<li>shell 的 *.c：由 shell 在执行命令时展开，展开时机是命令执行那一刻</li>
+<li>Makefile 里的 *.c：make 不会自己展开——变量赋值、规则依赖里裸写 *.c 就是字面量</li>
+<li>$(wildcard …)：make 的函数，在 make 读 Makefile 时就把文件列表定下来</li>
+</ul>
+<p><strong>为什么 Makefile 里不能用 shell 通配符直接列文件</strong></p>
+<ul>
+<li>规则依赖里的 *.c 不是命令，不经过 shell，make 拿到的是字面 *.c——匹配不到任何文件，目标永远「缺依赖」</li>
+<li>命令里的 *.c 会由 shell 展开（比如 rm *.o 能删），但依赖列表里不会</li>
+<li>所以列源文件必须 $(wildcard src/*.c)；且它在读 Makefile 时就展开，新加文件要重新 make 才生效</li>
+</ul>
+<p><strong>一句话总结</strong>：shell 通配符只在命令里生效，依赖和变量里要用 $(wildcard) 让 make 自己展开。</p>
+<p>📎 题目（二阶）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTg1" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTg1<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 二阶Q1（foreach）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyMjM0NjY2" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMjM0NjY2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyMjM0Njcw" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMjM0Njcw<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="23-二阶q3patsubst-cosrc-干嘛的缩写-srcco-和它什么关系">2.3 二阶Q3：$(patsubst %.c,%.o,$(SRC)) 干嘛的？缩写 $(SRC:.c=.o) 和它什么关系？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#23-二阶q3patsubst-cosrc-干嘛的缩写-srcco-和它什么关系" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（根据 Flomo 原始答案卡整理）</strong></p>
+<p>▎ 五大学习法：费曼学习法——把 patsubst 讲成「批量改名」，缩写是它的语法糖</p>
+<p><strong>patsubst 干嘛的</strong></p>
+<ul>
+<li>pattern substitute：按模式把字符串里匹配的部分替换</li>
+<li>$(patsubst %.c,%.o,$(SRC))：把 SRC 里所有 .c 结尾的项改成 .o 结尾</li>
+<li>工程里最经典的用法：SRC 列 .c 源文件，OBJ = $(patsubst %.c,%.o,$(SRC)) 得到 .o 列表，驱动编译和链接</li>
+<li>只替换匹配 % 模式的部分，不匹配的项原样保留</li>
+</ul>
+<p><strong>缩写 $(SRC:.c=.o) 和它什么关系</strong></p>
+<ul>
+<li>$(SRC:.c=.o) 是 patsubst 的简写：$(var:suffix=replacement)，只支持「后缀替换」这种简单情况</li>
+<li>等价于 $(patsubst %.c,%.o,$(SRC))——它自动补上了 % 通配</li>
+<li>注意：后缀替换必须从结尾匹配（.c 必须在末尾），中间替换还得用完整 patsubst</li>
+<li>另一个写法：$(SRC:%.c=%.o) 也是 patsubst 的简写形式（带 %）</li>
+</ul>
+<p><strong>一句话总结</strong>：patsubst 是批量替换引擎，$(SRC:.c=.o) 是只换后缀的快捷写法——两者同源，复杂替换用完整版。</p>
+<p>📎 题目（二阶）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTg1" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTg1<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 二阶Q2（wildcard）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyMjM0Njcw" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMjM0Njcw<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyMjM1MzQ3" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMjM1MzQ3<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="24-二阶q4filter--和-filter-out--怎么用什么场景要挑子集">2.4 二阶Q4：$(filter …) 和 $(filter-out …) 怎么用？什么场景要挑子集？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#24-二阶q4filter--和-filter-out--怎么用什么场景要挑子集" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（根据 Flomo 原始答案卡整理）</strong></p>
+<p>▎ 五大学习法：西蒙学习法——把「从文件堆里挑子集」这个工程动作钻透</p>
+<p><strong>基本用法</strong></p>
+<ul>
+<li>$(filter pattern…, text)：从 text 里挑出匹配任一 pattern 的项</li>
+<li>$(filter-out pattern…, text)：反过来，剔除匹配的项，留下其余</li>
+<li>pattern 支持 % 通配：$(filter %.a %.so, $(LIBS)) 挑出所有静态/动态库</li>
+</ul>
+<p><strong>什么场景需要挑子集</strong></p>
+<ul>
+<li>从一堆源文件里分出不同编译选项：SRC 里挑出要特殊处理的（比如 boot.c）单独编</li>
+<li>链接时分开库：$(filter %.a, $(LIBS)) 传给链接器，$(filter-out %.a, $(LIBS)) 当普通依赖</li>
+<li>按目录挑文件：$(filter src/%, $(SRC)) 只处理 src 下的</li>
+<li>嵌入式典型：C 和汇编分开编译——$(filter %.c,$(SRC)) 走 gcc，$(filter %.s,$(SRC)) 走 as</li>
+</ul>
+<p><strong>一句话总结</strong>：filter 是「要哪些」，filter-out 是「不要哪些」——把文件堆按模式切成子集，是工程里分派编译选项的基本功。</p>
+<p>📎 题目（二阶）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTg1" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTg1<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 二阶Q3（patsubst）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyMjM1MzQ3" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMjM1MzQ3<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyMjM1MzU0" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMjM1MzU0<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="25-二阶q5vpath--vpath-和--i-是一回事吗">2.5 二阶Q5：VPATH / vpath 和 -I 是一回事吗？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#25-二阶q5vpath--vpath-和--i-是一回事吗" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（根据 Flomo 原始答案卡整理）</strong></p>
+<p>▎ 五大学习法：西蒙学习法——把「make 找文件」和「编译器找文件」两套机制分清</p>
+<p><strong>VPATH / vpath 干嘛的</strong></p>
+<ul>
+<li>多目录工程里，源文件散在 src/、lib/ 下，make 默认只在当前目录找目标和依赖</li>
+<li>VPATH = dir1 dir2：告诉 make「这些目录也去找目标/依赖」</li>
+<li>vpath pattern dirs：更精细，只对匹配 pattern 的文件生效——vpath %.c src，vpath %.h inc</li>
+<li>典型用法：SRC = main.c uart.c（不写路径），配合 VPATH = src，make 去 src/ 找到它们</li>
+</ul>
+<p><strong>和编译器 -I 是一回事吗</strong></p>
+<ul>
+<li>不是。VPATH 是 make 找依赖/目标用的；-I 是编译器找头文件用的——两层独立的文件查找</li>
+<li>make 用 VPATH 找到源文件、把编译命令拼出来，命令里的 -I 让编译器找到 include 的头文件</li>
+<li>少了 VPATH：make 报 No rule to make target；少了 -I：编译器报 file not found——报错阶段完全不同</li>
+</ul>
+<p><strong>依赖文件找不到时怎么靠 vpath 找</strong></p>
+<ul>
+<li>依赖（prerequisite）找不到时，make 也会按 VPATH/vpath 去找：vpath %.h inc 后，头文件依赖能解析</li>
+<li>注意：vpath 只影响「查找」，不影响命令里 $&lt; 的路径写法</li>
+</ul>
+<p><strong>一句话总结</strong>：VPATH 管 make 找文件，-I 管编译器找头文件，两层独立；依赖缺失先查 VPATH，头文件缺失查 -I。</p>
+<p>📎 题目（二阶）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTg1" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTg1<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 二阶Q4（filter）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyMjM1MzU0" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMjM1MzU0<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyMjM2MzM5" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMjM2MzM5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="26-二阶q6ifeq--ifdef-条件分支怎么写debugrelease-切-cflags-用哪个">2.6 二阶Q6：ifeq / ifdef 条件分支怎么写？Debug/Release 切 CFLAGS 用哪个？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#26-二阶q6ifeq--ifdef-条件分支怎么写debugrelease-切-cflags-用哪个" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（根据 Flomo 原始答案卡整理）</strong></p>
+<p>▎ 五大学习法：费曼学习法——把 make 条件指令讲成「读文件时的预处理」</p>
+<p><strong>条件分支语法</strong></p>
+<ul>
+<li>ifeq (a, b)：a 等于 b 为真；ifeq ”$(VAR)” “yes” 带引号更稳（值里可能带空格）</li>
+<li>ifneq (a, b)：不等为真</li>
+<li>ifdef VAR：变量「被定义过」为真（注意：定义成空也算定义，ifdef 看有无、不看值空不空）</li>
+<li>ifndef VAR：没定义为真</li>
+<li>结构：ifeq … else … endif，可以嵌套</li>
+</ul>
+<p><strong>Debug/Release 切 CFLAGS 用哪个</strong></p>
+<ul>
+<li>常用组合：ifeq ”$(BUILD)” “debug”，比 ifdef DEBUG 更推荐——显式、可扩展</li>
+<li>例：<br/>
+ifeq ($(BUILD),debug)<br/>
+CFLAGS += -g -O0 -DDEBUG<br/>
+else<br/>
+CFLAGS += -O2<br/>
+endif</li>
+<li>命令行 make BUILD=debug 即可切换；以后要加 test 类型也顺</li>
+<li>ifdef 只适合「存在与否」这种二态判断</li>
+</ul>
+<p><strong>一句话总结</strong>：ifeq 比较值、ifdef 判断有无；切 Debug/Release 用 ifeq ”$(BUILD)” “debug”，显式且能扩到多种构建类型。</p>
+<p>📎 题目（二阶）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTg1" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTg1<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 二阶Q5（VPATH）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyMjM2MzM5" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMjM2MzM5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyMjM2MzQ2" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMjM2MzQ2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="27-二阶q7调试三板斧-make--n---d--print-data-base-各看什么">2.7 二阶Q7：调试三板斧 make -n / -d / —print-data-base 各看什么？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#27-二阶q7调试三板斧-make--n---d--print-data-base-各看什么" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（根据 Flomo 原始答案卡整理）</strong></p>
+<p>▎ 五大学习法：西蒙学习法——把「make 不听话时先看哪」这个排查路径钻透</p>
+<p><strong>三板斧各看什么</strong></p>
+<ul>
+<li>make -n（dry run）：只打印将要执行的命令，不真执行。看「make 打算干嘛」最快</li>
+<li>make -d（debug）：全量调试输出，包括每个文件的时间戳比较、规则选择过程。信息量大但啰嗦</li>
+<li>make —print-data-base（-p）：打印 make 读入的完整数据库——所有变量值、所有规则、内置规则</li>
+</ul>
+<p><strong>「make 没重编我以为会重编的文件」先用哪招</strong></p>
+<ul>
+<li>先用 -n：看它到底打算执行什么命令。它没列出你要的编译命令，说明它认为目标已最新</li>
+<li>再配合 -d 看时间戳比较：grep 文件名，看 make 判断「目标比依赖新」的依据</li>
+<li>最后 -p 查变量和规则是否如你所想（VPATH、CFLAGS 是不是你改的那份）</li>
+<li>顺序口诀：-n 看打算，-d 看判断，-p 看配置</li>
+</ul>
+<p><strong>一句话总结</strong>：-n 快速看意图，-d 深挖时间戳判断，-p 查整个配置库；「没重编」先用 -n，不够再 -d。</p>
+<p>📎 题目（二阶）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTg1" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTg1<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 二阶Q6（条件分支）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyMjM2MzQ2" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMjM2MzQ2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyMjQwMzE5" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMjQwMzE5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="28-二阶q8命令行-cflags-o0-和-makefile-里的-cflags-谁赢override-干嘛的">2.8 二阶Q8：命令行 CFLAGS=-O0 和 Makefile 里的 CFLAGS 谁赢？override 干嘛的？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#28-二阶q8命令行-cflags-o0-和-makefile-里的-cflags-谁赢override-干嘛的" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（根据 Flomo 原始答案卡整理）</strong></p>
+<p>▎ 五大学习法：费曼学习法——把「变量优先级」讲成一层压一层</p>
+<p><strong>谁赢</strong></p>
+<ul>
+<li>命令行覆盖一切：make CFLAGS=-O0 时，Makefile 里的 CFLAGS = … 会被忽略</li>
+<li>除非用了 override：override CFLAGS += -g 会强制把 -g 追加进命令行给的值</li>
+<li>优先级排序：命令行传入 > override 标记 > Makefile 普通赋值 > 环境变量（环境变量最低，除非 -e）</li>
+</ul>
+<p><strong>为什么嵌入式工程常碰这个坑</strong></p>
+<ul>
+<li>CI 脚本里 make CFLAGS=-O2 传参，发现 Makefile 里 CFLAGS += -DXXX 全丢了——命令行直接替换整个变量，+= 也加不上</li>
+<li>解法：被覆盖后仍必须保留的用 override；或改成不同变量名（EXTRA_CFLAGS）由 Makefile 自己拼</li>
+<li>命令行设的变量还能用 ?= 兜底：Makefile 里 CFLAGS ?= -O2 只在命令行没传时才生效</li>
+</ul>
+<p><strong>一句话总结</strong>：命令行赢过 Makefile 普通赋值，override 是 Makefile 里唯一能跟命令行抗衡的声明；想保留增量就 override += 或换 EXTRA_CFLAGS。</p>
+<p>📎 题目（二阶）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTg1" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTg1<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 二阶Q7（调试三板斧）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyMjQwMzE5" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMjQwMzE5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyMjQwMzI5" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMjQwMzI5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="29-二阶q9递归-makemake--c-build-和-cd-进去跑差在哪变量怎么传-j-并行有什么坑">2.9 二阶Q9：递归 make：$(MAKE) -C build 和 cd 进去跑差在哪？变量怎么传？-j 并行有什么坑？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#29-二阶q9递归-makemake--c-build-和-cd-进去跑差在哪变量怎么传-j-并行有什么坑" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（根据 Flomo 原始答案卡整理）</strong></p>
+<p>▎ 五大学习法：西蒙学习法——把「子 make 的边界」钻透</p>
+<p><strong>$(MAKE) -C build 和直接 cd 进去跑差在哪</strong></p>
+<ul>
+<li>$(MAKE) 会自动带上父 make 的命令行变量（-j、CFLAGS=…），cd 进去手动跑就丢了</li>
+<li>$(MAKE) -C build：让子 make 在 build 目录工作，父进程能感知执行情况</li>
+<li>直接 cd 进去跑：丢掉父级上下文，也破坏「顶层一个命令构建整个工程」的体验</li>
+<li>关键：$(MAKE) 是变量不是命令名——写死 make 会在递归里丢掉参数</li>
+</ul>
+<p><strong>变量怎么传给子 make（export）</strong></p>
+<ul>
+<li>默认只传环境变量和命令行变量；Makefile 里定义的普通变量不会自动传给子 make</li>
+<li>export VAR：把变量导出到子 make 的环境</li>
+<li>单独一行 export（不带变量名）= 导出所有变量</li>
+<li>更干净的做法：子 make 里重新定义，或命令行传参 make -C build VAR=xxx</li>
+</ul>
+<p><strong>-j 并行时递归 make 的经典坑</strong></p>
+<ul>
+<li>父 make 的 -j 不保证传给子 make（除非走 MAKEFLAGS 或 $(MAKE) 自动带）</li>
+<li>经典坑：外层 -j8、子 make 又 -j8，任务数翻倍资源爆炸；或子 make 单线程，并行失效</li>
+<li>另一坑：子 make 之间无依赖关系，-j 下同时跑，共享输出目录互踩</li>
+<li>现代解法：少用递归，用 include 把子目录规则合并成单一 make 实例</li>
+</ul>
+<p><strong>一句话总结</strong>：递归 make 用 $(MAKE) -C 才能带上下文，变量靠 export 传，-j 并行会翻倍或失效——能合并成单实例就别递归。</p>
+<p>📎 题目（二阶）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTg1" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTg1<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 二阶Q8（override）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyMjQwMzI5" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMjQwMzI5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyMjQyODIy" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMjQyODIy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="210-二阶q10增量编译的本质make-拿什么判断-up-to-date">2.10 二阶Q10：增量编译的本质：make 拿什么判断 up to date？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#210-二阶q10增量编译的本质make-拿什么判断-up-to-date" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（根据 Flomo 原始答案卡整理）</strong></p>
+<p>▎ 五大学习法：费曼学习法——把「增量编译为什么快、什么时候翻车」讲透</p>
+<p><strong>make 拿什么判断 up to date</strong></p>
+<ul>
+<li>时间戳链：目标比所有直接依赖新 → up to date，跳过</li>
+<li>依赖是递归的：.o 依赖 .c 和 .d（头文件依赖），.elf 依赖所有 .o——改动从叶子一路向上传播</li>
+<li>本质是 DAG 图上的时间戳传播：任何一个输入变新，路径上的产物全部重算</li>
+</ul>
+<p><strong>嵌入式大工程改一个 .c 为什么只要几秒</strong></p>
+<ul>
+<li>只重编被影响的 .o（一个文件），再重新链接</li>
+<li>链接几秒到几十秒，但不用重编全部几百个 .c</li>
+<li>前提是依赖信息完整：每个 .o 的依赖里列了它 include 的所有头文件</li>
+</ul>
+<p><strong>依赖写漏了会有什么隐蔽后果</strong></p>
+<ul>
+<li>少列头文件依赖：改了头文件，依赖它的 .c 不重编——产物还是旧逻辑，但没人报错，最阴的 bug</li>
+<li>表现：改了宏定义/结构体，make 说 up to date，烧进去行为没变</li>
+<li>标准解法：编译器自动生成依赖——gcc -MMD -MF 生成 .d 文件，Makefile 用 -include 读入</li>
+<li>判断依据：make 只认时间戳链，依赖表不全 = 时间戳链断 = 静默漏编</li>
+</ul>
+<p><strong>一句话总结</strong>：增量编译 = 时间戳沿依赖 DAG 传播；快是因为只重算受影响路径；依赖写漏 = 时间戳链断 = 改了不重编的阴 bug。</p>
+<p>📎 题目（二阶）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTg1" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTg1<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 二阶Q9（递归 make）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyMjQyODIy" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMjQyODIy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyMjQyODM0" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMjQyODM0<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h2 id="第三阶嵌入式与-autosar-实战10题">第三阶：嵌入式与 AUTOSAR 实战（10题）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#第三阶嵌入式与-autosar-实战10题" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="31-三阶q1裸机一个-makefile-搞定autosar-为什么变三层各自谁生成的">3.1 三阶Q1：裸机一个 Makefile 搞定，AUTOSAR 为什么变三层？各自谁生成的？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#31-三阶q1裸机一个-makefile-搞定autosar-为什么变三层各自谁生成的" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（根据 Flomo 原始答案卡整理）</strong></p>
+<p>▎ 五大学习法：西蒙学习法——把「AUTOSAR 分层与构建分层」的关系钻透</p>
+<p><strong>为什么 AUTOSAR 要三层</strong></p>
+<ul>
+<li>裸机工程：代码自研、自己管，一个 Makefile 全量编</li>
+<li>AUTOSAR：代码分来源——芯片厂（MCAL）、工具链（BSW 配置生成）、应用层（SWC 手写），三拨人、三个更新节奏、三种编译要求</li>
+<li>分层构建 = 分层编译：MCAL 跟芯片绑定（编译器选项特殊）、BSW 由工具生成（配置改一次全量重生成）、RTE+SWC 是应用（最常改、要增量快）</li>
+</ul>
+<p><strong>各自是谁生成的</strong></p>
+<ul>
+<li>MCAL：芯片厂提供（英飞凌、NXP），通常给库或源码+配置工具，编译器选项按芯片手册定</li>
+<li>BSW：工具链生成（EB tresos、Davinci），根据配置（Arxml）生成源码，构建脚本也常由工具导出</li>
+<li>RTE：工具链生成，连接 BSW 和 SWC 的胶水层</li>
+<li>SWC：应用工程师手写，自己管</li>
+<li>生成代码 + 手写代码 = 两类资产：生成的能重新生成（别手改），手写的要版本管理</li>
+</ul>
+<p><strong>一句话总结</strong>：三层不是架构洁癖，是三拨来源、三种节奏的自然分层——芯片厂管 MCAL、工具管 BSW/RTE、你管 SWC，构建也跟着分。</p>
+<p>📎 题目（三阶）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4Nzcy" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4Nzcy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 二阶Q10（增量编译本质）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyMjQyODM0" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMjQyODM0<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyMjQ0NDM0" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMjQ0NDM0<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="32-三阶q2工具生成的-makefile-和手写的怎么共存直接改生成文件会怎样">3.2 三阶Q2：工具生成的 Makefile 和手写的怎么共存？直接改生成文件会怎样？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#32-三阶q2工具生成的-makefile-和手写的怎么共存直接改生成文件会怎样" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（根据 Flomo 原始答案卡整理）</strong></p>
+<p>▎ 五大学习法：费曼学习法——把「生成资产 vs 手写资产」的边界讲清</p>
+<p><strong>怎么共存</strong></p>
+<ul>
+<li>铁律：生成的 Makefile 不改，手写的 Makefile 包在外面</li>
+<li>常见结构：工具生成一个 build.mk（或 Makefile.core），你的顶层 Makefile include 它，再叠加自己的规则</li>
+<li>工具一般留扩展点：变量覆盖（CFLAGS += …）、附加源文件列表——利用扩展点，别动生成本体</li>
+<li>另一种：生成代码归生成目录，手写规则把生成目录加进 VPATH / SRC</li>
+</ul>
+<p><strong>直接改生成文件会怎样</strong></p>
+<ul>
+<li>下次工具重新生成（改配置、点 Generate），你的修改被覆盖，无声无息</li>
+<li>更糟：改坏了生成逻辑，工具生成的版本和你本地版本对不上，团队里别人编出不同结果</li>
+<li>想改「生成结果」而不是「生成逻辑」时，正确动作是改配置（Arxml）、改模板，再重新生成</li>
+<li>排查口诀：先分清这个文件是手写还是生成——生成文件出问题，八成要回配置源头改</li>
+</ul>
+<p><strong>一句话总结</strong>：生成的 Makefile 当只读，手写层 include 它再叠加；直接改生成文件 = 下次 Generate 全丢，还可能坑全组。</p>
+<p>📎 题目（三阶）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4Nzcy" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4Nzcy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 三阶Q1（三层构建）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyMjQ0NDM0" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMjQ0NDM0<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyMjQ0NDQy" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMjQ0NDQy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="33-三阶q3三层头文件搜索顺序顺序错了会编出另一个版本的-bsw-吗">3.3 三阶Q3：三层头文件搜索顺序：顺序错了会编出「另一个版本」的 BSW 吗？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#33-三阶q3三层头文件搜索顺序顺序错了会编出另一个版本的-bsw-吗" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（根据 Flomo 原始答案卡整理）</strong></p>
+<p>▎ 五大学习法：西蒙学习法——把「include 搜索顺序」这个隐蔽坑钻透</p>
+<p><strong>三层头文件路径指什么</strong></p>
+<ul>
+<li>MCAL / BSW / RTE 三层各自有头文件目录，还有生成代码和手写代码的目录</li>
+<li>搜索顺序由 -I 参数的先后决定：gcc 按命令行 -I 从左到右搜，第一个命中的头文件生效</li>
+<li>例：-I mcal -I bsw -I rte，某头文件 mcal 和 bsw 都有 → 用 mcal 的</li>
+</ul>
+<p><strong>顺序错了会编出「另一个版本」的 BSW 吗</strong></p>
+<ul>
+<li>会。同名头文件在不同层存在（生成版 vs 手写版、旧版 vs 新版），-I 顺序决定编译器拿哪个</li>
+<li>典型事故：手写目录放生成目录前面，生成目录的更新被手写旧版遮蔽——改配置重新生成后，编的还是旧头文件</li>
+<li>表现：编译过了，但行为是旧的；或类型定义不一致导致链接错、静默行为错</li>
+<li>判定原则：谁覆盖谁决定谁在前——一般「配置生成版」应该赢，生成目录放前面</li>
+</ul>
+<p><strong>怎么确认实际用了哪个</strong></p>
+<ul>
+<li>gcc -H 打印每个 include 实际展开的文件路径</li>
+<li>make -p 看 CFLAGS 里 -I 的顺序</li>
+<li>同名头文件，grep 两边版本号/宏定义对比</li>
+</ul>
+<p><strong>一句话总结</strong>：-I 从左到右先命中先赢；生成版和手写版同名头文件并存时，顺序错 = 静默编出旧版本 BSW。</p>
+<p>📎 题目（三阶）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4Nzcy" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4Nzcy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 三阶Q2（生成/手写共存）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyMjQ0NDQy" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyMjQ0NDQy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyNDc5MzM1" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyNDc5MzM1<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="34-三阶q4链接脚本和-makefile-什么关系ramflash-布局在哪定-t-是干嘛的">3.4 三阶Q4：链接脚本和 Makefile 什么关系？RAM/FLASH 布局在哪定？-T 是干嘛的？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#34-三阶q4链接脚本和-makefile-什么关系ramflash-布局在哪定-t-是干嘛的" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（根据 Flomo 原始答案卡整理）</strong></p>
+<p>▎ 五大学习法：费曼学习法——把「Makefile 和链接脚本的分工」讲清</p>
+<p><strong>链接脚本和 Makefile 什么关系</strong></p>
+<ul>
+<li>分工：Makefile 管「怎么编」（命令、选项、依赖），链接脚本（.ld / .lsl）管「往哪放」（内存布局）</li>
+<li>Makefile 负责把链接脚本传给链接器，脚本内容是链接器的输入</li>
+<li>-T 是干嘛的：-T script.ld 告诉链接器用哪个链接脚本（替代默认布局）</li>
+</ul>
+<p><strong>RAM/FLASH 布局在哪定</strong></p>
+<ul>
+<li>在链接脚本里定，不在 Makefile 里：FLASH 起始地址、RAM 起始地址、栈/堆位置、段（text/data/bss）归属</li>
+<li>Makefile 只负责「把 -T xxx.ld 传进去」，外加 LDFLAGS 里的 -Wl,—gc-sections 之类</li>
+<li>典型：AUTOSAR 里 MCAL 的 RAM 窗口、Bootloader 和 App 的分区地址全在脚本里</li>
+<li>改地址只动 .ld，Makefile 一般不用动；Makefile 里出现魔法地址反而是坏味道</li>
+</ul>
+<p><strong>常见坑</strong></p>
+<ul>
+<li>链接脚本里地址和芯片实际 FLASH/RAM 不匹配 → 链接报 overflow 或烧录后跑飞</li>
+<li>改了链接脚本没重编（脚本也是依赖！）→ 链接器还用旧的——记得把 .ld 加进依赖</li>
+<li>Boot + App 多段布局：用多个脚本或 MEMORY 区段划分</li>
+</ul>
+<p><strong>一句话总结</strong>：Makefile 管怎么编，链接脚本管放哪；-T 指定脚本，RAM/FLASH 布局只在 .ld 里定，脚本也要进依赖。</p>
+<p>📎 题目（三阶）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4Nzcy" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4Nzcy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 三阶Q3（头文件顺序）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyNDc5MzM1" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyNDc5MzM1<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyNDc5MzQ0" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyNDc5MzQ0<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="35-三阶q5工具每次重新生成代码时间戳总比目标新导致每次都全量重编怎么治">3.5 三阶Q5：工具每次重新生成代码、时间戳总比目标新，导致每次都全量重编——怎么治？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#35-三阶q5工具每次重新生成代码时间戳总比目标新导致每次都全量重编怎么治" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（根据 Flomo 原始答案卡整理）</strong></p>
+<p>▎ 五大学习法：西蒙学习法——把「假性过时」这个构建病钻透</p>
+<p><strong>病根</strong></p>
+<ul>
+<li>工具重新生成代码时，即使内容没变，文件时间戳也刷新成「现在」</li>
+<li>make 只比时间戳：生成文件比 .o 新 → 判定要重编 → 全量重编</li>
+<li>症状：每次 make 都是全量，增量编译名存实亡，大工程构建时间失控</li>
+</ul>
+<p><strong>怎么治</strong></p>
+<ul>
+<li>方案 A：工具侧——生成代码只写「变化的内容」；但多数工具做不到或难配置</li>
+<li>方案 B：生成后内容比较——内容没变的文件把时间戳改回旧值（touch -r 参考文件 / cmp 或 md5 对比）</li>
+<li>方案 C：make 侧——生成规则依赖配置文件（.arxml），只在配置变化时才真正重新生成，别每次构建都跑工具</li>
+<li>方案 D：把生成代码当外部输入——构建前用输出 hash 对比判断生成目录要不要刷新</li>
+</ul>
+<p><strong>嵌入式实际做法</strong></p>
+<ul>
+<li>构建脚本包一层：先跑生成工具，再内容比较，把没变化的文件 touch 回旧时间戳</li>
+<li>或：生成目标设为 .PHONY 但内部判断，或用 .d 文件控制</li>
+<li>核心思路：让「时间戳」反映「内容真的变了」，而不是「工具跑过了」</li>
+</ul>
+<p><strong>一句话总结</strong>：病根是工具刷新了没变文件的时间戳；治法是内容比较后回写旧时间戳，或让生成规则只在配置变化时触发。</p>
+<p>📎 题目（三阶）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4Nzcy" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4Nzcy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 三阶Q4（链接脚本）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyNDc5MzQ0" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyNDc5MzQ0<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyNDgwNDU3" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyNDgwNDU3<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="36-三阶q6多核工程构建每核单独-elf-还是一起编共享代码怎么处理最省事">3.6 三阶Q6：多核工程构建：每核单独 .elf 还是一起编？共享代码怎么处理最省事？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#36-三阶q6多核工程构建每核单独-elf-还是一起编共享代码怎么处理最省事" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（根据 Flomo 原始答案卡整理）</strong></p>
+<p>▎ 五大学习法：费曼学习法——把「多核构建的分与合」讲清</p>
+<p><strong>每核单独 .elf 还是一起编</strong></p>
+<ul>
+<li>主流做法：每核单独一个 .elf（各自链接脚本、各自 RAM/FLASH 分区），最后打包成一个刷写镜像</li>
+<li>为什么：每个核有独立的内存映射（TC3xx 的 CPU0/1/2 各有 RAM 段），单独链接才能控制布局；混在一个 .elf 里布局互相干扰</li>
+<li>构建上：每个核一套 Makefile 规则（或一套规则带 CORE 参数），产物 xxx_cpu0.elf、xxx_cpu1.elf</li>
+<li>AUTOSAR 多核工程基本是「多 elf + 统一打包」的格局</li>
+</ul>
+<p><strong>共享代码（common 模块）怎么处理最省事</strong></p>
+<ul>
+<li>方案一：共享源文件编进每个核的镜像（最省事）——每个核各编一份 common 的 .o，链接进各自 elf</li>
+<li>方案二：共享代码编成静态库 .a，每核链接时拉进自己的 elf（编译一次，链接多次）</li>
+<li>谁省事：源文件方案简单直接，缺点是每核重复编译；库方案省编译时间，但要管好库的依赖</li>
+<li>AUTOSAR 现实：MCAL 常每核实例化（每核有自己的 MCAL 配置），共享的是 BSW 的只读部分和公共头文件</li>
+</ul>
+<p><strong>关键注意</strong></p>
+<ul>
+<li>共享代码的编译选项要一致（尤其宏定义），否则不同核里行为不一致</li>
+<li>核间通信（IPC）的头文件要同步：一个核改了结构体，另一个核必须重编——依赖别漏</li>
+<li>打包：objcopy 把多个 elf 的段抽出来合并成 hex/bin，刷写脚本统一处理</li>
+</ul>
+<p><strong>一句话总结</strong>：多核 = 每核单独 elf + 各自链接脚本；共享代码要么每核编一份、要么打 .a；核间共享头文件改动记得全核重编。</p>
+<p>📎 题目（三阶）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4Nzcy" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4Nzcy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 三阶Q5（时间戳坑）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyNDgwNDU3" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyNDgwNDU3<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyNDgwNDY0" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyNDgwNDY0<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="37-三阶q7bsw-打静态库-a-还是直接-o-进链接两种方式各有什么坑">3.7 三阶Q7：BSW 打静态库 .a 还是直接 .o 进链接？两种方式各有什么坑？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#37-三阶q7bsw-打静态库-a-还是直接-o-进链接两种方式各有什么坑" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（根据 Flomo 原始答案卡整理）</strong></p>
+<p>▎ 五大学习法：西蒙学习法——把「库化 vs 直链」两种构建策略的取舍钻透</p>
+<p><strong>两种方式</strong></p>
+<ul>
+<li>直链 .o：BSW 的 .o 全部进最终链接命令（或通过变量列表展开）</li>
+<li>静态库 .a：先把 BSW 的 .o 用 ar 打包成 libBSW.a，链接时 -lBSW 拉进来</li>
+</ul>
+<p><strong>直链 .o 的坑</strong></p>
+<ul>
+<li>链接命令巨长：几百个 .o 全列出来，命令行长度可能超限</li>
+<li>依赖管理碎片化：每个 .o 都要在 SRC 列表里，漏一个编译过了、链接缺符号</li>
+<li>每核/每变体重复：多核或多配置工程，每个产物都要重新编一遍全部 BSW</li>
+<li>优点：简单直接，符号全进来，不会有「库里没拉出来」的坑</li>
+</ul>
+<p><strong>静态库 .a 的坑</strong></p>
+<ul>
+<li>链接器按需拉取：.a 里的 .o 只在被引用到时才进最终镜像——引用缺失会静默丢符号（链接成功，跑起来缺函数）</li>
+<li>循环依赖：库之间互相引用要 -Wl,—start-group … —end-group 包起来，否则链接顺序错报 undefined</li>
+<li>构建顺序：.a 要先于最终链接生成，Makefile 里要加好依赖</li>
+<li>改一个 BSW 模块要重新打库，增量粒度变粗</li>
+</ul>
+<p><strong>怎么选</strong></p>
+<ul>
+<li>BSW 量大、多核/多配置复用 → 打 .a 省时间，但管好链接顺序和 group</li>
+<li>BSW 量小、单核单配置 → 直链 .o 最省心</li>
+<li>混合常见：BSW 打 .a，应用层直链——分界清晰</li>
+</ul>
+<p><strong>一句话总结</strong>：直链简单但重复编译、命令长；.a 省编译时间但按需拉取会静默丢符号、循环依赖要 group——量大复用打库，量小直链。</p>
+<p>📎 题目（三阶）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4Nzcy" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4Nzcy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 三阶Q6（多核构建）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyNDgwNDY0" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyNDgwNDY0<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyNDgwNjQ4" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyNDgwNjQ4<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="38-三阶q8build-产物目录怎么组织clean-怎么写才不会误删源码和生成代码">3.8 三阶Q8：build 产物目录怎么组织？clean 怎么写才不会误删源码和生成代码？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#38-三阶q8build-产物目录怎么组织clean-怎么写才不会误删源码和生成代码" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（根据 Flomo 原始答案卡整理）</strong></p>
+<p>▎ 五大学习法：费曼学习法——把「产物目录和 clean 的边界」讲清</p>
+<p><strong>产物目录怎么组织</strong></p>
+<ul>
+<li>核心原则：源码目录只读，所有产物（.o/.d/.elf/.map/.hex）进 build 目录</li>
+<li>常见结构：build/（顶层）、build/cpu0/ build/cpu1/（多核分目录）、build/obj/ build/out/</li>
+<li>对应 .o 也落 build 下：OBJ = $(patsubst %.c,build/%.o,$(SRC))——源在 src/，产物镜像到 build/src/</li>
+<li>好处：clean 只动 build/；源码目录干净；多配置（Debug/Release）各建各的 build 目录</li>
+</ul>
+<p><strong>clean 怎么写才不会误删源码和生成代码</strong></p>
+<ul>
+<li>铁律：clean 只删 build/ 产物目录，绝不碰源码目录和生成代码目录（generate/ 或工具输出）</li>
+<li>rm -rf build 是最稳的写法——前提是产物全在 build/ 里</li>
+<li>千万别写 rm -rf *.o（在源码目录跑会误删）；也别把 generate/ 归进产物目录</li>
+<li>生成代码的清理是另一回事：要「重新生成」就删 generate/ 下的生成物（或整个目录），但要分清这是「清生成」不是「清构建」</li>
+<li>保护写法：clean 前先确认路径存在（[ -d build ] &amp;&amp; rm -rf build）；用变量拼路径，别手写绝对路径</li>
+</ul>
+<p><strong>一句话总结</strong>：产物全进 build/，clean 只删 build/——源码目录和生成代码目录永远不在 clean 范围内，用变量拼路径防手滑。</p>
+<p>📎 题目（三阶）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4Nzcy" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4Nzcy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 三阶Q7（.a vs .o）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyNDgwNjQ4" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyNDgwNjQ4<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyNDgwNjU0" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyNDgwNjU0<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="39-三阶q9-o0-o2-os-对调试的影响debug-为什么--o0---grelease-为什么--os编译器和链接器优化各管什么">3.9 三阶Q9：-O0/-O2/-Os 对调试的影响：Debug 为什么 -O0 + -g，Release 为什么 -Os？编译器和链接器优化各管什么？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#39-三阶q9-o0-o2-os-对调试的影响debug-为什么--o0---grelease-为什么--os编译器和链接器优化各管什么" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（根据 Flomo 原始答案卡整理）</strong></p>
+<p>▎ 五大学习法：费曼学习法——把「优化等级和调试体验」的关系讲透</p>
+<p><strong>各优化等级干嘛的</strong></p>
+<ul>
+<li>-O0：不优化，代码生成最直白，变量和语句一一对应源码</li>
+<li>-O1：基本优化，去掉明显冗余</li>
+<li>-O2：激进优化，循环展开、内联、重排，性能好但代码和源码对不上</li>
+<li>-O3：更激进，可能增大代码体积（为了速度）</li>
+<li>-Os：面向体积优化，在 -O2 基础上牺牲一点速度换小镜像</li>
+</ul>
+<p><strong>Debug 为什么 -O0 + -g，Release 为什么 -Os</strong></p>
+<ul>
+<li>-g：生成调试信息（符号、行号），让调试器能映射源码行——和 -O 是两回事，可以组合</li>
+<li>Debug 要 -O0：优化会重排/内联代码，断点跳不到、变量被优化掉、单步乱跳——没法调试</li>
+<li>Release 要 -Os：嵌入式 FLASH 宝贵，体积优先；行为已验证，不需要可读的调试体验</li>
+<li>常见组合：Debug = -O0 -g，Release = -Os -g（留调试信息方便现场分析）或 -Os 不带 -g（省空间）</li>
+</ul>
+<p><strong>编译器和链接器优化各管什么</strong></p>
+<ul>
+<li>编译器优化（-O）：单个 .c 内部——内联、常量折叠、寄存器分配、循环优化</li>
+<li>链接器优化（-Wl,—gc-sections、-Wl,—icf=…）：跨 .o 裁剪——删没被引用的段、合并相同函数</li>
+<li>分工：编译器优化单文件内，链接器优化全局死代码；嵌入式 Release 两个都开</li>
+<li>注意：链接器优化过头会误删（函数指针引用的代码可能被 gc 掉），要配合 keep 或 section 属性</li>
+</ul>
+<p><strong>一句话总结</strong>：-g 管调试信息、-O 管代码优化，两轴独立；Debug 用 -O0 -g 保调试体验，Release 用 -Os 保体积；编译器优化单文件内、链接器优化全局裁剪。</p>
+<p>📎 题目（三阶）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4Nzcy" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4Nzcy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 三阶Q8（build 目录）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyNDgwNjU0" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyNDgwNjU0<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyNDgxMDA5" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyNDgxMDA5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="310-三阶q10从能编过到编得对-mmd---mp-自动依赖怎么用">3.10 三阶Q10：从「能编过」到「编得对」：-MMD / -MP 自动依赖怎么用？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#310-三阶q10从能编过到编得对-mmd---mp-自动依赖怎么用" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（根据 Flomo 原始答案卡整理）</strong></p>
+<p>▎ 五大学习法：西蒙学习法——把「让头文件改动也触发重编」这个收官题钻透</p>
+<p><strong>为什么需要自动依赖</strong></p>
+<ul>
+<li>手写依赖总漏头文件：改了 .h，依赖它的 .c 不重编 → 静默旧代码（呼应二阶Q10）</li>
+<li>一个 .c include 十几个头文件，手写不可能维护</li>
+<li>解法：编译器自己报依赖，make 读进来</li>
+</ul>
+<p><strong>-MMD / -MP 怎么用</strong></p>
+<ul>
+<li>-MMD：编译时顺带生成 .d 文件（不含系统头文件），内容是「目标.o: 所有依赖.h」的规则</li>
+<li>-MF xxx.d：指定 .d 输出文件名（默认 .o 同名换 .d）</li>
+<li>-MP：给每个头文件生成一个空目标（假目标），防止「头文件被删了 make 报错」</li>
+<li>组合：$(CC) -MMD -MF $*.d -c $&lt; -o $@</li>
+</ul>
+<p><strong>Makefile 侧怎么接</strong></p>
+<ul>
+<li>把 .d 加进依赖：-include $(DEPS)（DEPS = $(OBJ:.o=.d)）</li>
+<li>-include 容忍首次构建 .d 不存在（一阶Q9）</li>
+<li>首次构建：编 .o 同时生成 .d；下次 make：include 读入 .d，头文件改动触发对应 .o 重编</li>
+<li>注意：.d 要在 clean 时一起清，否则旧依赖残留</li>
+</ul>
+<p><strong>一句话总结</strong>：-MMD 让编译器生成依赖、-MP 防头文件删除报错、-include 读入——三步让「改头文件也重编」，从能编过到编得对。</p>
+<p>📎 题目（三阶）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4Nzcy" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4Nzcy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 三阶Q9（优化等级）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyNDgxMDA5" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyNDgxMDA5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyNDgxMDE4" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyNDgxMDE4<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h2 id="构建系统的关键关系图">构建系统的关键关系图<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#构建系统的关键关系图" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="1-编译与链接职责边界">1. 编译与链接职责边界<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-编译与链接职责边界" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart LR\n  SRC[C / ASM 源文件] --> CC[编译器]\n  INC[头文件与宏定义] --> CC\n  CC --> OBJ[目标文件 .o]\n  OBJ --> LD[链接器]\n  LIB[静态库 .a] --> LD\n  LDS[链接脚本 .ld / .lsl] --> LD\n  LD --> ELF[ELF / MAP]\n  ELF --> BIN[HEX / BIN]&quot;">flowchart LR
+  SRC[C / ASM 源文件] --> CC[编译器]
+  INC[头文件与宏定义] --> CC
+  CC --> OBJ[目标文件 .o]
+  OBJ --> LD[链接器]
+  LIB[静态库 .a] --> LD
+  LDS[链接脚本 .ld / .lsl] --> LD
+  LD --> ELF[ELF / MAP]
+  ELF --> BIN[HEX / BIN]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="2-头文件依赖与增量构建">2. 头文件依赖与增量构建<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-头文件依赖与增量构建" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n  A[源文件 main.c] --> B[编译器生成 main.o]\n  H[main.c 包含的头文件] --> B\n  B --> D[main.d 依赖文件]\n  D --> M[Make 读取依赖]\n  C[头文件发生变化] --> M\n  M -->|依赖时间戳更新| R[重新编译受影响目标]\n  R --> L[重新链接固件]&quot;">flowchart TD
+  A[源文件 main.c] --> B[编译器生成 main.o]
+  H[main.c 包含的头文件] --> B
+  B --> D[main.d 依赖文件]
+  D --> M[Make 读取依赖]
+  C[头文件发生变化] --> M
+  M -->|依赖时间戳更新| R[重新编译受影响目标]
+  R --> L[重新链接固件]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="3-autosar-构建产物分层">3. AUTOSAR 构建产物分层<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-autosar-构建产物分层" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TB\n  CFG[ARXML / ECU 配置] --> GEN[DaVinci / EB tresos 等配置生成]\n  GEN --> BSW[BSW 生成代码与配置]\n  MCU[MCAL 供应商代码] --> OBJ[编译对象]\n  BSW --> OBJ\n  SWC[应用 SW-C / RTE 生成代码] --> OBJ\n  APP[手写应用与适配层] --> OBJ\n  OBJ --> LINK[链接脚本 + 链接器]\n  LINK --> ELF[ELF / MAP]\n  ELF --> IMAGE[HEX / BIN / 刷写镜像]&quot;">flowchart TB
+  CFG[ARXML / ECU 配置] --> GEN[DaVinci / EB tresos 等配置生成]
+  GEN --> BSW[BSW 生成代码与配置]
+  MCU[MCAL 供应商代码] --> OBJ[编译对象]
+  BSW --> OBJ
+  SWC[应用 SW-C / RTE 生成代码] --> OBJ
+  APP[手写应用与适配层] --> OBJ
+  OBJ --> LINK[链接脚本 + 链接器]
+  LINK --> ELF[ELF / MAP]
+  ELF --> IMAGE[HEX / BIN / 刷写镜像]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h2 id="工程核验清单">工程核验清单<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#工程核验清单" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> make -n 预演命令，确认目标与依赖关系符合预期。</li>
+<li class="task-list-item"><input type="checkbox" disabled/> make —trace 或 make -d 定位意外重编/未重编的原因。</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 使用编译器自动依赖（如 GCC 的 -MMD -MP），避免头文件依赖遗漏。</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 生成文件与手写文件分目录管理；不要直接修改配置工具生成的文件。</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Makefile 负责组织命令与依赖；链接脚本负责内存段布局；编译器/链接器选项分别管理。</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 多核目标核对各核 ELF、链接脚本、共享对象、启动顺序和最终镜像打包。</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 对 Debug/Release 的优化等级、调试信息和链接优化进行可复现验证。</li>
+</ul>
+<h2 id="flomo-原始题库与答案卡">Flomo 原始题库与答案卡<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#flomo-原始题库与答案卡" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>三阶导航（30/30 完成）：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyNDgxMTIw" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyNDgxMTIw<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>第一阶题库：<a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTA5" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTA5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>第二阶题库：<a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTg1" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTg1<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>第三阶题库：<a href="https://v.flomoapp.com/mine/?memo_id=MjUxMDI4Nzcy" class="external">https://v.flomoapp.com/mine/?memo_id=MjUxMDI4Nzcy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+<blockquote>
+<p>原始 Flomo 笔记保留不动；本文件为结构化迁移副本。逐题来源链接已附在对应题目下。</p>
+</blockquote></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-59" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#makefile-100问从-gnu-make-语法到嵌入式-autosar-构建" data-for="makefile-100问从-gnu-make-语法到嵌入式-autosar-构建">Makefile 100问：从 GNU Make 语法到嵌入式 AUTOSAR 构建</a></li><li class="depth-1"><a href="#学习路线" data-for="学习路线">学习路线</a></li><li class="depth-1"><a href="#第一阶语法与规则10题" data-for="第一阶语法与规则10题">第一阶：语法与规则（10题）</a></li><li class="depth-2"><a href="#11-一阶q1目标必须得是文件名吗phony-干嘛的" data-for="11-一阶q1目标必须得是文件名吗phony-干嘛的">1.1 一阶Q1：目标必须得是文件名吗？.PHONY 干嘛的？</a></li><li class="depth-2"><a href="#12-一阶q2-什么区别嵌入式为什么全是-" data-for="12-一阶q2-什么区别嵌入式为什么全是-">1.2 一阶Q2：=、:=、?=、+= 什么区别？嵌入式为什么全是 :=？</a></li><li class="depth-2"><a href="#13-一阶q3自动变量--各代表什么_" data-for="13-一阶q3自动变量--各代表什么_">1.3 一阶Q3：自动变量 $@、$&lt;、$^、$ 各代表什么？_\</a></li><li class="depth-2"><a href="#14-一阶q4模式规则-o-c-怎么匹配和显式规则共存时-make-用谁" data-for="14-一阶q4模式规则-o-c-怎么匹配和显式规则共存时-make-用谁">1.4 一阶Q4：模式规则 %.o: %.c 怎么匹配？和显式规则共存时 make 用谁？</a></li><li class="depth-2"><a href="#15-一阶q5make-凭什么判断这个目标要不要重新编" data-for="15-一阶q5make-凭什么判断这个目标要不要重新编">1.5 一阶Q5：make 凭什么判断「这个目标要不要重新编」？</a></li><li class="depth-2"><a href="#16-一阶q6-i-d-wall-这些选项塞进哪个变量cflags-和-ldflags-为什么要分开" data-for="16-一阶q6-i-d-wall-这些选项塞进哪个变量cflags-和-ldflags-为什么要分开">1.6 一阶Q6：-I、-D、-Wall 这些选项塞进哪个变量？CFLAGS 和 LDFLAGS 为什么要分开？</a></li><li class="depth-2"><a href="#17-一阶q7cc-和-cc-差在哪什么时候-cc-会解析错" data-for="17-一阶q7cc-和-cc-差在哪什么时候-cc-会解析错">1.7 一阶Q7：$(CC) 和 $CC 差在哪？什么时候 $CC 会解析错？</a></li><li class="depth-2"><a href="#18-一阶q8make-默认构建哪个目标第一个目标是-clean-会发生什么" data-for="18-一阶q8make-默认构建哪个目标第一个目标是-clean-会发生什么">1.8 一阶Q8：make 默认构建哪个目标？第一个目标是 clean 会发生什么？</a></li><li class="depth-2"><a href="#19-一阶q9include-xxxmk-干嘛的include-的文件不存在会怎样-include-解决什么" data-for="19-一阶q9include-xxxmk-干嘛的include-的文件不存在会怎样-include-解决什么">1.9 一阶Q9：include xxx.mk 干嘛的？include 的文件不存在会怎样？-include 解决什么？</a></li><li class="depth-2"><a href="#110-一阶q10命令前面的--是干嘛的make--s-和它是什么关系" data-for="110-一阶q10命令前面的--是干嘛的make--s-和它是什么关系">1.10 一阶Q10：命令前面的 @ 是干嘛的？make -s 和它是什么关系？</a></li><li class="depth-1"><a href="#第二阶工程组织与调试10题" data-for="第二阶工程组织与调试10题">第二阶：工程组织与调试（10题）</a></li><li class="depth-2"><a href="#21-二阶q1foreach-var-list-text-怎么用list-元素含空格怎么不踩坑" data-for="21-二阶q1foreach-var-list-text-怎么用list-元素含空格怎么不踩坑">2.1 二阶Q1：$(foreach var, list, text) 怎么用？list 元素含空格怎么不踩坑？</a></li><li class="depth-2"><a href="#22--_makefile-100问--二阶q2wildcard-srcc-和-shell-的-c-展开差在哪" data-for="22--_makefile-100问--二阶q2wildcard-srcc-和-shell-的-c-展开差在哪">2.2 * _Makefile 100问 · 二阶Q2：$(wildcard src/*.c) 和 shell 的 .c 展开差在哪？</a></li><li class="depth-2"><a href="#23-二阶q3patsubst-cosrc-干嘛的缩写-srcco-和它什么关系" data-for="23-二阶q3patsubst-cosrc-干嘛的缩写-srcco-和它什么关系">2.3 二阶Q3：$(patsubst %.c,%.o,$(SRC)) 干嘛的？缩写 $(SRC:.c=.o) 和它什么关系？</a></li><li class="depth-2"><a href="#24-二阶q4filter--和-filter-out--怎么用什么场景要挑子集" data-for="24-二阶q4filter--和-filter-out--怎么用什么场景要挑子集">2.4 二阶Q4：$(filter …) 和 $(filter-out …) 怎么用？什么场景要挑子集？</a></li><li class="depth-2"><a href="#25-二阶q5vpath--vpath-和--i-是一回事吗" data-for="25-二阶q5vpath--vpath-和--i-是一回事吗">2.5 二阶Q5：VPATH / vpath 和 -I 是一回事吗？</a></li><li class="depth-2"><a href="#26-二阶q6ifeq--ifdef-条件分支怎么写debugrelease-切-cflags-用哪个" data-for="26-二阶q6ifeq--ifdef-条件分支怎么写debugrelease-切-cflags-用哪个">2.6 二阶Q6：ifeq / ifdef 条件分支怎么写？Debug/Release 切 CFLAGS 用哪个？</a></li><li class="depth-2"><a href="#27-二阶q7调试三板斧-make--n---d--print-data-base-各看什么" data-for="27-二阶q7调试三板斧-make--n---d--print-data-base-各看什么">2.7 二阶Q7：调试三板斧 make -n / -d / —print-data-base 各看什么？</a></li><li class="depth-2"><a href="#28-二阶q8命令行-cflags-o0-和-makefile-里的-cflags-谁赢override-干嘛的" data-for="28-二阶q8命令行-cflags-o0-和-makefile-里的-cflags-谁赢override-干嘛的">2.8 二阶Q8：命令行 CFLAGS=-O0 和 Makefile 里的 CFLAGS 谁赢？override 干嘛的？</a></li><li class="depth-2"><a href="#29-二阶q9递归-makemake--c-build-和-cd-进去跑差在哪变量怎么传-j-并行有什么坑" data-for="29-二阶q9递归-makemake--c-build-和-cd-进去跑差在哪变量怎么传-j-并行有什么坑">2.9 二阶Q9：递归 make：$(MAKE) -C build 和 cd 进去跑差在哪？变量怎么传？-j 并行有什么坑？</a></li><li class="depth-2"><a href="#210-二阶q10增量编译的本质make-拿什么判断-up-to-date" data-for="210-二阶q10增量编译的本质make-拿什么判断-up-to-date">2.10 二阶Q10：增量编译的本质：make 拿什么判断 up to date？</a></li><li class="depth-1"><a href="#第三阶嵌入式与-autosar-实战10题" data-for="第三阶嵌入式与-autosar-实战10题">第三阶：嵌入式与 AUTOSAR 实战（10题）</a></li><li class="depth-2"><a href="#31-三阶q1裸机一个-makefile-搞定autosar-为什么变三层各自谁生成的" data-for="31-三阶q1裸机一个-makefile-搞定autosar-为什么变三层各自谁生成的">3.1 三阶Q1：裸机一个 Makefile 搞定，AUTOSAR 为什么变三层？各自谁生成的？</a></li><li class="depth-2"><a href="#32-三阶q2工具生成的-makefile-和手写的怎么共存直接改生成文件会怎样" data-for="32-三阶q2工具生成的-makefile-和手写的怎么共存直接改生成文件会怎样">3.2 三阶Q2：工具生成的 Makefile 和手写的怎么共存？直接改生成文件会怎样？</a></li><li class="depth-2"><a href="#33-三阶q3三层头文件搜索顺序顺序错了会编出另一个版本的-bsw-吗" data-for="33-三阶q3三层头文件搜索顺序顺序错了会编出另一个版本的-bsw-吗">3.3 三阶Q3：三层头文件搜索顺序：顺序错了会编出「另一个版本」的 BSW 吗？</a></li><li class="depth-2"><a href="#34-三阶q4链接脚本和-makefile-什么关系ramflash-布局在哪定-t-是干嘛的" data-for="34-三阶q4链接脚本和-makefile-什么关系ramflash-布局在哪定-t-是干嘛的">3.4 三阶Q4：链接脚本和 Makefile 什么关系？RAM/FLASH 布局在哪定？-T 是干嘛的？</a></li><li class="depth-2"><a href="#35-三阶q5工具每次重新生成代码时间戳总比目标新导致每次都全量重编怎么治" data-for="35-三阶q5工具每次重新生成代码时间戳总比目标新导致每次都全量重编怎么治">3.5 三阶Q5：工具每次重新生成代码、时间戳总比目标新，导致每次都全量重编——怎么治？</a></li><li class="depth-2"><a href="#36-三阶q6多核工程构建每核单独-elf-还是一起编共享代码怎么处理最省事" data-for="36-三阶q6多核工程构建每核单独-elf-还是一起编共享代码怎么处理最省事">3.6 三阶Q6：多核工程构建：每核单独 .elf 还是一起编？共享代码怎么处理最省事？</a></li><li class="depth-2"><a href="#37-三阶q7bsw-打静态库-a-还是直接-o-进链接两种方式各有什么坑" data-for="37-三阶q7bsw-打静态库-a-还是直接-o-进链接两种方式各有什么坑">3.7 三阶Q7：BSW 打静态库 .a 还是直接 .o 进链接？两种方式各有什么坑？</a></li><li class="depth-2"><a href="#38-三阶q8build-产物目录怎么组织clean-怎么写才不会误删源码和生成代码" data-for="38-三阶q8build-产物目录怎么组织clean-怎么写才不会误删源码和生成代码">3.8 三阶Q8：build 产物目录怎么组织？clean 怎么写才不会误删源码和生成代码？</a></li><li class="depth-2"><a href="#39-三阶q9-o0-o2-os-对调试的影响debug-为什么--o0---grelease-为什么--os编译器和链接器优化各管什么" data-for="39-三阶q9-o0-o2-os-对调试的影响debug-为什么--o0---grelease-为什么--os编译器和链接器优化各管什么">3.9 三阶Q9：-O0/-O2/-Os 对调试的影响：Debug 为什么 -O0 + -g，Release 为什么 -Os？编译器和链接器优化各管什么？</a></li><li class="depth-2"><a href="#310-三阶q10从能编过到编得对-mmd---mp-自动依赖怎么用" data-for="310-三阶q10从能编过到编得对-mmd---mp-自动依赖怎么用">3.10 三阶Q10：从「能编过」到「编得对」：-MMD / -MP 自动依赖怎么用？</a></li><li class="depth-1"><a href="#构建系统的关键关系图" data-for="构建系统的关键关系图">构建系统的关键关系图</a></li><li class="depth-2"><a href="#1-编译与链接职责边界" data-for="1-编译与链接职责边界">1. 编译与链接职责边界</a></li><li class="depth-2"><a href="#2-头文件依赖与增量构建" data-for="2-头文件依赖与增量构建">2. 头文件依赖与增量构建</a></li><li class="depth-2"><a href="#3-autosar-构建产物分层" data-for="3-autosar-构建产物分层">3. AUTOSAR 构建产物分层</a></li><li class="depth-1"><a href="#工程核验清单" data-for="工程核验清单">工程核验清单</a></li><li class="depth-1"><a href="#flomo-原始题库与答案卡" data-for="flomo-原始题库与答案卡">Flomo 原始题库与答案卡</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向链接</h3><ul id="list-2" class="overflow"><li><a href="../../../Resource/1000问题系列/" class="internal">1000问知识体系</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.1</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module">function f(i,e){if(!i)return;function r(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function t(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}i?.addEventListener("click",r),window.addCleanup(()=>i?.removeEventListener("click",r)),document.addEventListener("keydown",t),window.addCleanup(()=>document.removeEventListener("keydown",t))}function y(i){for(;i.firstChild;)i.removeChild(i.firstChild)}var h=class{constructor(e,r){this.container=e;this.content=r;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),r=this.onMouseMove.bind(this),t=this.onMouseUp.bind(this),o=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",r),document.addEventListener("mouseup",t),window.addEventListener("resize",o),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",r),()=>document.removeEventListener("mouseup",t),()=>window.removeEventListener("resize",o))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let r=this.createButton("+",()=>this.zoom(.1)),t=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(t),e.appendChild(o),e.appendChild(r),this.container.appendChild(e)}createButton(e,r){let t=document.createElement("button");return t.textContent=e,t.className="mermaid-control-button",t.addEventListener("click",r),window.addCleanup(()=>t.removeEventListener("click",r)),t}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}zoom(e){let r=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),t=this.content.getBoundingClientRect(),o=t.width/2,n=t.height/2,c=r-this.scale;this.currentPan.x-=o*c,this.currentPan.y-=n*c,this.scale=r,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){this.scale=1;let e=this.content.querySelector("svg");this.currentPan={x:e.getBoundingClientRect().width/2,y:e.getBoundingClientRect().height/2},this.updateTransform()}},C=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],E;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;E||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let r=E.default,t=new WeakMap;for(let n of e)t.set(n,n.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let a=t.get(s);a&&(s.innerHTML=a)}let n=C.reduce((s,a)=>(s[a]=window.getComputedStyle(document.documentElement).getPropertyValue(a),s),{}),c=document.documentElement.getAttribute("saved-theme")==="dark";r.initialize({startOnLoad:!1,securityLevel:"loose",theme:c?"dark":"base",themeVariables:{fontFamily:n["--codeFont"],primaryColor:n["--light"],primaryTextColor:n["--darkgray"],primaryBorderColor:n["--tertiary"],lineColor:n["--darkgray"],secondaryColor:n["--secondary"],tertiaryColor:n["--tertiary"],clusterBkg:n["--light"],edgeLabelBackground:n["--highlight"]}}),await r.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let n=0;n<e.length;n++){let v=function(){let g=l.querySelector("#mermaid-space"),m=l.querySelector(".mermaid-content");if(!m)return;y(m);let w=c.querySelector("svg").cloneNode(!0);m.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new h(g,m)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},c=e[n],s=c.parentElement,a=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(a),L=a.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),f(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../../postscript.js" type="module"></script></html>
