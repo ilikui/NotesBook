@@ -6,65 +6,65 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>专栏⑰·第7篇：概率论实战——贝叶斯 × 诊断故障推理 / 数据有效性判断</title>
-    <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC7%E7%AF%87-%E6%A6%82%E7%8E%87%E8%AE%BA%E5%B7%A5%E7%A8%8B%E5%AE%9E%E6%88%98</link>
-    <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC7%E7%AF%87-%E6%A6%82%E7%8E%87%E8%AE%BA%E5%B7%A5%E7%A8%8B%E5%AE%9E%E6%88%98</guid>
-    <description><![CDATA[ 专栏⑰·第7篇：概率论实战——贝叶斯 × 诊断故障推理 / 数据有效性判断 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·第7篇：概率论实战——贝叶斯 × 诊断故障推理 / 数据有效性判断 📎 第5篇：极限与导数实战 → v.flomoapp.com/mine/ 数学三问其一提到概率论在嵌入式里”用得不多”——但那是就日常开发而言。 在诊断（UDS/DTC）和传感器数据处理里，概率论恰恰是核心工具。这篇把贝叶斯公式和假设检验跟汽车电子诊断拉直。 一、DTC 判定——“这个故障是真的吗”本质是假设检验 一个传感器信号异常，报 DTC 前要”确认”——AUTOSAR DEM... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 08:38:32 GMT</pubDate>
+    <title>专栏⑰·第4篇：课本定义的数学概念 vs 工程里的实际用法——“最短路径”和“特征分解”的差距</title>
+    <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC4%E7%AF%87-%E8%AF%BE%E6%9C%AC%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%AE%9E%E9%99%85</link>
+    <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC4%E7%AF%87-%E8%AF%BE%E6%9C%AC%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%AE%9E%E9%99%85</guid>
+    <description><![CDATA[ 专栏⑰·第4篇：课本定义的数学概念 vs 工程里的实际用法——“最短路径”和”特征分解”的差距 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·第4篇：课本定义的数学概念 vs 工程里的实际用法——“最短路径”和”特征分解”的差距 📎 第3篇：堆问题法在数学上的矛盾 → v.flomoapp.com/mine/ （来自7/28晚数学专题三问。五大学习法：卢曼卡片盒→把”数学课本上的定义”和”工程里的实际用法”各写一张卡，串起来看差距在哪。） 经典案例 1：最短路径算法——Dijkstra vs CAN 网络的路由配置 课本定义： Dijkstra 给定带权图求最短路径，时... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 08:55:26 GMT</pubDate>
   </item><item>
-    <title>专栏⑰·第6篇：线性代数实战——矩阵变换 × DBC 解析 / Park 变换 / RTE</title>
-    <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC6%E7%AF%87-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%B7%A5%E7%A8%8B%E5%AE%9E%E6%88%98</link>
-    <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC6%E7%AF%87-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%B7%A5%E7%A8%8B%E5%AE%9E%E6%88%98</guid>
-    <description><![CDATA[ 专栏⑰·第6篇：线性代数实战——矩阵变换 × DBC 解析 / Park 变换 / RTE 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·第6篇：线性代数实战——矩阵变换 × DBC 解析 / Park 变换 / RTE 📎 第5篇：极限与导数实战 → v.flomoapp.com/mine/ 数学三问其一已经立了核心论点： 线代的”矩阵变换 = 坐标系统一”是跟嵌入式思维最深的连接。这篇把三个工程场景展开讲透——每个都是”一个坐标系下的表示，翻译到另一个坐标系”。 一、DBC 解析——“总线坐标 → 应用坐标”的变换 CAN 总线上传的是 bit0~bit63 的原始... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 08:37:21 GMT</pubDate>
+    <title>Zettelkasten定义与链接网络</title>
+    <link>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/Zettelkasten%E5%AE%9A%E4%B9%89%E4%B8%8E%E9%93%BE%E6%8E%A5%E7%BD%91%E7%BB%9C</link>
+    <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/Zettelkasten%E5%AE%9A%E4%B9%89%E4%B8%8E%E9%93%BE%E6%8E%A5%E7%BD%91%E7%BB%9C</guid>
+    <description><![CDATA[ Zettelkasten 定义与链接网络 原始 Flomo：v.flomoapp.com/mine/ 卡片盒笔记系统：英文/德语：Zettelkasten，这是一种将笔记相互连接形成一个网状结构的超文本笔记系统。 卡片盒笔记法：英文：Zettelkasten Method，建立卢曼笔记系统用到的一些具体方法。 笔记卡片：英文/德语：Zettel，原指一张用来记录笔记的小纸片，现指使用卢曼笔记法记录的一条单独的笔记。 想法：英文：Thought，卢曼笔记法要求每条笔记只记录一个 thought，thought 在中文中含义非常丰富，可以是一个术语、概念、理论、看法、点子，突然的灵感等等，这些在本... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 08:54:39 GMT</pubDate>
   </item><item>
-    <title>专栏⑰·第5篇：极限与导数实战——微积分 × ADC 采样离散化</title>
-    <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC5%E7%AF%87-%E6%9E%81%E9%99%90%E4%B8%8E%E5%AF%BC%E6%95%B0%E5%B7%A5%E7%A8%8B%E5%AE%9E%E6%88%98</link>
-    <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC5%E7%AF%87-%E6%9E%81%E9%99%90%E4%B8%8E%E5%AF%BC%E6%95%B0%E5%B7%A5%E7%A8%8B%E5%AE%9E%E6%88%98</guid>
-    <description><![CDATA[ 专栏⑰·第5篇：极限与导数实战——微积分 × ADC 采样离散化 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·第5篇：极限与导数实战——微积分 × ADC 采样离散化 📎 第4篇：课本定义 vs 工程实际 → v.flomoapp.com/mine/ 数学三问其一里说微积分的”以直代曲”太通用，不算嵌入式最独特的思维。但这条”通用”恰恰是它的价值——ADC 采样、PID 控制、PWM 占空比，全都是微积分思想的落地。这篇把极限/导数/积分和嵌入式实战一一对上。 一、极限——“离散化”的数学依据 课本定义： ε-δ语言。函数在x₀处极限为L，就是”无论你要多接近L（ε）... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 08:37:17 GMT</pubDate>
+    <title>卡片盒笔记法基础</title>
+    <link>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%8D%A1%E7%89%87%E7%9B%92%E7%AC%94%E8%AE%B0%E6%B3%95%E5%9F%BA%E7%A1%80</link>
+    <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%8D%A1%E7%89%87%E7%9B%92%E7%AC%94%E8%AE%B0%E6%B3%95%E5%9F%BA%E7%A1%80</guid>
+    <description><![CDATA[ 卡片盒笔记法基础 原始 Flomo：v.flomoapp.com/mine/ 卡片盒笔记法是一整套成体系的、用于做笔记并以笔记形式来实现 知识管理 与 高效写作 的方法。该方法源自于德国当代著名社会学家尼克拉斯·卢曼（关于他的维基百科），他是一位高产的写作者，一生不仅出版了 50 本书和 600 多篇文章，在身后留下的遗产里还有 150 多份未完成的手稿（其中不少手稿的篇幅达到了千页以上）。也就是说，卢曼的实际生产力是远超自己的出版作品数量的。而对于这样高产的写作能力，卢曼本人却将其归功于自己所使用的卡片盒笔记系统，这引发了人们对于该笔记系统及其使用方法的好奇心与研究热情。毕竟作为一个写作者，... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 08:54:14 GMT</pubDate>
   </item><item>
-    <title>专栏⑰·第10篇：数学 15 项自检清单——上车前逐项打勾</title>
-    <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC10%E7%AF%87-%E6%95%B0%E5%AD%A615%E9%A1%B9%E8%87%AA%E6%A3%80%E6%B8%85%E5%8D%95</link>
-    <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC10%E7%AF%87-%E6%95%B0%E5%AD%A615%E9%A1%B9%E8%87%AA%E6%A3%80%E6%B8%85%E5%8D%95</guid>
-    <description><![CDATA[ 专栏⑰·第10篇：数学 15 项自检清单——上车前逐项打勾 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·第10篇：数学 15 项自检清单——上车前逐项打勾 📎 第9篇：考研数学应试方法论 → v.flomoapp.com/mine/ 前九篇从马尔可夫链（第1篇）、矩阵变换（第2篇）、堆问题法（第3篇）、课本vs工程（第4篇）、极限导数（第5篇）、线代实战（第6篇）、概率论实战（第7篇）、马尔可夫工程应用（第8篇）、应试方法论（第9篇）铺完整个数学实战体系。收官篇把整个专栏压成上车前逐项打勾的清单。 清单分 4 组：概念理解（4项）→ 工程连接（4项）→ 方法流程（4项... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 08:37:14 GMT</pubDate>
+    <title>数字卡片盒软件功能需求</title>
+    <link>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E5%8D%A1%E7%89%87%E7%9B%92%E8%BD%AF%E4%BB%B6%E5%8A%9F%E8%83%BD%E9%9C%80%E6%B1%82</link>
+    <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E5%8D%A1%E7%89%87%E7%9B%92%E8%BD%AF%E4%BB%B6%E5%8A%9F%E8%83%BD%E9%9C%80%E6%B1%82</guid>
+    <description><![CDATA[ 数字卡片盒软件功能需求 原始 Flomo：v.flomoapp.com/mine/ 比卢曼幸运的是，我们所生活的是一个已经有了超链接的数字化时代，可以轻松使用软件工具来构建他所主张的这种超文本信息系统。但如果想使用软件来建立专属于自己的卡片盒笔记系统，我们所选择的软件应该具备以下基本功能： 支持构建超文本系统：这项功能必须要让人在阅读任何一篇笔记时都能借助于超链接直接跳转到任何与当前笔记相关联的其他笔记。 支持全文搜索功能：全文搜索功能相当于卢曼在他的卡片盒笔记系统中利用索引表提供的、进入系统的入口（全文搜索显然更强大）。 支持沙盒功能：卢曼建立他的卡片盒笔记系统时还具备了一个隐含设施，那就是... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 08:54:04 GMT</pubDate>
   </item><item>
-    <title>专栏⑰·第9篇：考研数学应试方法论——堆问题法分轮次实战</title>
-    <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC9%E7%AF%87-%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E5%BA%94%E8%AF%95%E6%96%B9%E6%B3%95%E8%AE%BA</link>
-    <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC9%E7%AF%87-%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E5%BA%94%E8%AF%95%E6%96%B9%E6%B3%95%E8%AE%BA</guid>
-    <description><![CDATA[ 专栏⑰·第9篇：考研数学应试方法论——堆问题法分轮次实战 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·第9篇：考研数学应试方法论——堆问题法分轮次实战 📎 第8篇：马尔可夫链工程应用 → v.flomoapp.com/mine/ 数学三问其二已经立了核心方法： 堆问题法在数学上要分知识形态，第一轮定义型和关系型，第二轮才列应用型。这篇把完整流程和备考节奏拉通。 一、为什么考研数学不能”直接堆问题” 堆问题法（先列 1000 问再逐个答）在嵌入式领域有效——因为你有工程场景可以”从问题反推原理”。但考研数学相反： 定义型知识（ε-δ、特征值定义）——没学过定义，问题都列... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 08:37:10 GMT</pubDate>
+    <title>SuperMemo二十条规则</title>
+    <link>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/SuperMemo%E4%BA%8C%E5%8D%81%E6%9D%A1%E8%A7%84%E5%88%99</link>
+    <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/SuperMemo%E4%BA%8C%E5%8D%81%E6%9D%A1%E8%A7%84%E5%88%99</guid>
+    <description><![CDATA[ SuperMemo 的 20 条规则 原始 Flomo：v.flomoapp.com/mine/ SuperMemo的20条规则： 不理解就不学习 永远不要试图记忆你无法理解的东西 先学后记 在记忆细节前，先建立知识的整体框架 从基础开始 先掌握最核心、最简单的概念，再构建复杂的知识 坚持最小信息原则 每张卡片只包含一个知识点，保持简单 保持卡片最简单，知识点不要太对 使用封闭式提问 尽量避免开放式问题，确保问题指向唯一、明确的答案 使用图片 善用视觉元素辅助记忆，有时一张图胜过千言万语 使用助记技巧 运用记忆宫殿、数字桩等联想方法，为抽象信息提供“记忆锚点” 图形化（基于图片的挖空） 在图片... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 08:53:54 GMT</pubDate>
   </item><item>
-    <title>专栏⑰·第8篇：马尔可夫链工程应用——× BswM 状态机 / 网络管理 / 刷写流程</title>
-    <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC8%E7%AF%87-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E9%93%BE%E5%B7%A5%E7%A8%8B%E5%BA%94%E7%94%A8</link>
-    <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC8%E7%AF%87-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E9%93%BE%E5%B7%A5%E7%A8%8B%E5%BA%94%E7%94%A8</guid>
-    <description><![CDATA[ 专栏⑰·第8篇：马尔可夫链工程应用——× BswM 状态机 / 网络管理 / 刷写流程 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·第8篇：马尔可夫链工程应用——× BswM 状态机 / 网络管理 / 刷写流程 📎 第7篇：概率论实战 → v.flomoapp.com/mine/ 第1篇（马尔可夫链深度专题）已经讲了理论。这篇把马尔可夫链拉回你的主场——AUTOSAR 里的状态机，每一个都是马尔可夫链的工程实现，只是名字不叫”转移矩阵”。 一、BswM 状态机——“条件 → 动作”规则链就是转移矩阵 BswM（BSW 模式管理器）用规则（Rule）驱动状态切换： 每条... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 08:37:06 GMT</pubDate>
+    <title>SuperMemo工作原理</title>
+    <link>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/SuperMemo%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86</link>
+    <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/SuperMemo%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86</guid>
+    <description><![CDATA[ SuperMemo 是如何工作的？ 原始 Flomo：v.flomoapp.com/mine/ 1. ]]></description>
+    <pubDate>Sat, 31 Oct 2026 08:53:29 GMT</pubDate>
   </item><item>
-    <title>AUTOSAR</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/</guid>
-    <description><![CDATA[ AUTOSAR（AUTomotive Open System ARchitecture，汽车开放系统架构）是由全球主要汽车厂商、零部件供应商与半导体公司联合制定的汽车电子软件架构标准。它的目标是让汽车软件标准化、可复用、可跨平台移植，是当今智能汽车软件开发的行业基石。 一句话定位 AUTOSAR = 汽车软件的「操作系统级标准」：定义分层架构、组件模型、通信机制与开发流程，让不同厂商的软件能像积木一样拼装。 知识体系 flowchart TD A[AUTOSAR] --&gt; B[核心理念] A --&gt; C[软件架构] A --&gt; D[方法论] A --&gt; E[标准与规范]... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 08:36:36 GMT</pubDate>
+    <title>KM</title>
+    <link>https://wiki.likui.info/Area/KM/</link>
+    <guid>https://wiki.likui.info/Area/KM/</guid>
+    <description><![CDATA[ KM（Knowledge Management，知识管理） 关注如何高效地收集、理解、组织、连接和复用个人知识。它不只是工具问题，更是一套帮助思考与行动持续改进的方法。 一句话定位 让知识「进得来、找得到、连得上、用得上」，并最终转化为判断、作品与行动。 知识管理地图 flowchart TD A[&quot;知识输入&quot;] --&gt; B[&quot;捕捉与收集&quot;] B --&gt; C[&quot;阅读与理解&quot;] C --&gt; D[&quot;提炼为自己的表达&quot;] D --&gt; E[&quot;组织与连接&quot;] E --&gt; F[... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 08:52:41 GMT</pubDate>
   </item><item>
-    <title>嵌入式通信协议</title>
-    <link>https://wiki.likui.info/Area/EE/%E9%80%9A%E4%BF%A1/</link>
-    <guid>https://wiki.likui.info/Area/EE/%E9%80%9A%E4%BF%A1/</guid>
-    <description><![CDATA[ 嵌入式通信协议 通信协议知识按基础概念、接口机制、驱动实现、故障排查和车载应用组织。 1000问逐题解答 基础协议与四大协议 —— 同步/异步、全/半双工、UART、SPI、I2C、RS-485、汽车 ECU 应用与故障定位。 flowchart TD A[嵌入式通信] --&gt; B[UART] A --&gt; C[SPI] A --&gt; D[I2C] A --&gt; E[RS-485] A --&gt; F[SENT / LIN / USB / SDIO / Ethernet] B --&gt; G[驱动与验证] C --&gt; G D --&gt; G E --&gt; G ... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 08:36:31 GMT</pubDate>
+    <title>学习的十个层次</title>
+    <link>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%8D%81%E4%B8%AA%E5%B1%82%E6%AC%A1</link>
+    <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%8D%81%E4%B8%AA%E5%B1%82%E6%AC%A1</guid>
+    <description><![CDATA[ 学习的十个层次 原始 Flomo：v.flomoapp.com/mine/ 关于学习的境界，我为你整理了一个从被动到主动、从量变到质变的十层框架。你可以对照看看，自己正处在哪个位置。 第一层：机械记忆：为应付考试而死记硬背，知识如过眼云烟考完就忘。这是最基础也最低效的起点。 第二层：功利应试：为文凭或考证而学，眼里只有标准答案。容易陷入“高分低能”的困境。 第三层：知其然：努力理解概念本身，比如知道“勾股定理”是什么。但知识之间是孤立、零散的。 第四层：知其所以然：开始追问背后的逻辑与原理。不仅知道定理，还能自己推导证明，掌握了知识的内在联系。 第五层：学以致用：能将书本知识解决现实问题，比如... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 08:51:29 GMT</pubDate>
   </item><item>
-    <title>自动驾驶</title>
-    <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6</link>
-    <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6</guid>
-    <description><![CDATA[ mindmap root((自动驾驶)) 自动驾驶分级 L1 驾驶辅助::icon(fa fa-car) :::结合单项辅助（如ACC自适应巡航、LKA车道保持） L2 部分自动化 :::人类全程监管（如Tesla FSD、主流城市NOA） L3 条件自动化 :::特定场景系统驾驶（系统请求时人类接管） L4 高度自动化 :::限定区域完全无须人类接管（如Robotaxi无人出租车） L5 完全自动化 :::全场景、全天候无条件完全自动驾驶（终极形态） 核心技术架构 环境感知层 传感器硬件::icon(fa fa-microchip) :::激光雷达 LiDAR :::高精摄像头 Camera... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 08:36:21 GMT</pubDate>
+    <title>海马记忆法：利用人脑规则学习</title>
+    <link>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E6%B5%B7%E9%A9%AC%E8%AE%B0%E5%BF%86%E6%B3%95</link>
+    <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E6%B5%B7%E9%A9%AC%E8%AE%B0%E5%BF%86%E6%B3%95</guid>
+    <description><![CDATA[ 海马记忆法：利用人脑规则学习 原始 Flomo：v.flomoapp.com/mine/ 海马记忆法：利用人脑规则学习 来源：池谷裕二（东京大学脑科学家） 核心逻辑：海马体是记忆的”关卡检查员”，只让”重要”的信息进入长期记忆。可以通过几个原则”欺骗”它。 重复让海马体认为信息重要——反复出现的信息更容易被判定为”该存” 科学复习节奏：第2天 → 1周后 → 2周后 → 1个月后（与 SuperMemo 间隔重复原理一致） 输出优于输入：合上书复述比反复阅读更有效——Bjork 的”存储与提取负相关”可以解释这个 好奇心与情绪加速记忆：杏仁核靠近海马体，情绪激动时信号会告诉海马体”快存” 睡眠... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 08:50:58 GMT</pubDate>
   </item><item>
-    <title>MCAL配置参数记录</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/MCAL%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0%E8%AE%B0%E5%BD%95</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/MCAL%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0%E8%AE%B0%E5%BD%95</guid>
-    <description><![CDATA[ MCAL 配置参数记录 原始 Flomo：v.flomoapp.com/mine/ 该条 Flomo 笔记目前仅作为 MCAL 配置参数的主题占位，没有具体参数或配置说明。后续可按 MCU/MCAL 模块拆分记录：Port、Dio、Mcu、Gpt、Pwm、Adc、Icu、Spi、Can、Fls、Fee、Wdg 等。新增具体配置时应同时记录参数含义、取值范围、依赖关系、生成代码影响和验证方法。 原始内容：在这里是关于MCAL代码配置一些参数。 . ]]></description>
-    <pubDate>Sat, 31 Oct 2026 08:34:55 GMT</pubDate>
+    <title>7 种卡片笔记模板</title>
+    <link>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E4%B8%83%E7%A7%8D%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E6%A8%A1%E6%9D%BF</link>
+    <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E4%B8%83%E7%A7%8D%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E6%A8%A1%E6%9D%BF</guid>
+    <description><![CDATA[ 7 种卡片笔记模板 原始 Flomo：v.flomoapp.com/mine/ 7 种卡片笔记模板 ① 闪念笔记 — 快速捕捉，当天整理 卡片 💡 [一句话说明这个想法] 背景：在哪里/因为什么冒出来的 关联：[可选的已有笔记链接] 图片位置：截屏/随手拍/手绘示意图 ② 文献笔记 — 读一本书/文章的摘录 读书笔记 原文 | [书名/文章标题] 核心观点：一句话概括作者在说什么 我的转译：这件事用我自己的话说出来 为什么重要：它解释了我之前遇到的什么问题 图片位置：关键图表/原文截图/思维导图 ③ 永久笔记 — 标准的 Zettelkasten 卡片 [一句话论点] 论证/展开： 为什么这... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 08:50:55 GMT</pubDate>
   </item>
     </channel>
   </rss>

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="zh"><head><title>专栏⑰·导航分卷：线性代数 1000 问（全量问题库）</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="数字花园"/><meta property="og:title" content="专栏⑰·导航分卷：线性代数 1000 问（全量问题库）"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="专栏⑰·导航分卷：线性代数 1000 问（全量问题库）"/><meta name="twitter:description" content="专栏⑰·导航分卷：线性代数 1000 问（全量问题库） 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·导航分卷：线性代数 1000 问（全量问题库） 📎 专栏⑰导航 → v.flomoapp.com/mine/ 记录线性代数学习的1000个问题： ▎ 基础概念 向量和标量最本质的区别是什么？一个数和一个数组，为什么线性代数要把它们区分开？ 矩阵为什么是一个”二维”的东西？它和一维数组（向量）在几何意义上有什么不同？ 零向量和零矩阵看起来都是0，为什么在线性代数里要单独定义它们？ ▎ 矩阵运算 矩阵乘法为什么不是逐元素相乘？它背后的设计意图是什么？ 矩阵乘法不满足交换律（..."/><meta property="og:description" content="专栏⑰·导航分卷：线性代数 1000 问（全量问题库） 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·导航分卷：线性代数 1000 问（全量问题库） 📎 专栏⑰导航 → v.flomoapp.com/mine/ 记录线性代数学习的1000个问题： ▎ 基础概念 向量和标量最本质的区别是什么？一个数和一个数组，为什么线性代数要把它们区分开？ 矩阵为什么是一个”二维”的东西？它和一维数组（向量）在几何意义上有什么不同？ 零向量和零矩阵看起来都是0，为什么在线性代数里要单独定义它们？ ▎ 矩阵运算 矩阵乘法为什么不是逐元素相乘？它背后的设计意图是什么？ 矩阵乘法不满足交换律（..."/><meta property="og:image:alt" content="专栏⑰·导航分卷：线性代数 1000 问（全量问题库） 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·导航分卷：线性代数 1000 问（全量问题库） 📎 专栏⑰导航 → v.flomoapp.com/mine/ 记录线性代数学习的1000个问题： ▎ 基础概念 向量和标量最本质的区别是什么？一个数和一个数组，为什么线性代数要把它们区分开？ 矩阵为什么是一个”二维”的东西？它和一维数组（向量）在几何意义上有什么不同？ 零向量和零矩阵看起来都是0，为什么在线性代数里要单独定义它们？ ▎ 矩阵运算 矩阵乘法为什么不是逐元素相乘？它背后的设计意图是什么？ 矩阵乘法不满足交换律（..."/><meta property="og:image" content="https://wiki.likui.info/static/og-image.png"/><meta property="og:image:url" content="https://wiki.likui.info/static/og-image.png"/><meta name="twitter:image" content="https://wiki.likui.info/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="wiki.likui.info"/><meta property="og:url" content="https://wiki.likui.info/Area/EE/数学/专栏⑰原始笔记/导航分卷-线性代数1000问"/><meta property="twitter:url" content="https://wiki.likui.info/Area/EE/数学/专栏⑰原始笔记/导航分卷-线性代数1000问"/><link rel="icon" href="../../../../static/icon.png"/><meta name="description" content="专栏⑰·导航分卷：线性代数 1000 问（全量问题库） 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·导航分卷：线性代数 1000 问（全量问题库） 📎 专栏⑰导航 → v.flomoapp.com/mine/ 记录线性代数学习的1000个问题： ▎ 基础概念 向量和标量最本质的区别是什么？一个数和一个数组，为什么线性代数要把它们区分开？ 矩阵为什么是一个”二维”的东西？它和一维数组（向量）在几何意义上有什么不同？ 零向量和零矩阵看起来都是0，为什么在线性代数里要单独定义它们？ ▎ 矩阵运算 矩阵乘法为什么不是逐元素相乘？它背后的设计意图是什么？ 矩阵乘法不满足交换律（..."/><meta name="generator" content="Quartz"/><link href="../../../../index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  padding: 2rem;
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcnVubmVyL3dvcmsvTm90ZXNCb29rL05vdGVzQm9vay9xdWFydHovY29tcG9uZW50cy9zdHlsZXMiLCJzb3VyY2VzIjpbIm1lcm1haWQuaW5saW5lLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUdGO0VBQ0U7OztBQUtGO0VBQ0U7RUFDQTs7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcGFkZGluZzogMnJlbTtcbiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgIHRyYW5zZm9ybS1vcmlnaW46IDAgMDtcbiAgICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjFzIGVhc2U7XG4gICAgICBvdmVyZmxvdzogdmlzaWJsZTtcbiAgICAgIG1pbi1oZWlnaHQ6IDIwMHB4O1xuICAgICAgbWluLXdpZHRoOiAyMDBweDtcblxuICAgICAgcHJlIHtcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICB9XG5cbiAgICAgIHN2ZyB7XG4gICAgICAgIG1heC13aWR0aDogbm9uZTtcbiAgICAgICAgaGVpZ2h0OiBhdXRvO1xuICAgICAgfVxuICAgIH1cblxuICAgICYgPiAubWVybWFpZC1jb250cm9scyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBib3R0b206IDIwcHg7XG4gICAgICByaWdodDogMjBweDtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBnYXA6IDhweDtcbiAgICAgIHBhZGRpbmc6IDhweDtcbiAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICBib3JkZXItcmFkaXVzOiA2cHg7XG4gICAgICBib3gtc2hhZG93OiAwIDJweCA0cHggcmdiYSgwLCAwLCAwLCAwLjEpO1xuICAgICAgei1pbmRleDogMjtcblxuICAgICAgLm1lcm1haWQtY29udHJvbC1idXR0b24ge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgd2lkdGg6IDMycHg7XG4gICAgICAgIGhlaWdodDogMzJweDtcbiAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgICBjb2xvcjogdmFyKC0tZGFyayk7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtZmFtaWx5OiB2YXIoLS1ib2R5Rm9udCk7XG4gICAgICAgIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XG5cbiAgICAgICAgJjpob3ZlciB7XG4gICAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgfVxuXG4gICAgICAgICY6YWN0aXZlIHtcbiAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMXB4KTtcbiAgICAgICAgfVxuXG4gICAgICAgIC8vIFN0eWxlIHRoZSByZXNldCBidXR0b24gZGlmZmVyZW50bHlcbiAgICAgICAgJjpudGgtY2hpbGQoMikge1xuICAgICAgICAgIHdpZHRoOiBhdXRvO1xuICAgICAgICAgIHBhZGRpbmc6IDAgMTJweDtcbiAgICAgICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cbiJdfQ== */</style><link href="/static/katex/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../../../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../../../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://wiki.likui.info/index.xml"/></head><body data-slug="Area/EE/数学/专栏⑰原始笔记/导航分卷-线性代数1000问"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../../..">数字花园</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><p>搜索</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索些什么" placeholder="搜索些什么"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-226"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>PARA</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-226" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text explorer-entry-icon" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg><span class="file-title"></span></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder-closed explorer-entry-icon" aria-hidden="true"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path><path d="M2 10h20"></path></svg><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../Area/">Area</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../Area/EE/">EE</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../Area/EE/数学/">数学</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../Area/EE/数学/专栏⑰原始笔记/">专栏⑰原始笔记</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>专栏⑰·导航分卷：线性代数 1000 问（全量问题库）</a></div></nav><h1 class="article-title">专栏⑰·导航分卷：线性代数 1000 问（全量问题库）</h1><p show-comma="true" class="content-meta"><time datetime="2026-10-31T08:41:47.000Z">2026年10月31日</time><span>18分钟阅读</span></p><ul class="tags"><li><a href="../../../../tags/数学" class="internal tag-link">数学</a></li><li><a href="../../../../tags/问题库导航" class="internal tag-link">问题库导航</a></li><li><a href="../../../../tags/Area/学习/数学" class="internal tag-link">Area/学习/数学</a></li></ul></div></div><article class="popover-hint"><h1 id="专栏导航分卷线性代数-1000-问全量问题库">专栏⑰·导航分卷：线性代数 1000 问（全量问题库）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#专栏导航分卷线性代数-1000-问全量问题库" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>原始 Flomo：<a href="https://v.flomoapp.com/mine/?memo_id=MjQ1NzMyNDU5" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ1NzMyNDU5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><strong>专栏⑰·导航分卷：线性代数 1000 问（全量问题库）</strong></p>
+<p>📎 专栏⑰导航 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc0OTc2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc0OTc2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>记录线性代数学习的1000个问题：</p>
+<p>▎ <strong>基础概念</strong></p>
+<ol>
+<li>
+<p>向量和标量最本质的区别是什么？一个数和一个数组，为什么线性代数要把它们区分开？</p>
+</li>
+<li>
+<p>矩阵为什么是一个”二维”的东西？它和一维数组（向量）在几何意义上有什么不同？</p>
+</li>
+<li>
+<p>零向量和零矩阵看起来都是0，为什么在线性代数里要单独定义它们？</p>
+</li>
+</ol>
+<p>▎ <strong>矩阵运算</strong></p>
+<ol>
+<li>
+<p>矩阵乘法为什么不是逐元素相乘？它背后的设计意图是什么？</p>
+</li>
+<li>
+<p>矩阵乘法不满足交换律（AB≠BA），能不能举一个生活中类似”顺序不同结果不同”的例子？</p>
+</li>
+<li>
+<p>矩阵的逆为什么不是1/A？什么条件下一个矩阵才”可逆”？</p>
+</li>
+<li>
+<p>转置操作在几何上意味着什么？为什么要有转置？</p>
+</li>
+</ol>
+<p>▎ <strong>线性方程组</strong></p>
+<ol>
+<li>
+<p>高斯消元法本质上在做什么操作？它跟矩阵乘法有什么关系？</p>
+</li>
+<li>
+<p>一个线性方程组无解、唯一解、无穷多解——分别对应矩阵的什么性质？</p>
+</li>
+<li>
+<p>LU分解为什么要做？它比直接高斯消元好在哪？</p>
+</li>
+</ol>
+<p>▎ <strong>向量空间</strong></p>
+<ol>
+<li>
+<p>什么是”向量空间”？数轴算不算一个向量空间？</p>
+</li>
+<li>
+<p>“基”是什么意思？为什么一个空间可以有无数种基？</p>
+</li>
+<li>
+<p>线性相关和线性无关——为什么这个概念是整个线性代数的基石？</p>
+</li>
+<li>
+<p>维数为什么是个确定数？同一个空间的不同基，为什么基向量个数总是一样的？</p>
+</li>
+</ol>
+<p>▎ <strong>线性变换</strong></p>
+<ol>
+<li>
+<p>线性变换的本质是什么？为什么它一定要满足T(u+v)=T(u)+T(v)和T(cv)=cT(v)？</p>
+</li>
+<li>
+<p>一个矩阵是怎么”代表”一个线性变换的？把矩阵乘以一个向量，到底在做一件什么事？</p>
+</li>
+<li>
+<p>核（kernel）和像（image）怎么理解？“核”这个命名想表达什么？</p>
+</li>
+</ol>
+<p>▎ <strong>正交性与投影</strong></p>
+<ol>
+<li>
+<p>向量正交和向量垂直是一回事吗？在线性代数里”正交”的定义比”垂直”更广在哪？</p>
+</li>
+<li>
+<p>为什么正交投影是”最佳逼近”？它在最小二乘法里到底扮演了什么角色？</p>
+</li>
+<li>
+<p>Gram-Schmidt正交化过程在做什么？它为什么不会改变向量张成的空间？</p>
+</li>
+<li>
+<p>一个向量到子空间上的投影，为什么可以用矩阵形式写成P=A(AᵀA)⁻¹Aᵀ？这个公式的直觉是什么？</p>
+</li>
+</ol>
+<p>▎ <strong>最小二乘</strong></p>
+<ol>
+<li>
+<p>最小二乘法为什么选”平方和”最小而不是”绝对值和”最小？这背后有什么考量？</p>
+</li>
+<li>
+<p>Ax=b无解时，为什么改成解AᵀAx=Aᵀb就”有解”了？这个操作在几何上是什么含义？</p>
+</li>
+<li>
+<p>正规方程（Normal Equation）在什么情况下会失效？该怎么处理？</p>
+</li>
+</ol>
+<p>▎ <strong>特征值与特征向量</strong></p>
+<ol>
+<li>
+<p>特征向量和特征值到底在描述一个矩阵的什么性质？为什么叫”特征”？</p>
+</li>
+<li>
+<p>为什么定义式是Av=λv而不是vA=λv？顺序为什么重要？</p>
+</li>
+<li>
+<p>一个矩阵乘以特征向量，效果就是拉伸/压缩——那非特征向量被乘之后发生了什么？</p>
+</li>
+<li>
+<p>为什么一个n×n矩阵最多只有n个特征值？特征值的个数和矩阵的秩有什么关系？</p>
+</li>
+<li>
+<p>特征值全为零的矩阵是不是零矩阵？为什么？</p>
+</li>
+</ol>
+<p>▎ <strong>对角化</strong></p>
+<ol>
+<li>
+<p>对角化到底在做什么？为什么把矩阵写成一堆特征向量和特征值的组合会有用？</p>
+</li>
+<li>
+<p>A=PDP⁻¹这个式子里，P、D、P⁻¹各自在干什么？（提示：可以理解成”换基→缩放→换回来”）</p>
+</li>
+<li>
+<p>为什么不是所有矩阵都能对角化？不能对角化的矩阵差在哪？</p>
+</li>
+</ol>
+<p>▎ <strong>二次型</strong></p>
+<ol>
+<li>
+<p>二次型是什么？一个二次方程到二次型的矩阵表示，这一步转化为什么重要？</p>
+</li>
+<li>
+<p>正定矩阵”正定”在哪？为什么它在优化和机器学习里这么常见？</p>
+</li>
+<li>
+<p>如何判断一个矩阵是不是正定？判定条件从弱到强有哪些？</p>
+</li>
+</ol>
+<p>▎ <strong>奇异值分解（SVD）</strong></p>
+<ol>
+<li>
+<p>SVD把矩阵分解成UΣVᵀ——U、Σ、V各自代表什么几何操作？</p>
+</li>
+<li>
+<p>特征值分解和SVD是什么关系？为什么SVD适用于任何矩阵（包括非方阵）而特征值分解不行？</p>
+</li>
+<li>
+<p>奇异值的大小顺序意味着什么？如果只保留最大的几个奇异值，丢掉了什么信息？</p>
+</li>
+<li>
+<p>为什么说SVD是”矩阵的终极分解”？它统一了哪些之前学过的概念？</p>
+</li>
+</ol>
+<p>▎ <strong>行列式</strong></p>
+<ol>
+<li>
+<p>行列式为什么用”递归”方式定义（按行展开）？它想捕捉一个矩阵的什么本质信息？</p>
+</li>
+<li>
+<p>行列式为0意味着什么？它和”矩阵可逆&quot;&quot;向量线性相关&quot;&quot;方程组有非平凡解”之间是什么关系？</p>
+</li>
+<li>
+<p>为什么说行列式是”体积”？一个2×2行列式的绝对值为什么是平行四边形的面积？</p>
+</li>
+<li>
+<p>det(AB)=det(A)det(B)这个性质，从几何上怎么理解？</p>
+</li>
+<li>
+<p>为什么加了某行的倍数到另一行，行列式不变？这种操作对应什么几何变换？</p>
+</li>
+</ol>
+<p>▎ <strong>Jordan标准型</strong></p>
+<ol>
+<li>
+<p>为什么会有”不能对角化”的矩阵？不能对角化时，Jordan标准型解决了什么问题？</p>
+</li>
+<li>
+<p>Jordan块（Jordan block）上的1是干什么用的？它跟特征向量不够用有什么关系？</p>
+</li>
+<li>
+<p>广义特征向量（generalized eigenvector）和普通特征向量有什么区别？要它来做什么？</p>
+</li>
+<li>
+<p>几何重数和代数重数——这两个”重数”分别指什么？它们不相等时发生了什么？</p>
+</li>
+</ol>
+<p>▎ <strong>数值线性代数</strong></p>
+<ol>
+<li>
+<p>什么是条件数（condition number）？它告诉你在解Ax=b时，b稍微变一点会让x变多少？</p>
+</li>
+<li>
+<p>病态矩阵（ill-conditioned matrix）在实际计算中会出什么问题？怎么判断一个矩阵是不是病态？</p>
+</li>
+<li>
+<p>为什么实际中几乎从来不用Cramer法则算行列式解方程组？它和LU分解差在哪？</p>
+</li>
+</ol>
+<p>▎ <strong>实际应用</strong></p>
+<ol>
+<li>
+<p>PCA（主成分分析）的核心步骤用到了SVD的哪一部分？为什么最大的奇异值对应最重要的”成分”？</p>
+</li>
+<li>
+<p>线性回归的闭式解θ=(XᵀX)⁻¹Xᵀy中的(XᵀX)⁻¹在什么条件下会出问题？怎么解决？</p>
+</li>
+<li>
+<p>PageRank算法的核心是一个巨大的矩阵——它用的是什么线性代数性质让”重要性”可以迭代收敛？</p>
+</li>
+<li>
+<p>推荐系统里的矩阵分解（Matrix Factorization）和SVD是什么关系？它丢掉了什么保留了什么？</p>
+</li>
+</ol>
+<p>▎ <strong>矩阵微积分（Matrix Calculus）</strong></p>
+<ol>
+<li>
+<p>对标量函数f(x)求导得到梯度——梯度向量的方向为什么是函数增长最快的方向？</p>
+</li>
+<li>
+<p>一个矩阵对另一个矩阵求导是什么？Jacobian矩阵的每一行、每一列各代表什么？</p>
+</li>
+<li>
+<p>线性回归里最小化MSE时，对θ求导然后令导数为零——能用矩阵形式写一遍完整的推导过程吗？</p>
+</li>
+<li>
+<p>Hessian矩阵为什么是”二阶导数”的矩阵版本？它在判断极值点时起了什么作用？</p>
+</li>
+</ol>
+<p>▎ <strong>线性递推与矩阵幂</strong></p>
+<ol>
+<li>
+<p>斐波那契数列为什么可以用矩阵的幂来计算？把递推关系写成矩阵形式，带来了什么好处？</p>
+</li>
+<li>
+<p>马尔可夫链的状态转移矩阵为什么每行（或列）之和为1？经过n步转移后的概率怎么算？</p>
+</li>
+<li>
+<p>为什么说马尔可夫链的”稳态分布”就是转移矩阵的特征向量？它对应哪个特征值？</p>
+</li>
+<li>
+<p>矩阵的幂Aⁿ在n很大时会趋于什么？这个行为和谱半径（最大特征值的绝对值）有什么关系？</p>
+</li>
+</ol>
+<p>▎ <strong>图与网络中的矩阵</strong></p>
+<ol>
+<li>
+<p>邻接矩阵A的A²[i][j]代表什么？Aⁿ的第ij项又代表什么？</p>
+</li>
+<li>
+<p>图的拉普拉斯矩阵（Laplacian Matrix）L=D-A的零特征值个数为什么等于图的连通分量个数？</p>
+</li>
+<li>
+<p>谱聚类（Spectral Clustering）用拉普拉斯矩阵的第二小特征值对应的特征向量来做聚类——这个做法的直觉是什么？</p>
+</li>
+<li>
+<p>图的邻接矩阵的谱半径（最大特征值）和图的什么结构性质有关？</p>
+</li>
+</ol>
+<p>▎ <strong>QR 分解</strong></p>
+<ol>
+<li>
+<p>QR分解把矩阵A拆成Q（正交矩阵）和R（上三角矩阵）——这个分解在数值上为什么比LU更稳定？</p>
+</li>
+<li>
+<p>Gram-Schmidt正交化和QR分解是什么关系？经典的Gram-Schmidt和修正的Gram-Schmidt在数值稳定性上差在哪？</p>
+</li>
+<li>
+<p>用QR分解解最小二乘问题（Ax≈b）怎么做的？为什么这比直接解正规方程更稳定？</p>
+</li>
+</ol>
+<p>▎ <strong>Cholesky 分解</strong></p>
+<ol>
+<li>
+<p>Cholesky分解说A=LLᵀ——什么样条件的矩阵能做Cholesky？为什么这比LU分解快一倍？</p>
+</li>
+<li>
+<p>正定矩阵的Cholesky分解在实际计算中是怎么保证稳定性的？如果矩阵接近半正定（接近奇异），分解会出什么问题？</p>
+</li>
+</ol>
+<p>▎ <strong>伪逆</strong></p>
+<ol>
+<li>
+<p>当A不可逆（非方阵或秩亏）时，伪逆A⁺是怎么定义的？它和正规方程的解是什么关系？</p>
+</li>
+<li>
+<p>伪逆有几种定义方式（SVD定义、极限定义、代数定义）——它们各自揭示了伪逆的什么性质？</p>
+</li>
+</ol>
+<p>▎ <strong>矩阵范数与条件数深入</strong></p>
+<ol>
+<li>
+<p>矩阵的”大小”怎么衡量？为什么有那么多不同的范数（1-范数、2-范数、Frobenius范数、∞-范数）？</p>
+</li>
+<li>
+<p>谱范数（2-范数）和最大奇异值是什么关系？为什么谱范数对矩阵扰动最敏感？</p>
+</li>
+</ol>
+<p>▎ <strong>复数与酉空间</strong></p>
+<ol>
+<li>
+<p>为什么把实向量空间扩展到复向量空间不是”加一个维度”那么简单？共轭转置（Hermitian转置）在复矩阵里替代了转置的什么角色？</p>
+</li>
+<li>
+<p>酉矩阵（Unitary matrix，U*U=I）是实正交矩阵在复数域的推广——它保持了什么几何性质？</p>
+</li>
+<li>
+<p>Hermitian矩阵（A=A*）的特征值为什么一定是实数？这个性质在量子力学和信号处理里为什么那么重要？</p>
+</li>
+</ol>
+<p>▎ <strong>线性规划</strong></p>
+<ol>
+<li>
+<p>线性规划里的约束条件为什么形成一个”凸多面体”？最优解为什么一定在顶点上？</p>
+</li>
+<li>
+<p>单纯形法的几何直觉是什么？它在这些顶点之间”走”的时候，怎么知道该往哪个方向走？</p>
+</li>
+</ol>
+<p>▎ <strong>张量基础</strong></p>
+<ol>
+<li>
+<p>张量（tensor）和矩阵、向量、标量之间的关系是什么？为什么说标量是0阶张量、向量是1阶、矩阵是2阶？</p>
+</li>
+<li>
+<p>张量的”外积”和”内积”分别在做什么？两个矩阵做外积，得到的是什么？</p>
+</li>
+<li>
+<p>张量分解（如CP分解、Tucker分解）和矩阵的SVD是什么关系？为什么张量分解在推荐系统和信号处理里越来越重要？</p>
+</li>
+</ol>
+<p>▎ <strong>Krylov 子空间与迭代方法</strong></p>
+<ol>
+<li>
+<p>当A是n×n且n有100万维时，你不可能做LU分解——那迭代法是怎么求解Ax=b的？</p>
+</li>
+<li>
+<p>共轭梯度法（Conjugate Gradient）的直觉是什么？为什么它保证最多n步收敛，但实际只用远少于n步就能得到近似解？</p>
+</li>
+<li>
+<p>GMRES为什么和CG不同？它需要对任意矩阵都工作，付出的代价是什么？</p>
+</li>
+</ol>
+<p>▎ <strong>矩阵指数与控制理论</strong></p>
+<ol>
+<li>
+<p>矩阵指数e^(At)是怎么定义的？它跟标量指数e^(at)的级数展开有什么对应关系？</p>
+</li>
+<li>
+<p>解一阶线性常微分方程组dx/dt=Ax——为什么解是x(t)=e^(At)x(0)？控制理论里的状态转移矩阵和e^(At)是什么关系？</p>
+</li>
+<li>
+<p>Lyapunov方程AᵀP+PA=-Q在控制系统稳定性分析里起了什么作用？P矩阵的正定性告诉了你什么？</p>
+</li>
+</ol>
+<p>▎ <strong>Perron-Frobenius 定理</strong></p>
+<ol>
+<li>
+<p>Perron-Frobenius定理说：一个所有元素都为正数的矩阵，它的最大特征值一定是正实数且对应的特征向量全是正数——这为什么重要？（提示：PageRank、人口模型）</p>
+</li>
+<li>
+<p>非负矩阵和正矩阵的区别在Perron-Frobenius理论里有多重要？如果一个矩阵只有一些零元素，定理还成立吗？</p>
+</li>
+</ol>
+<p>▎ <strong>特殊矩阵</strong></p>
+<ol>
+<li>
+<p>Hilbert矩阵（H_ij=1/(i+j-1)）为什么被称为”著名的病态矩阵”？它的条件数有多大？</p>
+</li>
+<li>
+<p>Vandermonde矩阵在多项式插值里是怎么出现的？为什么用高次多项式插值随着节点增多反而越插越不准？</p>
+</li>
+<li>
+<p>Toeplitz矩阵（每条对角线上的元素都相同）在信号处理里为什么这么常见？</p>
+</li>
+</ol>
+<p>▎ <strong>线性代数在更广数学中的位置</strong></p>
+<ol>
+<li>
+<p>线性代数和微积分之间最深的联系是什么？为什么”局部线性化”（微分）本质上是把非线性函数用线性函数逼近？</p>
+</li>
+<li>
+<p>“线性”这个前缀在”线性代数&quot;&quot;线性规划&quot;&quot;线性微分方程&quot;&quot;线性时不变系统”里指的都是同一个意思吗？如果不是，它们各自”线性”了什么？</p>
+</li>
+<li>
+<p>为什么泛函分析被称为”无限维的线性代数”？函数空间里的”向量”和”线性变换”分别对应日常数学里的什么？</p>
+</li>
+</ol>
+<p>▎ <strong>矩阵计算与现代应用</strong></p>
+<ol>
+<li>
+<p>浮点运算中矩阵乘法的计算量大约是多少？如果A是1000×1000，用最朴素的三个循环做乘法，大概要多少次浮点运算？</p>
+</li>
+<li>
+<p>在大规模机器学习中，梯度的计算依赖的是”自动微分”而不是”符号微分”或”数值微分”——它的核心思想跟线性代数里的链式法则和Jacobian矩阵有什么关系？</p>
+</li>
+</ol>
+<p>📎 第6篇：线性代数实战 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ1NzMyNDU5" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ1NzMyNDU5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><strong>专栏⑰进度：导航分卷</strong></p>
+<p><a href="../../../../tags/Area/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6" class="tag-link internal alias" data-slug="tags/Area/学习/数学">数学</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="backlinks"><h3>反向链接</h3><ul id="list-2" class="overflow"><li><a href="../../../../Area/EE/数学" class="internal">数学</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.1</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module">function f(i,e){if(!i)return;function r(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function t(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}i?.addEventListener("click",r),window.addCleanup(()=>i?.removeEventListener("click",r)),document.addEventListener("keydown",t),window.addCleanup(()=>document.removeEventListener("keydown",t))}function y(i){for(;i.firstChild;)i.removeChild(i.firstChild)}var h=class{constructor(e,r){this.container=e;this.content=r;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),r=this.onMouseMove.bind(this),t=this.onMouseUp.bind(this),o=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",r),document.addEventListener("mouseup",t),window.addEventListener("resize",o),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",r),()=>document.removeEventListener("mouseup",t),()=>window.removeEventListener("resize",o))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let r=this.createButton("+",()=>this.zoom(.1)),t=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(t),e.appendChild(o),e.appendChild(r),this.container.appendChild(e)}createButton(e,r){let t=document.createElement("button");return t.textContent=e,t.className="mermaid-control-button",t.addEventListener("click",r),window.addCleanup(()=>t.removeEventListener("click",r)),t}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}zoom(e){let r=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),t=this.content.getBoundingClientRect(),o=t.width/2,n=t.height/2,c=r-this.scale;this.currentPan.x-=o*c,this.currentPan.y-=n*c,this.scale=r,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){this.scale=1;let e=this.content.querySelector("svg");this.currentPan={x:e.getBoundingClientRect().width/2,y:e.getBoundingClientRect().height/2},this.updateTransform()}},C=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],E;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;E||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let r=E.default,t=new WeakMap;for(let n of e)t.set(n,n.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let a=t.get(s);a&&(s.innerHTML=a)}let n=C.reduce((s,a)=>(s[a]=window.getComputedStyle(document.documentElement).getPropertyValue(a),s),{}),c=document.documentElement.getAttribute("saved-theme")==="dark";r.initialize({startOnLoad:!1,securityLevel:"loose",theme:c?"dark":"base",themeVariables:{fontFamily:n["--codeFont"],primaryColor:n["--light"],primaryTextColor:n["--darkgray"],primaryBorderColor:n["--tertiary"],lineColor:n["--darkgray"],secondaryColor:n["--secondary"],tertiaryColor:n["--tertiary"],clusterBkg:n["--light"],edgeLabelBackground:n["--highlight"]}}),await r.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let n=0;n<e.length;n++){let v=function(){let g=l.querySelector("#mermaid-space"),m=l.querySelector(".mermaid-content");if(!m)return;y(m);let w=c.querySelector("svg").cloneNode(!0);m.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new h(g,m)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},c=e[n],s=c.parentElement,a=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(a),L=a.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),f(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="/static/katex/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../../../postscript.js" type="module"></script></html>

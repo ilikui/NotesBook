@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh"><head><title>专栏⑰·第1篇：马尔可夫链——无后效性的力量（10 大板块深度专题）</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="数字花园"/><meta property="og:title" content="专栏⑰·第1篇：马尔可夫链——无后效性的力量（10 大板块深度专题）"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="专栏⑰·第1篇：马尔可夫链——无后效性的力量（10 大板块深度专题）"/><meta name="twitter:description" content="专栏⑰·第1篇：马尔可夫链——无后效性的力量（10 大板块深度专题） 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·第1篇：马尔可夫链——无后效性的力量（10 大板块深度专题） 📎 专栏⑰导航 → v.flomoapp.com/mine/ ▎从”无记忆”到”无后效” 指数分布的无记忆性和马尔可夫链的”无后效性”是同一个概念吗？指数分布说”已经用了t小时，再活s小时的概率跟新的一样”——马尔可夫说”下一个状态只取决于当前状态，跟之前怎么来的无关”。共享的核心直觉是—— 过去已经被当前状态”概括”了，知道历史不提供额外信息？ 马尔可夫链最简单的例子——一维随机游走：在整数轴..."/><meta property="og:description" content="专栏⑰·第1篇：马尔可夫链——无后效性的力量（10 大板块深度专题） 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·第1篇：马尔可夫链——无后效性的力量（10 大板块深度专题） 📎 专栏⑰导航 → v.flomoapp.com/mine/ ▎从”无记忆”到”无后效” 指数分布的无记忆性和马尔可夫链的”无后效性”是同一个概念吗？指数分布说”已经用了t小时，再活s小时的概率跟新的一样”——马尔可夫说”下一个状态只取决于当前状态，跟之前怎么来的无关”。共享的核心直觉是—— 过去已经被当前状态”概括”了，知道历史不提供额外信息？ 马尔可夫链最简单的例子——一维随机游走：在整数轴..."/><meta property="og:image:alt" content="专栏⑰·第1篇：马尔可夫链——无后效性的力量（10 大板块深度专题） 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·第1篇：马尔可夫链——无后效性的力量（10 大板块深度专题） 📎 专栏⑰导航 → v.flomoapp.com/mine/ ▎从”无记忆”到”无后效” 指数分布的无记忆性和马尔可夫链的”无后效性”是同一个概念吗？指数分布说”已经用了t小时，再活s小时的概率跟新的一样”——马尔可夫说”下一个状态只取决于当前状态，跟之前怎么来的无关”。共享的核心直觉是—— 过去已经被当前状态”概括”了，知道历史不提供额外信息？ 马尔可夫链最简单的例子——一维随机游走：在整数轴..."/><meta property="og:image" content="https://wiki.likui.info/static/og-image.png"/><meta property="og:image:url" content="https://wiki.likui.info/static/og-image.png"/><meta name="twitter:image" content="https://wiki.likui.info/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="wiki.likui.info"/><meta property="og:url" content="https://wiki.likui.info/Area/EE/数学/专栏⑰原始笔记/第1篇-马尔可夫链专题"/><meta property="twitter:url" content="https://wiki.likui.info/Area/EE/数学/专栏⑰原始笔记/第1篇-马尔可夫链专题"/><link rel="icon" href="../../../../static/icon.png"/><meta name="description" content="专栏⑰·第1篇：马尔可夫链——无后效性的力量（10 大板块深度专题） 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·第1篇：马尔可夫链——无后效性的力量（10 大板块深度专题） 📎 专栏⑰导航 → v.flomoapp.com/mine/ ▎从”无记忆”到”无后效” 指数分布的无记忆性和马尔可夫链的”无后效性”是同一个概念吗？指数分布说”已经用了t小时，再活s小时的概率跟新的一样”——马尔可夫说”下一个状态只取决于当前状态，跟之前怎么来的无关”。共享的核心直觉是—— 过去已经被当前状态”概括”了，知道历史不提供额外信息？ 马尔可夫链最简单的例子——一维随机游走：在整数轴..."/><meta name="generator" content="Quartz"/><link href="../../../../index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  padding: 2rem;
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcnVubmVyL3dvcmsvTm90ZXNCb29rL05vdGVzQm9vay9xdWFydHovY29tcG9uZW50cy9zdHlsZXMiLCJzb3VyY2VzIjpbIm1lcm1haWQuaW5saW5lLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUdGO0VBQ0U7OztBQUtGO0VBQ0U7RUFDQTs7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcGFkZGluZzogMnJlbTtcbiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgIHRyYW5zZm9ybS1vcmlnaW46IDAgMDtcbiAgICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjFzIGVhc2U7XG4gICAgICBvdmVyZmxvdzogdmlzaWJsZTtcbiAgICAgIG1pbi1oZWlnaHQ6IDIwMHB4O1xuICAgICAgbWluLXdpZHRoOiAyMDBweDtcblxuICAgICAgcHJlIHtcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICB9XG5cbiAgICAgIHN2ZyB7XG4gICAgICAgIG1heC13aWR0aDogbm9uZTtcbiAgICAgICAgaGVpZ2h0OiBhdXRvO1xuICAgICAgfVxuICAgIH1cblxuICAgICYgPiAubWVybWFpZC1jb250cm9scyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBib3R0b206IDIwcHg7XG4gICAgICByaWdodDogMjBweDtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBnYXA6IDhweDtcbiAgICAgIHBhZGRpbmc6IDhweDtcbiAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICBib3JkZXItcmFkaXVzOiA2cHg7XG4gICAgICBib3gtc2hhZG93OiAwIDJweCA0cHggcmdiYSgwLCAwLCAwLCAwLjEpO1xuICAgICAgei1pbmRleDogMjtcblxuICAgICAgLm1lcm1haWQtY29udHJvbC1idXR0b24ge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgd2lkdGg6IDMycHg7XG4gICAgICAgIGhlaWdodDogMzJweDtcbiAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgICBjb2xvcjogdmFyKC0tZGFyayk7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtZmFtaWx5OiB2YXIoLS1ib2R5Rm9udCk7XG4gICAgICAgIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XG5cbiAgICAgICAgJjpob3ZlciB7XG4gICAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgfVxuXG4gICAgICAgICY6YWN0aXZlIHtcbiAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMXB4KTtcbiAgICAgICAgfVxuXG4gICAgICAgIC8vIFN0eWxlIHRoZSByZXNldCBidXR0b24gZGlmZmVyZW50bHlcbiAgICAgICAgJjpudGgtY2hpbGQoMikge1xuICAgICAgICAgIHdpZHRoOiBhdXRvO1xuICAgICAgICAgIHBhZGRpbmc6IDAgMTJweDtcbiAgICAgICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cbiJdfQ== */</style><link href="/static/katex/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../../../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../../../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://wiki.likui.info/index.xml"/></head><body data-slug="Area/EE/数学/专栏⑰原始笔记/第1篇-马尔可夫链专题"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../../..">数字花园</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><p>搜索</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索些什么" placeholder="搜索些什么"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-230"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>PARA</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-230" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text explorer-entry-icon" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg><span class="file-title"></span></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder-closed explorer-entry-icon" aria-hidden="true"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path><path d="M2 10h20"></path></svg><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../Area/">Area</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../Area/EE/">EE</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../Area/EE/数学/">数学</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../Area/EE/数学/专栏⑰原始笔记/">专栏⑰原始笔记</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>专栏⑰·第1篇：马尔可夫链——无后效性的力量（10 大板块深度专题）</a></div></nav><h1 class="article-title">专栏⑰·第1篇：马尔可夫链——无后效性的力量（10 大板块深度专题）</h1><p show-comma="true" class="content-meta"><time datetime="2026-10-31T08:38:47.000Z">2026年10月31日</time><span>17分钟阅读</span></p><ul class="tags"><li><a href="../../../../tags/数学" class="internal tag-link">数学</a></li><li><a href="../../../../tags/Flomo原始笔记" class="internal tag-link">Flomo原始笔记</a></li><li><a href="../../../../tags/Area/学习/数学" class="internal tag-link">Area/学习/数学</a></li></ul></div></div><article class="popover-hint"><h1 id="专栏第1篇马尔可夫链无后效性的力量10-大板块深度专题">专栏⑰·第1篇：马尔可夫链——无后效性的力量（10 大板块深度专题）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#专栏第1篇马尔可夫链无后效性的力量10-大板块深度专题" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>原始 Flomo：<a href="https://v.flomoapp.com/mine/?memo_id=MjQ3MzMwNjkw" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ3MzMwNjkw<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><strong>专栏⑰·第1篇：马尔可夫链——无后效性的力量（10 大板块深度专题）</strong></p>
+<p>📎 专栏⑰导航 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc0OTc2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc0OTc2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><strong>▎从”无记忆”到”无后效”</strong></p>
+<ol>
+<li>
+<p>指数分布的无记忆性和马尔可夫链的”无后效性”是同一个概念吗？指数分布说”已经用了t小时，再活s小时的概率跟新的一样”——马尔可夫说”下一个状态只取决于当前状态，跟之前怎么来的无关”。共享的核心直觉是—— <strong>过去已经被当前状态”概括”了</strong>，知道历史不提供额外信息？</p>
+</li>
+<li>
+<p>马尔可夫链最简单的例子——一维随机游走：在整数轴上，每一步以概率p向右走一步、概率q=1-p向左走一步。当前位置就是”状态”，下一步位置只取决于当前位置，跟之前走了多少步、从哪里起步完全无关——这就是马尔可夫性？</p>
+</li>
+<li>
+<p>“meme”这个词从何而来——理查德·道金斯《自私的基因》里说文化基因像生物基因一样复制传播。但马尔可夫链（Markov chain）是俄国数学家安德烈·马尔可夫（1856-1922）提出的——他当年研究的是普希金的《尤金·奥涅金》中元音和辅音的交替模式，发现可以用一个概率模型来描述字母序列的依赖关系。一个数学家分析诗歌发现了马尔可夫链？</p>
+</li>
+<li>
+<p>马尔可夫性的严格数学定义：P{X_{n+1}=j | X_n=i, X_{n-1}=i_{n-1}, …, X_0=i_0} = P{X_{n+1}=j | X_n=i}。用大白话说——给定”现在”，“未来”与”过去”独立。为什么这个条件既苛刻又强大（苛刻：现实世界几乎没有什么过程完全满足；强大：一旦满足，所有计算都大大简化）？</p>
+</li>
+</ol>
+<p><strong>▎状态空间与转移矩阵</strong></p>
+<ol>
+<li>
+<p>有限状态马尔可夫链——状态空间S={1,2,…,m}，转移概率矩阵P是一个m×m矩阵，其中P_{ij}=P{X_{n+1}=j|X_n=i}。为什么矩阵P的每一行之和都等于1（因为从状态i出发，一定会在下一时刻转移到某个状态——可能性总和是100%）？</p>
+</li>
+<li>
+<p>转移概率矩阵的n次幂P^n有什么含义？(P^n){ij} = P{X{n+k}=j | X_k=i}—— <strong>从状态i出发，恰好经过n步到达状态j的概率</strong>。这个性质为什么如此漂亮——因为矩阵乘法本身就在”复合”转移概率，每一步的转移都是独立的马尔可夫过程？</p>
+</li>
+<li>
+<p>查普曼-科尔莫戈罗夫方程（Chapman-Kolmogorov方程）：P^{m+n} = P^m · P^n。它在说什么——从i出发经过m+n步到j的概率，等于”先经m步到某个中间状态k，再从k经n步到j”对所有可能中间状态k求和？</p>
+</li>
+<li>
+<p>一个经典的转移矩阵例子——天气预报的朴素模型：如果今天下雨，明天有70%概率继续下雨、30%概率转晴；如果今天晴天，明天有60%概率保持晴天、40%概率转雨。写出转移矩阵P = [[0.7, 0.3], [0.4, 0.6]]。如果今天下雨，后天（两天后）下雨的概率怎么算——(P²)_{1,1}？</p>
+</li>
+<li>
+<p>你之前笔记里记过的”人生努力马尔可夫链”——佩奇的模型思维课程中有一个观点：如果把人生看成”努力”和”不努力”两个状态，只要状态转移矩阵确定了，长期来看在每个状态下停留的时间比例也就确定了。如果一个人的”动力源泉”是固定的（从努力到不努力的转移概率恒定），那长期”努力比例”就是固定的——问题不在于你今天努不努力，而在于你的 <strong>源动力</strong> 有没有变过？</p>
+</li>
+</ol>
+<p><strong>▎状态的分类</strong></p>
+<ol>
+<li>
+<p>可达与互通——从i可达j（i→j）意味着存在某个n≥0使得(P^n)_{ij}>0。如果i和j互相可达，则称它们互通。互通关系有什么用—— <strong>互通的状态属于同一个”类”（class）</strong>，一个不可约的马尔可夫链意味着所有状态都在同一个类中（全连通）？</p>
+</li>
+<li>
+<p>常返与瞬过——从状态i出发，如果最终返回i的概率是1，则称i为常返（recurrent）状态；如果返回概率小于1，则称i为瞬过（transient）状态。直觉上， <strong>常返状态你”会不停回来”，瞬过状态你”走了就可能不回来”</strong>。一维随机游走（p=q=0.5）的每个状态都是常返的——但二维随机游走呢（也是常返），三维呢（ <strong>不是</strong>——三维随机游走有正概率一去不返！）？</p>
+</li>
+<li>
+<p>为什么三维随机游走跟一维二维有本质区别？因为在高维空间里，“回家”的路径选择太多了，你越走越容易走丢。 <strong>“醉汉在一维和二维能走回家，在三维会走丢”</strong>——这个结论有什么直观理解？</p>
+</li>
+<li>
+<p>周期——从状态i出发，所有可能返回的步数n的最大公约数d(i)称为周期。如果d(i)>1称i为周期状态，d(i)=1称非周期。一个充分条件： <strong>如果P_{ii}>0（一步就能回到自己），那么该状态一定是非周期的</strong>？</p>
+</li>
+<li>
+<p>不可约且非周期的马尔可夫链为什么是最”好”的？因为这种链有唯一的平稳分布，且从任意初始分布出发都会收敛到这个平稳分布——这是马尔可夫链蒙特卡洛（MCMC）方法的理论基础？</p>
+</li>
+</ol>
+<p><strong>▎平稳分布</strong></p>
+<ol>
+<li>
+<p>平稳分布π：满足π = πP的分布。也就是说， <strong>如果系统初始分布是π，那么任何时刻的分布都是π</strong>（分布不随时间变化）。为什么这叫做”平稳”——因为它站在那儿不动了？</p>
+</li>
+<li>
+<p>一个不可约非周期有限状态马尔可夫链，为什么一定会收敛到一个唯一的平稳分布？不管你今天从哪个状态出发， <strong>经过足够多步之后，处在每个状态的概率就固定了</strong>——系统”忘记了”初始条件？</p>
+</li>
+<li>
+<p>平稳分布怎么算？解方程组π = πP，且Σπ_i = 1。以天气模型P=[[0.7,0.3],[0.4,0.6]]为例，解π₁=0.7π₁+0.4π₂、π₂=0.3π₁+0.6π₂、π₁+π₂=1→得π=(4/7, 3/7)。所以长期来看， <strong>下雨的概率是4/7≈57%，晴天的概率是3/7≈43%</strong>——跟今天下不下雨完全无关了？</p>
+</li>
+<li>
+<p>细致平衡条件（Detailed Balance）：π_i · P_{ij} = π_j · P_{ji}对所有i,j成立。这个条件比π=πP更强——它要求每对状态之间的”流量”是平衡的。 <strong>如果细致平衡成立，π一定是平稳分布</strong>。这个性质在什么算法中被大量使用——MCMC的Metropolis-Hastings算法？</p>
+</li>
+<li>
+<p>你笔记里提过的”人生努力马尔可夫链”——如果从”努力”到”不努力”的转移概率是α，从”不努力”到”努力”是β，那么长期努力比例是多少？解π_努力 = β/(α+β)。比如α=0.3（30%概率从努力滑向不努力）、β=0.2（20%概率从不努力转向努力），那么长期努力比例 = 0.2/0.5 = 40%。你笔记里说”问题的根本不在于你的状态，而在于源动力”——源动力在这里对应的是什么—— <strong>转移概率α和β的大小，它们才是决定长期行为的真正参数</strong>？</p>
+</li>
+</ol>
+<p><strong>▎马尔可夫链蒙特卡洛（MCMC）</strong></p>
+<ol>
+<li>
+<p>MCMC要解决什么问题——从一个复杂的、高维的概率分布中采样。为什么直接采样不行？因为高维空间的归一化常数计算量太大（维数灾难）。MCMC绕过了这个问题：不直接算分布本身，而是 <strong>构造一条马尔可夫链，让它的平稳分布等于目标分布</strong>，然后沿着这条链”走”就能得到目标分布的样本？</p>
+</li>
+<li>
+<p>Metropolis-Hastings算法——怎么构造这样的链？从当前状态x出发，按提议分布q(y|x)生成候选状态y。以概率A=min(1, π(y)q(x|y)/π(x)q(y|x))接受y，否则留在x。为什么这个算法能保证平稳分布是π？因为 <strong>它满足细致平衡条件</strong>——接受概率A的构造恰好让两边的流量相等？</p>
+</li>
+<li>
+<p>Gibbs采样——什么时候用Gibbs比Metropolis-Hastings更方便？当你能写出 <strong>每个变量的条件分布</strong>，但不能写出联合分布。Gibbs采样每次只更新一个变量。 <strong>它不需要调接受概率的参数</strong>——但代价是什么？如果变量之间强相关，Gibbs采样会”移动得很慢”？</p>
+</li>
+<li>
+<p><strong>收敛诊断</strong>——你怎么知道MCMC链已经”烧完了”（burn-in结束）？多重链从不同初始值出发，观察链内方差和链间方差的比值——Gelman-Rubin统计量R̂&lt;1.1表示收敛。为什么只看一条链不够？</p>
+</li>
+</ol>
+<p><strong>▎隐马尔可夫模型（HMM）</strong></p>
+<ol>
+<li>
+<p>HMM跟普通马尔可夫链的区别——普通马尔可夫链的”状态”是直接可观测的；HMM的 <strong>状态是隐藏的</strong>，你只能观测到跟状态相关的”输出”。为什么这个模型在语音识别、手写识别、生物信息学中如此流行？</p>
+</li>
+<li>
+<p>HMM的三个基本问题——（1） <strong>评估</strong>：计算P(O|λ)；（2） <strong>解码</strong>：找出最可能的状态序列Q*（Viterbi算法）；（3） <strong>学习</strong>：估计模型参数λ（Baum-Welch/EM）。三个问题分别对应什么实际需求？</p>
+</li>
+<li>
+<p><strong>Viterbi算法</strong>——用动态规划找最可能的隐藏状态序列。它跟前向算法的核心区别？前向算法 <strong>求和</strong> 所有路径，Viterbi算法 <strong>取最大值</strong>。为什么”取最大”仍然是合理的？</p>
+</li>
+<li>
+<p><strong>前向-后向算法</strong>——为什么需要”后向概率”β_t(i)=P(O_{t+1},…,O_T | X_t=i, λ)？因为E步你需要计算”在时刻t处于状态i的概率”，而这个概率需要知道”之前的观测”和”之后的观测”？</p>
+</li>
+<li>
+<p>HMM的三个假设——马尔可夫假设、输出独立假设、平稳假设。这三个假设在实际中几乎全被违反——为什么HMM仍然有效（模型”足够好”时就有实用价值）？</p>
+</li>
+</ol>
+<p><strong>▎PageRank：改变世界的马尔可夫链</strong></p>
+<ol>
+<li>
+<p>Google的PageRank本质上是一个马尔可夫链。网页是状态，链接是转移概率。 <strong>PageRank值就是这个马尔可夫链的平稳分布</strong>——“一个随机冲浪者长期浏览每个网页的概率”？</p>
+</li>
+<li>
+<p>网络中存在”悬挂节点”和”循环陷阱”——PageRank的解决方案？ <strong>加入”跳转因子”（damping factor，通常α=0.85）</strong>：以85%的概率按链接浏览，15%的概率随机跳转到任意网页——这个”随机跳转”使链变得不可约且非周期，保证了平稳分布的唯一存在？</p>
+</li>
+<li>
+<p>为什么说PageRank的成功证明了”马尔可夫链在超大规模问题上的可行性”？解几十亿×几十亿的线性方程组不可能——但用 <strong>幂迭代法</strong> 只需要几十次迭代就能收敛？因为转移矩阵是稀疏的，每次迭代的计算量只有O(边数)？</p>
+</li>
+</ol>
+<p><strong>▎你笔记里的马尔可夫链</strong></p>
+<ol>
+<li>
+<p>你记过佩奇《模型思维》的观点：“在离散状态马尔科夫过程中，如果把人生看成努力和不努力两个状态，只要状态转移矩阵确定了，长期来看，在每个状态下所停留的时间比例也就都确定了。“——这个观点是不是在说， <strong>与其纠结”今天我努力不努力”，不如想办法改变转移概率本身</strong>（通过改变环境、习惯设计来降低”努力→不努力”的概率α，提高”不努力→努力”的概率β）？</p>
+</li>
+<li>
+<p>你还记过：“如果人生的动力源泉是固定的，努力的百分比就是固定的，那么短期内努力或者不努力并不会有什么影响。也就是说，问题的根本不在于你的状态，而在于源动力！”——“源动力”可以被理解成马尔可夫链的哪个参数？转移矩阵本身？还是那个唯一能改变转移矩阵的东西？</p>
+</li>
+<li>
+<p>如果把你的”堆问题学习法”建模成一个马尔可夫链——你的状态是”对某个知识点的理解深度”（没见过→听说过→能解释→能应用→能教别人），每一步的转移概率取决于什么——是否刻意练习、是否回顾笔记。长期来看， <strong>在哪个深度上花的时间最多，取决于你从”浅层”跳到”深层”的概率</strong>——你是通过什么行为来提高这个转移概率的？</p>
+</li>
+</ol>
+<p>📎 第8篇：马尔可夫链工程应用 → <a href="https://v.flomoapp.com/mine/?memo_id=MjUwNzc0MDg1" class="external">https://v.flomoapp.com/mine/?memo_id=MjUwNzc0MDg1<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/> 📎 第2篇：矩阵变换 = 坐标系转换 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ5MDI4Mjc5" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ5MDI4Mjc5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/> 📎 专栏⑰导航 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc0OTc2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc0OTc2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><strong>专栏⑰进度：1/10篇</strong></p>
+<p><a href="../../../../tags/Area/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6" class="tag-link internal alias" data-slug="tags/Area/学习/数学">数学</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="backlinks"><h3>反向链接</h3><ul id="list-2" class="overflow"><li><a href="../../../../Area/EE/数学" class="internal">数学</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.1</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module">function f(i,e){if(!i)return;function r(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function t(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}i?.addEventListener("click",r),window.addCleanup(()=>i?.removeEventListener("click",r)),document.addEventListener("keydown",t),window.addCleanup(()=>document.removeEventListener("keydown",t))}function y(i){for(;i.firstChild;)i.removeChild(i.firstChild)}var h=class{constructor(e,r){this.container=e;this.content=r;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),r=this.onMouseMove.bind(this),t=this.onMouseUp.bind(this),o=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",r),document.addEventListener("mouseup",t),window.addEventListener("resize",o),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",r),()=>document.removeEventListener("mouseup",t),()=>window.removeEventListener("resize",o))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let r=this.createButton("+",()=>this.zoom(.1)),t=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(t),e.appendChild(o),e.appendChild(r),this.container.appendChild(e)}createButton(e,r){let t=document.createElement("button");return t.textContent=e,t.className="mermaid-control-button",t.addEventListener("click",r),window.addCleanup(()=>t.removeEventListener("click",r)),t}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}zoom(e){let r=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),t=this.content.getBoundingClientRect(),o=t.width/2,n=t.height/2,c=r-this.scale;this.currentPan.x-=o*c,this.currentPan.y-=n*c,this.scale=r,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){this.scale=1;let e=this.content.querySelector("svg");this.currentPan={x:e.getBoundingClientRect().width/2,y:e.getBoundingClientRect().height/2},this.updateTransform()}},C=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],E;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;E||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let r=E.default,t=new WeakMap;for(let n of e)t.set(n,n.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let a=t.get(s);a&&(s.innerHTML=a)}let n=C.reduce((s,a)=>(s[a]=window.getComputedStyle(document.documentElement).getPropertyValue(a),s),{}),c=document.documentElement.getAttribute("saved-theme")==="dark";r.initialize({startOnLoad:!1,securityLevel:"loose",theme:c?"dark":"base",themeVariables:{fontFamily:n["--codeFont"],primaryColor:n["--light"],primaryTextColor:n["--darkgray"],primaryBorderColor:n["--tertiary"],lineColor:n["--darkgray"],secondaryColor:n["--secondary"],tertiaryColor:n["--tertiary"],clusterBkg:n["--light"],edgeLabelBackground:n["--highlight"]}}),await r.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let n=0;n<e.length;n++){let v=function(){let g=l.querySelector("#mermaid-space"),m=l.querySelector(".mermaid-content");if(!m)return;y(m);let w=c.querySelector("svg").cloneNode(!0);m.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new h(g,m)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},c=e[n],s=c.parentElement,a=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(a),L=a.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),f(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="/static/katex/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../../../postscript.js" type="module"></script></html>
