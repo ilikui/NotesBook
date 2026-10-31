@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>自动驾驶 1000问 · 补充Q1：什么是端到端（End-to-End）自动驾驶？</title>
+    <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/1000%E9%97%AE/%E8%A1%A5%E5%85%85Q1-%E7%AB%AF%E5%88%B0%E7%AB%AF%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6</link>
+    <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/1000%E9%97%AE/%E8%A1%A5%E5%85%85Q1-%E7%AB%AF%E5%88%B0%E7%AB%AF%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6</guid>
+    <description><![CDATA[ 自动驾驶 1000问 · 补充Q1：什么是端到端（End-to-End）自动驾驶？ 原始 Flomo：v.flomoapp.com/mine/ 自动驾驶 1000问 · 补充Q1：什么是端到端（End-to-End）自动驾驶？ ▎ 五大学习法：费曼学习法——用一句话把它讲给外行听 一句话 把「传感器输入 → 车辆动作（转向 / 油门 / 刹车）」这一整条链交给一个学习模型整体学会，不再拆成感知、预测、规划、控制各自写规则再拼。 和传统模块化比 模块化：每块单独设计优化、可解释、能独立升级；但模块间接口靠人工设计，误差会一路累积放大。 端到端：一张大网直接从输入学到输出，围绕最终驾驶目标联合优化... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 08:33:32 GMT</pubDate>
+  </item><item>
     <title>自动驾驶</title>
     <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6</link>
     <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/%E4%B8%93%E9%A2%98%E7%B3%BB%E5%88%97/%E5%86%B3%E7%AD%96%E8%A7%84%E5%88%92</guid>
     <description><![CDATA[ 专栏⑳·第4篇：决策规划——预测、行为决策、轨迹规划 原始 Flomo：v.flomoapp.com/mine/ 专栏⑳·第4篇：决策规划——预测、行为决策、轨迹规划 ▎ 在整条链路的位置 感知回答了「现在世界什么样」，决策规划要回答「接下来怎么动」——预测别人、决定自己、规划路径。 ▎ 三个层级 全局路径规划：起点到终点（导航地图层面）——A* / Dijkstra / RRT 行为决策：下一步动作（跟车 / 变道 / 超车 / 停车 / 让行）——状态机 / 规则 / 学习 局部轨迹规划：未来几秒的具体轨迹（位置 / 速度 / 曲率随时间）——Frenet 坐标系 + 采样 / 优化 ▎ ... ]]></description>
     <pubDate>Sat, 31 Oct 2026 08:13:13 GMT</pubDate>
-  </item><item>
-    <title>专栏⑳·第3篇：感知融合——多传感器时间与空间对齐</title>
-    <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/%E4%B8%93%E9%A2%98%E7%B3%BB%E5%88%97/%E5%A4%9A%E4%BC%A0%E6%84%9F%E5%99%A8%E8%9E%8D%E5%90%88</link>
-    <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/%E4%B8%93%E9%A2%98%E7%B3%BB%E5%88%97/%E5%A4%9A%E4%BC%A0%E6%84%9F%E5%99%A8%E8%9E%8D%E5%90%88</guid>
-    <description><![CDATA[ 专栏⑳·第3篇：感知融合——多传感器时间与空间对齐 原始 Flomo：v.flomoapp.com/mine/ 专栏⑳·第3篇：感知融合——多传感器时间与空间对齐 ▎ 为什么需要融合 单传感器都有盲区：摄像头怕雨雾、雷达分不清类型、激光怕大雨。融合 = 拿一个的强补另一个的弱，1+1&gt;2。 ▎ 融合的两个地基 空间对齐：所有传感器坐标系统一到车体坐标系——外参标定（每个传感器相对车体的旋转 + 平移）；标错 = 融合目标位置偏 时间对齐：不同传感器帧率不同（摄像头 30fps、激光 10Hz、雷达 20Hz）——用时间戳插值/外推到统一时刻；时间不同步 = 运动目标位置错位（接时间同步专... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 08:13:10 GMT</pubDate>
   </item>
     </channel>
   </rss>
