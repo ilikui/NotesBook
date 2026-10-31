@@ -33,18 +33,12 @@ def is_page_candidate(path: str) -> bool:
 
 
 def page_link_base(page: str, dirpath: str, site_root: str) -> str:
-    """返回 Quartz 生成相对链接时使用的页面基准目录。
+    """返回 HTML 页面对应的 URL 目录。
 
-    Quartz 的 FolderPage 会把目录页写入 folder/index.html，但链接是按
-    目录 slug（folder）计算的，而不是按物理文件所在目录（folder/index.html）
-    计算。若直接使用 dirpath，会多算一层目录，造成静态资源和站内链接误报。
-    tags.html 同样对应 tags 这个虚拟 slug。
+    Quartz 的 FolderPage 和 TagPage 输出为目录下的 index.html；
+    浏览器访问的是该目录 URL，因此相对链接必须以 index.html 所在目录
+    为基准，不能再向上移动一层。
     """
-    name = os.path.basename(page)
-    if name == "index.html":
-        return os.path.dirname(dirpath)
-    if name == "tags.html":
-        return os.path.join(site_root, "tags")
     return dirpath
 
 
