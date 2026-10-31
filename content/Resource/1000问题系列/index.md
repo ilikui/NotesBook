@@ -39,7 +39,7 @@ flowchart TD
 | 软考高级 1000问 | 系统架构师、信息系统项目管理师 | Project/考试管理（待整理） |
 | 儿童教育 1000问 | 从小学到大学、分科方法与学习路径 | Resource/Education（待整理） |
 | 自动驾驶 1000问 | 感知、融合、规划、执行、计算平台、安全 | [Area/EE/自动驾驶](../../Area/EE/自动驾驶) |
-| MATLAB/Simulink 10000问 | MATLAB、Simulink、建模、仿真、代码生成 | Area/EE/MATLAB（待整理） |
+| MATLAB/Simulink 10000问 | MATLAB、Simulink、建模、仿真、代码生成 | [Area/EE/MATLAB](../../Area/EE/MATLAB/)（已建立专题导航与五篇问答文档，补充官方资源、工具箱和 CI 资料） |
 | 电气工程 10000问 | 电路、电机、电力电子、控制等 | Area/EE/电气工程（待整理） |
 | 数据结构与算法 1000问 | 数据结构、复杂度、算法设计与分析 | Area/CS（待整理） |
 | 考研英语 10000问 | 词汇、语法、阅读、写作 | Resource/Study（待整理） |
@@ -86,6 +86,8 @@ flowchart TD
   - 已整理 3 题，含嵌入式系统本质、MCU/MPU 选型、冯诺依曼/哈佛结构；含选型和架构 Mermaid 图。
 - [嵌入式1000问：启动、时钟、链接、外设、中断与可靠性](../../Area/EE/1000问/启动时钟链接外设中断与可靠性)
   - 新增 18 题，覆盖启动链、时钟、PWM、DMA/Cache、链接脚本、ISR、RTOS、Linux 驱动、HardFault、低功耗和看门狗；含启动、时钟、内存、任务和健康监控图。
+- [MATLAB与Simulink 10000问](../../Area/EE/MATLAB/)
+  - 已建立专题导航与五篇问答文档，覆盖基础语法、矩阵、可视化、数值计算、信号处理、Simulink、控制系统、代码生成、验证、定点与实时 HIL；补充工具箱、官方帮助入口和 CI 工作流。
 - [AI1000问：大模型、RAG与智能体基础](../../Area/AI/1000问/大模型RAG与智能体基础)
   - 已整理 10 个核心问题，含知识管理、Embedding、RAG、Transformer、GPT/BERT、训练、Agent、本地模型和微调；含知识闭环、RAG、Attention、Agent Mermaid 图。
 - [AI1000问：端侧智能、内容治理、知识闭环与具身智能](../../Area/AI/1000问/端侧智能内容治理知识闭环与具身智能)
