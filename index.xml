@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>嵌入式通信协议</title>
+    <link>https://wiki.likui.info/Area/EE/%E9%80%9A%E4%BF%A1/</link>
+    <guid>https://wiki.likui.info/Area/EE/%E9%80%9A%E4%BF%A1/</guid>
+    <description><![CDATA[ 嵌入式通信协议 通信协议知识按基础概念、接口机制、驱动实现、故障排查和车载应用组织。 1000问逐题解答 基础协议与四大协议 —— 同步/异步、全/半双工、UART、SPI、I2C、RS-485、汽车 ECU 应用与故障定位。 flowchart TD A[嵌入式通信] --&gt; B[UART] A --&gt; C[SPI] A --&gt; D[I2C] A --&gt; E[RS-485] A --&gt; F[SENT / LIN / USB / SDIO / Ethernet] B --&gt; G[驱动与验证] C --&gt; G D --&gt; G E --&gt; G ... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 08:36:31 GMT</pubDate>
+  </item><item>
     <title>自动驾驶</title>
     <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6</link>
     <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/%E4%B8%93%E9%A2%98%E7%B3%BB%E5%88%97/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8SecOC%E4%B8%8EOTA</guid>
     <description><![CDATA[ 专栏⑳·第9篇：网络安全——SecOC、HSM、OTA 安全 原始 Flomo：v.flomoapp.com/mine/ 专栏⑳·第9篇：网络安全——SecOC、HSM、OTA 安全 ▎ 为什么自动驾驶必须谈安全 车变成联网节点：OTA 刷写、V2X、远程诊断——攻击面打开。自动驾驶控制指令被篡改 = 直接安全事故。ISO 21434（汽车网络安全工程）。 ▎ 四类威胁与对策 通信被伪造（CAN 报文注入）→ SecOC：报文认证（CMAC）+ 新鲜度值（防重放）——接时间同步专题 固件被篡改 → 安全启动（Secure Boot）+ 签名校验——信任链 OTA 被劫持 → 双向认证 + 加密... ]]></description>
     <pubDate>Sat, 31 Oct 2026 08:15:49 GMT</pubDate>
-  </item><item>
-    <title>专栏⑳·第8篇：功能安全——ISO 26262、ASIL、冗余设计</title>
-    <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/%E4%B8%93%E9%A2%98%E7%B3%BB%E5%88%97/%E5%8A%9F%E8%83%BD%E5%AE%89%E5%85%A8%E4%B8%8EASIL</link>
-    <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/%E4%B8%93%E9%A2%98%E7%B3%BB%E5%88%97/%E5%8A%9F%E8%83%BD%E5%AE%89%E5%85%A8%E4%B8%8EASIL</guid>
-    <description><![CDATA[ 专栏⑳·第8篇：功能安全——ISO 26262、ASIL、冗余设计 原始 Flomo：v.flomoapp.com/mine/ 专栏⑳·第8篇：功能安全——ISO 26262、ASIL、冗余设计 ▎ 为什么自动驾驶是功能安全的重灾区 L3+ 系统接管驾驶，软件 / 硬件故障 = 直接人身伤害风险——ISO 26262 从「道路车辆电子电气系统功能安全」角度约束整个开发链。 ▎ ASIL 等级 由危害分析（HARA）评定：S（严重度）× E（暴露概率）× C（可控性）→ ASIL A/B/C/D ASIL D 最高（制动 / 转向），QM 最低（不涉及安全） 自动驾驶典型分配：感知融合 ASIL... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 08:14:44 GMT</pubDate>
   </item>
     </channel>
   </rss>
