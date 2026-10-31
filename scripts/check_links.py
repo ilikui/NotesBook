@@ -32,6 +32,22 @@ def is_page_candidate(path: str) -> bool:
     )
 
 
+def page_link_base(page: str, dirpath: str, site_root: str) -> str:
+    """返回 Quartz 生成相对链接时使用的页面基准目录。
+
+    Quartz 的 FolderPage 会把目录页写入 folder/index.html，但链接是按
+    目录 slug（folder）计算的，而不是按物理文件所在目录（folder/index.html）
+    计算。若直接使用 dirpath，会多算一层目录，造成静态资源和站内链接误报。
+    tags.html 同样对应 tags 这个虚拟 slug。
+    """
+    name = os.path.basename(page)
+    if name == "index.html":
+        return os.path.dirname(dirpath)
+    if name == "tags.html":
+        return os.path.join(site_root, "tags")
+    return dirpath
+
+
 def resolve(base_dir: str, url_path: str, site_root: str) -> str:
     """把链接解析成文件系统路径。"""
     target = urllib.parse.unquote(url_path)
@@ -68,7 +84,8 @@ def main() -> int:
                 url_path = url.split("#")[0].split("?")[0]
                 if not url_path:
                     continue
-                target_path = resolve(dirpath, url_path, site_root)
+                base_dir = page_link_base(page, dirpath, site_root)
+                target_path = resolve(base_dir, url_path, site_root)
                 if is_page_candidate(target_path):
                     continue
                 broken[url_path] += 1
