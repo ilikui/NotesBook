@@ -1928,5 +1928,7 @@
       "destination": "/tags/生成式AI",
       "permanent": true
     }
-  ]
+  ],
+  "buildCommand": "npx quartz build",
+  "outputDirectory": "public"
 }
