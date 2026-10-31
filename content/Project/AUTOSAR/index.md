@@ -70,6 +70,11 @@ flowchart TD
   E --> F
 ~~~~
 
+- [[1000问/SWC类型Q3-SWC配置]] —— SWC Port、Interface、Runnable 与部署配置。
+- [[1000问/SWC类型Q4-Runnable与Task映射]] —— Runnable 触发事件与 OS Task 映射。
+- [[1000问/OS调度Q2-DaVinci新增Task]] —— 在 DaVinci Configurator 中配置 OsTask。
+- [[1000问/工具链Q1-生成代码审计]] —— 配置到代码生成的可审计性与验证。
+
 ## MCAL 驱动配置
 
 - [[MCAL/Dma]] —— DMA 通道与数据搬运配置。
