@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>第29题-OTA安全防护</title>
+    <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/1000%E9%97%AE/%E7%AC%AC29%E9%A2%98-OTA%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4</link>
+    <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/1000%E9%97%AE/%E7%AC%AC29%E9%A2%98-OTA%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4</guid>
+    <description><![CDATA[ 自动驾驶 1000问 · 十 · 第 29 题：OTA 被劫持的后果，怎么防？ 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 自动驾驶 1000问 · 十 · 第 29 题：OTA 被劫持的后果，怎么防？ 先看后果：OTA 本质是「远程改代码」，一旦被劫持—— 可刷入恶意固件，控制刹车、转向、动力，直接变成安全事件。 可窃密钥、植后门、长期潜伏。 影响面大：一辆车的漏洞能顺着 OTA 通道扩散到整个车队，等于「一次成功攻击 = 召回级」。 攻击面在哪 传输链路：云端到车端（TLS 被降级、中间人）。 云侧：签名服务器、后台账号被入侵。 车端：下载后存储、校验、写入过程... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:40:04 GMT</pubDate>
+  </item><item>
     <title>第30题-安全启动信任链</title>
     <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/1000%E9%97%AE/%E7%AC%AC30%E9%A2%98-%E5%AE%89%E5%85%A8%E5%90%AF%E5%8A%A8%E4%BF%A1%E4%BB%BB%E9%93%BE</link>
     <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/1000%E9%97%AE/%E7%AC%AC30%E9%A2%98-%E5%AE%89%E5%85%A8%E5%90%AF%E5%8A%A8%E4%BF%A1%E4%BB%BB%E9%93%BE</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/%E5%8D%95%E7%89%87%E6%9C%BA%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97%E4%B8%8E%E6%A1%86%E6%9E%B6</guid>
     <description><![CDATA[ **单片机驱动开发指南与开发框架 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 ▎ 单片机驱动开发指南与开发框架 ▎ 驱动是什么 驱动 = 硬件和应用之间的中间层——上层不管寄存器，下层不管业务。「UART 轮询 → 中断 → 环形缓冲区」就是最典型的驱动演进路径。 ▎ 三层模型（对应 AUTOSAR MCAL 思路） 硬件抽象层：寄存器读写 + 位操作宏——芯片相关 外设驱动层：协议 / 时序（UART 帧、SPI 时序、I2C 时序）——外设相关 设备接口层：给应用的标准 API——应用相关 → 对应 AUTOSAR：MCAL → ECU 抽象 → 服务层 ▎ 开... ]]></description>
     <pubDate>Sat, 31 Oct 2026 07:38:44 GMT</pubDate>
-  </item><item>
-    <title>基础概念Q2-MCU与MPU选型</title>
-    <link>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5Q2-MCU%E4%B8%8EMPU%E9%80%89%E5%9E%8B</link>
-    <guid>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5Q2-MCU%E4%B8%8EMPU%E9%80%89%E5%9E%8B</guid>
-    <description><![CDATA[ 嵌入式 1000问 · 基础概念Q2：MCU 和 MPU 的核心区别是什么？什么时候该选 MCU，什么时候该选 MPU？ 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 嵌入式 1000问 · 基础概念Q2：MCU 和 MPU 的核心区别是什么？什么时候该选 MCU，什么时候该选 MPU？ ▎ 五大学习法：西蒙学习法——把「MCU vs MPU」钻透 一句话区别 MCU（Microcontroller Unit，微控制器）：把 CPU + Flash + RAM + 外设集成在一颗芯片里，本质是「一台完整的计算机」，上电就能跑程序。 MPU（Microprocessor... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:38:41 GMT</pubDate>
   </item>
     </channel>
   </rss>
