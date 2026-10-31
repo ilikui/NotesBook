@@ -6,65 +6,65 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>AUTOSAR</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/</guid>
-    <description><![CDATA[ AUTOSAR（AUTomotive Open System ARchitecture，汽车开放系统架构）是由全球主要汽车厂商、零部件供应商与半导体公司联合制定的汽车电子软件架构标准。它的目标是让汽车软件标准化、可复用、可跨平台移植，是当今智能汽车软件开发的行业基石。 一句话定位 AUTOSAR = 汽车软件的「操作系统级标准」：定义分层架构、组件模型、通信机制与开发流程，让不同厂商的软件能像积木一样拼装。 知识体系 flowchart TD A[AUTOSAR] --&gt; B[核心理念] A --&gt; C[软件架构] A --&gt; D[方法论] A --&gt; E[标准与规范]... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 08:00:20 GMT</pubDate>
+    <title>SPI 菊花链：多从机串联拓扑与时序</title>
+    <link>https://wiki.likui.info/Area/EE/%E8%BD%A6%E8%BD%BD%E9%80%9A%E4%BF%A1/1000%E9%97%AE/SPI%E8%8F%8A%E8%8A%B1%E9%93%BE%E5%A4%9A%E4%BB%8E%E6%9C%BA%E4%B8%B2%E8%81%94</link>
+    <guid>https://wiki.likui.info/Area/EE/%E8%BD%A6%E8%BD%BD%E9%80%9A%E4%BF%A1/1000%E9%97%AE/SPI%E8%8F%8A%E8%8A%B1%E9%93%BE%E5%A4%9A%E4%BB%8E%E6%9C%BA%E4%B8%B2%E8%81%94</guid>
+    <description><![CDATA[ SPI 菊花链——一根 CS 串起 N 个从机 原始 Flomo：v.flomoapp.com/mine/ SPI 菊花链——一根 CS 串起 N 个从机 ▎ 两种接法 并行：各从机独立 CS，共享 MOSI/MISO/SCK——从机多时 CS 不够用、MISO 负载重 菊花链：SDO 接下一级 SDI，像移位寄存器逐级传，全链只用一根 CS。典型：74HC595 级联、LED 驱动 ▎ 时序 一个 CS 周期内 SCK 打 8×N 拍（N = 从机数），数据从链头进、链尾回 命令按「末端先进」排序——先发的最后到链尾，写代码要倒着想 ▎ 用 vs 不用 用：从机多、CS 不够、芯片支持级联（... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 08:19:53 GMT</pubDate>
   </item><item>
-    <title>SWC-C-S调用并发与抢占</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC-C-S%E8%B0%83%E7%94%A8%E5%B9%B6%E5%8F%91%E4%B8%8E%E6%8A%A2%E5%8D%A0</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC-C-S%E8%B0%83%E7%94%A8%E5%B9%B6%E5%8F%91%E4%B8%8E%E6%8A%A2%E5%8D%A0</guid>
-    <description><![CDATA[ SW-C 设计与应用层实践 Q3：Client-Server 并发与抢占 原始 Flomo：v.flomoapp.com/mine/ SW-C 设计与应用层实践 Q3：Client 调了 Server 的 Operation，Server 还没返回时 Client 被抢占——会不会出问题？ 先区分两种 C/S 调用语义： 同步（synchronous）：Rte_Call 是阻塞调用，Client 发起后挂起，等 Server 完成才返回结果，RTE 保证结果正确传回。 异步（asynchronous）：发起后不等结果，Client 继续执行，结果通过 Rte_Result / Buffer 读... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:59:55 GMT</pubDate>
+    <title>自动驾驶</title>
+    <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6</link>
+    <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6</guid>
+    <description><![CDATA[ mindmap root((自动驾驶)) 自动驾驶分级 L1 驾驶辅助::icon(fa fa-car) :::结合单项辅助（如ACC自适应巡航、LKA车道保持） L2 部分自动化 :::人类全程监管（如Tesla FSD、主流城市NOA） L3 条件自动化 :::特定场景系统驾驶（系统请求时人类接管） L4 高度自动化 :::限定区域完全无须人类接管（如Robotaxi无人出租车） L5 完全自动化 :::全场景、全天候无条件完全自动驾驶（终极形态） 核心技术架构 环境感知层 传感器硬件::icon(fa fa-microchip) :::激光雷达 LiDAR :::高精摄像头 Camera... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 08:17:18 GMT</pubDate>
   </item><item>
-    <title>性能优化-RTE调用与PDU端到端开销</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-RTE%E8%B0%83%E7%94%A8%E4%B8%8EPDU%E7%AB%AF%E5%88%B0%E7%AB%AF%E5%BC%80%E9%94%80</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-RTE%E8%B0%83%E7%94%A8%E4%B8%8EPDU%E7%AB%AF%E5%88%B0%E7%AB%AF%E5%BC%80%E9%94%80</guid>
-    <description><![CDATA[ AUTOSAR 性能优化 Q1：RTE 调用开销与 PDU 端到端路径 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 性能优化 Q1：RTE 大量函数调用会不会影响性能？一个 PDU 从应用到总线，四层接口调用总开销大概多少？ 先给结论：会有一点开销，但 AUTOSAR 做了大量优化，实际可控，多数项目不用太担心函数调用本身。 关键性能机制（为什么开销可控）： 直接调用而非运行时分发：同 ECU 内通信，RTE 在编译期就把调用链接成「直接函数调用」，不做运行时查找。 优化编译：生成代码用 -O2 编译，多数函数内联、参数寄存器传递，开销显著下降。 信号打包：CO... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:59:47 GMT</pubDate>
+    <title>自动驾驶 15 项工程自检清单</title>
+    <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/%E4%B8%93%E9%A2%98%E7%B3%BB%E5%88%97/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B615%E9%A1%B9%E5%B7%A5%E7%A8%8B%E8%87%AA%E6%A3%80%E6%B8%85%E5%8D%95</link>
+    <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/%E4%B8%93%E9%A2%98%E7%B3%BB%E5%88%97/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B615%E9%A1%B9%E5%B7%A5%E7%A8%8B%E8%87%AA%E6%A3%80%E6%B8%85%E5%8D%95</guid>
+    <description><![CDATA[ 专栏⑳·第10篇：自动驾驶 15 项自检清单——上车前逐项打勾 原始 Flomo：v.flomoapp.com/mine/ 专栏⑳·第10篇：自动驾驶 15 项自检清单——上车前逐项打勾 ▎ 感知层（3 项） 传感器选型覆盖场景了吗？——高速看远（毫米波 + 前视）、城区看全（激光 + 环视）、泊车（超声波） 每个传感器的内参 / 外参标定验证过吗？（标错 = 融合全错） 恶劣天气兜底方案在不在？——摄像头失效时毫米波 / 雷达能不能独立撑住 ▎ 融合层（2 项） 4. ]]></description>
+    <pubDate>Sat, 31 Oct 2026 08:16:53 GMT</pubDate>
   </item><item>
-    <title>性能优化-多SWC调度表与Runnable顺序</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-%E5%A4%9ASWC%E8%B0%83%E5%BA%A6%E8%A1%A8%E4%B8%8ERunnable%E9%A1%BA%E5%BA%8F</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-%E5%A4%9ASWC%E8%B0%83%E5%BA%A6%E8%A1%A8%E4%B8%8ERunnable%E9%A1%BA%E5%BA%8F</guid>
-    <description><![CDATA[ AUTOSAR 性能优化 Q2：多 SW-C 调度表与 Runnable 顺序 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 性能优化 Q2：ECU 部署 50+ 个 SW-C——RTE 生成的 Schedule Table 什么样？Runnable 顺序怎么保证实时性？ 先明确：Schedule Table 是 OS 层的调度机制，RTE（SchM）负责把 runnable 组织进 Task。所以它不是「每个 SW-C 一个表项」，而是按 Task 组织 + 时间轴排布。 Schedule Table 长什么样： RTE 把大量 runnable 映射到若干 T... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:58:36 GMT</pubDate>
+    <title>专栏⑳·第9篇：网络安全——SecOC、HSM、OTA 安全</title>
+    <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/%E4%B8%93%E9%A2%98%E7%B3%BB%E5%88%97/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8SecOC%E4%B8%8EOTA</link>
+    <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/%E4%B8%93%E9%A2%98%E7%B3%BB%E5%88%97/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8SecOC%E4%B8%8EOTA</guid>
+    <description><![CDATA[ 专栏⑳·第9篇：网络安全——SecOC、HSM、OTA 安全 原始 Flomo：v.flomoapp.com/mine/ 专栏⑳·第9篇：网络安全——SecOC、HSM、OTA 安全 ▎ 为什么自动驾驶必须谈安全 车变成联网节点：OTA 刷写、V2X、远程诊断——攻击面打开。自动驾驶控制指令被篡改 = 直接安全事故。ISO 21434（汽车网络安全工程）。 ▎ 四类威胁与对策 通信被伪造（CAN 报文注入）→ SecOC：报文认证（CMAC）+ 新鲜度值（防重放）——接时间同步专题 固件被篡改 → 安全启动（Secure Boot）+ 签名校验——信任链 OTA 被劫持 → 双向认证 + 加密... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 08:15:49 GMT</pubDate>
   </item><item>
-    <title>BswM 模式管理深入 Q1：BswM 的「规则」在配置工具里怎么描述——if-then-else 还是状态机？</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/BswM-%E8%A7%84%E5%88%99%E4%B8%8E%E6%A8%A1%E5%BC%8F%E4%BB%B2%E8%A3%81</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/BswM-%E8%A7%84%E5%88%99%E4%B8%8E%E6%A8%A1%E5%BC%8F%E4%BB%B2%E8%A3%81</guid>
-    <description><![CDATA[ BswM 模式管理深入 Q1：BswM 的「规则」在配置工具里怎么描述——if-then-else 还是状态机？ 原始 Flomo：v.flomoapp.com/mine/ BswM 模式管理深入 Q1：BswM 的「规则」在配置工具里怎么描述——if-then-else 还是状态机？ 答：更接近 if-then-else 规则引擎，而不是状态机。 BswM 核心配置结构（都是条件-动作）： 模式请求源（BswMModeRequestSource / ModeRequestPort）：谁在请求模式——如 CanNm 请求通信模式、EcuM 请求运行模式。 规则（BswMRule）+ 条件（Bs... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:58:19 GMT</pubDate>
+    <title>专栏⑳·第8篇：功能安全——ISO 26262、ASIL、冗余设计</title>
+    <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/%E4%B8%93%E9%A2%98%E7%B3%BB%E5%88%97/%E5%8A%9F%E8%83%BD%E5%AE%89%E5%85%A8%E4%B8%8EASIL</link>
+    <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/%E4%B8%93%E9%A2%98%E7%B3%BB%E5%88%97/%E5%8A%9F%E8%83%BD%E5%AE%89%E5%85%A8%E4%B8%8EASIL</guid>
+    <description><![CDATA[ 专栏⑳·第8篇：功能安全——ISO 26262、ASIL、冗余设计 原始 Flomo：v.flomoapp.com/mine/ 专栏⑳·第8篇：功能安全——ISO 26262、ASIL、冗余设计 ▎ 为什么自动驾驶是功能安全的重灾区 L3+ 系统接管驾驶，软件 / 硬件故障 = 直接人身伤害风险——ISO 26262 从「道路车辆电子电气系统功能安全」角度约束整个开发链。 ▎ ASIL 等级 由危害分析（HARA）评定：S（严重度）× E（暴露概率）× C（可控性）→ ASIL A/B/C/D ASIL D 最高（制动 / 转向），QM 最低（不涉及安全） 自动驾驶典型分配：感知融合 ASIL... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 08:14:44 GMT</pubDate>
   </item><item>
-    <title>BswM 模式管理深入 Q2：Action List 能触发哪些操作？只改模式值，还是真能调用其他 BSW 模块接口？</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/BswM-ActionList%E5%8A%A8%E4%BD%9C%E8%8C%83%E5%9B%B4</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/BswM-ActionList%E5%8A%A8%E4%BD%9C%E8%8C%83%E5%9B%B4</guid>
-    <description><![CDATA[ BswM 模式管理深入 Q2：Action List 能触发哪些操作？只改模式值，还是真能调用其他 BSW 模块接口？ 原始 Flomo：v.flomoapp.com/mine/ BswM 模式管理深入 Q2：Action List 能触发哪些操作？只改模式值，还是真能调用其他 BSW 模块接口？ 答：两者都能。Action List 是 BswM 执行仲裁结果的手段，既能改模式值，也能真正调用其他 BSW 模块的接口。 BswM 的 Action（BswMAction）主要类型： 设置 / 修改模式值：设置自身或目标模块的模式——如把通信模式值传给 PduR、ComM、CanNm（BswMA... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:58:12 GMT</pubDate>
+    <title>专栏⑳·第7篇：计算平台——域控制器、SoC、Adaptive AUTOSAR</title>
+    <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/%E4%B8%93%E9%A2%98%E7%B3%BB%E5%88%97/%E8%AE%A1%E7%AE%97%E5%B9%B3%E5%8F%B0%E5%9F%9F%E6%8E%A7%E5%88%B6%E5%99%A8%E4%B8%8EAdaptive</link>
+    <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/%E4%B8%93%E9%A2%98%E7%B3%BB%E5%88%97/%E8%AE%A1%E7%AE%97%E5%B9%B3%E5%8F%B0%E5%9F%9F%E6%8E%A7%E5%88%B6%E5%99%A8%E4%B8%8EAdaptive</guid>
+    <description><![CDATA[ 专栏⑳·第7篇：计算平台——域控制器、SoC、Adaptive AUTOSAR 原始 Flomo：v.flomoapp.com/mine/ 专栏⑳·第7篇：计算平台——域控制器、SoC、Adaptive AUTOSAR ▎ 在整条链路的位置 感知 / 融合 / 决策 / 规划全要算力——计算平台是自动驾驶的算力心脏。从分布式 ECU 到域控到中央计算（接第1篇架构演进）。 ▎ 三层硬件 SoC（自动驾驶芯片）：Orin（254 TOPS）/ Thor（2000 TOPS）/ 华为昇腾——GPU / NPU 加速神经网络 MCU（安全控制）：TC3xx / S32K——执行控制、功能安全（ASI... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 08:14:41 GMT</pubDate>
   </item><item>
-    <title>变体管理 Q1：一套 AUTOSAR 代码适配高配 / 低配车——怎么做到不维护两套配置？</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%8F%98%E4%BD%93%E7%AE%A1%E7%90%86-%E9%AB%98%E4%BD%8E%E9%85%8D%E8%BD%A6%E5%9E%8B%E5%A4%8D%E7%94%A8</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%8F%98%E4%BD%93%E7%AE%A1%E7%90%86-%E9%AB%98%E4%BD%8E%E9%85%8D%E8%BD%A6%E5%9E%8B%E5%A4%8D%E7%94%A8</guid>
-    <description><![CDATA[ 变体管理 Q1：一套 AUTOSAR 代码适配高配 / 低配车——怎么做到不维护两套配置？ 原始 Flomo：v.flomoapp.com/mine/ 变体管理 Q1：一套 AUTOSAR 代码适配高配 / 低配车——怎么做到不维护两套配置？ 核心：不是维护两套配置，而是一套配置 + 变体条件（Variant Handling / Variant Point），按「当前激活的变体」解析出需要的部分。 三个关键概念： 变体点（Variant Point）：配置里「可以变化」的元素——一个参数、一个 PDU、一个 SW-C、一个端口、一条连接。 变体条件（Variant Condition）：用 ... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:57:59 GMT</pubDate>
+    <title>专栏⑳·第6篇：通信底座——车载以太网、TSN、SOME-IP</title>
+    <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/%E4%B8%93%E9%A2%98%E7%B3%BB%E5%88%97/%E9%80%9A%E4%BF%A1%E5%BA%95%E5%BA%A7%E8%BD%A6%E8%BD%BD%E4%BB%A5%E5%A4%AA%E7%BD%91TSN</link>
+    <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/%E4%B8%93%E9%A2%98%E7%B3%BB%E5%88%97/%E9%80%9A%E4%BF%A1%E5%BA%95%E5%BA%A7%E8%BD%A6%E8%BD%BD%E4%BB%A5%E5%A4%AA%E7%BD%91TSN</guid>
+    <description><![CDATA[ 专栏⑳·第6篇：通信底座——车载以太网、TSN、SOME-IP 原始 Flomo：v.flomoapp.com/mine/ 专栏⑳·第6篇：通信底座——车载以太网、TSN、SOME-IP ▎ 为什么自动驾驶要换通信底座 CAN 2.0 只有 1Mbps，连传感器原始数据都传不动（摄像头一帧就是 MB 级）。自动驾驶要三样：高带宽（传感器 / 地图 / 日志）、低延迟（实时控制）、确定性（时间同步）。 ▎ 三件套 车载以太网（100BASE-T1 / 1000BASE-T1）：单对双绞线、高带宽——接通信专栏⑫补充四 TSN（时间敏感网络）：确定性调度——802.1AS 时间同步、802.1Qb... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 08:14:38 GMT</pubDate>
   </item><item>
-    <title>变体管理 Q2：PreCompile / Link / PostBuild 三种变体处理——什么阶段决定变体？实车上靠诊断指令切换变体，选哪种？</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%8F%98%E4%BD%93%E7%AE%A1%E7%90%86-PreCompileLinkPostBuild</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%8F%98%E4%BD%93%E7%AE%A1%E7%90%86-PreCompileLinkPostBuild</guid>
-    <description><![CDATA[ 变体管理 Q2：PreCompile / Link / PostBuild 三种变体处理——什么阶段决定变体？实车上靠诊断指令切换变体，选哪种？ 原始 Flomo：v.flomoapp.com/mine/ 变体管理 Q2：PreCompile / Link / PostBuild 三种变体处理——什么阶段决定变体？实车上靠诊断指令切换变体，选哪种？ 三种方式按「决定变体的阶段」区分： PreCompile：编译前定死。生成代码 / 配置时按某个变体解析，后续不可换。适合变体早已确定、无需运行时切换的场景（按车型硬件固化）。 Link：链接阶段决定。生成代码把多个变体都编进去，链接时只选中一个（... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:57:52 GMT</pubDate>
+    <title>专栏⑳·第5篇：执行层——线控底盘（转向、制动、驱动）</title>
+    <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/%E4%B8%93%E9%A2%98%E7%B3%BB%E5%88%97/%E6%89%A7%E8%A1%8C%E5%B1%82%E7%BA%BF%E6%8E%A7%E5%BA%95%E7%9B%98</link>
+    <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/%E4%B8%93%E9%A2%98%E7%B3%BB%E5%88%97/%E6%89%A7%E8%A1%8C%E5%B1%82%E7%BA%BF%E6%8E%A7%E5%BA%95%E7%9B%98</guid>
+    <description><![CDATA[ 专栏⑳·第5篇：执行层——线控底盘（转向、制动、驱动） 原始 Flomo：v.flomoapp.com/mine/ 专栏⑳·第5篇：执行层——线控底盘（转向、制动、驱动） ▎ 在整条链路的位置 决策规划输出「目标轨迹」，执行层把它变成「实际车辆运动」——线控 = 电信号直接控制，没有机械直连。 ▎ 三个线控子系统 线控转向（SBW）：方向盘转角 / 扭矩传感器 → 电机驱动转向机——去掉转向柱机械连接（或保留冗余） 线控制动（BBW）：电子踏板 → 液压 / EMB（电子机械制动）——响应更快（150ms vs 传统 500ms） 线控驱动：电子油门 / 电驱——新能源天然线控（接电机控制专栏... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 08:14:35 GMT</pubDate>
   </item><item>
-    <title>E2E / 端到端通信保护深入 Q1：E2E Profile 1 到 7 的区别？Profile 1 和 Profile 5 用在什么安全等级？</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/E2E-Profile%E4%B8%8E%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/E2E-Profile%E4%B8%8E%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF</guid>
-    <description><![CDATA[ E2E / 端到端通信保护深入 Q1：E2E Profile 1 到 7 的区别？Profile 1 和 Profile 5 用在什么安全等级？ 原始 Flomo：v.flomoapp.com/mine/ E2E / 端到端通信保护深入 Q1：E2E Profile 1 到 7 的区别？Profile 1 和 Profile 5 用在什么安全等级？ 先厘清：E2E 是 ISO 26262 下保护通信数据完整性的机制（E2ELib），Profile 是它定义的不同「保护方案」——区别在「提供哪些保护机制」和「支持的数据长度」。 各 Profile 的核心差异维度： 是否带 CRC、几位 CRC：... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:56:41 GMT</pubDate>
+    <title>专栏⑳·第4篇：决策规划——预测、行为决策、轨迹规划</title>
+    <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/%E4%B8%93%E9%A2%98%E7%B3%BB%E5%88%97/%E5%86%B3%E7%AD%96%E8%A7%84%E5%88%92</link>
+    <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/%E4%B8%93%E9%A2%98%E7%B3%BB%E5%88%97/%E5%86%B3%E7%AD%96%E8%A7%84%E5%88%92</guid>
+    <description><![CDATA[ 专栏⑳·第4篇：决策规划——预测、行为决策、轨迹规划 原始 Flomo：v.flomoapp.com/mine/ 专栏⑳·第4篇：决策规划——预测、行为决策、轨迹规划 ▎ 在整条链路的位置 感知回答了「现在世界什么样」，决策规划要回答「接下来怎么动」——预测别人、决定自己、规划路径。 ▎ 三个层级 全局路径规划：起点到终点（导航地图层面）——A* / Dijkstra / RRT 行为决策：下一步动作（跟车 / 变道 / 超车 / 停车 / 让行）——状态机 / 规则 / 学习 局部轨迹规划：未来几秒的具体轨迹（位置 / 速度 / 曲率随时间）——Frenet 坐标系 + 采样 / 优化 ▎ ... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 08:13:13 GMT</pubDate>
   </item><item>
-    <title>E2E / 端到端通信保护深入 Q2：E2E 报文到达但 CRC 校验失败——丢弃还是用上次有效值？AUTOSAR 推荐做法？</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/E2E-CRC%E5%A4%B1%E8%B4%A5%E6%97%B6%E7%9A%84%E6%8E%A5%E6%94%B6%E7%AD%96%E7%95%A5</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/E2E-CRC%E5%A4%B1%E8%B4%A5%E6%97%B6%E7%9A%84%E6%8E%A5%E6%94%B6%E7%AD%96%E7%95%A5</guid>
-    <description><![CDATA[ E2E / 端到端通信保护深入 Q2：E2E 报文到达但 CRC 校验失败——丢弃还是用上次有效值？AUTOSAR 推荐做法？ 原始 Flomo：v.flomoapp.com/mine/ E2E / 端到端通信保护深入 Q2：E2E 报文到达但 CRC 校验失败——丢弃还是用上次有效值？AUTOSAR 推荐做法？ 先分清：E2E 库只负责「检测 + 报告」，不替应用决定用哪个值。 推荐流程： E2E check（E2E_PXXCheck）返回状态：OK / REPEATED / WRONGSEQUENCE / ERROR / NONEWDATA 等。 CRC 校验失败 → 状态 ERROR。此... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:56:38 GMT</pubDate>
+    <title>专栏⑳·第3篇：感知融合——多传感器时间与空间对齐</title>
+    <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/%E4%B8%93%E9%A2%98%E7%B3%BB%E5%88%97/%E5%A4%9A%E4%BC%A0%E6%84%9F%E5%99%A8%E8%9E%8D%E5%90%88</link>
+    <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/%E4%B8%93%E9%A2%98%E7%B3%BB%E5%88%97/%E5%A4%9A%E4%BC%A0%E6%84%9F%E5%99%A8%E8%9E%8D%E5%90%88</guid>
+    <description><![CDATA[ 专栏⑳·第3篇：感知融合——多传感器时间与空间对齐 原始 Flomo：v.flomoapp.com/mine/ 专栏⑳·第3篇：感知融合——多传感器时间与空间对齐 ▎ 为什么需要融合 单传感器都有盲区：摄像头怕雨雾、雷达分不清类型、激光怕大雨。融合 = 拿一个的强补另一个的弱，1+1&gt;2。 ▎ 融合的两个地基 空间对齐：所有传感器坐标系统一到车体坐标系——外参标定（每个传感器相对车体的旋转 + 平移）；标错 = 融合目标位置偏 时间对齐：不同传感器帧率不同（摄像头 30fps、激光 10Hz、雷达 20Hz）——用时间戳插值/外推到统一时刻；时间不同步 = 运动目标位置错位（接时间同步专... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 08:13:10 GMT</pubDate>
   </item>
     </channel>
   </rss>
