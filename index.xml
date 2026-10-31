@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>AUTOSAR MCAL 配置说明 · 模块⑧ Gpt</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Gpt</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Gpt</guid>
+    <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块⑧ Gpt 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块⑧ Gpt Gpt（通用定时器）驱动，提供定时功能——周期性超时、单次定时、延时、时基，常用于产生周期中断或定时触发。 核心职责：启停定时、读取已过/剩余时间、定时超时回调。 关键配置项： GptChannelConfiguration：通道配置（映射到定时器通道）。 GptChannelMode：通道模式——连续（循环）/ 单次模式。 GptChannelTickFrequency：定时器 tick 频率。 GptChannelTic... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:48:56 GMT</pubDate>
+  </item><item>
+    <title>AUTOSAR MCAL 配置说明 · 模块⑨ Can</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Can</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Can</guid>
+    <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块⑨ Can 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块⑨ Can Can 是 CAN 通信驱动（MCAL 层），负责硬件 CAN 控制器的初始化、报文收发、控制器模式、Bus-off 处理。注意它只做帧级收发，上层 CAN 帧 ID 管理 / PDU 映射由 CanIf / CanNm / CanTp 等其他通信栈模块负责。 核心职责：控制器初始化、报文收发、模式切换、错误 / Bus-off 处理。 关键配置项： CanController：每个 CAN 控制器一个配置。 CanCont... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:48:53 GMT</pubDate>
+  </item><item>
     <title>AUTOSAR MCAL 配置说明 · 模块⑩ CanTrcv</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/CanTrcv</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/CanTrcv</guid>
@@ -53,18 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Dma</guid>
     <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块⑯ Dma（可选） 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块⑯ Dma（可选） Dma（直接内存访问）驱动是 可选模块，配置 DMA 硬件实现数据在内存与外设、内存与内存之间的直接传输，减轻 CPU 负担。常用于 ADC 采样数据搬移、SPI/串口收发缓冲、内存拷贝。 核心职责：DMA 通道启停、传输配置、完成中断回调。 关键配置项： DmaChannelConfiguration：DMA 通道配置（通道号）。 DmaChannelMode：传输模式（单次 / 循环 / 周期）。 Dma... ]]></description>
     <pubDate>Sat, 31 Oct 2026 07:47:14 GMT</pubDate>
-  </item><item>
-    <title>AUTOSAR 1000问：OS 调度与 SWC 工程补充</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/OS%E8%B0%83%E5%BA%A6%E4%B8%8ESWC%E5%B7%A5%E7%A8%8B%E8%A1%A5%E5%85%85</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/OS%E8%B0%83%E5%BA%A6%E4%B8%8ESWC%E5%B7%A5%E7%A8%8B%E8%A1%A5%E5%85%85</guid>
-    <description><![CDATA[ AUTOSAR 1000问：OS 调度与 SWC 工程补充 本页补充四篇 Flomo 原始问答，保留原始内容与来源链接，作为现有专题的工程实践扩展。 OS&amp;调度 Q4：OS 的保护与错误处理 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 1000问 · OS&amp;调度Q4：OS 的保护与错误处理怎么做？ ▎ 五大学习法：费曼——把保护讲成「在任务跑飞、栈被踩穿之前拦住它」 费曼（一句话本质）：OS 得在任务跑飞、栈被踩穿之前拦住它，把错误收进一个统一的处理入口，别让整块 ECU 直接挂掉。 SQ3R（去哪找） Configurator 的 Os 模块：... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:46:25 GMT</pubDate>
-  </item><item>
-    <title>AUTOSAR 1000问：网络管理、诊断、存储与实时操作系统</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E8%AF%8A%E6%96%AD%E5%AD%98%E5%82%A8%E4%B8%8EOS</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E8%AF%8A%E6%96%AD%E5%AD%98%E5%82%A8%E4%B8%8EOS</guid>
-    <description><![CDATA[ AUTOSAR 1000问：网络管理、诊断、存储与实时操作系统 本篇迁移第二批 10 张 Flomo 问答卡，覆盖唤醒源、EcuM/BswM、总线睡眠、DTC、诊断会话、安全访问、NvM 异步回调与掉电保护、OS 实时调度和功能安全。 一、网络管理 Q11. ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:46:11 GMT</pubDate>
   </item>
     </channel>
   </rss>
