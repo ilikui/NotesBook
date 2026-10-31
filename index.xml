@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>1000问知识体系</title>
+    <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
+    <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
+    <description><![CDATA[ 1000问知识体系 这里集中整理 Flomo 中长期积累的「1000问 / 1000题 / 10000问」问题库、逐题解答和专题卡片。目标不是只保存题目，而是把每个问题沉淀为可检索、可验证、可复用的知识单元。 迁移原则：保留问题原意；合并重复题但记录关联；答案给出原理、适用边界和验证方法；技术内容尽量附 Mermaid 图；未核验的结论明确标注待核验。Flomo 原笔记暂不删除。 知识迁移流程 flowchart TD A[Flomo 原始笔记] --&gt; B[检索与盘点] B --&gt; C[按主题归类] C --&gt; D[识别重复问题] D --&gt; E[读取完整原文] E ... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 01:10:13 GMT</pubDate>
+  </item><item>
     <title>微信读书</title>
     <link>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</link>
     <guid>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</guid>
@@ -58,12 +64,6 @@
     <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/BSWDistributionGuide</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/BSWDistributionGuide</guid>
     <description><![CDATA[ BSWDistributionGuide 是 CP 解释性指南（EXP），讲清一个核心问题：基础软件（BSW）如何分布到多核 CPU 的不同分区（Partition）上，以及在功能安全场景下如何做分区隔离与内存保护。它分两部分：多核分布与安全分布。 一句话定位 学 CP 的第一站：先理解「BSW 怎么摆到多核 / 分区分核」，后面所有模块的部署都以它为背景。 规范信息 项目内容平台CP类别EXP — 解释性指南（Explanation）UID631版本R25-11本地 PDFAUTOSAR_CP_EXP_BSWDistributionGuide.pdf纯文本全文CP_EXP_BSWDistri... ]]></description>
-    <pubDate>Fri, 30 Oct 2026 11:26:38 GMT</pubDate>
-  </item><item>
-    <title>BSWModeManager</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/BSWModeManager</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/BSWModeManager</guid>
-    <description><![CDATA[ BswM（BSW Mode Manager，BSW 模式管理） 是 CP 基础软件模块，实现整车模式管理（Vehicle Mode Management）与应用模式管理（Application Mode Management）中位于 BSW 的那一部分：它按简单规则仲裁来自应用层 SWC 或其它 BSW 模块的模式请求，并依据仲裁结果执行动作。 一句话定位 模式管理的「规则引擎」：把各方模式请求按规则裁决，再触发一串配置好的动作。 规范信息 项目内容平台CP类别SWS — 软件模块规范（Software Specification）UID313版本R25-11本地 PDFAUTOSAR_CP_... ]]></description>
     <pubDate>Fri, 30 Oct 2026 11:26:38 GMT</pubDate>
   </item>
     </channel>
