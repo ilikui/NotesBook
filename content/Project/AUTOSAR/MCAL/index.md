@@ -39,3 +39,7 @@ MCAL（微控制器抽象层）是 AUTOSAR 最底层、唯一碰寄存器/硬件
 📎 专题入口：<https://v.flomoapp.com/mine/?memo_id=MjU1NzIwMTcx>
 
 #Area/技术/AUTOSAR/MCAL
+
+## 配置示例
+
+- [Port 参数化配置示例](Port-配置示例.md) —— 引脚复用、方向、电平与外设功能示例；具体数值需按芯片手册调整。
