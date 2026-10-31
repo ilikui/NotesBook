@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>多文件组织Q3-前置声明与头文件依赖</title>
+    <link>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E5%A4%9A%E6%96%87%E4%BB%B6%E7%BB%84%E7%BB%87Q3-%E5%89%8D%E7%BD%AE%E5%A3%B0%E6%98%8E%E4%B8%8E%E5%A4%B4%E6%96%87%E4%BB%B6%E4%BE%9D%E8%B5%96</link>
+    <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E5%A4%9A%E6%96%87%E4%BB%B6%E7%BB%84%E7%BB%87Q3-%E5%89%8D%E7%BD%AE%E5%A3%B0%E6%98%8E%E4%B8%8E%E5%A4%B4%E6%96%87%E4%BB%B6%E4%BE%9D%E8%B5%96</guid>
+    <description><![CDATA[ C语言 1000问 · 多文件组织Q3：前置声明与头文件依赖 来源：Flomo 原始笔记｜查看原笔记｜归档日期：2026-10-31 ▎ 五大学习法：西蒙学习法——把「前置声明」钻透 什么是前置声明 在真正需要完整定义之前，先告诉编译器有这么个类型 / 函数。 常见形式：函数前置声明 int foo(int, char);；结构体前置声明 struct Node;。 为什么有用 很多场景只需要指针到某个类型，不需要它的完整定义。 只要用到的是指向 struct 的指针，就不必 include 定义它的头文件——用 struct Node; 就够。 怎么减少头文件依赖、加快编译 头文件里只留指针... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:37:32 GMT</pubDate>
+  </item><item>
+    <title>未定义行为专题-Q1-Q4</title>
+    <link>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E6%9C%AA%E5%AE%9A%E4%B9%89%E8%A1%8C%E4%B8%BA%E4%B8%93%E9%A2%98-Q1-Q4</link>
+    <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E6%9C%AA%E5%AE%9A%E4%B9%89%E8%A1%8C%E4%B8%BA%E4%B8%93%E9%A2%98-Q1-Q4</guid>
+    <description><![CDATA[ C语言 1000问｜未定义行为专题（Q1–Q4） 来源：Flomo 原始笔记；本页按问题顺序整理，保留原笔记的核心解释、示例与实践建议。 Q1：什么是未定义行为 Q2：序列点与求值顺序 Q3：严格别名规则 Q4：有符号溢出与符号转换 Q1：什么是未定义行为（UB）？ Flomo 原文 ▎ 五大学习法：西蒙学习法——把「UB」钻透 什么是未定义行为（UB） C 标准对某些程序行为「不做任何保证」——标准没说会发生什么，编译器可以任意处理（看起来正常、崩溃、静默算错、甚至把整段代码优化掉）。 UB 不是「结果随机」，而是「标准不约束，实现不保证」。 相邻概念：未指定行为（unspecified，几... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:37:28 GMT</pubDate>
+  </item><item>
     <title>Makefile 100问：从 GNU Make 语法到嵌入式 AUTOSAR 构建</title>
     <link>https://wiki.likui.info/Area/EE/%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F/Makefile100%E9%97%AE</link>
     <guid>https://wiki.likui.info/Area/EE/%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F/Makefile100%E9%97%AE</guid>
@@ -53,18 +65,6 @@
     <guid>https://wiki.likui.info/Project/%E8%80%83%E8%AF%95%E7%AE%A1%E7%90%86/%E8%BD%AF%E8%80%83%E9%AB%98%E7%BA%A71000%E9%97%AE/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%8D%81%E5%A4%A7%E7%9F%A5%E8%AF%86%E5%9F%9F%E4%B8%8E%E6%A1%88%E4%BE%8B%E8%AE%A1%E7%AE%97</guid>
     <description><![CDATA[ 项目管理师1000问：十大知识域、项目治理与案例计算 本篇迁移信息系统项目管理师题库第二批 25 道问答，覆盖信息化规划、整体/范围/进度/成本/质量、人力、沟通、风险、采购、干系人、法律合规和案例分析。项目管理术语按通用知识体系整理，具体考试版本与法规条款以当年官方材料为准。 一、信息化与项目启动 Q21. ]]></description>
     <pubDate>Sat, 31 Oct 2026 01:43:29 GMT</pubDate>
-  </item><item>
-    <title>系统架构师1000问：体系结构、数据库、网络安全与设计</title>
-    <link>https://wiki.likui.info/Project/%E8%80%83%E8%AF%95%E7%AE%A1%E7%90%86/%E8%BD%AF%E8%80%83%E9%AB%98%E7%BA%A71000%E9%97%AE/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%B8%88%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BD%91%E7%BB%9C%E4%B8%8E%E8%AE%BE%E8%AE%A1</link>
-    <guid>https://wiki.likui.info/Project/%E8%80%83%E8%AF%95%E7%AE%A1%E7%90%86/%E8%BD%AF%E8%80%83%E9%AB%98%E7%BA%A71000%E9%97%AE/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%B8%88%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BD%91%E7%BB%9C%E4%B8%8E%E8%AE%BE%E8%AE%A1</guid>
-    <description><![CDATA[ 系统架构师1000问：体系结构、数据库、网络安全与设计 本篇迁移系统架构师题库第二批 27 道问答，覆盖计算机组成、存储管理、数据库、嵌入式、网络安全、软件架构、UML 和可靠性分析。考试术语应以当年大纲和指定教材版本为准，以下答案用于理解原理。 一、计算机组成与操作系统 Q35. ]]></description>
-    <pubDate>Sat, 31 Oct 2026 01:42:52 GMT</pubDate>
-  </item><item>
-    <title>软考高级1000问：系统架构师、项目管理师与真题解析</title>
-    <link>https://wiki.likui.info/Project/%E8%80%83%E8%AF%95%E7%AE%A1%E7%90%86/%E8%BD%AF%E8%80%83%E9%AB%98%E7%BA%A71000%E9%97%AE/%E7%9C%9F%E9%A2%98%E8%A7%A3%E6%9E%90%E8%AE%BA%E6%96%87%E4%B8%8E%E5%A4%87%E8%80%83%E7%AD%96%E7%95%A5</link>
-    <guid>https://wiki.likui.info/Project/%E8%80%83%E8%AF%95%E7%AE%A1%E7%90%86/%E8%BD%AF%E8%80%83%E9%AB%98%E7%BA%A71000%E9%97%AE/%E7%9C%9F%E9%A2%98%E8%A7%A3%E6%9E%90%E8%AE%BA%E6%96%87%E4%B8%8E%E5%A4%87%E8%80%83%E7%AD%96%E7%95%A5</guid>
-    <description><![CDATA[ 软考高级1000问：系统架构师、项目管理师与真题解析 本篇迁移软考相关的 10 道测试题、3 道实践专题和学习计划。考试科目、题型、分值和论文要求可能随年度政策调整，实际备考以当年官方考试说明为准。 一、系统架构师测试题 Q21. ]]></description>
-    <pubDate>Sat, 31 Oct 2026 01:42:02 GMT</pubDate>
   </item>
     </channel>
   </rss>
