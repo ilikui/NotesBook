@@ -63,3 +63,8 @@ flowchart TD
 - [[STM32]]
 - [[MCU]]
 - [[看门狗]]
+
+
+## 深入阅读
+
+- [[RTOS/RTOS内核从裸机到任务调度]] —— 从裸机 super-loop 过渡到 RTOS：任务状态机、调度、上下文切换、同步互斥与 ISR 约束。
