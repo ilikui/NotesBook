@@ -1,0 +1,1932 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/archive",
+      "destination": "/Archive/",
+      "permanent": true
+    },
+    {
+      "source": "/archive/",
+      "destination": "/Archive/",
+      "permanent": true
+    },
+    {
+      "source": "/archive/archive",
+      "destination": "/Archive/Archive",
+      "permanent": true
+    },
+    {
+      "source": "/area",
+      "destination": "/Area/",
+      "permanent": true
+    },
+    {
+      "source": "/area/",
+      "destination": "/Area/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ai",
+      "destination": "/Area/AI/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ai/",
+      "destination": "/Area/AI/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ai/1000问",
+      "destination": "/Area/AI/1000问/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ai/1000问/",
+      "destination": "/Area/AI/1000问/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ai/1000问/大模型rag与智能体基础",
+      "destination": "/Area/AI/1000问/大模型RAG与智能体基础",
+      "permanent": true
+    },
+    {
+      "source": "/area/ai/1000问/端侧智能内容治理知识闭环与具身智能",
+      "destination": "/Area/AI/1000问/端侧智能内容治理知识闭环与具身智能",
+      "permanent": true
+    },
+    {
+      "source": "/area/ai/ai专业方向",
+      "destination": "/Area/AI/AI专业方向",
+      "permanent": true
+    },
+    {
+      "source": "/area/ai/ai书籍与课程",
+      "destination": "/Area/AI/AI书籍与课程",
+      "permanent": true
+    },
+    {
+      "source": "/area/ai/ai工程与部署",
+      "destination": "/Area/AI/AI工程与部署",
+      "permanent": true
+    },
+    {
+      "source": "/area/ai/ai论文与数据集",
+      "destination": "/Area/AI/AI论文与数据集",
+      "permanent": true
+    },
+    {
+      "source": "/area/ai/ai项目实战路线",
+      "destination": "/Area/AI/AI项目实战路线",
+      "permanent": true
+    },
+    {
+      "source": "/area/ai/github开源学习项目",
+      "destination": "/Area/AI/GitHub开源学习项目",
+      "permanent": true
+    },
+    {
+      "source": "/area/ai/nlp与自然语言处理实战",
+      "destination": "/Area/AI/NLP与自然语言处理实战",
+      "permanent": true
+    },
+    {
+      "source": "/area/ai/人工智能",
+      "destination": "/Area/AI/人工智能",
+      "permanent": true
+    },
+    {
+      "source": "/area/ai/大模型与rag实战手册",
+      "destination": "/Area/AI/大模型与RAG实战手册",
+      "permanent": true
+    },
+    {
+      "source": "/area/ai/强化学习实战路线",
+      "destination": "/Area/AI/强化学习实战路线",
+      "permanent": true
+    },
+    {
+      "source": "/area/ai/推荐系统与搜索实战",
+      "destination": "/Area/AI/推荐系统与搜索实战",
+      "permanent": true
+    },
+    {
+      "source": "/area/ai/数学与python基础",
+      "destination": "/Area/AI/数学与Python基础",
+      "permanent": true
+    },
+    {
+      "source": "/area/ai/智能体",
+      "destination": "/Area/AI/智能体",
+      "permanent": true
+    },
+    {
+      "source": "/area/ai/机器人与具身智能实战",
+      "destination": "/Area/AI/机器人与具身智能实战",
+      "permanent": true
+    },
+    {
+      "source": "/area/ai/机器学习",
+      "destination": "/Area/AI/机器学习",
+      "permanent": true
+    },
+    {
+      "source": "/area/ai/机器学习实验手册",
+      "destination": "/Area/AI/机器学习实验手册",
+      "permanent": true
+    },
+    {
+      "source": "/area/ai/深度学习",
+      "destination": "/Area/AI/深度学习",
+      "permanent": true
+    },
+    {
+      "source": "/area/ai/深度学习实验手册",
+      "destination": "/Area/AI/深度学习实验手册",
+      "permanent": true
+    },
+    {
+      "source": "/area/ai/生成式ai与大模型",
+      "destination": "/Area/AI/生成式AI与大模型",
+      "permanent": true
+    },
+    {
+      "source": "/area/ai/计算机视觉实战路线",
+      "destination": "/Area/AI/计算机视觉实战路线",
+      "permanent": true
+    },
+    {
+      "source": "/area/ai/语音与音频ai实战",
+      "destination": "/Area/AI/语音与音频AI实战",
+      "permanent": true
+    },
+    {
+      "source": "/area/area",
+      "destination": "/Area/Area",
+      "permanent": true
+    },
+    {
+      "source": "/area/cs",
+      "destination": "/Area/CS/",
+      "permanent": true
+    },
+    {
+      "source": "/area/cs/",
+      "destination": "/Area/CS/",
+      "permanent": true
+    },
+    {
+      "source": "/area/cs/1000问",
+      "destination": "/Area/CS/1000问/",
+      "permanent": true
+    },
+    {
+      "source": "/area/cs/1000问/",
+      "destination": "/Area/CS/1000问/",
+      "permanent": true
+    },
+    {
+      "source": "/area/cs/1000问/数据结构算法基础与线性结构",
+      "destination": "/Area/CS/1000问/数据结构算法基础与线性结构",
+      "permanent": true
+    },
+    {
+      "source": "/area/cs/cs",
+      "destination": "/Area/CS/CS",
+      "permanent": true
+    },
+    {
+      "source": "/area/cs/必学工具",
+      "destination": "/Area/CS/必学工具",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee",
+      "destination": "/Area/EE/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/",
+      "destination": "/Area/EE/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/1000问",
+      "destination": "/Area/EE/1000问/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/1000问/",
+      "destination": "/Area/EE/1000问/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/1000问/启动时钟链接外设中断与可靠性",
+      "destination": "/Area/EE/1000问/启动时钟链接外设中断与可靠性",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/1000问/基础系统mcu与处理器架构",
+      "destination": "/Area/EE/1000问/基础系统MCU与处理器架构",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/51单片机",
+      "destination": "/Area/EE/51单片机",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/arm",
+      "destination": "/Area/EE/ARM",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/cpp",
+      "destination": "/Area/EE/CPP",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/c语言",
+      "destination": "/Area/EE/C语言",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/c语言/",
+      "destination": "/Area/EE/C语言/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/c语言/1000问",
+      "destination": "/Area/EE/C语言/1000问/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/c语言/1000问/",
+      "destination": "/Area/EE/C语言/1000问/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/c语言/1000问/位操作预处理内存分配与autosar",
+      "destination": "/Area/EE/C语言/1000问/位操作预处理内存分配与AUTOSAR",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/c语言/1000问/内存模型可移植性与并发",
+      "destination": "/Area/EE/C语言/1000问/内存模型可移植性与并发",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/c语言/1000问/函数存储预处理与文件io",
+      "destination": "/Area/EE/C语言/1000问/函数存储预处理与文件IO",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/c语言/1000问/基础语法指针与未定义行为",
+      "destination": "/Area/EE/C语言/1000问/基础语法指针与未定义行为",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/c语言/1000问/指针数组结构体与位图",
+      "destination": "/Area/EE/C语言/1000问/指针数组结构体与位图",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/ee",
+      "destination": "/Area/EE/EE",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/linux",
+      "destination": "/Area/EE/Linux",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/matlab",
+      "destination": "/Area/EE/MATLAB/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/matlab/",
+      "destination": "/Area/EE/MATLAB/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/matlab/10000问",
+      "destination": "/Area/EE/MATLAB/10000问/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/matlab/10000问/",
+      "destination": "/Area/EE/MATLAB/10000问/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/matlab/10000问/oop并行图像深度学习与测试",
+      "destination": "/Area/EE/MATLAB/10000问/OOP并行图像深度学习与测试",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/matlab/10000问/simulink建模控制系统与物理仿真",
+      "destination": "/Area/EE/MATLAB/10000问/Simulink建模控制系统与物理仿真",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/matlab/10000问/代码生成验证定点与实时hil",
+      "destination": "/Area/EE/MATLAB/10000问/代码生成验证定点与实时HIL",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/matlab/10000问/基础语法矩阵与simulink建模",
+      "destination": "/Area/EE/MATLAB/10000问/基础语法矩阵与Simulink建模",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/matlab/10000问/矩阵可视化数值计算与信号处理",
+      "destination": "/Area/EE/MATLAB/10000问/矩阵可视化数值计算与信号处理",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/mcu",
+      "destination": "/Area/EE/MCU",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/rtos",
+      "destination": "/Area/EE/RTOS",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/stm32",
+      "destination": "/Area/EE/STM32",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/x86",
+      "destination": "/Area/EE/X86",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/人工智能",
+      "destination": "/Area/EE/人工智能",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/单片机介绍",
+      "destination": "/Area/EE/单片机介绍",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/处理器架构",
+      "destination": "/Area/EE/处理器架构",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/工业互联网",
+      "destination": "/Area/EE/工业互联网",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/工具",
+      "destination": "/Area/EE/工具",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/常用芯片手册",
+      "destination": "/Area/EE/常用芯片手册",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/操作系统",
+      "destination": "/Area/EE/操作系统",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/数字电路",
+      "destination": "/Area/EE/数字电路",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/数学",
+      "destination": "/Area/EE/数学",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/数学/",
+      "destination": "/Area/EE/数学/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/数学/1000问",
+      "destination": "/Area/EE/数学/1000问/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/数学/1000问/",
+      "destination": "/Area/EE/数学/1000问/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/数学/1000问/微积分线代与概率论工程实战",
+      "destination": "/Area/EE/数学/1000问/微积分线代与概率论工程实战",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/数学/1000问/马尔可夫链平稳分布与mcmc",
+      "destination": "/Area/EE/数学/1000问/马尔可夫链平稳分布与MCMC",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/数据结构与算法",
+      "destination": "/Area/EE/数据结构与算法",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/新能源汽车",
+      "destination": "/Area/EE/新能源汽车",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/构建系统",
+      "destination": "/Area/EE/构建系统/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/构建系统/",
+      "destination": "/Area/EE/构建系统/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/构建系统/makefile100问",
+      "destination": "/Area/EE/构建系统/Makefile100问",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/模拟电路",
+      "destination": "/Area/EE/模拟电路",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/求职招聘",
+      "destination": "/Area/EE/求职招聘",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/测试",
+      "destination": "/Area/EE/测试",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/电子基础",
+      "destination": "/Area/EE/电子基础",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/电气工程",
+      "destination": "/Area/EE/电气工程/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/电气工程/",
+      "destination": "/Area/EE/电气工程/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/电气工程/10000问",
+      "destination": "/Area/EE/电气工程/10000问/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/电气工程/10000问/",
+      "destination": "/Area/EE/电气工程/10000问/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/电气工程/10000问/传感器电力系统控制电机与plc",
+      "destination": "/Area/EE/电气工程/10000问/传感器电力系统控制电机与PLC",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/电气工程/10000问/信号智能电网plc与新能源",
+      "destination": "/Area/EE/电气工程/10000问/信号智能电网PLC与新能源",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/电气工程/10000问/电力系统传感器信号与安全",
+      "destination": "/Area/EE/电气工程/10000问/电力系统传感器信号与安全",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/电气工程/10000问/电力系统继电保护高压与emc",
+      "destination": "/Area/EE/电气工程/10000问/电力系统继电保护高压与EMC",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/电气工程/10000问/电路模拟与数字电子基础",
+      "destination": "/Area/EE/电气工程/10000问/电路模拟与数字电子基础",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/电气工程/10000问/继电保护电驱逆变与步进电机",
+      "destination": "/Area/EE/电气工程/10000问/继电保护电驱逆变与步进电机",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/电气工程/10000问/自动控制电机拖动与foc",
+      "destination": "/Area/EE/电气工程/10000问/自动控制电机拖动与FOC",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/看门狗",
+      "destination": "/Area/EE/看门狗",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/程序员修养",
+      "destination": "/Area/EE/程序员修养",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/自动驾驶",
+      "destination": "/Area/EE/自动驾驶",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/自动驾驶/",
+      "destination": "/Area/EE/自动驾驶/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/自动驾驶/1000问",
+      "destination": "/Area/EE/自动驾驶/1000问/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/自动驾驶/1000问/",
+      "destination": "/Area/EE/自动驾驶/1000问/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/自动驾驶/1000问/分级感知与多传感器融合",
+      "destination": "/Area/EE/自动驾驶/1000问/分级感知与多传感器融合",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/自动驾驶/1000问/规划决策线控与车载网络",
+      "destination": "/Area/EE/自动驾驶/1000问/规划决策线控与车载网络",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/自动驾驶/1000问/计算平台功能安全与网络安全",
+      "destination": "/Area/EE/自动驾驶/1000问/计算平台功能安全与网络安全",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/自动驾驶/1000问/验证体系数据闭环与端到端",
+      "destination": "/Area/EE/自动驾驶/1000问/验证体系数据闭环与端到端",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/自动驾驶学习",
+      "destination": "/Area/EE/自动驾驶学习",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/英语",
+      "destination": "/Area/EE/英语",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/行业报告",
+      "destination": "/Area/EE/行业报告",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/计算机组成原理",
+      "destination": "/Area/EE/计算机组成原理",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/计算机网络",
+      "destination": "/Area/EE/计算机网络",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/设计模式",
+      "destination": "/Area/EE/设计模式",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/车载通信",
+      "destination": "/Area/EE/车载通信/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/车载通信/",
+      "destination": "/Area/EE/车载通信/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/车载通信/1000问",
+      "destination": "/Area/EE/车载通信/1000问/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/车载通信/1000问/",
+      "destination": "/Area/EE/车载通信/1000问/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/车载通信/1000问/lin_sdio_信号完整性与车载以太网",
+      "destination": "/Area/EE/车载通信/1000问/LIN_SDIO_信号完整性与车载以太网",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/车载通信/1000问/spiflash_i2ceeprom_rs485_sent_usb",
+      "destination": "/Area/EE/车载通信/1000问/SPIFlash_I2CEEPROM_RS485_SENT_USB",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/车载通信/1000问/总线基础故障排查与ecu接口选型",
+      "destination": "/Area/EE/车载通信/1000问/总线基础故障排查与ECU接口选型",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/通信",
+      "destination": "/Area/EE/通信/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/通信/",
+      "destination": "/Area/EE/通信/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/通信/1000问",
+      "destination": "/Area/EE/通信/1000问/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/通信/1000问/",
+      "destination": "/Area/EE/通信/1000问/",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/通信/1000问/基础协议与四大协议",
+      "destination": "/Area/EE/通信/1000问/基础协议与四大协议",
+      "permanent": true
+    },
+    {
+      "source": "/area/ee/面对对象",
+      "destination": "/Area/EE/面对对象",
+      "permanent": true
+    },
+    {
+      "source": "/area/km",
+      "destination": "/Area/KM/",
+      "permanent": true
+    },
+    {
+      "source": "/area/km/",
+      "destination": "/Area/KM/",
+      "permanent": true
+    },
+    {
+      "source": "/area/km/git提交规范",
+      "destination": "/Area/KM/Git提交规范",
+      "permanent": true
+    },
+    {
+      "source": "/area/km/inbox",
+      "destination": "/Area/KM/inbox",
+      "permanent": true
+    },
+    {
+      "source": "/area/km/工具",
+      "destination": "/Area/KM/工具",
+      "permanent": true
+    },
+    {
+      "source": "/area/km/微信读书到永久笔记",
+      "destination": "/Area/KM/微信读书到永久笔记",
+      "permanent": true
+    },
+    {
+      "source": "/area/km/数字花园",
+      "destination": "/Area/KM/数字花园",
+      "permanent": true
+    },
+    {
+      "source": "/area/km/渐进阅读",
+      "destination": "/Area/KM/渐进阅读",
+      "permanent": true
+    },
+    {
+      "source": "/area/km/知识管理",
+      "destination": "/Area/KM/知识管理",
+      "permanent": true
+    },
+    {
+      "source": "/area/km/知识管理工作流",
+      "destination": "/Area/KM/知识管理工作流",
+      "permanent": true
+    },
+    {
+      "source": "/project",
+      "destination": "/Project/",
+      "permanent": true
+    },
+    {
+      "source": "/project/",
+      "destination": "/Project/",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar",
+      "destination": "/Project/AUTOSAR/",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/",
+      "destination": "/Project/AUTOSAR/",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/1000问",
+      "destination": "/Project/AUTOSAR/1000问/",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/1000问/",
+      "destination": "/Project/AUTOSAR/1000问/",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/1000问/bootloader刷写uds与中断分类",
+      "destination": "/Project/AUTOSAR/1000问/Bootloader刷写UDS与中断分类",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/1000问/bootloader诊断模式管理与多核",
+      "destination": "/Project/AUTOSAR/1000问/Bootloader诊断模式管理与多核",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/1000问/swc_vfb_rte与代码生成",
+      "destination": "/Project/AUTOSAR/1000问/SWC_VFB_RTE与代码生成",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/1000问/基础架构通信与存储",
+      "destination": "/Project/AUTOSAR/1000问/基础架构通信与存储",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/1000问/工具链平台安全与系统配置",
+      "destination": "/Project/AUTOSAR/1000问/工具链平台安全与系统配置",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/1000问/网络管理诊断存储与os",
+      "destination": "/Project/AUTOSAR/1000问/网络管理诊断存储与OS",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/1000问/配置治理cdd与memorymapping",
+      "destination": "/Project/AUTOSAR/1000问/配置治理CDD与MemoryMapping",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/arxml与rte代码生成实战",
+      "destination": "/Project/AUTOSAR/ARXML与RTE代码生成实战",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/autosar",
+      "destination": "/Project/AUTOSAR/AUTOSAR",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/autosar故障排查手册",
+      "destination": "/Project/AUTOSAR/AUTOSAR故障排查手册",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/classic平台学习路线与面试题",
+      "destination": "/Project/AUTOSAR/Classic平台学习路线与面试题",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/com信号编码与发送接收机制",
+      "destination": "/Project/AUTOSAR/COM信号编码与发送接收机制",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/com配置参数与arxml信号映射实战",
+      "destination": "/Project/AUTOSAR/COM配置参数与ARXML信号映射实战",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/nvm-memif-fee-ea-非易失存储实战",
+      "destination": "/Project/AUTOSAR/NvM-MemIf-Fee-Ea-非易失存储实战",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/os-调度-多核与-runnable-实战",
+      "destination": "/Project/AUTOSAR/OS-调度-多核与-Runnable-实战",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/rte与swc工程实现",
+      "destination": "/Project/AUTOSAR/RTE与SWC工程实现",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/应用领域",
+      "destination": "/Project/AUTOSAR/应用领域",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/方法论",
+      "destination": "/Project/AUTOSAR/方法论",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/标准与规范",
+      "destination": "/Project/AUTOSAR/标准与规范",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/核心理念",
+      "destination": "/Project/AUTOSAR/核心理念",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块",
+      "destination": "/Project/AUTOSAR/规范模块/",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/",
+      "destination": "/Project/AUTOSAR/规范模块/",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/ap",
+      "destination": "/Project/AUTOSAR/规范模块/AP",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/aracomapi",
+      "destination": "/Project/AUTOSAR/规范模块/ARAComAPI",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/bswdistributionguide",
+      "destination": "/Project/AUTOSAR/规范模块/BSWDistributionGuide",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/bswmodemanager",
+      "destination": "/Project/AUTOSAR/规范模块/BSWModeManager",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/caninterface",
+      "destination": "/Project/AUTOSAR/规范模块/CANInterface",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/com",
+      "destination": "/Project/AUTOSAR/规范模块/COM",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/commanager",
+      "destination": "/Project/AUTOSAR/规范模块/COMManager",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/communicationmanagement",
+      "destination": "/Project/AUTOSAR/规范模块/CommunicationManagement",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/core",
+      "destination": "/Project/AUTOSAR/规范模块/Core",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/cp",
+      "destination": "/Project/AUTOSAR/规范模块/CP",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/cryptoservicemanager",
+      "destination": "/Project/AUTOSAR/规范模块/CryptoServiceManager",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/diagnosticcommunicationmanager",
+      "destination": "/Project/AUTOSAR/规范模块/DiagnosticCommunicationManager",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/diagnosticeventmanager",
+      "destination": "/Project/AUTOSAR/规范模块/DiagnosticEventManager",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/e2elibrary",
+      "destination": "/Project/AUTOSAR/规范模块/E2ELibrary",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/ecuconfiguration",
+      "destination": "/Project/AUTOSAR/规范模块/ECUConfiguration",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/ecustatemanager",
+      "destination": "/Project/AUTOSAR/规范模块/ECUStateManager",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/executionmanagement",
+      "destination": "/Project/AUTOSAR/规范模块/ExecutionManagement",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/fo",
+      "destination": "/Project/AUTOSAR/规范模块/FO",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/modemanagementguide",
+      "destination": "/Project/AUTOSAR/规范模块/ModeManagementGuide",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/nvm常见解答",
+      "destination": "/Project/AUTOSAR/规范模块/NVM常见解答",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/nvrammanager",
+      "destination": "/Project/AUTOSAR/规范模块/NVRAMManager",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/os",
+      "destination": "/Project/AUTOSAR/规范模块/OS",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/pdurouter",
+      "destination": "/Project/AUTOSAR/规范模块/PDURouter",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/platformdesign",
+      "destination": "/Project/AUTOSAR/规范模块/PlatformDesign",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/rte",
+      "destination": "/Project/AUTOSAR/规范模块/RTE",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/softwarecomponenttemplate",
+      "destination": "/Project/AUTOSAR/规范模块/SoftwareComponentTemplate",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/someiptransformer",
+      "destination": "/Project/AUTOSAR/规范模块/SOMEIPTransformer",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/statemanagement",
+      "destination": "/Project/AUTOSAR/规范模块/StateManagement",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/swarchitecture",
+      "destination": "/Project/AUTOSAR/规范模块/SWArchitecture",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/systemtemplate",
+      "destination": "/Project/AUTOSAR/规范模块/SystemTemplate",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/规范模块/tcpip",
+      "destination": "/Project/AUTOSAR/规范模块/TcpIp",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/诊断栈-dcm-dem-uds-工程实战",
+      "destination": "/Project/AUTOSAR/诊断栈-Dcm-Dem-UDS-工程实战",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/软件架构",
+      "destination": "/Project/AUTOSAR/软件架构",
+      "permanent": true
+    },
+    {
+      "source": "/project/autosar/通信栈工程实战与canoe验证",
+      "destination": "/Project/AUTOSAR/通信栈工程实战与CANoe验证",
+      "permanent": true
+    },
+    {
+      "source": "/project/project",
+      "destination": "/Project/Project",
+      "permanent": true
+    },
+    {
+      "source": "/project/考试管理",
+      "destination": "/Project/考试管理/",
+      "permanent": true
+    },
+    {
+      "source": "/project/考试管理/",
+      "destination": "/Project/考试管理/",
+      "permanent": true
+    },
+    {
+      "source": "/project/考试管理/软考高级1000问",
+      "destination": "/Project/考试管理/软考高级1000问",
+      "permanent": true
+    },
+    {
+      "source": "/project/考试管理/软考高级1000问/",
+      "destination": "/Project/考试管理/软考高级1000问/",
+      "permanent": true
+    },
+    {
+      "source": "/project/考试管理/软考高级1000问/真题解析论文与备考策略",
+      "destination": "/Project/考试管理/软考高级1000问/真题解析论文与备考策略",
+      "permanent": true
+    },
+    {
+      "source": "/project/考试管理/软考高级1000问/系统架构师体系结构数据库网络与设计",
+      "destination": "/Project/考试管理/软考高级1000问/系统架构师体系结构数据库网络与设计",
+      "permanent": true
+    },
+    {
+      "source": "/project/考试管理/软考高级1000问/项目管理十大知识域与案例计算",
+      "destination": "/Project/考试管理/软考高级1000问/项目管理十大知识域与案例计算",
+      "permanent": true
+    },
+    {
+      "source": "/resource",
+      "destination": "/Resource/",
+      "permanent": true
+    },
+    {
+      "source": "/resource/",
+      "destination": "/Resource/",
+      "permanent": true
+    },
+    {
+      "source": "/resource/1000问题系列",
+      "destination": "/Resource/1000问题系列/",
+      "permanent": true
+    },
+    {
+      "source": "/resource/1000问题系列/",
+      "destination": "/Resource/1000问题系列/",
+      "permanent": true
+    },
+    {
+      "source": "/resource/education",
+      "destination": "/Resource/Education/",
+      "permanent": true
+    },
+    {
+      "source": "/resource/education/",
+      "destination": "/Resource/Education/",
+      "permanent": true
+    },
+    {
+      "source": "/resource/education/1000问",
+      "destination": "/Resource/Education/1000问/",
+      "permanent": true
+    },
+    {
+      "source": "/resource/education/1000问/",
+      "destination": "/Resource/Education/1000问/",
+      "permanent": true
+    },
+    {
+      "source": "/resource/education/1000问/分科实战语文数学英语与理科",
+      "destination": "/Resource/Education/1000问/分科实战语文数学英语与理科",
+      "permanent": true
+    },
+    {
+      "source": "/resource/education/1000问/学习习惯语文与数学启蒙",
+      "destination": "/Resource/Education/1000问/学习习惯语文与数学启蒙",
+      "permanent": true
+    },
+    {
+      "source": "/resource/education/1000问/年级转折与长期学习规划",
+      "destination": "/Resource/Education/1000问/年级转折与长期学习规划",
+      "permanent": true
+    },
+    {
+      "source": "/resource/education/一年级数学",
+      "destination": "/Resource/Education/一年级数学",
+      "permanent": true
+    },
+    {
+      "source": "/resource/education/一年级英语",
+      "destination": "/Resource/Education/一年级英语",
+      "permanent": true
+    },
+    {
+      "source": "/resource/education/一年级语文",
+      "destination": "/Resource/Education/一年级语文",
+      "permanent": true
+    },
+    {
+      "source": "/resource/github",
+      "destination": "/Resource/GitHub/",
+      "permanent": true
+    },
+    {
+      "source": "/resource/github/",
+      "destination": "/Resource/GitHub/",
+      "permanent": true
+    },
+    {
+      "source": "/resource/github/latex",
+      "destination": "/Resource/GitHub/Latex",
+      "permanent": true
+    },
+    {
+      "source": "/resource/github/notfoundpage",
+      "destination": "/Resource/GitHub/NotFoundPage",
+      "permanent": true
+    },
+    {
+      "source": "/resource/github/obsidianflavoredmarkdown",
+      "destination": "/Resource/GitHub/ObsidianFlavoredMarkdown",
+      "permanent": true
+    },
+    {
+      "source": "/resource/github/oxhugoflavoredmarkdown",
+      "destination": "/Resource/GitHub/OxHugoFlavoredMarkdown",
+      "permanent": true
+    },
+    {
+      "source": "/resource/github/removedrafts",
+      "destination": "/Resource/GitHub/RemoveDrafts",
+      "permanent": true
+    },
+    {
+      "source": "/resource/github/resource",
+      "destination": "/Resource/GitHub/Resource",
+      "permanent": true
+    },
+    {
+      "source": "/resource/github/roamflavoredmarkdown",
+      "destination": "/Resource/GitHub/RoamFlavoredMarkdown",
+      "permanent": true
+    },
+    {
+      "source": "/resource/github/static",
+      "destination": "/Resource/GitHub/Static",
+      "permanent": true
+    },
+    {
+      "source": "/resource/github/syntaxhighlighting",
+      "destination": "/Resource/GitHub/SyntaxHighlighting",
+      "permanent": true
+    },
+    {
+      "source": "/resource/github/tableofcontents",
+      "destination": "/Resource/GitHub/TableOfContents",
+      "permanent": true
+    },
+    {
+      "source": "/resource/github/tagpage",
+      "destination": "/Resource/GitHub/TagPage",
+      "permanent": true
+    },
+    {
+      "source": "/resource/history",
+      "destination": "/Resource/History/",
+      "permanent": true
+    },
+    {
+      "source": "/resource/history/",
+      "destination": "/Resource/History/",
+      "permanent": true
+    },
+    {
+      "source": "/resource/history/1000问",
+      "destination": "/Resource/History/1000问/",
+      "permanent": true
+    },
+    {
+      "source": "/resource/history/1000问/",
+      "destination": "/Resource/History/1000问/",
+      "permanent": true
+    },
+    {
+      "source": "/resource/history/1000问/上古与夏商周",
+      "destination": "/Resource/History/1000问/上古与夏商周",
+      "permanent": true
+    },
+    {
+      "source": "/resource/history/1000问/军事制度经济思想与文化",
+      "destination": "/Resource/History/1000问/军事制度经济思想与文化",
+      "permanent": true
+    },
+    {
+      "source": "/resource/history/1000问/科技生活审美地理与史料",
+      "destination": "/Resource/History/1000问/科技生活审美地理与史料",
+      "permanent": true
+    },
+    {
+      "source": "/resource/movie",
+      "destination": "/Resource/Movie/",
+      "permanent": true
+    },
+    {
+      "source": "/resource/movie/",
+      "destination": "/Resource/Movie/",
+      "permanent": true
+    },
+    {
+      "source": "/resource/movie/aliasredirects",
+      "destination": "/Resource/Movie/AliasRedirects",
+      "permanent": true
+    },
+    {
+      "source": "/resource/movie/assets",
+      "destination": "/Resource/Movie/Assets",
+      "permanent": true
+    },
+    {
+      "source": "/resource/movie/citations",
+      "destination": "/Resource/Movie/Citations",
+      "permanent": true
+    },
+    {
+      "source": "/resource/movie/cname",
+      "destination": "/Resource/Movie/CNAME",
+      "permanent": true
+    },
+    {
+      "source": "/resource/movie/componentresources",
+      "destination": "/Resource/Movie/ComponentResources",
+      "permanent": true
+    },
+    {
+      "source": "/resource/rss",
+      "destination": "/Resource/RSS/",
+      "permanent": true
+    },
+    {
+      "source": "/resource/rss/",
+      "destination": "/Resource/RSS/",
+      "permanent": true
+    },
+    {
+      "source": "/resource/rss/contentindex",
+      "destination": "/Resource/RSS/ContentIndex",
+      "permanent": true
+    },
+    {
+      "source": "/resource/rss/contentpage",
+      "destination": "/Resource/RSS/ContentPage",
+      "permanent": true
+    },
+    {
+      "source": "/resource/rss/crawllinks",
+      "destination": "/Resource/RSS/CrawlLinks",
+      "permanent": true
+    },
+    {
+      "source": "/resource/rss/createdmodifieddate",
+      "destination": "/Resource/RSS/CreatedModifiedDate",
+      "permanent": true
+    },
+    {
+      "source": "/resource/rss/customogimages",
+      "destination": "/Resource/RSS/CustomOgImages",
+      "permanent": true
+    },
+    {
+      "source": "/resource/rss/description",
+      "destination": "/Resource/RSS/Description",
+      "permanent": true
+    },
+    {
+      "source": "/resource/rss/explicitpublish",
+      "destination": "/Resource/RSS/ExplicitPublish",
+      "permanent": true
+    },
+    {
+      "source": "/resource/rss/favicon",
+      "destination": "/Resource/RSS/Favicon",
+      "permanent": true
+    },
+    {
+      "source": "/resource/rss/folderpage",
+      "destination": "/Resource/RSS/FolderPage",
+      "permanent": true
+    },
+    {
+      "source": "/resource/rss/frontmatter",
+      "destination": "/Resource/RSS/Frontmatter",
+      "permanent": true
+    },
+    {
+      "source": "/resource/rss/githubflavoredmarkdown",
+      "destination": "/Resource/RSS/GitHubFlavoredMarkdown",
+      "permanent": true
+    },
+    {
+      "source": "/resource/rss/hardlinebreaks",
+      "destination": "/Resource/RSS/HardLineBreaks",
+      "permanent": true
+    },
+    {
+      "source": "/resource/study",
+      "destination": "/Resource/Study/",
+      "permanent": true
+    },
+    {
+      "source": "/resource/study/",
+      "destination": "/Resource/Study/",
+      "permanent": true
+    },
+    {
+      "source": "/resource/study/考研英语",
+      "destination": "/Resource/Study/考研英语/",
+      "permanent": true
+    },
+    {
+      "source": "/resource/study/考研英语/",
+      "destination": "/Resource/Study/考研英语/",
+      "permanent": true
+    },
+    {
+      "source": "/resource/study/考研英语/10000问",
+      "destination": "/Resource/Study/考研英语/10000问/",
+      "permanent": true
+    },
+    {
+      "source": "/resource/study/考研英语/10000问/",
+      "destination": "/Resource/Study/考研英语/10000问/",
+      "permanent": true
+    },
+    {
+      "source": "/resource/study/考研英语/10000问/词汇语法与阅读",
+      "destination": "/Resource/Study/考研英语/10000问/词汇语法与阅读",
+      "permanent": true
+    },
+    {
+      "source": "/resource/微信读书",
+      "destination": "/Resource/微信读书/",
+      "permanent": true
+    },
+    {
+      "source": "/resource/微信读书/",
+      "destination": "/Resource/微信读书/",
+      "permanent": true
+    },
+    {
+      "source": "/resource/微信读书/书籍",
+      "destination": "/Resource/微信读书/书籍/",
+      "permanent": true
+    },
+    {
+      "source": "/resource/微信读书/书籍/",
+      "destination": "/Resource/微信读书/书籍/",
+      "permanent": true
+    },
+    {
+      "source": "/resource/微信读书/书籍/32位嵌入式系统与soc设计导论-940ceb4e",
+      "destination": "/Resource/微信读书/书籍/32位嵌入式系统与soc设计导论-940ceb4e",
+      "permanent": true
+    },
+    {
+      "source": "/resource/微信读书/书籍/cprimer-plus第6版中文版-bb695f44",
+      "destination": "/Resource/微信读书/书籍/cprimer-plus第6版中文版-bb695f44",
+      "permanent": true
+    },
+    {
+      "source": "/resource/微信读书/书籍/中国历史那些事儿系列套装明朝那些事儿全7册这里曾经是汉朝全6册唐史并不如烟全5册如果这是宋史全10册-b1837699",
+      "destination": "/Resource/微信读书/书籍/中国历史那些事儿系列套装明朝那些事儿全7册这里曾经是汉朝全6册唐史并不如烟全5册如果这是宋史全10册-b1837699",
+      "permanent": true
+    },
+    {
+      "source": "/resource/微信读书/书籍/以太网权威指南第2版-629a1ee5",
+      "destination": "/Resource/微信读书/书籍/以太网权威指南第2版-629a1ee5",
+      "permanent": true
+    },
+    {
+      "source": "/resource/微信读书/书籍/卡片笔记写作法如何实现从阅读到写作-e52f61c7",
+      "destination": "/Resource/微信读书/书籍/卡片笔记写作法如何实现从阅读到写作-e52f61c7",
+      "permanent": true
+    },
+    {
+      "source": "/resource/微信读书/书籍/卡片笔记写作法如何实现从阅读到写作聪明人如何记笔记高效记笔记-bd8cbcbe",
+      "destination": "/Resource/微信读书/书籍/卡片笔记写作法如何实现从阅读到写作聪明人如何记笔记高效记笔记-bd8cbcbe",
+      "permanent": true
+    },
+    {
+      "source": "/resource/微信读书/书籍/小米创业思考雷军首部作品完整解析创办和经营小米的商业思考解密增长逻辑亲述30年互联网思维产品观管理思想和创业心法-d8bfe9bc",
+      "destination": "/Resource/微信读书/书籍/小米创业思考雷军首部作品完整解析创办和经营小米的商业思考解密增长逻辑亲述30年互联网思维产品观管理思想和创业心法-d8bfe9bc",
+      "permanent": true
+    },
+    {
+      "source": "/resource/微信读书/书籍/嵌入式c语言自我修养从芯片编译器到操作系统-d73f9473",
+      "destination": "/Resource/微信读书/书籍/嵌入式c语言自我修养从芯片编译器到操作系统-d73f9473",
+      "permanent": true
+    },
+    {
+      "source": "/resource/微信读书/书籍/嵌入式linux与物联网软件开发c语言内核深度解析-d39d992a",
+      "destination": "/Resource/微信读书/书籍/嵌入式linux与物联网软件开发c语言内核深度解析-d39d992a",
+      "permanent": true
+    },
+    {
+      "source": "/resource/微信读书/书籍/底层逻辑-看清这个世界的底牌拥有看透世界的底牌启动开挂的人生5分钟商学院背后的思维方式-6af18b60",
+      "destination": "/Resource/微信读书/书籍/底层逻辑-看清这个世界的底牌拥有看透世界的底牌启动开挂的人生5分钟商学院背后的思维方式-6af18b60",
+      "permanent": true
+    },
+    {
+      "source": "/resource/微信读书/书籍/思维模型建立高品质思维的30种模型-abe32c70",
+      "destination": "/Resource/微信读书/书籍/思维模型建立高品质思维的30种模型-abe32c70",
+      "permanent": true
+    },
+    {
+      "source": "/resource/微信读书/书籍/打造第二大脑-00d7d705",
+      "destination": "/Resource/微信读书/书籍/打造第二大脑-00d7d705",
+      "permanent": true
+    },
+    {
+      "source": "/resource/微信读书/书籍/毛泽东选集1-5卷-b80e23f6",
+      "destination": "/Resource/微信读书/书籍/毛泽东选集1-5卷-b80e23f6",
+      "permanent": true
+    },
+    {
+      "source": "/resource/微信读书/书籍/汇编语言微机原理及接口技术第3版-2bc2742c",
+      "destination": "/Resource/微信读书/书籍/汇编语言微机原理及接口技术第3版-2bc2742c",
+      "permanent": true
+    },
+    {
+      "source": "/resource/微信读书/书籍/汇编语言简明教程-3ae447f4",
+      "destination": "/Resource/微信读书/书籍/汇编语言简明教程-3ae447f4",
+      "permanent": true
+    },
+    {
+      "source": "/resource/微信读书/书籍/深入浅出embedding原理解析与应用实践-0745d443",
+      "destination": "/Resource/微信读书/书籍/深入浅出embedding原理解析与应用实践-0745d443",
+      "permanent": true
+    },
+    {
+      "source": "/resource/微信读书/书籍/笔记的方法-c25fbd2b",
+      "destination": "/Resource/微信读书/书籍/笔记的方法-c25fbd2b",
+      "permanent": true
+    },
+    {
+      "source": "/resource/微信读书/书籍/认知觉醒伴随一生的学习方法论青少年学习版-e2b779e3",
+      "destination": "/Resource/微信读书/书籍/认知觉醒伴随一生的学习方法论青少年学习版-e2b779e3",
+      "permanent": true
+    },
+    {
+      "source": "/resource/微信读书/书籍/资本论-人民出版社共3册-845d9d93",
+      "destination": "/Resource/微信读书/书籍/资本论-人民出版社共3册-845d9d93",
+      "permanent": true
+    },
+    {
+      "source": "/resource/沟通与协作",
+      "destination": "/Resource/沟通与协作/",
+      "permanent": true
+    },
+    {
+      "source": "/resource/沟通与协作/",
+      "destination": "/Resource/沟通与协作/",
+      "permanent": true
+    },
+    {
+      "source": "/resource/沟通与协作/提问的智慧",
+      "destination": "/Resource/沟通与协作/提问的智慧",
+      "permanent": true
+    },
+    {
+      "source": "/tags/adas",
+      "destination": "/tags/ADAS",
+      "permanent": true
+    },
+    {
+      "source": "/tags/agent",
+      "destination": "/tags/Agent",
+      "permanent": true
+    },
+    {
+      "source": "/tags/ai",
+      "destination": "/tags/AI",
+      "permanent": true
+    },
+    {
+      "source": "/tags/ap",
+      "destination": "/tags/AP",
+      "permanent": true
+    },
+    {
+      "source": "/tags/archive",
+      "destination": "/tags/Archive",
+      "permanent": true
+    },
+    {
+      "source": "/tags/area",
+      "destination": "/tags/Area",
+      "permanent": true
+    },
+    {
+      "source": "/tags/arm",
+      "destination": "/tags/ARM",
+      "permanent": true
+    },
+    {
+      "source": "/tags/arxml",
+      "destination": "/tags/ARXML",
+      "permanent": true
+    },
+    {
+      "source": "/tags/automotive-ethernet",
+      "destination": "/tags/Automotive-Ethernet",
+      "permanent": true
+    },
+    {
+      "source": "/tags/autosar",
+      "destination": "/tags/AUTOSAR",
+      "permanent": true
+    },
+    {
+      "source": "/tags/bootloader",
+      "destination": "/tags/Bootloader",
+      "permanent": true
+    },
+    {
+      "source": "/tags/can",
+      "destination": "/tags/CAN",
+      "permanent": true
+    },
+    {
+      "source": "/tags/canoe",
+      "destination": "/tags/CANoe",
+      "permanent": true
+    },
+    {
+      "source": "/tags/cdd",
+      "destination": "/tags/CDD",
+      "permanent": true
+    },
+    {
+      "source": "/tags/chinese",
+      "destination": "/tags/Chinese",
+      "permanent": true
+    },
+    {
+      "source": "/tags/chip",
+      "destination": "/tags/Chip",
+      "permanent": true
+    },
+    {
+      "source": "/tags/classic-platform",
+      "destination": "/tags/Classic-Platform",
+      "permanent": true
+    },
+    {
+      "source": "/tags/com",
+      "destination": "/tags/COM",
+      "permanent": true
+    },
+    {
+      "source": "/tags/communication",
+      "destination": "/tags/Communication",
+      "permanent": true
+    },
+    {
+      "source": "/tags/computer",
+      "destination": "/tags/Computer",
+      "permanent": true
+    },
+    {
+      "source": "/tags/cp",
+      "destination": "/tags/CP",
+      "permanent": true
+    },
+    {
+      "source": "/tags/cs",
+      "destination": "/tags/CS",
+      "permanent": true
+    },
+    {
+      "source": "/tags/cv",
+      "destination": "/tags/CV",
+      "permanent": true
+    },
+    {
+      "source": "/tags/c语言",
+      "destination": "/tags/C语言",
+      "permanent": true
+    },
+    {
+      "source": "/tags/dcm",
+      "destination": "/tags/Dcm",
+      "permanent": true
+    },
+    {
+      "source": "/tags/debug",
+      "destination": "/tags/Debug",
+      "permanent": true
+    },
+    {
+      "source": "/tags/dem",
+      "destination": "/tags/Dem",
+      "permanent": true
+    },
+    {
+      "source": "/tags/design",
+      "destination": "/tags/Design",
+      "permanent": true
+    },
+    {
+      "source": "/tags/ea",
+      "destination": "/tags/Ea",
+      "permanent": true
+    },
+    {
+      "source": "/tags/ecum",
+      "destination": "/tags/EcuM",
+      "permanent": true
+    },
+    {
+      "source": "/tags/ee",
+      "destination": "/tags/EE",
+      "permanent": true
+    },
+    {
+      "source": "/tags/electrical-engineering",
+      "destination": "/tags/Electrical-Engineering",
+      "permanent": true
+    },
+    {
+      "source": "/tags/electron",
+      "destination": "/tags/Electron",
+      "permanent": true
+    },
+    {
+      "source": "/tags/embedded-coder",
+      "destination": "/tags/Embedded-Coder",
+      "permanent": true
+    },
+    {
+      "source": "/tags/embodied-intelligence",
+      "destination": "/tags/Embodied-Intelligence",
+      "permanent": true
+    },
+    {
+      "source": "/tags/english",
+      "destination": "/tags/English",
+      "permanent": true
+    },
+    {
+      "source": "/tags/fee",
+      "destination": "/tags/Fee",
+      "permanent": true
+    },
+    {
+      "source": "/tags/fo",
+      "destination": "/tags/FO",
+      "permanent": true
+    },
+    {
+      "source": "/tags/github",
+      "destination": "/tags/GitHub",
+      "permanent": true
+    },
+    {
+      "source": "/tags/gnu-make",
+      "destination": "/tags/GNU-Make",
+      "permanent": true
+    },
+    {
+      "source": "/tags/history",
+      "destination": "/tags/History",
+      "permanent": true
+    },
+    {
+      "source": "/tags/i2c",
+      "destination": "/tags/I2C",
+      "permanent": true
+    },
+    {
+      "source": "/tags/interview",
+      "destination": "/tags/Interview",
+      "permanent": true
+    },
+    {
+      "source": "/tags/km",
+      "destination": "/tags/KM",
+      "permanent": true
+    },
+    {
+      "source": "/tags/lin",
+      "destination": "/tags/LIN",
+      "permanent": true
+    },
+    {
+      "source": "/tags/llm",
+      "destination": "/tags/LLM",
+      "permanent": true
+    },
+    {
+      "source": "/tags/makefile",
+      "destination": "/tags/Makefile",
+      "permanent": true
+    },
+    {
+      "source": "/tags/manual",
+      "destination": "/tags/Manual",
+      "permanent": true
+    },
+    {
+      "source": "/tags/math",
+      "destination": "/tags/Math",
+      "permanent": true
+    },
+    {
+      "source": "/tags/matlab",
+      "destination": "/tags/MATLAB",
+      "permanent": true
+    },
+    {
+      "source": "/tags/mcu",
+      "destination": "/tags/MCU",
+      "permanent": true
+    },
+    {
+      "source": "/tags/memif",
+      "destination": "/tags/MemIf",
+      "permanent": true
+    },
+    {
+      "source": "/tags/memory-mapping",
+      "destination": "/tags/Memory-Mapping",
+      "permanent": true
+    },
+    {
+      "source": "/tags/mlops",
+      "destination": "/tags/MLOps",
+      "permanent": true
+    },
+    {
+      "source": "/tags/nlp",
+      "destination": "/tags/NLP",
+      "permanent": true
+    },
+    {
+      "source": "/tags/nvm",
+      "destination": "/tags/NvM",
+      "permanent": true
+    },
+    {
+      "source": "/tags/os",
+      "destination": "/tags/OS",
+      "permanent": true
+    },
+    {
+      "source": "/tags/plc",
+      "destination": "/tags/PLC",
+      "permanent": true
+    },
+    {
+      "source": "/tags/progarm",
+      "destination": "/tags/Progarm",
+      "permanent": true
+    },
+    {
+      "source": "/tags/program",
+      "destination": "/tags/Program",
+      "permanent": true
+    },
+    {
+      "source": "/tags/project",
+      "destination": "/tags/Project",
+      "permanent": true
+    },
+    {
+      "source": "/tags/python",
+      "destination": "/tags/Python",
+      "permanent": true
+    },
+    {
+      "source": "/tags/python实验",
+      "destination": "/tags/Python实验",
+      "permanent": true
+    },
+    {
+      "source": "/tags/pytorch",
+      "destination": "/tags/PyTorch",
+      "permanent": true
+    },
+    {
+      "source": "/tags/rag",
+      "destination": "/tags/RAG",
+      "permanent": true
+    },
+    {
+      "source": "/tags/resource",
+      "destination": "/tags/Resource",
+      "permanent": true
+    },
+    {
+      "source": "/tags/rl",
+      "destination": "/tags/RL",
+      "permanent": true
+    },
+    {
+      "source": "/tags/rte",
+      "destination": "/tags/RTE",
+      "permanent": true
+    },
+    {
+      "source": "/tags/rtos",
+      "destination": "/tags/RTOS",
+      "permanent": true
+    },
+    {
+      "source": "/tags/runnable",
+      "destination": "/tags/Runnable",
+      "permanent": true
+    },
+    {
+      "source": "/tags/sdio",
+      "destination": "/tags/SDIO",
+      "permanent": true
+    },
+    {
+      "source": "/tags/simulink",
+      "destination": "/tags/Simulink",
+      "permanent": true
+    },
+    {
+      "source": "/tags/spi",
+      "destination": "/tags/SPI",
+      "permanent": true
+    },
+    {
+      "source": "/tags/study",
+      "destination": "/tags/Study",
+      "permanent": true
+    },
+    {
+      "source": "/tags/swc",
+      "destination": "/tags/SWC",
+      "permanent": true
+    },
+    {
+      "source": "/tags/test",
+      "destination": "/tags/Test",
+      "permanent": true
+    },
+    {
+      "source": "/tags/tinyml",
+      "destination": "/tags/TinyML",
+      "permanent": true
+    },
+    {
+      "source": "/tags/tool",
+      "destination": "/tags/Tool",
+      "permanent": true
+    },
+    {
+      "source": "/tags/uart",
+      "destination": "/tags/UART",
+      "permanent": true
+    },
+    {
+      "source": "/tags/uds",
+      "destination": "/tags/UDS",
+      "permanent": true
+    },
+    {
+      "source": "/tags/生成式ai",
+      "destination": "/tags/生成式AI",
+      "permanent": true
+    }
+  ]
+}

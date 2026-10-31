@@ -52,6 +52,13 @@ jobs:
           # 否则点击后会落到 404。任何失效链接都会让构建失败。
           python3 scripts/check_links.py public
           echo "页面数量：$(find public -name '*.html' | wc -l)"
+          # 历史遗留：站点曾部署在 Netlify，其 Pretty URLs 会把路径 301 到全小写，
+          # 而浏览器会永久缓存 301。迁到 Vercel（区分大小写）后，这些缓存下来的
+          # 小写地址会 404。用 vercel.json 把它们重定向回正确大小写。
+          python3 scripts/gen_vercel_redirects.py public
+          if ! git diff --quiet -- vercel.json; then
+            echo "::warning::vercel.json 与当前产物不同步，请执行 python3 scripts/gen_vercel_redirects.py public 并提交"
+          fi
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
