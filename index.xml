@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>E2E / 端到端通信保护深入 Q1：E2E Profile 1 到 7 的区别？Profile 1 和 Profile 5 用在什么安全等级？</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/E2E-Profile%E4%B8%8E%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/E2E-Profile%E4%B8%8E%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF</guid>
+    <description><![CDATA[ E2E / 端到端通信保护深入 Q1：E2E Profile 1 到 7 的区别？Profile 1 和 Profile 5 用在什么安全等级？ 原始 Flomo：v.flomoapp.com/mine/ E2E / 端到端通信保护深入 Q1：E2E Profile 1 到 7 的区别？Profile 1 和 Profile 5 用在什么安全等级？ 先厘清：E2E 是 ISO 26262 下保护通信数据完整性的机制（E2ELib），Profile 是它定义的不同「保护方案」——区别在「提供哪些保护机制」和「支持的数据长度」。 各 Profile 的核心差异维度： 是否带 CRC、几位 CRC：... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:56:41 GMT</pubDate>
+  </item><item>
     <title>E2E / 端到端通信保护深入 Q2：E2E 报文到达但 CRC 校验失败——丢弃还是用上次有效值？AUTOSAR 推荐做法？</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/E2E-CRC%E5%A4%B1%E8%B4%A5%E6%97%B6%E7%9A%84%E6%8E%A5%E6%94%B6%E7%AD%96%E7%95%A5</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/E2E-CRC%E5%A4%B1%E8%B4%A5%E6%97%B6%E7%9A%84%E6%8E%A5%E6%94%B6%E7%AD%96%E7%95%A5</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Adaptive%E4%B8%8EROS2-%E9%87%8F%E4%BA%A7ECU%E6%9E%B6%E6%9E%84%E9%80%89%E5%9E%8B</guid>
     <description><![CDATA[ AUTOSAR 与 ROS 2 对比 Q1：自动驾驶量产 ECU 能用 ROS 2 代替 AUTOSAR Adaptive 吗？ROS 2 缺了什么？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 与 ROS 2 对比 Q1：自动驾驶量产 ECU 能用 ROS 2 代替 AUTOSAR Adaptive 吗？ROS 2 缺了什么？ 结论：不能直接替代。虽然两者都用 DDS 做通信中间件，但 ROS 2 在量产车规的核心需求上缺很多。 ROS 2 相对 AUTOSAR Adaptive 缺的（按量产需求）： 功能安全（ISO 26262）：Adaptive 有完整安... ]]></description>
     <pubDate>Sat, 31 Oct 2026 07:54:58 GMT</pubDate>
-  </item><item>
-    <title>AUTOSAR 与 ROS 2 对比 Q2：ROS 2 的 Node 和 Adaptive 的 Process（Execution Cluster）在架构思维上的最大区别？ROS 2 开发者转 Adaptive 最需要适应什么？</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Adaptive%E4%B8%8EROS2-Node%E5%92%8CExecutionCluster%E5%AF%B9%E6%AF%94</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Adaptive%E4%B8%8EROS2-Node%E5%92%8CExecutionCluster%E5%AF%B9%E6%AF%94</guid>
-    <description><![CDATA[ AUTOSAR 与 ROS 2 对比 Q2：ROS 2 的 Node 和 Adaptive 的 Process（Execution Cluster）在架构思维上的最大区别？ROS 2 开发者转 Adaptive 最需要适应什么？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 与 ROS 2 对比 Q2：ROS 2 的 Node 和 Adaptive 的 Process（Execution Cluster）在架构思维上的最大区别？ROS 2 开发者转 Adaptive 最需要适应什么？ 最大区别（三个层面）： 单元性质：ROS 2 Node 是「功能性 / 逻辑」单... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:54:49 GMT</pubDate>
   </item>
     </channel>
   </rss>
