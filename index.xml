@@ -6,6 +6,30 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>文件IO-Q1-fopen文本与二进制模式</title>
+    <link>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E6%96%87%E4%BB%B6IO-Q1-fopen%E6%96%87%E6%9C%AC%E4%B8%8E%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%A8%A1%E5%BC%8F</link>
+    <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E6%96%87%E4%BB%B6IO-Q1-fopen%E6%96%87%E6%9C%AC%E4%B8%8E%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%A8%A1%E5%BC%8F</guid>
+    <description><![CDATA[ C语言 1000问 · 文件I/O Q1：fopen 的文本模式和二进制模式（b）有什么区别？换行符在两种模式下怎么处理？ 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 C语言 1000问 · 文件I/O Q1：fopen 的文本模式和二进制模式（b）有什么区别？换行符在两种模式下怎么处理？ ▎ 五大学习法：西蒙学习法——把「文本 vs 二进制」钻透 fopen 的模式 “r” / “w” / “a”：文本模式读 / 写 / 追加。 “rb” / “wb” / “ab”：二进制模式。 加 ”+“：可读可写（如 “r+”、“rb+”）。 本质区别：换行符的翻译（主要在 ... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:42:07 GMT</pubDate>
+  </item><item>
+    <title>文件IO-Q2-标准IO缓冲机制</title>
+    <link>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E6%96%87%E4%BB%B6IO-Q2-%E6%A0%87%E5%87%86IO%E7%BC%93%E5%86%B2%E6%9C%BA%E5%88%B6</link>
+    <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E6%96%87%E4%BB%B6IO-Q2-%E6%A0%87%E5%87%86IO%E7%BC%93%E5%86%B2%E6%9C%BA%E5%88%B6</guid>
+    <description><![CDATA[ C语言 1000问 · 文件I/O Q2：标准 I/O 为什么要有缓冲？全缓冲 / 行缓冲 / 无缓冲分别在什么场景，fflush 有什么用？ 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 C语言 1000问 · 文件I/O Q2：标准 I/O 为什么要有缓冲？全缓冲 / 行缓冲 / 无缓冲分别在什么场景，fflush 有什么用？ ▎ 五大学习法：西蒙学习法——把「缓冲」钻透 为什么要缓冲 系统调用（read / write）很「贵」：要陷入内核，可能要等磁盘 / 设备。 若每次 fputc 都直接 write 一个字节，几百万次系统调用慢到不可接受。 缓冲把多次小读... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:42:05 GMT</pubDate>
+  </item><item>
+    <title>文件IO-Q3-feof正确使用</title>
+    <link>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E6%96%87%E4%BB%B6IO-Q3-feof%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8</link>
+    <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E6%96%87%E4%BB%B6IO-Q3-feof%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8</guid>
+    <description><![CDATA[ C语言 1000问 · 文件I/O Q3：怎么正确判断文件读完？为什么常说 while (!feof(fp)) 是错的？ 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 C语言 1000问 · 文件I/O Q3：怎么正确判断文件读完？为什么常说 while (!feof(fp)) 是错的？ ▎ 五大学习法：费曼学习法——把「feof 的坑」讲透 feof 到底是什么 feof(fp) 不是「预测下一次读会不会到末尾」，它报告的是「上一次读是否因为碰到文件末尾而结束」。 它是「事后标记」：只有真正读到 EOF（且读到失败）之后，它才变真。 同理 ferror 报告上次读是... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:42:01 GMT</pubDate>
+  </item><item>
+    <title>文件IO-Q4-文件定位与文本二进制模式</title>
+    <link>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E6%96%87%E4%BB%B6IO-Q4-%E6%96%87%E4%BB%B6%E5%AE%9A%E4%BD%8D%E4%B8%8E%E6%96%87%E6%9C%AC%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%A8%A1%E5%BC%8F</link>
+    <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E6%96%87%E4%BB%B6IO-Q4-%E6%96%87%E4%BB%B6%E5%AE%9A%E4%BD%8D%E4%B8%8E%E6%96%87%E6%9C%AC%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%A8%A1%E5%BC%8F</guid>
+    <description><![CDATA[ C语言 1000问 · 文件I/O Q4：fseek / ftell / rewind 怎么用？文本模式和二进制模式下的定位有什么不同？ 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 C语言 1000问 · 文件I/O Q4：fseek / ftell / rewind 怎么用？文本模式和二进制模式下的定位有什么不同？ ▎ 五大学习法：西蒙学习法——把「文件定位」钻透 三个基本定位函数 ftell(fp)：返回当前位置相对文件开头的偏移。常用于「记住当前位置，之后跳回来」。 fseek(fp, offset, whence)：移动位置指针。 whence 三个取值：S... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:41:58 GMT</pubDate>
+  </item><item>
     <title>可变参数Q1-va_list实现可变参数函数</title>
     <link>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0Q1-va_list%E5%AE%9E%E7%8E%B0%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0%E5%87%BD%E6%95%B0</link>
     <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0Q1-va_list%E5%AE%9E%E7%8E%B0%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0%E5%87%BD%E6%95%B0</guid>
@@ -41,30 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E5%87%BD%E6%95%B0%E4%B8%8E%E9%80%92%E5%BD%92Q2-%E9%80%92%E5%BD%92%E4%B8%8E%E8%BF%AD%E4%BB%A3</guid>
     <description><![CDATA[ C语言 1000问 · 函数与递归Q2：递归和迭代该怎么选？递归的代价在哪，尾递归优化有效吗？ 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 C语言 1000问 · 函数与递归Q2：递归和迭代该怎么选？递归的代价在哪，尾递归优化有效吗？ ▎ 五大学习法：费曼学习法——把「递归 vs 迭代」讲透 什么时候用递归 问题本身是递归定义的：树的遍历、图的 DFS、分治（快排、归并）、汉诺塔、括号匹配。 结构天然层层嵌套时，递归最贴近问题、代码短、可读性高。 反过来，线性可累加的问题（求和、遍历数组）用循环更直接，不该用递归。 递归的代价 空间（最大代价）：每层调用建一个栈帧—... ]]></description>
     <pubDate>Sat, 31 Oct 2026 07:41:03 GMT</pubDate>
-  </item><item>
-    <title>函数与递归Q3-函数指针与回调</title>
-    <link>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E5%87%BD%E6%95%B0%E4%B8%8E%E9%80%92%E5%BD%92Q3-%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88%E4%B8%8E%E5%9B%9E%E8%B0%83</link>
-    <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E5%87%BD%E6%95%B0%E4%B8%8E%E9%80%92%E5%BD%92Q3-%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88%E4%B8%8E%E5%9B%9E%E8%B0%83</guid>
-    <description><![CDATA[ C语言 1000问 · 函数与递归Q3：函数指针是什么？它有哪些典型用途——回调、跳转表、qsort？ 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 C语言 1000问 · 函数与递归Q3：函数指针是什么？它有哪些典型用途——回调、跳转表、qsort？ ▎ 五大学习法：西蒙学习法——把「函数指针」钻透 函数指针是什么 函数在内存里也是一段代码、有入口地址；函数名在表达式中会退化成「函数指针」（指向该函数入口）。 声明：返回类型 (*名字)(参数类型…)，例：int (*fp)(int, int); —— fp 是指向「int(int,int) 函数」的指针。 常见易错... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:41:01 GMT</pubDate>
-  </item><item>
-    <title>自动驾驶</title>
-    <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6</link>
-    <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6</guid>
-    <description><![CDATA[ mindmap root((自动驾驶)) 自动驾驶分级 L1 驾驶辅助::icon(fa fa-car) :::结合单项辅助（如ACC自适应巡航、LKA车道保持） L2 部分自动化 :::人类全程监管（如Tesla FSD、主流城市NOA） L3 条件自动化 :::特定场景系统驾驶（系统请求时人类接管） L4 高度自动化 :::限定区域完全无须人类接管（如Robotaxi无人出租车） L5 完全自动化 :::全场景、全天候无条件完全自动驾驶（终极形态） 核心技术架构 环境感知层 传感器硬件::icon(fa fa-microchip) :::激光雷达 LiDAR :::高精摄像头 Camera... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:40:39 GMT</pubDate>
-  </item><item>
-    <title>第28题-CAN报文注入与SecOC</title>
-    <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/1000%E9%97%AE/%E7%AC%AC28%E9%A2%98-CAN%E6%8A%A5%E6%96%87%E6%B3%A8%E5%85%A5%E4%B8%8ESecOC</link>
-    <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/1000%E9%97%AE/%E7%AC%AC28%E9%A2%98-CAN%E6%8A%A5%E6%96%87%E6%B3%A8%E5%85%A5%E4%B8%8ESecOC</guid>
-    <description><![CDATA[ 自动驾驶 1000问 · 十 · 第 28 题：CAN 报文注入怎么防？SecOC 靠什么工作？ 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 自动驾驶 1000问 · 十 · 第 28 题：CAN 报文注入怎么防？SecOC 靠什么工作？ 先看威胁：CAN 是广播总线，报文没有发送者身份、没有真实性校验——任何人挂上总线，就能伪造 ID 发报文。攻击者注入一条「刹车信号 = 松开」或「车速 = 100」，其他 ECU 分不出真假。 CAN 本身的弱点 无认证：不验发送者。 无加密：明文传输。 无完整性：CRC 只防传输错误，防不了恶意篡改（攻击者能重算 CRC）。 ... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:40:07 GMT</pubDate>
-  </item><item>
-    <title>第29题-OTA安全防护</title>
-    <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/1000%E9%97%AE/%E7%AC%AC29%E9%A2%98-OTA%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4</link>
-    <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/1000%E9%97%AE/%E7%AC%AC29%E9%A2%98-OTA%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4</guid>
-    <description><![CDATA[ 自动驾驶 1000问 · 十 · 第 29 题：OTA 被劫持的后果，怎么防？ 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 自动驾驶 1000问 · 十 · 第 29 题：OTA 被劫持的后果，怎么防？ 先看后果：OTA 本质是「远程改代码」，一旦被劫持—— 可刷入恶意固件，控制刹车、转向、动力，直接变成安全事件。 可窃密钥、植后门、长期潜伏。 影响面大：一辆车的漏洞能顺着 OTA 通道扩散到整个车队，等于「一次成功攻击 = 召回级」。 攻击面在哪 传输链路：云端到车端（TLS 被降级、中间人）。 云侧：签名服务器、后台账号被入侵。 车端：下载后存储、校验、写入过程... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:40:04 GMT</pubDate>
   </item>
     </channel>
   </rss>
