@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh"><head><title>专栏⑰·导航分卷：概率论与数理统计 1000 问（全量问题库）</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="数字花园"/><meta property="og:title" content="专栏⑰·导航分卷：概率论与数理统计 1000 问（全量问题库）"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="专栏⑰·导航分卷：概率论与数理统计 1000 问（全量问题库）"/><meta name="twitter:description" content="专栏⑰·导航分卷：概率论与数理统计 1000 问（全量问题库） 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·导航分卷：概率论与数理统计 1000 问（全量问题库） 📎 专栏⑰导航 → v.flomoapp.com/mine/ ▎ 随机事件与概率 古典概型（等可能概型）的”等可能”假设到底意味着什么？抛硬币正反等可能，是因为硬币对称——但如果硬币稍有磨损、重心偏移，还能用古典概型吗？ 条件概率 P(B|A) = P(AB)/P(A)——这个公式是在”缩小样本空间”：已知事件A发生了，样本空间从Ω缩小成A？ 全概率公式和贝叶斯公式到底是什么关系？一个由因推果（已知原因的概..."/><meta property="og:description" content="专栏⑰·导航分卷：概率论与数理统计 1000 问（全量问题库） 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·导航分卷：概率论与数理统计 1000 问（全量问题库） 📎 专栏⑰导航 → v.flomoapp.com/mine/ ▎ 随机事件与概率 古典概型（等可能概型）的”等可能”假设到底意味着什么？抛硬币正反等可能，是因为硬币对称——但如果硬币稍有磨损、重心偏移，还能用古典概型吗？ 条件概率 P(B|A) = P(AB)/P(A)——这个公式是在”缩小样本空间”：已知事件A发生了，样本空间从Ω缩小成A？ 全概率公式和贝叶斯公式到底是什么关系？一个由因推果（已知原因的概..."/><meta property="og:image:alt" content="专栏⑰·导航分卷：概率论与数理统计 1000 问（全量问题库） 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·导航分卷：概率论与数理统计 1000 问（全量问题库） 📎 专栏⑰导航 → v.flomoapp.com/mine/ ▎ 随机事件与概率 古典概型（等可能概型）的”等可能”假设到底意味着什么？抛硬币正反等可能，是因为硬币对称——但如果硬币稍有磨损、重心偏移，还能用古典概型吗？ 条件概率 P(B|A) = P(AB)/P(A)——这个公式是在”缩小样本空间”：已知事件A发生了，样本空间从Ω缩小成A？ 全概率公式和贝叶斯公式到底是什么关系？一个由因推果（已知原因的概..."/><meta property="og:image" content="https://wiki.likui.info/static/og-image.png"/><meta property="og:image:url" content="https://wiki.likui.info/static/og-image.png"/><meta name="twitter:image" content="https://wiki.likui.info/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="wiki.likui.info"/><meta property="og:url" content="https://wiki.likui.info/Area/EE/数学/专栏⑰原始笔记/导航分卷-概率论与数理统计1000问"/><meta property="twitter:url" content="https://wiki.likui.info/Area/EE/数学/专栏⑰原始笔记/导航分卷-概率论与数理统计1000问"/><link rel="icon" href="../../../../static/icon.png"/><meta name="description" content="专栏⑰·导航分卷：概率论与数理统计 1000 问（全量问题库） 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·导航分卷：概率论与数理统计 1000 问（全量问题库） 📎 专栏⑰导航 → v.flomoapp.com/mine/ ▎ 随机事件与概率 古典概型（等可能概型）的”等可能”假设到底意味着什么？抛硬币正反等可能，是因为硬币对称——但如果硬币稍有磨损、重心偏移，还能用古典概型吗？ 条件概率 P(B|A) = P(AB)/P(A)——这个公式是在”缩小样本空间”：已知事件A发生了，样本空间从Ω缩小成A？ 全概率公式和贝叶斯公式到底是什么关系？一个由因推果（已知原因的概..."/><meta name="generator" content="Quartz"/><link href="../../../../index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  padding: 2rem;
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiRTpcXFdva2tTcGFjZXNcXE5vdGVzQm9va1xccXVhcnR6XFxjb21wb25lbnRzXFxzdHlsZXMiLCJzb3VyY2VzIjpbIm1lcm1haWQuaW5saW5lLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUdGO0VBQ0U7OztBQUtGO0VBQ0U7RUFDQTs7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcGFkZGluZzogMnJlbTtcbiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgIHRyYW5zZm9ybS1vcmlnaW46IDAgMDtcbiAgICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjFzIGVhc2U7XG4gICAgICBvdmVyZmxvdzogdmlzaWJsZTtcbiAgICAgIG1pbi1oZWlnaHQ6IDIwMHB4O1xuICAgICAgbWluLXdpZHRoOiAyMDBweDtcblxuICAgICAgcHJlIHtcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICB9XG5cbiAgICAgIHN2ZyB7XG4gICAgICAgIG1heC13aWR0aDogbm9uZTtcbiAgICAgICAgaGVpZ2h0OiBhdXRvO1xuICAgICAgfVxuICAgIH1cblxuICAgICYgPiAubWVybWFpZC1jb250cm9scyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBib3R0b206IDIwcHg7XG4gICAgICByaWdodDogMjBweDtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBnYXA6IDhweDtcbiAgICAgIHBhZGRpbmc6IDhweDtcbiAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICBib3JkZXItcmFkaXVzOiA2cHg7XG4gICAgICBib3gtc2hhZG93OiAwIDJweCA0cHggcmdiYSgwLCAwLCAwLCAwLjEpO1xuICAgICAgei1pbmRleDogMjtcblxuICAgICAgLm1lcm1haWQtY29udHJvbC1idXR0b24ge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgd2lkdGg6IDMycHg7XG4gICAgICAgIGhlaWdodDogMzJweDtcbiAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgICBjb2xvcjogdmFyKC0tZGFyayk7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtZmFtaWx5OiB2YXIoLS1ib2R5Rm9udCk7XG4gICAgICAgIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XG5cbiAgICAgICAgJjpob3ZlciB7XG4gICAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgfVxuXG4gICAgICAgICY6YWN0aXZlIHtcbiAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMXB4KTtcbiAgICAgICAgfVxuXG4gICAgICAgIC8vIFN0eWxlIHRoZSByZXNldCBidXR0b24gZGlmZmVyZW50bHlcbiAgICAgICAgJjpudGgtY2hpbGQoMikge1xuICAgICAgICAgIHdpZHRoOiBhdXRvO1xuICAgICAgICAgIHBhZGRpbmc6IDAgMTJweDtcbiAgICAgICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cbiJdfQ== */</style><link href="/static/katex/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../../../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../../../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://wiki.likui.info/index.xml"/></head><body data-slug="Area/EE/数学/专栏⑰原始笔记/导航分卷-概率论与数理统计1000问"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../../..">数字花园</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><p>搜索</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索些什么" placeholder="搜索些什么"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-221"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>PARA</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-221" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text explorer-entry-icon" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg><span class="file-title"></span></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder-closed explorer-entry-icon" aria-hidden="true"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path><path d="M2 10h20"></path></svg><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../Area/">Area</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../Area/EE/">EE</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../Area/EE/数学/">数学</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../Area/EE/数学/专栏⑰原始笔记/">专栏⑰原始笔记</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>专栏⑰·导航分卷：概率论与数理统计 1000 问（全量问题库）</a></div></nav><h1 class="article-title">专栏⑰·导航分卷：概率论与数理统计 1000 问（全量问题库）</h1><p show-comma="true" class="content-meta"><time datetime="2026-10-31T08:41:25.000Z">2026年10月31日</time><span>22分钟阅读</span></p><ul class="tags"><li><a href="../../../../tags/数学" class="internal tag-link">数学</a></li><li><a href="../../../../tags/问题库导航" class="internal tag-link">问题库导航</a></li><li><a href="../../../../tags/Area/学习/数学" class="internal tag-link">Area/学习/数学</a></li></ul></div></div><article class="popover-hint"><h1 id="专栏导航分卷概率论与数理统计-1000-问全量问题库">专栏⑰·导航分卷：概率论与数理统计 1000 问（全量问题库）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#专栏导航分卷概率论与数理统计-1000-问全量问题库" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>原始 Flomo：<a href="https://v.flomoapp.com/mine/?memo_id=MjQ3MzMwNjE5" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ3MzMwNjE5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><strong>专栏⑰·导航分卷：概率论与数理统计 1000 问（全量问题库）</strong></p>
+<p>📎 专栏⑰导航 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc0OTc2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc0OTc2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>▎ <strong>随机事件与概率</strong></p>
+<ol>
+<li>
+<p>古典概型（等可能概型）的”等可能”假设到底意味着什么？抛硬币正反等可能，是因为硬币对称——但如果硬币稍有磨损、重心偏移，还能用古典概型吗？</p>
+</li>
+<li>
+<p>条件概率 P(B|A) = P(AB)/P(A)——这个公式是在”缩小样本空间”：已知事件A发生了，样本空间从Ω缩小成A？</p>
+</li>
+<li>
+<p>全概率公式和贝叶斯公式到底是什么关系？一个由因推果（已知原因的概率求结果的概率），一个由果推因（已知结果反推哪个原因最可能）。贝叶斯公式的分母不就是全概率公式吗？</p>
+</li>
+<li>
+<p>事件独立性和互斥性能同时成立吗？如果P(A)>0且P(B)>0，A和B互斥则P(AB)=0，而独立要求P(AB)=P(A)P(B)>0——所以互斥和独立不能同时成立。那”零概率事件”和”不可能事件”是同一个概念吗？</p>
+</li>
+<li>
+<p>实际应用：一道题里给了”甲、乙、丙三人独立破译密码，各自破译的概率是0.8、0.7、0.6”——问”至少一人破译”的概率是1-0.2×0.3×0.4=0.976。为什么用”1减去都没破译”比直接算更简单（因为”至少一人”的事件包含7种情况，用对立事件只有1种）？</p>
+</li>
+<li>
+<p>n个球放入N个盒子、每个盒子可放任意多球——“至少一个盒子空”的概率怎么算？不能直接用古典概型（每个球的分配独立），用容斥原理：先算1个盒子空的概率，减去2个盒子空的概率……</p>
+</li>
+</ol>
+<p>▎ <strong>一维随机变量</strong></p>
+<ol>
+<li>
+<p>分布函数F(x)=P{X≤x}为什么必须满足”右连续”而非左连续？因为F(x)定义的是”≤x”——取值恰好等于x的概率是右连续的关键？</p>
+</li>
+<li>
+<p>离散型随机变量的分布律（所有可能取值及其概率）为什么要求概率之和为1？这不是数学规定——是”取值总得是这些中的某一个”的逻辑必然？</p>
+</li>
+<li>
+<p>连续型随机变量在某点的概率为什么是0？因为概率密度f(x)在单点上的积分是0。那”不可能事件概率为0”和”概率为0的事件不可能发生”是不是一回事——不是！连续型随机变量取某个具体值的概率是0，但这个事件完全可能发生？</p>
+</li>
+<li>
+<p>常见离散分布怎么从”生活场景”理解——（1）0-1分布（一次伯努利试验：抛一次硬币）、（2）二项分布B(n,p)（n次独立重复：抛n次硬币中正面次数）、（3）泊松分布P(λ)（单位时间内的随机事件次数：一小时内电话呼入数）、（4）几何分布（首次成功的等待次数：第几次抛才出正面）？</p>
+</li>
+<li>
+<p>为什么泊松分布可以近似二项分布？当n很大（n≥100）、p很小（p≤0.1）、np=λ适中时——“稀有事件”的计数近似服从泊松分布？实际中，“某城市一天内交通事故数”为什么更适合用泊松而不是二项分布（因为”每个人是否出事故”的二项试验假设太牵强，但”稀有事件在单位时间内发生的次数”恰好是泊松的典型场景）？</p>
+</li>
+</ol>
+<p>▎ <strong>常见分布深度拆解</strong></p>
+<ol>
+<li>
+<p><strong>均匀分布</strong> U(a,b)——“等可能”的连续版。为什么说均匀分布是最”无信息”的分布？如果你对某个参数只知道它的范围[a,b]，没有其他信息，均匀分布是最大熵分布？</p>
+</li>
+<li>
+<p><strong>指数分布</strong> Exp(λ)——“无记忆性”：P{X>s+t|X>s}=P{X>t}。怎么理解——一个灯泡已经亮了1000小时，它再亮100小时的概率跟一个新灯泡亮100小时的概率一样？所以指数分布适合模拟什么——“永不老化”的产品的寿命（电子元件？还是机械零件——机械零件会磨损，不适合）？</p>
+</li>
+<li>
+<p><strong>正态分布</strong> N(μ,σ²)——“三σ原则”：P{|X-μ|&lt;σ}=68.26%、P{|X-μ|&lt;2σ}=95.44%、P{|X-μ|&lt;3σ}=99.74%。为什么说正态分布是”统计学的灵魂”——因为它出现在几乎所有自然现象的平均值分布中（中心极限定理）？</p>
+</li>
+<li>
+<p><strong>正态分布标准化</strong>——为什么要标准化？因为N(μ,σ²)的分布函数不是初等函数，没法直接算概率。标准化成N(0,1)后查标准正态分布表——所有正态分布的概率计算都归结为查一张表？</p>
+</li>
+<li>
+<p>标准正态分布的”上α分位数”u_α——P{X>u_α}=α，比如u_{0.025}=1.96。为什么双边检验常用1.96这个数字——因为95%置信区间对应的就是±1.96σ？</p>
+</li>
+</ol>
+<p>▎ <strong>多维随机变量</strong></p>
+<ol>
+<li>
+<p>联合分布函数F(x,y)=P{X≤x,Y≤y}——为什么F(x,y)要同时考虑X和Y的”≤“关系？从几何上看，(X,Y)落在以(x,y)为右上角的无穷矩形内的概率？</p>
+</li>
+<li>
+<p>边缘分布和联合分布的关系——知道联合分布一定能推出边缘分布（对另一个变量求和或积分），但反过来知道边缘分布能不能推出联合分布——不能，因为缺了”相关性”信息？</p>
+</li>
+<li>
+<p>随机变量的独立性——F(x,y)=F_X(x)F_Y(y)。独立性的本质是什么——X取什么值不会影响Y的分布，反之亦然。实际中怎么快速判断——如果联合密度能写成f_X(x)×f_Y(y)的形式（变量分离），就独立？</p>
+</li>
+<li>
+<p>二维均匀分布：区域D上的二维均匀分布，联合密度f(x,y)=1/面积(D)如果(x,y)在D内否则0。如果D是单位圆，X和Y的边缘分布——X的密度不是均匀的（因为圆中间”厚”、两端”薄”），所以尽管联合分布是均匀的，边缘分布就不均匀了？</p>
+</li>
+</ol>
+<p>▎ <strong>数字特征</strong></p>
+<ol>
+<li>
+<p>期望E(X)为什么叫”数学期望”——因为它是随机变量所有可能取值的”加权平均”，权重就是概率。大数定律说当试验次数足够多时，样本均值会趋近于这个期望——所以期望是”我们期望看到的平均值”？</p>
+</li>
+<li>
+<p>方差D(X)=E[(X-EX)²]——为什么用平方而不是绝对值？绝对值不好求导、平方有好的数学性质（平方可展开成EX²-(EX)²）。但平方也有问题——量纲是原变量的平方。所以引入了标准差σ=√D(X)？</p>
+</li>
+<li>
+<p>协方差Cov(X,Y)=E[(X-EX)(Y-EY)]——Cov>0表示X和Y正相关（X增大时Y也倾向增大）。但协方差的数值大小受量纲影响——比如取不同单位（米vs厘米），协方差会差100倍。所以引入了”无量纲”的相关系数ρ？</p>
+</li>
+<li>
+<p>相关系数ρ：ρ在[-1,1]之间。|ρ|=1的充要条件是X和Y以概率1线性相关——Y=aX+b。但ρ=0只说明”不线性相关”，能不能说明”独立”——不能！Y=X²在对称区间上，ρ=0但完全不独立？</p>
+</li>
+<li>
+<p>矩——k阶原点矩E(X^k)和k阶中心矩E<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0785em;">X</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0991em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">E</span><span class="mord mathnormal" style="margin-right:0.0785em;">X</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.0315em;">k</span></span></span></span></span></span></span></span></span></span></span>。为什么三阶中心矩衡量”偏度”（分布不对称的程度）、四阶中心矩衡量”峰度”（分布的”尖”或”胖”程度）？</p>
+</li>
+<li>
+<p><strong>切比雪夫不等式</strong>——P{|X-μ|≥ε}≤σ²/ε²——为什么说它”弱”但”普适”？它适用于任意分布（只要方差存在），但给出的上界很宽松——比如ε=2σ时，上界是1/4=25%，而对正态分布实际上只有约4.56%？</p>
+</li>
+</ol>
+<p>▎ <strong>大数定律与中心极限定理</strong></p>
+<ol>
+<li>
+<p><strong>伯努利大数定律</strong>——当n足够大时，事件发生的频率趋近于概率。为什么这被认为是”概率论的基石”？因为它让概率从”抽象的数字”变成了”可观察的现象”？</p>
+</li>
+<li>
+<p><strong>辛钦大数定律</strong>——独立同分布的随机变量序列的算术平均值依概率收敛于期望。为什么它不要求方差存在——因为切比雪夫大数定律需要方差存在，但辛钦只需要期望存在？</p>
+</li>
+<li>
+<p><strong>中心极限定理</strong>——为什么说它是”概率论的王冠”？因为无论总体是什么分布（只要方差有限），当样本量足够大时，样本均值的分布近似于正态分布。这就解释了为什么正态分布在自然界如此常见——任何大量独立随机因素叠加的结果都近似正态？</p>
+</li>
+<li>
+<p>实际应用：某工厂生产的零件重量服从期望50g、标准差1g的某个未知分布。抽取100个零件称重，“总重量超过5020g”的概率多大？因为100足够大，总重量近似服从N(5000,100)，标准化后查表——不需要知道零件的原始分布？</p>
+</li>
+<li>
+<p>为什么中心极限定理在实践中一般要求n≥30才近似成立？如果总体分布是对称的（如均匀分布），n=10左右就够了；但如果总体分布严重偏斜（如指数分布），可能需要n≥50。那n=30这条”经验规则”怎么来的——这是保守情况下的一个通用参考值？</p>
+</li>
+</ol>
+<p>▎ <strong>数理统计基础</strong></p>
+<ol>
+<li>
+<p>总体和样本——总体是研究对象具有的某个指标的全体。但现实中你永远不可能获取”总体”的全貌（比如”全中国人的身高”），只能通过样本来推断总体。为什么统计学的基础是”用部分推断整体”？</p>
+</li>
+<li>
+<p>统计量——不包含任何未知参数的样本的函数。比如样本均值X̄=ΣX_i/n、样本方差S²=Σ(X_i-X̄)²/(n-1)。为什么样本方差的分母用n-1而不是n——因为用n会低估总体方差（“无偏性”要求用n-1）？</p>
+</li>
+<li>
+<p>三大抽样分布——χ²分布（标准正态变量的平方和）、t分布（标准正态/√(χ²/n)）、F分布（两个独立χ²/n的比值）。为什么t分布也叫”学生氏分布”——因为发明者戈塞特以”Student”为笔名发表？</p>
+</li>
+<li>
+<p>t分布和标准正态分布的区别——t分布比正态分布”尾巴更厚”（更易出现极端值），但随着自由度n增大，t分布趋近于正态分布。为什么小样本（n&lt;30）时用t分布而不是正态分布——因为小样本下总体方差未知，用样本标准差S代替时，X̄的分布不再服从正态而是服从t分布？</p>
+</li>
+</ol>
+<p>▎ <strong>参数估计</strong></p>
+<ol>
+<li>
+<p>点估计的”矩估计法”——用样本矩等于总体矩来解出参数。比如指数分布Exp(λ)只有一个参数λ，E(X)=1/λ，令X̄=1/λ̂，得λ̂=1/X̄。为什么矩估计法在考试里是最简单的估计方法——不需要复杂的推导，解方程就行？</p>
+</li>
+<li>
+<p>极大似然估计——找到参数θ使得”当前样本出现的概率最大”。为什么说极大似然估计是”最自然”的估计方法——因为我们已经观测到了这组样本，那么导致这组样本出现概率最大的那个参数值就是最合理的？</p>
+</li>
+<li>
+<p>估计量的评价标准——（1）无偏性（估计量的期望等于真值）、（2）有效性（方差越小越好）、（3）一致性（样本量增大时估计量趋近于真值）。哪个标准最重要——一致性：因为样本量足够大时你总能逼近真值，但无偏性在小样本下更重要？</p>
+</li>
+<li>
+<p>置信区间——95%置信区间不是”参数以95%的概率落在区间内”——而是”如果重复抽样100次，大约95次的置信区间会包含真值”。参数是一个固定的数（不是随机变量），所以不能谈”概率落在区间内”——那应该说：区间是随机变量，真值是固定值？</p>
+</li>
+</ol>
+<p>▎ <strong>假设检验</strong></p>
+<ol>
+<li>
+<p>原假设H₀和备择假设H₁怎么设——通常原假设是”保守的”、“无差异的”（新药无效），备择假设是”有差异的”（新药有效）。为什么不能反过来设——因为统计学的逻辑是”通过拒绝原假设来证明备择假设”？</p>
+</li>
+<li>
+<p>两类错误——第一类错误（弃真——原假设为真时拒绝它，概率为α）和第二类错误（取伪——原假设为假时接受它，概率为β）。为什么通常控制α而不控制β——因为α是你能主动控制的风险（你设定显著性水平），β跟样本量、效应大小有关，无法直接控制？</p>
+</li>
+<li>
+<p>p值的含义——在H₀成立的条件下，出现”当前样本或更极端样本”的概率。如果p&lt;α（通常0.05），拒绝H₀。但p值不是”H₀为真的概率”——这是一个最常见的误解。p值大不能证明H₀为真（“接受H₀”在统计上是不严谨的说法，应该说”没有充分理由拒绝H₀”）？</p>
+</li>
+<li>
+<p>单侧检验和双侧检验——什么时候用单侧？如果你关心的是”新药是否比旧药好”（不是”不同”而是”更好”），就用单侧检验。但为什么很多统计学家更推荐双侧检验——因为单侧检验可能”钻空子”（如果效果跟预期相反，单侧检验会错过）？</p>
+</li>
+<li>
+<p>两个正态总体均值差的检验——如果σ²已知用U检验（正态分布），σ²未知但相等用t检验。实际中σ²几乎都是未知的——所以大多时候用的是t检验？</p>
+</li>
+</ol>
+<p>▎ <strong>实际应用与算法</strong></p>
+<ol>
+<li>
+<p><strong>朴素贝叶斯分类器</strong> 为什么叫”朴素”——因为它假设所有特征条件独立。这个假设在现实中几乎永远不成立（“买雨衣”和”打雨伞”显然相关），但为什么分类效果还不错——因为分类只需要”相对大小”而不需要”精确概率”？</p>
+</li>
+<li>
+<p><strong>蒙特卡洛方法</strong>——用随机采样来估计数值（比如用随机点落在圆内的比例来估计π）。为什么说它是”用概率解决确定性问题”——因为把确定性问题的解表示成某个随机变量的期望，然后用大数定律用样本均值来逼近？</p>
+</li>
+<li>
+<p><strong>马尔可夫链</strong>——“无后效性”：状态转移的概率只依赖于当前状态，不依赖于过去的历史。“未来只通过现在与过去相连”——这个性质为什么有强大威力（它大大简化了复杂的概率模型）？</p>
+</li>
+<li>
+<p><strong>贝叶斯统计 vs 频率学派统计</strong>——频率学派认为参数是固定的未知常数（没有先验分布），贝叶斯学派认为参数是随机变量（有先验分布+观测数据更新成后验分布）。你在考研里学的主要是频率学派——但为什么说贝叶斯在机器学习里更常见（因为先验可以引入领域知识，适合迭代式学习）？</p>
+</li>
+</ol>
+<p>▎ <strong>考研高频题型速查</strong></p>
+<ol>
+<li>
+<p>全概率公式+贝叶斯公式的应用题——通常给一个”3个工厂各生产一批产品、次品率不同”的题目。解决套路：第一步设”取到某厂的产品”为完备事件组，第二步用全概率公式求”取到次品的概率”，第三步用贝叶斯公式求”已知次品来自某厂的概率”？</p>
+</li>
+<li>
+<p>二维随机变量求期望和协方差——通常给联合分布律或联合密度，让你求E(X)、E(Y)、Cov(X,Y)、ρ_XY。解决套路：先求边缘分布→求期望→求E(XY)→Cov=E(XY)-E(X)E(Y)→ρ=Cov/√(D(X)D(Y))。最容易错的是哪步——E(XY)的计算（必须用联合分布而不是边缘分布）？</p>
+</li>
+<li>
+<p>中心极限定理的应用——给一个”随机变量序列”让你估算概率。解决套路：先看n是否足够大→标准化成Z=(X̄-μ)/(σ/√n)→查标准正态分布表。最常见错误——忘了除以√n？</p>
+</li>
+<li>
+<p>参数估计的综合题——给一个分布和一个样本，让你同时用矩估计和极大似然估计求参数，并比较优劣。矩估计简单但常常不高效，极大似然估计复杂但有渐进最优性——考试中哪个先做——矩估计先拿分，极大似然再拿满分？</p>
+</li>
+<li>
+<p>假设检验的综合题——给一个场景”问新工艺是否改变了产品的均值/方差”。解决套路：先判断单侧/双侧、σ已知/未知、一个总体/两个总体→选检验统计量→计算样本值→查表得临界值→比较得出结论。为什么写步骤比算对数字更重要——因为阅卷看的是你”会不会做”、计算错误扣小分、步骤缺失扣大分？</p>
+</li>
+</ol>
+<p>📎 第7篇：概率论实战 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ3MzMwNjE5" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ3MzMwNjE5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><strong>专栏⑰进度：导航分卷</strong></p>
+<p><a href="../../../../tags/Area/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6" class="tag-link internal alias" data-slug="tags/Area/学习/数学">数学</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="backlinks"><h3>反向链接</h3><ul id="list-2" class="overflow"><li><a href="../../../../Area/EE/数学" class="internal">数学</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.1</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module">function f(i,e){if(!i)return;function r(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function t(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}i?.addEventListener("click",r),window.addCleanup(()=>i?.removeEventListener("click",r)),document.addEventListener("keydown",t),window.addCleanup(()=>document.removeEventListener("keydown",t))}function y(i){for(;i.firstChild;)i.removeChild(i.firstChild)}var h=class{constructor(e,r){this.container=e;this.content=r;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),r=this.onMouseMove.bind(this),t=this.onMouseUp.bind(this),o=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",r),document.addEventListener("mouseup",t),window.addEventListener("resize",o),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",r),()=>document.removeEventListener("mouseup",t),()=>window.removeEventListener("resize",o))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let r=this.createButton("+",()=>this.zoom(.1)),t=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(t),e.appendChild(o),e.appendChild(r),this.container.appendChild(e)}createButton(e,r){let t=document.createElement("button");return t.textContent=e,t.className="mermaid-control-button",t.addEventListener("click",r),window.addCleanup(()=>t.removeEventListener("click",r)),t}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}zoom(e){let r=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),t=this.content.getBoundingClientRect(),o=t.width/2,n=t.height/2,c=r-this.scale;this.currentPan.x-=o*c,this.currentPan.y-=n*c,this.scale=r,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){this.scale=1;let e=this.content.querySelector("svg");this.currentPan={x:e.getBoundingClientRect().width/2,y:e.getBoundingClientRect().height/2},this.updateTransform()}},C=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],E;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;E||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let r=E.default,t=new WeakMap;for(let n of e)t.set(n,n.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let a=t.get(s);a&&(s.innerHTML=a)}let n=C.reduce((s,a)=>(s[a]=window.getComputedStyle(document.documentElement).getPropertyValue(a),s),{}),c=document.documentElement.getAttribute("saved-theme")==="dark";r.initialize({startOnLoad:!1,securityLevel:"loose",theme:c?"dark":"base",themeVariables:{fontFamily:n["--codeFont"],primaryColor:n["--light"],primaryTextColor:n["--darkgray"],primaryBorderColor:n["--tertiary"],lineColor:n["--darkgray"],secondaryColor:n["--secondary"],tertiaryColor:n["--tertiary"],clusterBkg:n["--light"],edgeLabelBackground:n["--highlight"]}}),await r.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let n=0;n<e.length;n++){let v=function(){let g=l.querySelector("#mermaid-space"),m=l.querySelector(".mermaid-content");if(!m)return;y(m);let w=c.querySelector("svg").cloneNode(!0);m.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new h(g,m)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},c=e[n],s=c.parentElement,a=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(a),L=a.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),f(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="/static/katex/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../../../postscript.js" type="module"></script></html>
