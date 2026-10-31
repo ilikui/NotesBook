@@ -78,6 +78,12 @@ for (const p of problems) {
   if (/^\s+\S/.test(p.snippet) && !/^\s+-\s/.test(p.snippet)) {
     console.error(`    提示：键名前的空格会导致 YAML 解析失败，请顶格书写`)
   }
+  // 半角双引号包裹、值内部又出现半角双引号：最常见的写法错误
+  const kv = p.snippet.match(/^\s*[\w-]+:\s*"(.*)$/)
+  if (kv && (kv[1].match(/"/g) ?? []).length >= 1) {
+    console.error(`    提示：值用半角双引号包裹，但内容里还有半角双引号，会把引号提前闭合`)
+    console.error(`    改法：内层引号换成中文引号“”，或整段改用单引号 '...' 包裹`)
+  }
   console.error("")
 }
 process.exit(1)
