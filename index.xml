@@ -6,6 +6,24 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>低功耗设计与唤醒管理</title>
+    <link>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E4%BD%8E%E5%8A%9F%E8%80%97%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%94%A4%E9%86%92%E7%AE%A1%E7%90%86</link>
+    <guid>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E4%BD%8E%E5%8A%9F%E8%80%97%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%94%A4%E9%86%92%E7%AE%A1%E7%90%86</guid>
+    <description><![CDATA[ 专栏⑮·补充三：低功耗设计——睡眠、唤醒、功耗测量，接住你 EcuM 的经验 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 专栏⑮·补充三：低功耗设计——睡眠、唤醒、功耗测量，接住你 EcuM 的经验 ▎ 为什么低功耗是汽车电子必修课 休眠电流超标 = 蓄电池亏电 = 车主打不着火（你专栏④ EcuM 第3篇那个 20 次假唤醒的案例）。AUTOSAR 的 EcuM 唤醒验证、休眠流程，底层就是这套低功耗设计。软件上把功耗降下来，和把休眠电流测准，是两件都要会的事。 ▎ MCU 功耗模式谱系（以 STM32 为例） Run：全速，功耗最大 Sleep：CPU 停，外设... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:38:49 GMT</pubDate>
+  </item><item>
+    <title>看门狗与可靠性设计</title>
+    <link>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E7%9C%8B%E9%97%A8%E7%8B%97%E4%B8%8E%E5%8F%AF%E9%9D%A0%E6%80%A7%E8%AE%BE%E8%AE%A1</link>
+    <guid>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E7%9C%8B%E9%97%A8%E7%8B%97%E4%B8%8E%E5%8F%AF%E9%9D%A0%E6%80%A7%E8%AE%BE%E8%AE%A1</guid>
+    <description><![CDATA[ **专栏⑮·补充四：看门狗与可靠性——喂狗策略决定系统能不能自己活过来 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 ▎ 专栏⑮·补充四：看门狗与可靠性——喂狗策略决定系统能不能自己活过来 ▎ 看门狗是什么 硬件计数器，不喂就复位——系统卡死/死循环的唯一自救手段。汽车 ECU 里看门狗是安全要求（ISO 26262 ASIL 场景标配），裸机和 RTOS 喂狗策略完全不同。 ▎ 两种看门狗 独立看门狗（IWDG）：独立时钟（LSI），不受主时钟故障影响——卡死必复位，最可靠 窗口看门狗（WWDG）：必须在窗口期（早于下限/晚于上限都复位）喂——抓「喂太勤」的程序跑飞... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:38:46 GMT</pubDate>
+  </item><item>
+    <title>单片机驱动开发指南与框架</title>
+    <link>https://wiki.likui.info/Area/EE/%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/%E5%8D%95%E7%89%87%E6%9C%BA%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97%E4%B8%8E%E6%A1%86%E6%9E%B6</link>
+    <guid>https://wiki.likui.info/Area/EE/%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/%E5%8D%95%E7%89%87%E6%9C%BA%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97%E4%B8%8E%E6%A1%86%E6%9E%B6</guid>
+    <description><![CDATA[ **单片机驱动开发指南与开发框架 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 ▎ 单片机驱动开发指南与开发框架 ▎ 驱动是什么 驱动 = 硬件和应用之间的中间层——上层不管寄存器，下层不管业务。「UART 轮询 → 中断 → 环形缓冲区」就是最典型的驱动演进路径。 ▎ 三层模型（对应 AUTOSAR MCAL 思路） 硬件抽象层：寄存器读写 + 位操作宏——芯片相关 外设驱动层：协议 / 时序（UART 帧、SPI 时序、I2C 时序）——外设相关 设备接口层：给应用的标准 API——应用相关 → 对应 AUTOSAR：MCAL → ECU 抽象 → 服务层 ▎ 开... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:38:44 GMT</pubDate>
+  </item><item>
     <title>基础概念Q2-MCU与MPU选型</title>
     <link>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5Q2-MCU%E4%B8%8EMPU%E9%80%89%E5%9E%8B</link>
     <guid>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5Q2-MCU%E4%B8%8EMPU%E9%80%89%E5%9E%8B</guid>
@@ -47,24 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/%E8%BD%A6%E8%BD%BD%E9%80%9A%E4%BF%A1/1000%E9%97%AE/%E6%80%BB%E7%BA%BF%E5%9F%BA%E7%A1%80%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E4%B8%8EECU%E6%8E%A5%E5%8F%A3%E9%80%89%E5%9E%8B</guid>
     <description><![CDATA[ 车载通信1000问：总线基础、故障排查与ECU接口选型 本篇迁移通信协议系列第一至第四篇及 SPI 菊花链补充内容，整理 12 道问答，把同步/异步、全/半双工、串并行、主从模式与真实 ECU 排障连接起来。 39. ]]></description>
     <pubDate>Sat, 31 Oct 2026 01:45:34 GMT</pubDate>
-  </item><item>
-    <title>车载通信1000问：LIN、SDIO、信号完整性与车载以太网</title>
-    <link>https://wiki.likui.info/Area/EE/%E8%BD%A6%E8%BD%BD%E9%80%9A%E4%BF%A1/1000%E9%97%AE/LIN_SDIO_%E4%BF%A1%E5%8F%B7%E5%AE%8C%E6%95%B4%E6%80%A7%E4%B8%8E%E8%BD%A6%E8%BD%BD%E4%BB%A5%E5%A4%AA%E7%BD%91</link>
-    <guid>https://wiki.likui.info/Area/EE/%E8%BD%A6%E8%BD%BD%E9%80%9A%E4%BF%A1/1000%E9%97%AE/LIN_SDIO_%E4%BF%A1%E5%8F%B7%E5%AE%8C%E6%95%B4%E6%80%A7%E4%B8%8E%E8%BD%A6%E8%BD%BD%E4%BB%A5%E5%A4%AA%E7%BD%91</guid>
-    <description><![CDATA[ 车载通信1000问：LIN、SDIO、信号完整性与车载以太网 本篇迁移通信协议系列第三批 12 道问答，并保留 Flomo 原始 15 项上车自检清单。重点覆盖 LIN、SDIO、信号完整性和车载以太网。具体电气参数、时序和诊断服务以对应协议版本、PHY/MCU 数据手册和 OEM 网络规范为准。 27. ]]></description>
-    <pubDate>Sat, 31 Oct 2026 01:44:59 GMT</pubDate>
-  </item><item>
-    <title>车载通信1000问：SPI Flash、I2C EEPROM、RS485、SENT与USB</title>
-    <link>https://wiki.likui.info/Area/EE/%E8%BD%A6%E8%BD%BD%E9%80%9A%E4%BF%A1/1000%E9%97%AE/SPIFlash_I2CEEPROM_RS485_SENT_USB</link>
-    <guid>https://wiki.likui.info/Area/EE/%E8%BD%A6%E8%BD%BD%E9%80%9A%E4%BF%A1/1000%E9%97%AE/SPIFlash_I2CEEPROM_RS485_SENT_USB</guid>
-    <description><![CDATA[ 车载通信1000问：SPI Flash、I2C EEPROM、RS485、SENT与USB 本篇迁移车载通信协议系列第二批 11 道问答，覆盖非易失存储、串行总线、差分通信、汽车传感器协议和 USB。具体时序、器件容量和电气参数必须以芯片数据手册与项目网络规范为准。 16. ]]></description>
-    <pubDate>Sat, 31 Oct 2026 01:44:26 GMT</pubDate>
-  </item><item>
-    <title>1000问知识体系</title>
-    <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
-    <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
-    <description><![CDATA[ 1000问知识体系 这里集中整理 Flomo 中长期积累的「1000问 / 1000题 / 10000问」问题库、逐题解答和专题卡片。目标不是只保存题目，而是把每个问题沉淀为可检索、可验证、可复用的知识单元。 迁移原则：保留问题原意；合并重复题但记录关联；答案给出原理、适用边界和验证方法；技术内容尽量附 Mermaid 图；未核验的结论明确标注待核验。Flomo 原笔记暂不删除。 知识迁移流程 flowchart TD A[Flomo 原始笔记] --&gt; B[检索与盘点] B --&gt; C[按主题归类] C --&gt; D[识别重复问题] D --&gt; E[读取完整原文] E ... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 01:43:53 GMT</pubDate>
   </item>
     </channel>
   </rss>
