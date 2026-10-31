@@ -57,6 +57,12 @@ flowchart TD
   - 新增 10 题，覆盖 AUTOSAR 价值、生成审计、依赖链、Classic/Adaptive、WdgM、可信分区、配置模式、XCP/UDS 和 EcuM 启动；含审计、平台、WdgM、启动流程图。
 - [AUTOSAR1000问：SWC、VFB、RTE与代码生成](../../Project/AUTOSAR/1000问/SWC_VFB_RTE与代码生成)
   - 新增 10 题，覆盖 SW-C 分类、Composition、组件配置、VFB、S/R、Runnable 事件、RTE 生成、SchM、CAN 数据链路和全局时间同步；含组件、RTE、通信、时间同步图。
+- [AUTOSAR1000问：Bootloader、诊断、模式管理与多核集成](../../Project/AUTOSAR/1000问/Bootloader诊断模式管理与多核)
+  - 新增 10 题，覆盖 PN、Bootloader 跳转/回滚、UDS DID/0x19、BswM、Task、IOC、PDU 与端口映射排查。
+- [AUTOSAR1000问：配置治理、CDD、Memory Mapping与工程方法](../../Project/AUTOSAR/1000问/配置治理CDD与MemoryMapping)
+  - 新增 10 题，覆盖工具链、学习路线、架构简化、Tier1/OEM 分工、配置依赖、Schedule Table、CDD、volatile 和内存映射。
+- [AUTOSAR1000问：Bootloader刷写、UDS到SWC与中断分类](../../Project/AUTOSAR/1000问/Bootloader刷写UDS与中断分类)
+  - 新增 5 题，覆盖 UDS 刷写链路、诊断触发 Runnable、Session/SecurityAccess、ISR Cat1/2 和 BSW 服务分类。
 - [C语言1000问：基础语法、指针与未定义行为](../../Area/EE/C语言/1000问/基础语法指针与未定义行为)
   - 已整理 10 题，含声明/定义、类型、指针、数组、UB 和求值顺序；含编译链接与 UB 分类图。
 - [C语言1000问：函数、存储类、预处理器与文件I/O](../../Area/EE/C语言/1000问/函数存储预处理与文件IO)
@@ -124,7 +130,7 @@ flowchart TD
 - [x] 完成 Flomo 初步检索，识别主要系列和导航笔记
 - [x] 建立本总索引与统一问答标准
 - [ ] 按系列完整盘点所有 Flomo 笔记（包括分页与日期分段）
-- [x] 已完成首批 238 道问答卡的完整读取、答案整理与 GitHub 写入（AUTOSAR 40 题、C语言 50 题、自动驾驶 38 题、嵌入式 3 题、AI 10 题、数学 10 题、软考 20 题、数据结构与算法 10 题、通信协议 15 题、历史 10 题、儿童教育 10 题、电气工程 10 题、MATLAB/Simulink 12 题、考研英语 10 题、C语言第二批 10 题）\n- [ ] 继续逐批读取其余原文并迁移问题与答案
+- [x] 已完成首批 263 道问答卡的完整读取、答案整理与 GitHub 写入（AUTOSAR 65 题、C语言 50 题、自动驾驶 38 题、嵌入式 3 题、AI 10 题、数学 10 题、软考 20 题、数据结构与算法 10 题、通信协议 15 题、历史 10 题、儿童教育 10 题、电气工程 10 题、MATLAB/Simulink 12 题、考研英语 10 题、C语言第二批 10 题）\n- [ ] 继续逐批读取其余原文并迁移问题与答案
 - [ ] 补齐每个专题的 Mermaid 图
 - [ ] 回读 GitHub 文件，检查链接、重复题与答案完整性
 - [ ] 对照 Flomo 原始笔记完成最终数量核对
