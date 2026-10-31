@@ -86,6 +86,12 @@ flowchart TD
 - [[1000问/J1939与AUTOSAR-PGN映射]] —— J1939 PGN 与 AUTOSAR 信号/PDU 建模关系。
 - [[1000问/ARXML语义Diff与CI检测]] —— ARXML 版本差异的语义识别与 CI 自动检测。
 
+- [[1000问/ARXML-Python与lxml自动化]] —— ARXML 解析、检查、生成与自动化脚本场景。
+- [[1000问/SWC生命周期与ECU模式感知]] —— SW-C 感知 ECU 唤醒、运行、休眠与关机状态。
+- [[1000问/SWC上电初始化与Runnable生命周期]] —— 上电初始化、RTE 与 Runnable 启停控制链路。
+- [[1000问/E2E-CRC失败时的接收策略]] —— E2E 校验失败后的数据接受、保持与降级策略。
+- [[1000问/E2E-Profile与使用场景]] —— E2E Profile 选型、适用条件与安全边界。
+
 ## MCAL 驱动配置
 
 - [[MCAL/Dma]] —— DMA 通道与数据搬运配置。
