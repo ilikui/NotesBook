@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>运行时问题定位Q1-CAN报文发送链路</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8DQ1-CAN%E6%8A%A5%E6%96%87%E5%8F%91%E9%80%81%E9%93%BE%E8%B7%AF</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8DQ1-CAN%E6%8A%A5%E6%96%87%E5%8F%91%E9%80%81%E9%93%BE%E8%B7%AF</guid>
+    <description><![CDATA[ 运行时问题定位 Q1：某路 CAN 报文没发出来——从 Rte_Write 顺藤摸瓜，逐层查哪个返回值？ 原始 Flomo：v.flomoapp.com/mine/ 运行时问题定位 Q1：某路 CAN 报文没发出来——从 Rte_Write 顺藤摸瓜，逐层查哪个返回值？ 关键思路：沿发送链路逐层看返回值，哪一层返回 E_NOT_OK 就锁定在哪一层（或它的下游配置）。 发送链路与检查点： RTE：Rte_Write 返回 E_OK / E_NOT_OK。返回错 → 端口/接口或该 PDU 配置有问题。 COM：Com_TransmitSignal / Com_UpdateShadowSigna... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 09:13:01 GMT</pubDate>
+  </item><item>
+    <title>运行时问题定位Q2-PDU周期发送抖动</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8DQ2-PDU%E5%91%A8%E6%9C%9F%E5%8F%91%E9%80%81%E6%8A%96%E5%8A%A8</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8DQ2-PDU%E5%91%A8%E6%9C%9F%E5%8F%91%E9%80%81%E6%8A%96%E5%8A%A8</guid>
+    <description><![CDATA[ 运行时问题定位 Q2：PDU 配了周期发送 100ms，但示波器看实际间隔是乱的——可能原因？从哪查？ 原始 Flomo：v.flomoapp.com/mine/ 运行时问题定位 Q2：PDU 配了周期发送 100ms，但示波器看实际间隔是乱的——可能原因？从哪查？ 关键认知：COM 的周期发送靠 Com_MainFunction 被周期调度来推进。所以「配置的 100ms」是 COM 内部发送节拍，不等于总线上严格 100ms。实际间隔 = COM 节拍 × 发送时机 × 总线仲裁的叠加。 可能原因（按概率）： Com_MainFunction 的调用周期不稳：周期发送依赖 MainFunc... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 09:12:57 GMT</pubDate>
+  </item><item>
     <title>CS</title>
     <link>https://wiki.likui.info/Area/CS/CS</link>
     <guid>https://wiki.likui.info/Area/CS/CS</guid>
@@ -53,18 +65,6 @@
     <guid>https://wiki.likui.info/Project/CEM/</guid>
     <description><![CDATA[ CEM 项目知识地图 CEM（Central Electronic Module / 中央电子模块，具体项目命名以 OEM 架构定义为准）相关记录入口。当前归档来自历史 Flomo 需求和问题线索，尚未等同于完整设计规格；具体接口、诊断和休眠唤醒逻辑仍需结合项目 ARXML、软件架构和 OEM 需求确认。 需求与功能域 CEM功能域与诊断需求：执行器/传感器、Climate、驾驶员信息、ECU 平台、车灯、门锁、低压能源管理、远程控制、安全、TPMS、车窗后视镜等功能域，以及诊断需求线索。 软件架构与问题清单 CEM软件结构与待研究问题：DTC/DID、NvM 分层实现、接口配置和协议栈等待研... ]]></description>
     <pubDate>Sat, 31 Oct 2026 09:08:30 GMT</pubDate>
-  </item><item>
-    <title>CEM软件结构与待研究问题</title>
-    <link>https://wiki.likui.info/Project/CEM/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/CEM%E8%BD%AF%E4%BB%B6%E7%BB%93%E6%9E%84%E4%B8%8E%E5%BE%85%E7%A0%94%E7%A9%B6%E9%97%AE%E9%A2%98</link>
-    <guid>https://wiki.likui.info/Project/CEM/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/CEM%E8%BD%AF%E4%BB%B6%E7%BB%93%E6%9E%84%E4%B8%8E%E5%BE%85%E7%A0%94%E7%A9%B6%E9%97%AE%E9%A2%98</guid>
-    <description><![CDATA[ CEM 软件结构与待研究问题 原始 Flomo：v.flomoapp.com/mine/ 思考笔记：CEM软件相关的结构 DTC,DID是怎么实现的？ NVM存储从上层到下层的实现逻辑是什么？ 接口配置如何实现的？ 协议栈的相关内容？ CEM. ]]></description>
-    <pubDate>Sat, 31 Oct 2026 09:07:28 GMT</pubDate>
-  </item><item>
-    <title>CEM功能域与诊断需求</title>
-    <link>https://wiki.likui.info/Project/CEM/%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90/CEM%E5%8A%9F%E8%83%BD%E5%9F%9F%E4%B8%8E%E8%AF%8A%E6%96%AD%E9%9C%80%E6%B1%82</link>
-    <guid>https://wiki.likui.info/Project/CEM/%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90/CEM%E5%8A%9F%E8%83%BD%E5%9F%9F%E4%B8%8E%E8%AF%8A%E6%96%AD%E9%9C%80%E6%B1%82</guid>
-    <description><![CDATA[ CEM 功能域与诊断需求 原始 Flomo：v.flomoapp.com/mine/ CEM相关的APP需求 ActuatorsSensorsOnCEM Climate DriverInformationAndPersonalization ECUPlatform ExteriorLight InteriorLight LockingMgr LowVoltageElectricalEnergyManagement RemoteControl Safety SoundSignalling TheftProtection TPMS UsageAuthorization VehicleModeMan... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 09:07:17 GMT</pubDate>
   </item>
     </channel>
   </rss>
