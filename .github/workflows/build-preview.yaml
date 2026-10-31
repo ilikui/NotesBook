@@ -37,6 +37,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # 提前校验 frontmatter，避免 YAML 语法问题把构建中断在半路，
+      # 只留下一个看不出是哪个文件的行列号报错。
+      - name: Validate frontmatter
+        run: node scripts/check_frontmatter.mjs content
+
       - name: Build Quartz
         run: node ./quartz/bootstrap-cli.mjs build -d content -v
 
