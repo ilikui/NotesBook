@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>笔记工具选型与体系结构</title>
+    <link>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%94%E8%AE%B0%E5%B7%A5%E5%85%B7%E9%80%89%E5%9E%8B%E4%B8%8E%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84</link>
+    <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%94%E8%AE%B0%E5%B7%A5%E5%85%B7%E9%80%89%E5%9E%8B%E4%B8%8E%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84</guid>
+    <description><![CDATA[ 我的笔记库（曾经/正在使用）： 原始 Flomo：v.flomoapp.com/mine/ 我的笔记库（曾经/正在使用）： 当前主力： Flomo —— 当前日常笔记系统。28个Inbox标签分类管理，文件库/笔记库/卡片/模型/方法/清单/信息源等26关键词框架。每天持续输出内容 曾经使用/评估过： Notion —— 早期知识管理工具 SuperMemo —— 间隔重复记忆系统 Obsidian —— 本地Markdown笔记（双链） OneNote —— 微软笔记 Zotero —— 文献管理 Nottey —— 评估过的笔记工具 闪念笔记 —— 快速记录工具 IMA —— 评估过的笔记... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 08:58:27 GMT</pubDate>
+  </item><item>
     <title>KM</title>
     <link>https://wiki.likui.info/Area/KM/</link>
     <guid>https://wiki.likui.info/Area/KM/</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%8D%A1%E7%89%87%E7%9B%92%E7%AC%94%E8%AE%B0%E6%B3%95%E5%9F%BA%E7%A1%80</guid>
     <description><![CDATA[ 卡片盒笔记法基础 原始 Flomo：v.flomoapp.com/mine/ 卡片盒笔记法是一整套成体系的、用于做笔记并以笔记形式来实现 知识管理 与 高效写作 的方法。该方法源自于德国当代著名社会学家尼克拉斯·卢曼（关于他的维基百科），他是一位高产的写作者，一生不仅出版了 50 本书和 600 多篇文章，在身后留下的遗产里还有 150 多份未完成的手稿（其中不少手稿的篇幅达到了千页以上）。也就是说，卢曼的实际生产力是远超自己的出版作品数量的。而对于这样高产的写作能力，卢曼本人却将其归功于自己所使用的卡片盒笔记系统，这引发了人们对于该笔记系统及其使用方法的好奇心与研究热情。毕竟作为一个写作者，... ]]></description>
     <pubDate>Sat, 31 Oct 2026 08:54:14 GMT</pubDate>
-  </item><item>
-    <title>数字卡片盒软件功能需求</title>
-    <link>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E5%8D%A1%E7%89%87%E7%9B%92%E8%BD%AF%E4%BB%B6%E5%8A%9F%E8%83%BD%E9%9C%80%E6%B1%82</link>
-    <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E5%8D%A1%E7%89%87%E7%9B%92%E8%BD%AF%E4%BB%B6%E5%8A%9F%E8%83%BD%E9%9C%80%E6%B1%82</guid>
-    <description><![CDATA[ 数字卡片盒软件功能需求 原始 Flomo：v.flomoapp.com/mine/ 比卢曼幸运的是，我们所生活的是一个已经有了超链接的数字化时代，可以轻松使用软件工具来构建他所主张的这种超文本信息系统。但如果想使用软件来建立专属于自己的卡片盒笔记系统，我们所选择的软件应该具备以下基本功能： 支持构建超文本系统：这项功能必须要让人在阅读任何一篇笔记时都能借助于超链接直接跳转到任何与当前笔记相关联的其他笔记。 支持全文搜索功能：全文搜索功能相当于卢曼在他的卡片盒笔记系统中利用索引表提供的、进入系统的入口（全文搜索显然更强大）。 支持沙盒功能：卢曼建立他的卡片盒笔记系统时还具备了一个隐含设施，那就是... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 08:54:04 GMT</pubDate>
   </item>
     </channel>
   </rss>
