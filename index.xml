@@ -6,12 +6,6 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>AUTOSAR MCAL 配置说明 · 模块⑬ Eep</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Eep</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Eep</guid>
-    <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块⑬ Eep 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块⑬ Eep Eep 是 EEPROM 驱动（MCAL 层），负责 MCU 内部 / 外部 EEPROM 的读、写、擦除。它是存储栈的驱动层，上层接 NvM。 核心职责：EEPROM 分区读写、擦除、异步 job 管理。 关键配置项： EepSectorConfiguration：扇区配置（EEPROM 分区地址、大小、数量）。 EepRead / EepWrite / EepErase：读、写、擦配置。 EepJobConfigurat... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:47:27 GMT</pubDate>
-  </item><item>
     <title>AUTOSAR MCAL 配置说明 · 模块⑭ Wdg</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Wdg</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Wdg</guid>
@@ -65,6 +59,12 @@
     <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E6%96%87%E4%BB%B6IO-Q2-%E6%A0%87%E5%87%86IO%E7%BC%93%E5%86%B2%E6%9C%BA%E5%88%B6</guid>
     <description><![CDATA[ C语言 1000问 · 文件I/O Q2：标准 I/O 为什么要有缓冲？全缓冲 / 行缓冲 / 无缓冲分别在什么场景，fflush 有什么用？ 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 C语言 1000问 · 文件I/O Q2：标准 I/O 为什么要有缓冲？全缓冲 / 行缓冲 / 无缓冲分别在什么场景，fflush 有什么用？ ▎ 五大学习法：西蒙学习法——把「缓冲」钻透 为什么要缓冲 系统调用（read / write）很「贵」：要陷入内核，可能要等磁盘 / 设备。 若每次 fputc 都直接 write 一个字节，几百万次系统调用慢到不可接受。 缓冲把多次小读... ]]></description>
     <pubDate>Sat, 31 Oct 2026 07:42:05 GMT</pubDate>
+  </item><item>
+    <title>文件IO-Q3-feof正确使用</title>
+    <link>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E6%96%87%E4%BB%B6IO-Q3-feof%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8</link>
+    <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E6%96%87%E4%BB%B6IO-Q3-feof%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8</guid>
+    <description><![CDATA[ C语言 1000问 · 文件I/O Q3：怎么正确判断文件读完？为什么常说 while (!feof(fp)) 是错的？ 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 C语言 1000问 · 文件I/O Q3：怎么正确判断文件读完？为什么常说 while (!feof(fp)) 是错的？ ▎ 五大学习法：费曼学习法——把「feof 的坑」讲透 feof 到底是什么 feof(fp) 不是「预测下一次读会不会到末尾」，它报告的是「上一次读是否因为碰到文件末尾而结束」。 它是「事后标记」：只有真正读到 EOF（且读到失败）之后，它才变真。 同理 ferror 报告上次读是... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:42:01 GMT</pubDate>
   </item>
     </channel>
   </rss>
