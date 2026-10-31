@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>AUTOSAR MCAL 配置说明 · 模块⑬ Eep</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Eep</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Eep</guid>
+    <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块⑬ Eep 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块⑬ Eep Eep 是 EEPROM 驱动（MCAL 层），负责 MCU 内部 / 外部 EEPROM 的读、写、擦除。它是存储栈的驱动层，上层接 NvM。 核心职责：EEPROM 分区读写、擦除、异步 job 管理。 关键配置项： EepSectorConfiguration：扇区配置（EEPROM 分区地址、大小、数量）。 EepRead / EepWrite / EepErase：读、写、擦配置。 EepJobConfigurat... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:47:27 GMT</pubDate>
+  </item><item>
+    <title>AUTOSAR MCAL 配置说明 · 模块⑭ Wdg</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Wdg</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Wdg</guid>
+    <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块⑭ Wdg 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块⑭ Wdg Wdg（看门狗驱动）负责看门狗硬件的超时、模式、喂狗。注意：MCAL 的 Wdg 只管驱动层，上层 WdgIf / WdgM 做看门狗管理与周期触发。 核心职责：看门狗超时配置、模式切换、触发条件（喂狗）。 关键配置项： WdgDevice：设备配置（映射到看门狗硬件）。 WdgSettingConfiguration：设置——超时时间（WdgTimeout）、模式（WdgMode：Fast / Slow / Off）。 W... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:47:25 GMT</pubDate>
+  </item><item>
     <title>AUTOSAR MCAL 配置说明 · 模块⑮ Mpu（可选）</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Mpu</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Mpu</guid>
@@ -53,18 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E6%96%87%E4%BB%B6IO-Q2-%E6%A0%87%E5%87%86IO%E7%BC%93%E5%86%B2%E6%9C%BA%E5%88%B6</guid>
     <description><![CDATA[ C语言 1000问 · 文件I/O Q2：标准 I/O 为什么要有缓冲？全缓冲 / 行缓冲 / 无缓冲分别在什么场景，fflush 有什么用？ 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 C语言 1000问 · 文件I/O Q2：标准 I/O 为什么要有缓冲？全缓冲 / 行缓冲 / 无缓冲分别在什么场景，fflush 有什么用？ ▎ 五大学习法：西蒙学习法——把「缓冲」钻透 为什么要缓冲 系统调用（read / write）很「贵」：要陷入内核，可能要等磁盘 / 设备。 若每次 fputc 都直接 write 一个字节，几百万次系统调用慢到不可接受。 缓冲把多次小读... ]]></description>
     <pubDate>Sat, 31 Oct 2026 07:42:05 GMT</pubDate>
-  </item><item>
-    <title>文件IO-Q3-feof正确使用</title>
-    <link>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E6%96%87%E4%BB%B6IO-Q3-feof%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8</link>
-    <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E6%96%87%E4%BB%B6IO-Q3-feof%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8</guid>
-    <description><![CDATA[ C语言 1000问 · 文件I/O Q3：怎么正确判断文件读完？为什么常说 while (!feof(fp)) 是错的？ 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 C语言 1000问 · 文件I/O Q3：怎么正确判断文件读完？为什么常说 while (!feof(fp)) 是错的？ ▎ 五大学习法：费曼学习法——把「feof 的坑」讲透 feof 到底是什么 feof(fp) 不是「预测下一次读会不会到末尾」，它报告的是「上一次读是否因为碰到文件末尾而结束」。 它是「事后标记」：只有真正读到 EOF（且读到失败）之后，它才变真。 同理 ferror 报告上次读是... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:42:01 GMT</pubDate>
-  </item><item>
-    <title>文件IO-Q4-文件定位与文本二进制模式</title>
-    <link>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E6%96%87%E4%BB%B6IO-Q4-%E6%96%87%E4%BB%B6%E5%AE%9A%E4%BD%8D%E4%B8%8E%E6%96%87%E6%9C%AC%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%A8%A1%E5%BC%8F</link>
-    <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E6%96%87%E4%BB%B6IO-Q4-%E6%96%87%E4%BB%B6%E5%AE%9A%E4%BD%8D%E4%B8%8E%E6%96%87%E6%9C%AC%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%A8%A1%E5%BC%8F</guid>
-    <description><![CDATA[ C语言 1000问 · 文件I/O Q4：fseek / ftell / rewind 怎么用？文本模式和二进制模式下的定位有什么不同？ 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 C语言 1000问 · 文件I/O Q4：fseek / ftell / rewind 怎么用？文本模式和二进制模式下的定位有什么不同？ ▎ 五大学习法：西蒙学习法——把「文件定位」钻透 三个基本定位函数 ftell(fp)：返回当前位置相对文件开头的偏移。常用于「记住当前位置，之后跳回来」。 fseek(fp, offset, whence)：移动位置指针。 whence 三个取值：S... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:41:58 GMT</pubDate>
   </item>
     </channel>
   </rss>
