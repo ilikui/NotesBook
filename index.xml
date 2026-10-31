@@ -6,12 +6,6 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>SWC-C-S调用并发与抢占</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC-C-S%E8%B0%83%E7%94%A8%E5%B9%B6%E5%8F%91%E4%B8%8E%E6%8A%A2%E5%8D%A0</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC-C-S%E8%B0%83%E7%94%A8%E5%B9%B6%E5%8F%91%E4%B8%8E%E6%8A%A2%E5%8D%A0</guid>
-    <description><![CDATA[ SW-C 设计与应用层实践 Q3：Client-Server 并发与抢占 原始 Flomo：v.flomoapp.com/mine/ SW-C 设计与应用层实践 Q3：Client 调了 Server 的 Operation，Server 还没返回时 Client 被抢占——会不会出问题？ 先区分两种 C/S 调用语义： 同步（synchronous）：Rte_Call 是阻塞调用，Client 发起后挂起，等 Server 完成才返回结果，RTE 保证结果正确传回。 异步（asynchronous）：发起后不等结果，Client 继续执行，结果通过 Rte_Result / Buffer 读... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:59:55 GMT</pubDate>
-  </item><item>
     <title>性能优化-RTE调用与PDU端到端开销</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-RTE%E8%B0%83%E7%94%A8%E4%B8%8EPDU%E7%AB%AF%E5%88%B0%E7%AB%AF%E5%BC%80%E9%94%80</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-RTE%E8%B0%83%E7%94%A8%E4%B8%8EPDU%E7%AB%AF%E5%88%B0%E7%AB%AF%E5%BC%80%E9%94%80</guid>
@@ -65,6 +59,12 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/E2E-CRC%E5%A4%B1%E8%B4%A5%E6%97%B6%E7%9A%84%E6%8E%A5%E6%94%B6%E7%AD%96%E7%95%A5</guid>
     <description><![CDATA[ E2E / 端到端通信保护深入 Q2：E2E 报文到达但 CRC 校验失败——丢弃还是用上次有效值？AUTOSAR 推荐做法？ 原始 Flomo：v.flomoapp.com/mine/ E2E / 端到端通信保护深入 Q2：E2E 报文到达但 CRC 校验失败——丢弃还是用上次有效值？AUTOSAR 推荐做法？ 先分清：E2E 库只负责「检测 + 报告」，不替应用决定用哪个值。 推荐流程： E2E check（E2E_PXXCheck）返回状态：OK / REPEATED / WRONGSEQUENCE / ERROR / NONEWDATA 等。 CRC 校验失败 → 状态 ERROR。此... ]]></description>
     <pubDate>Sat, 31 Oct 2026 07:56:38 GMT</pubDate>
+  </item><item>
+    <title>SW-C 生命周期与状态管理 Q1：一个 Application SW-C 从 ECU 上电到正常运行的生命周期？开始/停止执行 Runnable 是由谁控制的？</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC%E4%B8%8A%E7%94%B5%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%8ERunnable%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC%E4%B8%8A%E7%94%B5%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%8ERunnable%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F</guid>
+    <description><![CDATA[ SW-C 生命周期与状态管理 Q1：一个 Application SW-C 从 ECU 上电到正常运行的生命周期？开始/停止执行 Runnable 是由谁控制的？ 原始 Flomo：v.flomoapp.com/mine/ SW-C 生命周期与状态管理 Q1：一个 Application SW-C 从 ECU 上电到正常运行的生命周期？开始/停止执行 Runnable 是由谁控制的？ 答：生命周期节点由外部模块（EcuM / BswM / RTE 调度）管理，SW-C 自身是被动实体，不控制自己的生命周期。 从上电到正常运行： 上电 / 复位：MCU 启动 → MCAL 初始化 → EcuM ... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:56:35 GMT</pubDate>
   </item>
     </channel>
   </rss>
