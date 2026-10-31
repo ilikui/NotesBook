@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>C语言</title>
+    <link>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80</link>
+    <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80</guid>
+    <description><![CDATA[ C 语言是嵌入式与系统编程的通用语言：它贴近硬件、语法精简、可移植性强，几乎所有操作系统内核、编译器和 MCU 固件都由 C 写成。学 C 不只是学语法，更是理解「内存、指针、编译链接」的入口。 一句话定位 C = 一门「小而深」的语言：语法少，但指针与内存模型足够陪你走完整个职业生涯。 知识体系 flowchart TD A[C 语言] --&gt; B[基础语法] A --&gt; C[核心难点] A --&gt; D[模块化] A --&gt; E[工程实践] B --&gt; B1[&quot;数据类型与变量&quot;] B --&gt; B2[&quot;运算符与表达式&quot;... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:39:36 GMT</pubDate>
+  </item><item>
     <title>EE</title>
     <link>https://wiki.likui.info/Area/EE/</link>
     <guid>https://wiki.likui.info/Area/EE/</guid>
@@ -58,12 +64,6 @@
     <link>https://wiki.likui.info/Area/EE/%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F/Makefile100%E9%97%AE</link>
     <guid>https://wiki.likui.info/Area/EE/%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F/Makefile100%E9%97%AE</guid>
     <description><![CDATA[ Makefile 100问：从 GNU Make 语法到嵌入式 AUTOSAR 构建 本篇迁移 Flomo「Makefile 100问」三阶题库。原始导航标记为 30/30 完成：第一阶语法、第二阶工程、第三阶嵌入式与 AUTOSAR 实战。以下逐题保留原问题与答案卡内容，并补充构建链路图、依赖关系图和工程化边界。示例以 GNU Make 为主；不同 Make 版本、Shell、编译器和供应商生成工具的行为需以实际环境验证。 学习路线 flowchart TD A[第一阶：Make 语法] --&gt; B[第二阶：工程组织] B --&gt; C[第三阶：嵌入式实战] C --&gt; D[... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 02:41:14 GMT</pubDate>
-  </item><item>
-    <title>DiagnosticCommunicationManager</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/DiagnosticCommunicationManager</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/DiagnosticCommunicationManager</guid>
-    <description><![CDATA[ Dcm（Diagnostic Communication Manager，诊断通信管理） 是 CP 基础软件模块，为诊断服务提供统一 API，供外部诊断工具在开发、生产或售后阶段使用。它实现诊断协议的 OSI 5~7 层，管理诊断会话与安全状态，判断服务是否受支持、在当前会话下能否执行。 一句话定位 诊断请求的「总机」：接收 PduR 送来的诊断报文，按 UDS / OBD 规范解析、鉴权、执行与应答。 规范信息 项目内容平台CP类别SWS — 软件模块规范（Software Specification）UID018版本R26-11本地 PDFAUTOSAR_CP_SWS_Diagnostic... ]]></description>
     <pubDate>Sat, 31 Oct 2026 02:41:14 GMT</pubDate>
   </item>
     </channel>
