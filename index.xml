@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>KM</title>
+    <link>https://wiki.likui.info/Area/KM/</link>
+    <guid>https://wiki.likui.info/Area/KM/</guid>
+    <description><![CDATA[ KM（Knowledge Management，知识管理） 关注如何高效地收集、理解、组织、连接和复用个人知识。它不只是工具问题，更是一套帮助思考与行动持续改进的方法。 一句话定位 让知识「进得来、找得到、连得上、用得上」，并最终转化为判断、作品与行动。 知识管理地图 flowchart TD A[&quot;知识输入&quot;] --&gt; B[&quot;捕捉与收集&quot;] B --&gt; C[&quot;阅读与理解&quot;] C --&gt; D[&quot;提炼为自己的表达&quot;] D --&gt; E[&quot;组织与连接&quot;] E --&gt; F[... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 09:03:55 GMT</pubDate>
+  </item><item>
     <title>专栏⑰·第4篇：课本定义的数学概念 vs 工程里的实际用法——“最短路径”和“特征分解”的差距</title>
     <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC4%E7%AF%87-%E8%AF%BE%E6%9C%AC%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%AE%9E%E9%99%85</link>
     <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC4%E7%AF%87-%E8%AF%BE%E6%9C%AC%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%AE%9E%E9%99%85</guid>
@@ -23,12 +29,6 @@
     <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/SQ4R%E9%98%85%E8%AF%BB%E6%B3%95%E8%A1%A5%E5%85%85</guid>
     <description><![CDATA[ SQ4R 阅读法补充 原始 Flomo：v.flomoapp.com/mine/ 关联自：v.flomoapp.com/mine/ 该概念是第二次世界大战期间由心理学教授弗朗西斯 逻兵逊为美国陆军开发的阅读方法。 卡片笔记. ]]></description>
     <pubDate>Sat, 31 Oct 2026 09:01:29 GMT</pubDate>
-  </item><item>
-    <title>KM</title>
-    <link>https://wiki.likui.info/Area/KM/</link>
-    <guid>https://wiki.likui.info/Area/KM/</guid>
-    <description><![CDATA[ KM（Knowledge Management，知识管理） 关注如何高效地收集、理解、组织、连接和复用个人知识。它不只是工具问题，更是一套帮助思考与行动持续改进的方法。 一句话定位 让知识「进得来、找得到、连得上、用得上」，并最终转化为判断、作品与行动。 知识管理地图 flowchart TD A[&quot;知识输入&quot;] --&gt; B[&quot;捕捉与收集&quot;] B --&gt; C[&quot;阅读与理解&quot;] C --&gt; D[&quot;提炼为自己的表达&quot;] D --&gt; E[&quot;组织与连接&quot;] E --&gt; F[... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 09:01:08 GMT</pubDate>
   </item><item>
     <title>常见笔记术对比</title>
     <link>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%B8%B8%E8%A7%81%E7%AC%94%E8%AE%B0%E6%9C%AF%E5%AF%B9%E6%AF%94</link>
