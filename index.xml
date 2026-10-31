@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>生成代码分析Q2-BSW条件编译宏判断</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90Q2-BSW%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91%E5%AE%8F%E5%88%A4%E6%96%AD</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90Q2-BSW%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91%E5%AE%8F%E5%88%A4%E6%96%AD</guid>
+    <description><![CDATA[ 生成代码分析与集成 Q2：BSW 生成代码用宏控制条件编译——怎么确定某配置参数对应宏是 ENABLED 还是 DISABLED？ 原始 Flomo：v.flomoapp.com/mine/ 生成代码分析与集成 Q2：BSW 生成代码用宏控制条件编译——怎么确定某配置参数对应宏是 ENABLED 还是 DISABLED？ 生成器把每个配置参数翻译成预处理器宏，命名有规律（如 XXX_ENABLED / XXX_ACTIVE / XXX_USE_…），值为 STD_ON / STD_OFF 或 TRUE / FALSE。 三个直接手段： 看生成的配置头文件（_Cfg.h）：在生成目录里搜宏名（如... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 09:13:08 GMT</pubDate>
+  </item><item>
+    <title>生成代码分析Q3-RteType类型一致性</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90Q3-RteType%E7%B1%BB%E5%9E%8B%E4%B8%80%E8%87%B4%E6%80%A7</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90Q3-RteType%E7%B1%BB%E5%9E%8B%E4%B8%80%E8%87%B4%E6%80%A7</guid>
+    <description><![CDATA[ 生成代码分析与集成 Q3：Rte_Type.h 定义了哪些类型？应用层类型和 RTE 生成类型不一致，谁说了算？ 原始 Flomo：v.flomoapp.com/mine/ 生成代码分析与集成 Q3：Rte_Type.h 定义了哪些类型？应用层类型和 RTE 生成类型不一致，谁说了算？ Rte_Type.h 是 RTE 生成的头文件，主要包含： 数据建模导出的 C 类型：AUTOSAR 系统描述里的 Application Data Type / Implementation Data Type 被映射成 C 类型（primitive、array、record、union），这些 typede... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 09:13:04 GMT</pubDate>
+  </item><item>
     <title>运行时问题定位Q1-CAN报文发送链路</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8DQ1-CAN%E6%8A%A5%E6%96%87%E5%8F%91%E9%80%81%E9%93%BE%E8%B7%AF</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8DQ1-CAN%E6%8A%A5%E6%96%87%E5%8F%91%E9%80%81%E9%93%BE%E8%B7%AF</guid>
@@ -53,18 +65,6 @@
     <guid>https://wiki.likui.info/Area/CS/Python/%E5%BA%8F%E5%88%97%E5%88%87%E7%89%87</guid>
     <description><![CDATA[ Python 序列切片 原始 Flomo：v.flomoapp.com/mine/ 切片是 Python 中用于访问序列（如列表、元组、字符串）中部分元素的技术。通过指定起始索引和结束索引，可以提取序列的一部分。切片的基本语法如下：sequence[start:stop:step] start：切片的起始索引（包含该索引的元素）。 stop：切片的结束索引（不包含该索引的元素）。 step：切片的步长，默认为 1。你可以生成列表的任何子集，甚至可以使用负数索引来从序列的末尾开始切片。切片操作不会修改原始序列，而是返回一个新的序列。 Python. ]]></description>
     <pubDate>Sat, 31 Oct 2026 09:09:36 GMT</pubDate>
-  </item><item>
-    <title>dotnet-cli开发命令</title>
-    <link>https://wiki.likui.info/Area/CS/CSharp/dotnet-cli%E5%BC%80%E5%8F%91%E5%91%BD%E4%BB%A4</link>
-    <guid>https://wiki.likui.info/Area/CS/CSharp/dotnet-cli%E5%BC%80%E5%8F%91%E5%91%BD%E4%BB%A4</guid>
-    <description><![CDATA[ .NET CLI 开发命令 原始 Flomo：v.flomoapp.com/mine/ C# 开发 dotnet.microsoft.com/en-us/download .NET CLI 是一个命令行界面，提供了一系列用于开发、构建、测试和发布.NET 应用程序的命令。这些命令统称为 dotnet 命令。它们允许开发者在各种操作系统上进行.NET 开发，而无需依赖于Visual Studio 等集成开发环境. ]]></description>
-    <pubDate>Sat, 31 Oct 2026 09:09:08 GMT</pubDate>
-  </item><item>
-    <title>CEM 项目知识地图</title>
-    <link>https://wiki.likui.info/Project/CEM/</link>
-    <guid>https://wiki.likui.info/Project/CEM/</guid>
-    <description><![CDATA[ CEM 项目知识地图 CEM（Central Electronic Module / 中央电子模块，具体项目命名以 OEM 架构定义为准）相关记录入口。当前归档来自历史 Flomo 需求和问题线索，尚未等同于完整设计规格；具体接口、诊断和休眠唤醒逻辑仍需结合项目 ARXML、软件架构和 OEM 需求确认。 需求与功能域 CEM功能域与诊断需求：执行器/传感器、Climate、驾驶员信息、ECU 平台、车灯、门锁、低压能源管理、远程控制、安全、TPMS、车窗后视镜等功能域，以及诊断需求线索。 软件架构与问题清单 CEM软件结构与待研究问题：DTC/DID、NvM 分层实现、接口配置和协议栈等待研... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 09:08:30 GMT</pubDate>
   </item>
     </channel>
   </rss>
