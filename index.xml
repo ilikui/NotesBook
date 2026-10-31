@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>DBeaver与SQLite工具</title>
+    <link>https://wiki.likui.info/Area/CS/%E6%95%B0%E6%8D%AE%E5%BA%93/DBeaver%E4%B8%8ESQLite%E5%B7%A5%E5%85%B7</link>
+    <guid>https://wiki.likui.info/Area/CS/%E6%95%B0%E6%8D%AE%E5%BA%93/DBeaver%E4%B8%8ESQLite%E5%B7%A5%E5%85%B7</guid>
+    <description><![CDATA[ DBeaver 与 SQLite 工具 原始 Flomo：v.flomoapp.com/mine/ SQLITE 数据库工具： dbeaver.io/ 关联自：v.flomoapp.com/mine/ 数据库. ]]></description>
+    <pubDate>Sat, 31 Oct 2026 09:10:19 GMT</pubDate>
+  </item><item>
+    <title>NiceGUI卡片笔记应用构想</title>
+    <link>https://wiki.likui.info/Area/CS/Python/NiceGUI%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E5%BA%94%E7%94%A8%E6%9E%84%E6%83%B3</link>
+    <guid>https://wiki.likui.info/Area/CS/Python/NiceGUI%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E5%BA%94%E7%94%A8%E6%9E%84%E6%83%B3</guid>
+    <description><![CDATA[ NiceGUI 卡片笔记应用构想 原始 Flomo：v.flomoapp.com/mine/ NiceGui 地址 这是一个web服务器的地址：可以做一个卡片笔记？ 通过导入卡片学习相关的知识 Python. ]]></description>
+    <pubDate>Sat, 31 Oct 2026 09:10:08 GMT</pubDate>
+  </item><item>
     <title>列表基础</title>
     <link>https://wiki.likui.info/Area/CS/Python/%E5%88%97%E8%A1%A8%E5%9F%BA%E7%A1%80</link>
     <guid>https://wiki.likui.info/Area/CS/Python/%E5%88%97%E8%A1%A8%E5%9F%BA%E7%A1%80</guid>
@@ -53,18 +65,6 @@
     <guid>https://wiki.likui.info/Project/CEM/%E5%B7%A5%E5%85%B7%E9%93%BE/ARXML%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E9%9C%80%E6%B1%82</guid>
     <description><![CDATA[ ARXML 数据可视化需求 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 中的ARXML文件数据可视化 CEM. ]]></description>
     <pubDate>Sat, 31 Oct 2026 09:06:56 GMT</pubDate>
-  </item><item>
-    <title>CEM工作问题清单</title>
-    <link>https://wiki.likui.info/Project/CEM/100%E9%97%AE/CEM%E5%B7%A5%E4%BD%9C%E9%97%AE%E9%A2%98%E6%B8%85%E5%8D%95</link>
-    <guid>https://wiki.likui.info/Project/CEM/100%E9%97%AE/CEM%E5%B7%A5%E4%BD%9C%E9%97%AE%E9%A2%98%E6%B8%85%E5%8D%95</guid>
-    <description><![CDATA[ CEM 工作问题清单 原始 Flomo：v.flomoapp.com/mine/ CEM工作的100个问题 接口的配置操作？ 休眠唤醒的相关逻辑是什么？ CEM. ]]></description>
-    <pubDate>Sat, 31 Oct 2026 09:06:28 GMT</pubDate>
-  </item><item>
-    <title>KM</title>
-    <link>https://wiki.likui.info/Area/KM/</link>
-    <guid>https://wiki.likui.info/Area/KM/</guid>
-    <description><![CDATA[ KM（Knowledge Management，知识管理） 关注如何高效地收集、理解、组织、连接和复用个人知识。它不只是工具问题，更是一套帮助思考与行动持续改进的方法。 一句话定位 让知识「进得来、找得到、连得上、用得上」，并最终转化为判断、作品与行动。 知识管理地图 flowchart TD A[&quot;知识输入&quot;] --&gt; B[&quot;捕捉与收集&quot;] B --&gt; C[&quot;阅读与理解&quot;] C --&gt; D[&quot;提炼为自己的表达&quot;] D --&gt; E[&quot;组织与连接&quot;] E --&gt; F[... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 09:03:55 GMT</pubDate>
   </item>
     </channel>
   </rss>
