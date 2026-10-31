@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Makefile 100问：从 GNU Make 语法到嵌入式 AUTOSAR 构建</title>
+    <link>https://wiki.likui.info/Area/EE/%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F/Makefile100%E9%97%AE</link>
+    <guid>https://wiki.likui.info/Area/EE/%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F/Makefile100%E9%97%AE</guid>
+    <description><![CDATA[ Makefile 100问：从 GNU Make 语法到嵌入式 AUTOSAR 构建 本篇迁移 Flomo「Makefile 100问」三阶题库。原始导航标记为 30/30 完成：第一阶语法、第二阶工程、第三阶嵌入式与 AUTOSAR 实战。以下逐题保留原问题与答案卡内容，并补充构建链路图、依赖关系图和工程化边界。示例以 GNU Make 为主；不同 Make 版本、Shell、编译器和供应商生成工具的行为需以实际环境验证。 学习路线 flowchart TD A[第一阶：Make 语法] --&gt; B[第二阶：工程组织] B --&gt; C[第三阶：嵌入式实战] C --&gt; D[... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 02:41:14 GMT</pubDate>
+  </item><item>
+    <title>DiagnosticCommunicationManager</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/DiagnosticCommunicationManager</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/DiagnosticCommunicationManager</guid>
+    <description><![CDATA[ Dcm（Diagnostic Communication Manager，诊断通信管理） 是 CP 基础软件模块，为诊断服务提供统一 API，供外部诊断工具在开发、生产或售后阶段使用。它实现诊断协议的 OSI 5~7 层，管理诊断会话与安全状态，判断服务是否受支持、在当前会话下能否执行。 一句话定位 诊断请求的「总机」：接收 PduR 送来的诊断报文，按 UDS / OBD 规范解析、鉴权、执行与应答。 规范信息 项目内容平台CP类别SWS — 软件模块规范（Software Specification）UID018版本R26-11本地 PDFAUTOSAR_CP_SWS_Diagnostic... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 02:41:14 GMT</pubDate>
+  </item><item>
     <title>C语言1000问：位操作、内存分配、预处理器与AUTOSAR实战</title>
     <link>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E4%BD%8D%E6%93%8D%E4%BD%9C%E9%A2%84%E5%A4%84%E7%90%86%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E4%B8%8EAUTOSAR</link>
     <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E4%BD%8D%E6%93%8D%E4%BD%9C%E9%A2%84%E5%A4%84%E7%90%86%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E4%B8%8EAUTOSAR</guid>
@@ -53,18 +65,6 @@
     <guid>https://wiki.likui.info/Project/%E8%80%83%E8%AF%95%E7%AE%A1%E7%90%86/%E8%BD%AF%E8%80%83%E9%AB%98%E7%BA%A71000%E9%97%AE/%E7%9C%9F%E9%A2%98%E8%A7%A3%E6%9E%90%E8%AE%BA%E6%96%87%E4%B8%8E%E5%A4%87%E8%80%83%E7%AD%96%E7%95%A5</guid>
     <description><![CDATA[ 软考高级1000问：系统架构师、项目管理师与真题解析 本篇迁移软考相关的 10 道测试题、3 道实践专题和学习计划。考试科目、题型、分值和论文要求可能随年度政策调整，实际备考以当年官方考试说明为准。 一、系统架构师测试题 Q21. ]]></description>
     <pubDate>Sat, 31 Oct 2026 01:42:02 GMT</pubDate>
-  </item><item>
-    <title>Education</title>
-    <link>https://wiki.likui.info/Resource/Education/</link>
-    <guid>https://wiki.likui.info/Resource/Education/</guid>
-    <description><![CDATA[ Education（教育） 汇集小学阶段的学习资料与知识脉络，以思维导图方式梳理各学科的知识点框架，便于家长辅导与孩子查漏补缺。 一句话定位 用一张思维导图看清一个年级、一门学科「到底要学什么」。 儿童教育 1000问 学习习惯语文与数学启蒙 —— 学习阶段、提问法、识字、阅读、写作与数感启蒙。 分科实战语文数学英语与理科 —— 语文、数学、英语、物理、化学和生物的分科学习方法。 年级转折与长期学习规划 —— 幼小衔接、小学到大学的关键转折、学习策略与家庭支持。 flowchart TD A[好奇与兴趣] --&gt; B[提问] B --&gt; C[阅读 / 观察 / 实验] C --&g... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 01:41:27 GMT</pubDate>
-  </item><item>
-    <title>儿童教育1000问：幼小衔接、年级转折与长期学习规划</title>
-    <link>https://wiki.likui.info/Resource/Education/1000%E9%97%AE/%E5%B9%B4%E7%BA%A7%E8%BD%AC%E6%8A%98%E4%B8%8E%E9%95%BF%E6%9C%9F%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92</link>
-    <guid>https://wiki.likui.info/Resource/Education/1000%E9%97%AE/%E5%B9%B4%E7%BA%A7%E8%BD%AC%E6%8A%98%E4%B8%8E%E9%95%BF%E6%9C%9F%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92</guid>
-    <description><![CDATA[ 儿童教育1000问：幼小衔接、年级转折与长期学习规划 本篇迁移儿童教育续篇第二部分，整理 20 道关于幼小衔接、小学转折、初高中适应、大学规划和家庭支持的问答。各地课程安排、考试政策和选科制度不同，具体规划应以当地政策和孩子实际情况为准。 一、幼小衔接 Q33. ]]></description>
-    <pubDate>Sat, 31 Oct 2026 01:41:16 GMT</pubDate>
   </item>
     </channel>
   </rss>
