@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>AUTOSAR MCAL 配置示例 · 深化篇② Port</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Port-%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Port-%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B</guid>
+    <description><![CDATA[ AUTOSAR MCAL 配置示例 · 深化篇② Port 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置示例 · 深化篇② Port 给 Port 一份带参数值的配置示例。 示例（某 32 位 MCU，按实际引脚图调整）： 引脚 1：GPIO 输出，初始电平 HIGH，上拉，MUX = GPIO。 引脚 2：GPIO 输入，下拉，MUX = GPIO。 引脚 3：复用 CAN（MUX = CAN_RX），方向输入。 引脚 4：复用 CAN（MUX = CAN_TX），方向输出。 引脚 5：复用 ADC 模拟输入（MUX = ADC，type = A... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:52:16 GMT</pubDate>
+  </item><item>
+    <title>AUTOSAR 1000问 · 工具链 Q1 如何保证工具链生成的代码就是自己配置的？</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%93%BEQ1-%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%93%BEQ1-%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1</guid>
+    <description><![CDATA[ AUTOSAR 1000问 · 工具链 Q1：如何保证工具链生成的代码就是自己配置的？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 1000问 · 工具链 Q1：如何保证工具链生成的代码就是自己配置的？ 费曼（一句话说清）：工具链是翻译官——你把配置（ARXML）交给它，它吐出代码。真问题不是「它会不会骗你」，而是「你怎么让它说的每句话都可查证」。 西蒙（抓核心）：你证明不了生成器永远正确，但能让「配置→产物」变成可审计、可重放、有断言的确定性过程——把「信任工具」换成「审计过程」。 SQ3R（带着问题读）：先问「配置和产物之间，偏差可能出在哪几环」，答案锁定五... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:52:13 GMT</pubDate>
+  </item><item>
     <title>AUTOSAR 1000问 · OS&amp;调度Q2 如何在 DaVinci 新增一个 Task？</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/OS%E8%B0%83%E5%BA%A6Q2-DaVinci%E6%96%B0%E5%A2%9ETask</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/OS%E8%B0%83%E5%BA%A6Q2-DaVinci%E6%96%B0%E5%A2%9ETask</guid>
@@ -53,18 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Dio</guid>
     <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块③ Dio 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块③ Dio Dio 是数字 I/O 的 逻辑读写 模块，面向「读一个引脚的逻辑电平 / 写一个引脚的逻辑电平」。它不配方向、不复用——那些是 Port 的事。 核心职责：单通道读写、整端口读写、翻转电平。 关键配置项： DioPort：端口定义，逻辑上把一批物理引脚归组。 DioChannel：通道配置，把一个逻辑通道映射到具体物理引脚（通过底层 Port 分配）。 DioPortDataPort / DioPortMask：端口数据访... ]]></description>
     <pubDate>Sat, 31 Oct 2026 07:50:17 GMT</pubDate>
-  </item><item>
-    <title>AUTOSAR MCAL 配置说明 · 模块④ Adc</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Adc</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Adc</guid>
-    <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块④ Adc 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块④ Adc Adc 是 ADC（模数转换）驱动模块，把模拟信号转成数字量。管采样通道、转换组、触发源、分辨率、采样时间、结果读取。 核心职责：配置 ADC 通道与转换组、启动转换、读取转换结果。 关键配置项： AdcChannelConfiguration：通道，映射到具体 ADC 输入通道。 AdcGroup：转换组，同一次触发采样的多个通道归一组。 AdcGroupConversionMode：转换模式（单次 / 连续 / 组转换）... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:50:15 GMT</pubDate>
-  </item><item>
-    <title>AUTOSAR MCAL 配置说明 · 模块⑤ Icu</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Icu</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Icu</guid>
-    <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块⑤ Icu 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块⑤ Icu Icu（输入捕获）驱动，用来测量外部信号的边沿、周期、脉宽——比如测转速/轮速传感器信号、外设方波频率与占空比，提供测量完成的回调通知。 核心职责：边沿检测、信号周期/脉宽测量、时间戳、通知回调。 关键配置项： IcuChannelConfiguration：通道配置（映射到定时器输入捕获通道 / 引脚）。 IcuMeasurementMode：测量模式（信号测量：周期 / 脉宽 / 两个边沿之间时间；边沿检测）。 IcuS... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:50:12 GMT</pubDate>
   </item>
     </channel>
   </rss>
