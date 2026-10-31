@@ -98,6 +98,9 @@ flowchart TD
 - [[1000问/BswM-规则与模式仲裁]] —— BswM Rule、条件与模式仲裁配置。
 - [[1000问/性能优化-多SWC调度表与Runnable顺序]] —— 大规模 SW-C 的 Task 分组、调度与实时性分析。
 
+- [[1000问/性能优化-RTE调用与PDU端到端开销]] —— RTE、COM、PduR、CanIf 路径开销及性能热点。
+- [[1000问/SWC-C-S调用并发与抢占]] —— 同步/异步 Client-Server 调用、抢占、优先级与可重入性。
+
 ## MCAL 驱动配置
 
 - [[MCAL/Dma]] —— DMA 通道与数据搬运配置。
