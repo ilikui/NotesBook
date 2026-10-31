@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>多核共享变量与volatile边界</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%A4%9A%E6%A0%B8%E5%85%B1%E4%BA%AB%E5%8F%98%E9%87%8F%E4%B8%8Evolatile%E8%BE%B9%E7%95%8C</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%A4%9A%E6%A0%B8%E5%85%B1%E4%BA%AB%E5%8F%98%E9%87%8F%E4%B8%8Evolatile%E8%BE%B9%E7%95%8C</guid>
+    <description><![CDATA[ 多核共享一个变量——只用 volatile 加全局变量行不行？ 原始 Flomo：v.flomoapp.com/mine/ 多核共享一个变量——只用 volatile 加全局变量行不行？ 结论：地址上能通，正确性上不行。volatile 只挡住「编译器优化」，挡不住硬件层的两件事： 缓存一致性：两个核各有自己的 cache。核 A 改了本地 cache 的副本，核 B 还在读自己 cache 里的旧副本，volatile 不会帮你做 cache 失效 / 刷新。 原子性：volatile 不提供原子操作。变量若是 32 位且跨 cache line 或没按字对齐，读写会被拆成多个总线事务，两个... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 09:20:17 GMT</pubDate>
+  </item><item>
     <title>Spinlock与Mutex差异</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Spinlock%E4%B8%8EMutex%E5%B7%AE%E5%BC%82</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Spinlock%E4%B8%8EMutex%E5%B7%AE%E5%BC%82</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q3-BSW%E6%A8%A1%E5%9D%97%E5%BC%95%E7%94%A8%E5%85%B3%E7%B3%BB</guid>
     <description><![CDATA[ 工具配置实战 Q3：Module 间的「引用」怎么建立？填模块名还是下拉列表？ 原始 Flomo：v.flomoapp.com/mine/ 工具配置实战 Q3：Module 间的「引用」怎么建立？填模块名还是下拉列表？ 结论：不是手填模块名，而是通过下拉/浏览对话框选，选的是「强类型引用」，不是文本字符串。 为什么是下拉选择： 引用是强类型的：工具里定义的是 BswModuleRef / 对象引用，有明确的指向类型（如 CanIf 的 CanControllerBaudRateRef 指向 Can 模块的某个 Controller 配置实例），只能选类型匹配的。手填字符串绕过了类型校验，容易引... ]]></description>
     <pubDate>Sat, 31 Oct 2026 09:14:46 GMT</pubDate>
-  </item><item>
-    <title>工具配置实战Q4-PostBuild产物与PDU路由变体</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q4-PostBuild%E4%BA%A7%E7%89%A9%E4%B8%8EPDU%E8%B7%AF%E7%94%B1%E5%8F%98%E4%BD%93</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q4-PostBuild%E4%BA%A7%E7%89%A9%E4%B8%8EPDU%E8%B7%AF%E7%94%B1%E5%8F%98%E4%BD%93</guid>
-    <description><![CDATA[ 工具配置实战 Q4：PostBuild 生成 .c 还是 .arxml？运行时改 PDU 路由，PreCompile 还是 PostBuild 支持？ 原始 Flomo：v.flomoapp.com/mine/ 工具配置实战 Q4：PostBuild 生成 .c 还是 .arxml？运行时改 PDU 路由，PreCompile 还是 PostBuild 支持？ PostBuild 生成的产物：既有 .c/.h，也有 .arxml。关键区别不在文件格式，而在「配置是静态定死还是运行时可变」。 PreCompile：编译前把配置全部定死，生成的是静态常量配置代码（.c/.h）——改动要重新生成 +... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 09:14:29 GMT</pubDate>
   </item>
     </channel>
   </rss>
