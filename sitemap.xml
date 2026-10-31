@@ -434,11 +434,17 @@
     <loc>https://wiki.likui.info/Project/AUTOSAR/Classic%E5%B9%B3%E5%8F%B0%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E4%B8%8E%E9%9D%A2%E8%AF%95%E9%A2%98</loc>
     <lastmod>2026-10-14T14:01:43.000Z</lastmod>
   </url><url>
+    <loc>https://wiki.likui.info/Project/AUTOSAR/MCAL/Adc</loc>
+    <lastmod>2026-10-31T07:50:15.000Z</lastmod>
+  </url><url>
     <loc>https://wiki.likui.info/Project/AUTOSAR/MCAL/Can</loc>
     <lastmod>2026-10-31T07:48:53.000Z</lastmod>
   </url><url>
     <loc>https://wiki.likui.info/Project/AUTOSAR/MCAL/CanTrcv</loc>
     <lastmod>2026-10-31T07:48:51.000Z</lastmod>
+  </url><url>
+    <loc>https://wiki.likui.info/Project/AUTOSAR/MCAL/Dio</loc>
+    <lastmod>2026-10-31T07:50:17.000Z</lastmod>
   </url><url>
     <loc>https://wiki.likui.info/Project/AUTOSAR/MCAL/Dma</loc>
     <lastmod>2026-10-31T07:47:14.000Z</lastmod>
@@ -463,6 +469,9 @@
   </url><url>
     <loc>https://wiki.likui.info/Project/AUTOSAR/MCAL/Ocu</loc>
     <lastmod>2026-10-31T07:50:08.000Z</lastmod>
+  </url><url>
+    <loc>https://wiki.likui.info/Project/AUTOSAR/MCAL/Port</loc>
+    <lastmod>2026-10-31T07:50:20.000Z</lastmod>
   </url><url>
     <loc>https://wiki.likui.info/Project/AUTOSAR/MCAL/Pwm</loc>
     <lastmod>2026-10-31T07:49:00.000Z</lastmod>
