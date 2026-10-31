@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>ARXML数据可视化需求</title>
+    <link>https://wiki.likui.info/Project/CEM/%E5%B7%A5%E5%85%B7%E9%93%BE/ARXML%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E9%9C%80%E6%B1%82</link>
+    <guid>https://wiki.likui.info/Project/CEM/%E5%B7%A5%E5%85%B7%E9%93%BE/ARXML%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E9%9C%80%E6%B1%82</guid>
+    <description><![CDATA[ ARXML 数据可视化需求 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 中的ARXML文件数据可视化 CEM. ]]></description>
+    <pubDate>Sat, 31 Oct 2026 09:06:56 GMT</pubDate>
+  </item><item>
     <title>CEM工作问题清单</title>
     <link>https://wiki.likui.info/Project/CEM/100%E9%97%AE/CEM%E5%B7%A5%E4%BD%9C%E9%97%AE%E9%A2%98%E6%B8%85%E5%8D%95</link>
     <guid>https://wiki.likui.info/Project/CEM/100%E9%97%AE/CEM%E5%B7%A5%E4%BD%9C%E9%97%AE%E9%A2%98%E6%B8%85%E5%8D%95</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%A8%E6%96%B9%E6%B3%95%E5%AD%A6%E5%86%99%E4%BD%9C%E5%8D%A1%E7%89%87%E5%88%9B%E4%BD%9C%E4%B9%A6%E5%8D%95</guid>
     <description><![CDATA[ 笨方法学写作：卡片创作100本书 (douban.com) 原始 Flomo：v.flomoapp.com/mine/ 笨方法学写作：卡片创作100本书 (douban.com) www.douban.com/doulist/45064751/ 知识管理. ]]></description>
     <pubDate>Sat, 31 Oct 2026 08:59:59 GMT</pubDate>
-  </item><item>
-    <title>墨水屏单词记忆小游戏构想</title>
-    <link>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%A2%A8%E6%B0%B4%E5%B1%8F%E5%8D%95%E8%AF%8D%E8%AE%B0%E5%BF%86%E5%B0%8F%E6%B8%B8%E6%88%8F%E6%9E%84%E6%83%B3</link>
-    <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%A2%A8%E6%B0%B4%E5%B1%8F%E5%8D%95%E8%AF%8D%E8%AE%B0%E5%BF%86%E5%B0%8F%E6%B8%B8%E6%88%8F%E6%9E%84%E6%83%B3</guid>
-    <description><![CDATA[ 做一个记忆单词的小游戏 原始 Flomo：v.flomoapp.com/mine/ 做一个记忆单词的小游戏 通过手动输入单词，通关游戏 桌面小辞典软件开发 类似： github.com/NovaShang/DicDic 💡想法：将单词记录在墨水屏里面，通过记忆算法实现记忆功能 PARA. ]]></description>
-    <pubDate>Sat, 31 Oct 2026 08:59:56 GMT</pubDate>
   </item>
     </channel>
   </rss>
