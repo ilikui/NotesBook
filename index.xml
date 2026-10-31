@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>AUTOSAR MCAL 模块配置说明 · 总览</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/</guid>
+    <description><![CDATA[ AUTOSAR MCAL 模块配置说明 · 总览 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 模块配置说明 · 总览 （专题起点，逐模块展开） MCAL（微控制器抽象层）是 AUTOSAR 最底层、唯一碰寄存器/硬件寄存器的层——每个模块对应一类硬件外设。 核心模块清单与配置要点： Mcu：时钟（PLL）、复位、功耗模式、RAM 段——配好时钟树和复位源。 Port：引脚复用/方向、初始电平、上拉下拉——每根引脚选功能、方向、上下拉。 Dio：数字 I/O 读写，通道/端口——比 Port 上层，只管读写位。 Adc：ADC 采样——通道、转换组、分辨... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:54:26 GMT</pubDate>
+  </item><item>
     <title>AUTOSAR</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/</guid>
@@ -41,12 +47,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Mcu-%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B</guid>
     <description><![CDATA[ AUTOSAR MCAL 配置示例 · 深化篇① Mcu（通用骨架，按芯片调整） 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置示例 · 深化篇① Mcu（通用骨架，按芯片调整） 给 Mcu 一份带具体参数值的配置示例，方便对照实际工程。 示例（以某 32 位 MCU 为例，仅供参考）： 时钟源：外部晶振 20MHz（或内部 RC）。 PLL 倍频分频： VCO 倍频到 320MHz。 主时钟 160MHz（VCO ÷2）。 系统总线 80MHz（÷4）、外设总线 40MHz（÷8）。 CAN 模块时钟 80MHz、ADC 时钟 40MHz。 复位：... ]]></description>
     <pubDate>Sat, 31 Oct 2026 07:53:21 GMT</pubDate>
-  </item><item>
-    <title>AUTOSAR MCAL 模块配置说明 · 总览</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/</guid>
-    <description><![CDATA[ AUTOSAR MCAL 模块配置说明 · 总览 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 模块配置说明 · 总览 （专题起点，逐模块展开） MCAL（微控制器抽象层）是 AUTOSAR 最底层、唯一碰寄存器/硬件寄存器的层——每个模块对应一类硬件外设。 核心模块清单与配置要点： Mcu：时钟（PLL）、复位、功耗模式、RAM 段——配好时钟树和复位源。 Port：引脚复用/方向、初始电平、上拉下拉——每根引脚选功能、方向、上下拉。 Dio：数字 I/O 读写，通道/端口——比 Port 上层，只管读写位。 Adc：ADC 采样——通道、转换组、分辨... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:53:07 GMT</pubDate>
   </item><item>
     <title>AUTOSAR MCAL 配置示例 · 深化篇② Port</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Port-%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B</link>
