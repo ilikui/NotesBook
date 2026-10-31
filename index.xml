@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>AUTOSAR MCAL 模块配置说明 · 总览</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/</guid>
+    <description><![CDATA[ AUTOSAR MCAL 模块配置说明 · 总览 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 模块配置说明 · 总览 （专题起点，逐模块展开） MCAL（微控制器抽象层）是 AUTOSAR 最底层、唯一碰寄存器/硬件寄存器的层——每个模块对应一类硬件外设。 核心模块清单与配置要点： Mcu：时钟（PLL）、复位、功耗模式、RAM 段——配好时钟树和复位源。 Port：引脚复用/方向、初始电平、上拉下拉——每根引脚选功能、方向、上下拉。 Dio：数字 I/O 读写，通道/端口——比 Port 上层，只管读写位。 Adc：ADC 采样——通道、转换组、分辨... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:53:07 GMT</pubDate>
+  </item><item>
     <title>AUTOSAR</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/</guid>
@@ -41,12 +47,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC%E7%B1%BB%E5%9E%8BQ4-Runnable%E4%B8%8ETask%E6%98%A0%E5%B0%84</guid>
     <description><![CDATA[ AUTOSAR 1000问 · SWC类型Q4：Runnable 怎么配、怎么挂到 Task 上？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 1000问 · SWC类型Q4：Runnable 怎么配、怎么挂到 Task 上？ ▎ 五大学习法：费曼——把 Runnable 映射讲成「这段代码挂在哪个时隙上跑」 费曼（一句话本质）：Runnable 是 SWC 里一段可被调度的函数；把它映射到 Task，就是决定这段代码挂在哪个确定的执行时隙上。Task 管「什么时候跑」，Runnable 管「跑什么」。 SQ3R（去哪找） Runnable 本体 + 触发事件：... ]]></description>
     <pubDate>Sat, 31 Oct 2026 07:52:05 GMT</pubDate>
-  </item><item>
-    <title>AUTOSAR MCAL 模块配置说明 · 总览</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/</guid>
-    <description><![CDATA[ AUTOSAR MCAL 模块配置说明 · 总览 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 模块配置说明 · 总览 （专题起点，逐模块展开） MCAL（微控制器抽象层）是 AUTOSAR 最底层、唯一碰寄存器/硬件寄存器的层——每个模块对应一类硬件外设。 核心模块清单与配置要点： Mcu：时钟（PLL）、复位、功耗模式、RAM 段——配好时钟树和复位源。 Port：引脚复用/方向、初始电平、上拉下拉——每根引脚选功能、方向、上下拉。 Dio：数字 I/O 读写，通道/端口——比 Port 上层，只管读写位。 Adc：ADC 采样——通道、转换组、分辨... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:51:20 GMT</pubDate>
   </item><item>
     <title>AUTOSAR MCAL 配置说明 · 模块① Mcu</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Mcu</link>
