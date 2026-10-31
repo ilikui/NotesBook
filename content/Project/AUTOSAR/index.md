@@ -88,6 +88,9 @@ flowchart TD
 - [[MCAL/Dio]] —— 数字输入输出端口与通道控制。
 - [[MCAL/Port]] —— 引脚方向、复用功能与电气属性。
 
+- [[MCAL/index]] —— MCAL 模块总览与配置顺序（Mcu、Port、Dio、Adc、Icu、Ocu、Pwm、Gpt、Can、CanTrcv、Lin、Fls、Eep、Wdg、Mpu、Dma）。
+- [[MCAL/Mcu]] —— MCU 时钟树、复位源、功耗模式与 RAM 初始化。
+
 ## 工程实践专题
 
 概念与规范模块之外，以下专题把模型、生成代码和运行时故障串成可执行的工程流程：
