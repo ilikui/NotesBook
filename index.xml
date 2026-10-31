@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>CEM软件结构与待研究问题</title>
+    <link>https://wiki.likui.info/Project/CEM/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/CEM%E8%BD%AF%E4%BB%B6%E7%BB%93%E6%9E%84%E4%B8%8E%E5%BE%85%E7%A0%94%E7%A9%B6%E9%97%AE%E9%A2%98</link>
+    <guid>https://wiki.likui.info/Project/CEM/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/CEM%E8%BD%AF%E4%BB%B6%E7%BB%93%E6%9E%84%E4%B8%8E%E5%BE%85%E7%A0%94%E7%A9%B6%E9%97%AE%E9%A2%98</guid>
+    <description><![CDATA[ CEM 软件结构与待研究问题 原始 Flomo：v.flomoapp.com/mine/ 思考笔记：CEM软件相关的结构 DTC,DID是怎么实现的？ NVM存储从上层到下层的实现逻辑是什么？ 接口配置如何实现的？ 协议栈的相关内容？ CEM. ]]></description>
+    <pubDate>Sat, 31 Oct 2026 09:07:28 GMT</pubDate>
+  </item><item>
     <title>CEM功能域与诊断需求</title>
     <link>https://wiki.likui.info/Project/CEM/%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90/CEM%E5%8A%9F%E8%83%BD%E5%9F%9F%E4%B8%8E%E8%AF%8A%E6%96%AD%E9%9C%80%E6%B1%82</link>
     <guid>https://wiki.likui.info/Project/CEM/%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90/CEM%E5%8A%9F%E8%83%BD%E5%9F%9F%E4%B8%8E%E8%AF%8A%E6%96%AD%E9%9C%80%E6%B1%82</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%B8%B8%E8%A7%81%E7%AC%94%E8%AE%B0%E6%9C%AF%E5%AF%B9%E6%AF%94</guid>
     <description><![CDATA[ “笔记术”是指记录信息和思考的方法或技巧。有许多不同的笔记术，可以根据个人需求和偏好选择合适的方法。一些常见的笔记术包括： 原始 Flomo：v.flomoapp.com/mine/ “笔记术”是指记录信息和思考的方法或技巧。有许多不同的笔记术，可以根据个人需求和偏好选择合适的方法。一些常见的笔记术包括： 线性笔记法：按照时间顺序记录信息，类似于日记或记事本的方式。 大纲笔记法：使用层次结构来组织信息，将主题和子主题排列出来，以清晰地显示关系。 脑图笔记法：通过绘制脑图或思维导图的方式，以图形化的形式展示信息和关系。 卡片笔记法：将信息写在小卡片上，然后按照主题或类别进行整理和分类。 Corn... ]]></description>
     <pubDate>Sat, 31 Oct 2026 09:00:10 GMT</pubDate>
-  </item><item>
-    <title>SuperMemo渐进阅读资源</title>
-    <link>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/SuperMemo%E6%B8%90%E8%BF%9B%E9%98%85%E8%AF%BB%E8%B5%84%E6%BA%90</link>
-    <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/SuperMemo%E6%B8%90%E8%BF%9B%E9%98%85%E8%AF%BB%E8%B5%84%E6%BA%90</guid>
-    <description><![CDATA[ - 学习相关的知识管理 原始 Flomo：v.flomoapp.com/mine/ 学习相关的知识管理 知识管理，借助于SuperMemo将知乎的文章导入SuperMemo做渐进阅读 learning.xms.tw/ 知识管理. ]]></description>
-    <pubDate>Sat, 31 Oct 2026 09:00:06 GMT</pubDate>
   </item>
     </channel>
   </rss>
