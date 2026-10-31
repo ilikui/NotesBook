@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>工具配置实战Q4-PostBuild产物与PDU路由变体</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q4-PostBuild%E4%BA%A7%E7%89%A9%E4%B8%8EPDU%E8%B7%AF%E7%94%B1%E5%8F%98%E4%BD%93</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q4-PostBuild%E4%BA%A7%E7%89%A9%E4%B8%8EPDU%E8%B7%AF%E7%94%B1%E5%8F%98%E4%BD%93</guid>
+    <description><![CDATA[ 工具配置实战 Q4：PostBuild 生成 .c 还是 .arxml？运行时改 PDU 路由，PreCompile 还是 PostBuild 支持？ 原始 Flomo：v.flomoapp.com/mine/ 工具配置实战 Q4：PostBuild 生成 .c 还是 .arxml？运行时改 PDU 路由，PreCompile 还是 PostBuild 支持？ PostBuild 生成的产物：既有 .c/.h，也有 .arxml。关键区别不在文件格式，而在「配置是静态定死还是运行时可变」。 PreCompile：编译前把配置全部定死，生成的是静态常量配置代码（.c/.h）——改动要重新生成 +... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 09:14:29 GMT</pubDate>
+  </item><item>
     <title>生成代码分析Q1-undefined-reference链接错误</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90Q1-undefined-reference%E9%93%BE%E6%8E%A5%E9%94%99%E8%AF%AF</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90Q1-undefined-reference%E9%93%BE%E6%8E%A5%E9%94%99%E8%AF%AF</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/CS/Python/NiceGUI%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E5%BA%94%E7%94%A8%E6%9E%84%E6%83%B3</guid>
     <description><![CDATA[ NiceGUI 卡片笔记应用构想 原始 Flomo：v.flomoapp.com/mine/ NiceGui 地址 这是一个web服务器的地址：可以做一个卡片笔记？ 通过导入卡片学习相关的知识 Python. ]]></description>
     <pubDate>Sat, 31 Oct 2026 09:10:08 GMT</pubDate>
-  </item><item>
-    <title>列表基础</title>
-    <link>https://wiki.likui.info/Area/CS/Python/%E5%88%97%E8%A1%A8%E5%9F%BA%E7%A1%80</link>
-    <guid>https://wiki.likui.info/Area/CS/Python/%E5%88%97%E8%A1%A8%E5%9F%BA%E7%A1%80</guid>
-    <description><![CDATA[ Python 列表基础 原始 Flomo：v.flomoapp.com/mine/ Python列表的学习 创建列表：可以创建一个空列表或包含初始元素的列表。 访问列表元素：可以通过索引访问列表中的元素。 修改列表元素：可以通过索引修改列表中的元素。 添加元素：可以使用 append() 方法在列表末尾添加元素，或使用 insert() 方法在指定位置插入元素。 删除元素：可以使用 del 语句或 remove() 方法删除列表中的元素。 列表切片：可以使用切片操作获取列表的子列表。 列表长度：可以使用 len() 函数获取列表的长度。 Python . ]]></description>
-    <pubDate>Sat, 31 Oct 2026 09:09:48 GMT</pubDate>
   </item>
     </channel>
   </rss>
