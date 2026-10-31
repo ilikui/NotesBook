@@ -92,6 +92,12 @@ flowchart TD
 - [[1000问/E2E-CRC失败时的接收策略]] —— E2E 校验失败后的数据接受、保持与降级策略。
 - [[1000问/E2E-Profile与使用场景]] —— E2E Profile 选型、适用条件与安全边界。
 
+- [[1000问/变体管理-PreCompileLinkPostBuild]] —— Pre-Compile、Link-Time 与 Post-Build 变体策略。
+- [[1000问/变体管理-高低配车型复用]] —— 高低配车型的配置复用与差异管理。
+- [[1000问/BswM-ActionList动作范围]] —— BswM Action List 可执行动作与模块协作边界。
+- [[1000问/BswM-规则与模式仲裁]] —— BswM Rule、条件与模式仲裁配置。
+- [[1000问/性能优化-多SWC调度表与Runnable顺序]] —— 大规模 SW-C 的 Task 分组、调度与实时性分析。
+
 ## MCAL 驱动配置
 
 - [[MCAL/Dma]] —— DMA 通道与数据搬运配置。
