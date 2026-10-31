@@ -33,6 +33,7 @@ flowchart TD
 ## AI 1000问逐题解答
 
 - [[1000问/大模型RAG与智能体基础]] —— 知识管理、Embedding、RAG、Transformer、GPT/BERT、训练流程、Agent、本地模型、提示工程和微调。
+- [[1000问/端侧智能内容治理知识闭环与具身智能]] —— TinyML、端侧部署、AI 内容风险、知识库双向索引、项目自检、具身智能与图灵测试。
 
 ~~~~mermaid
 flowchart TD
