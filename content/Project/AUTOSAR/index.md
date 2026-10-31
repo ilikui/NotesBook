@@ -52,6 +52,9 @@ flowchart TD
 - [[1000问/网络管理诊断存储与OS]] —— 唤醒源、EcuM/BswM、Bus-Sleep、DTC、Dcm 会话、安全访问、NvM 回调与掉电保护、OS 调度和功能安全。
 - [[1000问/工具链平台安全与系统配置]] —— AUTOSAR 价值、配置生成审计、依赖追踪、Classic/Adaptive、WdgM、OS 可信分区、PreCompile/PostBuild、XCP/UDS 和 EcuM 启动序列。
 - [[1000问/SWC_VFB_RTE与代码生成]] —— SW-C 类型、Composition、VFB、RTE S/R、Runnable 事件、RTE 生成代码、SchM、通信链路和 StbM 时间同步。
+- [[1000问/Bootloader诊断模式管理与多核]] —— Partial Networking、Bootloader 跳转/回滚、UDS DID/0x19、BswM、OS Task、IOC、PDU/Port 排查。
+- [[1000问/配置治理CDD与MemoryMapping]] —— 配置生成方法、学习路线、工具链治理、CDD、volatile、Schedule Table 和 MemMap。
+- [[1000问/Bootloader刷写UDS与中断分类]] —— UDS 刷写链路、Dcm 到 SW-C、Session/SecurityAccess、ISR Cat1/2 与 BSW 服务分类。
 
 ~~~~mermaid
 flowchart TD
