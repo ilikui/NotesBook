@@ -6,12 +6,6 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>AUTOSAR MCAL 配置说明 · 模块④ Adc</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Adc</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Adc</guid>
-    <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块④ Adc 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块④ Adc Adc 是 ADC（模数转换）驱动模块，把模拟信号转成数字量。管采样通道、转换组、触发源、分辨率、采样时间、结果读取。 核心职责：配置 ADC 通道与转换组、启动转换、读取转换结果。 关键配置项： AdcChannelConfiguration：通道，映射到具体 ADC 输入通道。 AdcGroup：转换组，同一次触发采样的多个通道归一组。 AdcGroupConversionMode：转换模式（单次 / 连续 / 组转换）... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:50:15 GMT</pubDate>
-  </item><item>
     <title>AUTOSAR MCAL 配置说明 · 模块⑤ Icu</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Icu</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Icu</guid>
@@ -65,6 +59,12 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Fls</guid>
     <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块⑫ Fls 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块⑫ Fls Fls 是 Flash 驱动（MCAL 层），负责 MCU 内部 / 外部 Flash 的读、写、擦除、校验。它是存储栈最底层，上层是 Fee（Flash EEPROM 仿真）→ NvM。 核心职责：扇区擦除、写入、读取、校验，异步 job 管理。 关键配置项： FlsSectorConfiguration：扇区配置（起始地址、扇区大小、扇区数量）。 FlsGeneralConfiguration：整体配置（FlsMaxRe... ]]></description>
     <pubDate>Sat, 31 Oct 2026 07:47:30 GMT</pubDate>
+  </item><item>
+    <title>AUTOSAR MCAL 配置说明 · 模块⑬ Eep</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Eep</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Eep</guid>
+    <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块⑬ Eep 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块⑬ Eep Eep 是 EEPROM 驱动（MCAL 层），负责 MCU 内部 / 外部 EEPROM 的读、写、擦除。它是存储栈的驱动层，上层接 NvM。 核心职责：EEPROM 分区读写、擦除、异步 job 管理。 关键配置项： EepSectorConfiguration：扇区配置（EEPROM 分区地址、大小、数量）。 EepRead / EepWrite / EepErase：读、写、擦配置。 EepJobConfigurat... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:47:27 GMT</pubDate>
   </item>
     </channel>
   </rss>
