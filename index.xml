@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>AUTOSAR 1000问 · SWC类型Q3 如何配置 SWC？</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC%E7%B1%BB%E5%9E%8BQ3-SWC%E9%85%8D%E7%BD%AE</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC%E7%B1%BB%E5%9E%8BQ3-SWC%E9%85%8D%E7%BD%AE</guid>
+    <description><![CDATA[ AUTOSAR 1000问 · SWC类型Q3：如何配置 SWC？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 1000问 · SWC类型Q3：如何配置 SWC？ ▎ 五大学习法：麦肯锡金字塔——把「配置 SWC」拆成 MECE 四件事 费曼（一句话本质）：配置 SWC 就是给它装一块「插座面板」——定好对外说什么话（Port/Interface）、内部做什么事（Runnable），怎么接到车上交给 ECU 集成。 先分清两层：SWC 是设计层（逻辑上提供什么、需要什么）；Task 是运行层（什么时候跑）。桥梁是 Runnable——SWC 里可被调度的函数单元... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:52:07 GMT</pubDate>
+  </item><item>
+    <title>AUTOSAR 1000问 · SWC类型Q4 Runnable 怎么配、怎么挂到 Task 上？</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC%E7%B1%BB%E5%9E%8BQ4-Runnable%E4%B8%8ETask%E6%98%A0%E5%B0%84</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC%E7%B1%BB%E5%9E%8BQ4-Runnable%E4%B8%8ETask%E6%98%A0%E5%B0%84</guid>
+    <description><![CDATA[ AUTOSAR 1000问 · SWC类型Q4：Runnable 怎么配、怎么挂到 Task 上？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 1000问 · SWC类型Q4：Runnable 怎么配、怎么挂到 Task 上？ ▎ 五大学习法：费曼——把 Runnable 映射讲成「这段代码挂在哪个时隙上跑」 费曼（一句话本质）：Runnable 是 SWC 里一段可被调度的函数；把它映射到 Task，就是决定这段代码挂在哪个确定的执行时隙上。Task 管「什么时候跑」，Runnable 管「跑什么」。 SQ3R（去哪找） Runnable 本体 + 触发事件：... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:52:05 GMT</pubDate>
+  </item><item>
     <title>AUTOSAR</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/</guid>
@@ -53,18 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Ocu</guid>
     <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块⑥ Ocu 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块⑥ Ocu Ocu（输出比较）驱动，在定时器计数值达到比较值时翻转 / 置位 / 清位输出引脚，产生精确边沿、脉冲、时基信号，也是 Pwm 的底层基础。 核心职责：定时器比较输出、边沿/脉冲产生、比较事件回调。 关键配置项： OcuChannelConfiguration：通道配置（映射到定时器比较通道 / 引脚）。 OcuMode：比较模式——翻转 / 置位 / 清位 / 无操作，支持多比较值。 OcuCompareValue / C... ]]></description>
     <pubDate>Sat, 31 Oct 2026 07:50:08 GMT</pubDate>
-  </item><item>
-    <title>AUTOSAR MCAL 配置说明 · 模块⑦ Pwm</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Pwm</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Pwm</guid>
-    <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块⑦ Pwm 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块⑦ Pwm Pwm 驱动，输出 PWM 波形（周期 + 占空比），常用于电机控制、LED 调光、加热控制、信号调制。通常基于定时器 PWM 通道实现（底层常借助 Ocu）。 核心职责：输出周期性 PWM、调整占空比、极性/空闲状态管理、更新通知。 关键配置项： PwmChannelConfiguration：通道配置（映射到定时器 PWM 通道 / 引脚）。 PwmPeriod：PWM 周期（定时器计数上限）。 PwmDutycycle... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:49:00 GMT</pubDate>
-  </item><item>
-    <title>AUTOSAR MCAL 配置说明 · 模块⑧ Gpt</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Gpt</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Gpt</guid>
-    <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块⑧ Gpt 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块⑧ Gpt Gpt（通用定时器）驱动，提供定时功能——周期性超时、单次定时、延时、时基，常用于产生周期中断或定时触发。 核心职责：启停定时、读取已过/剩余时间、定时超时回调。 关键配置项： GptChannelConfiguration：通道配置（映射到定时器通道）。 GptChannelMode：通道模式——连续（循环）/ 单次模式。 GptChannelTickFrequency：定时器 tick 频率。 GptChannelTic... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:48:56 GMT</pubDate>
   </item>
     </channel>
   </rss>
