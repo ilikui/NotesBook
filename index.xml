@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>变体管理 Q2：PreCompile / Link / PostBuild 三种变体处理——什么阶段决定变体？实车上靠诊断指令切换变体，选哪种？</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%8F%98%E4%BD%93%E7%AE%A1%E7%90%86-PreCompileLinkPostBuild</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%8F%98%E4%BD%93%E7%AE%A1%E7%90%86-PreCompileLinkPostBuild</guid>
+    <description><![CDATA[ 变体管理 Q2：PreCompile / Link / PostBuild 三种变体处理——什么阶段决定变体？实车上靠诊断指令切换变体，选哪种？ 原始 Flomo：v.flomoapp.com/mine/ 变体管理 Q2：PreCompile / Link / PostBuild 三种变体处理——什么阶段决定变体？实车上靠诊断指令切换变体，选哪种？ 三种方式按「决定变体的阶段」区分： PreCompile：编译前定死。生成代码 / 配置时按某个变体解析，后续不可换。适合变体早已确定、无需运行时切换的场景（按车型硬件固化）。 Link：链接阶段决定。生成代码把多个变体都编进去，链接时只选中一个（... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:57:52 GMT</pubDate>
+  </item><item>
     <title>AUTOSAR</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/J1939%E4%B8%8ECanTp-%E5%A4%9A%E5%B8%A7%E4%BC%A0%E8%BE%93%E5%92%8CUDS%E5%85%B1%E5%AD%98</guid>
     <description><![CDATA[ AUTOSAR 与 J1939 集成 Q2：J1939 的 BAM / CMDT 多帧传输和 AUTOSAR CanTp 的机制差异？同时跑 J1939 和 UDS 会冲突吗？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 与 J1939 集成 Q2：J1939 的 BAM / CMDT 多帧传输和 AUTOSAR CanTp 的机制差异？同时跑 J1939 和 UDS 会冲突吗？ J1939 多帧传输（两种方式）： BAM（广播公告消息）：用于广播 / 全局地址（DA=255）。发送方先发一个连接管理消息（TYPE=32）宣布大包，然后按固定间隔（约 50ms）... ]]></description>
     <pubDate>Sat, 31 Oct 2026 07:55:05 GMT</pubDate>
-  </item><item>
-    <title>AUTOSAR 与 ROS 2 对比 Q1：自动驾驶量产 ECU 能用 ROS 2 代替 AUTOSAR Adaptive 吗？ROS 2 缺了什么？</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Adaptive%E4%B8%8EROS2-%E9%87%8F%E4%BA%A7ECU%E6%9E%B6%E6%9E%84%E9%80%89%E5%9E%8B</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Adaptive%E4%B8%8EROS2-%E9%87%8F%E4%BA%A7ECU%E6%9E%B6%E6%9E%84%E9%80%89%E5%9E%8B</guid>
-    <description><![CDATA[ AUTOSAR 与 ROS 2 对比 Q1：自动驾驶量产 ECU 能用 ROS 2 代替 AUTOSAR Adaptive 吗？ROS 2 缺了什么？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 与 ROS 2 对比 Q1：自动驾驶量产 ECU 能用 ROS 2 代替 AUTOSAR Adaptive 吗？ROS 2 缺了什么？ 结论：不能直接替代。虽然两者都用 DDS 做通信中间件，但 ROS 2 在量产车规的核心需求上缺很多。 ROS 2 相对 AUTOSAR Adaptive 缺的（按量产需求）： 功能安全（ISO 26262）：Adaptive 有完整安... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:54:58 GMT</pubDate>
   </item>
     </channel>
   </rss>
