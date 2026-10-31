@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>AUTOSAR 与 ROS 2 对比 Q1：自动驾驶量产 ECU 能用 ROS 2 代替 AUTOSAR Adaptive 吗？ROS 2 缺了什么？</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Adaptive%E4%B8%8EROS2-%E9%87%8F%E4%BA%A7ECU%E6%9E%B6%E6%9E%84%E9%80%89%E5%9E%8B</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Adaptive%E4%B8%8EROS2-%E9%87%8F%E4%BA%A7ECU%E6%9E%B6%E6%9E%84%E9%80%89%E5%9E%8B</guid>
+    <description><![CDATA[ AUTOSAR 与 ROS 2 对比 Q1：自动驾驶量产 ECU 能用 ROS 2 代替 AUTOSAR Adaptive 吗？ROS 2 缺了什么？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 与 ROS 2 对比 Q1：自动驾驶量产 ECU 能用 ROS 2 代替 AUTOSAR Adaptive 吗？ROS 2 缺了什么？ 结论：不能直接替代。虽然两者都用 DDS 做通信中间件，但 ROS 2 在量产车规的核心需求上缺很多。 ROS 2 相对 AUTOSAR Adaptive 缺的（按量产需求）： 功能安全（ISO 26262）：Adaptive 有完整安... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:54:58 GMT</pubDate>
+  </item><item>
     <title>AUTOSAR 与 ROS 2 对比 Q2：ROS 2 的 Node 和 Adaptive 的 Process（Execution Cluster）在架构思维上的最大区别？ROS 2 开发者转 Adaptive 最需要适应什么？</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Adaptive%E4%B8%8EROS2-Node%E5%92%8CExecutionCluster%E5%AF%B9%E6%AF%94</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Adaptive%E4%B8%8EROS2-Node%E5%92%8CExecutionCluster%E5%AF%B9%E6%AF%94</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Port-%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B</guid>
     <description><![CDATA[ AUTOSAR MCAL 配置示例 · 深化篇② Port 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置示例 · 深化篇② Port 给 Port 一份带参数值的配置示例。 示例（某 32 位 MCU，按实际引脚图调整）： 引脚 1：GPIO 输出，初始电平 HIGH，上拉，MUX = GPIO。 引脚 2：GPIO 输入，下拉，MUX = GPIO。 引脚 3：复用 CAN（MUX = CAN_RX），方向输入。 引脚 4：复用 CAN（MUX = CAN_TX），方向输出。 引脚 5：复用 ADC 模拟输入（MUX = ADC，type = A... ]]></description>
     <pubDate>Sat, 31 Oct 2026 07:52:16 GMT</pubDate>
-  </item><item>
-    <title>AUTOSAR 1000问 · 工具链 Q1 如何保证工具链生成的代码就是自己配置的？</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%93%BEQ1-%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%93%BEQ1-%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1</guid>
-    <description><![CDATA[ AUTOSAR 1000问 · 工具链 Q1：如何保证工具链生成的代码就是自己配置的？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 1000问 · 工具链 Q1：如何保证工具链生成的代码就是自己配置的？ 费曼（一句话说清）：工具链是翻译官——你把配置（ARXML）交给它，它吐出代码。真问题不是「它会不会骗你」，而是「你怎么让它说的每句话都可查证」。 西蒙（抓核心）：你证明不了生成器永远正确，但能让「配置→产物」变成可审计、可重放、有断言的确定性过程——把「信任工具」换成「审计过程」。 SQ3R（带着问题读）：先问「配置和产物之间，偏差可能出在哪几环」，答案锁定五... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:52:13 GMT</pubDate>
   </item>
     </channel>
   </rss>
