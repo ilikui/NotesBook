@@ -6,6 +6,24 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>工具配置实战Q1-BSW模块必填参数</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q1-BSW%E6%A8%A1%E5%9D%97%E5%BF%85%E5%A1%AB%E5%8F%82%E6%95%B0</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q1-BSW%E6%A8%A1%E5%9D%97%E5%BF%85%E5%A1%AB%E5%8F%82%E6%95%B0</guid>
+    <description><![CDATA[ 工具配置实战 Q1：新建 BSW 模块配置，哪些参数必填？填错了在哪一层报出来？ 原始 Flomo：v.flomoapp.com/mine/ 工具配置实战 Q1：新建 BSW 模块配置，哪些参数必填？填错了在哪一层报出来？ 哪些算必填： 配置工具里参数分 required（必填）和 optional（可选），工具常用标记区分（必填项带星号 / 标红 / 列为 mandatory）。 必填的一般是模块能否正常工作的关键参数——如 CAN 的波特率、帧 ID、PDU 引用、模块实例关联。缺了这些，模块行为无法确定。 填错了在哪一层被发现（三层，按时间顺序）： 配置 / 验证阶段：工具内的「验证」和... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 09:14:54 GMT</pubDate>
+  </item><item>
+    <title>工具配置实战Q2-模块配置完整性验证</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q2-%E6%A8%A1%E5%9D%97%E9%85%8D%E7%BD%AE%E5%AE%8C%E6%95%B4%E6%80%A7%E9%AA%8C%E8%AF%81</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q2-%E6%A8%A1%E5%9D%97%E9%85%8D%E7%BD%AE%E5%AE%8C%E6%95%B4%E6%80%A7%E9%AA%8C%E8%AF%81</guid>
+    <description><![CDATA[ 工具配置实战 Q2：怎么判断一个模块配置完整？Davinci 有没有「验证配置」功能？ 原始 Flomo：v.flomoapp.com/mine/ 工具配置实战 Q2：怎么判断一个模块配置完整？Davinci 有没有「验证配置」功能？ 判断完整性的四种手段（从软到硬）： 工具验证 / 校验：Davinci 有 Check / Validate Configuration，EB tresos 是 Validation——做一致性检查（必填参数、跨模块引用、schema 合规），列出 error（红）和 warning（黄）。这是第一道、也最快的门。 生成代码是否成功：生成器生成前会做一遍完整性与... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 09:14:50 GMT</pubDate>
+  </item><item>
+    <title>工具配置实战Q3-BSW模块引用关系</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q3-BSW%E6%A8%A1%E5%9D%97%E5%BC%95%E7%94%A8%E5%85%B3%E7%B3%BB</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q3-BSW%E6%A8%A1%E5%9D%97%E5%BC%95%E7%94%A8%E5%85%B3%E7%B3%BB</guid>
+    <description><![CDATA[ 工具配置实战 Q3：Module 间的「引用」怎么建立？填模块名还是下拉列表？ 原始 Flomo：v.flomoapp.com/mine/ 工具配置实战 Q3：Module 间的「引用」怎么建立？填模块名还是下拉列表？ 结论：不是手填模块名，而是通过下拉/浏览对话框选，选的是「强类型引用」，不是文本字符串。 为什么是下拉选择： 引用是强类型的：工具里定义的是 BswModuleRef / 对象引用，有明确的指向类型（如 CanIf 的 CanControllerBaudRateRef 指向 Can 模块的某个 Controller 配置实例），只能选类型匹配的。手填字符串绕过了类型校验，容易引... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 09:14:46 GMT</pubDate>
+  </item><item>
     <title>工具配置实战Q4-PostBuild产物与PDU路由变体</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q4-PostBuild%E4%BA%A7%E7%89%A9%E4%B8%8EPDU%E8%B7%AF%E7%94%B1%E5%8F%98%E4%BD%93</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q4-PostBuild%E4%BA%A7%E7%89%A9%E4%B8%8EPDU%E8%B7%AF%E7%94%B1%E5%8F%98%E4%BD%93</guid>
@@ -47,24 +65,6 @@
     <guid>https://wiki.likui.info/Area/CS/CS</guid>
     <description><![CDATA[  flowchart TD A[CS自学路径] --&gt; B[阶段一：编程与导论] A --&gt; C[阶段二：核心基础] A --&gt; D[阶段三：系统基础] A --&gt; E[阶段四：进阶领域] A --&gt; F[实践与社区] B --&gt; B1[编程入门&lt;br&gt;（Python/Java）] B --&gt; B2[计算机导论&lt;br&gt;（CS50）] B2 --&gt; C C --&gt; C1[数据结构与算法] C --&gt; C2[计算机组成&lt;br&gt;（CSAPP）] C --&gt; C3[操作系统&lt;br&gt;（OST... ]]></description>
     <pubDate>Sat, 31 Oct 2026 09:12:16 GMT</pubDate>
-  </item><item>
-    <title>ACID事务四大特性</title>
-    <link>https://wiki.likui.info/Area/CS/%E6%95%B0%E6%8D%AE%E5%BA%93/ACID%E4%BA%8B%E5%8A%A1%E5%9B%9B%E5%A4%A7%E7%89%B9%E6%80%A7</link>
-    <guid>https://wiki.likui.info/Area/CS/%E6%95%B0%E6%8D%AE%E5%BA%93/ACID%E4%BA%8B%E5%8A%A1%E5%9B%9B%E5%A4%A7%E7%89%B9%E6%80%A7</guid>
-    <description><![CDATA[ 数据库 ACID 事务四大特性 原始 Flomo：v.flomoapp.com/mine/ ACID原则是数据库事务正常执行的四个，分别指原子性、一致性、独立性及持久性 事务的原子性(Atomicity)： 是指一个事务要么全部执行，要么不执行，也就是说一个事务不可能只执行了一半就停止了。比如你从取款机取钱，这个事务可以分成两个步骤：1划卡，2出钱。不可能划了卡，而钱却没出来。这两步必须同时完成，要么就不完成。 事务的一致性(Consistency)： 是指事务的运行并不改变数据库中数据的一致性。例如，完整性约束了a+b=10，一个事务改变了a，那么b也应该随之改变。 独立性(Isolatio... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 09:10:30 GMT</pubDate>
-  </item><item>
-    <title>DBeaver与SQLite工具</title>
-    <link>https://wiki.likui.info/Area/CS/%E6%95%B0%E6%8D%AE%E5%BA%93/DBeaver%E4%B8%8ESQLite%E5%B7%A5%E5%85%B7</link>
-    <guid>https://wiki.likui.info/Area/CS/%E6%95%B0%E6%8D%AE%E5%BA%93/DBeaver%E4%B8%8ESQLite%E5%B7%A5%E5%85%B7</guid>
-    <description><![CDATA[ DBeaver 与 SQLite 工具 原始 Flomo：v.flomoapp.com/mine/ SQLITE 数据库工具： dbeaver.io/ 关联自：v.flomoapp.com/mine/ 数据库. ]]></description>
-    <pubDate>Sat, 31 Oct 2026 09:10:19 GMT</pubDate>
-  </item><item>
-    <title>NiceGUI卡片笔记应用构想</title>
-    <link>https://wiki.likui.info/Area/CS/Python/NiceGUI%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E5%BA%94%E7%94%A8%E6%9E%84%E6%83%B3</link>
-    <guid>https://wiki.likui.info/Area/CS/Python/NiceGUI%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E5%BA%94%E7%94%A8%E6%9E%84%E6%83%B3</guid>
-    <description><![CDATA[ NiceGUI 卡片笔记应用构想 原始 Flomo：v.flomoapp.com/mine/ NiceGui 地址 这是一个web服务器的地址：可以做一个卡片笔记？ 通过导入卡片学习相关的知识 Python. ]]></description>
-    <pubDate>Sat, 31 Oct 2026 09:10:08 GMT</pubDate>
   </item>
     </channel>
   </rss>
