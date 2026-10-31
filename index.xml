@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>AUTOSAR MCAL Dma 配置说明</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Dma</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Dma</guid>
+    <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块⑯ Dma（可选） 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块⑯ Dma（可选） Dma（直接内存访问）驱动是 可选模块，配置 DMA 硬件实现数据在内存与外设、内存与内存之间的直接传输，减轻 CPU 负担。常用于 ADC 采样数据搬移、SPI/串口收发缓冲、内存拷贝。 核心职责：DMA 通道启停、传输配置、完成中断回调。 关键配置项： DmaChannelConfiguration：DMA 通道配置（通道号）。 DmaChannelMode：传输模式（单次 / 循环 / 周期）。 Dma... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:47:14 GMT</pubDate>
+  </item><item>
     <title>AUTOSAR</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0Q1-va_list%E5%AE%9E%E7%8E%B0%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0%E5%87%BD%E6%95%B0</guid>
     <description><![CDATA[ C语言 1000问 · 可变参数Q1：怎么实现一个可变参数函数？va_list / va_start / va_arg / va_end 各自做什么？ 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 C语言 1000问 · 可变参数Q1：怎么实现一个可变参数函数？va_list / va_start / va_arg / va_end 各自做什么？ ▎ 五大学习法：西蒙学习法——把「可变参数」钻透 可变参数是什么 函数参数个数不固定，如 printf(fmt, …)、execl、ioctl。 用省略号 … 声明：int sum(int count, …); 关键难点：函... ]]></description>
     <pubDate>Sat, 31 Oct 2026 07:41:55 GMT</pubDate>
-  </item><item>
-    <title>可变参数Q2-默认实参提升</title>
-    <link>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0Q2-%E9%BB%98%E8%AE%A4%E5%AE%9E%E5%8F%82%E6%8F%90%E5%8D%87</link>
-    <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0Q2-%E9%BB%98%E8%AE%A4%E5%AE%9E%E5%8F%82%E6%8F%90%E5%8D%87</guid>
-    <description><![CDATA[ C语言 1000问 · 可变参数Q2：为什么取参数时要用「提升后」的类型？默认实参提升（default argument promotions）是怎么回事？ 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 C语言 1000问 · 可变参数Q2：为什么取参数时要用「提升后」的类型？默认实参提升（default argument promotions）是怎么回事？ ▎ 五大学习法：费曼学习法——把「实参提升」讲透 什么是默认实参提升 在「没有原型（旧式声明、可变参数）」的调用里，C 会把某些小类型自动提升成更大类型再传： char、short（含 signed / unsi... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:41:13 GMT</pubDate>
   </item>
     </channel>
   </rss>
