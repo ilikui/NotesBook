@@ -114,6 +114,14 @@ flowchart TD
   - 新增 10 题，覆盖标幺值、HVAC/HVDC、逻辑完备性、接地/接零、采样混叠、传感器和量程；含输电、采样、信号链路图。
 - [MATLAB与Simulink10000问：基础语法、矩阵运算与建模](../../Area/EE/MATLAB/10000问/基础语法矩阵与Simulink建模)
   - 已整理 12 题，覆盖数组语法、索引、向量化、脚本函数、矩阵运算和 Simulink 求解器；含模型类型选择图。
+- [MATLAB10000问：矩阵进阶、可视化、数值计算与信号处理](../../Area/EE/MATLAB/10000问/矩阵可视化数值计算与信号处理)
+  - 新增 12 题，覆盖矩阵变形、逻辑索引、绘图、数值求解、CSV 分块、FFT、时频分析和滤波器。
+- [Simulink10000问：建模、状态机、物理系统与模型架构](../../Area/EE/MATLAB/10000问/Simulink建模控制系统与物理仿真)
+  - 新增 12 题，覆盖子系统、代数环、控制系统、PID、Stateflow、Simscape 和 Model Reference。
+- [MATLAB与Simulink10000问：代码生成、验证、定点与实时HIL](../../Area/EE/MATLAB/10000问/代码生成验证定点与实时HIL)
+  - 新增 20 题，覆盖 Embedded Coder、MIL/SIL/PIL/HIL、Polyspace、实时仿真、AUTOSAR Blockset、定点和模型版本管理。
+- [MATLAB10000问：面向对象、GPU、图像、深度学习与测试](../../Area/EE/MATLAB/10000问/OOP并行图像深度学习与测试)
+  - 新增 16 题，覆盖 OOP、App Designer、parfor/GPU、图像处理、CNN、系统辨识、单元测试和 Variant。
 - [考研英语10000问：词汇辨析、长难句与阅读理解](../Study/考研英语/10000问/词汇语法与阅读)
   - 已整理 10 题，覆盖词汇辨析、动名词、虚拟语气、长难句、分词、倒装、从句和阅读证据链；含阅读解题流程图。
 
