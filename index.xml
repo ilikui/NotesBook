@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>AUTOSAR 1000问 · OS&amp;调度Q2 如何在 DaVinci 新增一个 Task？</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/OS%E8%B0%83%E5%BA%A6Q2-DaVinci%E6%96%B0%E5%A2%9ETask</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/OS%E8%B0%83%E5%BA%A6Q2-DaVinci%E6%96%B0%E5%A2%9ETask</guid>
+    <description><![CDATA[ AUTOSAR 1000问 · OS&amp;调度Q2：如何在 DaVinci 新增一个 Task？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 1000问 · OS&amp;调度Q2：如何在 DaVinci 新增一个 Task？ ▎ 五大学习法：费曼——把「新增 Task」讲成「给 OS 报户口」 费曼（本质一句话）：新增 Task = 告诉 OS「多了一个可被调度的执行单元」——给它身份（名字/优先级）、调度规则（能不能抢、能激活几次）、资源（栈），再由代码给它一个身体。 SQ3R（去哪找）：DaVinci Configurator 配置树 → Os 模块 ... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:52:10 GMT</pubDate>
+  </item><item>
     <title>AUTOSAR 1000问 · SWC类型Q3 如何配置 SWC？</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC%E7%B1%BB%E5%9E%8BQ3-SWC%E9%85%8D%E7%BD%AE</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC%E7%B1%BB%E5%9E%8BQ3-SWC%E9%85%8D%E7%BD%AE</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Icu</guid>
     <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块⑤ Icu 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块⑤ Icu Icu（输入捕获）驱动，用来测量外部信号的边沿、周期、脉宽——比如测转速/轮速传感器信号、外设方波频率与占空比，提供测量完成的回调通知。 核心职责：边沿检测、信号周期/脉宽测量、时间戳、通知回调。 关键配置项： IcuChannelConfiguration：通道配置（映射到定时器输入捕获通道 / 引脚）。 IcuMeasurementMode：测量模式（信号测量：周期 / 脉宽 / 两个边沿之间时间；边沿检测）。 IcuS... ]]></description>
     <pubDate>Sat, 31 Oct 2026 07:50:12 GMT</pubDate>
-  </item><item>
-    <title>AUTOSAR MCAL 配置说明 · 模块⑥ Ocu</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Ocu</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Ocu</guid>
-    <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块⑥ Ocu 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块⑥ Ocu Ocu（输出比较）驱动，在定时器计数值达到比较值时翻转 / 置位 / 清位输出引脚，产生精确边沿、脉冲、时基信号，也是 Pwm 的底层基础。 核心职责：定时器比较输出、边沿/脉冲产生、比较事件回调。 关键配置项： OcuChannelConfiguration：通道配置（映射到定时器比较通道 / 引脚）。 OcuMode：比较模式——翻转 / 置位 / 清位 / 无操作，支持多比较值。 OcuCompareValue / C... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:50:08 GMT</pubDate>
   </item>
     </channel>
   </rss>
