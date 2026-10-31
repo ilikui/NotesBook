@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>AUTOSAR MCAL 配置说明 · 模块① Mcu</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Mcu</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Mcu</guid>
+    <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块① Mcu 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块① Mcu Mcu 是 MCAL 最底层、第一个被初始化的 BSW 模块——管时钟、复位、功耗模式、RAM 段。EcuM 上电 Phase 0/1 就会 Init 它。 核心职责：时钟树（PLL）、复位源管理、功耗模式、RAM 段划分与初始化。 关键配置项： McuClockSettingConfig：时钟设置。选时钟源（外部晶振 / 内部 RC）、配 PLL 倍频 / 分频、定各总线时钟（Core clock、peripheral c... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:51:17 GMT</pubDate>
+  </item><item>
     <title>AUTOSAR</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Can</guid>
     <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块⑨ Can 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块⑨ Can Can 是 CAN 通信驱动（MCAL 层），负责硬件 CAN 控制器的初始化、报文收发、控制器模式、Bus-off 处理。注意它只做帧级收发，上层 CAN 帧 ID 管理 / PDU 映射由 CanIf / CanNm / CanTp 等其他通信栈模块负责。 核心职责：控制器初始化、报文收发、模式切换、错误 / Bus-off 处理。 关键配置项： CanController：每个 CAN 控制器一个配置。 CanCont... ]]></description>
     <pubDate>Sat, 31 Oct 2026 07:48:53 GMT</pubDate>
-  </item><item>
-    <title>AUTOSAR MCAL 配置说明 · 模块⑩ CanTrcv</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/CanTrcv</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/CanTrcv</guid>
-    <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块⑩ CanTrcv 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块⑩ CanTrcv CanTrcv 是 CAN 收发器驱动，管理收发器硬件（如 TJA1041 / TJA1145 / TJA1043 等），负责显性/隐性电平转换、总线唤醒、故障检测、模式切换。 核心职责：收发器模式管理、总线唤醒、故障检测（Bus-off / TXD 超时 / GND 断开）。 关键配置项： CanTrcvHardwareObject：收发器硬件对象（映射到具体收发器）。 CanTrcvController：... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:48:51 GMT</pubDate>
   </item>
     </channel>
   </rss>
