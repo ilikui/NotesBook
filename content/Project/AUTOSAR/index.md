@@ -77,6 +77,11 @@ flowchart TD
 - [[MCAL/Wdg]] —— 看门狗硬件驱动配置。
 - [[MCAL/Eep]] —— EEPROM 驱动与异步读写。
 - [[MCAL/Fls]] —— Flash 扇区、读写擦除与 Job 管理。
+- [[MCAL/Lin]] —— LIN 通道、主从节点与帧调度。
+- [[MCAL/CanTrcv]] —— CAN 收发器模式、唤醒与故障检测。
+- [[MCAL/Can]] —— CAN 控制器驱动与收发配置。
+- [[MCAL/Gpt]] —— 通用定时器通道与通知配置。
+- [[MCAL/Pwm]] —— PWM 通道、周期与占空比配置。
 
 ## 工程实践专题
 
