@@ -48,6 +48,8 @@ flowchart TD
 
 ## 1000问逐题解答
 
+- [[1000问/OS调度与SWC工程补充]] —— OS 任务周期与优先级、栈/内存/时序保护，以及 Port Connector、RTE 生成验证的原始问答补充。
+
 - [[1000问/基础架构通信与存储]] —— AUTOSAR 定义、分层、RTE、Runnable、配置生成、COM/PduR/CanIf、NvM/Fee。
 - [[1000问/网络管理诊断存储与OS]] —— 唤醒源、EcuM/BswM、Bus-Sleep、DTC、Dcm 会话、安全访问、NvM 回调与掉电保护、OS 调度和功能安全。
 - [[1000问/工具链平台安全与系统配置]] —— AUTOSAR 价值、配置生成审计、依赖追踪、Classic/Adaptive、WdgM、OS 可信分区、PreCompile/PostBuild、XCP/UDS 和 EcuM 启动序列。
