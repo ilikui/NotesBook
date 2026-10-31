@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>AUTOSAR MCAL 配置说明 · 模块⑮ Mpu（可选）</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Mpu</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Mpu</guid>
+    <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块⑮ Mpu（可选） 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块⑮ Mpu（可选） Mpu（内存保护单元）驱动是 可选模块，用于功能安全 / 内存隔离。它配置 MPU 硬件，为不同分区设定内存访问权限（读 / 写 / 执行），防止非法访问，支撑 AUTOSAR 的 Memory Protection 与 Freedom from Interference。 核心职责：内存区域访问权限配置、区域启停、配合 OS 上下文切换。 关键配置项： MpuRegionConfiguration：内存区域... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:47:22 GMT</pubDate>
+  </item><item>
     <title>AUTOSAR MCAL Dma 配置说明</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Dma</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Dma</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E6%96%87%E4%BB%B6IO-Q4-%E6%96%87%E4%BB%B6%E5%AE%9A%E4%BD%8D%E4%B8%8E%E6%96%87%E6%9C%AC%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%A8%A1%E5%BC%8F</guid>
     <description><![CDATA[ C语言 1000问 · 文件I/O Q4：fseek / ftell / rewind 怎么用？文本模式和二进制模式下的定位有什么不同？ 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 C语言 1000问 · 文件I/O Q4：fseek / ftell / rewind 怎么用？文本模式和二进制模式下的定位有什么不同？ ▎ 五大学习法：西蒙学习法——把「文件定位」钻透 三个基本定位函数 ftell(fp)：返回当前位置相对文件开头的偏移。常用于「记住当前位置，之后跳回来」。 fseek(fp, offset, whence)：移动位置指针。 whence 三个取值：S... ]]></description>
     <pubDate>Sat, 31 Oct 2026 07:41:58 GMT</pubDate>
-  </item><item>
-    <title>可变参数Q1-va_list实现可变参数函数</title>
-    <link>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0Q1-va_list%E5%AE%9E%E7%8E%B0%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0%E5%87%BD%E6%95%B0</link>
-    <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0Q1-va_list%E5%AE%9E%E7%8E%B0%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0%E5%87%BD%E6%95%B0</guid>
-    <description><![CDATA[ C语言 1000问 · 可变参数Q1：怎么实现一个可变参数函数？va_list / va_start / va_arg / va_end 各自做什么？ 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 C语言 1000问 · 可变参数Q1：怎么实现一个可变参数函数？va_list / va_start / va_arg / va_end 各自做什么？ ▎ 五大学习法：西蒙学习法——把「可变参数」钻透 可变参数是什么 函数参数个数不固定，如 printf(fmt, …)、execl、ioctl。 用省略号 … 声明：int sum(int count, …); 关键难点：函... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:41:55 GMT</pubDate>
   </item>
     </channel>
   </rss>
