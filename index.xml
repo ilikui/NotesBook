@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>SuperMemo渐进阅读资源</title>
+    <link>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/SuperMemo%E6%B8%90%E8%BF%9B%E9%98%85%E8%AF%BB%E8%B5%84%E6%BA%90</link>
+    <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/SuperMemo%E6%B8%90%E8%BF%9B%E9%98%85%E8%AF%BB%E8%B5%84%E6%BA%90</guid>
+    <description><![CDATA[ - 学习相关的知识管理 原始 Flomo：v.flomoapp.com/mine/ 学习相关的知识管理 知识管理，借助于SuperMemo将知乎的文章导入SuperMemo做渐进阅读 learning.xms.tw/ 知识管理. ]]></description>
+    <pubDate>Sat, 31 Oct 2026 09:00:06 GMT</pubDate>
+  </item><item>
     <title>问题解决树培训资料</title>
     <link>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%A0%91%E5%9F%B9%E8%AE%AD%E8%B5%84%E6%96%99</link>
     <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%A0%91%E5%9F%B9%E8%AE%AD%E8%B5%84%E6%96%99</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/KM/</guid>
     <description><![CDATA[ KM（Knowledge Management，知识管理） 关注如何高效地收集、理解、组织、连接和复用个人知识。它不只是工具问题，更是一套帮助思考与行动持续改进的方法。 一句话定位 让知识「进得来、找得到、连得上、用得上」，并最终转化为判断、作品与行动。 知识管理地图 flowchart TD A[&quot;知识输入&quot;] --&gt; B[&quot;捕捉与收集&quot;] B --&gt; C[&quot;阅读与理解&quot;] C --&gt; D[&quot;提炼为自己的表达&quot;] D --&gt; E[&quot;组织与连接&quot;] E --&gt; F[... ]]></description>
     <pubDate>Sat, 31 Oct 2026 08:57:40 GMT</pubDate>
-  </item><item>
-    <title>程序员笔记整理方法</title>
-    <link>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%A8%8B%E5%BA%8F%E5%91%98%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86%E6%96%B9%E6%B3%95</link>
-    <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%A8%8B%E5%BA%8F%E5%91%98%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86%E6%96%B9%E6%B3%95</guid>
-    <description><![CDATA[ 作为程序员，良好的笔记整理方法可以帮助你更高效地学习、记忆和应用知识。下面是一些常用的程序员笔记整理方法： 原始 Flomo：v.flomoapp.com/mine/ 作为程序员，良好的笔记整理方法可以帮助你更高效地学习、记忆和应用知识。下面是一些常用的程序员笔记整理方法： 组织结构： 使用清晰的标题和子标题，以便快速浏览和定位信息。 使用层次结构，例如使用标题、子标题、编号列表等来组织相关的概念和主题。 分类和标签： 将笔记按照相关性和主题进行分类，例如按语言、框架、概念等。 使用标签或关键词来标记笔记，以便快速检索和过滤相关内容。 示例和代码片段： 在笔记中包含实际的示例和代码片段，以帮助... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 08:56:40 GMT</pubDate>
   </item>
     </channel>
   </rss>
