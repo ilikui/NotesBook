@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>AUTOSAR 与 ROS 2 对比 Q2：ROS 2 的 Node 和 Adaptive 的 Process（Execution Cluster）在架构思维上的最大区别？ROS 2 开发者转 Adaptive 最需要适应什么？</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Adaptive%E4%B8%8EROS2-Node%E5%92%8CExecutionCluster%E5%AF%B9%E6%AF%94</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Adaptive%E4%B8%8EROS2-Node%E5%92%8CExecutionCluster%E5%AF%B9%E6%AF%94</guid>
+    <description><![CDATA[ AUTOSAR 与 ROS 2 对比 Q2：ROS 2 的 Node 和 Adaptive 的 Process（Execution Cluster）在架构思维上的最大区别？ROS 2 开发者转 Adaptive 最需要适应什么？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 与 ROS 2 对比 Q2：ROS 2 的 Node 和 Adaptive 的 Process（Execution Cluster）在架构思维上的最大区别？ROS 2 开发者转 Adaptive 最需要适应什么？ 最大区别（三个层面）： 单元性质：ROS 2 Node 是「功能性 / 逻辑」单... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:54:49 GMT</pubDate>
+  </item><item>
     <title>AUTOSAR MCAL 模块配置说明 · 总览</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%93%BEQ1-%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1</guid>
     <description><![CDATA[ AUTOSAR 1000问 · 工具链 Q1：如何保证工具链生成的代码就是自己配置的？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 1000问 · 工具链 Q1：如何保证工具链生成的代码就是自己配置的？ 费曼（一句话说清）：工具链是翻译官——你把配置（ARXML）交给它，它吐出代码。真问题不是「它会不会骗你」，而是「你怎么让它说的每句话都可查证」。 西蒙（抓核心）：你证明不了生成器永远正确，但能让「配置→产物」变成可审计、可重放、有断言的确定性过程——把「信任工具」换成「审计过程」。 SQ3R（带着问题读）：先问「配置和产物之间，偏差可能出在哪几环」，答案锁定五... ]]></description>
     <pubDate>Sat, 31 Oct 2026 07:52:13 GMT</pubDate>
-  </item><item>
-    <title>AUTOSAR 1000问 · OS&amp;调度Q2 如何在 DaVinci 新增一个 Task？</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/OS%E8%B0%83%E5%BA%A6Q2-DaVinci%E6%96%B0%E5%A2%9ETask</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/OS%E8%B0%83%E5%BA%A6Q2-DaVinci%E6%96%B0%E5%A2%9ETask</guid>
-    <description><![CDATA[ AUTOSAR 1000问 · OS&amp;调度Q2：如何在 DaVinci 新增一个 Task？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 1000问 · OS&amp;调度Q2：如何在 DaVinci 新增一个 Task？ ▎ 五大学习法：费曼——把「新增 Task」讲成「给 OS 报户口」 费曼（本质一句话）：新增 Task = 告诉 OS「多了一个可被调度的执行单元」——给它身份（名字/优先级）、调度规则（能不能抢、能激活几次）、资源（栈），再由代码给它一个身体。 SQ3R（去哪找）：DaVinci Configurator 配置树 → Os 模块 ... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:52:10 GMT</pubDate>
   </item>
     </channel>
   </rss>
