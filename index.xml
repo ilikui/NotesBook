@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>PartialNetworking-Cluster配置与唤醒匹配</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/PartialNetworking-Cluster%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%94%A4%E9%86%92%E5%8C%B9%E9%85%8D</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/PartialNetworking-Cluster%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%94%A4%E9%86%92%E5%8C%B9%E9%85%8D</guid>
+    <description><![CDATA[ Partial Network Cluster 配置：一个支持 PN 的 ECU 靠「PN 位匹配」判断该不该醒 原始 Flomo：v.flomoapp.com/mine/ Partial Network Cluster 配置：一个支持 PN 的 ECU 靠「PN 位匹配」判断该不该醒 配置链路四步： 划 Cluster、分 PNC 号：把整车 ECU 按功能分组（如门窗组、动力组、诊断组），每组一个 PNC（Partial Network Cluster）号，是配置里的逻辑身份。 给 ECU 配 filter mask：每个 ECU 声明自己属于哪些 PNC——PnMask（掩码）。收报文时... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 09:20:21 GMT</pubDate>
+  </item><item>
     <title>多核共享变量与volatile边界</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%A4%9A%E6%A0%B8%E5%85%B1%E4%BA%AB%E5%8F%98%E9%87%8F%E4%B8%8Evolatile%E8%BE%B9%E7%95%8C</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%A4%9A%E6%A0%B8%E5%85%B1%E4%BA%AB%E5%8F%98%E9%87%8F%E4%B8%8Evolatile%E8%BE%B9%E7%95%8C</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q2-%E6%A8%A1%E5%9D%97%E9%85%8D%E7%BD%AE%E5%AE%8C%E6%95%B4%E6%80%A7%E9%AA%8C%E8%AF%81</guid>
     <description><![CDATA[ 工具配置实战 Q2：怎么判断一个模块配置完整？Davinci 有没有「验证配置」功能？ 原始 Flomo：v.flomoapp.com/mine/ 工具配置实战 Q2：怎么判断一个模块配置完整？Davinci 有没有「验证配置」功能？ 判断完整性的四种手段（从软到硬）： 工具验证 / 校验：Davinci 有 Check / Validate Configuration，EB tresos 是 Validation——做一致性检查（必填参数、跨模块引用、schema 合规），列出 error（红）和 warning（黄）。这是第一道、也最快的门。 生成代码是否成功：生成器生成前会做一遍完整性与... ]]></description>
     <pubDate>Sat, 31 Oct 2026 09:14:50 GMT</pubDate>
-  </item><item>
-    <title>工具配置实战Q3-BSW模块引用关系</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q3-BSW%E6%A8%A1%E5%9D%97%E5%BC%95%E7%94%A8%E5%85%B3%E7%B3%BB</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q3-BSW%E6%A8%A1%E5%9D%97%E5%BC%95%E7%94%A8%E5%85%B3%E7%B3%BB</guid>
-    <description><![CDATA[ 工具配置实战 Q3：Module 间的「引用」怎么建立？填模块名还是下拉列表？ 原始 Flomo：v.flomoapp.com/mine/ 工具配置实战 Q3：Module 间的「引用」怎么建立？填模块名还是下拉列表？ 结论：不是手填模块名，而是通过下拉/浏览对话框选，选的是「强类型引用」，不是文本字符串。 为什么是下拉选择： 引用是强类型的：工具里定义的是 BswModuleRef / 对象引用，有明确的指向类型（如 CanIf 的 CanControllerBaudRateRef 指向 Can 模块的某个 Controller 配置实例），只能选类型匹配的。手填字符串绕过了类型校验，容易引... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 09:14:46 GMT</pubDate>
   </item>
     </channel>
   </rss>
