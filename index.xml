@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>自动驾驶</title>
+    <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6</link>
+    <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6</guid>
+    <description><![CDATA[ mindmap root((自动驾驶)) 自动驾驶分级 L1 驾驶辅助::icon(fa fa-car) :::结合单项辅助（如ACC自适应巡航、LKA车道保持） L2 部分自动化 :::人类全程监管（如Tesla FSD、主流城市NOA） L3 条件自动化 :::特定场景系统驾驶（系统请求时人类接管） L4 高度自动化 :::限定区域完全无须人类接管（如Robotaxi无人出租车） L5 完全自动化 :::全场景、全天候无条件完全自动驾驶（终极形态） 核心技术架构 环境感知层 传感器硬件::icon(fa fa-microchip) :::激光雷达 LiDAR :::高精摄像头 Camera... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 08:36:21 GMT</pubDate>
+  </item><item>
     <title>MCAL配置参数记录</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/MCAL%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0%E8%AE%B0%E5%BD%95</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/MCAL%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0%E8%AE%B0%E5%BD%95</guid>
@@ -35,12 +41,6 @@
     <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/1000%E9%97%AE/%E8%A1%A5%E5%85%85Q1-%E7%AB%AF%E5%88%B0%E7%AB%AF%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6</guid>
     <description><![CDATA[ 自动驾驶 1000问 · 补充Q1：什么是端到端（End-to-End）自动驾驶？ 原始 Flomo：v.flomoapp.com/mine/ 自动驾驶 1000问 · 补充Q1：什么是端到端（End-to-End）自动驾驶？ ▎ 五大学习法：费曼学习法——用一句话把它讲给外行听 一句话 把「传感器输入 → 车辆动作（转向 / 油门 / 刹车）」这一整条链交给一个学习模型整体学会，不再拆成感知、预测、规划、控制各自写规则再拼。 和传统模块化比 模块化：每块单独设计优化、可解释、能独立升级；但模块间接口靠人工设计，误差会一路累积放大。 端到端：一张大网直接从输入学到输出，围绕最终驾驶目标联合优化... ]]></description>
     <pubDate>Sat, 31 Oct 2026 08:33:32 GMT</pubDate>
-  </item><item>
-    <title>自动驾驶</title>
-    <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6</link>
-    <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6</guid>
-    <description><![CDATA[ mindmap root((自动驾驶)) 自动驾驶分级 L1 驾驶辅助::icon(fa fa-car) :::结合单项辅助（如ACC自适应巡航、LKA车道保持） L2 部分自动化 :::人类全程监管（如Tesla FSD、主流城市NOA） L3 条件自动化 :::特定场景系统驾驶（系统请求时人类接管） L4 高度自动化 :::限定区域完全无须人类接管（如Robotaxi无人出租车） L5 完全自动化 :::全场景、全天候无条件完全自动驾驶（终极形态） 核心技术架构 环境感知层 传感器硬件::icon(fa fa-microchip) :::激光雷达 LiDAR :::高精摄像头 Camera... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 08:32:48 GMT</pubDate>
   </item><item>
     <title>SPI 菊花链：多从机串联拓扑与时序</title>
     <link>https://wiki.likui.info/Area/EE/%E8%BD%A6%E8%BD%BD%E9%80%9A%E4%BF%A1/1000%E9%97%AE/SPI%E8%8F%8A%E8%8A%B1%E9%93%BE%E5%A4%9A%E4%BB%8E%E6%9C%BA%E4%B8%B2%E8%81%94</link>
