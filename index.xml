@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>思考比记笔记更重要</title>
+    <link>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E6%80%9D%E8%80%83%E6%AF%94%E8%AE%B0%E7%AC%94%E8%AE%B0%E6%9B%B4%E9%87%8D%E8%A6%81</link>
+    <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E6%80%9D%E8%80%83%E6%AF%94%E8%AE%B0%E7%AC%94%E8%AE%B0%E6%9B%B4%E9%87%8D%E8%A6%81</guid>
+    <description><![CDATA[ 记笔记也不是最关键的工作，思考、阅读、理解和提出想法才是，笔记只是他们的具体成果。 原始 Flomo：v.flomoapp.com/mine/ 记笔记也不是最关键的工作，思考、阅读、理解和提出想法才是，笔记只是他们的具体成果。 总结： 记笔记不是关键，思考过滤后的想法才是最终的输出。 📎 详见知识管理体系总览 → v.flomoapp.com/mine/ 知识管理. ]]></description>
+    <pubDate>Sat, 31 Oct 2026 08:58:34 GMT</pubDate>
+  </item><item>
     <title>问题树与问题解决思路</title>
     <link>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E9%97%AE%E9%A2%98%E6%A0%91%E4%B8%8E%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF</link>
     <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E9%97%AE%E9%A2%98%E6%A0%91%E4%B8%8E%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC4%E7%AF%87-%E8%AF%BE%E6%9C%AC%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%AE%9E%E9%99%85</guid>
     <description><![CDATA[ 专栏⑰·第4篇：课本定义的数学概念 vs 工程里的实际用法——“最短路径”和”特征分解”的差距 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·第4篇：课本定义的数学概念 vs 工程里的实际用法——“最短路径”和”特征分解”的差距 📎 第3篇：堆问题法在数学上的矛盾 → v.flomoapp.com/mine/ （来自7/28晚数学专题三问。五大学习法：卢曼卡片盒→把”数学课本上的定义”和”工程里的实际用法”各写一张卡，串起来看差距在哪。） 经典案例 1：最短路径算法——Dijkstra vs CAN 网络的路由配置 课本定义： Dijkstra 给定带权图求最短路径，时... ]]></description>
     <pubDate>Sat, 31 Oct 2026 08:55:26 GMT</pubDate>
-  </item><item>
-    <title>Zettelkasten定义与链接网络</title>
-    <link>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/Zettelkasten%E5%AE%9A%E4%B9%89%E4%B8%8E%E9%93%BE%E6%8E%A5%E7%BD%91%E7%BB%9C</link>
-    <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/Zettelkasten%E5%AE%9A%E4%B9%89%E4%B8%8E%E9%93%BE%E6%8E%A5%E7%BD%91%E7%BB%9C</guid>
-    <description><![CDATA[ Zettelkasten 定义与链接网络 原始 Flomo：v.flomoapp.com/mine/ 卡片盒笔记系统：英文/德语：Zettelkasten，这是一种将笔记相互连接形成一个网状结构的超文本笔记系统。 卡片盒笔记法：英文：Zettelkasten Method，建立卢曼笔记系统用到的一些具体方法。 笔记卡片：英文/德语：Zettel，原指一张用来记录笔记的小纸片，现指使用卢曼笔记法记录的一条单独的笔记。 想法：英文：Thought，卢曼笔记法要求每条笔记只记录一个 thought，thought 在中文中含义非常丰富，可以是一个术语、概念、理论、看法、点子，突然的灵感等等，这些在本... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 08:54:39 GMT</pubDate>
   </item>
     </channel>
   </rss>
