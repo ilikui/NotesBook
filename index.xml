@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>dotnet-cli开发命令</title>
+    <link>https://wiki.likui.info/Area/CS/CSharp/dotnet-cli%E5%BC%80%E5%8F%91%E5%91%BD%E4%BB%A4</link>
+    <guid>https://wiki.likui.info/Area/CS/CSharp/dotnet-cli%E5%BC%80%E5%8F%91%E5%91%BD%E4%BB%A4</guid>
+    <description><![CDATA[ .NET CLI 开发命令 原始 Flomo：v.flomoapp.com/mine/ C# 开发 dotnet.microsoft.com/en-us/download .NET CLI 是一个命令行界面，提供了一系列用于开发、构建、测试和发布.NET 应用程序的命令。这些命令统称为 dotnet 命令。它们允许开发者在各种操作系统上进行.NET 开发，而无需依赖于Visual Studio 等集成开发环境. ]]></description>
+    <pubDate>Sat, 31 Oct 2026 09:09:08 GMT</pubDate>
+  </item><item>
     <title>CEM 项目知识地图</title>
     <link>https://wiki.likui.info/Project/CEM/</link>
     <guid>https://wiki.likui.info/Project/CEM/</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/SQ3R%E9%98%85%E8%AF%BB%E6%B3%95%E5%8E%86%E5%8F%B2%E6%9D%A5%E6%BA%90</guid>
     <description><![CDATA[ SQ3R 阅读法历史来源 原始 Flomo：v.flomoapp.com/mine/ 关联自：v.flomoapp.com/mine/ 数据来源：xmind.app/m/c29x6b/ 卡片笔记. ]]></description>
     <pubDate>Sat, 31 Oct 2026 09:01:32 GMT</pubDate>
-  </item><item>
-    <title>SQ4R阅读法补充</title>
-    <link>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/SQ4R%E9%98%85%E8%AF%BB%E6%B3%95%E8%A1%A5%E5%85%85</link>
-    <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/SQ4R%E9%98%85%E8%AF%BB%E6%B3%95%E8%A1%A5%E5%85%85</guid>
-    <description><![CDATA[ SQ4R 阅读法补充 原始 Flomo：v.flomoapp.com/mine/ 关联自：v.flomoapp.com/mine/ 该概念是第二次世界大战期间由心理学教授弗朗西斯 逻兵逊为美国陆军开发的阅读方法。 卡片笔记. ]]></description>
-    <pubDate>Sat, 31 Oct 2026 09:01:29 GMT</pubDate>
   </item>
     </channel>
   </rss>
