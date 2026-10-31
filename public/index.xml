@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>C语言1000问：位操作、内存分配、预处理器与AUTOSAR实战</title>
+    <link>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E4%BD%8D%E6%93%8D%E4%BD%9C%E9%A2%84%E5%A4%84%E7%90%86%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E4%B8%8EAUTOSAR</link>
+    <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E4%BD%8D%E6%93%8D%E4%BD%9C%E9%A2%84%E5%A4%84%E7%90%86%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E4%B8%8EAUTOSAR</guid>
+    <description><![CDATA[ C语言1000问：位操作、内存分配、预处理器与AUTOSAR实战 本篇迁移 C 语言系列第五批 10 张问答/专题卡，完成本轮检索到的 50 条 C 语言 1000 问相关笔记的逐题整理。包含寄存器位操作、位域、可变参数、I/O 缓冲、预处理器高级技巧、malloc/free、严格别名，以及嵌入式代码审查和 AUTOSAR BSW 实战。 41. ]]></description>
+    <pubDate>Sat, 31 Oct 2026 02:01:57 GMT</pubDate>
+  </item><item>
     <title>车载通信1000问：总线基础、故障排查与ECU接口选型</title>
     <link>https://wiki.likui.info/Area/EE/%E8%BD%A6%E8%BD%BD%E9%80%9A%E4%BF%A1/1000%E9%97%AE/%E6%80%BB%E7%BA%BF%E5%9F%BA%E7%A1%80%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E4%B8%8EECU%E6%8E%A5%E5%8F%A3%E9%80%89%E5%9E%8B</link>
     <guid>https://wiki.likui.info/Area/EE/%E8%BD%A6%E8%BD%BD%E9%80%9A%E4%BF%A1/1000%E9%97%AE/%E6%80%BB%E7%BA%BF%E5%9F%BA%E7%A1%80%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E4%B8%8EECU%E6%8E%A5%E5%8F%A3%E9%80%89%E5%9E%8B</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Resource/Education/1000%E9%97%AE/%E5%B9%B4%E7%BA%A7%E8%BD%AC%E6%8A%98%E4%B8%8E%E9%95%BF%E6%9C%9F%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92</guid>
     <description><![CDATA[ 儿童教育1000问：幼小衔接、年级转折与长期学习规划 本篇迁移儿童教育续篇第二部分，整理 20 道关于幼小衔接、小学转折、初高中适应、大学规划和家庭支持的问答。各地课程安排、考试政策和选科制度不同，具体规划应以当地政策和孩子实际情况为准。 一、幼小衔接 Q33. ]]></description>
     <pubDate>Sat, 31 Oct 2026 01:41:16 GMT</pubDate>
-  </item><item>
-    <title>儿童教育1000问：语文、数学、英语与理科分科学习</title>
-    <link>https://wiki.likui.info/Resource/Education/1000%E9%97%AE/%E5%88%86%E7%A7%91%E5%AE%9E%E6%88%98%E8%AF%AD%E6%96%87%E6%95%B0%E5%AD%A6%E8%8B%B1%E8%AF%AD%E4%B8%8E%E7%90%86%E7%A7%91</link>
-    <guid>https://wiki.likui.info/Resource/Education/1000%E9%97%AE/%E5%88%86%E7%A7%91%E5%AE%9E%E6%88%98%E8%AF%AD%E6%96%87%E6%95%B0%E5%AD%A6%E8%8B%B1%E8%AF%AD%E4%B8%8E%E7%90%86%E7%A7%91</guid>
-    <description><![CDATA[ 儿童教育1000问：语文、数学、英语与理科分科学习 本篇迁移儿童教育续篇中的分科学习方法，整理 18 道问答。年级、识字量、词汇量和阅读速度均存在个体差异；不把某个数字当作所有孩子必须达到的统一门槛。 一、语文：识字、阅读与写作 Q11. ]]></description>
-    <pubDate>Sat, 31 Oct 2026 01:40:50 GMT</pubDate>
   </item>
     </channel>
   </rss>

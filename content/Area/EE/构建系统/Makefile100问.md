@@ -81,7 +81,7 @@ flowchart TD
 
 ---
 
-### 1.3 一阶Q3：自动变量 $@、$<、$^、$ 各代表什么？_\
+### 1.3 一阶Q3：自动变量 `$@`、`$<`、`$^`、`$` 各代表什么？_\
 
 **答案与解析（根据 Flomo 原始答案卡整理）**
 
@@ -89,21 +89,21 @@ flowchart TD
 
 **四个自动变量**
 
-- **$@** 当前规则的目标名（target）
-- **$<** 依赖列表里的第一个依赖
-- **$^** 所有依赖的完整列表（去重）
-- **$**\\* 模式规则里 % 匹配到的部分（stem，词干）
+- **`$@`** 当前规则的目标名（target）
+- **`$<`** 依赖列表里的第一个依赖
+- **`$^`** 所有依赖的完整列表（去重）
+- **`$*`** 模式规则里 % 匹配到的部分（stem，词干）
 
 **一条规则全用上**
 
 %.o: %.c<br>
-$(CC) -c $< -o $@
+`$(CC)` -c `$<` -o `$@`
 
-- 对 src/main.c 编译出 src/main.o 时：$@ = src/main.o，$< = src/main.c，$\* = src/main
-- 多依赖场景用 $^：app.elf: a.o b.o c.o → $(LD) $^ -o $@ 一次带上全部 .o
-- 注意 $< 只取第一个；想要「第一个以外的」，用 $(wordlist 2,$(words $^),$^)
+- 对 src/main.c 编译出 src/main.o 时：`$@` = src/main.o，`$<` = src/main.c，`$*` = src/main
+- 多依赖场景用 `$^`：app.elf: a.o b.o c.o → `$(LD)` `$^` -o `$@` 一次带上全部 .o
+- 注意 `$<` 只取第一个；想要「第一个以外的」，用 `$(wordlist 2,$(words $^),$^)`
 
-**一句话总结**：$@ 是我要造的，$< 是第一个原料，$^ 是所有原料，$\\* 是通配符抓到的那截。
+**一句话总结**：`$@` 是我要造的，`$<` 是第一个原料，`$^` 是所有原料，`$*` 是通配符抓到的那截。
 
 📎 题目（一阶）→ [https://v.flomoapp.com/mine/?memo\_id=MjUxMDI4NTA5](https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTA5)<br>
 📎 一阶Q2（变量赋值）→ [https://v.flomoapp.com/mine/?memo\_id=MjUyMTU3NTU0](https://v.flomoapp.com/mine/?memo_id=MjUyMTU3NTU0)
@@ -121,8 +121,8 @@ $(CC) -c $< -o $@
 **%.o: %.c 怎么匹配**
 
 - % 是通配符，匹配任意字符串（含路径）：main.o 匹配 %=main，src/main.o 匹配 %=src/main
-- 匹配到的值就是 $\*（stem），规则内可用
-- 它跟 shell 的 \*.c 不一样：模式规则的 % 在目标和依赖两侧对齐匹配，不是文件名展开
+- 匹配到的值就是 `$*`（stem），规则内可用
+- 它跟 shell 的 *.c 不一样：模式规则的 % 在目标和依赖两侧对齐匹配，不是文件名展开
 
 **和显式规则共存时 make 用谁**
 
@@ -197,25 +197,25 @@ $(CC) -c $< -o $@
 
 ---
 
-### 1.7 一阶Q7：$(CC) 和 $CC 差在哪？什么时候 $CC 会解析错？
+### 1.7 一阶Q7：`$(CC)` 和 `$CC` 差在哪？什么时候 `$CC` 会解析错？
 
 **答案与解析（根据 Flomo 原始答案卡整理）**
 
 ▎ 五大学习法：费曼学习法——把 make 的展开规则和 shell 区分开，一讲就通
 
-**核心：make 只认 $(XXX)，$CC 会被拆成 $(C)C**
+**核心：make 只认 `$(XXX)`，`$CC` 会被拆成 `$(C)`C**
 
-- $CC 在 make 眼里 = 变量 C 的值 + 字面 C。C 没定义时结果是空 + C = "C"
-- 正确写法是 $(CC)。$X 这种单字母形式只留给自动变量（$@、$<、$^、$\*）和特殊变量
-- 从 shell 抄来的命令最容易踩：$PATH、$HOME、$CC 在 make 里全不是你想的意思
+- `$CC` 在 make 眼里 = 变量 C 的值 + 字面 C。C 没定义时结果是空 + C = "C"
+- 正确写法是 `$(CC)`。`$X` 这种单字母形式只留给自动变量（`$@`、`$<`、`$^`、`$*`）和特殊变量
+- 从 shell 抄来的命令最容易踩：`$PATH`、`$HOME`、`$CC` 在 make 里全不是你想的意思
 
 **recipe 里想让 shell 展开怎么办**
 
-- 写成 $$VAR：make 先把 $$ 转成 $，再把结果交给 shell 展开
-- 例：recipe 里 echo $$HOME → shell 展开成 /root
-- 判断口诀：这一层要谁展开就写谁——make 层用 $(...)，shell 层用 $$(...)
+- 写成 `$$VAR`：make 先把 `$$` 转成 `$`，再把结果交给 shell 展开
+- 例：recipe 里 echo `$$HOME` → shell 展开成 /root
+- 判断口诀：这一层要谁展开就写谁——make 层用 `$(...)`，shell 层用 `$$(...)`
 
-**一句话总结**：make 里多字符变量必须 $(XXX)；$CC 是 $(C)C；recipe 里给 shell 的变量要写 $$XXX。
+**一句话总结**：make 里多字符变量必须 `$(XXX)`；`$CC` 是 `$(C)`C；recipe 里给 shell 的变量要写 `$$XXX`。
 
 📎 题目（一阶）→ [https://v.flomoapp.com/mine/?memo\_id=MjUxMDI4NTA5](https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTA5)<br>
 📎 一阶Q6（CFLAGS/LDFLAGS）→ [https://v.flomoapp.com/mine/?memo\_id=MjUyMTY5Mzk5](https://v.flomoapp.com/mine/?memo_id=MjUyMTY5Mzk5)
@@ -244,7 +244,7 @@ $(CC) -c $< -o $@
 **一句话总结**：make 不认 all 认「第一个目标」；clean 放第一 = make 一下清掉工程。
 
 📎 题目（一阶）→ [https://v.flomoapp.com/mine/?memo\_id=MjUxMDI4NTA5](https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTA5)<br>
-📎 一阶Q7（$(CC) vs $CC）→ [https://v.flomoapp.com/mine/?memo\_id=MjUyMTY5Mjcy](https://v.flomoapp.com/mine/?memo_id=MjUyMTY5Mjcy)
+📎 一阶Q7（`$(CC)` vs `$CC`）→ [https://v.flomoapp.com/mine/?memo\_id=MjUyMTY5Mjcy](https://v.flomoapp.com/mine/?memo_id=MjUyMTY5Mjcy)
 
 来源：https://v.flomoapp.com/mine/?memo_id=MjUyMTY5NDAy
 
@@ -310,7 +310,7 @@ $(CC) -c $< -o $@
 
 ## 第二阶：工程组织与调试（10题）
 
-### 2.1 二阶Q1：$(foreach var, list, text) 怎么用？list 元素含空格怎么不踩坑？
+### 2.1 二阶Q1：`$(foreach var, list, text)` 怎么用？list 元素含空格怎么不踩坑？
 
 **答案与解析（根据 Flomo 原始答案卡整理）**
 
@@ -318,15 +318,15 @@ $(CC) -c $< -o $@
 
 **基本用法**
 
-- $(foreach var, list, text)：对 list 里每个元素，把 var 设为该元素，展开 text，把所有结果用空格连起来
-- 例：$(foreach f, a.c b.c, $(f).o) → a.c.o b.c.o
+- `$(foreach var, list, text)`：对 list 里每个元素，把 var 设为该元素，展开 text，把所有结果用空格连起来
+- 例：`$(foreach f, a.c b.c, $(f).o)` → a.c.o b.c.o
 - 典型场景：批量生成变量、批量拼接路径、遍历子目录生成 -I 参数
 
 **list 元素含空格怎么踩坑**
 
 - list 的分隔符是空格，元素本身不能含空格——路径带空格的元素会被直接拆成两个
-- 解法：list 里存变量名，text 里用 $(var) 间接引用；或元素间用别的符号拼
-- 例：DIRS = dir1 dir2；$(foreach d, $(DIRS), $(wildcard $(d)/\*.c))
+- 解法：list 里存变量名，text 里用 `$(var)` 间接引用；或元素间用别的符号拼
+- 例：DIRS = dir1 dir2；`$(foreach d, $(DIRS), $(wildcard $(d)/*.c))`
 - 另一个坑：foreach 参数用逗号分隔，text 里再出现逗号容易把参数拆乱
 
 **一句话总结**：foreach 是 make 的循环展开器，list 靠空格分元素——路径别带空格，要绕就用变量间接引用。
@@ -338,7 +338,7 @@ $(CC) -c $< -o $@
 
 ---
 
-### 2.2 \* _Makefile 100问 · 二阶Q2：$(wildcard src/\*.c) 和 shell 的 .c 展开差在哪？
+### 2.2 * _Makefile 100问 · 二阶Q2：`$(wildcard src/*.c)` 和 shell 的 .c 展开差在哪？
 
 **答案与解析（根据 Flomo 原始答案卡整理）**
 
@@ -346,17 +346,17 @@ $(CC) -c $< -o $@
 
 **核心差异**
 
-- shell 的 \*.c：由 shell 在执行命令时展开，展开时机是命令执行那一刻
-- Makefile 里的 \*.c：make 不会自己展开——变量赋值、规则依赖里裸写 \*.c 就是字面量
-- $(wildcard ...)：make 的函数，在 make 读 Makefile 时就把文件列表定下来
+- shell 的 *.c：由 shell 在执行命令时展开，展开时机是命令执行那一刻
+- Makefile 里的 *.c：make 不会自己展开——变量赋值、规则依赖里裸写 *.c 就是字面量
+- `$(wildcard ...)`：make 的函数，在 make 读 Makefile 时就把文件列表定下来
 
 **为什么 Makefile 里不能用 shell 通配符直接列文件**
 
-- 规则依赖里的 \*.c 不是命令，不经过 shell，make 拿到的是字面 \*.c——匹配不到任何文件，目标永远「缺依赖」
-- 命令里的 \*.c 会由 shell 展开（比如 rm \*.o 能删），但依赖列表里不会
-- 所以列源文件必须 $(wildcard src/\*.c)；且它在读 Makefile 时就展开，新加文件要重新 make 才生效
+- 规则依赖里的 *.c 不是命令，不经过 shell，make 拿到的是字面 *.c——匹配不到任何文件，目标永远「缺依赖」
+- 命令里的 *.c 会由 shell 展开（比如 rm *.o 能删），但依赖列表里不会
+- 所以列源文件必须 `$(wildcard src/*.c)`；且它在读 Makefile 时就展开，新加文件要重新 make 才生效
 
-**一句话总结**：shell 通配符只在命令里生效，依赖和变量里要用 $(wildcard) 让 make 自己展开。
+**一句话总结**：shell 通配符只在命令里生效，依赖和变量里要用 `$(wildcard)` 让 make 自己展开。
 
 📎 题目（二阶）→ [https://v.flomoapp.com/mine/?memo\_id=MjUxMDI4NTg1](https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTg1)<br>
 📎 二阶Q1（foreach）→ [https://v.flomoapp.com/mine/?memo\_id=MjUyMjM0NjY2](https://v.flomoapp.com/mine/?memo_id=MjUyMjM0NjY2)
@@ -365,7 +365,7 @@ $(CC) -c $< -o $@
 
 ---
 
-### 2.3 二阶Q3：$(patsubst %.c,%.o,$(SRC)) 干嘛的？缩写 $(SRC:.c=.o) 和它什么关系？
+### 2.3 二阶Q3：`$(patsubst %.c,%.o,$(SRC))` 干嘛的？缩写 `$(SRC:.c=.o)` 和它什么关系？
 
 **答案与解析（根据 Flomo 原始答案卡整理）**
 
@@ -374,18 +374,18 @@ $(CC) -c $< -o $@
 **patsubst 干嘛的**
 
 - pattern substitute：按模式把字符串里匹配的部分替换
-- $(patsubst %.c,%.o,$(SRC))：把 SRC 里所有 .c 结尾的项改成 .o 结尾
-- 工程里最经典的用法：SRC 列 .c 源文件，OBJ = $(patsubst %.c,%.o,$(SRC)) 得到 .o 列表，驱动编译和链接
+- `$(patsubst %.c,%.o,$(SRC))`：把 SRC 里所有 .c 结尾的项改成 .o 结尾
+- 工程里最经典的用法：SRC 列 .c 源文件，OBJ = `$(patsubst %.c,%.o,$(SRC))` 得到 .o 列表，驱动编译和链接
 - 只替换匹配 % 模式的部分，不匹配的项原样保留
 
-**缩写 $(SRC:.c=.o) 和它什么关系**
+**缩写 `$(SRC:.c=.o)` 和它什么关系**
 
-- $(SRC:.c=.o) 是 patsubst 的简写：$(var:suffix=replacement)，只支持「后缀替换」这种简单情况
-- 等价于 $(patsubst %.c,%.o,$(SRC))——它自动补上了 % 通配
+- `$(SRC:.c=.o)` 是 patsubst 的简写：`$(var:suffix=replacement)`，只支持「后缀替换」这种简单情况
+- 等价于 `$(patsubst %.c,%.o,$(SRC))`——它自动补上了 % 通配
 - 注意：后缀替换必须从结尾匹配（.c 必须在末尾），中间替换还得用完整 patsubst
-- 另一个写法：$(SRC:%.c=%.o) 也是 patsubst 的简写形式（带 %）
+- 另一个写法：`$(SRC:%.c=%.o)` 也是 patsubst 的简写形式（带 %）
 
-**一句话总结**：patsubst 是批量替换引擎，$(SRC:.c=.o) 是只换后缀的快捷写法——两者同源，复杂替换用完整版。
+**一句话总结**：patsubst 是批量替换引擎，`$(SRC:.c=.o)` 是只换后缀的快捷写法——两者同源，复杂替换用完整版。
 
 📎 题目（二阶）→ [https://v.flomoapp.com/mine/?memo\_id=MjUxMDI4NTg1](https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTg1)<br>
 📎 二阶Q2（wildcard）→ [https://v.flomoapp.com/mine/?memo\_id=MjUyMjM0Njcw](https://v.flomoapp.com/mine/?memo_id=MjUyMjM0Njcw)
@@ -394,7 +394,7 @@ $(CC) -c $< -o $@
 
 ---
 
-### 2.4 二阶Q4：$(filter ...) 和 $(filter-out ...) 怎么用？什么场景要挑子集？
+### 2.4 二阶Q4：`$(filter ...)` 和 `$(filter-out ...)` 怎么用？什么场景要挑子集？
 
 **答案与解析（根据 Flomo 原始答案卡整理）**
 
@@ -402,16 +402,16 @@ $(CC) -c $< -o $@
 
 **基本用法**
 
-- $(filter pattern..., text)：从 text 里挑出匹配任一 pattern 的项
-- $(filter-out pattern..., text)：反过来，剔除匹配的项，留下其余
-- pattern 支持 % 通配：$(filter %.a %.so, $(LIBS)) 挑出所有静态/动态库
+- `$(filter pattern..., text)`：从 text 里挑出匹配任一 pattern 的项
+- `$(filter-out pattern..., text)`：反过来，剔除匹配的项，留下其余
+- pattern 支持 % 通配：`$(filter %.a %.so, $(LIBS))` 挑出所有静态/动态库
 
 **什么场景需要挑子集**
 
 - 从一堆源文件里分出不同编译选项：SRC 里挑出要特殊处理的（比如 boot.c）单独编
-- 链接时分开库：$(filter %.a, $(LIBS)) 传给链接器，$(filter-out %.a, $(LIBS)) 当普通依赖
-- 按目录挑文件：$(filter src/%, $(SRC)) 只处理 src 下的
-- 嵌入式典型：C 和汇编分开编译——$(filter %.c,$(SRC)) 走 gcc，$(filter %.s,$(SRC)) 走 as
+- 链接时分开库：`$(filter %.a, $(LIBS))` 传给链接器，`$(filter-out %.a, $(LIBS))` 当普通依赖
+- 按目录挑文件：`$(filter src/%, $(SRC))` 只处理 src 下的
+- 嵌入式典型：C 和汇编分开编译——`$(filter %.c,$(SRC))` 走 gcc，`$(filter %.s,$(SRC))` 走 as
 
 **一句话总结**：filter 是「要哪些」，filter-out 是「不要哪些」——把文件堆按模式切成子集，是工程里分派编译选项的基本功。
 
@@ -444,7 +444,7 @@ $(CC) -c $< -o $@
 **依赖文件找不到时怎么靠 vpath 找**
 
 - 依赖（prerequisite）找不到时，make 也会按 VPATH/vpath 去找：vpath %.h inc 后，头文件依赖能解析
-- 注意：vpath 只影响「查找」，不影响命令里 $< 的路径写法
+- 注意：vpath 只影响「查找」，不影响命令里 `$<` 的路径写法
 
 **一句话总结**：VPATH 管 make 找文件，-I 管编译器找头文件，两层独立；依赖缺失先查 VPATH，头文件缺失查 -I。
 
@@ -463,7 +463,7 @@ $(CC) -c $< -o $@
 
 **条件分支语法**
 
-- ifeq (a, b)：a 等于 b 为真；ifeq "$(VAR)" "yes" 带引号更稳（值里可能带空格）
+- ifeq (a, b)：a 等于 b 为真；ifeq "`$(VAR)`" "yes" 带引号更稳（值里可能带空格）
 - ifneq (a, b)：不等为真
 - ifdef VAR：变量「被定义过」为真（注意：定义成空也算定义，ifdef 看有无、不看值空不空）
 - ifndef VAR：没定义为真
@@ -471,9 +471,9 @@ $(CC) -c $< -o $@
 
 **Debug/Release 切 CFLAGS 用哪个**
 
-- 常用组合：ifeq "$(BUILD)" "debug"，比 ifdef DEBUG 更推荐——显式、可扩展
+- 常用组合：ifeq "`$(BUILD)`" "debug"，比 ifdef DEBUG 更推荐——显式、可扩展
 - 例：<br>
-  ifeq ($(BUILD),debug)<br>
+  ifeq (`$(BUILD)`,debug)<br>
   CFLAGS += -g -O0 -DDEBUG<br>
   else<br>
   CFLAGS += -O2<br>
@@ -481,7 +481,7 @@ $(CC) -c $< -o $@
 - 命令行 make BUILD=debug 即可切换；以后要加 test 类型也顺
 - ifdef 只适合「存在与否」这种二态判断
 
-**一句话总结**：ifeq 比较值、ifdef 判断有无；切 Debug/Release 用 ifeq "$(BUILD)" "debug"，显式且能扩到多种构建类型。
+**一句话总结**：ifeq 比较值、ifdef 判断有无；切 Debug/Release 用 ifeq "`$(BUILD)`" "debug"，显式且能扩到多种构建类型。
 
 📎 题目（二阶）→ [https://v.flomoapp.com/mine/?memo\_id=MjUxMDI4NTg1](https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTg1)<br>
 📎 二阶Q5（VPATH）→ [https://v.flomoapp.com/mine/?memo\_id=MjUyMjM2MzM5](https://v.flomoapp.com/mine/?memo_id=MjUyMjM2MzM5)
@@ -545,18 +545,18 @@ $(CC) -c $< -o $@
 
 ---
 
-### 2.9 二阶Q9：递归 make：$(MAKE) -C build 和 cd 进去跑差在哪？变量怎么传？-j 并行有什么坑？
+### 2.9 二阶Q9：递归 make：`$(MAKE)` -C build 和 cd 进去跑差在哪？变量怎么传？-j 并行有什么坑？
 
 **答案与解析（根据 Flomo 原始答案卡整理）**
 
 ▎ 五大学习法：西蒙学习法——把「子 make 的边界」钻透
 
-**$(MAKE) -C build 和直接 cd 进去跑差在哪**
+**`$(MAKE)` -C build 和直接 cd 进去跑差在哪**
 
-- $(MAKE) 会自动带上父 make 的命令行变量（-j、CFLAGS=...），cd 进去手动跑就丢了
-- $(MAKE) -C build：让子 make 在 build 目录工作，父进程能感知执行情况
+- `$(MAKE)` 会自动带上父 make 的命令行变量（-j、CFLAGS=...），cd 进去手动跑就丢了
+- `$(MAKE)` -C build：让子 make 在 build 目录工作，父进程能感知执行情况
 - 直接 cd 进去跑：丢掉父级上下文，也破坏「顶层一个命令构建整个工程」的体验
-- 关键：$(MAKE) 是变量不是命令名——写死 make 会在递归里丢掉参数
+- 关键：`$(MAKE)` 是变量不是命令名——写死 make 会在递归里丢掉参数
 
 **变量怎么传给子 make（export）**
 
@@ -567,12 +567,12 @@ $(CC) -c $< -o $@
 
 **-j 并行时递归 make 的经典坑**
 
-- 父 make 的 -j 不保证传给子 make（除非走 MAKEFLAGS 或 $(MAKE) 自动带）
+- 父 make 的 -j 不保证传给子 make（除非走 MAKEFLAGS 或 `$(MAKE)` 自动带）
 - 经典坑：外层 -j8、子 make 又 -j8，任务数翻倍资源爆炸；或子 make 单线程，并行失效
 - 另一坑：子 make 之间无依赖关系，-j 下同时跑，共享输出目录互踩
 - 现代解法：少用递归，用 include 把子目录规则合并成单一 make 实例
 
-**一句话总结**：递归 make 用 $(MAKE) -C 才能带上下文，变量靠 export 传，-j 并行会翻倍或失效——能合并成单实例就别递归。
+**一句话总结**：递归 make 用 `$(MAKE)` -C 才能带上下文，变量靠 export 传，-j 并行会翻倍或失效——能合并成单实例就别递归。
 
 📎 题目（二阶）→ [https://v.flomoapp.com/mine/?memo\_id=MjUxMDI4NTg1](https://v.flomoapp.com/mine/?memo_id=MjUxMDI4NTg1)<br>
 📎 二阶Q8（override）→ [https://v.flomoapp.com/mine/?memo\_id=MjUyMjQwMzI5](https://v.flomoapp.com/mine/?memo_id=MjUyMjQwMzI5)
@@ -860,16 +860,16 @@ $(CC) -c $< -o $@
 
 - 核心原则：源码目录只读，所有产物（.o/.d/.elf/.map/.hex）进 build 目录
 - 常见结构：build/（顶层）、build/cpu0/ build/cpu1/（多核分目录）、build/obj/ build/out/
-- 对应 .o 也落 build 下：OBJ = $(patsubst %.c,build/%.o,$(SRC))——源在 src/，产物镜像到 build/src/
+- 对应 .o 也落 build 下：OBJ = `$(patsubst %.c,build/%.o,$(SRC))`——源在 src/，产物镜像到 build/src/
 - 好处：clean 只动 build/；源码目录干净；多配置（Debug/Release）各建各的 build 目录
 
 **clean 怎么写才不会误删源码和生成代码**
 
 - 铁律：clean 只删 build/ 产物目录，绝不碰源码目录和生成代码目录（generate/ 或工具输出）
 - rm -rf build 是最稳的写法——前提是产物全在 build/ 里
-- 千万别写 rm -rf \*.o（在源码目录跑会误删）；也别把 generate/ 归进产物目录
+- 千万别写 rm -rf *.o（在源码目录跑会误删）；也别把 generate/ 归进产物目录
 - 生成代码的清理是另一回事：要「重新生成」就删 generate/ 下的生成物（或整个目录），但要分清这是「清生成」不是「清构建」
-- 保护写法：clean 前先确认路径存在（\[ -d build \] && rm -rf build）；用变量拼路径，别手写绝对路径
+- 保护写法：clean 前先确认路径存在（`[ -d build ] && rm -rf build`）；用变量拼路径，别手写绝对路径
 
 **一句话总结**：产物全进 build/，clean 只删 build/——源码目录和生成代码目录永远不在 clean 范围内，用变量拼路径防手滑。
 
@@ -934,11 +934,11 @@ $(CC) -c $< -o $@
 - -MMD：编译时顺带生成 .d 文件（不含系统头文件），内容是「目标.o: 所有依赖.h」的规则
 - -MF xxx.d：指定 .d 输出文件名（默认 .o 同名换 .d）
 - -MP：给每个头文件生成一个空目标（假目标），防止「头文件被删了 make 报错」
-- 组合：$(CC) -MMD -MF $\*.d -c $< -o $@
+- 组合：`$(CC)` -MMD -MF `$*`.d -c `$<` -o `$@`
 
 **Makefile 侧怎么接**
 
-- 把 .d 加进依赖：-include $(DEPS)（DEPS = $(OBJ:.o=.d)）
+- 把 .d 加进依赖：-include `$(DEPS)`（DEPS = `$(OBJ:.o=.d)`）
 - -include 容忍首次构建 .d 不存在（一阶Q9）
 - 首次构建：编 .o 同时生成 .d；下次 make：include 读入 .d，头文件改动触发对应 .o 重编
 - 注意：.d 要在 clean 时一起清，否则旧依赖残留

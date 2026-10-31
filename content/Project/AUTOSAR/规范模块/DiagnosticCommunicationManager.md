@@ -45,7 +45,7 @@ flowchart TD
 
 ## 核心要点
 
-- **协议层**：提供诊断协议的 OSI **5~7 层**。第 7 层提供大量 ISO 14229-1（UDS）服务，并支持法规要求的 OBD 服务（$01–$0A），可满足全球轻型车 OBD 法规（California OBDII、EOBD、Japan OBD 等）。第 5 层处理 ISO 15765-3 / ISO 15765-4 中与网络无关的部分。
+- **协议层**：提供诊断协议的 OSI **5~7 层**。第 7 层提供大量 ISO 14229-1（UDS）服务，并支持法规要求的 OBD 服务（`$01–$0A`），可满足全球轻型车 OBD 法规（California OBDII、EOBD、Japan OBD 等）。第 5 层处理 ISO 15765-3 / ISO 15765-4 中与网络无关的部分。
 - **网络无关**：Dcm 本身网络无关，CAN / LIN / FlexRay / MOST 等网络相关的功能在 Dcm 之外处理；由 [[PDURouter]] 提供网络无关接口，Dcm 从 PduR 接收诊断报文并内部处理。
 - **状态管理**：管理诊断会话（Session）与安全状态（Security），并据此判断某诊断服务能否在当前状态下执行。
 - **位置**：位于通信服务（Service Layer）。

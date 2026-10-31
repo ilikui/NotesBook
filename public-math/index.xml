@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>数字花园</title>
+      <link>https://wiki.likui.info</link>
+      <description>最近的10条笔记 on 数字花园</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>C语言1000问：位操作、内存分配、预处理器与AUTOSAR实战</title>
+    <link>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E4%BD%8D%E6%93%8D%E4%BD%9C%E9%A2%84%E5%A4%84%E7%90%86%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E4%B8%8EAUTOSAR</link>
+    <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E4%BD%8D%E6%93%8D%E4%BD%9C%E9%A2%84%E5%A4%84%E7%90%86%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E4%B8%8EAUTOSAR</guid>
+    <description><![CDATA[ C语言1000问：位操作、内存分配、预处理器与AUTOSAR实战 本篇迁移 C 语言系列第五批 10 张问答/专题卡，完成本轮检索到的 50 条 C 语言 1000 问相关笔记的逐题整理。包含寄存器位操作、位域、可变参数、I/O 缓冲、预处理器高级技巧、malloc/free、严格别名，以及嵌入式代码审查和 AUTOSAR BSW 实战。 41. ]]></description>
+    <pubDate>Sat, 31 Oct 2026 02:01:57 GMT</pubDate>
+  </item><item>
+    <title>车载通信1000问：总线基础、故障排查与ECU接口选型</title>
+    <link>https://wiki.likui.info/Area/EE/%E8%BD%A6%E8%BD%BD%E9%80%9A%E4%BF%A1/1000%E9%97%AE/%E6%80%BB%E7%BA%BF%E5%9F%BA%E7%A1%80%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E4%B8%8EECU%E6%8E%A5%E5%8F%A3%E9%80%89%E5%9E%8B</link>
+    <guid>https://wiki.likui.info/Area/EE/%E8%BD%A6%E8%BD%BD%E9%80%9A%E4%BF%A1/1000%E9%97%AE/%E6%80%BB%E7%BA%BF%E5%9F%BA%E7%A1%80%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E4%B8%8EECU%E6%8E%A5%E5%8F%A3%E9%80%89%E5%9E%8B</guid>
+    <description><![CDATA[ 车载通信1000问：总线基础、故障排查与ECU接口选型 本篇迁移通信协议系列第一至第四篇及 SPI 菊花链补充内容，整理 12 道问答，把同步/异步、全/半双工、串并行、主从模式与真实 ECU 排障连接起来。 39. ]]></description>
+    <pubDate>Sat, 31 Oct 2026 01:45:34 GMT</pubDate>
+  </item><item>
+    <title>车载通信1000问：LIN、SDIO、信号完整性与车载以太网</title>
+    <link>https://wiki.likui.info/Area/EE/%E8%BD%A6%E8%BD%BD%E9%80%9A%E4%BF%A1/1000%E9%97%AE/LIN_SDIO_%E4%BF%A1%E5%8F%B7%E5%AE%8C%E6%95%B4%E6%80%A7%E4%B8%8E%E8%BD%A6%E8%BD%BD%E4%BB%A5%E5%A4%AA%E7%BD%91</link>
+    <guid>https://wiki.likui.info/Area/EE/%E8%BD%A6%E8%BD%BD%E9%80%9A%E4%BF%A1/1000%E9%97%AE/LIN_SDIO_%E4%BF%A1%E5%8F%B7%E5%AE%8C%E6%95%B4%E6%80%A7%E4%B8%8E%E8%BD%A6%E8%BD%BD%E4%BB%A5%E5%A4%AA%E7%BD%91</guid>
+    <description><![CDATA[ 车载通信1000问：LIN、SDIO、信号完整性与车载以太网 本篇迁移通信协议系列第三批 12 道问答，并保留 Flomo 原始 15 项上车自检清单。重点覆盖 LIN、SDIO、信号完整性和车载以太网。具体电气参数、时序和诊断服务以对应协议版本、PHY/MCU 数据手册和 OEM 网络规范为准。 27. ]]></description>
+    <pubDate>Sat, 31 Oct 2026 01:44:59 GMT</pubDate>
+  </item><item>
+    <title>车载通信1000问：SPI Flash、I2C EEPROM、RS485、SENT与USB</title>
+    <link>https://wiki.likui.info/Area/EE/%E8%BD%A6%E8%BD%BD%E9%80%9A%E4%BF%A1/1000%E9%97%AE/SPIFlash_I2CEEPROM_RS485_SENT_USB</link>
+    <guid>https://wiki.likui.info/Area/EE/%E8%BD%A6%E8%BD%BD%E9%80%9A%E4%BF%A1/1000%E9%97%AE/SPIFlash_I2CEEPROM_RS485_SENT_USB</guid>
+    <description><![CDATA[ 车载通信1000问：SPI Flash、I2C EEPROM、RS485、SENT与USB 本篇迁移车载通信协议系列第二批 11 道问答，覆盖非易失存储、串行总线、差分通信、汽车传感器协议和 USB。具体时序、器件容量和电气参数必须以芯片数据手册与项目网络规范为准。 16. ]]></description>
+    <pubDate>Sat, 31 Oct 2026 01:44:26 GMT</pubDate>
+  </item><item>
+    <title>1000问知识体系</title>
+    <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
+    <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
+    <description><![CDATA[ 1000问知识体系 这里集中整理 Flomo 中长期积累的「1000问 / 1000题 / 10000问」问题库、逐题解答和专题卡片。目标不是只保存题目，而是把每个问题沉淀为可检索、可验证、可复用的知识单元。 迁移原则：保留问题原意；合并重复题但记录关联；答案给出原理、适用边界和验证方法；技术内容尽量附 Mermaid 图；未核验的结论明确标注待核验。Flomo 原笔记暂不删除。 知识迁移流程 flowchart TD A[Flomo 原始笔记] --&gt; B[检索与盘点] B --&gt; C[按主题归类] C --&gt; D[识别重复问题] D --&gt; E[读取完整原文] E ... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 01:43:53 GMT</pubDate>
+  </item><item>
+    <title>项目管理师1000问：十大知识域、项目治理与案例计算</title>
+    <link>https://wiki.likui.info/Project/%E8%80%83%E8%AF%95%E7%AE%A1%E7%90%86/%E8%BD%AF%E8%80%83%E9%AB%98%E7%BA%A71000%E9%97%AE/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%8D%81%E5%A4%A7%E7%9F%A5%E8%AF%86%E5%9F%9F%E4%B8%8E%E6%A1%88%E4%BE%8B%E8%AE%A1%E7%AE%97</link>
+    <guid>https://wiki.likui.info/Project/%E8%80%83%E8%AF%95%E7%AE%A1%E7%90%86/%E8%BD%AF%E8%80%83%E9%AB%98%E7%BA%A71000%E9%97%AE/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%8D%81%E5%A4%A7%E7%9F%A5%E8%AF%86%E5%9F%9F%E4%B8%8E%E6%A1%88%E4%BE%8B%E8%AE%A1%E7%AE%97</guid>
+    <description><![CDATA[ 项目管理师1000问：十大知识域、项目治理与案例计算 本篇迁移信息系统项目管理师题库第二批 25 道问答，覆盖信息化规划、整体/范围/进度/成本/质量、人力、沟通、风险、采购、干系人、法律合规和案例分析。项目管理术语按通用知识体系整理，具体考试版本与法规条款以当年官方材料为准。 一、信息化与项目启动 Q21. ]]></description>
+    <pubDate>Sat, 31 Oct 2026 01:43:29 GMT</pubDate>
+  </item><item>
+    <title>系统架构师1000问：体系结构、数据库、网络安全与设计</title>
+    <link>https://wiki.likui.info/Project/%E8%80%83%E8%AF%95%E7%AE%A1%E7%90%86/%E8%BD%AF%E8%80%83%E9%AB%98%E7%BA%A71000%E9%97%AE/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%B8%88%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BD%91%E7%BB%9C%E4%B8%8E%E8%AE%BE%E8%AE%A1</link>
+    <guid>https://wiki.likui.info/Project/%E8%80%83%E8%AF%95%E7%AE%A1%E7%90%86/%E8%BD%AF%E8%80%83%E9%AB%98%E7%BA%A71000%E9%97%AE/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%B8%88%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BD%91%E7%BB%9C%E4%B8%8E%E8%AE%BE%E8%AE%A1</guid>
+    <description><![CDATA[ 系统架构师1000问：体系结构、数据库、网络安全与设计 本篇迁移系统架构师题库第二批 27 道问答，覆盖计算机组成、存储管理、数据库、嵌入式、网络安全、软件架构、UML 和可靠性分析。考试术语应以当年大纲和指定教材版本为准，以下答案用于理解原理。 一、计算机组成与操作系统 Q35. ]]></description>
+    <pubDate>Sat, 31 Oct 2026 01:42:52 GMT</pubDate>
+  </item><item>
+    <title>软考高级1000问：系统架构师、项目管理师与真题解析</title>
+    <link>https://wiki.likui.info/Project/%E8%80%83%E8%AF%95%E7%AE%A1%E7%90%86/%E8%BD%AF%E8%80%83%E9%AB%98%E7%BA%A71000%E9%97%AE/%E7%9C%9F%E9%A2%98%E8%A7%A3%E6%9E%90%E8%AE%BA%E6%96%87%E4%B8%8E%E5%A4%87%E8%80%83%E7%AD%96%E7%95%A5</link>
+    <guid>https://wiki.likui.info/Project/%E8%80%83%E8%AF%95%E7%AE%A1%E7%90%86/%E8%BD%AF%E8%80%83%E9%AB%98%E7%BA%A71000%E9%97%AE/%E7%9C%9F%E9%A2%98%E8%A7%A3%E6%9E%90%E8%AE%BA%E6%96%87%E4%B8%8E%E5%A4%87%E8%80%83%E7%AD%96%E7%95%A5</guid>
+    <description><![CDATA[ 软考高级1000问：系统架构师、项目管理师与真题解析 本篇迁移软考相关的 10 道测试题、3 道实践专题和学习计划。考试科目、题型、分值和论文要求可能随年度政策调整，实际备考以当年官方考试说明为准。 一、系统架构师测试题 Q21. ]]></description>
+    <pubDate>Sat, 31 Oct 2026 01:42:02 GMT</pubDate>
+  </item><item>
+    <title>Education</title>
+    <link>https://wiki.likui.info/Resource/Education/</link>
+    <guid>https://wiki.likui.info/Resource/Education/</guid>
+    <description><![CDATA[ Education（教育） 汇集小学阶段的学习资料与知识脉络，以思维导图方式梳理各学科的知识点框架，便于家长辅导与孩子查漏补缺。 一句话定位 用一张思维导图看清一个年级、一门学科「到底要学什么」。 儿童教育 1000问 学习习惯语文与数学启蒙 —— 学习阶段、提问法、识字、阅读、写作与数感启蒙。 分科实战语文数学英语与理科 —— 语文、数学、英语、物理、化学和生物的分科学习方法。 年级转折与长期学习规划 —— 幼小衔接、小学到大学的关键转折、学习策略与家庭支持。 flowchart TD A[好奇与兴趣] --&gt; B[提问] B --&gt; C[阅读 / 观察 / 实验] C --&g... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 01:41:27 GMT</pubDate>
+  </item><item>
+    <title>儿童教育1000问：幼小衔接、年级转折与长期学习规划</title>
+    <link>https://wiki.likui.info/Resource/Education/1000%E9%97%AE/%E5%B9%B4%E7%BA%A7%E8%BD%AC%E6%8A%98%E4%B8%8E%E9%95%BF%E6%9C%9F%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92</link>
+    <guid>https://wiki.likui.info/Resource/Education/1000%E9%97%AE/%E5%B9%B4%E7%BA%A7%E8%BD%AC%E6%8A%98%E4%B8%8E%E9%95%BF%E6%9C%9F%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92</guid>
+    <description><![CDATA[ 儿童教育1000问：幼小衔接、年级转折与长期学习规划 本篇迁移儿童教育续篇第二部分，整理 20 道关于幼小衔接、小学转折、初高中适应、大学规划和家庭支持的问答。各地课程安排、考试政策和选科制度不同，具体规划应以当地政策和孩子实际情况为准。 一、幼小衔接 Q33. ]]></description>
+    <pubDate>Sat, 31 Oct 2026 01:41:16 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>

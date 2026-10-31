@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="zh"><head><title>电气工程10000问：传感器、电力系统、控制、电机与PLC</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="数字花园"/><meta property="og:title" content="电气工程10000问：传感器、电力系统、控制、电机与PLC"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="电气工程10000问：传感器、电力系统、控制、电机与PLC"/><meta name="twitter:description" content="电气工程10000问：传感器、电力系统、控制、电机与 PLC 本篇补充 Flomo 电气工程 10000 问中已经形成独立答案卡的 16 道题。覆盖传感器、电力系统、自动控制、电机拖动、电力电子与 PLC。公式和结论均需结合器件参数、控制对象、额定工况与标准版本；教学模型不等同于设备选型或安全设计依据。 逐题问答 1."/><meta property="og:description" content="电气工程10000问：传感器、电力系统、控制、电机与 PLC 本篇补充 Flomo 电气工程 10000 问中已经形成独立答案卡的 16 道题。覆盖传感器、电力系统、自动控制、电机拖动、电力电子与 PLC。公式和结论均需结合器件参数、控制对象、额定工况与标准版本；教学模型不等同于设备选型或安全设计依据。 逐题问答 1."/><meta property="og:image:alt" content="电气工程10000问：传感器、电力系统、控制、电机与 PLC 本篇补充 Flomo 电气工程 10000 问中已经形成独立答案卡的 16 道题。覆盖传感器、电力系统、自动控制、电机拖动、电力电子与 PLC。公式和结论均需结合器件参数、控制对象、额定工况与标准版本；教学模型不等同于设备选型或安全设计依据。 逐题问答 1."/><meta property="og:image" content="https://wiki.likui.info/static/og-image.png"/><meta property="og:image:url" content="https://wiki.likui.info/static/og-image.png"/><meta name="twitter:image" content="https://wiki.likui.info/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="wiki.likui.info"/><meta property="og:url" content="https://wiki.likui.info/Area/EE/电气工程/10000问/传感器电力系统控制电机与PLC"/><meta property="twitter:url" content="https://wiki.likui.info/Area/EE/电气工程/10000问/传感器电力系统控制电机与PLC"/><link rel="icon" href="../../../../static/icon.png"/><meta name="description" content="电气工程10000问：传感器、电力系统、控制、电机与 PLC 本篇补充 Flomo 电气工程 10000 问中已经形成独立答案卡的 16 道题。覆盖传感器、电力系统、自动控制、电机拖动、电力电子与 PLC。公式和结论均需结合器件参数、控制对象、额定工况与标准版本；教学模型不等同于设备选型或安全设计依据。 逐题问答 1."/><meta name="generator" content="Quartz"/><link href="../../../../index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  padding: 2rem;
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiRTpcXFdva2tTcGFjZXNcXE5vdGVzQm9va1xccXVhcnR6XFxjb21wb25lbnRzXFxzdHlsZXMiLCJzb3VyY2VzIjpbIm1lcm1haWQuaW5saW5lLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUdGO0VBQ0U7OztBQUtGO0VBQ0U7RUFDQTs7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcGFkZGluZzogMnJlbTtcbiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgIHRyYW5zZm9ybS1vcmlnaW46IDAgMDtcbiAgICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjFzIGVhc2U7XG4gICAgICBvdmVyZmxvdzogdmlzaWJsZTtcbiAgICAgIG1pbi1oZWlnaHQ6IDIwMHB4O1xuICAgICAgbWluLXdpZHRoOiAyMDBweDtcblxuICAgICAgcHJlIHtcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICB9XG5cbiAgICAgIHN2ZyB7XG4gICAgICAgIG1heC13aWR0aDogbm9uZTtcbiAgICAgICAgaGVpZ2h0OiBhdXRvO1xuICAgICAgfVxuICAgIH1cblxuICAgICYgPiAubWVybWFpZC1jb250cm9scyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBib3R0b206IDIwcHg7XG4gICAgICByaWdodDogMjBweDtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBnYXA6IDhweDtcbiAgICAgIHBhZGRpbmc6IDhweDtcbiAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICBib3JkZXItcmFkaXVzOiA2cHg7XG4gICAgICBib3gtc2hhZG93OiAwIDJweCA0cHggcmdiYSgwLCAwLCAwLCAwLjEpO1xuICAgICAgei1pbmRleDogMjtcblxuICAgICAgLm1lcm1haWQtY29udHJvbC1idXR0b24ge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgd2lkdGg6IDMycHg7XG4gICAgICAgIGhlaWdodDogMzJweDtcbiAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgICBjb2xvcjogdmFyKC0tZGFyayk7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtZmFtaWx5OiB2YXIoLS1ib2R5Rm9udCk7XG4gICAgICAgIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XG5cbiAgICAgICAgJjpob3ZlciB7XG4gICAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgfVxuXG4gICAgICAgICY6YWN0aXZlIHtcbiAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMXB4KTtcbiAgICAgICAgfVxuXG4gICAgICAgIC8vIFN0eWxlIHRoZSByZXNldCBidXR0b24gZGlmZmVyZW50bHlcbiAgICAgICAgJjpudGgtY2hpbGQoMikge1xuICAgICAgICAgIHdpZHRoOiBhdXRvO1xuICAgICAgICAgIHBhZGRpbmc6IDAgMTJweDtcbiAgICAgICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cbiJdfQ== */</style><link href="/static/katex/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../../../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../../../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://wiki.likui.info/index.xml"/></head><body data-slug="Area/EE/电气工程/10000问/传感器电力系统控制电机与PLC"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../../..">数字花园</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><p>搜索</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索些什么" placeholder="搜索些什么"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-182"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>PARA</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-182" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text explorer-entry-icon" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg><span class="file-title"></span></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder-closed explorer-entry-icon" aria-hidden="true"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path><path d="M2 10h20"></path></svg><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../Area/">Area</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../Area/EE/">EE</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../Area/EE/电气工程/">电气工程</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../Area/EE/电气工程/10000问/">10000问</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>电气工程10000问：传感器、电力系统、控制、电机与PLC</a></div></nav><h1 class="article-title">电气工程10000问：传感器、电力系统、控制、电机与PLC</h1><p show-comma="true" class="content-meta"><time datetime="2026-10-31T01:35:09.000Z">2026年10月31日</time><span>47分钟阅读</span></p><ul class="tags"><li><a href="../../../../tags/电气工程" class="internal tag-link">电气工程</a></li><li><a href="../../../../tags/10000问" class="internal tag-link">10000问</a></li><li><a href="../../../../tags/自动控制" class="internal tag-link">自动控制</a></li><li><a href="../../../../tags/电机" class="internal tag-link">电机</a></li><li><a href="../../../../tags/PLC" class="internal tag-link">PLC</a></li></ul></div></div><article class="popover-hint"><h1 id="电气工程10000问传感器电力系统控制电机与-plc">电气工程10000问：传感器、电力系统、控制、电机与 PLC<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#电气工程10000问传感器电力系统控制电机与-plc" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>本篇补充 Flomo 电气工程 10000 问中已经形成独立答案卡的 16 道题。覆盖传感器、电力系统、自动控制、电机拖动、电力电子与 PLC。公式和结论均需结合器件参数、控制对象、额定工况与标准版本；教学模型不等同于设备选型或安全设计依据。</p>
+<h2 id="逐题问答">逐题问答<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#逐题问答" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="1-传感器q1电阻式电容式电感式传感器各适合测什么为什么工业现场测温最多的是热电偶和-pt100">1. 传感器Q1：电阻式、电容式、电感式传感器各适合测什么？为什么工业现场测温最多的是热电偶和 PT100？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-传感器q1电阻式电容式电感式传感器各适合测什么为什么工业现场测温最多的是热电偶和-pt100" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（Flomo 原始答案卡）</strong></p>
+<p>▎ 五大学习法：费曼学习法——把「三种传感原理」和「两种测温王者」讲成人话</p>
+<p><strong>三种原理各适合测什么</strong></p>
+<ul>
+<li>电阻式：被测物理量 → 电阻变化
+<ul>
+<li>应变片（形变→电阻）、热电阻 PT100（温度→电阻）、电位器（位移→电阻）</li>
+<li>适合：应变/力/温度/位移——变化缓慢、精度要求高的量</li>
+</ul>
+</li>
+<li>电容式：被测物理量 → 电容变化
+<ul>
+<li>极板间距/面积/介电常数变化——位移、液位、压力、接近检测</li>
+<li>适合：微位移、液位、非接触测量（高分辨率但怕湿度/寄生电容）</li>
+</ul>
+</li>
+<li>电感式：被测物理量 → 电感/互感变化
+<ul>
+<li>线圈与铁芯距离变化、涡流效应——位移、压力、金属接近检测</li>
+<li>适合：金属目标检测（接近开关）、大位移、恶劣环境（不怕油污灰尘）</li>
+</ul>
+</li>
+</ul>
+<p><strong>为什么工业测温最多的是热电偶和 PT100</strong></p>
+<ul>
+<li>热电偶（K 型等）：原理 = 塞贝克效应（两种不同金属结点温差 → 热电动势）
+<ul>
+<li>优点：测温范围宽（K 型 -200~1300℃）、响应快、探头小、便宜</li>
+<li>缺点：精度一般（±2℃ 级）、需要冷端补偿、输出非线性（mV 级小信号）</li>
+</ul>
+</li>
+<li>PT100（铂热电阻）：原理 = 铂电阻随温度变化（0℃ 时 100Ω）
+<ul>
+<li>优点：精度高（±0.1~0.5℃）、线性好、稳定</li>
+<li>缺点：范围窄（-200~850℃）、响应慢、贵</li>
+</ul>
+</li>
+<li>为什么是这俩：范围互补（热电偶管高温宽范围、PT100 管中低温高精度）+ 成熟可靠 + 标准化（分度表统一）+ 信号好处理（都能进变送器转 4-20mA）</li>
+<li>半导体温度传感器（DS18B20 / NTC）精度和范围都不如它们，工业主流还是热电偶 + 热电阻</li>
+</ul>
+<p><strong>一句话总结</strong>：电阻式靠电阻变化（应变/温度/位移）、电容式靠极板变化（液位/微位移/压力）、电感式靠磁路变化（金属接近/大位移）；工业测温两大王——热电偶管宽范围高温（K 型 -200~1300℃）、PT100 管高精度中低温，互补覆盖 + 标准化 + 信号好处理，所以最普及。</p>
+<p>📎 题目（10000问）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 PLC工控Q1（工业现场信号处理——4-20mA 的下游）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUzMTQyNzc1" class="external">https://v.flomoapp.com/mine/?memo_id=MjUzMTQyNzc1<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUzMzkwMzE4" class="external">https://v.flomoapp.com/mine/?memo_id=MjUzMzkwMzE4<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="2-传感器q2测量系统的静态动态特性是什么精度05fs的-fs-是什么意思量程选大选小对误差有什么影响">2. 传感器Q2：测量系统的静态/动态特性是什么？「精度±0.5%FS」的 FS 是什么意思？量程选大选小对误差有什么影响？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-传感器q2测量系统的静态动态特性是什么精度05fs的-fs-是什么意思量程选大选小对误差有什么影响" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（Flomo 原始答案卡）</strong></p>
+<p>▎ 五大学习法：西蒙学习法——把「FS 与量程选择」这个工程细节钻透</p>
+<p><strong>静态特性 vs 动态特性</strong></p>
+<ul>
+<li>静态特性：输入恒定/缓慢变化时，输出与输入的关系——精度、线性度、迟滞、重复性、灵敏度、漂移</li>
+<li>动态特性：输入快速变化时，输出跟随输入的能力——时间常数、响应时间、带宽、超调</li>
+<li>例：温度传感器静态特性好（稳态读数准）但动态差（升温要几十秒才跟上）——两者是独立指标</li>
+</ul>
+<p><strong>「±0.5%FS」是什么意思</strong></p>
+<ul>
+<li>FS = Full Scale，满量程——误差 = 0.5% × 量程上限（不是 × 当前读数）</li>
+<li>例：量程 0-100℃，±0.5%FS = ±0.5℃ 误差（无论测 10℃ 还是 90℃，误差都按满量程算）</li>
+<li>注意：%FS 和 %读数（%RD）不同——%RD 是读数的 0.5%，读数小时误差更小；%FS 在小读数时相对误差更大</li>
+</ul>
+<p><strong>量程选大选小对实际测量误差的影响</strong></p>
+<ul>
+<li>误差绝对值固定（FS 定）：量程越大，同样的 ±0.5%FS 误差绝对值越大
+<ul>
+<li>0-100℃ 量程：±0.5℃；0-1000℃ 量程：±5℃——测同一个 500℃ 温度，前者误差 ±0.5℃、后者 ±5℃</li>
+</ul>
+</li>
+<li>量程选太大：绝对误差大、小信号段分辨率差（浪费精度）</li>
+<li>量程选太小：超过量程就饱和/损坏——必须覆盖最大可能测量值还要留余量</li>
+<li>工程原则：量程选「覆盖最大值 + 20-30% 余量」——既不浪费精度又不冒饱和风险</li>
+<li>关联概念：分辨率（最小可分辨变化）也随量程变化——量程大、每 bit 代表的物理量大，分辨率差</li>
+</ul>
+<p><strong>一句话总结</strong>：静态特性管稳态读数（精度/线性/迟滞）、动态特性管跟随速度（时间常数/带宽），两个独立指标；±0.5%FS 的误差按满量程算（不是按读数）——量程选大误差绝对值变大、选小怕饱和，所以按「最大值 + 20-30% 余量」选量程最合理。</p>
+<p>📎 题目（10000问）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 传感器Q1（三种传感器原理）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUzMzkwMzE4" class="external">https://v.flomoapp.com/mine/?memo_id=MjUzMzkwMzE4<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUzMzkwMzI5" class="external">https://v.flomoapp.com/mine/?memo_id=MjUzMzkwMzI5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="3-电力系统q1电力系统为什么要用标幺值计算跟实际值算差别在哪">3. 电力系统Q1：电力系统为什么要用「标幺值」计算？跟实际值算差别在哪？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-电力系统q1电力系统为什么要用标幺值计算跟实际值算差别在哪" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（Flomo 原始答案卡）</strong></p>
+<p>▎ 五大学习法：西蒙学习法——把「标幺值」这个工程惯例钻透</p>
+<p><strong>标幺值是什么</strong></p>
+<ul>
+<li>标幺值 = 实际值 / 基准值（pu = actual/base）——把物理量变成无量纲的倍数</li>
+<li>例：基准电压选 10kV，实际 9.5kV → 0.95pu</li>
+<li>需要选基准：基准功率（通常 100MVA）、基准电压（各级电压等级）、基准阻抗 = 基准电压²/基准功率</li>
+</ul>
+<p><strong>为什么要用标幺值</strong></p>
+<ol>
+<li>消除电压等级差异：220kV、110kV、35kV、10kV 不同等级的电压，实际值没法直接比——标幺值后 1.0pu 就是额定水平，跨等级一目了然</li>
+<li>变压器自动归一：变压器的变比在标幺值下接近 1:1——不同变比的变压器可以近似合并，不用逐个折算（选对基准电压按变比递推）</li>
+<li>计算简化：功率、电压、电流、阻抗的关系在标幺值下公式干净（S = V·I、V = I·Z 不再带 √3、1000 等系数）</li>
+<li>数值稳定：实际值可能跨几个数量级（500kV 和 0.1Ω），标幺值都在 0.01~10 之间——计算机数值计算更稳</li>
+</ol>
+<p><strong>跟实际值算差别在哪</strong></p>
+<ul>
+<li>实际值算：每台变压器都要按变比折算到统一等级，公式带系数，容易错、容易数值溢出</li>
+<li>标幺值算：全系统一个基准，变压器近乎 1:1，公式简洁，结果直观（0.95pu 就是 95% 额定）</li>
+<li>注意：标幺值是线性缩放，不改变物理本质——只是换个单位系</li>
+</ul>
+<p><strong>一句话总结</strong>：标幺值 = 实际值/基准值，把不同电压等级、不同容量设备统一到「1.0 = 额定」的刻度上——变压器近乎 1:1、公式无系数、数值稳定、跨等级可比，是电力系统计算的标准语言。</p>
+<p>📎 题目（10000问）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 电力电子Q3（Buck/Boost——占空比也是标幺思想）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUzMTQyMDIy" class="external">https://v.flomoapp.com/mine/?memo_id=MjUzMTQyMDIy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUzMTQyNjA4" class="external">https://v.flomoapp.com/mine/?memo_id=MjUzMTQyNjA4<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="4-电力系统q2潮流计算在算什么节点有-pqvθ-四个量一般给定哪两个求解哪两个">4. 电力系统Q2：潮流计算在算什么？节点有 P、Q、V、θ 四个量，一般给定哪两个、求解哪两个？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4-电力系统q2潮流计算在算什么节点有-pqvθ-四个量一般给定哪两个求解哪两个" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（Flomo 原始答案卡）</strong></p>
+<p>▎ 五大学习法：费曼学习法——把「潮流计算」讲成「全网同时满足 KCL 的分配问题」</p>
+<p><strong>潮流计算在算什么</strong></p>
+<ul>
+<li>给定电网拓扑、线路参数、各节点发电和负荷——求全网各节点的电压幅值 V、相角 θ、以及各支路功率</li>
+<li>本质：求解一组非线性方程组（每节点功率平衡：注入 = 流出），让全网同时满足 KCL 和元件特性</li>
+<li>用途：规划（电网扩建行不行）、运行（过载/电压越限检查）、调度（经济调度的基础）</li>
+</ul>
+<p><strong>节点的四个量 P、Q、V、θ</strong></p>
+<ul>
+<li>每个节点有 4 个电气量：有功 P、无功 Q、电压幅值 V、电压相角 θ</li>
+<li>潮流方程给 2 个方程（有功平衡 + 无功平衡），所以每个节点要给定 2 个量、求解 2 个量</li>
+</ul>
+<p><strong>节点分类（给哪两个、求哪两个）</strong></p>
+<ol>
+<li>PQ 节点（负荷节点）：给定 P、Q，求 V、θ——最常见（负荷已知，电压待求）</li>
+<li>PV 节点（发电机节点）：给定 P、V，求 Q、θ——发电机有功和机端电压可控，无功待定</li>
+<li>平衡节点（Vθ / Slack 节点）：给定 V、θ（通常 1.0∠0°），求 P、Q——全网只有一个，吸收不平衡功率（填补全网有功缺额）、提供相角参考</li>
+</ol>
+<p><strong>一句话总结</strong>：潮流计算 = 求全网电压分布和功率分布的非线性方程组求解；每个节点 4 个量给 2 求 2——PQ 节点给功率求电压（负荷）、PV 节点给有功和电压求无功（发电机）、平衡节点给电压和相角吸收差额（全网参考）——三个角色配合，全网才闭合。</p>
+<p>📎 题目（10000问）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 电力系统Q1（标幺值）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUzMTQyNjA4" class="external">https://v.flomoapp.com/mine/?memo_id=MjUzMTQyNjA4<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUzMTQyNjE0" class="external">https://v.flomoapp.com/mine/?memo_id=MjUzMTQyNjE0<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="5-电力系统q3什么叫短路三相两相单相接地短路哪种最严重哪种最常发生">5. 电力系统Q3：什么叫短路？三相、两相、单相接地短路——哪种最严重、哪种最常发生？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#5-电力系统q3什么叫短路三相两相单相接地短路哪种最严重哪种最常发生" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（Flomo 原始答案卡）</strong></p>
+<p>▎ 五大学习法：西蒙学习法——把「短路类型」讲清</p>
+<p><strong>什么叫短路</strong></p>
+<ul>
+<li>不同电位的导体（相与相、相与地）之间出现低阻抗路径——电流不再走正常负荷回路</li>
+<li>后果：电流急剧增大（故障电流可达额定电流的几倍到几十倍）、电压骤降、设备发热烧毁</li>
+<li>短路是电力系统最常见、最危险的故障</li>
+</ul>
+<p><strong>三种短路的严重程度和发生频率</strong></p>
+<ul>
+<li>三相短路：最严重——对称故障，短路电流最大（三相对称，无零序），对系统冲击最大
+<ul>
+<li>但发生概率最低（需要三相同时出问题）</li>
+</ul>
+</li>
+<li>两相短路：电流介于中间——不对称故障，有负序分量</li>
+<li>单相接地短路：最常发生（占 80% 以上）——多数电网故障都是单相接地
+<ul>
+<li>电流大小取决于中性点接地方式：直接接地系统单相短路电流大（可超过三相短路），不接地/消弧线圈系统接地电流很小（是接地故障不是大电流短路）</li>
+</ul>
+</li>
+</ul>
+<p><strong>为什么严重程度和发生频率错位</strong></p>
+<ul>
+<li>最严重的三相短路最罕见；最常见的单相接地反而常常不是最致命的</li>
+<li>工程上：短路电流计算、设备选型按最大短路电流校核（通常看三相或单相最大者）；保护配置按最常发生的故障设计（单相接地要专门检测）</li>
+<li>统计规律：单相接地约 80%、两相短路约 10-15%、三相短路约 5%——设计时两者都要管：按最严重校核设备、按最常见配置保护</li>
+</ul>
+<p><strong>一句话总结</strong>：短路是相间/相地低阻抗路径导致的大电流故障；三相短路电流最大最严重但最罕见（约 5%），单相接地最常发生（约 80%）——设备按最严重校核（三相），保护按最常见设计（单相接地专门检测）。</p>
+<p>📎 题目（10000问）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 电力系统Q2（潮流计算——短路是潮流分析的边界情形）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUzMTQyNjE0" class="external">https://v.flomoapp.com/mine/?memo_id=MjUzMTQyNjE0<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUzMTQyNjM2" class="external">https://v.flomoapp.com/mine/?memo_id=MjUzMTQyNjM2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="6-自动控制q1开环控制和闭环控制的本质区别是什么为什么说反馈是自动控制的基石">6. 自动控制Q1：开环控制和闭环控制的本质区别是什么？为什么说反馈是自动控制的基石？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#6-自动控制q1开环控制和闭环控制的本质区别是什么为什么说反馈是自动控制的基石" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（Flomo 原始答案卡）</strong></p>
+<p>▎ 五大学习法：费曼学习法——把「开环 vs 闭环」讲成「喊话 vs 对话」</p>
+<p><strong>开环控制</strong></p>
+<ul>
+<li>控制指令单向流动：输入 → 控制器 → 被控对象 → 输出；输出不回来影响输入</li>
+<li>特点：简单、便宜、没有稳定性问题；但输出受扰动影响，无法纠正</li>
+<li>例：定时洗衣机（按时间表转，不管衣服洗没洗净）、老式风扇档位、步进电机开环定位</li>
+</ul>
+<p><strong>闭环控制（反馈控制）</strong></p>
+<ul>
+<li>多了反馈通道：输出被测量 → 与目标值比较 → 得到误差 → 控制器按误差修正</li>
+<li>特点：能抵抗扰动、能跟踪目标变化；但引入了稳定性问题（反馈过强会振荡）</li>
+<li>例：空调恒温（温度反馈）、伺服电机（编码器反馈）、巡航定速、家用稳压器</li>
+</ul>
+<p><strong>为什么说反馈是自动控制的基石</strong></p>
+<ul>
+<li>反馈把「我做得怎么样」告诉系统，系统才能自我修正——没有反馈就没有自动调节，只有自动执行</li>
+<li>反馈的本质：用误差驱动控制——目标与实际的差就是控制信号来源</li>
+<li>几乎所有现代控制（PID、状态空间、自适应、鲁棒控制）都是反馈框架的变体</li>
+<li>经典比喻：开环是蒙眼开车（方向盘固定转多少算多少），闭环是看着路开（不断对比偏差修正）</li>
+</ul>
+<p><strong>一句话总结</strong>：开环是单向执行（不回头看结果），闭环是误差驱动（测量输出、对比目标、修正输入）——反馈给了系统自我修正的能力，是所有自动控制方法的共同地基。</p>
+<p>📎 题目（10000问）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 模拟电子Q4（反相放大器——负反馈的实例）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyOTU0NTcw" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyOTU0NTcw<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyOTU0ODE0" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyOTU0ODE0<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="7-自动控制q2传递函数是什么为什么控制工程师喜欢用拉普拉斯变换把微分方程变成代数方程">7. 自动控制Q2：传递函数是什么？为什么控制工程师喜欢用拉普拉斯变换把微分方程变成代数方程？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#7-自动控制q2传递函数是什么为什么控制工程师喜欢用拉普拉斯变换把微分方程变成代数方程" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（Flomo 原始答案卡）</strong></p>
+<p>▎ 五大学习法：西蒙学习法——把「拉氏变换的动机」钻透</p>
+<p><strong>传递函数是什么</strong></p>
+<ul>
+<li>在零初始条件下，系统输出的拉氏变换 / 输入的拉氏变换：G(s) = Y(s)/U(s)</li>
+<li>它把系统的微分方程打包成一个关于复变量 s 的代数表达式——系统的全部动态特性都在里面</li>
+<li>例：一阶惯性系统 G(s) = K/(Ts+1)——T 是时间常数、K 是增益</li>
+</ul>
+<p><strong>为什么用拉普拉斯变换</strong></p>
+<ul>
+<li>微分方程 → 代数方程：拉氏变换把求导变成乘 s、积分变成除 s——解方程从解微分方程变成解多项式/代数方程</li>
+<li>卷积变乘法：时域的卷积（难算）变成 s 域的乘法（好算）——串联系统的传递函数直接相乘</li>
+<li>直观的频域视角：s = σ + jω，令 s = jω 就得到频率响应——波特图、稳定性分析都能做</li>
+<li>系统联结简单化：串联相乘、并联相加、反馈用 G/(1+GH) 公式——整个控制框图都是代数运算</li>
+</ul>
+<p><strong>工程师怎么用</strong></p>
+<ul>
+<li>建模：物理定律写微分方程 → 拉氏变换 → 传递函数</li>
+<li>分析：从 G(s) 的零极点看系统动态特性（极点决定暂态、零点影响形状）</li>
+<li>设计：加控制器 C(s) 改变闭环传递函数——极点搬到想要的位置</li>
+<li>本质：拉氏变换是「把时间域问题搬到复数域，算完再搬回来」——工具性的变换，和傅里叶是同一家族</li>
+</ul>
+<p><strong>一句话总结</strong>：传递函数是系统微分方程的 s 域打包形式；拉氏变换把求导变乘 s、卷积变乘法——解微分方程变成算代数式，系统串联反馈都能简单表达，这是控制工程师的分析语言。</p>
+<p>📎 题目（10000问）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 自动控制Q1（开环闭环）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyOTU0ODE0" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyOTU0ODE0<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUyOTU0ODI2" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyOTU0ODI2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="8-自动控制q3pid-控制器为什么应用这么广pid-三个分量各自的作用是什么">8. 自动控制Q3：PID 控制器为什么应用这么广？P、I、D 三个分量各自的作用是什么？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#8-自动控制q3pid-控制器为什么应用这么广pid-三个分量各自的作用是什么" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（Flomo 原始答案卡）</strong></p>
+<p>▎ 五大学习法：费曼学习法——把「PID」讲成「现在、过去、未来」三个视角</p>
+<p><strong>PID 是什么</strong></p>
+<ul>
+<li>控制器输出 = Kp·误差 + Ki·∫误差dt + Kd·d(误差)/dt——三个分量按不同方式利用误差</li>
+<li>只需要测量一个量（被控量），不需要被控对象的精确模型——这是它应用广的根本原因</li>
+</ul>
+<p><strong>P（比例）：看现在</strong></p>
+<ul>
+<li>输出正比于当前误差：误差大、出力大</li>
+<li>作用：快速响应、减小误差；但单独用有稳态误差（系统要留一点误差才有出力）</li>
+<li>调大 Kp：响应快但容易振荡；调小：稳但慢</li>
+</ul>
+<p><strong>I（积分）：看过去</strong></p>
+<ul>
+<li>输出正比于误差的累积：只要历史上有误差就一直加力</li>
+<li>作用：消除稳态误差——把 P 留下的那点残差慢慢磨掉</li>
+<li>风险：积分饱和（windup）——误差一直大导致积分爆表，超调变严重；要限幅/抗饱和</li>
+</ul>
+<p><strong>D（微分）：看未来</strong></p>
+<ul>
+<li>输出正比于误差的变化率：误差在快速变大时提前刹车/加速</li>
+<li>作用：预测趋势、抑制超调、增加阻尼，让系统更稳</li>
+<li>风险：对噪声敏感——测量噪声的微分很大，会放大抖动；要滤波</li>
+</ul>
+<p><strong>为什么应用这么广</strong></p>
+<ul>
+<li>无需模型：三个系数调好就能用，老师傅靠经验就能整定</li>
+<li>鲁棒：对象特性变化一点（负载变了），PID 还能工作</li>
+<li>实现简单：一个公式，模拟电路或单片机几行代码</li>
+<li>覆盖大多数线性+部分非线性过程的控制需求——占工业控制回路 90% 以上</li>
+</ul>
+<p><strong>一句话总结</strong>：P 看现在（快速响应、留稳态误差）、I 看过去（累积误差、消除残差、防饱和）、D 看未来（预测趋势、抑制超调、防噪声）——三个视角互补，且不需要对象模型，所以 90% 的工业回路都是 PID。</p>
+<p>📎 题目（10000问）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 自动控制Q2（传递函数）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyOTU0ODI2" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyOTU0ODI2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUzMTM5ODc5" class="external">https://v.flomoapp.com/mine/?memo_id=MjUzMTM5ODc5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="9-自动控制q4系统的稳定性是什么意思一个不稳定的系统长什么样">9. 自动控制Q4：系统的「稳定性」是什么意思？一个不稳定的系统长什么样？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#9-自动控制q4系统的稳定性是什么意思一个不稳定的系统长什么样" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（Flomo 原始答案卡）</strong></p>
+<p>▎ 五大学习法：费曼学习法——把「稳定性」讲成「扰动之后回不回来」</p>
+<p><strong>稳定性是什么</strong></p>
+<ul>
+<li>定义（李雅普诺夫意义）：系统在扰动消失后，能否回到原来的平衡状态</li>
+<li>通俗：推它一下，它自己回得来 = 稳定；越推越远/越荡越大 = 不稳定</li>
+<li>数学判据：系统极点（传递函数分母的根）是否都在 s 平面左半平面——全部在左半 = 稳定</li>
+</ul>
+<p><strong>一个不稳定的系统长什么样</strong></p>
+<ul>
+<li>例 1：倒立摆——不推它都倒（开环不稳定）；杆子初始倾斜一点，会越倒越快（发散）</li>
+<li>例 2：飞机俯仰——设计不好的飞控，机头一抬，越来越抬直到翻过来（发散振荡）</li>
+<li>例 3：温控系统——比例增益调太大，温度来回振荡、幅度越来越大（极限环→不稳定）</li>
+<li>例 4：电网——发电机励磁调节不当，功率角振荡发散 → 失步（低频振荡发散）</li>
+</ul>
+<p><strong>为什么不稳定危险</strong></p>
+<ul>
+<li>发散 = 物理量无限增大/剧烈振荡 → 机械损坏、安全事故、系统崩溃</li>
+<li>稳定的系统允许微小的振荡（衰减振荡），只要幅度随时间减小就是稳定</li>
+</ul>
+<p><strong>稳定性的类型</strong></p>
+<ul>
+<li>稳定（渐近稳定）：扰动后回到原平衡点（衰减振荡归零）</li>
+<li>临界稳定：等幅振荡不衰减（极点在虚轴上）——边界情况，工程上算不稳定</li>
+<li>不稳定：发散（极点在右半平面）</li>
+</ul>
+<p><strong>一句话总结</strong>：稳定性 = 扰动后能不能自己回到平衡——回得来稳定、等幅振荡临界、越荡越大不稳定；判据是闭环极点是否全在 s 左半平面；倒立摆、失控的温控、失步的发电机都是不稳定的例子。</p>
+<p>📎 题目（10000问）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 自动控制Q3（PID）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUzMTM5ODc5" class="external">https://v.flomoapp.com/mine/?memo_id=MjUzMTM5ODc5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUzMTM5ODg0" class="external">https://v.flomoapp.com/mine/?memo_id=MjUzMTM5ODg0<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="10-自动控制q5根轨迹法怎么判断系统稳定性为什么闭环极点在-s-左半平面就是稳定的">10. 自动控制Q5：根轨迹法怎么判断系统稳定性？为什么闭环极点在 s 左半平面就是稳定的？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#10-自动控制q5根轨迹法怎么判断系统稳定性为什么闭环极点在-s-左半平面就是稳定的" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（Flomo 原始答案卡）</strong></p>
+<p>▎ 五大学习法：西蒙学习法——把「根轨迹」这个可视化工具钻透</p>
+<p><strong>根轨迹是什么</strong></p>
+<ul>
+<li>根轨迹（Root Locus）：当某个参数（通常是开环增益 K）从 0 变到 ∞ 时，闭环极点在 s 平面上画出的轨迹</li>
+<li>闭环极点 = 闭环特征方程的根 = 系统动态特性的决定者</li>
+<li>根轨迹让你「看着极点怎么移动」，而不必每次都解方程</li>
+</ul>
+<p><strong>为什么左半平面就是稳定</strong></p>
+<ul>
+<li>闭环极点 s = σ + jω 决定暂态响应：e^(σt)·sin(ωt)——实部 σ 决定衰减/发散</li>
+<li>σ &lt; 0（左半平面）：e^(σt) 随 t 衰减 → 响应收敛 → 稳定</li>
+<li>σ = 0（虚轴）：等幅振荡 → 临界稳定</li>
+<li>σ > 0（右半平面）：e^(σt) 指数增长 → 发散 → 不稳定</li>
+<li>本质：极点的实部就是模态的增长率——负数衰减、正数发散，所以左半 = 稳定</li>
+</ul>
+<p><strong>根轨迹法怎么判断稳定性</strong></p>
+<ol>
+<li>画根轨迹：K 从 0→∞，闭环极点从开环极点（K=0）走向开环零点（K→∞）</li>
+<li>看轨迹何时穿越虚轴：穿越点对应的 K 就是临界增益 K_cr</li>
+<li>判断：当前 K 下所有极点都在左半平面 → 稳定；有极点穿过虚轴到右半 → 不稳定</li>
+<li>设计视角：调 K 让根轨迹留在左半平面，还能看阻尼（极点与实轴的夹角决定超调）</li>
+</ol>
+<p><strong>工程意义</strong></p>
+<ul>
+<li>根轨迹不只是稳定/不稳定的开关判断，还能看：响应快慢（实部绝对值）、振荡程度（虚部）、整定增益</li>
+<li>是「调 K 观察系统行为」的可视化工具——比代数判据（劳斯）直观</li>
+</ul>
+<p><strong>一句话总结</strong>：极点实部是模态增长率——实部&lt;0 衰减（左半稳定）、>0 发散（右半不稳定）；根轨迹把 K 变化时极点的移动画出来，看轨迹穿不穿越虚轴就知道系统稳不稳、临界增益是多少。</p>
+<p>📎 题目（10000问）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 自动控制Q4（系统稳定性）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUzMTM5ODg0" class="external">https://v.flomoapp.com/mine/?memo_id=MjUzMTM5ODg0<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUzMTM5OTA1" class="external">https://v.flomoapp.com/mine/?memo_id=MjUzMTM5OTA1<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="11-电机拖动q1直流电机的转速和什么有关为什么调压调速和调磁调速原理不同">11. 电机拖动Q1：直流电机的转速和什么有关？为什么「调压调速」和「调磁调速」原理不同？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#11-电机拖动q1直流电机的转速和什么有关为什么调压调速和调磁调速原理不同" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（Flomo 原始答案卡）</strong></p>
+<p>▎ 五大学习法：费曼学习法——把「直流电机调速」讲成「调速的本质是改变反电动势平衡」</p>
+<p><strong>转速公式</strong></p>
+<ul>
+<li>他励直流电机：n = (U - Ia·Ra) / (Ce·Φ)</li>
+<li>n 转速、U 电枢电压、Ia 电枢电流、Ra 电枢电阻、Ce 电机常数、Φ 每极磁通</li>
+<li>转速由「电压降掉电阻压降后，除以磁通」决定——三个可调量：U、Ra、Φ</li>
+</ul>
+<p><strong>调压调速（U ↓）</strong></p>
+<ul>
+<li>原理：降低电枢电压 U → 转速 n 下降</li>
+<li>特点：机械特性硬度不变（斜率不变，只是平行下移）——调速前后负载变化时转速跌落一致，稳</li>
+<li>范围：从额定转速往下调（0 ~ n_N），调速范围宽、平滑</li>
+<li>实现：可控整流 / PWM 斩波——现代直流调速主流</li>
+</ul>
+<p><strong>调磁调速（Φ ↓）</strong></p>
+<ul>
+<li>原理：减小励磁磁通 Φ → 转速 n 上升</li>
+<li>特点：只能往上调（n_N 以上）；磁通太弱会导致电枢电流过大、换向恶化</li>
+<li>机械特性变软（斜率变陡）——负载稍变转速跌落大</li>
+<li>实现：调励磁电流；通常是辅助调速（配合调压）</li>
+</ul>
+<p><strong>为什么原理不同</strong></p>
+<ul>
+<li>调压是改变驱动电压（像油门），调磁是改变电机内部的磁场强度（像换挡）</li>
+<li>调压调速恒转矩特性（转矩不变、功率随转速变），调磁调速恒功率特性（功率不变、转矩随转速变）——两类应用场景不同</li>
+<li>记住：电压管「往下调」、磁通管「往上调」；一个调驱动、一个调内部</li>
+</ul>
+<p><strong>一句话总结</strong>：直流电机转速 n=(U-IaRa)/(CeΦ)——调压调速往下调、特性硬、恒转矩（主流）；调磁调速往上调、特性软、恒功率（辅助）——一个改驱动电压、一个改内部磁场，所以原理不同。</p>
+<p>📎 题目（10000问）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 自动控制Q3（PID——调速系统的控制核心）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUzMTM5ODc5" class="external">https://v.flomoapp.com/mine/?memo_id=MjUzMTM5ODc5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUzMTQxODcx" class="external">https://v.flomoapp.com/mine/?memo_id=MjUzMTQxODcx<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="12-电机拖动q2异步电机的转差率是什么为什么异步电机转速永远小于同步转速">12. 电机拖动Q2：异步电机的「转差率」是什么？为什么异步电机转速永远小于同步转速？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#12-电机拖动q2异步电机的转差率是什么为什么异步电机转速永远小于同步转速" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（Flomo 原始答案卡）</strong></p>
+<p>▎ 五大学习法：西蒙学习法——把「转差 = 发电的根因」钻透</p>
+<p><strong>同步转速</strong></p>
+<ul>
+<li>定子旋转磁场转速：n₁ = 60f/p——f 是电源频率、p 是极对数</li>
+<li>例：50Hz、4 极（p=2）→ n₁ = 60×50/2 = 1500 rpm</li>
+</ul>
+<p><strong>转差率</strong></p>
+<ul>
+<li>s = (n₁ - n)/n₁——同步转速和实际转速之差占同步转速的比例</li>
+<li>异步电机转速 n = (1-s)·n₁，运行在 0 &lt; s &lt; 1（电动状态）</li>
+<li>例：n₁=1500，n=1440 → s = 60/1500 = 0.04（4%）</li>
+</ul>
+<p><strong>为什么转速永远小于同步转速</strong></p>
+<ul>
+<li>感应原理：转子电流是「转子导体切割旋转磁场」感应出来的</li>
+<li>如果转子转速 = 同步转速：转子与磁场相对静止 → 没有感应电动势 → 没有转子电流 → 没有转矩 → 转不动</li>
+<li>所以必须有转差（相对运动）才有感应电流、才有转矩——「异步」的名字就来自这里</li>
+<li>转矩越大转差越大：负载重 → 转速掉一点 → 转差大 → 感应电流大 → 转矩大（自平衡）</li>
+</ul>
+<p><strong>几个状态</strong></p>
+<ul>
+<li>s=0：同步转速（理想空载，实际做不到——空载也有摩擦损耗，s 略大于 0）</li>
+<li>0&lt;s&lt;1：电动状态（正常运行）</li>
+<li>s=1：堵转/启动瞬间（转子不动）</li>
+<li>s&lt;0：转速超过同步——发电状态（回馈制动/超同步运行）</li>
+</ul>
+<p><strong>一句话总结</strong>：转差率 s=(n₁-n)/n₁ 是转子与旋转磁场的相对落后量；转子靠切割磁场感应电流产生转矩，一旦追上同步转速就没有感应、没有转矩——所以异步电机必须永远「差一步」，转速恒小于同步转速。</p>
+<p>📎 题目（10000问）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 电机拖动Q1（直流电机调速）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUzMTQxODcx" class="external">https://v.flomoapp.com/mine/?memo_id=MjUzMTQxODcx<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUzMTQxODc4" class="external">https://v.flomoapp.com/mine/?memo_id=MjUzMTQxODc4<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="13-电力电子q1不控整流和可控整流的区别晶闸管scr在可控整流里起什么作用">13. 电力电子Q1：不控整流和可控整流的区别？晶闸管（SCR）在可控整流里起什么作用？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#13-电力电子q1不控整流和可控整流的区别晶闸管scr在可控整流里起什么作用" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（Flomo 原始答案卡）</strong></p>
+<p>▎ 五大学习法：费曼学习法——把「不控 vs 可控」讲成「二极管只会过、晶闸管能等」</p>
+<p><strong>不控整流（二极管整流）</strong></p>
+<ul>
+<li>用二极管：正向导通、反向截止——导通时机完全由电压极性决定，不可控</li>
+<li>输出：固定的直流电压（平均值不可调）——AC 电压定了，输出就定了</li>
+<li>例：手机充电器前级、直流电源的输入整流桥</li>
+</ul>
+<p><strong>可控整流（晶闸管整流）</strong></p>
+<ul>
+<li>用晶闸管（SCR）：在正向电压下还不会导通，必须给门极触发脉冲才导通</li>
+<li>触发角 α：从交流电压过零到触发导通的电角度——α 决定导通早晚，α 越大输出越低</li>
+<li>输出：直流电压连续可调——Ud = Ud0·cosα（α 从 0 到 180°，电压从最大到 0）</li>
+<li>例：直流电机调速的老式方案、电镀电解电源、HVDC 整流站</li>
+</ul>
+<p><strong>晶闸管（SCR）起什么作用</strong></p>
+<ul>
+<li>SCR = 硅控整流器：单向导电 + 可控导通（门极触发）+ 自锁（导通后门极失去作用，靠电流过零关断）</li>
+<li>关键特性：导通条件 = 正向偏置 + 门极脉冲；关断条件 = 电流降到维持电流以下（自然换相）</li>
+<li>它让整流从「不可调的固定输出」变成「可调的输出」——可控整流的核心器件</li>
+<li>半控 vs 全控：SCR 是半控器件（能控开、不能控关，靠交流自然过零关断）；IGBT/MOSFET 是全控（能控开也能控关）</li>
+</ul>
+<p><strong>一句话总结</strong>：不控整流用二极管（导通时机由电压极性定、输出固定），可控整流用晶闸管（正向偏置还得等门极触发、触发角 α 决定输出大小）——SCR 是「能控开不能控关」的半控器件，靠交流过零自然关断，它是可控整流和 HVDC 的基石。</p>
+<p>📎 题目（10000问）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 电机拖动Q1（直流电机调速——可控整流的应用）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUzMTQxODcx" class="external">https://v.flomoapp.com/mine/?memo_id=MjUzMTQxODcx<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUzMTQxOTg3" class="external">https://v.flomoapp.com/mine/?memo_id=MjUzMTQxOTg3<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="14-电力电子q2pwm-逆变怎么把直流变交流为什么输出波形不是完美正弦波">14. 电力电子Q2：PWM 逆变怎么把直流变交流？为什么输出波形不是完美正弦波？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#14-电力电子q2pwm-逆变怎么把直流变交流为什么输出波形不是完美正弦波" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（Flomo 原始答案卡）</strong></p>
+<p>▎ 五大学习法：西蒙学习法——把「PWM 逆变」的脉宽调制思想钻透</p>
+<p><strong>逆变是什么</strong></p>
+<ul>
+<li>DC→AC：把直流母线电压变成交流输出</li>
+<li>基础结构：H 桥（4 个开关管）——对角交替导通，输出极性交替变化</li>
+<li>单相：一个 H 桥；三相：三个桥臂（6 个开关管）</li>
+</ul>
+<p><strong>PWM 怎么生成交流</strong></p>
+<ul>
+<li>正弦脉宽调制（SPWM）：拿一个低频正弦波（调制波）和高频三角波（载波）比较</li>
+<li>正弦波 > 三角波 → 输出高；否则输出低——输出一串脉宽按正弦规律变化的方波脉冲</li>
+<li>开关管在高频开关（几 kHz 到几十 kHz），输出脉冲的平均值跟随正弦波</li>
+<li>滤波后：脉冲串经过 LC 低通滤波，平滑成近似正弦波</li>
+</ul>
+<p><strong>为什么不是完美正弦波</strong></p>
+<ul>
+<li>输出本质是一串方波脉冲，只有经过滤波才是正弦——滤波不完美就有谐波</li>
+<li>谐波来源：开关频率附近的边带谐波（载波频率及其倍数）、死区时间（防止上下管直通而插入的延迟）造成的低次谐波</li>
+<li>频率越高谐波越容易滤掉（载波比高），但开关损耗也越大——折中选择</li>
+<li>结果：输出是「基波 + 谐波」——谐波含量用 THD（总谐波失真）衡量</li>
+</ul>
+<p><strong>关键参数</strong></p>
+<ul>
+<li>调制度 m = 调制波幅值/载波幅值——m ≤ 1 线性区（输出电压与 m 成正比），m > 1 过调制（输出饱和、谐波增大）</li>
+<li>载波频率：越高谐波越小但损耗越大；工业变频器常用 2-20kHz</li>
+</ul>
+<p><strong>一句话总结</strong>：PWM 逆变 = H 桥开关管按 SPWM 高频通断，输出脉宽按正弦变化的脉冲串，滤波后近似正弦；不是完美正弦是因为输出本质是方波脉冲——谐波来自载波边带和死区，用 THD 衡量，载波频率越高越接近正弦但损耗越大。</p>
+<p>📎 题目（10000问）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 电力电子Q1（可控整流）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUzMTQxOTg3" class="external">https://v.flomoapp.com/mine/?memo_id=MjUzMTQxOTg3<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUzMTQxOTky" class="external">https://v.flomoapp.com/mine/?memo_id=MjUzMTQxOTky<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="15-plc工控q1plc-的扫描周期包含哪几个阶段为什么-plc-是循环执行而不是事件驱动">15. PLC工控Q1：PLC 的扫描周期包含哪几个阶段？为什么 PLC 是「循环执行」而不是「事件驱动」？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#15-plc工控q1plc-的扫描周期包含哪几个阶段为什么-plc-是循环执行而不是事件驱动" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（Flomo 原始答案卡）</strong></p>
+<p>▎ 五大学习法：西蒙学习法——把「PLC 的时序模型」钻透</p>
+<p><strong>扫描周期（Scan Cycle）的几个阶段</strong></p>
+<ol>
+<li>读输入（Input Scan）：把输入端子状态统一读入输入映像区（Input Image）</li>
+<li>执行程序（Program Scan）：CPU 按程序顺序执行用户程序，从输入映像区读、往输出映像区写</li>
+<li>写输出（Output Scan）：把输出映像区统一写到输出端子</li>
+<li>加上系统服务（通信、自诊断）：扫描周期前后或间隙处理通信、诊断</li>
+</ol>
+<ul>
+<li>一个扫描周期 = 读输入 → 执行程序 → 写输出（+ 系统服务），循环往复</li>
+</ul>
+<p><strong>为什么是「循环执行」而不是「事件驱动」</strong></p>
+<ul>
+<li>单片机事件驱动：外部中断来了才跳去处理，平时跑主循环/睡眠——响应是按事件触发的，实时性强但程序结构分散</li>
+<li>PLC 循环扫描：不管有没有事件，固定节奏从头到尾扫一遍——所有输入变化都在下一个周期被看到</li>
+<li>结果：PLC 对输入变化的响应有一个扫描周期的延迟（响应时间 = 扫描周期 × 1~2），这是它的固有特性</li>
+<li>好处：程序结构确定、时序可预测（每个周期都一样跑一遍）、调试直观——工业现场要的就是确定性</li>
+<li>代价：事件响应不及时（周期毫秒级，够工控用；高速事件要专门的输入中断/高速计数模块）</li>
+</ul>
+<p><strong>关键概念</strong></p>
+<ul>
+<li>映像区机制：程序里读的是输入映像（周期开始时快照），写的是输出映像（周期结束时统一输出）——保证一个周期内程序看到的是同一时刻的输入</li>
+<li>扫描周期长短：取决于程序量，典型 1-20ms；周期太长发散要优化</li>
+</ul>
+<p><strong>一句话总结</strong>：PLC 扫描周期 = 读输入 → 执行程序 → 写输出，循环往复；它是循环执行不是事件驱动——固定节奏扫一遍、响应延迟约一个周期，换来的是程序结构确定、时序可预测，工业现场要的正是这种确定性（高速事件靠专用硬件模块补）。</p>
+<p>📎 题目（10000问）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 继电保护Q2（三段配合——工业控制的阶梯思维）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUzMTQyNjkw" class="external">https://v.flomoapp.com/mine/?memo_id=MjUzMTQyNjkw<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUzMTQyNzc1" class="external">https://v.flomoapp.com/mine/?memo_id=MjUzMTQyNzc1<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h3 id="16-plc工控q2梯形图的常开常闭触点在硬件继电器和软件里怎么对应为什么梯形图里经常出现自锁电路">16. PLC工控Q2：梯形图的常开/常闭触点在硬件继电器和软件里怎么对应？为什么梯形图里经常出现「自锁」电路？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#16-plc工控q2梯形图的常开常闭触点在硬件继电器和软件里怎么对应为什么梯形图里经常出现自锁电路" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案与解析（Flomo 原始答案卡）</strong></p>
+<p>▎ 五大学习法：费曼学习法——把「梯形图」讲成「画电路图编程」</p>
+<p><strong>常开/常闭触点</strong></p>
+<ul>
+<li>常开（NO，Normally Open）：平时断开，线圈得电才闭合——对应输入常开触点 / 输出线圈</li>
+<li>常闭（NC，Normally Closed）：平时闭合，线圈得电才断开</li>
+<li>硬件继电器：触点状态由线圈有没有电决定（物理接触）</li>
+<li>PLC 软件里：触点不是物理的，是读映像区里的位——常开触点 = 该位为 1 时导通；常闭触点 = 该位为 0 时导通（取反）</li>
+<li>对应关系：梯形图常开触点 ←→ 输入映像某位为 1；常闭触点 ←→ 该位为 0（或另一个取反的逻辑）</li>
+</ul>
+<p><strong>为什么经常出现「自锁」电路</strong></p>
+<ul>
+<li>自锁（Latch / Seal-in）：输出线圈动作后，用自己的一对常开触点把回路锁住，即使启动按钮松开了，回路仍然保持导通</li>
+<li>典型场景：电机启停控制——按启动按钮 → 接触器 KM 得电（电机转）；KM 的辅助常开触点并联在启动按钮上 → 按钮松开后 KM 靠自己的触点继续得电（自锁）；按停止按钮（串在回路里的常闭）→ 断开 → 停止</li>
+<li>为什么必须自锁：按钮是瞬间信号，电机要持续运行——瞬间信号要变成持续状态，就得靠自锁保持</li>
+<li>这也解释了为什么梯形图里「启动用常开并联自锁、停止用常闭串联」——是继电器控制时代留下的经典范式，PLC 继承下来</li>
+</ul>
+<p><strong>一句话总结</strong>：梯形图常开触点 = 映像位为 1 导通、常闭 = 映像位为 0 导通（软件取反，不是物理触点）；自锁电路 = 输出用自己的常开触点并联保持——因为按钮是瞬间信号而电机要持续运行，所以「启动常开并联自锁、停止常闭串联」成了梯形图最经典的范式。</p>
+<p>📎 题目（10000问）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+📎 PLC工控Q1（扫描周期）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUzMTQyNzc1" class="external">https://v.flomoapp.com/mine/?memo_id=MjUzMTQyNzc1<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>来源：<a href="https://v.flomoapp.com/mine/?memo_id=MjUzMTQyNzgw" class="external">https://v.flomoapp.com/mine/?memo_id=MjUzMTQyNzgw<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h2 id="关键工程链路图">关键工程链路图<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#关键工程链路图" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="1-传感器测量链">1. 传感器测量链<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-传感器测量链" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart LR\n  P[物理量] --> S[敏感元件]\n  S --> C[信号调理]\n  C --> F[滤波 / 隔离]\n  F --> ADC[ADC 采样]\n  ADC --> CAL[标定 / 线性化]\n  CAL --> APP[控制或监测算法]&quot;">flowchart LR
+  P[物理量] --> S[敏感元件]
+  S --> C[信号调理]
+  C --> F[滤波 / 隔离]
+  F --> ADC[ADC 采样]
+  ADC --> CAL[标定 / 线性化]
+  CAL --> APP[控制或监测算法]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="2-自动控制闭环">2. 自动控制闭环<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-自动控制闭环" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart LR\n  R[设定值] --> SUM[误差计算]\n  Y[反馈测量] --> SUM\n  SUM --> CTRL[控制器：P / PI / PID]\n  CTRL --> ACT[执行器]\n  ACT --> PLANT[被控对象]\n  PLANT --> Y&quot;">flowchart LR
+  R[设定值] --> SUM[误差计算]
+  Y[反馈测量] --> SUM
+  SUM --> CTRL[控制器：P / PI / PID]
+  CTRL --> ACT[执行器]
+  ACT --> PLANT[被控对象]
+  PLANT --> Y
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="3-电力电子变换与电机驱动">3. 电力电子变换与电机驱动<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-电力电子变换与电机驱动" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TB\n  GRID[电网 / 电池 DC] --> CONV[整流 / DC-DC / 逆变]\n  CONV --> DC[直流母线]\n  DC --> INV[功率开关桥]\n  INV --> MOTOR[电机]\n  MOTOR --> LOAD[机械负载]\n  CTRL[控制器：采样 + PWM + 保护] --> INV\n  SENSOR[电流 / 电压 / 速度反馈] --> CTRL\n  MOTOR --> SENSOR&quot;">flowchart TB
+  GRID[电网 / 电池 DC] --> CONV[整流 / DC-DC / 逆变]
+  CONV --> DC[直流母线]
+  DC --> INV[功率开关桥]
+  INV --> MOTOR[电机]
+  MOTOR --> LOAD[机械负载]
+  CTRL[控制器：采样 + PWM + 保护] --> INV
+  SENSOR[电流 / 电压 / 速度反馈] --> CTRL
+  MOTOR --> SENSOR
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h2 id="工程核验要点">工程核验要点<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#工程核验要点" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>传感器：核对量程、精度定义、温漂、动态响应、安装位置和信号调理电路。</li>
+<li>电力系统：区分稳态潮流、短路暂态与保护动作过程；标幺值必须统一基准容量和基准电压。</li>
+<li>自动控制：先确认被控对象模型、采样周期、执行器限幅和传感器噪声，再整定 PID。</li>
+<li>电机驱动：确认电机类型、极对数、额定电压/电流、热设计、逆变器拓扑和保护策略。</li>
+<li>PLC：明确扫描周期、输入输出刷新时序、任务优先级和通信刷新机制；安全功能按相应安全标准设计。</li>
+</ul>
+<h2 id="flomo-原始来源">Flomo 原始来源<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#flomo-原始来源" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>电气工程及其自动化 10000 问主问题库：<a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>每道题的原始答案卡链接已附在对应题目下。</li>
+</ul>
+<blockquote>
+<p>本篇是原始 Flomo 答案卡的结构化迁移副本。未在 Flomo 中找到独立答案卡的问题，仍留在总问题库盘点清单中，不以猜测补齐。</p>
+</blockquote></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-63" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#电气工程10000问传感器电力系统控制电机与-plc" data-for="电气工程10000问传感器电力系统控制电机与-plc">电气工程10000问：传感器、电力系统、控制、电机与 PLC</a></li><li class="depth-1"><a href="#逐题问答" data-for="逐题问答">逐题问答</a></li><li class="depth-2"><a href="#1-传感器q1电阻式电容式电感式传感器各适合测什么为什么工业现场测温最多的是热电偶和-pt100" data-for="1-传感器q1电阻式电容式电感式传感器各适合测什么为什么工业现场测温最多的是热电偶和-pt100">1. 传感器Q1：电阻式、电容式、电感式传感器各适合测什么？为什么工业现场测温最多的是热电偶和 PT100？</a></li><li class="depth-2"><a href="#2-传感器q2测量系统的静态动态特性是什么精度05fs的-fs-是什么意思量程选大选小对误差有什么影响" data-for="2-传感器q2测量系统的静态动态特性是什么精度05fs的-fs-是什么意思量程选大选小对误差有什么影响">2. 传感器Q2：测量系统的静态/动态特性是什么？「精度±0.5%FS」的 FS 是什么意思？量程选大选小对误差有什么影响？</a></li><li class="depth-2"><a href="#3-电力系统q1电力系统为什么要用标幺值计算跟实际值算差别在哪" data-for="3-电力系统q1电力系统为什么要用标幺值计算跟实际值算差别在哪">3. 电力系统Q1：电力系统为什么要用「标幺值」计算？跟实际值算差别在哪？</a></li><li class="depth-2"><a href="#4-电力系统q2潮流计算在算什么节点有-pqvθ-四个量一般给定哪两个求解哪两个" data-for="4-电力系统q2潮流计算在算什么节点有-pqvθ-四个量一般给定哪两个求解哪两个">4. 电力系统Q2：潮流计算在算什么？节点有 P、Q、V、θ 四个量，一般给定哪两个、求解哪两个？</a></li><li class="depth-2"><a href="#5-电力系统q3什么叫短路三相两相单相接地短路哪种最严重哪种最常发生" data-for="5-电力系统q3什么叫短路三相两相单相接地短路哪种最严重哪种最常发生">5. 电力系统Q3：什么叫短路？三相、两相、单相接地短路——哪种最严重、哪种最常发生？</a></li><li class="depth-2"><a href="#6-自动控制q1开环控制和闭环控制的本质区别是什么为什么说反馈是自动控制的基石" data-for="6-自动控制q1开环控制和闭环控制的本质区别是什么为什么说反馈是自动控制的基石">6. 自动控制Q1：开环控制和闭环控制的本质区别是什么？为什么说反馈是自动控制的基石？</a></li><li class="depth-2"><a href="#7-自动控制q2传递函数是什么为什么控制工程师喜欢用拉普拉斯变换把微分方程变成代数方程" data-for="7-自动控制q2传递函数是什么为什么控制工程师喜欢用拉普拉斯变换把微分方程变成代数方程">7. 自动控制Q2：传递函数是什么？为什么控制工程师喜欢用拉普拉斯变换把微分方程变成代数方程？</a></li><li class="depth-2"><a href="#8-自动控制q3pid-控制器为什么应用这么广pid-三个分量各自的作用是什么" data-for="8-自动控制q3pid-控制器为什么应用这么广pid-三个分量各自的作用是什么">8. 自动控制Q3：PID 控制器为什么应用这么广？P、I、D 三个分量各自的作用是什么？</a></li><li class="depth-2"><a href="#9-自动控制q4系统的稳定性是什么意思一个不稳定的系统长什么样" data-for="9-自动控制q4系统的稳定性是什么意思一个不稳定的系统长什么样">9. 自动控制Q4：系统的「稳定性」是什么意思？一个不稳定的系统长什么样？</a></li><li class="depth-2"><a href="#10-自动控制q5根轨迹法怎么判断系统稳定性为什么闭环极点在-s-左半平面就是稳定的" data-for="10-自动控制q5根轨迹法怎么判断系统稳定性为什么闭环极点在-s-左半平面就是稳定的">10. 自动控制Q5：根轨迹法怎么判断系统稳定性？为什么闭环极点在 s 左半平面就是稳定的？</a></li><li class="depth-2"><a href="#11-电机拖动q1直流电机的转速和什么有关为什么调压调速和调磁调速原理不同" data-for="11-电机拖动q1直流电机的转速和什么有关为什么调压调速和调磁调速原理不同">11. 电机拖动Q1：直流电机的转速和什么有关？为什么「调压调速」和「调磁调速」原理不同？</a></li><li class="depth-2"><a href="#12-电机拖动q2异步电机的转差率是什么为什么异步电机转速永远小于同步转速" data-for="12-电机拖动q2异步电机的转差率是什么为什么异步电机转速永远小于同步转速">12. 电机拖动Q2：异步电机的「转差率」是什么？为什么异步电机转速永远小于同步转速？</a></li><li class="depth-2"><a href="#13-电力电子q1不控整流和可控整流的区别晶闸管scr在可控整流里起什么作用" data-for="13-电力电子q1不控整流和可控整流的区别晶闸管scr在可控整流里起什么作用">13. 电力电子Q1：不控整流和可控整流的区别？晶闸管（SCR）在可控整流里起什么作用？</a></li><li class="depth-2"><a href="#14-电力电子q2pwm-逆变怎么把直流变交流为什么输出波形不是完美正弦波" data-for="14-电力电子q2pwm-逆变怎么把直流变交流为什么输出波形不是完美正弦波">14. 电力电子Q2：PWM 逆变怎么把直流变交流？为什么输出波形不是完美正弦波？</a></li><li class="depth-2"><a href="#15-plc工控q1plc-的扫描周期包含哪几个阶段为什么-plc-是循环执行而不是事件驱动" data-for="15-plc工控q1plc-的扫描周期包含哪几个阶段为什么-plc-是循环执行而不是事件驱动">15. PLC工控Q1：PLC 的扫描周期包含哪几个阶段？为什么 PLC 是「循环执行」而不是「事件驱动」？</a></li><li class="depth-2"><a href="#16-plc工控q2梯形图的常开常闭触点在硬件继电器和软件里怎么对应为什么梯形图里经常出现自锁电路" data-for="16-plc工控q2梯形图的常开常闭触点在硬件继电器和软件里怎么对应为什么梯形图里经常出现自锁电路">16. PLC工控Q2：梯形图的常开/常闭触点在硬件继电器和软件里怎么对应？为什么梯形图里经常出现「自锁」电路？</a></li><li class="depth-1"><a href="#关键工程链路图" data-for="关键工程链路图">关键工程链路图</a></li><li class="depth-2"><a href="#1-传感器测量链" data-for="1-传感器测量链">1. 传感器测量链</a></li><li class="depth-2"><a href="#2-自动控制闭环" data-for="2-自动控制闭环">2. 自动控制闭环</a></li><li class="depth-2"><a href="#3-电力电子变换与电机驱动" data-for="3-电力电子变换与电机驱动">3. 电力电子变换与电机驱动</a></li><li class="depth-1"><a href="#工程核验要点" data-for="工程核验要点">工程核验要点</a></li><li class="depth-1"><a href="#flomo-原始来源" data-for="flomo-原始来源">Flomo 原始来源</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向链接</h3><ul id="list-2" class="overflow"><li><a href="../../../../Resource/1000问题系列/" class="internal">1000问知识体系</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.1</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module">function f(i,e){if(!i)return;function r(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function t(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}i?.addEventListener("click",r),window.addCleanup(()=>i?.removeEventListener("click",r)),document.addEventListener("keydown",t),window.addCleanup(()=>document.removeEventListener("keydown",t))}function y(i){for(;i.firstChild;)i.removeChild(i.firstChild)}var h=class{constructor(e,r){this.container=e;this.content=r;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),r=this.onMouseMove.bind(this),t=this.onMouseUp.bind(this),o=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",r),document.addEventListener("mouseup",t),window.addEventListener("resize",o),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",r),()=>document.removeEventListener("mouseup",t),()=>window.removeEventListener("resize",o))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let r=this.createButton("+",()=>this.zoom(.1)),t=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(t),e.appendChild(o),e.appendChild(r),this.container.appendChild(e)}createButton(e,r){let t=document.createElement("button");return t.textContent=e,t.className="mermaid-control-button",t.addEventListener("click",r),window.addCleanup(()=>t.removeEventListener("click",r)),t}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}zoom(e){let r=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),t=this.content.getBoundingClientRect(),o=t.width/2,n=t.height/2,c=r-this.scale;this.currentPan.x-=o*c,this.currentPan.y-=n*c,this.scale=r,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){this.scale=1;let e=this.content.querySelector("svg");this.currentPan={x:e.getBoundingClientRect().width/2,y:e.getBoundingClientRect().height/2},this.updateTransform()}},C=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],E;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;E||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let r=E.default,t=new WeakMap;for(let n of e)t.set(n,n.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let a=t.get(s);a&&(s.innerHTML=a)}let n=C.reduce((s,a)=>(s[a]=window.getComputedStyle(document.documentElement).getPropertyValue(a),s),{}),c=document.documentElement.getAttribute("saved-theme")==="dark";r.initialize({startOnLoad:!1,securityLevel:"loose",theme:c?"dark":"base",themeVariables:{fontFamily:n["--codeFont"],primaryColor:n["--light"],primaryTextColor:n["--darkgray"],primaryBorderColor:n["--tertiary"],lineColor:n["--darkgray"],secondaryColor:n["--secondary"],tertiaryColor:n["--tertiary"],clusterBkg:n["--light"],edgeLabelBackground:n["--highlight"]}}),await r.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let n=0;n<e.length;n++){let v=function(){let g=l.querySelector("#mermaid-space"),m=l.querySelector(".mermaid-content");if(!m)return;y(m);let w=c.querySelector("svg").cloneNode(!0);m.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new h(g,m)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},c=e[n],s=c.parentElement,a=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(a),L=a.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),f(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="/static/katex/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../../../postscript.js" type="module"></script></html>
