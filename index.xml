@@ -6,6 +6,24 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>CryptoStackQ2-HSM与SHE差异</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/CryptoStackQ2-HSM%E4%B8%8ESHE%E5%B7%AE%E5%BC%82</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/CryptoStackQ2-HSM%E4%B8%8ESHE%E5%B7%AE%E5%BC%82</guid>
+    <description><![CDATA[ AUTOSAR 1000问 · CryptoStackQ2：HSM（Hardware Security Module）和 SHE（Secure Hardware Extension）的区别是什么？在 AUTOSAR 里它们对应哪个模块？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 1000问 · CryptoStackQ2：HSM（Hardware Security Module）和 SHE（Secure Hardware Extension）的区别是什么？在 AUTOSAR 里它们对应哪个模块？ ▎ 五大学习法：费曼——把 HSM vs SHE 讲成「独立安全... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 09:20:32 GMT</pubDate>
+  </item><item>
+    <title>CryptoStackQ3-软件密码实现</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/CryptoStackQ3-%E8%BD%AF%E4%BB%B6%E5%AF%86%E7%A0%81%E5%AE%9E%E7%8E%B0</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/CryptoStackQ3-%E8%BD%AF%E4%BB%B6%E5%AF%86%E7%A0%81%E5%AE%9E%E7%8E%B0</guid>
+    <description><![CDATA[ AUTOSAR 1000问 · CryptoStackQ3：如果 MCU 没有硬件密码学加速模块，Crypto Stack 还能工作吗？软件实现的性能和安全性跟硬件实现差多少？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 1000问 · CryptoStackQ3：如果 MCU 没有硬件密码学加速模块，Crypto Stack 还能工作吗？软件实现的性能和安全性跟硬件实现差多少？ ▎ 五大学习法：费曼——把「软件 vs 硬件密码」讲成「自己动手 vs 专业保镖」 还能工作吗：能。Crypto Stack 设计上支持纯软件实现——Crypto Driver 用软件... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 09:20:28 GMT</pubDate>
+  </item><item>
+    <title>PartialNetworkingQ1-部分网络工作原理</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/PartialNetworkingQ1-%E9%83%A8%E5%88%86%E7%BD%91%E7%BB%9C%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/PartialNetworkingQ1-%E9%83%A8%E5%88%86%E7%BD%91%E7%BB%9C%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86</guid>
+    <description><![CDATA[ AUTOSAR 1000问 · PartialNetworkingQ1：Partial Networking（部分网络）解决了什么问题？为什么一个 ECU 在不该做某事的时候还要被唤醒是一种浪费？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 1000问 · PartialNetworkingQ1：Partial Networking（部分网络）解决了什么问题？为什么一个 ECU 在不该做某事的时候还要被唤醒是一种浪费？ ▎ 五大学习法：费曼——把 Partial Networking 讲成「按需叫醒，不叫无关的」 解决的问题：传统 CAN 网络的唤醒是「全网络唤... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 09:20:25 GMT</pubDate>
+  </item><item>
     <title>PartialNetworking-Cluster配置与唤醒匹配</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/PartialNetworking-Cluster%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%94%A4%E9%86%92%E5%8C%B9%E9%85%8D</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/PartialNetworking-Cluster%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%94%A4%E9%86%92%E5%8C%B9%E9%85%8D</guid>
@@ -47,24 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E6%A0%87%E5%87%86%E7%89%88%E6%9C%AC%E6%BC%94%E8%BF%9B%E4%B8%8E%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99</guid>
     <description><![CDATA[ AUTOSAR 版本演进：命名从 R4.x 切到「年份-月份」 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 版本演进：命名从 R4.x 切到「年份-月份」 先厘清命名分水岭：R4.0～R4.3 是老式 R4.x 命名；大约从 R4.4 起，AUTOSAR 改成「发布年-月」命名（R19-11 这一档大致对应 R4.4）。所以 R20-11、R21-11 不是全新系列，是 R4.x 的延续，只是换了名字。 各版本最有代表性的变化（大致脉络）： R4.0：Classic 平台分水岭。方法论与 SW-C 接口全面标准化，OS 规范化，把 R3 时代的遗留推到体系化，很... ]]></description>
     <pubDate>Sat, 31 Oct 2026 09:16:56 GMT</pubDate>
-  </item><item>
-    <title>项目基线选择与迁移</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E9%A1%B9%E7%9B%AE%E5%9F%BA%E7%BA%BF%E9%80%89%E6%8B%A9%E4%B8%8E%E8%BF%81%E7%A7%BB</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E9%A1%B9%E7%9B%AE%E5%9F%BA%E7%BA%BF%E9%80%89%E6%8B%A9%E4%B8%8E%E8%BF%81%E7%A7%BB</guid>
-    <description><![CDATA[ 在项目上从哪个基线开始用？换基线最头疼的是规范改了还是工具改了？ 原始 Flomo：v.flomoapp.com/mine/ 在项目上从哪个基线开始用？换基线最头疼的是规范改了还是工具改了？ 结合这几条我记过的判断： 工具链与工程化Q3（R20-11 → R21-11）：最头疼的不是生成代码行为变了，而是配置迁移里的隐性坑——参数默认值变了、某特性默认开/关改变、旧参数被移除或改名、工具迁过去但语义漂移。 项目实践Q1（Vector 换 EB）：换供应商最麻烦的是配置工具的差异（工具界面、配置模型、ARXML schema），不是生成代码行为。 专栏⑧第八篇：升级一个工具版本炸了三天——根子是... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 09:14:58 GMT</pubDate>
-  </item><item>
-    <title>工具配置实战Q1-BSW模块必填参数</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q1-BSW%E6%A8%A1%E5%9D%97%E5%BF%85%E5%A1%AB%E5%8F%82%E6%95%B0</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q1-BSW%E6%A8%A1%E5%9D%97%E5%BF%85%E5%A1%AB%E5%8F%82%E6%95%B0</guid>
-    <description><![CDATA[ 工具配置实战 Q1：新建 BSW 模块配置，哪些参数必填？填错了在哪一层报出来？ 原始 Flomo：v.flomoapp.com/mine/ 工具配置实战 Q1：新建 BSW 模块配置，哪些参数必填？填错了在哪一层报出来？ 哪些算必填： 配置工具里参数分 required（必填）和 optional（可选），工具常用标记区分（必填项带星号 / 标红 / 列为 mandatory）。 必填的一般是模块能否正常工作的关键参数——如 CAN 的波特率、帧 ID、PDU 引用、模块实例关联。缺了这些，模块行为无法确定。 填错了在哪一层被发现（三层，按时间顺序）： 配置 / 验证阶段：工具内的「验证」和... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 09:14:54 GMT</pubDate>
-  </item><item>
-    <title>工具配置实战Q2-模块配置完整性验证</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q2-%E6%A8%A1%E5%9D%97%E9%85%8D%E7%BD%AE%E5%AE%8C%E6%95%B4%E6%80%A7%E9%AA%8C%E8%AF%81</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q2-%E6%A8%A1%E5%9D%97%E9%85%8D%E7%BD%AE%E5%AE%8C%E6%95%B4%E6%80%A7%E9%AA%8C%E8%AF%81</guid>
-    <description><![CDATA[ 工具配置实战 Q2：怎么判断一个模块配置完整？Davinci 有没有「验证配置」功能？ 原始 Flomo：v.flomoapp.com/mine/ 工具配置实战 Q2：怎么判断一个模块配置完整？Davinci 有没有「验证配置」功能？ 判断完整性的四种手段（从软到硬）： 工具验证 / 校验：Davinci 有 Check / Validate Configuration，EB tresos 是 Validation——做一致性检查（必填参数、跨模块引用、schema 合规），列出 error（红）和 warning（黄）。这是第一道、也最快的门。 生成代码是否成功：生成器生成前会做一遍完整性与... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 09:14:50 GMT</pubDate>
   </item>
     </channel>
   </rss>
