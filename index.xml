@@ -6,6 +6,30 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>工具链自动化构建 Q1 AUTOSAR 配置工具（Davinci / EB）和代码构建（make/cmake）怎么衔接？怎么跟 CI 集成？有没有 headless 模式？</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%93%BE-Configurator%E4%B8%8ECI%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%93%BE-Configurator%E4%B8%8ECI%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA</guid>
+    <description><![CDATA[ 工具链自动化构建 Q1：AUTOSAR 配置工具（Davinci / EB）和代码构建（make/cmake）怎么衔接？怎么跟 CI 集成？有没有 headless 模式？ 原始 Flomo：v.flomoapp.com/mine/ 工具链自动化构建 Q1：AUTOSAR 配置工具（Davinci / EB）和代码构建（make/cmake）怎么衔接？怎么跟 CI 集成？有没有 headless 模式？ 答案：有，大多数工具支持命令行 / 无头模式（headless / CLI），这是配置生成能进 CI 的关键。 衔接思路（三步）： 用工具的 headless 命令行生成代码： EB tres... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:53:33 GMT</pubDate>
+  </item><item>
+    <title>Dcm 协议多路复用 Q2 用 DoIP 刷写和用 CAN TP 刷写同一个 ECU——Dcm 层处理逻辑一样吗？刷写速率谁快？CAN 路径断电接着刷，DoIP 支持同样的恢复吗？</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Dcm-DoIP%E4%B8%8ECanTp%E5%A4%9A%E8%B7%AF%E5%88%B7%E5%86%99</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Dcm-DoIP%E4%B8%8ECanTp%E5%A4%9A%E8%B7%AF%E5%88%B7%E5%86%99</guid>
+    <description><![CDATA[ Dcm 协议多路复用 Q2：用 DoIP 刷写和用 CAN TP 刷写同一个 ECU——Dcm 层处理逻辑一样吗？刷写速率谁快？CAN 路径断电接着刷，DoIP 支持同样的恢复吗？ 原始 Flomo：v.flomoapp.com/mine/ Dcm 协议多路复用 Q2：用 DoIP 刷写和用 CAN TP 刷写同一个 ECU——Dcm 层处理逻辑一样吗？刷写速率谁快？CAN 路径断电接着刷，DoIP 支持同样的恢复吗？ Dcm 层处理逻辑一样吗？ 上层 Dcm 的服务处理逻辑（会话、安全访问、0x34 请求下载、0x36 TransferData、0x37 请求退出传输、0x11 复位等刷写流... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:53:30 GMT</pubDate>
+  </item><item>
+    <title>NvM 块管理策略深入 Q1 Redundant 块怎么判断「哪一份是好的」？NvM 用什么机制判断数据完整性？</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/NvM-%E5%86%97%E4%BD%99%E5%9D%97%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%AE%8C%E6%95%B4%E6%80%A7</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/NvM-%E5%86%97%E4%BD%99%E5%9D%97%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%AE%8C%E6%95%B4%E6%80%A7</guid>
+    <description><![CDATA[ NvM 块管理策略深入 Q1：Redundant 块怎么判断「哪一份是好的」？NvM 用什么机制判断数据完整性？ 原始 Flomo：v.flomoapp.com/mine/ NvM 块管理策略深入 Q1：Redundant 块怎么判断「哪一份是好的」？NvM 用什么机制判断数据完整性？ NvM 判断完整性主要靠 CRC 校验 + Block 状态标记（可能加序列号）。 机制： CRC / 校验：每个 NvM Block 存储时附带 CRC（NvM 的 Block 配置可开 CRC），写入时算 CRC、读时校验。 Redundant 双副本读写： 写入：把数据写两份（主副本 + 冗余副本）。 读... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:53:27 GMT</pubDate>
+  </item><item>
+    <title>EcuM 状态机深入 Q2 PostRun 是干什么用的？SW-C 都停了 EcuM 还在 PostRun 期间哪些模块在工作？正写 NvM 收到 Shutdown 请求，强制掉电还是等写完？</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/EcuM-PostRun%E4%B8%8ENvM%E5%85%B3%E6%9C%BA%E6%97%B6%E5%BA%8F</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/EcuM-PostRun%E4%B8%8ENvM%E5%85%B3%E6%9C%BA%E6%97%B6%E5%BA%8F</guid>
+    <description><![CDATA[ EcuM 状态机深入 Q2：PostRun 是干什么用的？SW-C 都停了 EcuM 还在 PostRun 期间哪些模块在工作？正写 NvM 收到 Shutdown 请求，强制掉电还是等写完？ 原始 Flomo：v.flomoapp.com/mine/ EcuM 状态机深入 Q2：PostRun 是干什么用的？SW-C 都停了 EcuM 还在 PostRun 期间哪些模块在工作？正写 NvM 收到 Shutdown 请求，强制掉电还是等写完？ PostRun 的用途： EcuM 在 RUN 之后、Shutdown 之前的一个过渡态。用于「应用（SW-C）已停止，但系统还需做收尾工作」的场景——... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:53:25 GMT</pubDate>
+  </item><item>
     <title>AUTOSAR MCAL 配置示例 · 深化篇① Mcu（通用骨架，按芯片调整）</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Mcu-%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Mcu-%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B</guid>
@@ -41,30 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/OS%E8%B0%83%E5%BA%A6Q2-DaVinci%E6%96%B0%E5%A2%9ETask</guid>
     <description><![CDATA[ AUTOSAR 1000问 · OS&amp;调度Q2：如何在 DaVinci 新增一个 Task？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 1000问 · OS&amp;调度Q2：如何在 DaVinci 新增一个 Task？ ▎ 五大学习法：费曼——把「新增 Task」讲成「给 OS 报户口」 费曼（本质一句话）：新增 Task = 告诉 OS「多了一个可被调度的执行单元」——给它身份（名字/优先级）、调度规则（能不能抢、能激活几次）、资源（栈），再由代码给它一个身体。 SQ3R（去哪找）：DaVinci Configurator 配置树 → Os 模块 ... ]]></description>
     <pubDate>Sat, 31 Oct 2026 07:52:10 GMT</pubDate>
-  </item><item>
-    <title>AUTOSAR 1000问 · SWC类型Q3 如何配置 SWC？</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC%E7%B1%BB%E5%9E%8BQ3-SWC%E9%85%8D%E7%BD%AE</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC%E7%B1%BB%E5%9E%8BQ3-SWC%E9%85%8D%E7%BD%AE</guid>
-    <description><![CDATA[ AUTOSAR 1000问 · SWC类型Q3：如何配置 SWC？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 1000问 · SWC类型Q3：如何配置 SWC？ ▎ 五大学习法：麦肯锡金字塔——把「配置 SWC」拆成 MECE 四件事 费曼（一句话本质）：配置 SWC 就是给它装一块「插座面板」——定好对外说什么话（Port/Interface）、内部做什么事（Runnable），怎么接到车上交给 ECU 集成。 先分清两层：SWC 是设计层（逻辑上提供什么、需要什么）；Task 是运行层（什么时候跑）。桥梁是 Runnable——SWC 里可被调度的函数单元... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:52:07 GMT</pubDate>
-  </item><item>
-    <title>AUTOSAR 1000问 · SWC类型Q4 Runnable 怎么配、怎么挂到 Task 上？</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC%E7%B1%BB%E5%9E%8BQ4-Runnable%E4%B8%8ETask%E6%98%A0%E5%B0%84</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC%E7%B1%BB%E5%9E%8BQ4-Runnable%E4%B8%8ETask%E6%98%A0%E5%B0%84</guid>
-    <description><![CDATA[ AUTOSAR 1000问 · SWC类型Q4：Runnable 怎么配、怎么挂到 Task 上？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 1000问 · SWC类型Q4：Runnable 怎么配、怎么挂到 Task 上？ ▎ 五大学习法：费曼——把 Runnable 映射讲成「这段代码挂在哪个时隙上跑」 费曼（一句话本质）：Runnable 是 SWC 里一段可被调度的函数；把它映射到 Task，就是决定这段代码挂在哪个确定的执行时隙上。Task 管「什么时候跑」，Runnable 管「跑什么」。 SQ3R（去哪找） Runnable 本体 + 触发事件：... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:52:05 GMT</pubDate>
-  </item><item>
-    <title>AUTOSAR MCAL 配置说明 · 模块① Mcu</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Mcu</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Mcu</guid>
-    <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块① Mcu 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块① Mcu Mcu 是 MCAL 最底层、第一个被初始化的 BSW 模块——管时钟、复位、功耗模式、RAM 段。EcuM 上电 Phase 0/1 就会 Init 它。 核心职责：时钟树（PLL）、复位源管理、功耗模式、RAM 段划分与初始化。 关键配置项： McuClockSettingConfig：时钟设置。选时钟源（外部晶振 / 内部 RC）、配 PLL 倍频 / 分频、定各总线时钟（Core clock、peripheral c... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:51:17 GMT</pubDate>
-  </item><item>
-    <title>AUTOSAR MCAL 配置说明 · 模块② Port</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Port</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Port</guid>
-    <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块② Port 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块② Port Port 是配置 MCU 引脚的模块——管每根引脚的复用功能、方向、初始电平、上拉下拉。它是最贴近硬件引脚的”配置层”，决定引脚用哪个功能。 核心职责：引脚复用（MUX）、方向、上拉/下拉、初始电平、是否允许运行时改方向/模式。 关键配置项： PortPinConfiguration：每根引脚的配置（引脚编号、方向、复用模式、上下拉、初始电平）。 PortPinDirection：输入 / 输出。 PortPinMode... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:50:20 GMT</pubDate>
   </item>
     </channel>
   </rss>
