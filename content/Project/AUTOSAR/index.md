@@ -51,6 +51,7 @@ flowchart TD
 - [[1000问/基础架构通信与存储]] —— AUTOSAR 定义、分层、RTE、Runnable、配置生成、COM/PduR/CanIf、NvM/Fee。
 - [[1000问/网络管理诊断存储与OS]] —— 唤醒源、EcuM/BswM、Bus-Sleep、DTC、Dcm 会话、安全访问、NvM 回调与掉电保护、OS 调度和功能安全。
 - [[1000问/工具链平台安全与系统配置]] —— AUTOSAR 价值、配置生成审计、依赖追踪、Classic/Adaptive、WdgM、OS 可信分区、PreCompile/PostBuild、XCP/UDS 和 EcuM 启动序列。
+- [[1000问/SWC_VFB_RTE与代码生成]] —— SW-C 类型、Composition、VFB、RTE S/R、Runnable 事件、RTE 生成代码、SchM、通信链路和 StbM 时间同步。
 
 ~~~~mermaid
 flowchart TD
