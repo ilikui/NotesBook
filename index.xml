@@ -6,6 +6,24 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>AUTOSAR</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/</guid>
+    <description><![CDATA[ AUTOSAR（AUTomotive Open System ARchitecture，汽车开放系统架构）是由全球主要汽车厂商、零部件供应商与半导体公司联合制定的汽车电子软件架构标准。它的目标是让汽车软件标准化、可复用、可跨平台移植，是当今智能汽车软件开发的行业基石。 一句话定位 AUTOSAR = 汽车软件的「操作系统级标准」：定义分层架构、组件模型、通信机制与开发流程，让不同厂商的软件能像积木一样拼装。 知识体系 flowchart TD A[AUTOSAR] --&gt; B[核心理念] A --&gt; C[软件架构] A --&gt; D[方法论] A --&gt; E[标准与规范]... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:48:35 GMT</pubDate>
+  </item><item>
+    <title>AUTOSAR MCAL 配置说明 · 模块⑫ Fls</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Fls</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Fls</guid>
+    <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块⑫ Fls 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块⑫ Fls Fls 是 Flash 驱动（MCAL 层），负责 MCU 内部 / 外部 Flash 的读、写、擦除、校验。它是存储栈最底层，上层是 Fee（Flash EEPROM 仿真）→ NvM。 核心职责：扇区擦除、写入、读取、校验，异步 job 管理。 关键配置项： FlsSectorConfiguration：扇区配置（起始地址、扇区大小、扇区数量）。 FlsGeneralConfiguration：整体配置（FlsMaxRe... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:47:30 GMT</pubDate>
+  </item><item>
+    <title>AUTOSAR MCAL 配置说明 · 模块⑬ Eep</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Eep</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Eep</guid>
+    <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块⑬ Eep 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块⑬ Eep Eep 是 EEPROM 驱动（MCAL 层），负责 MCU 内部 / 外部 EEPROM 的读、写、擦除。它是存储栈的驱动层，上层接 NvM。 核心职责：EEPROM 分区读写、擦除、异步 job 管理。 关键配置项： EepSectorConfiguration：扇区配置（EEPROM 分区地址、大小、数量）。 EepRead / EepWrite / EepErase：读、写、擦配置。 EepJobConfigurat... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:47:27 GMT</pubDate>
+  </item><item>
     <title>AUTOSAR MCAL 配置说明 · 模块⑭ Wdg</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Wdg</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Wdg</guid>
@@ -23,12 +41,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Dma</guid>
     <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块⑯ Dma（可选） 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块⑯ Dma（可选） Dma（直接内存访问）驱动是 可选模块，配置 DMA 硬件实现数据在内存与外设、内存与内存之间的直接传输，减轻 CPU 负担。常用于 ADC 采样数据搬移、SPI/串口收发缓冲、内存拷贝。 核心职责：DMA 通道启停、传输配置、完成中断回调。 关键配置项： DmaChannelConfiguration：DMA 通道配置（通道号）。 DmaChannelMode：传输模式（单次 / 循环 / 周期）。 Dma... ]]></description>
     <pubDate>Sat, 31 Oct 2026 07:47:14 GMT</pubDate>
-  </item><item>
-    <title>AUTOSAR</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/</guid>
-    <description><![CDATA[ AUTOSAR（AUTomotive Open System ARchitecture，汽车开放系统架构）是由全球主要汽车厂商、零部件供应商与半导体公司联合制定的汽车电子软件架构标准。它的目标是让汽车软件标准化、可复用、可跨平台移植，是当今智能汽车软件开发的行业基石。 一句话定位 AUTOSAR = 汽车软件的「操作系统级标准」：定义分层架构、组件模型、通信机制与开发流程，让不同厂商的软件能像积木一样拼装。 知识体系 flowchart TD A[AUTOSAR] --&gt; B[核心理念] A --&gt; C[软件架构] A --&gt; D[方法论] A --&gt; E[标准与规范]... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:46:36 GMT</pubDate>
   </item><item>
     <title>AUTOSAR 1000问：OS 调度与 SWC 工程补充</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/OS%E8%B0%83%E5%BA%A6%E4%B8%8ESWC%E5%B7%A5%E7%A8%8B%E8%A1%A5%E5%85%85</link>
@@ -53,18 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E6%96%87%E4%BB%B6IO-Q1-fopen%E6%96%87%E6%9C%AC%E4%B8%8E%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%A8%A1%E5%BC%8F</guid>
     <description><![CDATA[ C语言 1000问 · 文件I/O Q1：fopen 的文本模式和二进制模式（b）有什么区别？换行符在两种模式下怎么处理？ 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 C语言 1000问 · 文件I/O Q1：fopen 的文本模式和二进制模式（b）有什么区别？换行符在两种模式下怎么处理？ ▎ 五大学习法：西蒙学习法——把「文本 vs 二进制」钻透 fopen 的模式 “r” / “w” / “a”：文本模式读 / 写 / 追加。 “rb” / “wb” / “ab”：二进制模式。 加 ”+“：可读可写（如 “r+”、“rb+”）。 本质区别：换行符的翻译（主要在 ... ]]></description>
     <pubDate>Sat, 31 Oct 2026 07:42:07 GMT</pubDate>
-  </item><item>
-    <title>文件IO-Q2-标准IO缓冲机制</title>
-    <link>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E6%96%87%E4%BB%B6IO-Q2-%E6%A0%87%E5%87%86IO%E7%BC%93%E5%86%B2%E6%9C%BA%E5%88%B6</link>
-    <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E6%96%87%E4%BB%B6IO-Q2-%E6%A0%87%E5%87%86IO%E7%BC%93%E5%86%B2%E6%9C%BA%E5%88%B6</guid>
-    <description><![CDATA[ C语言 1000问 · 文件I/O Q2：标准 I/O 为什么要有缓冲？全缓冲 / 行缓冲 / 无缓冲分别在什么场景，fflush 有什么用？ 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 C语言 1000问 · 文件I/O Q2：标准 I/O 为什么要有缓冲？全缓冲 / 行缓冲 / 无缓冲分别在什么场景，fflush 有什么用？ ▎ 五大学习法：西蒙学习法——把「缓冲」钻透 为什么要缓冲 系统调用（read / write）很「贵」：要陷入内核，可能要等磁盘 / 设备。 若每次 fputc 都直接 write 一个字节，几百万次系统调用慢到不可接受。 缓冲把多次小读... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:42:05 GMT</pubDate>
-  </item><item>
-    <title>文件IO-Q3-feof正确使用</title>
-    <link>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E6%96%87%E4%BB%B6IO-Q3-feof%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8</link>
-    <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E6%96%87%E4%BB%B6IO-Q3-feof%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8</guid>
-    <description><![CDATA[ C语言 1000问 · 文件I/O Q3：怎么正确判断文件读完？为什么常说 while (!feof(fp)) 是错的？ 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 C语言 1000问 · 文件I/O Q3：怎么正确判断文件读完？为什么常说 while (!feof(fp)) 是错的？ ▎ 五大学习法：费曼学习法——把「feof 的坑」讲透 feof 到底是什么 feof(fp) 不是「预测下一次读会不会到末尾」，它报告的是「上一次读是否因为碰到文件末尾而结束」。 它是「事后标记」：只有真正读到 EOF（且读到失败）之后，它才变真。 同理 ferror 报告上次读是... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:42:01 GMT</pubDate>
   </item>
     </channel>
   </rss>
