@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>AUTOSAR 与 J1939 集成 Q2：J1939 的 BAM / CMDT 多帧传输和 AUTOSAR CanTp 的机制差异？同时跑 J1939 和 UDS 会冲突吗？</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/J1939%E4%B8%8ECanTp-%E5%A4%9A%E5%B8%A7%E4%BC%A0%E8%BE%93%E5%92%8CUDS%E5%85%B1%E5%AD%98</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/J1939%E4%B8%8ECanTp-%E5%A4%9A%E5%B8%A7%E4%BC%A0%E8%BE%93%E5%92%8CUDS%E5%85%B1%E5%AD%98</guid>
+    <description><![CDATA[ AUTOSAR 与 J1939 集成 Q2：J1939 的 BAM / CMDT 多帧传输和 AUTOSAR CanTp 的机制差异？同时跑 J1939 和 UDS 会冲突吗？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 与 J1939 集成 Q2：J1939 的 BAM / CMDT 多帧传输和 AUTOSAR CanTp 的机制差异？同时跑 J1939 和 UDS 会冲突吗？ J1939 多帧传输（两种方式）： BAM（广播公告消息）：用于广播 / 全局地址（DA=255）。发送方先发一个连接管理消息（TYPE=32）宣布大包，然后按固定间隔（约 50ms）... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:55:05 GMT</pubDate>
+  </item><item>
     <title>AUTOSAR 与 ROS 2 对比 Q1：自动驾驶量产 ECU 能用 ROS 2 代替 AUTOSAR Adaptive 吗？ROS 2 缺了什么？</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Adaptive%E4%B8%8EROS2-%E9%87%8F%E4%BA%A7ECU%E6%9E%B6%E6%9E%84%E9%80%89%E5%9E%8B</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Adaptive%E4%B8%8EROS2-%E9%87%8F%E4%BA%A7ECU%E6%9E%B6%E6%9E%84%E9%80%89%E5%9E%8B</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Mcu-%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B</guid>
     <description><![CDATA[ AUTOSAR MCAL 配置示例 · 深化篇① Mcu（通用骨架，按芯片调整） 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置示例 · 深化篇① Mcu（通用骨架，按芯片调整） 给 Mcu 一份带具体参数值的配置示例，方便对照实际工程。 示例（以某 32 位 MCU 为例，仅供参考）： 时钟源：外部晶振 20MHz（或内部 RC）。 PLL 倍频分频： VCO 倍频到 320MHz。 主时钟 160MHz（VCO ÷2）。 系统总线 80MHz（÷4）、外设总线 40MHz（÷8）。 CAN 模块时钟 80MHz、ADC 时钟 40MHz。 复位：... ]]></description>
     <pubDate>Sat, 31 Oct 2026 07:53:21 GMT</pubDate>
-  </item><item>
-    <title>AUTOSAR MCAL 配置示例 · 深化篇② Port</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Port-%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Port-%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B</guid>
-    <description><![CDATA[ AUTOSAR MCAL 配置示例 · 深化篇② Port 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置示例 · 深化篇② Port 给 Port 一份带参数值的配置示例。 示例（某 32 位 MCU，按实际引脚图调整）： 引脚 1：GPIO 输出，初始电平 HIGH，上拉，MUX = GPIO。 引脚 2：GPIO 输入，下拉，MUX = GPIO。 引脚 3：复用 CAN（MUX = CAN_RX），方向输入。 引脚 4：复用 CAN（MUX = CAN_TX），方向输出。 引脚 5：复用 ADC 模拟输入（MUX = ADC，type = A... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:52:16 GMT</pubDate>
   </item>
     </channel>
   </rss>
