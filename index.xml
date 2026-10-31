@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>ARXML 解析与自动化脚本 Q2：两个版本 ARXML 做 diff——哪些是真正影响行为的「语义差异」？怎么在 CI 里自动检测？</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/ARXML%E8%AF%AD%E4%B9%89Diff%E4%B8%8ECI%E6%A3%80%E6%B5%8B</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/ARXML%E8%AF%AD%E4%B9%89Diff%E4%B8%8ECI%E6%A3%80%E6%B5%8B</guid>
+    <description><![CDATA[ ARXML 解析与自动化脚本 Q2：两个版本 ARXML 做 diff——哪些是真正影响行为的「语义差异」？怎么在 CI 里自动检测？ 原始 Flomo：v.flomoapp.com/mine/ ARXML 解析与自动化脚本 Q2：两个版本 ARXML 做 diff——哪些是真正影响行为的「语义差异」？怎么在 CI 里自动检测？ 文本 diff（git diff）看到的是行级变化，但 ARXML 大量是引用、顺序、结构——很多行变不改变行为，很多隐藏语义变化却看不出。 真正影响行为的语义差异： 引用（REF）指向的目标变了：某个 REF 从指向 A 变成指向 B——只是路径字符串变化，行为完全... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:55:26 GMT</pubDate>
+  </item><item>
+    <title>AUTOSAR 与 J1939 集成 Q1：J1939 的 PGN 对应 AUTOSAR 的哪个概念？在 COM 层兼容还是应用层另写？</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/J1939%E4%B8%8EAUTOSAR-PGN%E6%98%A0%E5%B0%84</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/J1939%E4%B8%8EAUTOSAR-PGN%E6%98%A0%E5%B0%84</guid>
+    <description><![CDATA[ AUTOSAR 与 J1939 集成 Q1：J1939 的 PGN 对应 AUTOSAR 的哪个概念？在 COM 层兼容还是应用层另写？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 与 J1939 集成 Q1：J1939 的 PGN 对应 AUTOSAR 的哪个概念？在 COM 层兼容还是应用层另写？ 答：J1939 的 PGN 概念上对应 AUTOSAR 的 PDU（协议数据单元）。 分层对应： J1939 的 SPN（信号参数号）≈ AUTOSAR 的 Signal。 J1939 的 PGN（参数组）≈ AUTOSAR 的 PDU（一个 PGN 封装一组 S... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:55:13 GMT</pubDate>
+  </item><item>
     <title>AUTOSAR 与 J1939 集成 Q2：J1939 的 BAM / CMDT 多帧传输和 AUTOSAR CanTp 的机制差异？同时跑 J1939 和 UDS 会冲突吗？</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/J1939%E4%B8%8ECanTp-%E5%A4%9A%E5%B8%A7%E4%BC%A0%E8%BE%93%E5%92%8CUDS%E5%85%B1%E5%AD%98</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/J1939%E4%B8%8ECanTp-%E5%A4%9A%E5%B8%A7%E4%BC%A0%E8%BE%93%E5%92%8CUDS%E5%85%B1%E5%AD%98</guid>
@@ -53,18 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/NvM-%E5%86%97%E4%BD%99%E5%9D%97%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%AE%8C%E6%95%B4%E6%80%A7</guid>
     <description><![CDATA[ NvM 块管理策略深入 Q1：Redundant 块怎么判断「哪一份是好的」？NvM 用什么机制判断数据完整性？ 原始 Flomo：v.flomoapp.com/mine/ NvM 块管理策略深入 Q1：Redundant 块怎么判断「哪一份是好的」？NvM 用什么机制判断数据完整性？ NvM 判断完整性主要靠 CRC 校验 + Block 状态标记（可能加序列号）。 机制： CRC / 校验：每个 NvM Block 存储时附带 CRC（NvM 的 Block 配置可开 CRC），写入时算 CRC、读时校验。 Redundant 双副本读写： 写入：把数据写两份（主副本 + 冗余副本）。 读... ]]></description>
     <pubDate>Sat, 31 Oct 2026 07:53:27 GMT</pubDate>
-  </item><item>
-    <title>EcuM 状态机深入 Q2 PostRun 是干什么用的？SW-C 都停了 EcuM 还在 PostRun 期间哪些模块在工作？正写 NvM 收到 Shutdown 请求，强制掉电还是等写完？</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/EcuM-PostRun%E4%B8%8ENvM%E5%85%B3%E6%9C%BA%E6%97%B6%E5%BA%8F</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/EcuM-PostRun%E4%B8%8ENvM%E5%85%B3%E6%9C%BA%E6%97%B6%E5%BA%8F</guid>
-    <description><![CDATA[ EcuM 状态机深入 Q2：PostRun 是干什么用的？SW-C 都停了 EcuM 还在 PostRun 期间哪些模块在工作？正写 NvM 收到 Shutdown 请求，强制掉电还是等写完？ 原始 Flomo：v.flomoapp.com/mine/ EcuM 状态机深入 Q2：PostRun 是干什么用的？SW-C 都停了 EcuM 还在 PostRun 期间哪些模块在工作？正写 NvM 收到 Shutdown 请求，强制掉电还是等写完？ PostRun 的用途： EcuM 在 RUN 之后、Shutdown 之前的一个过渡态。用于「应用（SW-C）已停止，但系统还需做收尾工作」的场景——... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:53:25 GMT</pubDate>
-  </item><item>
-    <title>AUTOSAR MCAL 配置示例 · 深化篇① Mcu（通用骨架，按芯片调整）</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Mcu-%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Mcu-%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B</guid>
-    <description><![CDATA[ AUTOSAR MCAL 配置示例 · 深化篇① Mcu（通用骨架，按芯片调整） 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置示例 · 深化篇① Mcu（通用骨架，按芯片调整） 给 Mcu 一份带具体参数值的配置示例，方便对照实际工程。 示例（以某 32 位 MCU 为例，仅供参考）： 时钟源：外部晶振 20MHz（或内部 RC）。 PLL 倍频分频： VCO 倍频到 320MHz。 主时钟 160MHz（VCO ÷2）。 系统总线 80MHz（÷4）、外设总线 40MHz（÷8）。 CAN 模块时钟 80MHz、ADC 时钟 40MHz。 复位：... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:53:21 GMT</pubDate>
   </item>
     </channel>
   </rss>
