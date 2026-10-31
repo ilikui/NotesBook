@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>列表基础</title>
+    <link>https://wiki.likui.info/Area/CS/Python/%E5%88%97%E8%A1%A8%E5%9F%BA%E7%A1%80</link>
+    <guid>https://wiki.likui.info/Area/CS/Python/%E5%88%97%E8%A1%A8%E5%9F%BA%E7%A1%80</guid>
+    <description><![CDATA[ Python 列表基础 原始 Flomo：v.flomoapp.com/mine/ Python列表的学习 创建列表：可以创建一个空列表或包含初始元素的列表。 访问列表元素：可以通过索引访问列表中的元素。 修改列表元素：可以通过索引修改列表中的元素。 添加元素：可以使用 append() 方法在列表末尾添加元素，或使用 insert() 方法在指定位置插入元素。 删除元素：可以使用 del 语句或 remove() 方法删除列表中的元素。 列表切片：可以使用切片操作获取列表的子列表。 列表长度：可以使用 len() 函数获取列表的长度。 Python . ]]></description>
+    <pubDate>Sat, 31 Oct 2026 09:09:48 GMT</pubDate>
+  </item><item>
     <title>序列切片</title>
     <link>https://wiki.likui.info/Area/CS/Python/%E5%BA%8F%E5%88%97%E5%88%87%E7%89%87</link>
     <guid>https://wiki.likui.info/Area/CS/Python/%E5%BA%8F%E5%88%97%E5%88%87%E7%89%87</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/KM/</guid>
     <description><![CDATA[ KM（Knowledge Management，知识管理） 关注如何高效地收集、理解、组织、连接和复用个人知识。它不只是工具问题，更是一套帮助思考与行动持续改进的方法。 一句话定位 让知识「进得来、找得到、连得上、用得上」，并最终转化为判断、作品与行动。 知识管理地图 flowchart TD A[&quot;知识输入&quot;] --&gt; B[&quot;捕捉与收集&quot;] B --&gt; C[&quot;阅读与理解&quot;] C --&gt; D[&quot;提炼为自己的表达&quot;] D --&gt; E[&quot;组织与连接&quot;] E --&gt; F[... ]]></description>
     <pubDate>Sat, 31 Oct 2026 09:03:55 GMT</pubDate>
-  </item><item>
-    <title>专栏⑰·第4篇：课本定义的数学概念 vs 工程里的实际用法——“最短路径”和“特征分解”的差距</title>
-    <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC4%E7%AF%87-%E8%AF%BE%E6%9C%AC%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%AE%9E%E9%99%85</link>
-    <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC4%E7%AF%87-%E8%AF%BE%E6%9C%AC%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%AE%9E%E9%99%85</guid>
-    <description><![CDATA[ 专栏⑰·第4篇：课本定义的数学概念 vs 工程里的实际用法——“最短路径”和”特征分解”的差距 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·第4篇：课本定义的数学概念 vs 工程里的实际用法——“最短路径”和”特征分解”的差距 📎 第3篇：堆问题法在数学上的矛盾 → v.flomoapp.com/mine/ （来自7/28晚数学专题三问。五大学习法：卢曼卡片盒→把”数学课本上的定义”和”工程里的实际用法”各写一张卡，串起来看差距在哪。） 经典案例 1：最短路径算法——Dijkstra vs CAN 网络的路由配置 课本定义： Dijkstra 给定带权图求最短路径，时... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 09:02:30 GMT</pubDate>
   </item>
     </channel>
   </rss>
