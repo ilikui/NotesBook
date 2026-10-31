@@ -6,18 +6,6 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>专栏⑰·第10篇：数学 15 项自检清单——上车前逐项打勾</title>
-    <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC10%E7%AF%87-%E6%95%B0%E5%AD%A615%E9%A1%B9%E8%87%AA%E6%A3%80%E6%B8%85%E5%8D%95</link>
-    <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC10%E7%AF%87-%E6%95%B0%E5%AD%A615%E9%A1%B9%E8%87%AA%E6%A3%80%E6%B8%85%E5%8D%95</guid>
-    <description><![CDATA[ 专栏⑰·第10篇：数学 15 项自检清单——上车前逐项打勾 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·第10篇：数学 15 项自检清单——上车前逐项打勾 📎 第9篇：考研数学应试方法论 → v.flomoapp.com/mine/ 前九篇从马尔可夫链（第1篇）、矩阵变换（第2篇）、堆问题法（第3篇）、课本vs工程（第4篇）、极限导数（第5篇）、线代实战（第6篇）、概率论实战（第7篇）、马尔可夫工程应用（第8篇）、应试方法论（第9篇）铺完整个数学实战体系。收官篇把整个专栏压成上车前逐项打勾的清单。 清单分 4 组：概念理解（4项）→ 工程连接（4项）→ 方法流程（4项... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 08:37:14 GMT</pubDate>
-  </item><item>
-    <title>专栏⑰·第9篇：考研数学应试方法论——堆问题法分轮次实战</title>
-    <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC9%E7%AF%87-%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E5%BA%94%E8%AF%95%E6%96%B9%E6%B3%95%E8%AE%BA</link>
-    <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC9%E7%AF%87-%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6%E5%BA%94%E8%AF%95%E6%96%B9%E6%B3%95%E8%AE%BA</guid>
-    <description><![CDATA[ 专栏⑰·第9篇：考研数学应试方法论——堆问题法分轮次实战 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·第9篇：考研数学应试方法论——堆问题法分轮次实战 📎 第8篇：马尔可夫链工程应用 → v.flomoapp.com/mine/ 数学三问其二已经立了核心方法： 堆问题法在数学上要分知识形态，第一轮定义型和关系型，第二轮才列应用型。这篇把完整流程和备考节奏拉通。 一、为什么考研数学不能”直接堆问题” 堆问题法（先列 1000 问再逐个答）在嵌入式领域有效——因为你有工程场景可以”从问题反推原理”。但考研数学相反： 定义型知识（ε-δ、特征值定义）——没学过定义，问题都列... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 08:37:10 GMT</pubDate>
-  </item><item>
     <title>专栏⑰·第8篇：马尔可夫链工程应用——× BswM 状态机 / 网络管理 / 刷写流程</title>
     <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC8%E7%AF%87-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E9%93%BE%E5%B7%A5%E7%A8%8B%E5%BA%94%E7%94%A8</link>
     <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC8%E7%AF%87-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E9%93%BE%E5%B7%A5%E7%A8%8B%E5%BA%94%E7%94%A8</guid>
@@ -65,6 +53,18 @@
     <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/1000%E9%97%AE/%E7%AC%AC17%E9%A2%98-%E7%BA%BF%E6%8E%A7%E5%88%B6%E5%8A%A8%E5%93%8D%E5%BA%94%E9%80%9F%E5%BA%A6</guid>
     <description><![CDATA[ 自动驾驶 1000问 · 六 · 第 17 题：线控制动比传统液压快在哪？为什么快很重要？ 原始 Flomo：v.flomoapp.com/mine/ 自动驾驶 1000问 · 六 · 第 17 题：线控制动比传统液压快在哪？为什么快很重要？ 传统液压制动：踩踏板 → 液压助力 → 液体传递压力到卡钳。从「发指令」到「建立压力」要经历液压传递 + 助力建立，几十到上百 ms。 线控制动（EHB 电子液压 / EMB 电子机械）快在： 电信号传递：制动指令用电信号到执行器，几乎瞬时，不用等液压建压。 电机 / 电磁直接建压：EMB 用电机直接推制动，响应几个 ms ~ 十几 ms；EHB 也比传... ]]></description>
     <pubDate>Sat, 31 Oct 2026 08:33:35 GMT</pubDate>
+  </item><item>
+    <title>自动驾驶 1000问 · 补充Q1：什么是端到端（End-to-End）自动驾驶？</title>
+    <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/1000%E9%97%AE/%E8%A1%A5%E5%85%85Q1-%E7%AB%AF%E5%88%B0%E7%AB%AF%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6</link>
+    <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/1000%E9%97%AE/%E8%A1%A5%E5%85%85Q1-%E7%AB%AF%E5%88%B0%E7%AB%AF%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6</guid>
+    <description><![CDATA[ 自动驾驶 1000问 · 补充Q1：什么是端到端（End-to-End）自动驾驶？ 原始 Flomo：v.flomoapp.com/mine/ 自动驾驶 1000问 · 补充Q1：什么是端到端（End-to-End）自动驾驶？ ▎ 五大学习法：费曼学习法——用一句话把它讲给外行听 一句话 把「传感器输入 → 车辆动作（转向 / 油门 / 刹车）」这一整条链交给一个学习模型整体学会，不再拆成感知、预测、规划、控制各自写规则再拼。 和传统模块化比 模块化：每块单独设计优化、可解释、能独立升级；但模块间接口靠人工设计，误差会一路累积放大。 端到端：一张大网直接从输入学到输出，围绕最终驾驶目标联合优化... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 08:33:32 GMT</pubDate>
+  </item><item>
+    <title>SPI 菊花链：多从机串联拓扑与时序</title>
+    <link>https://wiki.likui.info/Area/EE/%E8%BD%A6%E8%BD%BD%E9%80%9A%E4%BF%A1/1000%E9%97%AE/SPI%E8%8F%8A%E8%8A%B1%E9%93%BE%E5%A4%9A%E4%BB%8E%E6%9C%BA%E4%B8%B2%E8%81%94</link>
+    <guid>https://wiki.likui.info/Area/EE/%E8%BD%A6%E8%BD%BD%E9%80%9A%E4%BF%A1/1000%E9%97%AE/SPI%E8%8F%8A%E8%8A%B1%E9%93%BE%E5%A4%9A%E4%BB%8E%E6%9C%BA%E4%B8%B2%E8%81%94</guid>
+    <description><![CDATA[ SPI 菊花链——一根 CS 串起 N 个从机 原始 Flomo：v.flomoapp.com/mine/ SPI 菊花链——一根 CS 串起 N 个从机 ▎ 两种接法 并行：各从机独立 CS，共享 MOSI/MISO/SCK——从机多时 CS 不够用、MISO 负载重 菊花链：SDO 接下一级 SDI，像移位寄存器逐级传，全链只用一根 CS。典型：74HC595 级联、LED 驱动 ▎ 时序 一个 CS 周期内 SCK 打 8×N 拍（N = 从机数），数据从链头进、链尾回 命令按「末端先进」排序——先发的最后到链尾，写代码要倒着想 ▎ 用 vs 不用 用：从机多、CS 不够、芯片支持级联（... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 08:19:53 GMT</pubDate>
   </item>
     </channel>
   </rss>
