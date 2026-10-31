@@ -354,6 +354,12 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
                 }
 
                 tag = slugTag(tag)
+                // `#` is itself an emoji code point (U+0023), so bare "#" / "##" in prose
+                // match the tag regex and slugify down to an empty string. Dropping the tag
+                // keeps a stray hash from creating a blank tag page.
+                if (tag.trim() === "") {
+                  return false
+                }
                 if (file.data.frontmatter) {
                   const noteTags = file.data.frontmatter.tags ?? []
                   file.data.frontmatter.tags = [...new Set([...noteTags, tag])]

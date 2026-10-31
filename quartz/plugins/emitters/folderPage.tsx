@@ -24,6 +24,36 @@ interface FolderPageOptions extends FullPageLayout {
   sort?: (f1: QuartzPluginData, f2: QuartzPluginData) => number
 }
 
+/**
+ * Deep-copies a hast tree and adds one `../` to every relative `href` / `src`, which is
+ * what a page needs when it is published one directory deeper than it was written for.
+ */
+function deepenRelativeLinks<T>(node: T): T {
+  if (Array.isArray(node)) {
+    return node.map(deepenRelativeLinks) as unknown as T
+  }
+  if (typeof node !== "object" || node === null) {
+    return node
+  }
+
+  const element = { ...(node as Record<string, unknown>) } as Record<string, unknown>
+  const properties = element.properties as Record<string, unknown> | undefined
+  if (properties) {
+    const nextProperties = { ...properties }
+    for (const attribute of ["href", "src"]) {
+      const value = nextProperties[attribute]
+      if (typeof value === "string" && /^\.{1,2}\//.test(value)) {
+        nextProperties[attribute] = "../" + value
+      }
+    }
+    element.properties = nextProperties
+  }
+  if (Array.isArray(element.children)) {
+    element.children = (element.children as unknown[]).map(deepenRelativeLinks)
+  }
+  return element as T
+}
+
 async function* processFolderInfo(
   ctx: BuildCtx,
   folderInfo: Record<SimpleSlug, ProcessedContent>,
@@ -39,13 +69,25 @@ async function* processFolderInfo(
     const [tree, file] = folderContent
     const cfg = ctx.cfg.configuration
     const externalResources = pageResources(pathToRoot(slug), resources)
+
+    // Inline links of a folder note were rewritten against the note URL (`foo`), but the
+    // page is emitted one level deeper, at `foo/index.html`. Every relative link therefore
+    // needs one more `../` to keep resolving to the same target.
+    const noteSlug = file.data.slug
+    const pageTree =
+      noteSlug === undefined || noteSlug === slug ? tree : deepenRelativeLinks(tree)
+
     const componentData: QuartzComponentProps = {
       ctx,
-      fileData: file.data,
+      // A note that shares its name with a folder (`foo.md` next to `foo/`) is rendered
+      // into `foo/index.html`. Its own slug (`foo`) is one level shallower than the page
+      // it ends up on, which made every relative link (`../` count, assets, child pages)
+      // point one directory too high. Normalize the slug to the emitted page location.
+      fileData: { ...file.data, slug },
       externalResources,
       cfg,
       children: [],
-      tree,
+      tree: pageTree,
       allFiles,
     }
 
