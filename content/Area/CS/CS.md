@@ -81,3 +81,13 @@ F --> F4[技术博客/社区]
 > - 深度生成模型
 > - 机器学习进阶
 
+
+
+## 编程语言与数据库补充笔记
+
+- [[CSharp/dotnet-cli开发命令]]：.NET CLI 项目管理、构建、测试、发布与 NuGet 命令。
+- [[Python/序列切片]]：Python sequence[start:stop:step] 切片规则。
+- [[Python/列表基础]]：列表创建、访问、修改、增删、切片与长度。
+- [[Python/NiceGUI卡片笔记应用构想]]：使用 NiceGUI 构建卡片笔记与学习应用的想法。
+- [[数据库/DBeaver与SQLite工具]]：DBeaver 与 SQLite 数据库管理工具。
+- [[数据库/ACID事务四大特性]]：原子性、一致性、隔离性与持久性。
