@@ -75,6 +75,11 @@ flowchart TD
 - [[1000问/OS调度Q2-DaVinci新增Task]] —— 在 DaVinci Configurator 中配置 OsTask。
 - [[1000问/工具链Q1-生成代码审计]] —— 配置到代码生成的可审计性与验证。
 
+- [[1000问/EcuM-PostRun与NvM关机时序]] —— EcuM PostRun、NvM 写入完成与关机时序。
+- [[1000问/NvM-冗余块与数据完整性]] —— Redundant Block 的有效副本判定与完整性机制。
+- [[1000问/Dcm-DoIP与CanTp多路刷写]] —— DoIP 与 CAN TP 刷写路径差异和恢复边界。
+- [[1000问/工具链-Configurator与CI自动化构建]] —— 配置工具、构建系统与 CI 自动化衔接。
+
 ## MCAL 驱动配置
 
 - [[MCAL/Dma]] —— DMA 通道与数据搬运配置。
