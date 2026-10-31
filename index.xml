@@ -6,6 +6,24 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>SW-C 生命周期与状态管理 Q1：一个 Application SW-C 从 ECU 上电到正常运行的生命周期？开始/停止执行 Runnable 是由谁控制的？</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC%E4%B8%8A%E7%94%B5%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%8ERunnable%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC%E4%B8%8A%E7%94%B5%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%8ERunnable%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F</guid>
+    <description><![CDATA[ SW-C 生命周期与状态管理 Q1：一个 Application SW-C 从 ECU 上电到正常运行的生命周期？开始/停止执行 Runnable 是由谁控制的？ 原始 Flomo：v.flomoapp.com/mine/ SW-C 生命周期与状态管理 Q1：一个 Application SW-C 从 ECU 上电到正常运行的生命周期？开始/停止执行 Runnable 是由谁控制的？ 答：生命周期节点由外部模块（EcuM / BswM / RTE 调度）管理，SW-C 自身是被动实体，不控制自己的生命周期。 从上电到正常运行： 上电 / 复位：MCU 启动 → MCAL 初始化 → EcuM ... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:56:35 GMT</pubDate>
+  </item><item>
+    <title>SW-C 生命周期与状态管理 Q2：SW-C 能感知 ECU 正在唤醒 / 运行 / 休眠 / 关机吗？通过什么接口？</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E4%B8%8EECU%E6%A8%A1%E5%BC%8F%E6%84%9F%E7%9F%A5</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E4%B8%8EECU%E6%A8%A1%E5%BC%8F%E6%84%9F%E7%9F%A5</guid>
+    <description><![CDATA[ SW-C 生命周期与状态管理 Q2：SW-C 能感知 ECU 正在唤醒 / 运行 / 休眠 / 关机吗？通过什么接口？ 原始 Flomo：v.flomoapp.com/mine/ SW-C 生命周期与状态管理 Q2：SW-C 能感知 ECU 正在唤醒 / 运行 / 休眠 / 关机吗？通过什么接口？ 答：可以。SW-C 通过 RTE 的 Mode 接口（Mode Management）感知外部模式，途径是 ECU 模式（由 EcuM 管理）经 RTE 广播给 SW-C。 具体接口： Mode Port：SW-C 上配一个 Mode 类型的 Receiver Port，接收来自模式源（EcuM /... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:56:33 GMT</pubDate>
+  </item><item>
+    <title>ARXML 解析与自动化脚本 Q1：用 Python + lxml 自动生成 / 检查 AUTOSAR 配置？常见自动化场景有哪些？</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/ARXML-Python%E4%B8%8Elxml%E8%87%AA%E5%8A%A8%E5%8C%96</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/ARXML-Python%E4%B8%8Elxml%E8%87%AA%E5%8A%A8%E5%8C%96</guid>
+    <description><![CDATA[ ARXML 解析与自动化脚本 Q1：用 Python + lxml 自动生成 / 检查 AUTOSAR 配置？常见自动化场景有哪些？ 原始 Flomo：v.flomoapp.com/mine/ ARXML 解析与自动化脚本 Q1：用 Python + lxml 自动生成 / 检查 AUTOSAR 配置？常见自动化场景有哪些？ 答：可以。ARXML 本质是 XML，用 lxml / xml.etree + XPath 就能解析、生成、检查。 常见自动化场景： 批量重命名 / 修改：批量给 PDU 名称加前后缀、批量改 PDU 的 CAN ID / DLC、批量给 SW-C 加端口。 一致性 / ... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:56:30 GMT</pubDate>
+  </item><item>
     <title>AUTOSAR</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/</guid>
@@ -47,24 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/</guid>
     <description><![CDATA[ AUTOSAR MCAL 模块配置说明 · 总览 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 模块配置说明 · 总览 （专题起点，逐模块展开） MCAL（微控制器抽象层）是 AUTOSAR 最底层、唯一碰寄存器/硬件寄存器的层——每个模块对应一类硬件外设。 核心模块清单与配置要点： Mcu：时钟（PLL）、复位、功耗模式、RAM 段——配好时钟树和复位源。 Port：引脚复用/方向、初始电平、上拉下拉——每根引脚选功能、方向、上下拉。 Dio：数字 I/O 读写，通道/端口——比 Port 上层，只管读写位。 Adc：ADC 采样——通道、转换组、分辨... ]]></description>
     <pubDate>Sat, 31 Oct 2026 07:54:26 GMT</pubDate>
-  </item><item>
-    <title>工具链自动化构建 Q1 AUTOSAR 配置工具（Davinci / EB）和代码构建（make/cmake）怎么衔接？怎么跟 CI 集成？有没有 headless 模式？</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%93%BE-Configurator%E4%B8%8ECI%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%93%BE-Configurator%E4%B8%8ECI%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA</guid>
-    <description><![CDATA[ 工具链自动化构建 Q1：AUTOSAR 配置工具（Davinci / EB）和代码构建（make/cmake）怎么衔接？怎么跟 CI 集成？有没有 headless 模式？ 原始 Flomo：v.flomoapp.com/mine/ 工具链自动化构建 Q1：AUTOSAR 配置工具（Davinci / EB）和代码构建（make/cmake）怎么衔接？怎么跟 CI 集成？有没有 headless 模式？ 答案：有，大多数工具支持命令行 / 无头模式（headless / CLI），这是配置生成能进 CI 的关键。 衔接思路（三步）： 用工具的 headless 命令行生成代码： EB tres... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:53:33 GMT</pubDate>
-  </item><item>
-    <title>Dcm 协议多路复用 Q2 用 DoIP 刷写和用 CAN TP 刷写同一个 ECU——Dcm 层处理逻辑一样吗？刷写速率谁快？CAN 路径断电接着刷，DoIP 支持同样的恢复吗？</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Dcm-DoIP%E4%B8%8ECanTp%E5%A4%9A%E8%B7%AF%E5%88%B7%E5%86%99</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Dcm-DoIP%E4%B8%8ECanTp%E5%A4%9A%E8%B7%AF%E5%88%B7%E5%86%99</guid>
-    <description><![CDATA[ Dcm 协议多路复用 Q2：用 DoIP 刷写和用 CAN TP 刷写同一个 ECU——Dcm 层处理逻辑一样吗？刷写速率谁快？CAN 路径断电接着刷，DoIP 支持同样的恢复吗？ 原始 Flomo：v.flomoapp.com/mine/ Dcm 协议多路复用 Q2：用 DoIP 刷写和用 CAN TP 刷写同一个 ECU——Dcm 层处理逻辑一样吗？刷写速率谁快？CAN 路径断电接着刷，DoIP 支持同样的恢复吗？ Dcm 层处理逻辑一样吗？ 上层 Dcm 的服务处理逻辑（会话、安全访问、0x34 请求下载、0x36 TransferData、0x37 请求退出传输、0x11 复位等刷写流... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:53:30 GMT</pubDate>
-  </item><item>
-    <title>NvM 块管理策略深入 Q1 Redundant 块怎么判断「哪一份是好的」？NvM 用什么机制判断数据完整性？</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/NvM-%E5%86%97%E4%BD%99%E5%9D%97%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%AE%8C%E6%95%B4%E6%80%A7</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/NvM-%E5%86%97%E4%BD%99%E5%9D%97%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%AE%8C%E6%95%B4%E6%80%A7</guid>
-    <description><![CDATA[ NvM 块管理策略深入 Q1：Redundant 块怎么判断「哪一份是好的」？NvM 用什么机制判断数据完整性？ 原始 Flomo：v.flomoapp.com/mine/ NvM 块管理策略深入 Q1：Redundant 块怎么判断「哪一份是好的」？NvM 用什么机制判断数据完整性？ NvM 判断完整性主要靠 CRC 校验 + Block 状态标记（可能加序列号）。 机制： CRC / 校验：每个 NvM Block 存储时附带 CRC（NvM 的 Block 配置可开 CRC），写入时算 CRC、读时校验。 Redundant 双副本读写： 写入：把数据写两份（主副本 + 冗余副本）。 读... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:53:27 GMT</pubDate>
   </item>
     </channel>
   </rss>
