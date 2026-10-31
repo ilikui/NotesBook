@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>ECUExtract与SystemDescription映射</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/ECUExtract%E4%B8%8ESystemDescription%E6%98%A0%E5%B0%84</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/ECUExtract%E4%B8%8ESystemDescription%E6%98%A0%E5%B0%84</guid>
+    <description><![CDATA[ ECU Extract 与 System Description 映射 原始 Flomo：v.flomoapp.com/mine/ VFB 的 System Description 怎么「提取」出单个 ECU 的配置？ECU Extract 是裁剪还是映射？ System Description（系统描述）：在 VFB 层面描述整个系统——所有 SW-C、所有连接、所有接口、所有 ECU 的抽象。它不含任何具体 ECU 的实现信息（内存地址、总线映射、周期细节都没有）。 ECU Extract of System Description（ECU 抽取）：从系统描述里抽出「属于某个特定 ECU」... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 09:17:39 GMT</pubDate>
+  </item><item>
+    <title>SWC跨ECU部署与RTE代码差异</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC%E8%B7%A8ECU%E9%83%A8%E7%BD%B2%E4%B8%8ERTE%E4%BB%A3%E7%A0%81%E5%B7%AE%E5%BC%82</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC%E8%B7%A8ECU%E9%83%A8%E7%BD%B2%E4%B8%8ERTE%E4%BB%A3%E7%A0%81%E5%B7%AE%E5%BC%82</guid>
+    <description><![CDATA[ SW-C 跨 ECU 部署与 RTE 代码差异 原始 Flomo：v.flomoapp.com/mine/ 同一组 SW-C 部署到不同 ECU，RTE 生成代码差多少？哪些重配、哪些复用？ RTE 是 基于每个 ECU 的 ECU Extract 生成的，所以同一组 SW-C 部署到不同 ECU，生成的 RTE 代码差别很大——因为每个 ECU 的通信拓扑、可用总线、部署的 SW-C 集合都不同。 会不同的部分（需按 ECU 重配）： RTE 收发实现：同 ECU 内的 S/R 通信走 RTE 内部（直接拷贝/引用）；跨 ECU 通信要经 COM→PduR→CanIf 等 BSW 栈。同一个... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 09:17:26 GMT</pubDate>
+  </item><item>
     <title>标准版本演进与命名规则</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E6%A0%87%E5%87%86%E7%89%88%E6%9C%AC%E6%BC%94%E8%BF%9B%E4%B8%8E%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E6%A0%87%E5%87%86%E7%89%88%E6%9C%AC%E6%BC%94%E8%BF%9B%E4%B8%8E%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99</guid>
@@ -53,18 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90Q2-BSW%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91%E5%AE%8F%E5%88%A4%E6%96%AD</guid>
     <description><![CDATA[ 生成代码分析与集成 Q2：BSW 生成代码用宏控制条件编译——怎么确定某配置参数对应宏是 ENABLED 还是 DISABLED？ 原始 Flomo：v.flomoapp.com/mine/ 生成代码分析与集成 Q2：BSW 生成代码用宏控制条件编译——怎么确定某配置参数对应宏是 ENABLED 还是 DISABLED？ 生成器把每个配置参数翻译成预处理器宏，命名有规律（如 XXX_ENABLED / XXX_ACTIVE / XXX_USE_…），值为 STD_ON / STD_OFF 或 TRUE / FALSE。 三个直接手段： 看生成的配置头文件（_Cfg.h）：在生成目录里搜宏名（如... ]]></description>
     <pubDate>Sat, 31 Oct 2026 09:13:08 GMT</pubDate>
-  </item><item>
-    <title>生成代码分析Q3-RteType类型一致性</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90Q3-RteType%E7%B1%BB%E5%9E%8B%E4%B8%80%E8%87%B4%E6%80%A7</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90Q3-RteType%E7%B1%BB%E5%9E%8B%E4%B8%80%E8%87%B4%E6%80%A7</guid>
-    <description><![CDATA[ 生成代码分析与集成 Q3：Rte_Type.h 定义了哪些类型？应用层类型和 RTE 生成类型不一致，谁说了算？ 原始 Flomo：v.flomoapp.com/mine/ 生成代码分析与集成 Q3：Rte_Type.h 定义了哪些类型？应用层类型和 RTE 生成类型不一致，谁说了算？ Rte_Type.h 是 RTE 生成的头文件，主要包含： 数据建模导出的 C 类型：AUTOSAR 系统描述里的 Application Data Type / Implementation Data Type 被映射成 C 类型（primitive、array、record、union），这些 typede... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 09:13:04 GMT</pubDate>
-  </item><item>
-    <title>运行时问题定位Q1-CAN报文发送链路</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8DQ1-CAN%E6%8A%A5%E6%96%87%E5%8F%91%E9%80%81%E9%93%BE%E8%B7%AF</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8DQ1-CAN%E6%8A%A5%E6%96%87%E5%8F%91%E9%80%81%E9%93%BE%E8%B7%AF</guid>
-    <description><![CDATA[ 运行时问题定位 Q1：某路 CAN 报文没发出来——从 Rte_Write 顺藤摸瓜，逐层查哪个返回值？ 原始 Flomo：v.flomoapp.com/mine/ 运行时问题定位 Q1：某路 CAN 报文没发出来——从 Rte_Write 顺藤摸瓜，逐层查哪个返回值？ 关键思路：沿发送链路逐层看返回值，哪一层返回 E_NOT_OK 就锁定在哪一层（或它的下游配置）。 发送链路与检查点： RTE：Rte_Write 返回 E_OK / E_NOT_OK。返回错 → 端口/接口或该 PDU 配置有问题。 COM：Com_TransmitSignal / Com_UpdateShadowSigna... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 09:13:01 GMT</pubDate>
   </item>
     </channel>
   </rss>
