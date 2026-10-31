@@ -80,6 +80,12 @@ flowchart TD
 - [[1000问/Dcm-DoIP与CanTp多路刷写]] —— DoIP 与 CAN TP 刷写路径差异和恢复边界。
 - [[1000问/工具链-Configurator与CI自动化构建]] —— 配置工具、构建系统与 CI 自动化衔接。
 
+- [[1000问/Adaptive与ROS2-Node和ExecutionCluster对比]] —— Adaptive Execution Management 与 ROS 2 Node 的架构边界。
+- [[1000问/Adaptive与ROS2-量产ECU架构选型]] —— 量产 ECU 中 ROS 2 与 AUTOSAR Adaptive 的选型依据。
+- [[1000问/J1939与CanTp-多帧传输和UDS共存]] —— J1939 BAM/CMDT、CanTp 与 UDS 传输共存。
+- [[1000问/J1939与AUTOSAR-PGN映射]] —— J1939 PGN 与 AUTOSAR 信号/PDU 建模关系。
+- [[1000问/ARXML语义Diff与CI检测]] —— ARXML 版本差异的语义识别与 CI 自动检测。
+
 ## MCAL 驱动配置
 
 - [[MCAL/Dma]] —— DMA 通道与数据搬运配置。
