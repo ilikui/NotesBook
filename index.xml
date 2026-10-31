@@ -6,6 +6,24 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>AUTOSAR MCAL 配置说明 · 模块④ Adc</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Adc</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Adc</guid>
+    <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块④ Adc 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块④ Adc Adc 是 ADC（模数转换）驱动模块，把模拟信号转成数字量。管采样通道、转换组、触发源、分辨率、采样时间、结果读取。 核心职责：配置 ADC 通道与转换组、启动转换、读取转换结果。 关键配置项： AdcChannelConfiguration：通道，映射到具体 ADC 输入通道。 AdcGroup：转换组，同一次触发采样的多个通道归一组。 AdcGroupConversionMode：转换模式（单次 / 连续 / 组转换）... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:50:15 GMT</pubDate>
+  </item><item>
+    <title>AUTOSAR MCAL 配置说明 · 模块⑤ Icu</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Icu</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Icu</guid>
+    <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块⑤ Icu 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块⑤ Icu Icu（输入捕获）驱动，用来测量外部信号的边沿、周期、脉宽——比如测转速/轮速传感器信号、外设方波频率与占空比，提供测量完成的回调通知。 核心职责：边沿检测、信号周期/脉宽测量、时间戳、通知回调。 关键配置项： IcuChannelConfiguration：通道配置（映射到定时器输入捕获通道 / 引脚）。 IcuMeasurementMode：测量模式（信号测量：周期 / 脉宽 / 两个边沿之间时间；边沿检测）。 IcuS... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:50:12 GMT</pubDate>
+  </item><item>
+    <title>AUTOSAR MCAL 配置说明 · 模块⑥ Ocu</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Ocu</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Ocu</guid>
+    <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块⑥ Ocu 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块⑥ Ocu Ocu（输出比较）驱动，在定时器计数值达到比较值时翻转 / 置位 / 清位输出引脚，产生精确边沿、脉冲、时基信号，也是 Pwm 的底层基础。 核心职责：定时器比较输出、边沿/脉冲产生、比较事件回调。 关键配置项： OcuChannelConfiguration：通道配置（映射到定时器比较通道 / 引脚）。 OcuMode：比较模式——翻转 / 置位 / 清位 / 无操作，支持多比较值。 OcuCompareValue / C... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:50:08 GMT</pubDate>
+  </item><item>
     <title>AUTOSAR</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/</guid>
@@ -47,24 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Fls</guid>
     <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块⑫ Fls 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块⑫ Fls Fls 是 Flash 驱动（MCAL 层），负责 MCU 内部 / 外部 Flash 的读、写、擦除、校验。它是存储栈最底层，上层是 Fee（Flash EEPROM 仿真）→ NvM。 核心职责：扇区擦除、写入、读取、校验，异步 job 管理。 关键配置项： FlsSectorConfiguration：扇区配置（起始地址、扇区大小、扇区数量）。 FlsGeneralConfiguration：整体配置（FlsMaxRe... ]]></description>
     <pubDate>Sat, 31 Oct 2026 07:47:30 GMT</pubDate>
-  </item><item>
-    <title>AUTOSAR MCAL 配置说明 · 模块⑬ Eep</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Eep</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Eep</guid>
-    <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块⑬ Eep 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块⑬ Eep Eep 是 EEPROM 驱动（MCAL 层），负责 MCU 内部 / 外部 EEPROM 的读、写、擦除。它是存储栈的驱动层，上层接 NvM。 核心职责：EEPROM 分区读写、擦除、异步 job 管理。 关键配置项： EepSectorConfiguration：扇区配置（EEPROM 分区地址、大小、数量）。 EepRead / EepWrite / EepErase：读、写、擦配置。 EepJobConfigurat... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:47:27 GMT</pubDate>
-  </item><item>
-    <title>AUTOSAR MCAL 配置说明 · 模块⑭ Wdg</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Wdg</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Wdg</guid>
-    <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块⑭ Wdg 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块⑭ Wdg Wdg（看门狗驱动）负责看门狗硬件的超时、模式、喂狗。注意：MCAL 的 Wdg 只管驱动层，上层 WdgIf / WdgM 做看门狗管理与周期触发。 核心职责：看门狗超时配置、模式切换、触发条件（喂狗）。 关键配置项： WdgDevice：设备配置（映射到看门狗硬件）。 WdgSettingConfiguration：设置——超时时间（WdgTimeout）、模式（WdgMode：Fast / Slow / Off）。 W... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:47:25 GMT</pubDate>
-  </item><item>
-    <title>AUTOSAR MCAL 配置说明 · 模块⑮ Mpu（可选）</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/Mpu</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/Mpu</guid>
-    <description><![CDATA[ AUTOSAR MCAL 配置说明 · 模块⑮ Mpu（可选） 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 配置说明 · 模块⑮ Mpu（可选） Mpu（内存保护单元）驱动是 可选模块，用于功能安全 / 内存隔离。它配置 MPU 硬件，为不同分区设定内存访问权限（读 / 写 / 执行），防止非法访问，支撑 AUTOSAR 的 Memory Protection 与 Freedom from Interference。 核心职责：内存区域访问权限配置、区域启停、配合 OS 上下文切换。 关键配置项： MpuRegionConfiguration：内存区域... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:47:22 GMT</pubDate>
   </item>
     </channel>
   </rss>
