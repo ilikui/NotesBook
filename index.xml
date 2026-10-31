@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>KM</title>
+    <link>https://wiki.likui.info/Area/KM/</link>
+    <guid>https://wiki.likui.info/Area/KM/</guid>
+    <description><![CDATA[ KM（Knowledge Management，知识管理） 关注如何高效地收集、理解、组织、连接和复用个人知识。它不只是工具问题，更是一套帮助思考与行动持续改进的方法。 一句话定位 让知识「进得来、找得到、连得上、用得上」，并最终转化为判断、作品与行动。 知识管理地图 flowchart TD A[&quot;知识输入&quot;] --&gt; B[&quot;捕捉与收集&quot;] B --&gt; C[&quot;阅读与理解&quot;] C --&gt; D[&quot;提炼为自己的表达&quot;] D --&gt; E[&quot;组织与连接&quot;] E --&gt; F[... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 08:57:40 GMT</pubDate>
+  </item><item>
+    <title>程序员笔记整理方法</title>
+    <link>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%A8%8B%E5%BA%8F%E5%91%98%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86%E6%96%B9%E6%B3%95</link>
+    <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%A8%8B%E5%BA%8F%E5%91%98%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86%E6%96%B9%E6%B3%95</guid>
+    <description><![CDATA[ 作为程序员，良好的笔记整理方法可以帮助你更高效地学习、记忆和应用知识。下面是一些常用的程序员笔记整理方法： 原始 Flomo：v.flomoapp.com/mine/ 作为程序员，良好的笔记整理方法可以帮助你更高效地学习、记忆和应用知识。下面是一些常用的程序员笔记整理方法： 组织结构： 使用清晰的标题和子标题，以便快速浏览和定位信息。 使用层次结构，例如使用标题、子标题、编号列表等来组织相关的概念和主题。 分类和标签： 将笔记按照相关性和主题进行分类，例如按语言、框架、概念等。 使用标签或关键词来标记笔记，以便快速检索和过滤相关内容。 示例和代码片段： 在笔记中包含实际的示例和代码片段，以帮助... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 08:56:40 GMT</pubDate>
+  </item><item>
     <title>卡片盒笔记法操作步骤</title>
     <link>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%8D%A1%E7%89%87%E7%9B%92%E7%AC%94%E8%AE%B0%E6%B3%95%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4</link>
     <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%8D%A1%E7%89%87%E7%9B%92%E7%AC%94%E8%AE%B0%E6%B3%95%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4</guid>
@@ -30,12 +42,6 @@
     <description><![CDATA[ 搭建自己的数字花园 原始 Flomo：v.flomoapp.com/mine/ 搭建自己的数字花园 类似于:Digital Garden - Publish Obsidian Notes For Free (ole.dev) 梅人馆: 《活用一辈子的笔记术》 myfunsky.blogspot.com/2012/03/blog-post_3407.html www.mysecretrainbow.com/career/20331.html 可以共享自己的备忘录 然后做成一个网站 montaigne.io/ www.icloud.com.cn/notes/049q6SO7TZr0e2B_v5uJ... ]]></description>
     <pubDate>Sat, 31 Oct 2026 08:56:24 GMT</pubDate>
   </item><item>
-    <title>KM</title>
-    <link>https://wiki.likui.info/Area/KM/</link>
-    <guid>https://wiki.likui.info/Area/KM/</guid>
-    <description><![CDATA[ KM（Knowledge Management，知识管理） 关注如何高效地收集、理解、组织、连接和复用个人知识。它不只是工具问题，更是一套帮助思考与行动持续改进的方法。 一句话定位 让知识「进得来、找得到、连得上、用得上」，并最终转化为判断、作品与行动。 知识管理地图 flowchart TD A[&quot;知识输入&quot;] --&gt; B[&quot;捕捉与收集&quot;] B --&gt; C[&quot;阅读与理解&quot;] C --&gt; D[&quot;提炼为自己的表达&quot;] D --&gt; E[&quot;组织与连接&quot;] E --&gt; F[... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 08:56:05 GMT</pubDate>
-  </item><item>
     <title>专栏⑰·第4篇：课本定义的数学概念 vs 工程里的实际用法——“最短路径”和“特征分解”的差距</title>
     <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC4%E7%AF%87-%E8%AF%BE%E6%9C%AC%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%AE%9E%E9%99%85</link>
     <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E7%AC%AC4%E7%AF%87-%E8%AF%BE%E6%9C%AC%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%AE%9E%E9%99%85</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E5%8D%A1%E7%89%87%E7%9B%92%E8%BD%AF%E4%BB%B6%E5%8A%9F%E8%83%BD%E9%9C%80%E6%B1%82</guid>
     <description><![CDATA[ 数字卡片盒软件功能需求 原始 Flomo：v.flomoapp.com/mine/ 比卢曼幸运的是，我们所生活的是一个已经有了超链接的数字化时代，可以轻松使用软件工具来构建他所主张的这种超文本信息系统。但如果想使用软件来建立专属于自己的卡片盒笔记系统，我们所选择的软件应该具备以下基本功能： 支持构建超文本系统：这项功能必须要让人在阅读任何一篇笔记时都能借助于超链接直接跳转到任何与当前笔记相关联的其他笔记。 支持全文搜索功能：全文搜索功能相当于卢曼在他的卡片盒笔记系统中利用索引表提供的、进入系统的入口（全文搜索显然更强大）。 支持沙盒功能：卢曼建立他的卡片盒笔记系统时还具备了一个隐含设施，那就是... ]]></description>
     <pubDate>Sat, 31 Oct 2026 08:54:04 GMT</pubDate>
-  </item><item>
-    <title>SuperMemo二十条规则</title>
-    <link>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/SuperMemo%E4%BA%8C%E5%8D%81%E6%9D%A1%E8%A7%84%E5%88%99</link>
-    <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/SuperMemo%E4%BA%8C%E5%8D%81%E6%9D%A1%E8%A7%84%E5%88%99</guid>
-    <description><![CDATA[ SuperMemo 的 20 条规则 原始 Flomo：v.flomoapp.com/mine/ SuperMemo的20条规则： 不理解就不学习 永远不要试图记忆你无法理解的东西 先学后记 在记忆细节前，先建立知识的整体框架 从基础开始 先掌握最核心、最简单的概念，再构建复杂的知识 坚持最小信息原则 每张卡片只包含一个知识点，保持简单 保持卡片最简单，知识点不要太对 使用封闭式提问 尽量避免开放式问题，确保问题指向唯一、明确的答案 使用图片 善用视觉元素辅助记忆，有时一张图胜过千言万语 使用助记技巧 运用记忆宫殿、数字桩等联想方法，为抽象信息提供“记忆锚点” 图形化（基于图片的挖空） 在图片... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 08:53:54 GMT</pubDate>
   </item>
     </channel>
   </rss>
