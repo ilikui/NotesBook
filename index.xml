@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>E2E / 端到端通信保护深入 Q2：E2E 报文到达但 CRC 校验失败——丢弃还是用上次有效值？AUTOSAR 推荐做法？</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/E2E-CRC%E5%A4%B1%E8%B4%A5%E6%97%B6%E7%9A%84%E6%8E%A5%E6%94%B6%E7%AD%96%E7%95%A5</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/E2E-CRC%E5%A4%B1%E8%B4%A5%E6%97%B6%E7%9A%84%E6%8E%A5%E6%94%B6%E7%AD%96%E7%95%A5</guid>
+    <description><![CDATA[ E2E / 端到端通信保护深入 Q2：E2E 报文到达但 CRC 校验失败——丢弃还是用上次有效值？AUTOSAR 推荐做法？ 原始 Flomo：v.flomoapp.com/mine/ E2E / 端到端通信保护深入 Q2：E2E 报文到达但 CRC 校验失败——丢弃还是用上次有效值？AUTOSAR 推荐做法？ 先分清：E2E 库只负责「检测 + 报告」，不替应用决定用哪个值。 推荐流程： E2E check（E2E_PXXCheck）返回状态：OK / REPEATED / WRONGSEQUENCE / ERROR / NONEWDATA 等。 CRC 校验失败 → 状态 ERROR。此... ]]></description>
+    <pubDate>Sat, 31 Oct 2026 07:56:38 GMT</pubDate>
+  </item><item>
     <title>SW-C 生命周期与状态管理 Q1：一个 Application SW-C 从 ECU 上电到正常运行的生命周期？开始/停止执行 Runnable 是由谁控制的？</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC%E4%B8%8A%E7%94%B5%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%8ERunnable%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC%E4%B8%8A%E7%94%B5%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%8ERunnable%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Adaptive%E4%B8%8EROS2-Node%E5%92%8CExecutionCluster%E5%AF%B9%E6%AF%94</guid>
     <description><![CDATA[ AUTOSAR 与 ROS 2 对比 Q2：ROS 2 的 Node 和 Adaptive 的 Process（Execution Cluster）在架构思维上的最大区别？ROS 2 开发者转 Adaptive 最需要适应什么？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 与 ROS 2 对比 Q2：ROS 2 的 Node 和 Adaptive 的 Process（Execution Cluster）在架构思维上的最大区别？ROS 2 开发者转 Adaptive 最需要适应什么？ 最大区别（三个层面）： 单元性质：ROS 2 Node 是「功能性 / 逻辑」单... ]]></description>
     <pubDate>Sat, 31 Oct 2026 07:54:49 GMT</pubDate>
-  </item><item>
-    <title>AUTOSAR MCAL 模块配置说明 · 总览</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/MCAL/</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/MCAL/</guid>
-    <description><![CDATA[ AUTOSAR MCAL 模块配置说明 · 总览 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR MCAL 模块配置说明 · 总览 （专题起点，逐模块展开） MCAL（微控制器抽象层）是 AUTOSAR 最底层、唯一碰寄存器/硬件寄存器的层——每个模块对应一类硬件外设。 核心模块清单与配置要点： Mcu：时钟（PLL）、复位、功耗模式、RAM 段——配好时钟树和复位源。 Port：引脚复用/方向、初始电平、上拉下拉——每根引脚选功能、方向、上下拉。 Dio：数字 I/O 读写，通道/端口——比 Port 上层，只管读写位。 Adc：ADC 采样——通道、转换组、分辨... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 07:54:26 GMT</pubDate>
   </item>
     </channel>
   </rss>
