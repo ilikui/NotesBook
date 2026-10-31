@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>AUTOSAR 1000问：基础架构、通信与存储</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%9F%BA%E7%A1%80%E6%9E%B6%E6%9E%84%E9%80%9A%E4%BF%A1%E4%B8%8E%E5%AD%98%E5%82%A8</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%9F%BA%E7%A1%80%E6%9E%B6%E6%9E%84%E9%80%9A%E4%BF%A1%E4%B8%8E%E5%AD%98%E5%82%A8</guid>
+    <description><![CDATA[ AUTOSAR 1000问：基础架构、通信与存储 本篇整理 Flomo 中已形成完整答案的首批 10 个基础问题。内容围绕 AUTOSAR 的标准定位、分层、RTE、Runnable、配置生成、通信路由和非易失存储展开。原始题目库仍保留在 Flomo，本文是迁移后的结构化答案。 一、基础概念 Q1. ]]></description>
+    <pubDate>Sat, 31 Oct 2026 01:10:15 GMT</pubDate>
+  </item><item>
     <title>1000问知识体系</title>
     <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
     <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
@@ -58,12 +64,6 @@
     <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/ARAComAPI</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/ARAComAPI</guid>
     <description><![CDATA[ ARAComAPI 是 AP 通信管理 API（ara::com）的入门解释文档。因为直接读正式规范不易理解，本文档专为两类读者做入口：AP 应用开发者（用 ara::com 与其它应用 / 服务交互）与 AP 平台供应商（为 ara::com 实现优化的 IPC 绑定的实现者）。 一句话定位 学 ara::com 之前必读的引导文档：先懂设计意图与行为，再看 SWS 的形式化细节。 规范信息 项目内容平台AP类别EXP — 解释性指南（Explanation）UID846版本R25-11本地 PDFAUTOSAR_AP_EXP_ARAComAPI.pdf纯文本全文AP_EXP_ARAComA... ]]></description>
-    <pubDate>Fri, 30 Oct 2026 11:26:38 GMT</pubDate>
-  </item><item>
-    <title>BSWDistributionGuide</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/BSWDistributionGuide</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/BSWDistributionGuide</guid>
-    <description><![CDATA[ BSWDistributionGuide 是 CP 解释性指南（EXP），讲清一个核心问题：基础软件（BSW）如何分布到多核 CPU 的不同分区（Partition）上，以及在功能安全场景下如何做分区隔离与内存保护。它分两部分：多核分布与安全分布。 一句话定位 学 CP 的第一站：先理解「BSW 怎么摆到多核 / 分区分核」，后面所有模块的部署都以它为背景。 规范信息 项目内容平台CP类别EXP — 解释性指南（Explanation）UID631版本R25-11本地 PDFAUTOSAR_CP_EXP_BSWDistributionGuide.pdf纯文本全文CP_EXP_BSWDistri... ]]></description>
     <pubDate>Fri, 30 Oct 2026 11:26:38 GMT</pubDate>
   </item>
     </channel>
