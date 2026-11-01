@@ -24,3 +24,11 @@ Rte\_Type.h 是 RTE 生成的头文件，主要包含：
 总表：<https://v.flomoapp.com/mine/?memo_id=MjMxMTQ2NDk4>
 
 #Area/技术/AUTOSAR
+
+## 类型来源与接口边界补充
+
+RTE 生成类型通常由系统描述中的 ApplicationDataType、ImplementationDataType、DataTypeMappingSet、CompuMethod、DataConstr 等模型及生成器规则决定。Rte_Type.h 是重要产物，但不同工具/配置可能把类型拆分到多个生成头文件，不能假定所有类型只存在一个文件。
+
+正确流程是追踪：SWC Port Interface → DataElement 类型引用 → Application/Implementation Data Type 映射 → 生成的 C typedef → Rte_Read/Rte_Write/Rte_Call 原型。应用代码应遵守生成接口契约；若类型不符合预期，先修正 ARXML 数据模型/映射并重新生成，而不是手工改生成头文件。
+
+同时检查基础类型宽度、signedness、对齐、数组长度、枚举值、单位/缩放和内存映射。相同 typedef 名不代表二进制布局一定兼容。
