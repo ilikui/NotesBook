@@ -6,6 +6,24 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>AUTOSAR</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/</guid>
+    <description><![CDATA[ AUTOSAR（AUTomotive Open System ARchitecture，汽车开放系统架构）是由全球主要汽车厂商、零部件供应商与半导体公司联合制定的汽车电子软件架构标准。它的目标是让汽车软件标准化、可复用、可跨平台移植，是当今智能汽车软件开发的行业基石。 一句话定位 AUTOSAR = 汽车软件的「操作系统级标准」：定义分层架构、组件模型、通信机制与开发流程，让不同厂商的软件能像积木一样拼装。 知识体系 flowchart TD A[AUTOSAR] --&gt; B[核心理念] A --&gt; C[软件架构] A --&gt; D[方法论] A --&gt; E[标准与规范]... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 13:39:30 GMT</pubDate>
+  </item><item>
+    <title>生成代码分析Q2-BSW条件编译宏判断</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90Q2-BSW%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91%E5%AE%8F%E5%88%A4%E6%96%AD</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90Q2-BSW%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91%E5%AE%8F%E5%88%A4%E6%96%AD</guid>
+    <description><![CDATA[ 生成代码分析与集成 Q2：BSW 生成代码用宏控制条件编译——怎么确定某配置参数对应宏是 ENABLED 还是 DISABLED？ 原始 Flomo：v.flomoapp.com/mine/ 生成代码分析与集成 Q2：BSW 生成代码用宏控制条件编译——怎么确定某配置参数对应宏是 ENABLED 还是 DISABLED？ 生成器把每个配置参数翻译成预处理器宏，命名有规律（如 XXX_ENABLED / XXX_ACTIVE / XXX_USE_…），值为 STD_ON / STD_OFF 或 TRUE / FALSE。 三个直接手段： 看生成的配置头文件（_Cfg.h）：在生成目录里搜宏名（如... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 13:39:16 GMT</pubDate>
+  </item><item>
+    <title>变体管理 Q1：一套 AUTOSAR 代码适配高配 / 低配车——怎么做到不维护两套配置？</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%8F%98%E4%BD%93%E7%AE%A1%E7%90%86-%E9%AB%98%E4%BD%8E%E9%85%8D%E8%BD%A6%E5%9E%8B%E5%A4%8D%E7%94%A8</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%8F%98%E4%BD%93%E7%AE%A1%E7%90%86-%E9%AB%98%E4%BD%8E%E9%85%8D%E8%BD%A6%E5%9E%8B%E5%A4%8D%E7%94%A8</guid>
+    <description><![CDATA[ 变体管理 Q1：一套 AUTOSAR 代码适配高配 / 低配车——怎么做到不维护两套配置？ 原始 Flomo：v.flomoapp.com/mine/ 变体管理 Q1：一套 AUTOSAR 代码适配高配 / 低配车——怎么做到不维护两套配置？ 核心：不是维护两套配置，而是一套配置 + 变体条件（Variant Handling / Variant Point），按「当前激活的变体」解析出需要的部分。 三个关键概念： 变体点（Variant Point）：配置里「可以变化」的元素——一个参数、一个 PDU、一个 SW-C、一个端口、一条连接。 变体条件（Variant Condition）：用 ... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 13:39:13 GMT</pubDate>
+  </item><item>
     <title>SW-C 生命周期与状态管理 Q2：SW-C 能感知 ECU 正在唤醒 / 运行 / 休眠 / 关机吗？通过什么接口？</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E4%B8%8EECU%E6%A8%A1%E5%BC%8F%E6%84%9F%E7%9F%A5</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E4%B8%8EECU%E6%A8%A1%E5%BC%8F%E6%84%9F%E7%9F%A5</guid>
@@ -47,24 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q1-BSW%E6%A8%A1%E5%9D%97%E5%BF%85%E5%A1%AB%E5%8F%82%E6%95%B0</guid>
     <description><![CDATA[ 工具配置实战 Q1：新建 BSW 模块配置，哪些参数必填？填错了在哪一层报出来？ 原始 Flomo：v.flomoapp.com/mine/ 工具配置实战 Q1：新建 BSW 模块配置，哪些参数必填？填错了在哪一层报出来？ 哪些算必填： 配置工具里参数分 required（必填）和 optional（可选），工具常用标记区分（必填项带星号 / 标红 / 列为 mandatory）。 必填的一般是模块能否正常工作的关键参数——如 CAN 的波特率、帧 ID、PDU 引用、模块实例关联。缺了这些，模块行为无法确定。 填错了在哪一层被发现（三层，按时间顺序）： 配置 / 验证阶段：工具内的「验证」和... ]]></description>
     <pubDate>Sun, 01 Nov 2026 13:38:04 GMT</pubDate>
-  </item><item>
-    <title>1000问知识体系</title>
-    <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
-    <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
-    <description><![CDATA[ 1000问知识体系 这里集中整理 Flomo 中长期积累的「1000问 / 1000题 / 10000问」问题库、逐题解答和专题卡片。目标不是只保存题目，而是把每个问题沉淀为可检索、可验证、可复用的知识单元。 迁移原则：保留问题原意；合并重复题但记录关联；答案给出原理、适用边界和验证方法；技术内容尽量附 Mermaid 图；未核验的结论明确标注待核验。Flomo 原笔记暂不删除。 知识迁移流程 flowchart TD A[Flomo 原始笔记] --&gt; B[检索与盘点] B --&gt; C[按主题归类] C --&gt; D[识别重复问题] D --&gt; E[读取完整原文] E ... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 13:37:31 GMT</pubDate>
-  </item><item>
-    <title>自动驾驶 1000问 · 补充Q1：什么是端到端（End-to-End）自动驾驶？</title>
-    <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/1000%E9%97%AE/%E8%A1%A5%E5%85%85Q1-%E7%AB%AF%E5%88%B0%E7%AB%AF%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6</link>
-    <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/1000%E9%97%AE/%E8%A1%A5%E5%85%85Q1-%E7%AB%AF%E5%88%B0%E7%AB%AF%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6</guid>
-    <description><![CDATA[ 自动驾驶 1000问 · 补充Q1：什么是端到端（End-to-End）自动驾驶？ 原始 Flomo：v.flomoapp.com/mine/ 自动驾驶 1000问 · 补充Q1：什么是端到端（End-to-End）自动驾驶？ ▎ 五大学习法：费曼学习法——用一句话把它讲给外行听 一句话 把「传感器输入 → 车辆动作（转向 / 油门 / 刹车）」这一整条链交给一个学习模型整体学会，不再拆成感知、预测、规划、控制各自写规则再拼。 和传统模块化比 模块化：每块单独设计优化、可解释、能独立升级；但模块间接口靠人工设计，误差会一路累积放大。 端到端：一张大网直接从输入学到输出，围绕最终驾驶目标联合优化... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 13:37:15 GMT</pubDate>
-  </item><item>
-    <title>第37题-量产自动驾驶成本结构</title>
-    <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/1000%E9%97%AE/%E7%AC%AC37%E9%A2%98-%E9%87%8F%E4%BA%A7%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E6%88%90%E6%9C%AC%E7%BB%93%E6%9E%84</link>
-    <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/1000%E9%97%AE/%E7%AC%AC37%E9%A2%98-%E9%87%8F%E4%BA%A7%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E6%88%90%E6%9C%AC%E7%BB%93%E6%9E%84</guid>
-    <description><![CDATA[ 自动驾驶 1000问 · 十三 · 第 37 题：量产自动驾驶最烧钱的是哪一块？ 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 自动驾驶 1000问 · 十三 · 第 37 题：量产自动驾驶最烧钱的是哪一块？ 先看钱花在哪几大块 研发与人力：算法、软件、测试团队，规模大、薪资高、周期长。 数据：采集、存储、标注、训练算力——持续流出的钱。 硬件：传感器（激光雷达 / 摄像头 / 毫米波）、计算平台（SoC）、线控底盘的单车 BOM。 测试与验证：仿真平台、路测车队、试车场、标定。 量产与运营：产线、供应链、售后、保险。 哪一块最烧钱 按阶段答案不同： 研发阶段：人力和... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 13:37:09 GMT</pubDate>
   </item>
     </channel>
   </rss>
