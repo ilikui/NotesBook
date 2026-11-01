@@ -39,3 +39,29 @@ SW-C 生命周期与状态管理 Q2：SW-C 能感知 ECU 正在唤醒 / 运行 /
 SWC 接收的通常是模型中定义的 ModeSwitchInterface / ModeDeclarationGroup 及其 RTE Mode Port；模式提供者可以是 BSW Mode Manager 或其他 SWC，不能笼统认定“EcuM 直接通过 RTE 广播 RUN/POST_RUN/SLEEP 给每个 SWC”。ECU 模式、通信模式、应用功能模式是不同 Mode Declaration Group，状态值和映射由系统/ECU 配置决定。
 
 Rte_Mode 用于读取当前模式；ModeSwitchEvent 用于在模式切换时触发 Runnable。实际 API 名称、模式源和可见范围以生成的 Rte_* 头文件和 ARXML 为准。
+
+## 模式接口数据流与配置核验
+
+```mermaid
+sequenceDiagram
+  participant M as Mode Provider
+  participant R as RTE
+  participant S as SWC Mode User
+  participant T as Runnable/OS Task
+  M->>R: 发布 ModeDeclarationGroup 状态
+  R->>S: ModeSwitchEvent 通知
+  R->>T: 按事件配置调度 Runnable
+  T->>S: Runnable 执行
+  S->>R: Rte_Mode 读取当前模式
+  R-->>S: 返回当前 Mode 值
+```
+
+### 配置核对
+
+- SWC 的 R-Port 是否引用正确的 ModeSwitchInterface/ModeDeclarationGroup。
+- Mode Provider 的 P-Port、Mode Group Instance 和系统连接是否正确。
+- ModeSwitchEvent 是否关联目标 Runnable，Runnable 是否映射到正确 Task。
+- 初始模式、切换通知和模式值是否与 ECU/应用状态设计一致。
+- 对跨 ECU 或跨核模式传播，确认通信/IOC/RTE 映射和时序约束。
+
+**注意：** ECU 生命周期模式、BSW 通信模式和应用功能模式通常属于不同 ModeDeclarationGroup。SWC 只应订阅它需要的模式，不应把 EcuM、BswM、ComM 的所有状态都暴露成一个统一枚举。
