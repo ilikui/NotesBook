@@ -34,3 +34,9 @@ RTE 是 **基于每个 ECU 的 ECU Extract** 生成的，所以同一组 SW-C �
 总表：<https://v.flomoapp.com/mine/?memo_id=MjMxMTQ2NDk4>
 
 #Area/技术/AUTOSAR
+
+## 部署差异边界补充
+
+同一个 SWC 源码可复用的前提是接口契约、数据类型、实现约束、BSW API 依赖和编译宏保持兼容。跨 ECU 后 RTE 生成代码和通信映射会变化，但不能推断每个 Rte_Read/Rte_Write 都会变成 COM 路径：同 ECU 通信、跨 ECU 通信、显式通信、隐式通信和优化后的直接访问路径不同。
+
+A2L 地址也不是“RTE 部署后必然变化”的属性；它取决于标定变量、链接布局、编译/链接结果和标定描述生成流程。应通过 map/A2L 比较验证，而非仅按 ECU 名称判断。
