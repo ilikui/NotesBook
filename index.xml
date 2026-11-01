@@ -6,6 +6,36 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>看门狗与可靠性设计</title>
+    <link>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E7%9C%8B%E9%97%A8%E7%8B%97%E4%B8%8E%E5%8F%AF%E9%9D%A0%E6%80%A7%E8%AE%BE%E8%AE%A1</link>
+    <guid>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E7%9C%8B%E9%97%A8%E7%8B%97%E4%B8%8E%E5%8F%AF%E9%9D%A0%E6%80%A7%E8%AE%BE%E8%AE%A1</guid>
+    <description><![CDATA[ **专栏⑮·补充四：看门狗与可靠性——喂狗策略决定系统能不能自己活过来 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 ▎ 专栏⑮·补充四：看门狗与可靠性——喂狗策略决定系统能不能自己活过来 ▎ 看门狗是什么 硬件计数器，不喂就复位——系统卡死/死循环的唯一自救手段。汽车 ECU 里看门狗是安全要求（ISO 26262 ASIL 场景标配），裸机和 RTOS 喂狗策略完全不同。 ▎ 两种看门狗 独立看门狗（IWDG）：独立时钟（LSI），不受主时钟故障影响——卡死必复位，最可靠 窗口看门狗（WWDG）：必须在窗口期（早于下限/晚于上限都复位）喂——抓「喂太勤」的程序跑飞... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:24:56 GMT</pubDate>
+  </item><item>
+    <title>低功耗设计与唤醒管理</title>
+    <link>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E4%BD%8E%E5%8A%9F%E8%80%97%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%94%A4%E9%86%92%E7%AE%A1%E7%90%86</link>
+    <guid>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E4%BD%8E%E5%8A%9F%E8%80%97%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%94%A4%E9%86%92%E7%AE%A1%E7%90%86</guid>
+    <description><![CDATA[ 专栏⑮·补充三：低功耗设计——睡眠、唤醒、功耗测量，接住你 EcuM 的经验 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 专栏⑮·补充三：低功耗设计——睡眠、唤醒、功耗测量，接住你 EcuM 的经验 ▎ 为什么低功耗是汽车电子必修课 休眠电流超标 = 蓄电池亏电 = 车主打不着火（你专栏④ EcuM 第3篇那个 20 次假唤醒的案例）。AUTOSAR 的 EcuM 唤醒验证、休眠流程，底层就是这套低功耗设计。软件上把功耗降下来，和把休眠电流测准，是两件都要会的事。 ▎ MCU 功耗模式谱系（以 STM32 为例） Run：全速，功耗最大 Sleep：CPU 停，外设... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:24:53 GMT</pubDate>
+  </item><item>
+    <title>①&lt;u&gt;&lt;mark&gt;PC(Program Counter)&lt;/mark&gt;&lt;/u&gt;:CPU内一定会有的寄存器，不同CPU可能会用不同的名字，如IP(Instruction Pointer);是用来记 录下一个指令的地址。当CPU执行完一个指令后，PC值会自动累加，此外，某些指令（如JUMP）就是通过改变PC的值来改变CPU的执行顺序。</title>
+    <link>https://wiki.likui.info/Area/EE/1000%E9%97%AE/PC%E5%AF%84%E5%AD%98%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD%E5%90%91%E9%87%8F%E8%A1%A8</link>
+    <guid>https://wiki.likui.info/Area/EE/1000%E9%97%AE/PC%E5%AF%84%E5%AD%98%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD%E5%90%91%E9%87%8F%E8%A1%A8</guid>
+    <description><![CDATA[ ①PC(Program Counter):CPU内一定会有的寄存器，不同CPU可能会用不同的名字，如IP(Instruction Pointer);是用来记 录下一个指令的地址。当CPU执行完一个指令后，PC值会自动累加，此外，某些指令（如JUMP）就是通过改变PC的值来改变CPU的执行顺序。 原始 Flomo：v.flomoapp.com/mine/ ①PC(Program Counter):CPU内一定会有的寄存器，不同CPU可能会用不同的名字，如IP(Instruction Pointer);是用来记 录下一个指令的地址。当CPU执行完一个指令后，PC值会自动累加，此外，某些指令（如JU... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:24:50 GMT</pubDate>
+  </item><item>
+    <title>DMA数据搬运与缓存一致性</title>
+    <link>https://wiki.likui.info/Area/EE/1000%E9%97%AE/DMA%E6%95%B0%E6%8D%AE%E6%90%AC%E8%BF%90%E4%B8%8E%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7</link>
+    <guid>https://wiki.likui.info/Area/EE/1000%E9%97%AE/DMA%E6%95%B0%E6%8D%AE%E6%90%AC%E8%BF%90%E4%B8%8E%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7</guid>
+    <description><![CDATA[ 专栏⑮·补充二：DMA——数据搬运不占 CPU 的隐形引擎 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 专栏⑮·补充二：DMA——数据搬运不占 CPU 的隐形引擎 ▎ 为什么嵌入式高性能离不开 DMA UART 收一串不定长数据、ADC 连续采样 1024 点、SPI 读 Flash 一页——这些如果全用中断逐字节搬，CPU 全耗在搬运上，实时性崩。DMA 把「从外设搬到内存」这件事外包给硬件，搬完再打断你。 ▎ DMA 是什么 直接内存访问：独立于 CPU 的搬运引擎，一条总线主设备 搬运描述：源地址 + 目的地址 + 长度 + 触发源（外设事件） 搬完回调：传输... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:24:46 GMT</pubDate>
+  </item><item>
+    <title>CAN网络（通用概念参考，来自Kimi）</title>
+    <link>https://wiki.likui.info/Area/EE/%E9%80%9A%E4%BF%A1/1000%E9%97%AE/CAN%E7%BD%91%E7%BB%9C%E9%80%9A%E7%94%A8%E6%A6%82%E5%BF%B5</link>
+    <guid>https://wiki.likui.info/Area/EE/%E9%80%9A%E4%BF%A1/1000%E9%97%AE/CAN%E7%BD%91%E7%BB%9C%E9%80%9A%E7%94%A8%E6%A6%82%E5%BF%B5</guid>
+    <description><![CDATA[ CAN网络（通用概念参考，来自Kimi） 原始 Flomo：v.flomoapp.com/mine/ CAN网络（通用概念参考，来自Kimi） 📎 你的实战排查内容在此 → CAN终端电阻物理含义 v.flomoapp.com/mine/ 📎 CAN排查工具箱清单 v.flomoapp.com/mine/ 📎 CAN通信栈七层数据流 v.flomoapp.com/mine/ （原文为2024-06-11 Kimi生成的CAN总线基础介绍，已被后续实战笔记覆盖） 通信 CAN 网络基础问答补全 Q1. ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:23:35 GMT</pubDate>
+  </item><item>
     <title>CEM工作问题清单</title>
     <link>https://wiki.likui.info/Project/CEM/100%E9%97%AE/CEM%E5%B7%A5%E4%BD%9C%E9%97%AE%E9%A2%98%E6%B8%85%E5%8D%95</link>
     <guid>https://wiki.likui.info/Project/CEM/100%E9%97%AE/CEM%E5%B7%A5%E4%BD%9C%E9%97%AE%E9%A2%98%E6%B8%85%E5%8D%95</guid>
@@ -35,36 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/ModeManagementGuide</guid>
     <description><![CDATA[ ModeManagementGuide 是 CP 解释性指南（EXP），系统讲解 AUTOSAR 模式管理（Mode Management）：模式是什么、模式切换如何实现、模式管理器（Mode Manager）与模式使用者（Mode User）各自的角色，以及应用模式管理（Application Mode）与基础软件模式管理（BSW Mode）之间的关系。 一句话定位 CP 里「谁在什么条件下切到什么状态」的统一答案，BswM 是其中的中枢。 规范信息 项目内容平台CP类别EXP — 解释性指南（Explanation）UID440版本R25-11本地 PDFAUTOSAR_CP_EXP_Mo... ]]></description>
     <pubDate>Sun, 01 Nov 2026 04:20:31 GMT</pubDate>
-  </item><item>
-    <title>计算机科学自学路线与工具资源</title>
-    <link>https://wiki.likui.info/Area/CS/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E4%B8%8E%E5%B7%A5%E5%85%B7%E8%B5%84%E6%BA%90</link>
-    <guid>https://wiki.likui.info/Area/CS/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E4%B8%8E%E5%B7%A5%E5%85%B7%E8%B5%84%E6%BA%90</guid>
-    <description><![CDATA[ 计算机科学自学路线与工具资源 本页整理 Flomo「CS自学指南」中的学习路线、工具清单与跨领域概念卡。原笔记提及的 C-Free 5.0 属于历史环境记录，不代表当前推荐开发环境；实际使用应优先选择仍受维护的编译器、IDE 与工具链。 计算机科学知识地图 flowchart TD A[计算机科学] --&gt; B[数学基础] A --&gt; C[程序设计与编译] A --&gt; D[计算机系统] A --&gt; E[软件工程] A --&gt; F[网络与分布式] A --&gt; G[数据与智能] D --&gt; D1[体系结构 / 操作系统] D --&gt; D2[并行计算]... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:07:55 GMT</pubDate>
-  </item><item>
-    <title>Linux 学习指南与常用命令</title>
-    <link>https://wiki.likui.info/Area/CS/Linux%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97</link>
-    <guid>https://wiki.likui.info/Area/CS/Linux%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97</guid>
-    <description><![CDATA[ Linux 学习指南与常用命令 本页整理 Linux 系统信息、文件管理、文本处理、进程服务、网络和包管理等基础操作，并保留 Flomo 原始卡片。 Linux 运维与排障路径 flowchart TD A[遇到 Linux 问题] --&gt; B[确认系统与内核] B --&gt; C[检查文件/权限/磁盘] C --&gt; D[检查进程与服务] D --&gt; E[查看日志与内核消息] E --&gt; F[检查网络与端口] F --&gt; G[定位根因并验证修复] 权限安全提醒 原始笔记提到 chmod -R 777。这会递归授予所有用户读、写、执行权限，风险很高，不要把它当作通... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:07:49 GMT</pubDate>
-  </item><item>
-    <title>AUTOSAR 基础资料、分层与历史卡片补充</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/%E5%9F%BA%E7%A1%80%E8%B5%84%E6%96%99%E4%B8%8E%E5%88%86%E5%B1%82%E8%A1%A5%E5%85%85</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/%E5%9F%BA%E7%A1%80%E8%B5%84%E6%96%99%E4%B8%8E%E5%88%86%E5%B1%82%E8%A1%A5%E5%85%85</guid>
-    <description><![CDATA[ AUTOSAR 基础资料、分层与历史卡片补充 本页收录此前散落在 Flomo 子标签中的基础资料、分层说明和规范阅读卡片。它们补充 AUTOSAR 1000 问主线，不替代规范模块专题。原文中存在的历史描述按原意保留；涉及标准边界的内容应以对应 AUTOSAR Release 的官方规范和项目配置为准。 AUTOSAR Classic 分层关系 flowchart TB SWC[应用软件组件 SWC] RTE[运行时环境 RTE] SVC[服务层 Services] ECU[ECU抽象层 ECU Abstraction] MCAL[微控制器抽象层 MCAL] HW[微控制器与外设] CDD[复... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:07:11 GMT</pubDate>
-  </item><item>
-    <title>EE</title>
-    <link>https://wiki.likui.info/Area/EE/</link>
-    <guid>https://wiki.likui.info/Area/EE/</guid>
-    <description><![CDATA[ 电子、电气与嵌入式系统的学习地图。 ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:05:27 GMT</pubDate>
-  </item><item>
-    <title>嵌入式工程进阶与实战补充</title>
-    <link>https://wiki.likui.info/Area/EE/%E5%B5%8C%E5%85%A5%E5%BC%8F/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B7%A5%E7%A8%8B%E8%BF%9B%E9%98%B6%E4%B8%8E%E5%AE%9E%E6%88%98%E8%A1%A5%E5%85%85</link>
-    <guid>https://wiki.likui.info/Area/EE/%E5%B5%8C%E5%85%A5%E5%BC%8F/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B7%A5%E7%A8%8B%E8%BF%9B%E9%98%B6%E4%B8%8E%E5%AE%9E%E6%88%98%E8%A1%A5%E5%85%85</guid>
-    <description><![CDATA[ 嵌入式工程进阶与实战补充 本页补齐 Flomo「嵌入式学习」分类中尚未在 NotesBook 找到来源 ID 的 11 条有效卡片。内容横跨指令译码、链接脚本、电源时序、BLDC、FreeRTOS、CAN 故障、调试方法与学习资源。已在硬件、电机控制、通信专题中归档的卡片不重复复制；空白占位卡不作为知识条目迁移。 工程知识关联图 flowchart TD A[嵌入式工程] --&gt; B[处理器与指令集] A --&gt; C[启动与链接] A --&gt; D[硬件电源与信号完整性] A --&gt; E[实时软件] A --&gt; F[通信与调试] C --&gt; C1[Linker... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:05:21 GMT</pubDate>
   </item>
     </channel>
   </rss>
