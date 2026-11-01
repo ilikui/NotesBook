@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>自动驾驶 1000问 · 五 · 第 15 题：轨迹规划为什么常用 Frenet 坐标系？</title>
+    <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/1000%E9%97%AE/%E7%AC%AC15%E9%A2%98-Frenet%E5%9D%90%E6%A0%87%E7%B3%BB%E4%B8%8E%E8%BD%A8%E8%BF%B9%E8%A7%84%E5%88%92</link>
+    <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/1000%E9%97%AE/%E7%AC%AC15%E9%A2%98-Frenet%E5%9D%90%E6%A0%87%E7%B3%BB%E4%B8%8E%E8%BD%A8%E8%BF%B9%E8%A7%84%E5%88%92</guid>
+    <description><![CDATA[ 自动驾驶 1000问 · 五 · 第 15 题：轨迹规划为什么常用 Frenet 坐标系？ 原始 Flomo：v.flomoapp.com/mine/ 自动驾驶 1000问 · 五 · 第 15 题：轨迹规划为什么常用 Frenet 坐标系？ 先定义：Frenet 坐标（SL / 赛道坐标）以道路中心线为参考——s = 沿中心线的纵向弧长，d = 相对中心线的横向偏移。 为什么用它： 纵横向解耦（降维）：笛卡尔下是 2D 自由空间搜索，复杂。Frenet 下纵向（s）和横向（d）天然分开——纵向管速度 / 跟车，横向管换道 / 避让。于是规划被拆成一维纵向 + 一维横向两个简单问题。 贴合道路... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 13:35:23 GMT</pubDate>
+  </item><item>
     <title>1000问知识体系</title>
     <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
     <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/%E7%94%B5%E6%B0%94%E5%B7%A5%E7%A8%8B/10000%E9%97%AE/%E4%BC%A0%E6%84%9F%E5%99%A8%E7%94%B5%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%8E%A7%E5%88%B6%E7%94%B5%E6%9C%BA%E4%B8%8EPLC</guid>
     <description><![CDATA[ 电气工程10000问：传感器、电力系统、控制、电机与 PLC 本篇补充 Flomo 电气工程 10000 问中已经形成独立答案卡的 16 道题。覆盖传感器、电力系统、自动控制、电机拖动、电力电子与 PLC。公式和结论均需结合器件参数、控制对象、额定工况与标准版本；教学模型不等同于设备选型或安全设计依据。 逐题问答 1. ]]></description>
     <pubDate>Sun, 01 Nov 2026 13:32:06 GMT</pubDate>
-  </item><item>
-    <title>工具配置实战Q3-BSW模块引用关系</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q3-BSW%E6%A8%A1%E5%9D%97%E5%BC%95%E7%94%A8%E5%85%B3%E7%B3%BB</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q3-BSW%E6%A8%A1%E5%9D%97%E5%BC%95%E7%94%A8%E5%85%B3%E7%B3%BB</guid>
-    <description><![CDATA[ 工具配置实战 Q3：Module 间的「引用」怎么建立？填模块名还是下拉列表？ 原始 Flomo：v.flomoapp.com/mine/ 工具配置实战 Q3：Module 间的「引用」怎么建立？填模块名还是下拉列表？ 结论：不是手填模块名，而是通过下拉/浏览对话框选，选的是「强类型引用」，不是文本字符串。 为什么是下拉选择： 引用通常是模型中的强类型对象引用：它有目标路径和目标类型约束，只允许指向符合该引用定义的配置对象。具体引用容器名称和目标类型应查对应模块的 ECUC 参数定义/XSD，不能用一个供应商工具中的字段名推断所有项目。 工具提供浏览对话框：列出当前可用、且类型匹配的目标实例，... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 13:31:05 GMT</pubDate>
   </item>
     </channel>
   </rss>
