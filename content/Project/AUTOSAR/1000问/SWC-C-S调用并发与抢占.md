@@ -32,3 +32,16 @@ c. 同步超时 / 卡死：Server 依赖的资源不满足，Client 会一直等
 总表：<https://v.flomoapp.com/mine/?memo_id=MjMxMTQ2NDk4>
 
 #Area/技术/AUTOSAR
+
+## 并发语义边界补充
+
+同步 Client-Server 调用的行为取决于 RTE 生成方式、Server Runnable 的 Event-to-Task Mapping、调用方/被调用方任务和 OS 配置；不能一概认定为“同任务普通函数调用”或“一定挂起 Client”。同 ECU 的同步调用可能被生成为直接调用，也可能通过 RTE/OS 调度机制实现。
+
+要检查：
+- Server Runnable 是否可被并发调用（reentrancy 配置/生成代码行为）。
+- 是否有多个 Client、不同 Task 或不同 Core 同时访问同一 Server 状态。
+- 共享数据是否需要 OS Resource/Spinlock/IOC 等同步。
+- 调用链最坏执行时间、优先级关系、等待资源和死锁环。
+- 异步 Server Call 的 Rte_Result/结果缓存是否在正确时机读取。
+
+“RTE 保证接口语义”不等于“自动保证业务状态线程安全”；Server 内部共享状态和资源访问仍需设计并验证。
