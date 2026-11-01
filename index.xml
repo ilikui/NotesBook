@@ -6,6 +6,36 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>多核共享变量与volatile边界</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%A4%9A%E6%A0%B8%E5%85%B1%E4%BA%AB%E5%8F%98%E9%87%8F%E4%B8%8Evolatile%E8%BE%B9%E7%95%8C</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%A4%9A%E6%A0%B8%E5%85%B1%E4%BA%AB%E5%8F%98%E9%87%8F%E4%B8%8Evolatile%E8%BE%B9%E7%95%8C</guid>
+    <description><![CDATA[ 多核共享一个变量——只用 volatile 加全局变量行不行？ 原始 Flomo：v.flomoapp.com/mine/ 多核共享一个变量——只用 volatile 加全局变量行不行？ 结论：地址上能通，正确性上不行。volatile 只挡住「编译器优化」，挡不住硬件层的两件事： 缓存一致性：两个核各有自己的 cache。核 A 改了本地 cache 的副本，核 B 还在读自己 cache 里的旧副本，volatile 不会帮你做 cache 失效 / 刷新。 原子性：volatile 不提供原子操作。变量若是 32 位且跨 cache line 或没按字对齐，读写会被拆成多个总线事务，两个... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:56:16 GMT</pubDate>
+  </item><item>
+    <title>变体管理 Q1：一套 AUTOSAR 代码适配高配 / 低配车——怎么做到不维护两套配置？</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%8F%98%E4%BD%93%E7%AE%A1%E7%90%86-%E9%AB%98%E4%BD%8E%E9%85%8D%E8%BD%A6%E5%9E%8B%E5%A4%8D%E7%94%A8</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%8F%98%E4%BD%93%E7%AE%A1%E7%90%86-%E9%AB%98%E4%BD%8E%E9%85%8D%E8%BD%A6%E5%9E%8B%E5%A4%8D%E7%94%A8</guid>
+    <description><![CDATA[ 变体管理 Q1：一套 AUTOSAR 代码适配高配 / 低配车——怎么做到不维护两套配置？ 原始 Flomo：v.flomoapp.com/mine/ 变体管理 Q1：一套 AUTOSAR 代码适配高配 / 低配车——怎么做到不维护两套配置？ 核心：不是维护两套配置，而是一套配置 + 变体条件（Variant Handling / Variant Point），按「当前激活的变体」解析出需要的部分。 三个关键概念： 变体点（Variant Point）：配置里「可以变化」的元素——一个参数、一个 PDU、一个 SW-C、一个端口、一条连接。 变体条件（Variant Condition）：用 ... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:56:13 GMT</pubDate>
+  </item><item>
+    <title>变体管理 Q2：PreCompile / Link / PostBuild 三种变体处理——什么阶段决定变体？实车上靠诊断指令切换变体，选哪种？</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%8F%98%E4%BD%93%E7%AE%A1%E7%90%86-PreCompileLinkPostBuild</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%8F%98%E4%BD%93%E7%AE%A1%E7%90%86-PreCompileLinkPostBuild</guid>
+    <description><![CDATA[ 变体管理 Q2：PreCompile / Link / PostBuild 三种变体处理——什么阶段决定变体？实车上靠诊断指令切换变体，选哪种？ 原始 Flomo：v.flomoapp.com/mine/ 变体管理 Q2：PreCompile / Link / PostBuild 三种变体处理——什么阶段决定变体？实车上靠诊断指令切换变体，选哪种？ 三种方式按「决定变体的阶段」区分： PreCompile：编译前定死。生成代码 / 配置时按某个变体解析，后续不可换。适合变体早已确定、无需运行时切换的场景（按车型硬件固化）。 Link：链接阶段决定。生成代码把多个变体都编进去，链接时只选中一个（... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:56:10 GMT</pubDate>
+  </item><item>
+    <title>Spinlock与Mutex差异</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Spinlock%E4%B8%8EMutex%E5%B7%AE%E5%BC%82</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Spinlock%E4%B8%8EMutex%E5%B7%AE%E5%BC%82</guid>
+    <description><![CDATA[ Spinlock 与 Mutex 的差异 原始 Flomo：v.flomoapp.com/mine/ Spinlock 和 Mutex 都是互斥原语，差别在「拿不到锁时怎么等」。 Spinlock（自旋锁）：拿不到就原地忙等（busy-wait），不睡、不释放 CPU。适合临界区极短、等待时间可确定、等待方不能被调度的场景。 Mutex（互斥锁）：拿不到就阻塞/睡眠，把 CPU 让给别的任务，由调度器唤醒。适合临界区较长、可能触发阻塞操作（如访问慢速外设）、等待时间不可预估的场景。 多核场景怎么选： 短临界区（保护一条共享变量、一个寄存器、一段共享内存）→ Spinlock，等的时间短，忙等成... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:56:07 GMT</pubDate>
+  </item><item>
+    <title>SWC跨ECU部署与RTE代码差异</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC%E8%B7%A8ECU%E9%83%A8%E7%BD%B2%E4%B8%8ERTE%E4%BB%A3%E7%A0%81%E5%B7%AE%E5%BC%82</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC%E8%B7%A8ECU%E9%83%A8%E7%BD%B2%E4%B8%8ERTE%E4%BB%A3%E7%A0%81%E5%B7%AE%E5%BC%82</guid>
+    <description><![CDATA[ SW-C 跨 ECU 部署与 RTE 代码差异 原始 Flomo：v.flomoapp.com/mine/ 同一组 SW-C 部署到不同 ECU，RTE 生成代码差多少？哪些重配、哪些复用？ RTE 是 基于每个 ECU 的 ECU Extract 生成的，所以同一组 SW-C 部署到不同 ECU，生成的 RTE 代码差别很大——因为每个 ECU 的通信拓扑、可用总线、部署的 SW-C 集合都不同。 会不同的部分（需按 ECU 重配）： RTE 收发实现：同 ECU 内的 S/R 通信走 RTE 内部（直接拷贝/引用）；跨 ECU 通信要经 COM→PduR→CanIf 等 BSW 栈。同一个... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:56:04 GMT</pubDate>
+  </item><item>
     <title>SW-C 生命周期与状态管理 Q2：SW-C 能感知 ECU 正在唤醒 / 运行 / 休眠 / 关机吗？通过什么接口？</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E4%B8%8EECU%E6%A8%A1%E5%BC%8F%E6%84%9F%E7%9F%A5</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E4%B8%8EECU%E6%A8%A1%E5%BC%8F%E6%84%9F%E7%9F%A5</guid>
@@ -35,36 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Dcm-DoIP%E4%B8%8ECanTp%E5%A4%9A%E8%B7%AF%E5%88%B7%E5%86%99</guid>
     <description><![CDATA[ Dcm 协议多路复用 Q2：用 DoIP 刷写和用 CAN TP 刷写同一个 ECU——Dcm 层处理逻辑一样吗？刷写速率谁快？CAN 路径断电接着刷，DoIP 支持同样的恢复吗？ 原始 Flomo：v.flomoapp.com/mine/ Dcm 协议多路复用 Q2：用 DoIP 刷写和用 CAN TP 刷写同一个 ECU——Dcm 层处理逻辑一样吗？刷写速率谁快？CAN 路径断电接着刷，DoIP 支持同样的恢复吗？ Dcm 层处理逻辑一样吗？ 上层 Dcm 的服务处理逻辑（会话、安全访问、0x34 请求下载、0x36 TransferData、0x37 请求退出传输、0x11 复位等刷写流... ]]></description>
     <pubDate>Sun, 01 Nov 2026 04:55:00 GMT</pubDate>
-  </item><item>
-    <title>CryptoStackQ3-软件密码实现</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/CryptoStackQ3-%E8%BD%AF%E4%BB%B6%E5%AF%86%E7%A0%81%E5%AE%9E%E7%8E%B0</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/CryptoStackQ3-%E8%BD%AF%E4%BB%B6%E5%AF%86%E7%A0%81%E5%AE%9E%E7%8E%B0</guid>
-    <description><![CDATA[ AUTOSAR 1000问 · CryptoStackQ3：如果 MCU 没有硬件密码学加速模块，Crypto Stack 还能工作吗？软件实现的性能和安全性跟硬件实现差多少？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 1000问 · CryptoStackQ3：如果 MCU 没有硬件密码学加速模块，Crypto Stack 还能工作吗？软件实现的性能和安全性跟硬件实现差多少？ ▎ 五大学习法：费曼——把「软件 vs 硬件密码」讲成「自己动手 vs 专业保镖」 还能工作吗：能。Crypto Stack 设计上支持纯软件实现——Crypto Driver 用软件... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:54:57 GMT</pubDate>
-  </item><item>
-    <title>OS内存保护与可信分区</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/OS%E5%86%85%E5%AD%98%E4%BF%9D%E6%8A%A4%E4%B8%8E%E5%8F%AF%E4%BF%A1%E5%88%86%E5%8C%BA</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/OS%E5%86%85%E5%AD%98%E4%BF%9D%E6%8A%A4%E4%B8%8E%E5%8F%AF%E4%BF%A1%E5%88%86%E5%8C%BA</guid>
-    <description><![CDATA[ AUTOSAR OS 内存保护与可信分区 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR OS 的 Memory Protection（MPU 配置）与 Trusted / Non-Trusted 差异 MPU 怎么配： AUTOSAR OS 用 MPU 实现内存分区（Memory Partitioning），跟 OS-Application 绑定。每个 OS-Application 分到一个或多个内存分区，各分区有自己的代码 / 数据 / 堆栈段。 OS 为每个任务 / ISR、每个 OS-Application 维护一组访问权限，翻译成 MPU 寄存器配置（re... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:54:54 GMT</pubDate>
-  </item><item>
-    <title>NvM 块管理策略深入 Q1 Redundant 块怎么判断「哪一份是好的」？NvM 用什么机制判断数据完整性？</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/NvM-%E5%86%97%E4%BD%99%E5%9D%97%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%AE%8C%E6%95%B4%E6%80%A7</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/NvM-%E5%86%97%E4%BD%99%E5%9D%97%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%AE%8C%E6%95%B4%E6%80%A7</guid>
-    <description><![CDATA[ NvM 块管理策略深入 Q1：Redundant 块怎么判断「哪一份是好的」？NvM 用什么机制判断数据完整性？ 原始 Flomo：v.flomoapp.com/mine/ NvM 块管理策略深入 Q1：Redundant 块怎么判断「哪一份是好的」？NvM 用什么机制判断数据完整性？ NvM 判断完整性主要靠 CRC 校验 + Block 状态标记（可能加序列号）。 机制： CRC / 校验：每个 NvM Block 存储时附带 CRC（NvM 的 Block 配置可开 CRC），写入时算 CRC、读时校验。 Redundant 双副本读写： 写入：把数据写两份（主副本 + 冗余副本）。 读... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:54:50 GMT</pubDate>
-  </item><item>
-    <title>PartialNetworking-Cluster配置与唤醒匹配</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/PartialNetworking-Cluster%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%94%A4%E9%86%92%E5%8C%B9%E9%85%8D</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/PartialNetworking-Cluster%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%94%A4%E9%86%92%E5%8C%B9%E9%85%8D</guid>
-    <description><![CDATA[ Partial Network Cluster 配置：一个支持 PN 的 ECU 靠「PN 位匹配」判断该不该醒 原始 Flomo：v.flomoapp.com/mine/ Partial Network Cluster 配置：一个支持 PN 的 ECU 靠「PN 位匹配」判断该不该醒 配置链路四步： 划 Cluster、分 PNC 号：把整车 ECU 按功能分组（如门窗组、动力组、诊断组），每组一个 PNC（Partial Network Cluster）号，是配置里的逻辑身份。 给 ECU 配 filter mask：每个 ECU 声明自己属于哪些 PNC——PnMask（掩码）。收报文时... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:54:47 GMT</pubDate>
-  </item><item>
-    <title>E2E / 端到端通信保护深入 Q1：E2E Profile 1 到 7 的区别？Profile 1 和 Profile 5 用在什么安全等级？</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/E2E-Profile%E4%B8%8E%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/E2E-Profile%E4%B8%8E%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF</guid>
-    <description><![CDATA[ E2E / 端到端通信保护深入 Q1：E2E Profile 1 到 7 的区别？Profile 1 和 Profile 5 用在什么安全等级？ 原始 Flomo：v.flomoapp.com/mine/ E2E / 端到端通信保护深入 Q1：E2E Profile 1 到 7 的区别？Profile 1 和 Profile 5 用在什么安全等级？ 先厘清：E2E 是 ISO 26262 下保护通信数据完整性的机制（E2ELib），Profile 是它定义的不同「保护方案」——区别在「提供哪些保护机制」和「支持的数据长度」。 各 Profile 的核心差异维度： 是否带 CRC、几位 CRC：... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:54:44 GMT</pubDate>
   </item>
     </channel>
   </rss>
