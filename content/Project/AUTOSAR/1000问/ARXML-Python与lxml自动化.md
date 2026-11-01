@@ -39,3 +39,26 @@ ARXML 解析与自动化脚本 Q1：用 Python + lxml 自动生成 / 检查 AUTO
 总表：<https://v.flomoapp.com/mine/?memo_id=MjMxMTQ2NDk4>
 
 #Area/技术/AUTOSAR
+
+## 可复现的 Python 解析起点
+
+ARXML 通常使用 XML namespace，不能假设裸 XPath（例如 `//SHORT-NAME`）在所有文件上都能命中。建议先读取根节点 namespace，再使用显式命名空间映射；同时按项目指定的 AUTOSAR XSD 版本做 schema validation。
+
+~~~~python
+from lxml import etree
+
+parser = etree.XMLParser(
+    resolve_entities=False,
+    no_network=True,
+    remove_blank_text=False,
+)
+tree = etree.parse("SystemDescription.arxml", parser)
+
+ns = {"ar": "http://autosar.org/schema/r4.0"}
+names = tree.xpath("//ar:SHORT-NAME/text()", namespaces=ns)
+print(names[:10])
+~~~~
+
+实际 namespace URI 与 schema 版本必须从文件根元素确认。对 REF 做校验时，先建立对象路径/UUID/DEST 索引，再解析目标引用；仅用字符串搜索会漏掉命名空间、短名路径和跨文件引用。
+
+生产脚本应保留原始文件、生成规范化 diff、输出行/对象定位信息，并在写回前做 XSD 校验、引用完整性检查和工具链重新导入验证。
