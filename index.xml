@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>CEM 软件结构：DTC、DID、NvM、接口配置与通信栈</title>
+    <link>https://wiki.likui.info/Project/CEM/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/CEM%E8%BD%AF%E4%BB%B6%E7%BB%93%E6%9E%84%E4%B8%8E%E5%BE%85%E7%A0%94%E7%A9%B6%E9%97%AE%E9%A2%98</link>
+    <guid>https://wiki.likui.info/Project/CEM/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/CEM%E8%BD%AF%E4%BB%B6%E7%BB%93%E6%9E%84%E4%B8%8E%E5%BE%85%E7%A0%94%E7%A9%B6%E9%97%AE%E9%A2%98</guid>
+    <description><![CDATA[ CEM 软件结构：DTC、DID、NvM、接口配置与通信栈 原始 Flomo：v.flomoapp.com/mine/ 本页把原始“待研究问题”转化为可执行的架构学习与排查说明。CEM 在不同 OEM/项目中可能代表不同的中央电子模块或功能域；以下以 AUTOSAR Classic ECU 的典型分层为参照。实际模块、容器、接口和工具操作必须以项目 ARXML、软件需求、接口矩阵、网络矩阵、供应商配置手册和生成代码为准。 1. ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:50:53 GMT</pubDate>
+  </item><item>
     <title>处理器寻址方式：立即、直接、间接、变址与相对寻址</title>
     <link>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%83%E7%A7%8D%E5%AF%BB%E5%9D%80%E6%96%B9%E5%BC%8F</link>
     <guid>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%83%E7%A7%8D%E5%AF%BB%E5%9D%80%E6%96%B9%E5%BC%8F</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Project/CEM/100%E9%97%AE/CEM%E5%B7%A5%E4%BD%9C%E9%97%AE%E9%A2%98%E6%B8%85%E5%8D%95</guid>
     <description><![CDATA[ CEM 工作问题清单 原始 Flomo：v.flomoapp.com/mine/ CEM工作的100个问题 接口的配置操作？ 休眠唤醒的相关逻辑是什么？ CEM CEM 软件工作问题：接口配置、休眠唤醒与基础软件链路 CEM 在不同 OEM/项目中可能指不同的中央电子模块或功能域。以下以 AUTOSAR Classic ECU 的典型实现说明方法，不把供应商工具的界面步骤写成标准强制流程。最终应以项目 ARXML、接口矩阵、网络矩阵、软件需求和工具版本为准。 Q1. ]]></description>
     <pubDate>Sun, 01 Nov 2026 04:23:32 GMT</pubDate>
-  </item><item>
-    <title>PowerPC</title>
-    <link>https://wiki.likui.info/Area/EE/1000%E9%97%AE/PowerPC%E6%8C%87%E4%BB%A4%E9%9B%86%E4%B8%8E%E8%BD%AF%E4%BB%B6%E7%BB%93%E6%9E%84</link>
-    <guid>https://wiki.likui.info/Area/EE/1000%E9%97%AE/PowerPC%E6%8C%87%E4%BB%A4%E9%9B%86%E4%B8%8E%E8%BD%AF%E4%BB%B6%E7%BB%93%E6%9E%84</guid>
-    <description><![CDATA[ PowerPC 原始 Flomo：v.flomoapp.com/mine/ PowerPC www.cnblogs.com/binarysystemloophole/articles/10313895.html PowerPC指令集 软件结构 嵌入式 1. ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:23:28 GMT</pubDate>
   </item>
     </channel>
   </rss>
