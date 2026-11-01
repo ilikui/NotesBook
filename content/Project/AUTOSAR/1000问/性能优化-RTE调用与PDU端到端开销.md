@@ -38,3 +38,11 @@ AUTOSAR 性能优化 Q1：RTE 大量函数调用会不会影响性能？一个 P
 总表：<https://v.flomoapp.com/mine/?memo_id=MjMxMTQ2NDk4>
 
 #Area/技术/AUTOSAR
+
+## 性能数据边界修订
+
+“几十到几百 CPU 周期”“几百 ns 到几 µs”只能作为某些目标平台上的粗略示例，不能作为 AUTOSAR 通用性能指标。实际耗时受 MCU 主频、Flash wait state、Cache、编译器/优化级别、RTE 生成方式、数据拷贝、临界区、跨核 IOC、Trace、OS 调度和总线仲裁影响。
+
+测量时把链路拆成 RTE API、COM packing、PduR routing、CanIf/Can Driver enqueue、硬件发送和总线仲裁多个区间；用 GPIO timestamp、CPU cycle counter、OS trace 和 CANoe 时间戳交叉测量。比较同一构建配置下的基线与优化版本，并报告 worst-case、分位数和负载条件，不只给平均值。
+
+RTE 是否内联、是否直接调用、是否发生拷贝，应以生成代码和 map/反汇编为证，不要假定所有项目都使用相同的 L2/L3 优化。
