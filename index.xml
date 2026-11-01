@@ -6,12 +6,6 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>CAN网络（通用概念参考，来自Kimi）</title>
-    <link>https://wiki.likui.info/Area/EE/%E9%80%9A%E4%BF%A1/1000%E9%97%AE/CAN%E7%BD%91%E7%BB%9C%E9%80%9A%E7%94%A8%E6%A6%82%E5%BF%B5</link>
-    <guid>https://wiki.likui.info/Area/EE/%E9%80%9A%E4%BF%A1/1000%E9%97%AE/CAN%E7%BD%91%E7%BB%9C%E9%80%9A%E7%94%A8%E6%A6%82%E5%BF%B5</guid>
-    <description><![CDATA[ CAN网络（通用概念参考，来自Kimi） 原始 Flomo：v.flomoapp.com/mine/ CAN网络（通用概念参考，来自Kimi） 📎 你的实战排查内容在此 → CAN终端电阻物理含义 v.flomoapp.com/mine/ 📎 CAN排查工具箱清单 v.flomoapp.com/mine/ 📎 CAN通信栈七层数据流 v.flomoapp.com/mine/ （原文为2024-06-11 Kimi生成的CAN总线基础介绍，已被后续实战笔记覆盖） 通信 CAN 网络基础问答补全 Q1. ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:23:35 GMT</pubDate>
-  </item><item>
     <title>CEM工作问题清单</title>
     <link>https://wiki.likui.info/Project/CEM/100%E9%97%AE/CEM%E5%B7%A5%E4%BD%9C%E9%97%AE%E9%A2%98%E6%B8%85%E5%8D%95</link>
     <guid>https://wiki.likui.info/Project/CEM/100%E9%97%AE/CEM%E5%B7%A5%E4%BD%9C%E9%97%AE%E9%A2%98%E6%B8%85%E5%8D%95</guid>
@@ -65,6 +59,12 @@
     <guid>https://wiki.likui.info/Area/EE/</guid>
     <description><![CDATA[ 电子、电气与嵌入式系统的学习地图。 ]]></description>
     <pubDate>Sun, 01 Nov 2026 04:05:27 GMT</pubDate>
+  </item><item>
+    <title>嵌入式工程进阶与实战补充</title>
+    <link>https://wiki.likui.info/Area/EE/%E5%B5%8C%E5%85%A5%E5%BC%8F/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B7%A5%E7%A8%8B%E8%BF%9B%E9%98%B6%E4%B8%8E%E5%AE%9E%E6%88%98%E8%A1%A5%E5%85%85</link>
+    <guid>https://wiki.likui.info/Area/EE/%E5%B5%8C%E5%85%A5%E5%BC%8F/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B7%A5%E7%A8%8B%E8%BF%9B%E9%98%B6%E4%B8%8E%E5%AE%9E%E6%88%98%E8%A1%A5%E5%85%85</guid>
+    <description><![CDATA[ 嵌入式工程进阶与实战补充 本页补齐 Flomo「嵌入式学习」分类中尚未在 NotesBook 找到来源 ID 的 11 条有效卡片。内容横跨指令译码、链接脚本、电源时序、BLDC、FreeRTOS、CAN 故障、调试方法与学习资源。已在硬件、电机控制、通信专题中归档的卡片不重复复制；空白占位卡不作为知识条目迁移。 工程知识关联图 flowchart TD A[嵌入式工程] --&gt; B[处理器与指令集] A --&gt; C[启动与链接] A --&gt; D[硬件电源与信号完整性] A --&gt; E[实时软件] A --&gt; F[通信与调试] C --&gt; C1[Linker... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:05:21 GMT</pubDate>
   </item>
     </channel>
   </rss>
