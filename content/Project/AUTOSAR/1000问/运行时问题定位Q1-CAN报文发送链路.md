@@ -33,3 +33,14 @@
 总表：<https://v.flomoapp.com/mine/?memo_id=MjMxMTQ2NDk4>
 
 #Area/技术/AUTOSAR
+
+## API 与排查边界修订
+
+不能把每条 Rte_Write 都当成直接调用 Com_TransmitSignal：RTE 根据通信类型、生成策略和 ECU 部署实现数据写入；COM 的信号/PDU 发送由相应 COM 配置和 MainFunction/触发机制推进。Rte_Write 的返回类型/可检查返回值也取决于生成的 API 原型和接口配置，应以工程 Rte_* 头文件为准。
+
+建议结合三类证据，而不只追返回值：
+- RTE/COM 生成代码与 API 原型：确认写入是否成功、数据是否进入正确 buffer。
+- CANoe/CANalyzer Trace：确认 PDU 是否被提交、实际发送时间、错误状态和 BusOff。
+- CanIf/Can Driver 状态与控制器模式：确认发送队列、HTH、控制器状态、Tx confirmation 和错误计数。
+
+若使用周期发送，Rte_Write 成功只说明数据写入接口成功，不代表该帧已立即上总线。
