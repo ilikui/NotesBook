@@ -48,3 +48,45 @@ UART 收一串不定长数据、ADC 连续采样 1024 点、SPI 读 Flash 一页
 **专栏⑮进度：10/10 + 补充二**
 
 #Area/技术/嵌入式
+
+## 工程问答补全：DMA 与 Cache 一致性
+
+### Q1. DMA 传输完成中断是否意味着 CPU 一定能读到最新数据？
+
+不一定。DMA 与 CPU Cache 是两个独立访问者。DMA 直接读写主存，而 CPU 可能命中 Cache 中的旧副本；若没有正确维护 Cache，CPU 可能读到旧数据，或脏 Cache Line 在稍后回写时覆盖 DMA 新数据。
+
+### Q2. DMA 接收和发送分别怎样维护 Cache？
+
+- **DMA 接收（外设 → RAM）：** DMA 开始前，若目标 Cache Line 可能有 CPU 脏数据，需按芯片规则先 Clean+Invalidate 或采取等效策略，避免 DMA 写入后被旧脏行覆盖；DMA 完成后，在 CPU 读取前对覆盖范围 Invalidate，使 CPU 从内存重新取数。
+- **DMA 发送（RAM → 外设）：** CPU 填充发送缓冲区后，在启动 DMA 前 Clean，确保最新数据写回内存。
+- **双向/复用缓冲区：** 需明确所有权交接点；CPU 与 DMA 不得在没有同步协议的情况下同时修改同一缓存行。
+
+具体维护顺序、API 和屏障要求以芯片 Cache/DMA 手册及编译器/SDK 为准。
+
+### Q3. 为什么 DMA 缓冲区要按 Cache Line 对齐？
+
+Cache 维护通常以整条 Cache Line 为粒度。如果 DMA 缓冲区与普通变量共享同一 Cache Line，Invalidate 可能丢弃邻接变量的脏数据；Clean 也可能把不应提交的数据写回。应将缓冲区按 Cache Line 对齐，并将长度填充到整行边界，或放入 non-cacheable 区域。
+
+### Q4. DMA 环形接收如何避免读写指针竞争？
+
+采用半传输/全传输中断、IDLE 事件或硬件写指针快照更新生产位置；消费者维护独立读位置。必须处理回绕、溢出、半包、连续突发和索引快照一致性。若使用双缓冲，明确每个缓冲区由 CPU 或 DMA 独占的时间窗口。
+
+```mermaid
+sequenceDiagram
+  participant CPU
+  participant DMA
+  participant RAM
+  CPU->>RAM: 准备接收区并维护Cache
+  CPU->>DMA: 启动外设到RAM传输
+  DMA->>RAM: 写入数据
+  DMA-->>CPU: 传输完成事件
+  CPU->>RAM: Invalidate目标Cache范围
+  CPU->>RAM: 读取最新数据
+```
+
+### 验证清单
+- [ ] 地址和长度满足 DMA 对齐、总线地址范围要求。
+- [ ] 缓冲区不与其他变量共享需维护的 Cache Line。
+- [ ] DMA 发送前 Clean；接收前/后按芯片手册维护。
+- [ ] 传输完成事件与缓存维护之间有正确同步。
+- [ ] 压测回绕、连续帧、缓存开启/关闭和高负载情况。
