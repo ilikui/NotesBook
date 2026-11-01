@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>软考高级1000问：系统架构师、项目管理师与真题解析</title>
+    <link>https://wiki.likui.info/Project/%E8%80%83%E8%AF%95%E7%AE%A1%E7%90%86/%E8%BD%AF%E8%80%83%E9%AB%98%E7%BA%A71000%E9%97%AE/%E7%9C%9F%E9%A2%98%E8%A7%A3%E6%9E%90%E8%AE%BA%E6%96%87%E4%B8%8E%E5%A4%87%E8%80%83%E7%AD%96%E7%95%A5</link>
+    <guid>https://wiki.likui.info/Project/%E8%80%83%E8%AF%95%E7%AE%A1%E7%90%86/%E8%BD%AF%E8%80%83%E9%AB%98%E7%BA%A71000%E9%97%AE/%E7%9C%9F%E9%A2%98%E8%A7%A3%E6%9E%90%E8%AE%BA%E6%96%87%E4%B8%8E%E5%A4%87%E8%80%83%E7%AD%96%E7%95%A5</guid>
+    <description><![CDATA[ 软考高级1000问：系统架构师、项目管理师与真题解析 本篇迁移软考相关的 10 道测试题、3 道实践专题和学习计划。考试科目、题型、分值和论文要求可能随年度政策调整，实际备考以当年官方考试说明为准。 一、系统架构师测试题 本页属于系统架构师题目线，题号统一标记为 SA-Q21–SA-Q34。 SA-Q21. ]]></description>
+    <pubDate>Sun, 01 Nov 2026 13:41:04 GMT</pubDate>
+  </item><item>
     <title>软考高级1000问：系统架构师与项目管理基础</title>
     <link>https://wiki.likui.info/Project/%E8%80%83%E8%AF%95%E7%AE%A1%E7%90%86/%E8%BD%AF%E8%80%83%E9%AB%98%E7%BA%A71000%E9%97%AE</link>
     <guid>https://wiki.likui.info/Project/%E8%80%83%E8%AF%95%E7%AE%A1%E7%90%86/%E8%BD%AF%E8%80%83%E9%AB%98%E7%BA%A71000%E9%97%AE</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E9%A1%B9%E7%9B%AE%E5%9F%BA%E7%BA%BF%E9%80%89%E6%8B%A9%E4%B8%8E%E8%BF%81%E7%A7%BB</guid>
     <description><![CDATA[ 在项目上从哪个基线开始用？换基线最头疼的是规范改了还是工具改了？ 原始 Flomo：v.flomoapp.com/mine/ 在项目上从哪个基线开始用？换基线最头疼的是规范改了还是工具改了？ 结合这几条我记过的判断： 工具链与工程化Q3（R20-11 → R21-11）：最头疼的不是生成代码行为变了，而是配置迁移里的隐性坑——参数默认值变了、某特性默认开/关改变、旧参数被移除或改名、工具迁过去但语义漂移。 项目实践Q1（Vector 换 EB）：换供应商最麻烦的是配置工具的差异（工具界面、配置模型、ARXML schema），不是生成代码行为。 专栏⑧第八篇：升级一个工具版本炸了三天——根子是... ]]></description>
     <pubDate>Sun, 01 Nov 2026 13:38:15 GMT</pubDate>
-  </item><item>
-    <title>AUTOSAR 1000问 · 工具链 Q1 如何保证工具链生成的代码就是自己配置的？</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%93%BEQ1-%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%93%BEQ1-%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1</guid>
-    <description><![CDATA[ AUTOSAR 1000问 · 工具链 Q1：如何保证工具链生成的代码就是自己配置的？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 1000问 · 工具链 Q1：如何保证工具链生成的代码就是自己配置的？ 费曼（一句话说清）：工具链是翻译官——你把配置（ARXML）交给它，它吐出代码。真问题不是「它会不会骗你」，而是「你怎么让它说的每句话都可查证」。 西蒙（抓核心）：你证明不了生成器永远正确，但能让「配置→产物」变成可审计、可重放、有断言的确定性过程——把「信任工具」换成「审计过程」。 SQ3R（带着问题读）：先问「配置和产物之间，偏差可能出在哪几环」，答案锁定五... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 13:38:12 GMT</pubDate>
   </item>
     </channel>
   </rss>
