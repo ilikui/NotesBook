@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>计算机科学自学路线与工具资源</title>
+    <link>https://wiki.likui.info/Area/CS/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E4%B8%8E%E5%B7%A5%E5%85%B7%E8%B5%84%E6%BA%90</link>
+    <guid>https://wiki.likui.info/Area/CS/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E4%B8%8E%E5%B7%A5%E5%85%B7%E8%B5%84%E6%BA%90</guid>
+    <description><![CDATA[ 计算机科学自学路线与工具资源 本页整理 Flomo「CS自学指南」中的学习路线、工具清单与跨领域概念卡。原笔记提及的 C-Free 5.0 属于历史环境记录，不代表当前推荐开发环境；实际使用应优先选择仍受维护的编译器、IDE 与工具链。 计算机科学知识地图 flowchart TD A[计算机科学] --&gt; B[数学基础] A --&gt; C[程序设计与编译] A --&gt; D[计算机系统] A --&gt; E[软件工程] A --&gt; F[网络与分布式] A --&gt; G[数据与智能] D --&gt; D1[体系结构 / 操作系统] D --&gt; D2[并行计算]... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:07:55 GMT</pubDate>
+  </item><item>
     <title>Linux 学习指南与常用命令</title>
     <link>https://wiki.likui.info/Area/CS/Linux%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97</link>
     <guid>https://wiki.likui.info/Area/CS/Linux%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97</guid>
@@ -17,12 +23,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/%E5%9F%BA%E7%A1%80%E8%B5%84%E6%96%99%E4%B8%8E%E5%88%86%E5%B1%82%E8%A1%A5%E5%85%85</guid>
     <description><![CDATA[ AUTOSAR 基础资料、分层与历史卡片补充 本页收录此前散落在 Flomo 子标签中的基础资料、分层说明和规范阅读卡片。它们补充 AUTOSAR 1000 问主线，不替代规范模块专题。原文中存在的历史描述按原意保留；涉及标准边界的内容应以对应 AUTOSAR Release 的官方规范和项目配置为准。 AUTOSAR Classic 分层关系 flowchart TB SWC[应用软件组件 SWC] RTE[运行时环境 RTE] SVC[服务层 Services] ECU[ECU抽象层 ECU Abstraction] MCAL[微控制器抽象层 MCAL] HW[微控制器与外设] CDD[复... ]]></description>
     <pubDate>Sun, 01 Nov 2026 04:07:11 GMT</pubDate>
-  </item><item>
-    <title>计算机科学自学路线与工具资源</title>
-    <link>https://wiki.likui.info/Area/CS/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E4%B8%8E%E5%B7%A5%E5%85%B7%E8%B5%84%E6%BA%90</link>
-    <guid>https://wiki.likui.info/Area/CS/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E4%B8%8E%E5%B7%A5%E5%85%B7%E8%B5%84%E6%BA%90</guid>
-    <description><![CDATA[ 计算机科学自学路线与工具资源 本页整理 Flomo「CS自学指南」中的学习路线、工具清单与跨领域概念卡。原笔记提及的 C-Free 5.0 属于历史环境记录，不代表当前推荐开发环境；实际使用应优先选择仍受维护的编译器、IDE 与工具链。 计算机科学知识地图 flowchart TD A[计算机科学] --&gt; B[数学基础] A --&gt; C[程序设计与编译] A --&gt; D[计算机系统] A --&gt; E[软件工程] A --&gt; F[网络与分布式] A --&gt; G[数据与智能] D --&gt; D1[体系结构 / 操作系统] D --&gt; D2[并行计算]... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:06:57 GMT</pubDate>
   </item><item>
     <title>EE</title>
     <link>https://wiki.likui.info/Area/EE/</link>
