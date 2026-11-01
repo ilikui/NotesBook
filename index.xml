@@ -6,6 +6,24 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>处理器寻址方式：立即、直接、间接、变址与相对寻址</title>
+    <link>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%83%E7%A7%8D%E5%AF%BB%E5%9D%80%E6%96%B9%E5%BC%8F</link>
+    <guid>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%83%E7%A7%8D%E5%AF%BB%E5%9D%80%E6%96%B9%E5%BC%8F</guid>
+    <description><![CDATA[ 处理器寻址方式 原始 Flomo：v.flomoapp.com/mine/ 寻址方式描述指令如何定位操作数。不同 ISA（x86、ARM、PowerPC、RISC-V 等）的寻址模式和汇编语法并不完全相同。下面先解释常见概念，再以传统 x86 16 位地址表达式说明原笔记中的七类形式；不要把这七类当成所有处理器都统一规定的分类。 1. ]]></description>
+    <pubDate>Sun, 01 Nov 2026 05:00:43 GMT</pubDate>
+  </item><item>
+    <title>中断概念与处理流程：从异常入口到 ISR 返回</title>
+    <link>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E4%B8%AD%E6%96%AD%E6%A6%82%E5%BF%B5%E4%B8%8E%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B</link>
+    <guid>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E4%B8%AD%E6%96%AD%E6%A6%82%E5%BF%B5%E4%B8%8E%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B</guid>
+    <description><![CDATA[ 中断概念与处理流程 原始 Flomo：v.flomoapp.com/mine/ 1. ]]></description>
+    <pubDate>Sun, 01 Nov 2026 05:00:37 GMT</pubDate>
+  </item><item>
+    <title>AUTOSAR</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/</guid>
+    <description><![CDATA[ AUTOSAR（AUTomotive Open System ARchitecture，汽车开放系统架构）是由全球主要汽车厂商、零部件供应商与半导体公司联合制定的汽车电子软件架构标准。它的目标是让汽车软件标准化、可复用、可跨平台移植，是当今智能汽车软件开发的行业基石。 一句话定位 AUTOSAR = 汽车软件的「操作系统级标准」：定义分层架构、组件模型、通信机制与开发流程，让不同厂商的软件能像积木一样拼装。 知识体系 flowchart TD A[AUTOSAR] --&gt; B[核心理念] A --&gt; C[软件架构] A --&gt; D[方法论] A --&gt; E[标准与规范]... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 05:00:16 GMT</pubDate>
+  </item><item>
     <title>工具配置实战Q4-PostBuild产物与PDU路由变体</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q4-PostBuild%E4%BA%A7%E7%89%A9%E4%B8%8EPDU%E8%B7%AF%E7%94%B1%E5%8F%98%E4%BD%93</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q4-PostBuild%E4%BA%A7%E7%89%A9%E4%B8%8EPDU%E8%B7%AF%E7%94%B1%E5%8F%98%E4%BD%93</guid>
@@ -47,24 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-%E5%A4%9ASWC%E8%B0%83%E5%BA%A6%E8%A1%A8%E4%B8%8ERunnable%E9%A1%BA%E5%BA%8F</guid>
     <description><![CDATA[ AUTOSAR 性能优化 Q2：多 SW-C 调度表与 Runnable 顺序 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 性能优化 Q2：ECU 部署 50+ 个 SW-C——RTE 生成的 Schedule Table 什么样？Runnable 顺序怎么保证实时性？ 先明确：Schedule Table 是 OS 层的调度机制，RTE（SchM）负责把 runnable 组织进 Task。所以它不是「每个 SW-C 一个表项」，而是按 Task 组织 + 时间轴排布。 Schedule Table 长什么样： RTE 把大量 runnable 映射到若干 T... ]]></description>
     <pubDate>Sun, 01 Nov 2026 04:58:25 GMT</pubDate>
-  </item><item>
-    <title>性能优化-RTE调用与PDU端到端开销</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-RTE%E8%B0%83%E7%94%A8%E4%B8%8EPDU%E7%AB%AF%E5%88%B0%E7%AB%AF%E5%BC%80%E9%94%80</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-RTE%E8%B0%83%E7%94%A8%E4%B8%8EPDU%E7%AB%AF%E5%88%B0%E7%AB%AF%E5%BC%80%E9%94%80</guid>
-    <description><![CDATA[ AUTOSAR 性能优化 Q1：RTE 调用开销与 PDU 端到端路径 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 性能优化 Q1：RTE 大量函数调用会不会影响性能？一个 PDU 从应用到总线，四层接口调用总开销大概多少？ 先给结论：会有一点开销，但 AUTOSAR 做了大量优化，实际可控，多数项目不用太担心函数调用本身。 关键性能机制（为什么开销可控）： 直接调用而非运行时分发：同 ECU 内通信，RTE 在编译期就把调用链接成「直接函数调用」，不做运行时查找。 优化编译：生成代码用 -O2 编译，多数函数内联、参数寄存器传递，开销显著下降。 信号打包：CO... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:58:18 GMT</pubDate>
-  </item><item>
-    <title>运行时问题定位Q2-PDU周期发送抖动</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8DQ2-PDU%E5%91%A8%E6%9C%9F%E5%8F%91%E9%80%81%E6%8A%96%E5%8A%A8</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8DQ2-PDU%E5%91%A8%E6%9C%9F%E5%8F%91%E9%80%81%E6%8A%96%E5%8A%A8</guid>
-    <description><![CDATA[ 运行时问题定位 Q2：PDU 配了周期发送 100ms，但示波器看实际间隔是乱的——可能原因？从哪查？ 原始 Flomo：v.flomoapp.com/mine/ 运行时问题定位 Q2：PDU 配了周期发送 100ms，但示波器看实际间隔是乱的——可能原因？从哪查？ 关键认知：COM 的周期发送靠 Com_MainFunction 被周期调度来推进。所以「配置的 100ms」是 COM 内部发送节拍，不等于总线上严格 100ms。实际间隔 = COM 节拍 × 发送时机 × 总线仲裁的叠加。 可能原因（按概率）： Com_MainFunction 的调用周期不稳：周期发送依赖 MainFunc... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:58:14 GMT</pubDate>
-  </item><item>
-    <title>运行时问题定位Q1-CAN报文发送链路</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8DQ1-CAN%E6%8A%A5%E6%96%87%E5%8F%91%E9%80%81%E9%93%BE%E8%B7%AF</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8DQ1-CAN%E6%8A%A5%E6%96%87%E5%8F%91%E9%80%81%E9%93%BE%E8%B7%AF</guid>
-    <description><![CDATA[ 运行时问题定位 Q1：某路 CAN 报文没发出来——从 Rte_Write 顺藤摸瓜，逐层查哪个返回值？ 原始 Flomo：v.flomoapp.com/mine/ 运行时问题定位 Q1：某路 CAN 报文没发出来——从 Rte_Write 顺藤摸瓜，逐层查哪个返回值？ 关键思路：沿发送链路逐层看返回值，哪一层返回 E_NOT_OK 就锁定在哪一层（或它的下游配置）。 发送链路与检查点： RTE：Rte_Write 返回 E_OK / E_NOT_OK。返回错 → 端口/接口或该 PDU 配置有问题。 COM：Com_TransmitSignal / Com_UpdateShadowSigna... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:58:11 GMT</pubDate>
   </item>
     </channel>
   </rss>
