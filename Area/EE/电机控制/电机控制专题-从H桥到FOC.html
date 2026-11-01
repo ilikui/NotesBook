@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="zh"><head><title>电机控制专题：从H桥到FOC</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="数字花园"/><meta property="og:title" content="电机控制专题：从H桥到FOC"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="电机控制专题：从H桥到FOC"/><meta name="twitter:description" content="电机类型、功率级、PWM调制、FOC算法、位置检测、汽车应用与AUTOSAR集成。"/><meta property="og:description" content="电机类型、功率级、PWM调制、FOC算法、位置检测、汽车应用与AUTOSAR集成。"/><meta property="og:image:alt" content="电机类型、功率级、PWM调制、FOC算法、位置检测、汽车应用与AUTOSAR集成。"/><meta property="og:image" content="https://wiki.likui.info/static/og-image.png"/><meta property="og:image:url" content="https://wiki.likui.info/static/og-image.png"/><meta name="twitter:image" content="https://wiki.likui.info/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="wiki.likui.info"/><meta property="og:url" content="https://wiki.likui.info/Area/EE/电机控制/电机控制专题-从H桥到FOC"/><meta property="twitter:url" content="https://wiki.likui.info/Area/EE/电机控制/电机控制专题-从H桥到FOC"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="电机类型、功率级、PWM调制、FOC算法、位置检测、汽车应用与AUTOSAR集成。"/><meta name="generator" content="Quartz"/><link href="../../../index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  padding: 2rem;
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcnVubmVyL3dvcmsvTm90ZXNCb29rL05vdGVzQm9vay9xdWFydHovY29tcG9uZW50cy9zdHlsZXMiLCJzb3VyY2VzIjpbIm1lcm1haWQuaW5saW5lLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUdGO0VBQ0U7OztBQUtGO0VBQ0U7RUFDQTs7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcGFkZGluZzogMnJlbTtcbiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgIHRyYW5zZm9ybS1vcmlnaW46IDAgMDtcbiAgICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjFzIGVhc2U7XG4gICAgICBvdmVyZmxvdzogdmlzaWJsZTtcbiAgICAgIG1pbi1oZWlnaHQ6IDIwMHB4O1xuICAgICAgbWluLXdpZHRoOiAyMDBweDtcblxuICAgICAgcHJlIHtcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICB9XG5cbiAgICAgIHN2ZyB7XG4gICAgICAgIG1heC13aWR0aDogbm9uZTtcbiAgICAgICAgaGVpZ2h0OiBhdXRvO1xuICAgICAgfVxuICAgIH1cblxuICAgICYgPiAubWVybWFpZC1jb250cm9scyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBib3R0b206IDIwcHg7XG4gICAgICByaWdodDogMjBweDtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBnYXA6IDhweDtcbiAgICAgIHBhZGRpbmc6IDhweDtcbiAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICBib3JkZXItcmFkaXVzOiA2cHg7XG4gICAgICBib3gtc2hhZG93OiAwIDJweCA0cHggcmdiYSgwLCAwLCAwLCAwLjEpO1xuICAgICAgei1pbmRleDogMjtcblxuICAgICAgLm1lcm1haWQtY29udHJvbC1idXR0b24ge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgd2lkdGg6IDMycHg7XG4gICAgICAgIGhlaWdodDogMzJweDtcbiAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgICBjb2xvcjogdmFyKC0tZGFyayk7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtZmFtaWx5OiB2YXIoLS1ib2R5Rm9udCk7XG4gICAgICAgIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XG5cbiAgICAgICAgJjpob3ZlciB7XG4gICAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgfVxuXG4gICAgICAgICY6YWN0aXZlIHtcbiAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMXB4KTtcbiAgICAgICAgfVxuXG4gICAgICAgIC8vIFN0eWxlIHRoZSByZXNldCBidXR0b24gZGlmZmVyZW50bHlcbiAgICAgICAgJjpudGgtY2hpbGQoMikge1xuICAgICAgICAgIHdpZHRoOiBhdXRvO1xuICAgICAgICAgIHBhZGRpbmc6IDAgMTJweDtcbiAgICAgICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cbiJdfQ== */</style><link href="/static/katex/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://wiki.likui.info/index.xml"/></head><body data-slug="Area/EE/电机控制/电机控制专题-从H桥到FOC"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">数字花园</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><p>搜索</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索些什么" placeholder="搜索些什么"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-285"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>PARA</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-285" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text explorer-entry-icon" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg><span class="file-title"></span></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder-closed explorer-entry-icon" aria-hidden="true"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path><path d="M2 10h20"></path></svg><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../Area/">Area</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../Area/EE/">EE</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../Area/EE/电机控制/">电机控制</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>电机控制专题：从H桥到FOC</a></div></nav><h1 class="article-title">电机控制专题：从H桥到FOC</h1><p show-comma="true" class="content-meta"><time datetime="2026-11-01T03:52:07.000Z">2026年11月01日</time><span>69分钟阅读</span></p><ul class="tags"><li><a href="../../../tags/Area/EE" class="internal tag-link">Area/EE</a></li><li><a href="../../../tags/电机控制" class="internal tag-link">电机控制</a></li><li><a href="../../../tags/汽车电子" class="internal tag-link">汽车电子</a></li><li><a href="../../../tags/Area/技术/电机控制" class="internal tag-link">Area/技术/电机控制</a></li><li><a href="../../../tags/Archive/MigratedNotion" class="internal tag-link">Archive/MigratedNotion</a></li></ul></div></div><article class="popover-hint"><h1 id="电机控制专题从-h-桥到-foc">电机控制专题：从 H 桥到 FOC<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#电机控制专题从-h-桥到-foc" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>本专题汇总 Flomo「电机控制」专栏导航、10 篇主线文章。按功率级、调制、电流/位置闭环、传感器和汽车软件集成形成完整工程链。以下保留原始笔记正文、来源 ID 和 Flomo 链接。</p>
+<h2 id="系统架构">系统架构<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#系统架构" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n  A[控制目标/扭矩或速度请求] --> B[电机控制算法]\n  B --> C[Clarke/Park变换]\n  C --> D[d/q电流PI控制]\n  D --> E[逆Park与SVPWM]\n  E --> F[三相逆变器/H桥]\n  F --> G[电机]\n  G --> H[电流/位置/速度反馈]\n  H --> B\n  I[位置传感器/编码器/旋变/反电动势] --> B\n  J[MCU PWM与ADC触发] --> B\n  K[AUTOSAR BswM/诊断/故障管理] --> A&quot;">flowchart TD
+  A[控制目标/扭矩或速度请求] --> B[电机控制算法]
+  B --> C[Clarke/Park变换]
+  C --> D[d/q电流PI控制]
+  D --> E[逆Park与SVPWM]
+  E --> F[三相逆变器/H桥]
+  F --> G[电机]
+  G --> H[电流/位置/速度反馈]
+  H --> B
+  I[位置传感器/编码器/旋变/反电动势] --> B
+  J[MCU PWM与ADC触发] --> B
+  K[AUTOSAR BswM/诊断/故障管理] --> A
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h2 id="控制软件时序与保护">控制软件时序与保护<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#控制软件时序与保护" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart LR\n  A[PWM定时器触发] --> B[ADC同步采样]\n  B --> C[电流重构与坐标变换]\n  C --> D[电流环PI]\n  D --> E[调制与占空比更新]\n  E --> F[硬件PWM输出]\n  G[过流/过压/过温/位置异常] --> H[快速保护与安全状态]\n  H --> F\n  I[速度/位置环] -->|较低频率| D&quot;">flowchart LR
+  A[PWM定时器触发] --> B[ADC同步采样]
+  B --> C[电流重构与坐标变换]
+  C --> D[电流环PI]
+  D --> E[调制与占空比更新]
+  E --> F[硬件PWM输出]
+  G[过流/过压/过温/位置异常] --> H[快速保护与安全状态]
+  H --> F
+  I[速度/位置环] -->|较低频率| D
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h2 id="工程审查要点">工程审查要点<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#工程审查要点" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>先明确电机类型、母线电压、峰值/持续电流、转速范围和负载惯量。</li>
+<li>功率级检查 MOSFET/IGBT 额定值、栅极驱动、死区、续流路径、母线电容与热设计。</li>
+<li>采样检查电流传感器量程、偏置、带宽、同步采样点、ADC 触发和噪声。</li>
+<li>FOC 检查电角度方向、极对数、Clarke/Park 定义、PI 限幅与抗积分饱和、SVPWM 饱和处理。</li>
+<li>位置方案要评估零速能力、低速精度、成本、EMC、故障诊断和降级策略。</li>
+<li>汽车集成要明确 ISR 与任务边界、BswM 状态切换、诊断事件、看门狗和故障安全输出。</li>
+</ul>
+<h2 id="原始-flomo-笔记完整内容">原始 Flomo 笔记（完整内容）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#原始-flomo-笔记完整内容" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="1-专栏第十篇电机控制配置自检清单上车前逐项打勾的-15-项">1. 专栏⑪·第十篇：电机控制配置自检清单——上车前逐项打勾的 15 项<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-专栏第十篇电机控制配置自检清单上车前逐项打勾的-15-项" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Flomo ID：<code>MjQ5OTUxNzQy</code></li>
+<li>创建时间：2026-08-03T20:05:23+08:00</li>
+<li>原文：<a href="https://v.flomoapp.com/mine/?memo_id=MjQ5OTUxNzQy" class="external">在 Flomo 中打开<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>标签：Area/技术/电机控制、Archive/MigratedNotion、Archive/DeleteCandidate</li>
+</ul>
+<p><strong>专栏⑪·第十篇：电机控制配置自检清单——上车前逐项打勾的 15 项</strong></p>
+<p>前九篇从电机类型（第1篇）、功率级（第2篇）、PWM调制（第3篇）、FOC算法（第4篇）、位置检测（第5篇）、汽车实战（第6篇）、反电动势（第7篇）、双环调度（第8篇）、AUTOSAR集成（第9篇）铺完整个链路。收官篇把整个专栏压缩成上车前逐项打勾的清单。</p>
+<p><strong>清单分 4 组：硬件与功率级（4项）→ PWM 与采样（4项）→ 控制算法（4项）→ 系统集成（3项）</strong></p>
+<p><strong>组 A：硬件与功率级</strong></p>
+<ol>
+<li>
+<p>功率管选型核对——耐压/电流裕量足够、体二极管 Qrr 满足 EMI 要求（第2篇）</p>
+</li>
+<li>
+<p>死区时间配置——不直通也不畸变，典型 100-500ns，实测验证（第2篇）</p>
+</li>
+<li>
+<p>自举电容容量——高占空比/低频下能充满，上臂不丢相（第2篇）</p>
+</li>
+<li>
+<p>电流采样链路——Shunt 布局、ADC 同步、采样精度满足 FOC 需求（第4篇）</p>
+</li>
+</ol>
+<p><strong>组 B：PWM 与采样</strong></p>
+<ol>
+<li>
+<p>PWM 频率选型——10-20kHz 常规区间，开关损耗与纹波平衡（第3篇）</p>
+</li>
+<li>
+<p>SVPWM 电压利用率确认——母线电压够不够，SPWM vs SVPWM 差 15.5%（第3篇）</p>
+</li>
+<li>
+<p>采样窗口与 PWM 中心对齐——避开开关噪声，电流值不畸变（第8篇）</p>
+</li>
+<li>
+<p>死区补偿——低速/过零畸变是否补偿（第3篇）</p>
+</li>
+</ol>
+<p><strong>组 C：控制算法</strong></p>
+<ol>
+<li>
+<p>电流环带宽 = PWM 频率 1/10~1/20——PI 参数有推导有记录（第4篇）</p>
+</li>
+<li>
+<p>位置传感器选型——先问”需不需要零速大转矩”，再选旋变/编码器/霍尔/无感（第5篇）</p>
+</li>
+<li>
+<p>无感方案边界清楚——低速盲区、启动三段式、切换平滑（第7篇）</p>
+</li>
+<li>
+<p>双环优先级——电流环 > 位置环，位置环脏活挪出中断（第8篇）</p>
+</li>
+</ol>
+<p><strong>组 D：系统集成</strong></p>
+<ol>
+<li>
+<p>故障切断路径——危险故障 ISR 直切（微秒级），不依赖 BswM 仲裁（第9篇）</p>
+</li>
+<li>
+<p>电机使能/禁止走 BswM——命令与执行有确认机制，状态不同步要防（第9篇）</p>
+</li>
+<li>
+<p>AUTOSAR 集成——Complex Driver 外设所有权分配、诊断异步上报、关机先停电机（第9篇）</p>
+</li>
+</ol>
+<p><strong>一句话总结</strong>：电机控制的清单 15 项，本质是三条线：功率级别炸管（A/B 组）、算法别失控（C 组）、集成别打架（D 组）。每一条都是前九篇里的一个坑，上车前逐项打勾，省的是一次返工。</p>
+<p>📎 第9篇：AUTOSAR 集成 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ5OTUxNzM2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ5OTUxNzM2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/> 📎 专栏⑩·第10篇：多核自检清单 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ5NTY2Njg2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ5NTY2Njg2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/> 📎 电机控制专题导航 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0MTIy" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0MTIy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><strong>专栏⑪进度：10/10篇 ✅ 全部完成</strong></p>
+<p><a href="../../../tags/Area/%E6%8A%80%E6%9C%AF/%E7%94%B5%E6%9C%BA%E6%8E%A7%E5%88%B6" class="tag-link internal alias" data-slug="tags/Area/技术/电机控制">电机控制</a></p>
+<p><a href="../../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h3 id="2-专栏第9篇autosar-集成深化电机控制--bswm-状态机">2. 专栏⑪·第9篇：AUTOSAR 集成深化——电机控制 × BswM 状态机<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-专栏第9篇autosar-集成深化电机控制--bswm-状态机" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Flomo ID：<code>MjQ5OTUxNzM2</code></li>
+<li>创建时间：2026-08-03T20:05:15+08:00</li>
+<li>原文：<a href="https://v.flomoapp.com/mine/?memo_id=MjQ5OTUxNzM2" class="external">在 Flomo 中打开<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>标签：Area/技术/电机控制、Archive/MigratedNotion、Archive/DeleteCandidate</li>
+</ul>
+<p><strong>专栏⑪·第9篇：AUTOSAR 集成深化——电机控制 × BswM 状态机</strong></p>
+<p><strong>场景：电机控制走 Complex Driver 跑在 ISR 里（第6篇讲过），但”电机什么时候转、什么时候停、故障时怎么办”——这些是模式管理的事，归 BswM</strong></p>
+<p>先点破一个巧合：BLDC 六步换相本质上就是一个状态机——状态（扇区/导通组合）+ 条件（霍尔信号）+ 动作（切换导通相）。你第一次看它时想到的就是 BswM 的规则链（7/28 三问其一）。这个直觉是对的——电机控制和模式管理的底层是同一套思维。真正的坑在两层怎么分工。</p>
+<p><strong>两层分工的边界：</strong></p>
+<ul>
+<li>
+<p><strong>实时性在 ISR（微秒级）</strong>：FOC 电流环、过流保护、PWM 更新——必须 ISR 直做，不能等任何仲裁</p>
+</li>
+<li>
+<p><strong>模式管理在 BswM（毫秒级）</strong>：电机使能/禁止、运行模式切换、故障后的降级策略——BswM 仲裁</p>
+</li>
+</ul>
+<p><strong>AUTOSAR 集成里三个必踩的接口问题：</strong></p>
+<ol>
+<li>
+<p><strong>电机使能/禁止作为 BswM 的 Action</strong>：比如”点火 ON + 无故障 → 使能电机”。但 BswM 的 Action 只是”发命令”，真正执行在 Complex Driver——命令和执行的间隙要处理（BswM 说”电机停了”，ISR 可能还在跑最后一个周期）。</p>
+</li>
+<li>
+<p><strong>故障响应路径要分两级</strong>：过流/堵转这类危险故障，必须 ISR 直切 PWM（微秒级），不能等 BswM 仲裁（毫秒级）。但切完要同步通知 BswM（置故障标志），让上层知道”电机被切了”——否则 BswM 还以为是正常运行。</p>
+</li>
+<li>
+<p><strong>与 EcuM 的关机交互</strong>：EcuM 要睡眠时，必须先停电机再睡——BswM 的关机 Action 链里要包含”电机停止并确认”这一步（呼应专栏④/⑤的关机握手），否则电机 ISR 还在跑，休眠电流下不来、甚至唤醒。</p>
+</li>
+</ol>
+<p><strong>三个坑：</strong></p>
+<ul>
+<li>
+<p><strong>BswM 和 ISR 状态不同步</strong>：BswM 维护”电机使能”标志，ISR 维护”实际运行”状态——两者可能不一致（命令已发、执行未完成）。要有明确的确认机制（ISR 回写状态）。</p>
+</li>
+<li>
+<p><strong>安全切断依赖 BswM</strong>：过流时等 BswM 仲裁（毫秒级）再切——电机已经烧了。安全路径必须 ISR 直切。</p>
+</li>
+<li>
+<p><strong>诊断上报阻塞 FOC</strong>：故障进 DEM 要调 Dem 服务——但 FOC ISR 不能被阻塞。故障标志异步传递（慢速任务上报），别在 ISR 里调 DEM（第6篇提过，这是高危操作）。</p>
+</li>
+</ul>
+<p><strong>一句话总结</strong>：电机控制的实时性靠 ISR（微秒级保命），模式管理靠 BswM（毫秒级协调）——两层分工明确。别让 BswM 去做微秒级的事（会死人），也别让 ISR 去管模式（会乱套）。</p>
+<p>📎 第8篇：双环调度 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ5OTUxNzEy" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ5OTUxNzEy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/> 📎 三问·其一：BLDC换相 × BswM → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ5MDI3Mjg4" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ5MDI3Mjg4<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/> 📎 专栏⑤·第7篇：BswM 和 SWC 接口 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ5NTY2MjE3" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ5NTY2MjE3<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><strong>专栏⑪进度：9/10篇</strong></p>
+<p><a href="../../../tags/Area/%E6%8A%80%E6%9C%AF/%E7%94%B5%E6%9C%BA%E6%8E%A7%E5%88%B6" class="tag-link internal alias" data-slug="tags/Area/技术/电机控制">电机控制</a></p>
+<p><a href="../../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h3 id="3-专栏第8篇电流环-vs-位置环双环调度与中断优先级">3. 专栏⑪·第8篇：电流环 vs 位置环——双环调度与中断优先级<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-专栏第8篇电流环-vs-位置环双环调度与中断优先级" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Flomo ID：<code>MjQ5OTUxNzEy</code></li>
+<li>创建时间：2026-08-03T20:05:05+08:00</li>
+<li>原文：<a href="https://v.flomoapp.com/mine/?memo_id=MjQ5OTUxNzEy" class="external">在 Flomo 中打开<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>标签：Area/技术/电机控制、Archive/MigratedNotion、Archive/DeleteCandidate</li>
+</ul>
+<p><strong>专栏⑪·第8篇：电流环 vs 位置环——双环调度与中断优先级</strong></p>
+<p><strong>场景：PWM 中断（电流环，10-20kHz）和霍尔/编码器中断（位置环）抢同一个 CPU——优先级先排谁？</strong></p>
+<p>答案很硬： <strong>电流环 > 位置环</strong>。原因不是”电流更重要”，是”失控的代价不同”——电流失控 = 过流炸管/烧电机；位置误差最多是性能差、手感差。</p>
+<p><strong>两个环的实时性画像：</strong></p>
+<ul>
+<li>
+<p><strong>电流环</strong>（PWM 中断触发）：周期 = PWM 周期（50-100μs@10-20kHz）。每个周期必须跑完：ADC 采样 → Clark → Park → PI → 逆变换 → SVPWM 更新寄存器。超时 = 电流失控。</p>
+</li>
+<li>
+<p><strong>位置环</strong>（霍尔/编码器事件触发）：换向/位置更新。可被电流环抢占——位置处理晚几个周期没事，电流晚一个周期可能出事。</p>
+</li>
+</ul>
+<p><strong>CPU 预算怎么算：</strong></p>
+<p>10kHz 电流环 = 100μs 周期。FOC 链路（含 ADC）要压到 30-50μs（30-50% CPU）——剩下的时间给位置环、通信、上层任务。电流环超预算，整个系统跟着超。</p>
+<p><strong>四个坑：</strong></p>
+<ul>
+<li>
+<p><strong>位置中断抢占电流中断</strong>：位置环处理时间长（滤波、观测器、查表），把电流环挤到超时——电流失控。位置环的脏活（滤波）要挪到低速任务，中断里只做必要的。</p>
+</li>
+<li>
+<p><strong>ADC 采样窗口没跟 PWM 对齐</strong>：采样点落在 PWM 开关沿上——采到开关噪声，电流值畸变——PI 输出抖动。采样要在 PWM 中心（开关噪声最小处）触发。</p>
+</li>
+<li>
+<p><strong>电流环里做位置环的事</strong>：把位置估算、观测器塞进电流环——超时是必然的。电流环只做电流的事，位置估算放慢速循环。</p>
+</li>
+<li>
+<p><strong>中断嵌套 vs 优先级翻转</strong>：裸机里中断随便嵌；进 AUTOSAR 后是 Cat1/Cat2 中断模型（第9篇展开）——优先级和禁止嵌套的规则不一样，沿用裸机习惯会翻车。</p>
+</li>
+</ul>
+<p><strong>一句话总结</strong>：双环优先级不是”看哪个重要”，是”看哪个失控会毁掉系统”——电流环先保命，位置环让路。采样对齐 PWM 中心、脏活挪出中断、预算留余量，双环就稳了。</p>
+<p>📎 第7篇：反电动势实战 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ5OTUxNjky" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ5OTUxNjky<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/> 📎 三问·其二：双环优先级 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ5MDI3MzE4" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ5MDI3MzE4<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/> 📎 专栏⑩·第7篇：多核调试 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ5NTY2NjM5" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ5NTY2NjM5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><strong>专栏⑪进度：8/10篇</strong></p>
+<p><a href="../../../tags/Area/%E6%8A%80%E6%9C%AF/%E7%94%B5%E6%9C%BA%E6%8E%A7%E5%88%B6" class="tag-link internal alias" data-slug="tags/Area/技术/电机控制">电机控制</a></p>
+<p><a href="../../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h3 id="4-专栏第7篇反电动势实战省掉位置传感器怎么知道转子在哪">4. 专栏⑪·第7篇：反电动势实战——省掉位置传感器，怎么知道转子在哪<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4-专栏第7篇反电动势实战省掉位置传感器怎么知道转子在哪" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Flomo ID：<code>MjQ5OTUxNjky</code></li>
+<li>创建时间：2026-08-03T20:04:58+08:00</li>
+<li>原文：<a href="https://v.flomoapp.com/mine/?memo_id=MjQ5OTUxNjky" class="external">在 Flomo 中打开<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>标签：Area/技术/电机控制、Archive/MigratedNotion、Archive/DeleteCandidate</li>
+</ul>
+<p><strong>专栏⑪·第7篇：反电动势实战——省掉位置传感器，怎么知道转子在哪</strong></p>
+<p><strong>场景：想省掉旋变/霍尔（省几十块），但电机转起来后不知道转子在哪——反电动势就是那个”免费的传感器”</strong></p>
+<p>第5篇讲过无传感器方案：中高速用反电动势（BEMF），零速/低速用高频注入。这篇把 BEMF 讲透——它在工程上不是”一个概念”，是一条需要实现的高频采样通道。</p>
+<p><strong>BEMF 的三种工程实现：</strong></p>
+<ol>
+<li><strong>过零检测（Zero Crossing）——无感 BLDC 的经典方案</strong>
+<ul>
+<li>
+<p>比较端电压与中点电压，BEMF 过零 = 换向时机（过零后再等 30° 电角度换向）</p>
+</li>
+<li>
+<p>硬件：比较器电路；软件：ADC 采样端电压</p>
+</li>
+</ul>
+</li>
+<li><strong>相电压/线电压比较法</strong>
+<ul>
+<li>用硬件比较器比较两相端电压，输出换向信号——最简单、延迟最小</li>
+</ul>
+</li>
+<li><strong>观测器（滑模/龙伯格）——正弦波 FOC 的软件方案</strong>
+<ul>
+<li>用电机模型 + 采样电流/电压，实时估算 BEMF 矢量 → 提取角度</li>
+</ul>
+</li>
+</ol>
+<p><strong>三个坑：</strong></p>
+<ul>
+<li>
+<p><strong>低速时 BEMF 太小，根本测不到</strong>：BEMF 与转速成正比——低于 5% 额定转速时信号淹没在噪声里（第5篇）。所以无感启动要”开环强拉”：先按固定频率换向把转子拉起来，转速够了再切闭环。</p>
+</li>
+<li>
+<p><strong>PWM 开关噪声里的”假过零”</strong>：PWM 开关瞬间、续流二极管压降都会制造假过零——采样窗口要避开开关沿（PWM 中心对齐采样），过零检测要有滤波/去抖。</p>
+</li>
+<li>
+<p><strong>启动三段式的切换冲击</strong>：开环强拉 → 检测到 BEMF → 切闭环，切换瞬间角度估算有跳变 → 电流冲击。切换要平滑（渐入渐出），别一把切。</p>
+</li>
+</ul>
+<p><strong>还有两个常被忽略的细节：</strong></p>
+<ul>
+<li>
+<p><strong>中点电压怎么取</strong>：硬件中点（绕组星点直接采样）最准但电机可能没引出中点；虚拟中点（电阻分压）在高频噪声下会漂移——漂移 = 过零判断偏移 = 换向提前/滞后。</p>
+</li>
+<li>
+<p><strong>BEMF 采样与 PWM 占空比耦合</strong>：占空比太高/太低时，采样窗口被压缩——BEMF 采样的有效时间窗口随工况变化，要动态调整采样时刻。</p>
+</li>
+</ul>
+<p><strong>一句话总结</strong>：BEMF 是免费的传感器，但它是”转速的函数”——转得越快越准，零速/低速是它的天生盲区。无感方案省的是钱，付的是”低速段性能”和”启动复杂度”。</p>
+<p>📎 第6篇：汽车实战场景 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ4NjM1NDE4" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ4NjM1NDE4<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/> 📎 三问·其三：BEMF 是结果还是原因 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ5MDI3MzQ0" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ5MDI3MzQ0<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><strong>专栏⑪进度：7/10篇</strong></p>
+<p><a href="../../../tags/Area/%E6%8A%80%E6%9C%AF/%E7%94%B5%E6%9C%BA%E6%8E%A7%E5%88%B6" class="tag-link internal alias" data-slug="tags/Area/技术/电机控制">电机控制</a></p>
+<p><a href="../../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h3 id="5-专栏第6篇汽车实战场景eps电子水泵ev主驱autosar集成">5. 专栏⑪·第6篇：汽车实战场景——EPS、电子水泵、EV主驱、AUTOSAR集成<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#5-专栏第6篇汽车实战场景eps电子水泵ev主驱autosar集成" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Flomo ID：<code>MjQ4NjM1NDE4</code></li>
+<li>创建时间：2026-07-26T12:20:42+08:00</li>
+<li>原文：<a href="https://v.flomoapp.com/mine/?memo_id=MjQ4NjM1NDE4" class="external">在 Flomo 中打开<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>标签：Area/技术/电机控制、Archive/MigratedNotion、Archive/DeleteCandidate</li>
+</ul>
+<p><strong>专栏⑪·第6篇：汽车实战场景——EPS、电子水泵、EV主驱、AUTOSAR集成</strong></p>
+<p>前5篇从基础到算法铺了一整条链路。这篇回到你的主场—— <strong>汽车上哪些地方在用电机控制，每个场景的约束条件是什么。</strong></p>
+<p><strong>▎场景一：EPS（电动助力转向）——最精密的 12V BLDC 应用</strong></p>
+<p>EPS 电机装在转向管柱上或齿条上，驾驶员打方向时电机提供辅助力矩。12V 系统，功率 300-800W。</p>
+<p><strong>约束条件：</strong></p>
+<ul>
+<li>
+<p><strong>手感</strong>——不是”电机转得准”，是”驾驶员觉得方向盘轻了但又不发飘”。转矩脉动 &lt; 1% 才能让驾驶员感觉不到电机介入的”颗粒感”。FOC 是必须的，6步换向手感发硬</p>
+</li>
+<li>
+<p><strong>零速输出最大转矩</strong>——车停着打方向（原地转向）需要的助力最大。电机在零速/近零速下输出额定转矩——FOC 的零速闭环能力至关重要</p>
+</li>
+<li>
+<p><strong>冗余</strong>——功能安全要求 ASIL D。EPS 失效后驾驶员还能靠机械系统转向（但很重）。电机控制器通常是”双芯片”架构——主芯片+监控芯片，互相校验</p>
+</li>
+</ul>
+<p><strong>EPS 的控制回路（比你想象的复杂）：</strong></p>
+<p>驾驶员方向盘扭矩（扭矩传感器）→ EPS控制器算”需要多大助力”（根据车速、方向盘角度、车速感应梯度）→ 目标电流 Iq_ref → FOC 电流环 → PWM → BLDC电机输出助力</p>
+<p>EPS 的”手感”好坏来自上层算法（扭矩梯度/阻尼补偿/末端保护）——FOC 电流环只是执行层。FOC 的电流纹波和延迟——直接影响驾驶员手感。</p>
+<p><strong>EPS 中的位置传感器</strong>：EPS 电机通常用磁编码器或低成本的旋变（24V 以下用磁传感器，24V 以上用旋变）。霍尔在 EPS 上不够——60° 分辨率带来的转矩脉动驾驶员能感觉到。</p>
+<p><strong>▎场景二：电子水泵 / 电子风扇——最松的约束，最便宜的成本</strong></p>
+<p>电子水泵和电子风扇——电机 + 叶轮/风扇叶片 + 控制器三合一。12V 系统，功率 50-200W。</p>
+<p><strong>约束条件：</strong></p>
+<ul>
+<li>
+<p><strong>成本第一</strong>——水泵和风扇是”能转就行”的功能。控制器成本高 5 块钱——总监会让你换方案</p>
+</li>
+<li>
+<p><strong>不需要零速大转矩</strong>——启动后才需要转动，零速没有负载要求</p>
+</li>
+<li>
+<p><strong>转速范围固定</strong>——通常 1000-6000rpm，不需要宽调速</p>
+</li>
+</ul>
+<p><strong>控制方案选择：</strong></p>
+<ul>
+<li>
+<p>最便宜：BLDC 6步换向 + 霍尔传感器（不需要 FOC）</p>
+</li>
+<li>
+<p>中档：BLDC FOC + 霍尔（用霍尔观测器 + 插值，省掉编码器/旋变的钱）</p>
+</li>
+<li>
+<p>省掉传感器的：无传感器 FOC（BEMF 观测器 + 高频注入）</p>
+</li>
+</ul>
+<p>水泵和风扇项目上 90% 用”BLDC + 6步换向 + 霍尔”——成本最低、MCU 为 8 位/简单的 32 位、FOC 的算力开销和 PI 整定工作在量产中省了。</p>
+<p><strong>▎场景三：EV 主驱电机控制——PMSM+FOC 的极致平台</strong></p>
+<p>EV 主驱：400V/800V 高压系统，功率 100-300kW+，PMSM 或 ACIM。</p>
+<p><strong>约束条件：</strong></p>
+<ul>
+<li>
+<p><strong>效率决定续航</strong>——FOC 的效率从 90% 提到 93%——同样的电池跑更远。SiC MOSFET 比 IGBT 的效率提升是 EV 主驱换 SiC 的核心驱动力</p>
+</li>
+<li>
+<p><strong>宽调速范围</strong>——从 0 rpm（坡道起步）到 15000-20000 rpm（高速巡航）。FOC 在低速段靠 Id=0 控制，高速段靠弱磁控制（Id &lt; 0 削弱永磁体磁场）</p>
+</li>
+<li>
+<p><strong>NVH（噪声/振动/平顺性）</strong>——PMSM 的转矩脉动和齿槽转矩会传到车内。FOC 的电流谐波补偿 + 硬件上的斜槽设计</p>
+</li>
+<li>
+<p><strong>功能安全</strong>——ASIL C/D。国际标准 ISO 26262 + ISO 21434（网络安全）。电机控制器双芯片冗余 + 转矩监控（转矩安全 > 诊断扭矩监控 → 切断 PWM 输出）</p>
+</li>
+</ul>
+<p><strong>弱磁控制为什么叫”弱磁”</strong>——PMSM 的转子是永磁体，磁场强度固定。转速升高时反电动势升高 → 接近母线电压 → 不能再提速。控制 Id &lt; 0，电流产生的磁场抵消一部分永磁体磁场 → 反电动势降低 → 可以继续提速。代价：效率下降（增加的 Id 电流产生 I²R 铜损）。</p>
+<p><strong>▎AUTOSAR 集成：电机控制不走标准 BSW</strong></p>
+<p>电机控制——从 PWM 生成到 ADC 采样到 FOC 算法——对实时性要求极高（通常 10-100μs 的控制周期）。AUTOSAR 标准 BSW（COM/PduR/CanIf/RTE 等）的延迟在毫秒级——跟不上电机控制的需求。</p>
+<p>在 AUTOSAR 架构中，电机控制通常被实现为：</p>
+<ul>
+<li>
+<p><strong>Complex Driver（复杂驱动）</strong>——最常用的方式。一个特殊的 SWC，绕过标准 BSW，直接访问 MCU 的 PWM 定时器、ADC、GPIO。RTE 只用来做”诊断上报”（电机状态/故障码通给 DEM）和”控制指令”（目标转速/转矩从 CAN 诊断报文传进来）</p>
+</li>
+<li>
+<p><strong>Autosar OS 的 Cat2 ISR</strong>——FOC 控制回路在 Cat2 ISR 里跑（中断上下文，优先级最高，不经过 OS 调度延迟）</p>
+</li>
+<li>
+<p><strong>外围独立控制器</strong>——有些架构直接用独立的电机控制 MCU（便宜的小 MCU）做 FOC，主 MCU 通过 SPI/UART 给目标转矩/转速指令。主 MCU 跑 AUTOSAR 标准软件，电机控制 MCU 跑裸机代码</p>
+</li>
+</ul>
+<p><strong>AUTOSAR 集成时最容易出现的接口问题：</strong></p>
+<ol>
+<li>
+<p><strong>Complex Driver 跟 BSW 的时序冲突</strong>——Complex Driver 占了 PWM/ADC 外设，BSW 的 CanIf 也想用同一个定时器通道。需要在 EcuM 的初始化阶段分配外设的”所有权”</p>
+</li>
+<li>
+<p><strong>诊断接口</strong>——DEM 需要接收电机故障（过流/过温/失步），但不能中断正在跑的 FOC ISR。故障状态通过”非关键路径”（慢速 Task）上报</p>
+</li>
+<li>
+<p><strong>OTA 升级</strong>——电机控制的标定参数（PI 系数/死区时间/过流阈值）存在 NvM 里。升级后如果标定参数不兼容——FOC 算法行为异常——电机会抖</p>
+</li>
+</ol>
+<p><strong>🍎 电机控制专栏的核心结论</strong></p>
+<p>整个系列用一个图总结：</p>
+<p>[电机类型] → [功率级电路] → [PWM调制] → [FOC算法] → [位置检测]<br/> ↕<br/> [汽车实战]</p>
+<p>最贵的环节不是算力（MCU），是传感器（旋变/编码器 + 电流传感器 + 栅极驱动隔离）。最难的环节不是 PI 整定，是”无传感器低速段的 HFI 高频注入——怎么在噪声中提取转子位置信息”。最容易被忽视的环节——AUTOSAR 集成中的时序冲突（Complex Driver 占外设不释放）。</p>
+<p>你在汽车行业做 AUTOSAR BSW——电机控制是 Complex Driver 这个概念的典型应用场景，也是把”底层硬件控制”和”上层 AUTOSAR 架构”衔接起来的最佳练习。</p>
+<p>📎 电机控制专题导航 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0MTIy" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0MTIy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/> 📎 第5篇：位置/速度检测 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ4NjM1MDE3" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ4NjM1MDE3<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/> 📎 AUTOSAR知识体系导航 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ4MDU3MzE3" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ4MDU3MzE3<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><strong>专栏⑪进度：6/10篇</strong></p>
+<p><a href="../../../tags/Area/%E6%8A%80%E6%9C%AF/%E7%94%B5%E6%9C%BA%E6%8E%A7%E5%88%B6" class="tag-link internal alias" data-slug="tags/Area/技术/电机控制">电机控制</a></p>
+<p><a href="../../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h3 id="6-专栏第5篇位置速度检测霍尔编码器旋转变压器无传感器控制">6. 专栏⑪·第5篇：位置/速度检测——霍尔、编码器、旋转变压器、无传感器控制<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#6-专栏第5篇位置速度检测霍尔编码器旋转变压器无传感器控制" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Flomo ID：<code>MjQ4NjM1MDE3</code></li>
+<li>创建时间：2026-07-26T12:17:07+08:00</li>
+<li>原文：<a href="https://v.flomoapp.com/mine/?memo_id=MjQ4NjM1MDE3" class="external">在 Flomo 中打开<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>标签：Area/技术/电机控制、Archive/MigratedNotion、Archive/DeleteCandidate</li>
+</ul>
+<p><strong>专栏⑪·第5篇：位置/速度检测——霍尔、编码器、旋转变压器、无传感器控制</strong></p>
+<p>第4篇的 FOC 链路里每一步都需要 <strong>转子角度 θ</strong>。没有准确的角度——Park/逆Park 就错了——电流控制就跑偏了。位置传感器是 FOC 精度的天花板。</p>
+<p><strong>▎霍尔传感器——最简单、最廉价，精度最低</strong></p>
+<p><strong>原理</strong>：三个霍尔开关安装在定子上，间隔 120°（电角度）。转子永磁体的N/S极经过霍尔时——霍尔输出高低电平——三个霍尔组合出 6 种状态——对应 6 个 60° 扇区。</p>
+<p><strong>精度</strong>：60° 电角度分辨率。FOC 需要连续的 θ——但霍尔只能告诉”你在第 3 个扇区”。中间角速度用插值估算：已知上一时刻的角度 + 当前速度 × 时间差。</p>
+<p><strong>速度估算</strong>：霍尔换向频率 × 60° / 换向时间 = 转速。</p>
+<p><strong>为什么有些项目用霍尔做 FOC</strong>——成本。霍尔传感器芯片不到 1 块钱，旋变要几十块。在电动自行车/小型水泵这些”不需要极致低速性能”的场景——霍尔 FOC 够用。</p>
+<p><strong>痛点</strong>：霍尔安装位置偏差（机械公差 ±5° 电角度）→ 角度误差 → 电流控制偏差 → 转矩脉动。需要”霍尔标定”——上电时识别 6 个扇区的实际边界，补偿安装偏差。</p>
+<p><strong>▎编码器——精度高，但怕振动</strong></p>
+<p><strong>原理</strong>：码盘上有光学/磁性的刻线或图案。读头扫描码盘运动，输出 A/B/Z 脉冲。</p>
+<p><strong>增量式编码器</strong>：</p>
+<ul>
+<li>
+<p>A/B 两相差 90° 电角度的脉冲——正反转靠 A/B 的相位差判断</p>
+</li>
+<li>
+<p>Z 脉冲——每圈一个——“零点”参考</p>
+</li>
+<li>
+<p>分辨率：2500 PPR（pulses per revolution）是常见规格→ 2500 × 4（四倍频）= 10000 个位置/圈 → 0.036° 角度分辨率</p>
+</li>
+</ul>
+<p><strong>绝对式编码器</strong>：</p>
+<ul>
+<li>
+<p>直接输出绝对位置值（EnDat / BiSS / SSI 协议）</p>
+</li>
+<li>
+<p>上电不需要寻零——立刻知道转子在哪</p>
+</li>
+<li>
+<p>分辨率和精度高于增量式</p>
+</li>
+<li>
+<p>用于 ADAS 转向系统/线控制动——启动瞬间就要知道方向盘位置</p>
+</li>
+</ul>
+<p><strong>编码器的弱点</strong>：</p>
+<ul>
+<li>
+<p>怕振动：码盘碎裂/光路偏——编码器失效</p>
+</li>
+<li>
+<p>温度范围窄：光学编码器 -1070°C——汽车发动机舱 -40125°C 不能用</p>
+</li>
+<li>
+<p>需要开孔安装：码盘要套在转子轴上，电机壳体要开孔走信号线——增加成本</p>
+</li>
+</ul>
+<p><strong>▎旋转变压器（Resolver）——汽车级 FOC 的标配</strong></p>
+<p><strong>原理</strong>：本质是一个小型的”旋转变压器”。定子上有励磁线圈（Excitation），转子上的绕组感应出励磁信号——转子转动时感应信号的幅值随转子角度成正/余弦变化。</p>
+<p><strong>输出</strong>：两路信号——SIN 和 COS。比值为 tan(θ) = SIN / COS → 查 arctan 算角度。</p>
+<p><strong>精度</strong>：0.1-1° 电角度——比编码器低但够 FOC 用（PMSM 对 1° 以内的角度误差不敏感）。真正的优势在可靠性：</p>
+<ul>
+<li>
+<p><strong>无接触</strong>——没有码盘、没有光学器件、没有磨损。寿命超过电机本体</p>
+</li>
+<li>
+<p><strong>宽温度</strong>——-55~175°C（满足汽车发动机舱要求）</p>
+</li>
+<li>
+<p><strong>抗振动</strong>——无光学器件，不会碎裂</p>
+</li>
+<li>
+<p><strong>EMC 免疫</strong>——变压器原理，共模噪声不敏感</p>
+</li>
+</ul>
+<p><strong>代价</strong>：</p>
+<ul>
+<li>
+<p>需要专用的 <strong>激励信号源</strong>（5-10kHz 正弦波，幅值 5-15V）——需要额外的芯片或 MCU 的 DAC + 运放</p>
+</li>
+<li>
+<p>需要对 SIN/COS 信号做 <strong>解码</strong>（RDC—Resolver-to-Digital Converter）——集成在 MCU 内部（如 TC3xx 的 DSADC）或外置芯片（如 AU6802）</p>
+</li>
+<li>
+<p>旋变本身的成本 + 解码芯片 + 信号调理电路——整套下来几十到几百块</p>
+</li>
+</ul>
+<p><strong>为什么 EV 主驱几乎全用旋变</strong>——PMSM 零速需要最大转矩（坡道起步）。霍尔 60° 分辨率做不了低速 FOC（角度不够细，电流误差大），编码器耐不了振动和高温。旋变是汽车环境下唯一同时满足”精度+可靠性+温度”的方案。</p>
+<p><strong>▎无传感器控制——省掉传感器，但低速段是硬伤</strong></p>
+<p><strong>原理</strong>：不装位置传感器，通过电机自身的电特性反推转子位置。</p>
+<p><strong>中高速段（> 5% 额定转速）</strong>： <strong>反电动势观测器</strong>——转子转动时在定子绕组上感应出反电动势（BEMF）。BEMF 的相位包含了转子位置信息。滑模观测器（Sliding Mode Observer）或龙伯格观测器（Luenberger Observer）实时估算 BEMF → 提取角度。</p>
+<p><strong>零速/低速段（&lt; 5% 额定转速）</strong>：反电动势太小测不到——需要 <strong>高频注入（HFI, High-Frequency Injection）</strong>。在 d 轴上注入一个高频电压信号（通常 500Hz-1kHz），检测 q 轴上的电流响应——利用 PMSM 的”磁凸极性”（d 轴和 q 轴的阻抗不同）推算出转子位置。</p>
+<p><strong>无传感器的局限性</strong>：</p>
+<ul>
+<li>
+<p>零速启动需要 HFI，但 HFI 依赖电机的凸极率——内嵌式 PMSM（IPM）可以，表贴式 PMSM（SPM）几乎不行</p>
+</li>
+<li>
+<p>堵转和低速大负载——HFI 的信噪比变差</p>
+</li>
+<li>
+<p>控制系统在”速度 > 阈值时切换到 BEMF 观测器、&lt; 阈值时切换到 HFI”——切换时有角度跳变</p>
+</li>
+</ul>
+<p><strong>汽车上什么时候用无传感器</strong>——电动水泵/电子风扇（启动后一直在转，不需要零速大转矩）。EPS/EV 主驱——必须要有传感器（零速需要转矩 + 功能安全要求冗余位置信号）。</p>
+<p><strong>▎一张表总结</strong></p>
+<p>霍尔、增量编码器、绝对编码器、旋变、无传感器：角度分辨率（60°/0.01-0.1°/0.001-0.1°/0.1-1°/中高速5-10°零速差）；零速检测（❌扇区内插值不确定/✅/✅/✅/❌HFI有盲区）；温度范围（-40150°C/-1070°C/-4085°C/-55175°C/—不用外部传感器）；抗振动（✅/❌/❌/✅/✅）；成本（&lt;1<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/10</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">50</span></span></span></span>/30-100<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/20</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">50</span></span></span></span>+解码/0$硬件省了软件复杂）；汽车场景（水泵风扇/实验室工业非车规/ADAS转向线控制动/EV主驱EPS线控/水泵风扇家用电器）；FOC适用（勉强需标定和插值/✅/✅/✅/中高速✅低速❌）</p>
+<p><strong>🍎 选位置传感器的本质问题：你的电机需不需要在零速输出大转矩</strong></p>
+<p>需要（EV 主驱、EPS、刹车）→ 旋变或绝对编码器。不需要（水泵、风扇、电动工具）→ 霍尔（配 FOC）或无传感器。绝大多数汽车电机控制项目的传感器成本和选型争议，根源都在这一个问题。</p>
+<p>📎 电机控制专题导航 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0MTIy" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0MTIy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/> 📎 第4篇：FOC算法 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0OTQw" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0OTQw<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/> 📎 第6篇：汽车实战场景 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ4NjM1NDE4" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ4NjM1NDE4<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><strong>专栏⑪进度：5/10篇</strong></p>
+<p><a href="../../../tags/Area/%E6%8A%80%E6%9C%AF/%E7%94%B5%E6%9C%BA%E6%8E%A7%E5%88%B6" class="tag-link internal alias" data-slug="tags/Area/技术/电机控制">电机控制</a></p>
+<p><a href="../../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h3 id="7-专栏第4篇foc-算法clark--park--pi--svpwm-的完整链路">7. 专栏⑪·第4篇：FOC 算法——Clark / Park / PI / SVPWM 的完整链路<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#7-专栏第4篇foc-算法clark--park--pi--svpwm-的完整链路" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Flomo ID：<code>MjQ4NjM0OTQw</code></li>
+<li>创建时间：2026-07-26T12:16:26+08:00</li>
+<li>原文：<a href="https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0OTQw" class="external">在 Flomo 中打开<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>标签：Area/技术/电机控制、Archive/MigratedNotion、Archive/DeleteCandidate</li>
+</ul>
+<p><strong>专栏⑪·第4篇：FOC 算法——Clark / Park / PI / SVPWM 的完整链路</strong></p>
+<p>前3篇做了铺垫——知道”有个电机”（第1篇）、“用功率管让它转”（第2篇）、“PWM 信号怎么变成电流”（第3篇）。这篇讲 <strong>怎么精确控制电流的大小和方向</strong>——FOC 的核心算法链路。</p>
+<p><strong>▎FOC 的本质：把”控制三相交流”变成”控制两个直流”</strong></p>
+<p>BLDC 和 PMSM 是三相电机，需要控制三相电流（Ia, Ib, Ic）——三相电流相位差 120°，互相耦合，不是独立的变量。</p>
+<p>FOC 的核心思路： <strong>通过坐标变换，把三个互相耦合的交流量变成两个互相独立的直流量。</strong></p>
+<p>Clark 变换（三相→两相正交）→ Park 变换（静止→旋转）→ PI 调节（对直流量用经典控制）→ 逆 Park/逆 Clark → SVPWM。</p>
+<p><strong>▎第1步：Clark 变换（三相→两相静止坐标系）</strong></p>
+<p>把从 ADC 采到的三相电流（Ia, Ib, Ic）投影到两相静止坐标系（α, β）。</p>
+<p>公式（等幅值变换）：</p>
+<p>Iα = Ia - 0.5 × Ib - 0.5 × Ic<br/> Iβ = (√3/2) × (Ib - Ic)</p>
+<p>物理直觉：电机有三相绕组（空间上相隔 120°），但电磁场可以只用两个互相垂直的轴（α, β）来描述——多余的第三轴是冗余的。Clark 变换就是去掉这个冗余。</p>
+<p><strong>▎第2步：Park 变换（两相静止→两相旋转坐标系）</strong></p>
+<p>Iα 和 Iβ 还是交流量（随着转子转动而正弦变化）。Park 变换把它们变成直流量（Id, Iq）——因为是跟着转子一起旋转的坐标系。</p>
+<p>公式：</p>
+<p>Id = Iα × cos(θ) + Iβ × sin(θ)<br/> Iq = -Iα × sin(θ) + Iβ × cos(θ)</p>
+<p>θ：转子的电角度（从位置传感器读到的角度 × 电机极对数）。</p>
+<p>Id（直轴电流）：产生磁场，但不产生转矩。在 PMSM 中，Id 通常控制为 0（因为转子已经有永磁体了——不需要额外励磁）——Id ≠ 0 时可以做弱磁控制（高速时削弱永磁体磁场，换取更高转速）。</p>
+<p>Iq（交轴电流）：产生转矩——电机的输出转矩 ≈ Kt × Iq（Kt 是转矩常数）。</p>
+<p><strong>这就是 FOC 的核心”解耦”：把转矩和磁场分开控制。</strong> Id 管磁场、Iq 管转矩——两个独立的 PI 调节器分别控制。</p>
+<p><strong>▎第3步：PI 调节器</strong></p>
+<p>现在是两个直流量（Id, Iq）——可以用经典的 PI（比例积分）调节器了。</p>
+<p>电流环 PI 调节器：</p>
+<p>Vd_ref = Kp_d × (Id_ref - Id_measured) + Ki_d × ∫(Id_ref - Id_measured) dt<br/> Vq_ref = Kp_q × (Iq_ref - Iq_measured) + Ki_q × ∫(Iq_ref - Iq_measured) dt</p>
+<p>Id_ref（目标直轴电流）：通常 = 0（不额外励磁），弱磁时为负值。</p>
+<p>Iq_ref（目标交轴电流）：来自速度环或转矩指令——你想要多少转矩。</p>
+<p>PI 参数（Kp, Ki）的整定——经典方法是”整定电流环带宽”。经验法则：电流环带宽设为 PWM 频率的 1/10 ~ 1/20。PWM 10kHz → 电流环带宽 500-1000Hz → 对应的 PI 参数可以推导出来。</p>
+<p><strong>▎第4步：逆 Park + 逆 Clark</strong></p>
+<p>PI 调节器输出的是旋转坐标系下的 Vd_ref, Vq_ref（直流量）。要驱动三相全桥，需要把它们变回三相 PWM 占空比。</p>
+<p>逆 Park：</p>
+<p>Vα_ref = Vd_ref × cos(θ) - Vq_ref × sin(θ)<br/> Vβ_ref = Vd_ref × sin(θ) + Vq_ref × cos(θ)</p>
+<p>逆 Clark（两相→三相）：</p>
+<p>Va_ref = Vα_ref<br/> Vb_ref = -0.5 × Vα_ref + (√3/2) × Vβ_ref<br/> Vc_ref = -0.5 × Vα_ref - (√3/2) × Vβ_ref</p>
+<p>得到的 Va_ref, Vb_ref, Vc_ref 就是三相电压指令——送进 SVPWM 模块（第3篇讲的），算出 6 个功率管的导通时间。</p>
+<p><strong>▎完整的 FOC 控制回路（一个 PWM 周期的快照）</strong></p>
+<p>ADC 采样三相电流（Ia, Ib, Ic）+ 位置传感器读角度θ<br/> ↓<br/> Clark 变换: Ia,Ib,Ic → Iα,Iβ<br/> ↓<br/> Park 变换: Iα,Iβ → Id,Iq（用 θ）<br/> ↓<br/> PI 调节器：Id_ref-Id → Vd_ref；Iq_ref-Iq → Vq_ref<br/> ↓<br/> 逆 Park: Vd_ref,Vq_ref → Vα_ref,Vβ_ref（用 θ）<br/> ↓<br/> 逆 Clark: Vα_ref,Vβ_ref → Va_ref,Vb_ref,Vc_ref<br/> ↓<br/> SVPWM: 算 6 个占空比 → 更新 PWM 寄存器<br/> ↓<br/> PWM 硬件输出 → Gate Driver → MOSFET → 电机端电压 → 电机电流变化<br/> ↓<br/> 下一个 PWM 周期，从头再来</p>
+<p>整个回路在一个 PWM 周期内（100μs@10kHz）跑完。这是电流环——控制的延迟决定了 FOC 的性能上限。</p>
+<p><strong>▎FOC 为什么比 6 步换向好</strong></p>
+<p>6步换向 vs FOC：转矩脉动（15-20% 每60°换相跳变 / &lt;1% 连续平滑）；噪声（“咔咔”换相音 / 几乎无声）；低速性能（差 低速转矩抖动 / 好 零速也能输出最大转矩）；MCU算力（8位够用 / 32位+DSP+硬件乘法器）；效率（85-90% / >93%）；位置传感器（6个扇区霍尔60°分辨率 / 连续角度 编码器旋变观测器）</p>
+<p>FOC 的代价：算力需求高了 10 倍、电流采样需要高精度同步 ADC、位置传感器需要连续角度而不是 6 步霍尔。</p>
+<p><strong>🍎 FOC 的”钱”花在哪</strong></p>
+<p>FOC 链条上最贵的不是算法本身（MCU 几十块钱就够），是 <strong>电流采样精度和位置传感器精度</strong>。低端方案（Shunt 电阻 + 霍尔）可以跑 FOC 但是 Id/Iq 的精度差、低速性能不理想。高端方案（隔离式电流传感器 + 旋转变压器）可以跑出教科书级别的 FOC 波形——但一套下来贵几千块。你工作中看到的电机控制——是低成本方案还是高性能方案？</p>
+<p>📎 电机控制专题导航 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0MTIy" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0MTIy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/> 📎 第3篇：PWM调制 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0NjAz" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0NjAz<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/> 📎 第5篇：位置/速度检测 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ4NjM1MDE3" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ4NjM1MDE3<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><strong>专栏⑪进度：4/10篇</strong></p>
+<p><a href="../../../tags/Area/%E6%8A%80%E6%9C%AF/%E7%94%B5%E6%9C%BA%E6%8E%A7%E5%88%B6" class="tag-link internal alias" data-slug="tags/Area/技术/电机控制">电机控制</a></p>
+<p><a href="../../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h3 id="8-专栏第3篇pwm-调制从-spwm-到-svpwm电压怎么变成电流">8. 专栏⑪·第3篇：PWM 调制——从 SPWM 到 SVPWM，电压怎么变成电流<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#8-专栏第3篇pwm-调制从-spwm-到-svpwm电压怎么变成电流" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Flomo ID：<code>MjQ4NjM0NjAz</code></li>
+<li>创建时间：2026-07-26T12:13:20+08:00</li>
+<li>原文：<a href="https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0NjAz" class="external">在 Flomo 中打开<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>标签：Area/技术/电机控制、Archive/MigratedNotion、Archive/DeleteCandidate</li>
+</ul>
+<p><strong>专栏⑪·第3篇：PWM 调制——从 SPWM 到 SVPWM，电压怎么变成电流</strong></p>
+<p>第1篇讲了四种电机区别，第2篇讲了功率管怎么组成桥电路。这篇讲 <strong>MCU 的 PWM 信号怎么变成电机绕组里流动的电流。</strong></p>
+<p><strong>▎PWM 的”翻译”过程</strong></p>
+<p>MCU 发出 PWM 占空比 → Gate Driver 放大 → MOSFET 开关 → 电机端子上产生脉冲电压 → 电机绕组的电感把脉冲电压”滤波”成连续电流 → 电流产生磁场 → 磁场驱动转子旋转。</p>
+<p>关键中间步骤： <strong>电感把脉冲电压滤波成连续电流</strong>。电机的绕组是电感（L），电感上的电流不能突变——PWM 的高电平期间电流上升、低电平期间电流通过续流二极管下降——一升一降之间，平均电流 = 平均电压 / 电阻。脉冲频率越高（10kHz vs 1kHz），纹波电流越小——因为你上次在硬件第3阶写过的”100Hz 提到 10kHz 丝滑了”。</p>
+<p><strong>▎SPWM（正弦 PWM）——最直观的调制方式</strong></p>
+<p>想让电机产生正弦电流——就需要正弦电压。但功率管只能输出”开”或”关”两种状态，不能输出”50% 的正弦”。</p>
+<p>SPWM 的解决方案： <strong>用一个高频三角波（载波）跟一个低频正弦波（调制波）比较</strong>。调制波 > 载波 → 输出高电平；调制波 &lt; 载波 → 输出低电平。输出脉冲的平均值 = 正弦波在该点的瞬时值。</p>
+<p>三相 SPWM 就是三个相位差 120° 的正弦波分别跟同一个三角波比较——产生三路 PWM 信号驱动三相全桥的 6 个开关管。</p>
+<p>SPWM 的电压利用率： <strong>直流母线电压的 50%</strong>。什么意思？如果母线电压是 12V，SPWM 输出的基波有效值最大只有 6V。因为正弦波峰值为 0.5×Vbus 时刚好不进入过调制区——超过就失真了。</p>
+<p><strong>▎SVPWM（空间矢量 PWM）——电压利用率高 15.5% 的原因</strong></p>
+<p>SVPWM 不直接比较三角波和正弦波——它把三相电压看成一个旋转的空间矢量。8 种开关组合（6 个有效矢量 + 2 个零矢量），用相邻两个有效矢量合成任意方向的电压矢量。</p>
+<p><strong>直观理解</strong>：三相全桥有 6 个开关管，对于每个开关管（上管导通=1，下管导通=0），三相一共有 2^3=8 种组合。其中 6 种是有效矢量（V1-V6，每 60° 一个方向），2 种是零矢量（V0/V7——全部上管通或全部下管通，电机端子上没有电压差）。</p>
+<p>SVPWM 在每个 PWM 周期里算——“目标矢量在哪两个有效矢量之间”，然后按”伏秒平衡”算出两个矢量和零矢量的作用时间。</p>
+<p><strong>SVPWM 的电压利用率：Vbus/√3 ≈ 57.7%</strong>——比 SPWM 的 50% 高了 15.5%。高出的部分来自 SVPWM 注入了三次谐波——在相电压上叠加了同频三次谐波，线电压不受影响。三次谐波不产生转矩（转矩由基波产生），只提高母线电压利用率。</p>
+<p><strong>▎死区时间对电流波形的影响</strong></p>
+<p>第2篇讲过死区时间（防止上下管直通）。在 SPWM/SVPWM 调制中，死区时间会导致 <strong>电压误差</strong>：</p>
+<p>理想情况：上管关断瞬间→下管导通。实际：上管关断→等待死区→下管导通。在死区等待期间，两个管都关断——电流通过体二极管续流——这个续流方向决定了电压误差的极性。</p>
+<p>死区时间导致的结果：</p>
+<ul>
+<li>
+<p><strong>电流过零点畸变</strong>：电流在过零附近（接近 0A 时），死区时间占比最大——电压误差最明显</p>
+</li>
+<li>
+<p><strong>转矩脉动增大</strong>：电流波形畸变→转矩有低频抖动</p>
+</li>
+<li>
+<p><strong>低速时更明显</strong>：电机转速低时反电动势小，死区引起的电压误差占比大</p>
+</li>
+</ul>
+<p>补偿： <strong>死区补偿算法</strong>——根据电流方向预测死区期间的电压误差，在 PWM 占空比中叠加一个修正量。</p>
+<p><strong>▎PWM 频率的选择——什么时候该高、什么时候该低</strong></p>
+<p>频率、优点、缺点、适用：2-5kHz（开关损耗低/电流纹波大、电机有”嗡嗡”声/大功率 IGBT EV主驱早期）；10-20kHz（无噪声、纹波适中/开关损耗中等/常规电机控制 水泵EPS）；40-100kHz（电流正弦度极高/开关损耗大、MCU 算力高/SiC MOSFET EV主驱现在）；>100kHz（可用极小的滤波电感/损耗极大/只有 GaN 能做到 航空航天服务器电源）</p>
+<p>SiC 和 GaN 能工作在更高频率——不是因为它们”更快”（开关速度确实更快），而是因为它们的开关损耗更小（低 Qg + 低 Qrr + 零反向恢复）。</p>
+<p><strong>🍎 电机控制从 PWM 到 FOC 是一条连续的思维链</strong></p>
+<p>PWM（产生脉冲电压）→ 电感滤波（脉冲→连续电流）→ 电流产生磁场 → 磁场驱动转子。</p>
+<p>如果你在 MCU 上改一下 PWM 占空比——电机端的电压变了——电流变了——转矩变了——转速变了。控制 PWM 占空比 = 控制转矩/转速。这就是电机控制的核心： <strong>MCU 的定时器/GPT 模块输出 PWM 信号的高低——直接决定了电机动不动、转多快、力矩多大。</strong> 理解 PWM 到电流的”翻译”过程，是理解后面 FOC 算法（Clark/Park 变换 + PI 调节器 + SVPWM）的前提。</p>
+<p>📎 电机控制专题导航 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0MTIy" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0MTIy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/> 📎 第1篇：电机类型对比 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0MzAw" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0MzAw<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/> 📎 第2篇：H桥/三相逆变器 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0NTI2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0NTI2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/> 📎 第4篇：FOC算法 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0OTQw" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0OTQw<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><strong>专栏⑪进度：3/10篇</strong></p>
+<p><a href="../../../tags/Area/%E6%8A%80%E6%9C%AF/%E7%94%B5%E6%9C%BA%E6%8E%A7%E5%88%B6" class="tag-link internal alias" data-slug="tags/Area/技术/电机控制">电机控制</a></p>
+<p><a href="../../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h3 id="9-专栏第2篇功率级电路h桥到三相逆变器">9. 专栏⑪·第2篇：功率级电路——H桥到三相逆变器<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#9-专栏第2篇功率级电路h桥到三相逆变器" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Flomo ID：<code>MjQ4NjM0NTI2</code></li>
+<li>创建时间：2026-07-26T12:12:34+08:00</li>
+<li>原文：<a href="https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0NTI2" class="external">在 Flomo 中打开<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>标签：Area/技术/电机控制、Archive/MigratedNotion、Archive/DeleteCandidate</li>
+</ul>
+<p><strong>专栏⑪·第2篇：功率级电路——H桥到三相逆变器</strong></p>
+<p>第1篇讲了四种电机的区别。这篇讲 <strong>怎么用功率管让电机转起来</strong>——从最简单的 H 桥到汽车主驱用的三相全桥。</p>
+<p><strong>▎H 桥：两个半桥拼起来的”四开关”结构</strong></p>
+<p>H 桥的命名来自电路拓扑——四个开关管（Q1-Q4）加一个负载（电机），画出来像个 H。</p>
+<p><strong>四个开关管的导通组合：</strong></p>
+<ul>
+<li>
+<p>Q1+Q4 导通：电流从左到右 → 电机正转</p>
+</li>
+<li>
+<p>Q2+Q3 导通：电流从右到左 → 电机反转</p>
+</li>
+<li>
+<p>Q1+Q2 导通（或 Q3+Q4 导通）：上下直通→短路！→ 必须避免</p>
+</li>
+<li>
+<p>全部关断：电机自由停转（惯性滑行）</p>
+</li>
+</ul>
+<p><strong>H 桥驱动的电机——PWM 调速</strong></p>
+<p>有刷 DC 电机的转速跟两端电压成正比。用 PWM 斩波控制平均电压：占空比 50% → 平均电压 = 电源电压 × 50% → 转速减半。</p>
+<p>PWM 频率的选择：</p>
+<ul>
+<li>
+<p><strong>&lt; 1kHz</strong>：电机能听到 PWM 的”嗡嗡”声（人耳可听频段），且电流纹波大（转矩抖动明显）</p>
+</li>
+<li>
+<p><strong>10-20kHz</strong>：人耳听不到了（超音频），电流纹波明显减小——但你写的”100Hz 提到 10kHz 丝滑了”就是这个道理</p>
+</li>
+<li>
+<p><strong>> 50kHz</strong>：开关损耗上升（MOSFET 每开关一次都有能量损耗），且要选高频 MOSFET，成本上升</p>
+</li>
+</ul>
+<p><strong>死区时间（Dead Time）</strong></p>
+<p>H 桥的上下管不能同时导通——否则 VCC 通过 Q1 和 Q2 直接到 GND——短路。但 MOSFET 的关断比开通慢——关断需要几 ns 到几百 ns。所以 PWM 信号里必须插入一个”等待时间”——Q1 关了后等一小段时间再开 Q2。这个等待时间就是死区时间。</p>
+<p>死区时间设太长 → 电机电流畸变（电压利用率降低）。设太短 → 有直通风险。典型值：100-500ns（取决于 MOSFET 的开关速度）。</p>
+<p><strong>▎从 H 桥到三相全桥：多了两相而已</strong></p>
+<p>H 桥控制有刷 DC 电机（两线：正+负）。BLDC 和 PMSM 是三相绕组——需要三组 H 桥（6 个开关管）。</p>
+<p>三相全桥有 6 个开关管（Q1-Q6），分成三个半桥（Phase A/B/C）。 <strong>任何时候只导通三个管</strong>（上臂一个+下臂两个，或者上臂两个+下臂一个）——这就是 6 步换向。</p>
+<p><strong>6 步换向的导通表（以 BLDC 为例）：</strong></p>
+<p>扇区1: Q1(Q6 + Q5导通，其他三个关断)<br/> 扇区2: Q5(Q4 + Q6导通)<br/> 扇区3: Q4(Q3 + Q5导通)<br/> 扇区4: Q3(Q2 + Q4导通)<br/> 扇区5: Q2(Q1 + Q3导通)<br/> 扇区6: Q6(Q5 + Q1导通)</p>
+<p>每步导通 60° 电角度，一圈 360° 分 6 步。这就是 BLDC 最简单的 6 步换向——霍尔传感器检测到转子到了下一个扇区边界，控制器切换到下一组导通组合。</p>
+<p><strong>▎栅极驱动（Gate Driver）——功率管靠什么打开</strong></p>
+<p>MOSFET 是电压控制器件——栅极电压 > 阈值电压时导通。但 MCU 的 GPIO 只能输出 3.3V 或 5V，驱动不了功率 MOSFET（需要 10-15V 的栅极电压）。</p>
+<p>栅极驱动芯片（Gate Driver）做三件事：</p>
+<ol>
+<li>
+<p><strong>电平升压</strong>——把 MCU 的 3.3V PWM 信号升到 10-15V（驱动 MOSFET 完全导通）</p>
+</li>
+<li>
+<p><strong>电流放大</strong>——MOSFET 的栅极有寄生电容（Cgs / Cgd），每次开关都需要充放电。Gate Driver 提供高峰值电流（1-5A）来快速充放电——实现高速开关</p>
+</li>
+<li>
+<p><strong>隔离（可选）</strong>——对于高压电机（400V EV 主驱），控制电路和功率电路之间需要隔离。光耦隔离或变压器隔离</p>
+</li>
+</ol>
+<p><strong>自举电容（Bootstrap Capacitor）</strong></p>
+<p>三相全桥的上臂 MOSFET（Q1/Q3/Q5）的源极是浮动的（不接地）。Gate Driver 给上臂供电靠自举电容。</p>
+<p>自举原理：下臂导通时，VCC 通过二极管给自举电容充电。下臂关断，上臂要导通时——自举电容里存的那点电就是上臂栅极驱动的唯一电源。</p>
+<p>如果 PWM 占空比太高（>95%）或者频率太低——自举电容在关断时间内充不满电——上臂无法导通——电机缺相——转矩跳动。</p>
+<p><strong>▎汽车电机控制功率级的典型架构</strong></p>
+<p>12V 小功率（EPS/水泵/风扇）：</p>
+<p>MCU → 3.3V PWM → Gate Driver（带自举） → 6个MOSFET → BLDC电机<br/> → 电流采样（Shunt电阻 / 低边）<br/> → 霍尔/编码器（位置反馈）</p>
+<p>48V 中功率（轻混皮带电机/线控转向）：</p>
+<p>同上，但 MOSFTET 耐压从 30V 提升到 80V<br/> → 需要更大的自举电容（占空比范围更宽）</p>
+<p>400V/800V 高功率（EV 主驱）：</p>
+<p>MCU → 隔离式 Gate Driver → SiC 或 IGBT 模块 → PMSM 电机<br/> → 隔离电流传感器（霍尔式/磁通门）<br/> → 旋转变压器（位置反馈——高压电机不能用霍尔和编码器）</p>
+<p><strong>🍎 功率级中最容易被忽视的参数——不是你算的电流，是”反向恢复电荷”</strong></p>
+<p>MOSFET 和 IGBT 的”体二极管”在电机控制中承担续流作用。每次下管关断时，电机电流通过体二极管续流。下次上管导通——体二极管反向恢复（从正向导通到反向阻断需要时间）。如果体二极管的反向恢复电荷（Qrr）太大——上管导通瞬间有一个”电流尖峰”——导致 EMI 超标甚至炸管。</p>
+<p>在 SiC MOSFET 中，体二极管的 Qrr 很小（几乎为零）——这是 SiC 在 EV 主驱上的一个核心优势：可以工作在更高频率、更低的开关损耗、更小的 EMI。</p>
+<p>📎 电机控制专题导航 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0MTIy" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0MTIy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/> 📎 第1篇：电机类型对比 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0MzAw" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0MzAw<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/> 📎 第3篇：PWM调制 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0NjAz" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0NjAz<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><strong>专栏⑪进度：2/10篇</strong></p>
+<p><a href="../../../tags/Area/%E6%8A%80%E6%9C%AF/%E7%94%B5%E6%9C%BA%E6%8E%A7%E5%88%B6" class="tag-link internal alias" data-slug="tags/Area/技术/电机控制">电机控制</a></p>
+<p><a href="../../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h3 id="10-专栏第1篇电机核心类型对比有刷bldcpmsmacim">10. 专栏⑪·第1篇：电机核心类型对比——有刷、BLDC、PMSM、ACIM<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#10-专栏第1篇电机核心类型对比有刷bldcpmsmacim" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Flomo ID：<code>MjQ4NjM0MzAw</code></li>
+<li>创建时间：2026-07-26T12:10:33+08:00</li>
+<li>原文：<a href="https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0MzAw" class="external">在 Flomo 中打开<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>标签：Area/技术/电机控制、Archive/MigratedNotion、Archive/DeleteCandidate</li>
+</ul>
+<p><strong>专栏⑪·第1篇：电机核心类型对比——有刷、BLDC、PMSM、ACIM</strong></p>
+<p><strong>▎最直观的区分：看”谁产生磁场”</strong></p>
+<p>所有电机的工作原理都一样——通电导体在磁场中受力。区别在于：</p>
+<ul>
+<li>
+<p><strong>磁场谁提供的？</strong> 永磁体（永磁电机）还是线圈通电（励磁/感应）</p>
+</li>
+<li>
+<p><strong>换向谁做的？</strong> 机械方式（电刷+换向器）还是电子方式（控制器+功率管）</p>
+</li>
+</ul>
+<p><strong>▎有刷 DC 电机——最简单、最便宜，但电刷是短板</strong></p>
+<p><strong>原理</strong>：转子上的线圈通过电刷（碳刷）和换向器供电。转子转动时换向器自动切换线圈的电流方向——不需要外部控制器。</p>
+<p><strong>优点</strong>：<u><mark>控制最简单——通电就转、反接就反转、PWM 就能调速。成本最低</mark></u>。</p>
+<p><strong>缺点</strong>：电刷磨损（寿命 1000-3000 小时）、换向火花（电磁干扰）、效率低（60-75%）。</p>
+<p><strong>汽车场景</strong>：座椅调节、车窗升降、雨刮电机（低成本短寿命场景）。</p>
+<p><strong>电刷磨损为什么是硬伤</strong>——电刷和换向器是滑动接触，碳粉会积累在电机内部。在 EPS（电动助力转向）这种长达 10 年寿命要求的产品上，有刷电机在 3-4 年就可能出问题。</p>
+<p><strong>▎BLDC（无刷直流电机）——梯形波反电动势，霍尔换向</strong></p>
+<p><strong>原理</strong>：转子是永磁体，定子是绕组线圈。通过霍尔传感器检测转子位置，控制器按”6步换向”顺序给绕组通电。</p>
+<p><strong>优点</strong>：无电刷——寿命长（>10000 小时）、效率高（85-90%）、噪声低。控制比有刷复杂但比 PMSM 简单（6步换向 = 查表，不需要复杂的坐标变换）。</p>
+<p><strong>缺点</strong>：转矩脉动大（6步换向在每步切换时有明显的转矩跳变）、低速段噪声（步进感）。</p>
+<p><strong>什么是 6 步换向</strong>——一圈分 6 个扇区，每个扇区导通其中两相（一相高压、一相低压、一相关断）。转子到了某个扇区边界——霍尔信号变化——控制器切换到下一组导通相。这就是 BLDC 最简单的控制方式，不需要电流环、不需要坐标变换——在 8 位 MCU 上都能跑。</p>
+<p><strong>跟有刷的本质区别</strong>——定子和转子反过来了：有刷是转子通电（定子永磁），BLDC 是定子通电（转子永磁）。所以 BLDC 更”凉”——热量（铜损）在机壳上，更容易散去。</p>
+<p><strong>▎PMSM（永磁同步电机）——正弦波反电动势，FOC 控制</strong></p>
+<p><strong>原理</strong>：跟 BLDC 物理结构几乎一样——转子也是永磁体。但 BLDC 的定子绕组是”集中绕组”，PMSM 是”分布绕组”——导致反电动势波形不同：BLDC 是梯形波，PMSM 是正弦波。</p>
+<p><strong>优点</strong>：比 BLDC 更平滑（PMSM+FOC 的转矩脉动 &lt; 1%，BLDC 的转矩脉动可以达到 15-20%）。效率最高（>93%），功率密度最大。</p>
+<p><strong>缺点</strong>：控制最复杂——需要 FOC（Clark/Park/逆变换 + PI + SVPWM），对 MCU 算力要求高（至少 32 位 MCU + 硬件 PWM + 高速 ADC + 电流采样）。</p>
+<p><strong>为什么汽车主驱都用 PMSM + FOC</strong>——EV 主驱要求：① 零速有最大转矩（起步响应）、② 宽调速范围（0-15000rpm）、③ 高效率（续航）、④ 低噪声/低振动（NVH）。PMSM+FOC 四项都满足，BLDC 做不到的平滑度和效率在 EV 主驱上是不可接受的。</p>
+<p><strong>▎ACIM（感应电机 / 异步电机）——没有永磁体，靠感应产生磁场</strong></p>
+<p><strong>原理</strong>：转子没有永磁体，是”鼠笼”结构（铝条或铜条）。定子的旋转磁场在转子中感应出电流，感应电流的磁场与定子磁场相互作用产生转矩。</p>
+<p><strong>优点</strong>：没有永磁体——永磁体需要稀土（钕铁硼），成本高且供应不稳定。ACIM 用普通铜/铝，材料成本低，且没有退磁风险（永磁体在高温下会退磁）。</p>
+<p><strong>缺点</strong>：效率比 PMSM 低（85-90% vs >93%），转子铜损在低速段大。控制也需要 FOC，控制器成本跟 PMSM 一样。</p>
+<p><strong>为什么有些 EV 用 ACIM 不用 PMSM</strong>——特斯拉 Model S/X 早期用 ACIM（不需要稀土），为了省成本和稳定供应链。但后来 Model 3/Y 换了 PMSM——因为效率差 3-5% 对续航影响太大了。一句话：追求极致效率→PMSM，追求材料成本可控→ACIM。</p>
+<p><strong>▎一张表对比</strong></p>
+<p>有刷DC、BLDC、PMSM、ACIM：换向方式（机械电刷/电子6步/电子FOC/电子FOC）、反电动势（—/梯形波/正弦波/正弦波）、效率（60-75%/85-90%/>93%/85-90%）、寿命（1000-3000h/>10000h/>10000h/>10000h）、控制方式（PWM/6步换向/FOC/FOC）、MCU要求（8位/8-32位/32位+DSP+高精度ADC/32位+DSP）、成本（最低/中等/高稀土永磁/中等无稀土）、转矩脉动（有换向火花/大15-20%/小&lt;1%/小）、汽车场景（座椅车窗雨刮/EPS水泵风扇/EV主驱强混/部分EV主驱）</p>
+<p><strong>🍎 核心追问</strong>：电机选型的本质，是”你能接受的转矩脉动多少”和”你能接受的控制器成本多少”之间的权衡。有刷最廉价但短板最明显（寿命/EMC），BLDC 是性价比之王（不需要稀土 + 简单控制），PMSM + FOC 是性能巅峰但贵在稀土和算力。你工作中遇到的是哪种电机——EPS 助力电机大概率是 BLDC（6步换向就够了），还是 EV 主驱（PMSM+FOC）？</p>
+<p>📎 电机控制专题导航 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0MTIy" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0MTIy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/> 📎 第2篇：功率级电路 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0NTI2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0NTI2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><strong>专栏⑪进度：1/10篇</strong></p>
+<p><a href="../../../tags/Area/%E6%8A%80%E6%9C%AF/%E7%94%B5%E6%9C%BA%E6%8E%A7%E5%88%B6" class="tag-link internal alias" data-slug="tags/Area/技术/电机控制">电机控制</a></p>
+<p><a href="../../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h3 id="11-专栏导航电机控制专题从h桥到foc">11. 专栏⑪·导航：电机控制专题——从H桥到FOC<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#11-专栏导航电机控制专题从h桥到foc" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Flomo ID：<code>MjQ4NjM0MTIy</code></li>
+<li>创建时间：2026-07-26T12:08:42+08:00</li>
+<li>原文：<a href="https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0MTIy" class="external">在 Flomo 中打开<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>标签：Area/技术/电机控制、Archive/MigratedNotion、Archive/DeleteCandidate</li>
+</ul>
+<p><strong>专栏⑪·导航：电机控制专题——从H桥到FOC</strong></p>
+<p><strong>▎背景</strong></p>
+<p>你在硬件第3阶写过一个H桥驱动电机的例子：PWM频率从100Hz提到10kHz电流纹波就小了，电机丝滑了。这已经是你笔记里电机控制的起点。汽车上电机无处不在——EPS助力电机、电子水泵、电子风扇、变速箱油泵、车窗升降、天窗、座椅调节、甚至主驱电机（EV）。电机控制在汽车电子里面是一个横跨”软件算法 + 硬件驱动 + 单片机外设”的综合性专题。</p>
+<p><strong>▎现有笔记关联</strong></p>
+<ul>
+<li>
+<p>硬件第3阶（半导体器件）：H桥原理、续流二极管、PWM频率 vs 电气时间常数</p>
+</li>
+<li>
+<p>硬件1000问：电阻/电容/电感基础、MOSFET驱动特性</p>
+</li>
+<li>
+<p>电气工程10000问：电路原理、电磁场基础</p>
+</li>
+<li>
+<p>AUTOSAR生态：电机控制通常通过复杂驱动（Complex Driver）或专用电机控制ASIC（如TLE9185/DRV3205）接入AUTOSAR架构</p>
+</li>
+</ul>
+<p><strong>▎专题知识架构（10篇专栏）</strong></p>
+<p><strong>第1篇：电机基础——不同类型的原理和区别</strong></p>
+<ul>
+<li>
+<p>有刷DC电机：最简单的模型（电压→转速），但电刷磨损是寿命瓶颈</p>
+</li>
+<li>
+<p>无刷DC电机（BLDC）：梯形波反电动势，霍尔传感器换向</p>
+</li>
+<li>
+<p>永磁同步电机（PMSM）：正弦波反电动势，FOC控制</p>
+</li>
+<li>
+<p>感应电机（ACIM）：转子无永磁体，靠磁场感应产生转矩</p>
+</li>
+<li>
+<p>开关磁阻电机（SRM）：结构简单但噪声/转矩脉动大</p>
+</li>
+</ul>
+<p><strong>第2篇：功率级电路——从H桥到三相逆变器</strong></p>
+<ul>
+<li>
+<p>H桥拓扑：4个开关管，控制DC电机正反转</p>
+</li>
+<li>
+<p>三相全桥：6个开关管，驱动BLDC/PMSM</p>
+</li>
+<li>
+<p>栅极驱动电路（Gate Driver）：自举电容/隔离/死区时间</p>
+</li>
+<li>
+<p>电流采样：Shunt电阻 / 霍尔电流传感器 / 磁通门</p>
+</li>
+<li>
+<p>功率器件选型：MOSFET vs IGBT vs SiC</p>
+</li>
+</ul>
+<p><strong>第3篇：PWM调制——如何让电机转得稳</strong></p>
+<ul>
+<li>
+<p>单极性PWM vs 双极性PWM</p>
+</li>
+<li>
+<p>空间矢量调制（SVPWM）：比SPWM电压利用率高15%</p>
+</li>
+<li>
+<p>死区时间（Dead Time）：防止上下管直通，但太大会畸变电流波形</p>
+</li>
+<li>
+<p>PWM频率选择：低Hz抖动，高Hz开关损耗大（典型10-20kHz）</p>
+</li>
+</ul>
+<p><strong>第4篇：控制算法——FOC核心</strong></p>
+<ul>
+<li>
+<p>Clark变换（a,b,c→α,β）</p>
+</li>
+<li>
+<p>Park变换（α,β→d,q）：把交流变直流</p>
+</li>
+<li>
+<p>PI调节器：d轴控制磁通、q轴控制转矩</p>
+</li>
+<li>
+<p>SVPWM：把d,q电压变回三相PWM占空比</p>
+</li>
+<li>
+<p>无传感器FOC：滑模观测器/反电动势观测器估算转子位置</p>
+</li>
+</ul>
+<p><strong>第5篇：位置/速度检测——知道转子在哪</strong></p>
+<ul>
+<li>
+<p>霍尔传感器：6步换向，分辨率60°电角度</p>
+</li>
+<li>
+<p>编码器（EnDat/BiSS）：高精度绝对位置</p>
+</li>
+<li>
+<p>旋转变压器（Resolver）：最高可靠性，需要激励+解码芯片</p>
+</li>
+<li>
+<p>无传感器估算：中高速可以用反电动势，零速/低速需要高频注入</p>
+</li>
+</ul>
+<p><strong>第6篇：汽车电子中的电机控制实战</strong></p>
+<ul>
+<li>
+<p>EPS电机控制（12V/48V，&lt;1kW）→ 常用BLDC + FOC</p>
+</li>
+<li>
+<p>电子水泵/风扇（12V，&lt;200W）→ 低成本方案：BLDC 6步换向</p>
+</li>
+<li>
+<p>EV主驱（400V/800V，100kW+）→ PMSM + FOC + SiC逆变器</p>
+</li>
+<li>
+<p>故障诊断：过流/过压/过热/失步/堵转检测</p>
+</li>
+<li>
+<p>AUTOSAR集成：电机控制通常不走标准BSW，走Complex Driver + SWC直接驱动</p>
+</li>
+</ul>
+<p><strong>第7-10篇</strong>：反电动势实战（无感FOC）、电流环vs位置环（双环调度）、AUTOSAR集成深化（电机控制 × BswM）、自检清单15项</p>
+<p><strong>📎 关联笔记</strong></p>
+<ul>
+<li>
+<p>硬件第3阶·H桥/PWM → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ3NTQ2Mzk4" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ3NTQ2Mzk4<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>硬件1000问 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ3NTQ2MDE3" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ3NTQ2MDE3<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>电气工程10000问 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>第1篇：电机类型对比 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0MzAw" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ4NjM0MzAw<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+</ul>
+<p><strong>专栏⑪进度：导航 + 第1-6篇已完成，7-10篇整理中</strong></p>
+<p><a href="../../../tags/Area/%E6%8A%80%E6%9C%AF/%E7%94%B5%E6%9C%BA%E6%8E%A7%E5%88%B6" class="tag-link internal alias" data-slug="tags/Area/技术/电机控制">电机控制</a></p>
+<p><a href="../../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<h2 id="迁移记录">迁移记录<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#迁移记录" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>来源标签：<code>Area/技术/电机控制</code></li>
+<li>纳入：11 条（导航 1 条、正文 10 条）。</li>
+<li>已完整读取原文；保留来源 ID 与原始 Flomo 链接。</li>
+</ul></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-64" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#电机控制专题从-h-桥到-foc" data-for="电机控制专题从-h-桥到-foc">电机控制专题：从 H 桥到 FOC</a></li><li class="depth-1"><a href="#系统架构" data-for="系统架构">系统架构</a></li><li class="depth-1"><a href="#控制软件时序与保护" data-for="控制软件时序与保护">控制软件时序与保护</a></li><li class="depth-1"><a href="#工程审查要点" data-for="工程审查要点">工程审查要点</a></li><li class="depth-1"><a href="#原始-flomo-笔记完整内容" data-for="原始-flomo-笔记完整内容">原始 Flomo 笔记（完整内容）</a></li><li class="depth-2"><a href="#1-专栏第十篇电机控制配置自检清单上车前逐项打勾的-15-项" data-for="1-专栏第十篇电机控制配置自检清单上车前逐项打勾的-15-项">1. 专栏⑪·第十篇：电机控制配置自检清单——上车前逐项打勾的 15 项</a></li><li class="depth-2"><a href="#2-专栏第9篇autosar-集成深化电机控制--bswm-状态机" data-for="2-专栏第9篇autosar-集成深化电机控制--bswm-状态机">2. 专栏⑪·第9篇：AUTOSAR 集成深化——电机控制 × BswM 状态机</a></li><li class="depth-2"><a href="#3-专栏第8篇电流环-vs-位置环双环调度与中断优先级" data-for="3-专栏第8篇电流环-vs-位置环双环调度与中断优先级">3. 专栏⑪·第8篇：电流环 vs 位置环——双环调度与中断优先级</a></li><li class="depth-2"><a href="#4-专栏第7篇反电动势实战省掉位置传感器怎么知道转子在哪" data-for="4-专栏第7篇反电动势实战省掉位置传感器怎么知道转子在哪">4. 专栏⑪·第7篇：反电动势实战——省掉位置传感器，怎么知道转子在哪</a></li><li class="depth-2"><a href="#5-专栏第6篇汽车实战场景eps电子水泵ev主驱autosar集成" data-for="5-专栏第6篇汽车实战场景eps电子水泵ev主驱autosar集成">5. 专栏⑪·第6篇：汽车实战场景——EPS、电子水泵、EV主驱、AUTOSAR集成</a></li><li class="depth-2"><a href="#6-专栏第5篇位置速度检测霍尔编码器旋转变压器无传感器控制" data-for="6-专栏第5篇位置速度检测霍尔编码器旋转变压器无传感器控制">6. 专栏⑪·第5篇：位置/速度检测——霍尔、编码器、旋转变压器、无传感器控制</a></li><li class="depth-2"><a href="#7-专栏第4篇foc-算法clark--park--pi--svpwm-的完整链路" data-for="7-专栏第4篇foc-算法clark--park--pi--svpwm-的完整链路">7. 专栏⑪·第4篇：FOC 算法——Clark / Park / PI / SVPWM 的完整链路</a></li><li class="depth-2"><a href="#8-专栏第3篇pwm-调制从-spwm-到-svpwm电压怎么变成电流" data-for="8-专栏第3篇pwm-调制从-spwm-到-svpwm电压怎么变成电流">8. 专栏⑪·第3篇：PWM 调制——从 SPWM 到 SVPWM，电压怎么变成电流</a></li><li class="depth-2"><a href="#9-专栏第2篇功率级电路h桥到三相逆变器" data-for="9-专栏第2篇功率级电路h桥到三相逆变器">9. 专栏⑪·第2篇：功率级电路——H桥到三相逆变器</a></li><li class="depth-2"><a href="#10-专栏第1篇电机核心类型对比有刷bldcpmsmacim" data-for="10-专栏第1篇电机核心类型对比有刷bldcpmsmacim">10. 专栏⑪·第1篇：电机核心类型对比——有刷、BLDC、PMSM、ACIM</a></li><li class="depth-2"><a href="#11-专栏导航电机控制专题从h桥到foc" data-for="11-专栏导航电机控制专题从h桥到foc">11. 专栏⑪·导航：电机控制专题——从H桥到FOC</a></li><li class="depth-1"><a href="#迁移记录" data-for="迁移记录">迁移记录</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向链接</h3><ul id="list-2" class="overflow"><li><a href="../../../Area/EE/" class="internal">EE</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.1</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module">function f(i,e){if(!i)return;function r(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function t(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}i?.addEventListener("click",r),window.addCleanup(()=>i?.removeEventListener("click",r)),document.addEventListener("keydown",t),window.addCleanup(()=>document.removeEventListener("keydown",t))}function y(i){for(;i.firstChild;)i.removeChild(i.firstChild)}var h=class{constructor(e,r){this.container=e;this.content=r;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),r=this.onMouseMove.bind(this),t=this.onMouseUp.bind(this),o=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",r),document.addEventListener("mouseup",t),window.addEventListener("resize",o),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",r),()=>document.removeEventListener("mouseup",t),()=>window.removeEventListener("resize",o))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let r=this.createButton("+",()=>this.zoom(.1)),t=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(t),e.appendChild(o),e.appendChild(r),this.container.appendChild(e)}createButton(e,r){let t=document.createElement("button");return t.textContent=e,t.className="mermaid-control-button",t.addEventListener("click",r),window.addCleanup(()=>t.removeEventListener("click",r)),t}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}zoom(e){let r=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),t=this.content.getBoundingClientRect(),o=t.width/2,n=t.height/2,c=r-this.scale;this.currentPan.x-=o*c,this.currentPan.y-=n*c,this.scale=r,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){this.scale=1;let e=this.content.querySelector("svg");this.currentPan={x:e.getBoundingClientRect().width/2,y:e.getBoundingClientRect().height/2},this.updateTransform()}},C=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],E;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;E||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let r=E.default,t=new WeakMap;for(let n of e)t.set(n,n.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let a=t.get(s);a&&(s.innerHTML=a)}let n=C.reduce((s,a)=>(s[a]=window.getComputedStyle(document.documentElement).getPropertyValue(a),s),{}),c=document.documentElement.getAttribute("saved-theme")==="dark";r.initialize({startOnLoad:!1,securityLevel:"loose",theme:c?"dark":"base",themeVariables:{fontFamily:n["--codeFont"],primaryColor:n["--light"],primaryTextColor:n["--darkgray"],primaryBorderColor:n["--tertiary"],lineColor:n["--darkgray"],secondaryColor:n["--secondary"],tertiaryColor:n["--tertiary"],clusterBkg:n["--light"],edgeLabelBackground:n["--highlight"]}}),await r.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let n=0;n<e.length;n++){let v=function(){let g=l.querySelector("#mermaid-space"),m=l.querySelector(".mermaid-content");if(!m)return;y(m);let w=c.querySelector("svg").cloneNode(!0);m.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new h(g,m)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},c=e[n],s=c.parentElement,a=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(a),L=a.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),f(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="/static/katex/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../../postscript.js" type="module"></script></html>
