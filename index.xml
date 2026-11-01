@@ -6,6 +6,24 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>处理器寻址方式：立即、直接、间接、变址与相对寻址</title>
+    <link>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%83%E7%A7%8D%E5%AF%BB%E5%9D%80%E6%96%B9%E5%BC%8F</link>
+    <guid>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%83%E7%A7%8D%E5%AF%BB%E5%9D%80%E6%96%B9%E5%BC%8F</guid>
+    <description><![CDATA[ 处理器寻址方式 原始 Flomo：v.flomoapp.com/mine/ 寻址方式描述指令如何定位操作数。不同 ISA（x86、ARM、PowerPC、RISC-V 等）的寻址模式和汇编语法并不完全相同。下面先解释常见概念，再以传统 x86 16 位地址表达式说明原笔记中的七类形式；不要把这七类当成所有处理器都统一规定的分类。 1. ]]></description>
+    <pubDate>Sun, 01 Nov 2026 13:33:44 GMT</pubDate>
+  </item><item>
+    <title>基础概念Q2-MCU与MPU选型</title>
+    <link>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5Q2-MCU%E4%B8%8EMPU%E9%80%89%E5%9E%8B</link>
+    <guid>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5Q2-MCU%E4%B8%8EMPU%E9%80%89%E5%9E%8B</guid>
+    <description><![CDATA[ 嵌入式 1000问 · 基础概念Q2：MCU 和 MPU 的核心区别是什么？什么时候该选 MCU，什么时候该选 MPU？ 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 嵌入式 1000问 · 基础概念Q2：MCU 和 MPU 的核心区别是什么？什么时候该选 MCU，什么时候该选 MPU？ ▎ 五大学习法：西蒙学习法——把「MCU vs MPU」钻透 一句话区别 MCU（Microcontroller Unit，微控制器）：把 CPU + Flash + RAM + 外设集成在一颗芯片里，本质是「一台完整的计算机」，上电就能跑程序。 MPU（Microprocessor... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 13:33:40 GMT</pubDate>
+  </item><item>
+    <title>嵌入式通信协议</title>
+    <link>https://wiki.likui.info/Area/EE/%E9%80%9A%E4%BF%A1/</link>
+    <guid>https://wiki.likui.info/Area/EE/%E9%80%9A%E4%BF%A1/</guid>
+    <description><![CDATA[ 嵌入式通信协议 通信协议知识按基础概念、接口机制、驱动实现、故障排查和车载应用组织。 1000问逐题解答 基础协议与四大协议 —— 同步/异步、全/半双工、UART、SPI、I2C、RS-485、汽车 ECU 应用与故障定位。 flowchart TD A[嵌入式通信] --&gt; B[UART] A --&gt; C[SPI] A --&gt; D[I2C] A --&gt; E[RS-485] A --&gt; F[SENT / LIN / USB / SDIO / Ethernet] B --&gt; G[驱动与验证] C --&gt; G D --&gt; G E --&gt; G ... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 13:33:08 GMT</pubDate>
+  </item><item>
     <title>人工智能学习中心</title>
     <link>https://wiki.likui.info/Area/AI/</link>
     <guid>https://wiki.likui.info/Area/AI/</guid>
@@ -47,24 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q3-BSW%E6%A8%A1%E5%9D%97%E5%BC%95%E7%94%A8%E5%85%B3%E7%B3%BB</guid>
     <description><![CDATA[ 工具配置实战 Q3：Module 间的「引用」怎么建立？填模块名还是下拉列表？ 原始 Flomo：v.flomoapp.com/mine/ 工具配置实战 Q3：Module 间的「引用」怎么建立？填模块名还是下拉列表？ 结论：不是手填模块名，而是通过下拉/浏览对话框选，选的是「强类型引用」，不是文本字符串。 为什么是下拉选择： 引用通常是模型中的强类型对象引用：它有目标路径和目标类型约束，只允许指向符合该引用定义的配置对象。具体引用容器名称和目标类型应查对应模块的 ECUC 参数定义/XSD，不能用一个供应商工具中的字段名推断所有项目。 工具提供浏览对话框：列出当前可用、且类型匹配的目标实例，... ]]></description>
     <pubDate>Sun, 01 Nov 2026 13:31:05 GMT</pubDate>
-  </item><item>
-    <title>SPI 菊花链：多从机串联拓扑与时序</title>
-    <link>https://wiki.likui.info/Area/EE/%E8%BD%A6%E8%BD%BD%E9%80%9A%E4%BF%A1/1000%E9%97%AE/SPI%E8%8F%8A%E8%8A%B1%E9%93%BE%E5%A4%9A%E4%BB%8E%E6%9C%BA%E4%B8%B2%E8%81%94</link>
-    <guid>https://wiki.likui.info/Area/EE/%E8%BD%A6%E8%BD%BD%E9%80%9A%E4%BF%A1/1000%E9%97%AE/SPI%E8%8F%8A%E8%8A%B1%E9%93%BE%E5%A4%9A%E4%BB%8E%E6%9C%BA%E4%B8%B2%E8%81%94</guid>
-    <description><![CDATA[ SPI 菊花链——一根 CS 串起 N 个从机 原始 Flomo：v.flomoapp.com/mine/ SPI 菊花链——一根 CS 串起 N 个从机 ▎ 两种接法 并行：各从机独立 CS，共享 MOSI/MISO/SCK——从机多时 CS 不够用、MISO 负载重 菊花链：SDO 接下一级 SDI，像移位寄存器逐级传，全链只用一根 CS。典型：74HC595 级联、LED 驱动 ▎ 时序 一个 CS 周期内 SCK 打 8×N 拍（N = 从机数），数据从链头进、链尾回 命令按「末端先进」排序——先发的最后到链尾，写代码要倒着想 ▎ 用 vs 不用 用：从机多、CS 不够、芯片支持级联（... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 13:30:52 GMT</pubDate>
-  </item><item>
-    <title>未定义行为专题-Q1-Q4</title>
-    <link>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E6%9C%AA%E5%AE%9A%E4%B9%89%E8%A1%8C%E4%B8%BA%E4%B8%93%E9%A2%98-Q1-Q4</link>
-    <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E6%9C%AA%E5%AE%9A%E4%B9%89%E8%A1%8C%E4%B8%BA%E4%B8%93%E9%A2%98-Q1-Q4</guid>
-    <description><![CDATA[ C语言 1000问｜未定义行为专题（Q1–Q4） 来源：Flomo 原始笔记；本页按问题顺序整理，保留原笔记的核心解释、示例与实践建议。 Q1：什么是未定义行为 Q2：序列点与求值顺序 Q3：严格别名规则 Q4：有符号溢出与符号转换 Q1：什么是未定义行为（UB）？ Flomo 原文 ▎ 五大学习法：西蒙学习法——把「UB」钻透 什么是未定义行为（UB） C 标准对某些程序行为「不做任何保证」——标准没说会发生什么，编译器可以任意处理（看起来正常、崩溃、静默算错、甚至把整段代码优化掉）。 UB 不是「结果随机」，而是「标准不约束，实现不保证」。 相邻概念：未指定行为（unspecified，几... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 13:30:26 GMT</pubDate>
-  </item><item>
-    <title>ModeManagementGuide</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/ModeManagementGuide</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/ModeManagementGuide</guid>
-    <description><![CDATA[ ModeManagementGuide 是 CP 解释性指南（EXP），系统讲解 AUTOSAR 模式管理（Mode Management）：模式是什么、模式切换如何实现、模式管理器（Mode Manager）与模式使用者（Mode User）各自的角色，以及应用模式管理（Application Mode）与基础软件模式管理（BSW Mode）之间的关系。 一句话定位 CP 里「谁在什么条件下切到什么状态」的统一答案，BswM 是其中的中枢。 规范信息 项目内容平台CP类别EXP — 解释性指南（Explanation）UID440版本R25-11本地 PDFAUTOSAR_CP_EXP_Mo... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 13:27:55 GMT</pubDate>
   </item>
     </channel>
   </rss>
