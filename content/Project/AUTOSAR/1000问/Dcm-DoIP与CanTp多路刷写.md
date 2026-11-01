@@ -33,3 +33,12 @@ CAN 路径断电接着刷，DoIP 支持同样的恢复吗？
 总表：<https://v.flomoapp.com/mine/?memo_id=MjMxMTQ2NDk4>
 
 #Area/技术/AUTOSAR
+
+## 传输与断点续传边界补充
+
+- Dcm 的 UDS 服务处理可在不同传输通道上复用，但 DoIP 和 CAN TP 的 PDU 路由、寻址、缓冲、超时、流控和传输确认并不相同；还需检查 Dcm 的 Rx/Tx PDU、连接映射和会话管理配置。
+- DoIP 通常可获得更高吞吐，但实际刷写速度受以太网速率、TCP 窗口、DoIP routing activation、ECU 接收缓冲、Flash 擦写时间、解密/验签、Tester 实现和诊断参数共同限制。不能承诺固定提升几个数量级。
+- **断点续传不是 Dcm/DoIP 自动提供的保证。** 是否能续传取决于 Bootloader/Flash Programming 模块是否持久化下载状态、镜像分块协议、块序号/偏移校验、掉电恢复策略和 Tester 是否支持重连恢复。
+- UDS TransferData 的 BlockSequenceCounter 本身不是跨掉电的下载进度数据库；重启后能否继续必须由 ECU 下载实现定义并验证。
+
+**验证用例：** 分别在 RequestDownload、TransferData、擦除、写入、校验和激活阶段断电；对 CAN TP 与 DoIP 测试连接中断、超时、重复块、乱序块、错误块序号和重连恢复，确认不会激活不完整镜像。
