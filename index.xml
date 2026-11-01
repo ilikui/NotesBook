@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>软考高级1000问：系统架构师与项目管理基础</title>
+    <link>https://wiki.likui.info/Project/%E8%80%83%E8%AF%95%E7%AE%A1%E7%90%86/%E8%BD%AF%E8%80%83%E9%AB%98%E7%BA%A71000%E9%97%AE</link>
+    <guid>https://wiki.likui.info/Project/%E8%80%83%E8%AF%95%E7%AE%A1%E7%90%86/%E8%BD%AF%E8%80%83%E9%AB%98%E7%BA%A71000%E9%97%AE</guid>
+    <description><![CDATA[ 软考高级1000问：系统架构师与项目管理基础 本篇迁移 Flomo 中两份软考高级问题库的首批 20 道基础题。答案采用“定义—原理—计算/判断—易错点”的应试结构。软考大纲、教材版本和当年考试政策可能变化，正式备考应以当年官方考试说明和指定教材为准。 一、系统架构师（Q1–Q10） 本页合并两条独立题目线：系统架构师基础 SA-Q1–SA-Q10，以及项目管理师基础 PM-Q11–PM-Q20。编号前缀用于避免两个方向后续扩展时发生题号冲突。 SA-Q1. ]]></description>
+    <pubDate>Sun, 01 Nov 2026 13:41:00 GMT</pubDate>
+  </item><item>
     <title>1000问知识体系</title>
     <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
     <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%93%BEQ1-%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1</guid>
     <description><![CDATA[ AUTOSAR 1000问 · 工具链 Q1：如何保证工具链生成的代码就是自己配置的？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 1000问 · 工具链 Q1：如何保证工具链生成的代码就是自己配置的？ 费曼（一句话说清）：工具链是翻译官——你把配置（ARXML）交给它，它吐出代码。真问题不是「它会不会骗你」，而是「你怎么让它说的每句话都可查证」。 西蒙（抓核心）：你证明不了生成器永远正确，但能让「配置→产物」变成可审计、可重放、有断言的确定性过程——把「信任工具」换成「审计过程」。 SQ3R（带着问题读）：先问「配置和产物之间，偏差可能出在哪几环」，答案锁定五... ]]></description>
     <pubDate>Sun, 01 Nov 2026 13:38:12 GMT</pubDate>
-  </item><item>
-    <title>工具配置实战Q2-模块配置完整性验证</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q2-%E6%A8%A1%E5%9D%97%E9%85%8D%E7%BD%AE%E5%AE%8C%E6%95%B4%E6%80%A7%E9%AA%8C%E8%AF%81</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q2-%E6%A8%A1%E5%9D%97%E9%85%8D%E7%BD%AE%E5%AE%8C%E6%95%B4%E6%80%A7%E9%AA%8C%E8%AF%81</guid>
-    <description><![CDATA[ 工具配置实战 Q2：怎么判断一个模块配置完整？Davinci 有没有「验证配置」功能？ 原始 Flomo：v.flomoapp.com/mine/ 工具配置实战 Q2：怎么判断一个模块配置完整？Davinci 有没有「验证配置」功能？ 判断完整性的四种手段（从软到硬）： 工具验证 / 校验：Davinci 有 Check / Validate Configuration，EB tresos 是 Validation——做一致性检查（必填参数、跨模块引用、schema 合规），列出 error（红）和 warning（黄）。这是第一道、也最快的门。 生成代码是否成功：生成器生成前会做一遍完整性与... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 13:38:08 GMT</pubDate>
   </item>
     </channel>
   </rss>
