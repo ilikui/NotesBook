@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>AI 1000问：机器学习算法、优化与模型评估</title>
+    <link>https://wiki.likui.info/Area/AI/1000%E9%97%AE/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%E4%B8%8E%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0</link>
+    <guid>https://wiki.likui.info/Area/AI/1000%E9%97%AE/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%E4%B8%8E%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0</guid>
+    <description><![CDATA[ AI 1000问：机器学习算法、优化与模型评估 本篇对应 AI 全景题库中的监督学习算法、模型评估、优化和无监督学习问题。核心原则是：先明确数据生成过程和业务代价，再选模型与指标；不要只根据单个准确率或排行榜分数判断模型好坏。 一、监督学习算法 Q1. ]]></description>
+    <pubDate>Sun, 01 Nov 2026 05:02:24 GMT</pubDate>
+  </item><item>
     <title>面向对象</title>
     <link>https://wiki.likui.info/Area/EE/%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1</link>
     <guid>https://wiki.likui.info/Area/EE/%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/E2E-Profile%E4%B8%8E%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF</guid>
     <description><![CDATA[ E2E / 端到端通信保护深入 Q1：E2E Profile 1 到 7 的区别？Profile 1 和 Profile 5 用在什么安全等级？ 原始 Flomo：v.flomoapp.com/mine/ E2E / 端到端通信保护深入 Q1：E2E Profile 1 到 7 的区别？Profile 1 和 Profile 5 用在什么安全等级？ 先厘清：E2E 是 ISO 26262 下保护通信数据完整性的机制（E2ELib），Profile 是它定义的不同「保护方案」——区别在「提供哪些保护机制」和「支持的数据长度」。 各 Profile 的核心差异维度： 是否带 CRC、几位 CRC：... ]]></description>
     <pubDate>Sun, 01 Nov 2026 04:59:49 GMT</pubDate>
-  </item><item>
-    <title>标准版本演进与命名规则</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E6%A0%87%E5%87%86%E7%89%88%E6%9C%AC%E6%BC%94%E8%BF%9B%E4%B8%8E%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E6%A0%87%E5%87%86%E7%89%88%E6%9C%AC%E6%BC%94%E8%BF%9B%E4%B8%8E%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99</guid>
-    <description><![CDATA[ AUTOSAR 版本演进：命名从 R4.x 切到「年份-月份」 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 版本演进：命名从 R4.x 切到「年份-月份」 先厘清命名分水岭：R4.0～R4.3 是老式 R4.x 命名；大约从 R4.4 起，AUTOSAR 改成「发布年-月」命名（R19-11 这一档大致对应 R4.4）。所以 R20-11、R21-11 不是全新系列，是 R4.x 的延续，只是换了名字。 各版本最有代表性的变化（大致脉络）： R4.0：Classic 平台分水岭。方法论与 SW-C 接口全面标准化，OS 规范化，把 R3 时代的遗留推到体系化，很... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:59:41 GMT</pubDate>
   </item>
     </channel>
   </rss>
