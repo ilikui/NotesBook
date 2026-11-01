@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>面向对象</title>
+    <link>https://wiki.likui.info/Area/EE/%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1</link>
+    <guid>https://wiki.likui.info/Area/EE/%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1</guid>
+    <description><![CDATA[  一句话定位 OOP = 把数据和操作数据的方法打包成「对象」，用对象之间的协作来构建复杂系统。 知识体系 flowchart TD A[&quot;面向对象 OOP&quot;] --&gt; B[&quot;核心概念&quot;] A --&gt; C[&quot;四大特性&quot;] A --&gt; D[&quot;vs 面向过程&quot;] A --&gt; E[&quot;主流语言&quot;] B --&gt; B1[&quot;类 Class 模板&quot;] B --&gt; B2[&quot;对象 Object 实例&quot;] C --&gt; C1[&quot;... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 05:01:49 GMT</pubDate>
+  </item><item>
     <title>1000问知识体系</title>
     <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
     <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E6%A0%87%E5%87%86%E7%89%88%E6%9C%AC%E6%BC%94%E8%BF%9B%E4%B8%8E%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99</guid>
     <description><![CDATA[ AUTOSAR 版本演进：命名从 R4.x 切到「年份-月份」 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 版本演进：命名从 R4.x 切到「年份-月份」 先厘清命名分水岭：R4.0～R4.3 是老式 R4.x 命名；大约从 R4.4 起，AUTOSAR 改成「发布年-月」命名（R19-11 这一档大致对应 R4.4）。所以 R20-11、R21-11 不是全新系列，是 R4.x 的延续，只是换了名字。 各版本最有代表性的变化（大致脉络）： R4.0：Classic 平台分水岭。方法论与 SW-C 接口全面标准化，OS 规范化，把 R3 时代的遗留推到体系化，很... ]]></description>
     <pubDate>Sun, 01 Nov 2026 04:59:41 GMT</pubDate>
-  </item><item>
-    <title>KM</title>
-    <link>https://wiki.likui.info/Area/KM/</link>
-    <guid>https://wiki.likui.info/Area/KM/</guid>
-    <description><![CDATA[ KM（Knowledge Management，知识管理） 关注如何高效地收集、理解、组织、连接和复用个人知识。它不只是工具问题，更是一套帮助思考与行动持续改进的方法。 一句话定位 让知识「进得来、找得到、连得上、用得上」，并最终转化为判断、作品与行动。 知识管理地图 flowchart TD A[&quot;知识输入&quot;] --&gt; B[&quot;捕捉与收集&quot;] B --&gt; C[&quot;阅读与理解&quot;] C --&gt; D[&quot;提炼为自己的表达&quot;] D --&gt; E[&quot;组织与连接&quot;] E --&gt; F[... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:59:20 GMT</pubDate>
   </item>
     </channel>
   </rss>
