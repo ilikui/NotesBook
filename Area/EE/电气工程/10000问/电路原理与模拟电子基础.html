@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh"><head><title>电气工程10000问：电路原理与模拟电子基础</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="数字花园"/><meta property="og:title" content="电气工程10000问：电路原理与模拟电子基础"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="电气工程10000问：电路原理与模拟电子基础"/><meta name="twitter:description" content="电气工程10000问：电路原理与模拟电子基础 本篇补齐此前电气工程专题中尚未落入 NotesBook 的 7 张基础题卡，涵盖 KCL/KVL、戴维南/诺顿等效、储能元件、RLC 谐振、PN 结、BJT 与运放分析。保留 Flomo 原始答案与来源，后续可继续在此基础上补充推导、仿真和实验验证。 知识关系图 flowchart TD A[电路基础] --> B[KCL 电荷守恒] A --> C[KVL 能量约束] B --> D[节点电压法] C --> E[网孔电流法] A --> F[线性网络等效] F --> G[戴维南 / 诺顿] A -->..."/><meta property="og:description" content="电气工程10000问：电路原理与模拟电子基础 本篇补齐此前电气工程专题中尚未落入 NotesBook 的 7 张基础题卡，涵盖 KCL/KVL、戴维南/诺顿等效、储能元件、RLC 谐振、PN 结、BJT 与运放分析。保留 Flomo 原始答案与来源，后续可继续在此基础上补充推导、仿真和实验验证。 知识关系图 flowchart TD A[电路基础] --> B[KCL 电荷守恒] A --> C[KVL 能量约束] B --> D[节点电压法] C --> E[网孔电流法] A --> F[线性网络等效] F --> G[戴维南 / 诺顿] A -->..."/><meta property="og:image:alt" content="电气工程10000问：电路原理与模拟电子基础 本篇补齐此前电气工程专题中尚未落入 NotesBook 的 7 张基础题卡，涵盖 KCL/KVL、戴维南/诺顿等效、储能元件、RLC 谐振、PN 结、BJT 与运放分析。保留 Flomo 原始答案与来源，后续可继续在此基础上补充推导、仿真和实验验证。 知识关系图 flowchart TD A[电路基础] --> B[KCL 电荷守恒] A --> C[KVL 能量约束] B --> D[节点电压法] C --> E[网孔电流法] A --> F[线性网络等效] F --> G[戴维南 / 诺顿] A -->..."/><meta property="og:image" content="https://wiki.likui.info/static/og-image.png"/><meta property="og:image:url" content="https://wiki.likui.info/static/og-image.png"/><meta name="twitter:image" content="https://wiki.likui.info/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="wiki.likui.info"/><meta property="og:url" content="https://wiki.likui.info/Area/EE/电气工程/10000问/电路原理与模拟电子基础"/><meta property="twitter:url" content="https://wiki.likui.info/Area/EE/电气工程/10000问/电路原理与模拟电子基础"/><link rel="icon" href="../../../../static/icon.png"/><meta name="description" content="电气工程10000问：电路原理与模拟电子基础 本篇补齐此前电气工程专题中尚未落入 NotesBook 的 7 张基础题卡，涵盖 KCL/KVL、戴维南/诺顿等效、储能元件、RLC 谐振、PN 结、BJT 与运放分析。保留 Flomo 原始答案与来源，后续可继续在此基础上补充推导、仿真和实验验证。 知识关系图 flowchart TD A[电路基础] --> B[KCL 电荷守恒] A --> C[KVL 能量约束] B --> D[节点电压法] C --> E[网孔电流法] A --> F[线性网络等效] F --> G[戴维南 / 诺顿] A -->..."/><meta name="generator" content="Quartz"/><link href="../../../../index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  padding: 2rem;
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcnVubmVyL3dvcmsvTm90ZXNCb29rL05vdGVzQm9vay9xdWFydHovY29tcG9uZW50cy9zdHlsZXMiLCJzb3VyY2VzIjpbIm1lcm1haWQuaW5saW5lLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUdGO0VBQ0U7OztBQUtGO0VBQ0U7RUFDQTs7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcGFkZGluZzogMnJlbTtcbiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgIHRyYW5zZm9ybS1vcmlnaW46IDAgMDtcbiAgICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjFzIGVhc2U7XG4gICAgICBvdmVyZmxvdzogdmlzaWJsZTtcbiAgICAgIG1pbi1oZWlnaHQ6IDIwMHB4O1xuICAgICAgbWluLXdpZHRoOiAyMDBweDtcblxuICAgICAgcHJlIHtcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICB9XG5cbiAgICAgIHN2ZyB7XG4gICAgICAgIG1heC13aWR0aDogbm9uZTtcbiAgICAgICAgaGVpZ2h0OiBhdXRvO1xuICAgICAgfVxuICAgIH1cblxuICAgICYgPiAubWVybWFpZC1jb250cm9scyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBib3R0b206IDIwcHg7XG4gICAgICByaWdodDogMjBweDtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBnYXA6IDhweDtcbiAgICAgIHBhZGRpbmc6IDhweDtcbiAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICBib3JkZXItcmFkaXVzOiA2cHg7XG4gICAgICBib3gtc2hhZG93OiAwIDJweCA0cHggcmdiYSgwLCAwLCAwLCAwLjEpO1xuICAgICAgei1pbmRleDogMjtcblxuICAgICAgLm1lcm1haWQtY29udHJvbC1idXR0b24ge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgd2lkdGg6IDMycHg7XG4gICAgICAgIGhlaWdodDogMzJweDtcbiAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgICBjb2xvcjogdmFyKC0tZGFyayk7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtZmFtaWx5OiB2YXIoLS1ib2R5Rm9udCk7XG4gICAgICAgIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XG5cbiAgICAgICAgJjpob3ZlciB7XG4gICAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgfVxuXG4gICAgICAgICY6YWN0aXZlIHtcbiAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMXB4KTtcbiAgICAgICAgfVxuXG4gICAgICAgIC8vIFN0eWxlIHRoZSByZXNldCBidXR0b24gZGlmZmVyZW50bHlcbiAgICAgICAgJjpudGgtY2hpbGQoMikge1xuICAgICAgICAgIHdpZHRoOiBhdXRvO1xuICAgICAgICAgIHBhZGRpbmc6IDAgMTJweDtcbiAgICAgICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cbiJdfQ== */</style><link href="/static/katex/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../../../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../../../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://wiki.likui.info/index.xml"/></head><body data-slug="Area/EE/电气工程/10000问/电路原理与模拟电子基础"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../../..">数字花园</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><p>搜索</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索些什么" placeholder="搜索些什么"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-298"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>PARA</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-298" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text explorer-entry-icon" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg><span class="file-title"></span></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder-closed explorer-entry-icon" aria-hidden="true"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path><path d="M2 10h20"></path></svg><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../Area/">Area</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../Area/EE/">EE</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../Area/EE/电气工程/">电气工程</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../Area/EE/电气工程/10000问/">10000问</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>电气工程10000问：电路原理与模拟电子基础</a></div></nav><h1 class="article-title">电气工程10000问：电路原理与模拟电子基础</h1><p show-comma="true" class="content-meta"><time datetime="2026-11-01T03:56:02.000Z">2026年11月01日</time><span>21分钟阅读</span></p><ul class="tags"><li><a href="../../../../tags/电气工程" class="internal tag-link">电气工程</a></li><li><a href="../../../../tags/10000问" class="internal tag-link">10000问</a></li><li><a href="../../../../tags/电路原理" class="internal tag-link">电路原理</a></li><li><a href="../../../../tags/模拟电子" class="internal tag-link">模拟电子</a></li><li><a href="../../../../tags/Area/技术/电气与电子" class="internal tag-link">Area/技术/电气与电子</a></li><li><a href="../../../../tags/Archive/MigratedNotion" class="internal tag-link">Archive/MigratedNotion</a></li></ul></div></div><article class="popover-hint"><h1 id="电气工程10000问电路原理与模拟电子基础">电气工程10000问：电路原理与模拟电子基础<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#电气工程10000问电路原理与模拟电子基础" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>本篇补齐此前电气工程专题中尚未落入 NotesBook 的 7 张基础题卡，涵盖 KCL/KVL、戴维南/诺顿等效、储能元件、RLC 谐振、PN 结、BJT 与运放分析。保留 Flomo 原始答案与来源，后续可继续在此基础上补充推导、仿真和实验验证。</p>
+<h2 id="知识关系图">知识关系图<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#知识关系图" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n  A[电路基础] --> B[KCL 电荷守恒]\n  A --> C[KVL 能量约束]\n  B --> D[节点电压法]\n  C --> E[网孔电流法]\n  A --> F[线性网络等效]\n  F --> G[戴维南 / 诺顿]\n  A --> H[储能元件]\n  H --> I[RC / RL / RLC]\n  I --> J[谐振与滤波]\n  K[半导体器件] --> L[PN 结与二极管]\n  K --> M[BJT]\n  K --> N[运算放大器]\n  L --> O[模拟电路]\n  M --> O\n  N --> O&quot;">flowchart TD
+  A[电路基础] --> B[KCL 电荷守恒]
+  A --> C[KVL 能量约束]
+  B --> D[节点电压法]
+  C --> E[网孔电流法]
+  A --> F[线性网络等效]
+  F --> G[戴维南 / 诺顿]
+  A --> H[储能元件]
+  H --> I[RC / RL / RLC]
+  I --> J[谐振与滤波]
+  K[半导体器件] --> L[PN 结与二极管]
+  K --> M[BJT]
+  K --> N[运算放大器]
+  L --> O[模拟电路]
+  M --> O
+  N --> O
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h2 id="工程学习与验证建议">工程学习与验证建议<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#工程学习与验证建议" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>电路定律：用节点电压法与网孔电流法分别求解同一网络，交叉验证结果。</li>
+<li>等效定理：对比原网络与戴维南/诺顿等效网络在不同负载下的端口电压、电流。</li>
+<li>储能元件：用示波器观察 RC 充放电、RL 暂态及 RLC 阻尼响应。</li>
+<li>半导体器件：通过器件曲线验证二极管 I-V、BJT 输出特性和运放负反馈工作区。</li>
+<li>结论边界：理想模型用于建立直觉；真实器件还需考虑温度、频率、寄生参数、饱和、压摆率、输入失调和安全工作区。</li>
+</ul>
+<hr/>
+<h2 id="1-电气-10000问--模拟电子q3运放的虚短和虚断本质是什么为什么是运放电路分析的全部">1. 电气 10000问 · 模拟电子Q3：运放的「虚短」和「虚断」本质是什么？为什么是运放电路分析的全部？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-电气-10000问--模拟电子q3运放的虚短和虚断本质是什么为什么是运放电路分析的全部" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>Flomo 来源：</strong> <a href="https://v.flomoapp.com/mine/?memo_id=MjUyOTU0NTY0" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyOTU0NTY0<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><strong>电气 10000问 · 模拟电子Q3：运放的「虚短」和「虚断」本质是什么？为什么是运放电路分析的全部？</strong></p>
+<p>▎ 五大学习法：费曼学习法——把「虚短虚断」讲成「两个近似」</p>
+<p><strong>前提：理想运放的两个特性</strong></p>
+<ul>
+<li>开环增益无穷大（A→∞）</li>
+<li>输入阻抗无穷大（Ri→∞）</li>
+</ul>
+<p><strong>虚断（输入电流 ≈ 0）</strong></p>
+<ul>
+<li>输入阻抗无穷大 → 流入运放输入端的电流 ≈ 0——好像「断开」一样</li>
+<li>注意是「虚」断：实际有极微小电流，但分析时按 0 算</li>
+<li>推论：所有输入电流都走外部电阻网络，不进入运放</li>
+</ul>
+<p><strong>虚短（两输入端电压相等）</strong></p>
+<ul>
+<li>因为 A→∞：输出电压 Vout = A×(V+ - V-) 是有限值 → V+ - V- ≈ 0 → V+ ≈ V-</li>
+<li>两输入端电位近似相等——好像「短路」在一起</li>
+<li>注意是「虚」短：不是真的短路（没有电流流过），只是电位相等</li>
+<li>只在负反馈闭环时成立：反馈把输出拉回使 V- 追 V+（深度负反馈）</li>
+</ul>
+<p><strong>为什么是分析的全部</strong></p>
+<ul>
+<li>虚短给出输入端电压关系、虚断给出输入端电流关系——两个约束一立，配合外部电阻网络的 KCL/KVL，所有运放电路都能解</li>
+<li>反相放大、同相放大、跟随器、加法器、积分器、差分放大——全是「虚短 + 虚断 + 外部网络」三件套</li>
+<li>黄金流程：虚断写节点电流方程 → 虚短给电压关系 → 解出 Vout/Vin</li>
+</ul>
+<p><strong>一句话总结</strong>：理想运放开环增益和输入阻抗无穷大 → 输入端电流≈0（虚断）、两输入端电位相等（虚短，负反馈闭环才成立）——这两个近似是运放电路分析的全部工具，任何运放电路都靠「虚短+虚断+外部电阻网络」解出来。</p>
+<p>📎 题目（10000问）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/><br/>
+📎 模拟电子Q2（BJT 放大）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyOTQ1OTM2" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyOTQ1OTM2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><a href="../../../../tags/Area/%E6%8A%80%E6%9C%AF/%E7%94%B5%E6%B0%94%E4%B8%8E%E7%94%B5%E5%AD%90" class="tag-link internal alias" data-slug="tags/Area/技术/电气与电子">电气与电子</a></p>
+<p><a href="../../../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h2 id="2-电气-10000问--模拟电子q2三极管bjt的放大原理是什么为什么叫电流控制电流源β-受什么影响">2. 电气 10000问 · 模拟电子Q2：三极管（BJT）的放大原理是什么？为什么叫「电流控制电流源」？β 受什么影响？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-电气-10000问--模拟电子q2三极管bjt的放大原理是什么为什么叫电流控制电流源β-受什么影响" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>Flomo 来源：</strong> <a href="https://v.flomoapp.com/mine/?memo_id=MjUyOTQ1OTM2" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyOTQ1OTM2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><strong>电气 10000问 · 模拟电子Q2：三极管（BJT）的放大原理是什么？为什么叫「电流控制电流源」？β 受什么影响？</strong></p>
+<p>▎ 五大学习法：费曼学习法——把「BJT 放大」讲成「小闸门控大水流」</p>
+<p><strong>结构</strong></p>
+<ul>
+<li>NPN：两个 PN 结背靠背——发射结（B-E）+ 集电结（B-C），中间是很薄的基区</li>
+<li>三极：发射极 E（重掺杂）、基极 B（很薄很轻掺杂）、集电极 C（大面积的收集极）</li>
+</ul>
+<p><strong>放大原理</strong></p>
+<ul>
+<li>发射结正偏：基极注入小电流 IB，大量电子从发射区涌入基区</li>
+<li>基区极薄：大部分电子来不及复合就穿过基区，被集电结（反偏）收集——形成 IC</li>
+<li>关键：IC ≈ β·IB，IE = IB + IC ≈ IC——小 IB 控制大 IC，这就是电流放大</li>
+<li>比喻：基极是水闸的小手柄，集电极电流是被放大的水流；β（hFE）就是放大倍数</li>
+</ul>
+<p><strong>为什么叫电流控制电流源</strong></p>
+<ul>
+<li>输入是电流（IB），输出是电流（IC）——电流控电流（CCCS）</li>
+<li>对比：MOSFET 是电压控电流（VCCS）——栅极电压控制漏极电流</li>
+<li>这是两种器件最本质的区别：BJT 要基极电流（要输入电流）、MOS 只要栅极电压（几乎不要电流）</li>
+</ul>
+<p><strong>β 受什么影响</strong></p>
+<ul>
+<li>基区宽度：越薄复合越少、β 越大（但太薄耐压变差——工艺权衡）</li>
+<li>掺杂浓度：发射区重掺杂、基区轻掺杂（利于注入和少复合）</li>
+<li>温度：温度升高 β 增大（BJT 的热稳定性问题——需要偏置电路补偿）</li>
+<li>电流：大电流和小电流时 β 都会下降（中间区间 β 最大）</li>
+</ul>
+<p><strong>一句话总结</strong>：BJT 靠「发射结正偏注入 + 基区极薄 + 集电结反偏收集」实现 IC=β·IB——小基极电流控大集电极电流（电流控电流）；β 由基区宽度、掺杂、温度、工作点共同决定，热稳定性要靠偏置电路补偿。</p>
+<p>📎 题目（10000问）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/><br/>
+📎 模拟电子Q1（PN 结）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyOTQ1OTI5" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyOTQ1OTI5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><a href="../../../../tags/Area/%E6%8A%80%E6%9C%AF/%E7%94%B5%E6%B0%94%E4%B8%8E%E7%94%B5%E5%AD%90" class="tag-link internal alias" data-slug="tags/Area/技术/电气与电子">电气与电子</a></p>
+<p><a href="../../../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h2 id="3-电气-10000问--模拟电子q1二极管为什么单向导电pn-结的耗尽区怎么形成为什么耗尽区宽度随电压变化">3. 电气 10000问 · 模拟电子Q1：二极管为什么单向导电？PN 结的耗尽区怎么形成？为什么耗尽区宽度随电压变化？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-电气-10000问--模拟电子q1二极管为什么单向导电pn-结的耗尽区怎么形成为什么耗尽区宽度随电压变化" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>Flomo 来源：</strong> <a href="https://v.flomoapp.com/mine/?memo_id=MjUyOTQ1OTI5" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyOTQ1OTI5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><strong>电气 10000问 · 模拟电子Q1：二极管为什么单向导电？PN 结的耗尽区怎么形成？为什么耗尽区宽度随电压变化？</strong></p>
+<p>▎ 五大学习法：费曼学习法——把「PN 结」讲成「两个大门对开」</p>
+<p><strong>PN 结的形成</strong></p>
+<ul>
+<li>把 P 型半导体（多子=空穴）和 N 型半导体（多子=电子）结合</li>
+<li>扩散运动：浓度差让 P 的空穴往 N 跑、N 的电子往 P 跑</li>
+<li>复合与耗尽：跑到对面复合掉，交界处留下不能移动的离子（P 侧剩负离子、N 侧剩正离子）——这个没有自由载流子的区域就是耗尽区（空间电荷区）</li>
+<li>内建电场：正负离子形成从 N 指向 P 的电场，阻止扩散继续——扩散和漂移平衡时，耗尽区稳定</li>
+</ul>
+<p><strong>为什么单向导电</strong></p>
+<ul>
+<li>正向偏置（P 接正）：外加电场和内建电场相反，削弱内建电场 → 耗尽区变窄 → 扩散恢复 → 电流导通（开启后约 0.6-0.7V 压降）</li>
+<li>反向偏置（P 接负）：外加电场和内建电场同向，增强内建电场 → 耗尽区变宽 → 少数载流子漂移形成极小反向漏电流 → 截止</li>
+<li>单向导电 = 正偏导通、反偏截止——这就是二极管的开关本质</li>
+</ul>
+<p><strong>耗尽区宽度随电压变化</strong></p>
+<ul>
+<li>反向电压越大 → 耗尽区越宽（像把门推得更开，但方向是挡人）</li>
+<li>正向电压越大 → 耗尽区越窄（直到导通）</li>
+<li>这个宽度可变直接引出两个衍生器件：变容二极管（利用耗尽区电容可变）、稳压二极管（利用反向击穿电压稳定）</li>
+</ul>
+<p><strong>一句话总结</strong>：PN 结的耗尽区是扩散和漂移平衡的产物；正偏削弱内建电场、耗尽区变窄→导通，反偏增强内建电场、耗尽区变宽→截止——单向导电性是耗尽区宽度随电压变化的直接结果。</p>
+<p>📎 题目（10000问）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/><br/>
+📎 电路原理Q3（电容电感储能）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyOTQyNDE1" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyOTQyNDE1<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><a href="../../../../tags/Area/%E6%8A%80%E6%9C%AF/%E7%94%B5%E6%B0%94%E4%B8%8E%E7%94%B5%E5%AD%90" class="tag-link internal alias" data-slug="tags/Area/技术/电气与电子">电气与电子</a></p>
+<p><a href="../../../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h2 id="4-电气-10000问--电路原理q4rlc-串联谐振频率怎么算谐振时电压电流的相位关系是什么">4. 电气 10000问 · 电路原理Q4：RLC 串联谐振频率怎么算？谐振时电压电流的相位关系是什么？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4-电气-10000问--电路原理q4rlc-串联谐振频率怎么算谐振时电压电流的相位关系是什么" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>Flomo 来源：</strong> <a href="https://v.flomoapp.com/mine/?memo_id=MjUyOTQyNDI4" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyOTQyNDI4<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><strong>电气 10000问 · 电路原理Q4：RLC 串联谐振频率怎么算？谐振时电压电流的相位关系是什么？</strong></p>
+<p>▎ 五大学习法：西蒙学习法——把「谐振 = 电抗抵消」钻透</p>
+<p><strong>谐振频率怎么算</strong></p>
+<ul>
+<li>RLC 串联：感抗 XL = 2πfL，容抗 XC = 1/(2πfC)</li>
+<li>谐振条件：XL = XC（感抗和容抗相等，互相抵消）→ 2πfL = 1/(2πfC)</li>
+<li>解出：f₀ = 1/(2π√(LC))——谐振频率只由 L 和 C 决定，和 R 无关</li>
+<li>换个说法：ω₀ = 1/√(LC)（角频率）</li>
+</ul>
+<p><strong>谐振时的状态</strong></p>
+<ul>
+<li>阻抗最小：Z = R + j(XL - XC) = R——纯电阻！总阻抗 = R</li>
+<li>电流最大：I = V/R（谐振时电流达到最大，R 越小电流越大）</li>
+<li>相位关系：电压和电流同相（相位差 = 0）——电路表现为纯电阻</li>
+<li>储能振荡：L 和 C 之间能量来回交换（磁场能 ↔ 电场能），电阻只耗散不参与振荡</li>
+</ul>
+<p><strong>特性参数</strong></p>
+<ul>
+<li>品质因数 Q = ω₀L/R = 1/(ω₀CR)——Q 越高，谐振峰越尖、选择性越好</li>
+<li>带宽 BW = f₀/Q——Q 高则带宽窄（选频能力强）</li>
+<li>分压现象：谐振时 L 和 C 两端电压是电源电压的 Q 倍（可远高于输入）——LC 串联谐振也叫电压谐振</li>
+</ul>
+<p><strong>工程场景</strong></p>
+<ul>
+<li>收音机选频：调节 C 让 f₀ 对准电台频率，其他频率被抑制</li>
+<li>陷波/带通滤波器、晶振等效电路（RLC 模型）</li>
+<li>嵌入式注意：晶振/陶瓷谐振器就是 RLC 谐振；走线寄生 L、去耦电容 C 可能形成意外谐振（EMC 问题）</li>
+</ul>
+<p><strong>一句话总结</strong>：谐振频率 f₀ = 1/(2π√LC)，只由 L、C 决定；谐振时感抗容抗抵消、阻抗=R、电流最大、电压电流同相，L/C 上还有 Q 倍的高压——选频和滤波都靠它。</p>
+<p>📎 题目（10000问）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/><br/>
+📎 电路原理Q3（电容电感储能）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyOTQyNDE1" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyOTQyNDE1<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><a href="../../../../tags/Area/%E6%8A%80%E6%9C%AF/%E7%94%B5%E6%B0%94%E4%B8%8E%E7%94%B5%E5%AD%90" class="tag-link internal alias" data-slug="tags/Area/技术/电气与电子">电气与电子</a></p>
+<p><a href="../../../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h2 id="5-电气-10000问--电路原理q3电容和电感的储能怎么工作为什么直流稳态里电容像开路电感像短路">5. 电气 10000问 · 电路原理Q3：电容和电感的储能怎么工作？为什么直流稳态里电容像开路、电感像短路？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#5-电气-10000问--电路原理q3电容和电感的储能怎么工作为什么直流稳态里电容像开路电感像短路" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>Flomo 来源：</strong> <a href="https://v.flomoapp.com/mine/?memo_id=MjUyOTQyNDE1" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyOTQyNDE1<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><strong>电气 10000问 · 电路原理Q3：电容和电感的储能怎么工作？为什么直流稳态里电容像开路、电感像短路？</strong></p>
+<p>▎ 五大学习法：费曼学习法——把「电容存电压、电感存电流」讲成人话</p>
+<p><strong>电容的储能</strong></p>
+<ul>
+<li>电容存的是电场能：E = ½CV²——存的是电压，两板之间建立电场</li>
+<li>电流和电压的关系：i = C·dv/dt——电流正比于电压的变化率</li>
+<li>关键推论：电压不变（dv/dt = 0）→ 电流 = 0 → 直流稳态里电容 = 开路（隔直）</li>
+</ul>
+<p><strong>电感的储能</strong></p>
+<ul>
+<li>电感存的是磁场能：E = ½LI²——存的是电流，线圈周围建立磁场</li>
+<li>电压和电流的关系：v = L·di/dt——电压正比于电流的变化率</li>
+<li>关键推论：电流不变（di/dt = 0）→ 电压 = 0 → 直流稳态里电感 = 短路（通直）</li>
+</ul>
+<p><strong>为什么「电容开路、电感短路」</strong></p>
+<ul>
+<li>直流稳态：所有电压电流都稳定了，不再变化</li>
+<li>电容：电压稳定 → 没有充电/放电电流 → 像开路（但两端还有电压，储能还在）</li>
+<li>电感：电流稳定 → 没有感应电压 → 像短路（但电流还在流，储能还在）</li>
+<li>记忆法：电容电压不能突变（所以稳定后没电流），电感电流不能突变（所以稳定后没电压）</li>
+</ul>
+<p><strong>工程意义</strong></p>
+<ul>
+<li>电源滤波：电容并联在电源上——纹波是电压变化，被电容吸收（变成充放电电流）</li>
+<li>电感滤波/扼流：串联电感挡电流变化——纹波电流被抑制</li>
+<li>分析直流电路：先让电容开路、电感短路，算稳态工作点——这是所有「先直流后交流」分析的第一步</li>
+</ul>
+<p><strong>一句话总结</strong>：电容存电压（i=C·dv/dt，电压稳了就没电流=开路）、电感存电流（v=L·di/dt，电流稳了就没电压=短路）——直流稳态分析先做这两个替换，是所有电子电路的第一板斧。</p>
+<p>📎 题目（10000问）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/><br/>
+📎 电路原理Q2（戴维南等效）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyOTQyMzE3" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyOTQyMzE3<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><a href="../../../../tags/Area/%E6%8A%80%E6%9C%AF/%E7%94%B5%E6%B0%94%E4%B8%8E%E7%94%B5%E5%AD%90" class="tag-link internal alias" data-slug="tags/Area/技术/电气与电子">电气与电子</a></p>
+<p><a href="../../../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h2 id="6-电气-10000问--电路原理q2戴维南定理和诺顿定理说的是同一件事吗等效在实际设计里有什么用">6. 电气 10000问 · 电路原理Q2：戴维南定理和诺顿定理说的是同一件事吗？等效在实际设计里有什么用？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#6-电气-10000问--电路原理q2戴维南定理和诺顿定理说的是同一件事吗等效在实际设计里有什么用" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>Flomo 来源：</strong> <a href="https://v.flomoapp.com/mine/?memo_id=MjUyOTQyMzE3" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyOTQyMzE3<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><strong>电气 10000问 · 电路原理Q2：戴维南定理和诺顿定理说的是同一件事吗？等效在实际设计里有什么用？</strong></p>
+<p>▎ 五大学习法：西蒙学习法——把「戴维南-诺顿等效」钻透</p>
+<p><strong>是同一件事吗</strong></p>
+<ul>
+<li>是：同一个线性含源二端网络，两种表达方式——戴维南用「电压源 + 串联电阻」、诺顿用「电流源 + 并联电阻」</li>
+<li>互相转换：Vth = IN × RN（开路电压 = 短路电流 × 等效电阻）</li>
+<li>等效是对外电路而言：端口外的电压电流完全一致，内部完全不同（被替换掉了）</li>
+<li>条件：网络本身线性（含独立源、线性电阻/受控源）；负载可以是非线性的</li>
+</ul>
+<p><strong>实际设计里有什么用</strong></p>
+<ol>
+<li>最大功率传输：负载电阻 = 戴维南等效电阻时，负载获得最大功率——音频功放、天线匹配、传感器输出的负载选择</li>
+<li>复杂网络简化：多电源多电阻的网络，算「接上某负载后的电压电流」——先等效成一个电压源+电阻，一次算清</li>
+<li>负载变化分析：负载改了（换传感器、加第二路）不用重算整个网络，只更新端口外的部分</li>
+<li>电源模块特性：输出特性就是戴维南等效——空载电压、等效内阻、短路电流一图看清</li>
+<li>内阻估算：测开路电压（Vth）和短路电流（IN），内阻 = Vth / IN——电池内阻就是这么估的</li>
+</ol>
+<p><strong>一句话总结</strong>：戴维南和诺顿是同一等效的两张脸（电压源 vs 电流源，可互换）；它的价值是「把复杂网络压成一个源+一个电阻」——算负载、配最大功率、估内阻全用它。</p>
+<p>📎 题目（10000问）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/><br/>
+📎 电路原理Q1（KCL/KVL）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjUyOTQyMzA1" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyOTQyMzA1<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><a href="../../../../tags/Area/%E6%8A%80%E6%9C%AF/%E7%94%B5%E6%B0%94%E4%B8%8E%E7%94%B5%E5%AD%90" class="tag-link internal alias" data-slug="tags/Area/技术/电气与电子">电气与电子</a></p>
+<p><a href="../../../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h2 id="7-电气-10000问--电路原理q1kcl-和-kvl-本质上分别守恒了什么为什么是电路分析的宪法">7. 电气 10000问 · 电路原理Q1：KCL 和 KVL 本质上分别守恒了什么？为什么是电路分析的「宪法」？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#7-电气-10000问--电路原理q1kcl-和-kvl-本质上分别守恒了什么为什么是电路分析的宪法" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>Flomo 来源：</strong> <a href="https://v.flomoapp.com/mine/?memo_id=MjUyOTQyMzA1" class="external">https://v.flomoapp.com/mine/?memo_id=MjUyOTQyMzA1<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><strong>电气 10000问 · 电路原理Q1：KCL 和 KVL 本质上分别守恒了什么？为什么是电路分析的「宪法」？</strong></p>
+<p>▎ 五大学习法：费曼学习法——把「两个定律 = 两个守恒律」讲成人话</p>
+<p><strong>KCL 守恒了什么</strong></p>
+<ul>
+<li>电流：流入节点的电流之和 = 流出之和——电荷守恒（电荷不会在节点堆积）</li>
+<li>本质：连续性方程的电路版——节点不是蓄水池，进多少出多少</li>
+<li>适用：任意节点、任意时刻（包括暂态）；广义到「超节点」（闭合面）也成立</li>
+</ul>
+<p><strong>KVL 守恒了什么</strong></p>
+<ul>
+<li>电压：沿任意闭合回路，电压升之和 = 电压降之和——能量守恒（静电场是保守场）</li>
+<li>本质：绕一圈回到原点，电位必须回到同一个值——电位是单值函数</li>
+<li>适用：任意回路、任意时刻；不依赖元件类型（电阻、电容、电源都适用）</li>
+</ul>
+<p><strong>为什么是「宪法」</strong></p>
+<ul>
+<li>它们不依赖任何元件特性：不管你是电阻、电容、二极管还是芯片，都必须满足</li>
+<li>元件特性（欧姆定律等）是地方性法律，KCL/KVL 是上位法——求解任何电路都从这两个定律出发</li>
+<li>电路分析的全部方法（节点电压法、网孔电流法、叠加、戴维南）都是这两个定律的推导</li>
+<li>类比：KCL 是「钱不消失」（电荷守恒）、KVL 是「转一圈回到原处」（能量守恒）</li>
+</ul>
+<p><strong>一句话总结</strong>：KCL 是电荷守恒（节点进出相等），KVL 是能量守恒（回路绕一圈电位归零）——它们不依赖元件类型，是电路分析的宪法级约束，所有求解方法都是它们的推论。</p>
+<p>📎 题目（10000问）→ <a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc1MTM2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/><br/>
+📎 电气学习目录卡 → <a href="https://v.flomoapp.com/mine/?memo_id=MjQ2NTQxMjUw" class="external">https://v.flomoapp.com/mine/?memo_id=MjQ2NTQxMjUw<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><a href="../../../../tags/Area/%E6%8A%80%E6%9C%AF/%E7%94%B5%E6%B0%94%E4%B8%8E%E7%94%B5%E5%AD%90" class="tag-link internal alias" data-slug="tags/Area/技术/电气与电子">电气与电子</a></p>
+<p><a href="../../../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-70" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#电气工程10000问电路原理与模拟电子基础" data-for="电气工程10000问电路原理与模拟电子基础">电气工程10000问：电路原理与模拟电子基础</a></li><li class="depth-1"><a href="#知识关系图" data-for="知识关系图">知识关系图</a></li><li class="depth-1"><a href="#工程学习与验证建议" data-for="工程学习与验证建议">工程学习与验证建议</a></li><li class="depth-1"><a href="#1-电气-10000问--模拟电子q3运放的虚短和虚断本质是什么为什么是运放电路分析的全部" data-for="1-电气-10000问--模拟电子q3运放的虚短和虚断本质是什么为什么是运放电路分析的全部">1. 电气 10000问 · 模拟电子Q3：运放的「虚短」和「虚断」本质是什么？为什么是运放电路分析的全部？</a></li><li class="depth-1"><a href="#2-电气-10000问--模拟电子q2三极管bjt的放大原理是什么为什么叫电流控制电流源β-受什么影响" data-for="2-电气-10000问--模拟电子q2三极管bjt的放大原理是什么为什么叫电流控制电流源β-受什么影响">2. 电气 10000问 · 模拟电子Q2：三极管（BJT）的放大原理是什么？为什么叫「电流控制电流源」？β 受什么影响？</a></li><li class="depth-1"><a href="#3-电气-10000问--模拟电子q1二极管为什么单向导电pn-结的耗尽区怎么形成为什么耗尽区宽度随电压变化" data-for="3-电气-10000问--模拟电子q1二极管为什么单向导电pn-结的耗尽区怎么形成为什么耗尽区宽度随电压变化">3. 电气 10000问 · 模拟电子Q1：二极管为什么单向导电？PN 结的耗尽区怎么形成？为什么耗尽区宽度随电压变化？</a></li><li class="depth-1"><a href="#4-电气-10000问--电路原理q4rlc-串联谐振频率怎么算谐振时电压电流的相位关系是什么" data-for="4-电气-10000问--电路原理q4rlc-串联谐振频率怎么算谐振时电压电流的相位关系是什么">4. 电气 10000问 · 电路原理Q4：RLC 串联谐振频率怎么算？谐振时电压电流的相位关系是什么？</a></li><li class="depth-1"><a href="#5-电气-10000问--电路原理q3电容和电感的储能怎么工作为什么直流稳态里电容像开路电感像短路" data-for="5-电气-10000问--电路原理q3电容和电感的储能怎么工作为什么直流稳态里电容像开路电感像短路">5. 电气 10000问 · 电路原理Q3：电容和电感的储能怎么工作？为什么直流稳态里电容像开路、电感像短路？</a></li><li class="depth-1"><a href="#6-电气-10000问--电路原理q2戴维南定理和诺顿定理说的是同一件事吗等效在实际设计里有什么用" data-for="6-电气-10000问--电路原理q2戴维南定理和诺顿定理说的是同一件事吗等效在实际设计里有什么用">6. 电气 10000问 · 电路原理Q2：戴维南定理和诺顿定理说的是同一件事吗？等效在实际设计里有什么用？</a></li><li class="depth-1"><a href="#7-电气-10000问--电路原理q1kcl-和-kvl-本质上分别守恒了什么为什么是电路分析的宪法" data-for="7-电气-10000问--电路原理q1kcl-和-kvl-本质上分别守恒了什么为什么是电路分析的宪法">7. 电气 10000问 · 电路原理Q1：KCL 和 KVL 本质上分别守恒了什么？为什么是电路分析的「宪法」？</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.1</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module">function f(i,e){if(!i)return;function r(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function t(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}i?.addEventListener("click",r),window.addCleanup(()=>i?.removeEventListener("click",r)),document.addEventListener("keydown",t),window.addCleanup(()=>document.removeEventListener("keydown",t))}function y(i){for(;i.firstChild;)i.removeChild(i.firstChild)}var h=class{constructor(e,r){this.container=e;this.content=r;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),r=this.onMouseMove.bind(this),t=this.onMouseUp.bind(this),o=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",r),document.addEventListener("mouseup",t),window.addEventListener("resize",o),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",r),()=>document.removeEventListener("mouseup",t),()=>window.removeEventListener("resize",o))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let r=this.createButton("+",()=>this.zoom(.1)),t=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(t),e.appendChild(o),e.appendChild(r),this.container.appendChild(e)}createButton(e,r){let t=document.createElement("button");return t.textContent=e,t.className="mermaid-control-button",t.addEventListener("click",r),window.addCleanup(()=>t.removeEventListener("click",r)),t}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}zoom(e){let r=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),t=this.content.getBoundingClientRect(),o=t.width/2,n=t.height/2,c=r-this.scale;this.currentPan.x-=o*c,this.currentPan.y-=n*c,this.scale=r,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){this.scale=1;let e=this.content.querySelector("svg");this.currentPan={x:e.getBoundingClientRect().width/2,y:e.getBoundingClientRect().height/2},this.updateTransform()}},C=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],E;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;E||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let r=E.default,t=new WeakMap;for(let n of e)t.set(n,n.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let a=t.get(s);a&&(s.innerHTML=a)}let n=C.reduce((s,a)=>(s[a]=window.getComputedStyle(document.documentElement).getPropertyValue(a),s),{}),c=document.documentElement.getAttribute("saved-theme")==="dark";r.initialize({startOnLoad:!1,securityLevel:"loose",theme:c?"dark":"base",themeVariables:{fontFamily:n["--codeFont"],primaryColor:n["--light"],primaryTextColor:n["--darkgray"],primaryBorderColor:n["--tertiary"],lineColor:n["--darkgray"],secondaryColor:n["--secondary"],tertiaryColor:n["--tertiary"],clusterBkg:n["--light"],edgeLabelBackground:n["--highlight"]}}),await r.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let n=0;n<e.length;n++){let v=function(){let g=l.querySelector("#mermaid-space"),m=l.querySelector(".mermaid-content");if(!m)return;y(m);let w=c.querySelector("svg").cloneNode(!0);m.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new h(g,m)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},c=e[n],s=c.parentElement,a=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(a),L=a.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),f(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="/static/katex/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../../../postscript.js" type="module"></script></html>
