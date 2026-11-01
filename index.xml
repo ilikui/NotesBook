@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>工具配置实战Q3-BSW模块引用关系</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q3-BSW%E6%A8%A1%E5%9D%97%E5%BC%95%E7%94%A8%E5%85%B3%E7%B3%BB</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q3-BSW%E6%A8%A1%E5%9D%97%E5%BC%95%E7%94%A8%E5%85%B3%E7%B3%BB</guid>
+    <description><![CDATA[ 工具配置实战 Q3：Module 间的「引用」怎么建立？填模块名还是下拉列表？ 原始 Flomo：v.flomoapp.com/mine/ 工具配置实战 Q3：Module 间的「引用」怎么建立？填模块名还是下拉列表？ 结论：不是手填模块名，而是通过下拉/浏览对话框选，选的是「强类型引用」，不是文本字符串。 为什么是下拉选择： 引用通常是模型中的强类型对象引用：它有目标路径和目标类型约束，只允许指向符合该引用定义的配置对象。具体引用容器名称和目标类型应查对应模块的 ECUC 参数定义/XSD，不能用一个供应商工具中的字段名推断所有项目。 工具提供浏览对话框：列出当前可用、且类型匹配的目标实例，... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 13:31:05 GMT</pubDate>
+  </item><item>
     <title>SPI 菊花链：多从机串联拓扑与时序</title>
     <link>https://wiki.likui.info/Area/EE/%E8%BD%A6%E8%BD%BD%E9%80%9A%E4%BF%A1/1000%E9%97%AE/SPI%E8%8F%8A%E8%8A%B1%E9%93%BE%E5%A4%9A%E4%BB%8E%E6%9C%BA%E4%B8%B2%E8%81%94</link>
     <guid>https://wiki.likui.info/Area/EE/%E8%BD%A6%E8%BD%BD%E9%80%9A%E4%BF%A1/1000%E9%97%AE/SPI%E8%8F%8A%E8%8A%B1%E9%93%BE%E5%A4%9A%E4%BB%8E%E6%9C%BA%E4%B8%B2%E8%81%94</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/</guid>
     <description><![CDATA[ 数学与工程数学1000问 本专题把考研数学基础、工程应用和机器学习中的数学连接起来。导航页保留原始问题清单，答案页按知识模块逐批补齐；不要把问题清单中的每个条目都误认为已有答案。 已有答案 微积分 微积分基础与多元微分：16 道题，极限、连续、导数、中值定理、Taylor、积分和多元微分。 多元积分微分方程与无穷级数：11 道题，重积分、ODE、无穷级数。 线性代数 线性代数基础矩阵与线性方程组：17 道题，矩阵运算、线性方程组、向量空间和线性变换。 线性代数进阶特征值分解与数值计算：20 道题，特征值、SVD、最小二乘、条件数和数值矩阵。 线性代数专题补充投影Jordan图谱与矩阵微积分：2... ]]></description>
     <pubDate>Sun, 01 Nov 2026 05:18:01 GMT</pubDate>
-  </item><item>
-    <title>MATLAB 与 Simulink 10000问</title>
-    <link>https://wiki.likui.info/Area/EE/MATLAB/</link>
-    <guid>https://wiki.likui.info/Area/EE/MATLAB/</guid>
-    <description><![CDATA[ MATLAB 与 Simulink 10000问 本专题按基础语法、矩阵数值计算、Simulink 建模、代码生成验证、面向对象与高级工具组织。当前 5 篇答案页覆盖 Q1–Q72；每题以原理、代码/模型行为、适用条件和工程验证为主。 题库导航 基础语法矩阵与Simulink建模：Q1–Q12，矩阵基础、索引、脚本/函数、绘图和求解器。 矩阵可视化数值计算与信号处理：Q13–Q24，可视化、数值求解、数据导入、FFT、滤波和符号计算。 Simulink建模控制系统与物理仿真：Q25–Q36，Subsystem、代数环、控制模型、Stateflow、Simscape 和 Model Refere... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 05:17:59 GMT</pubDate>
   </item>
     </channel>
   </rss>
