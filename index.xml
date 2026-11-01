@@ -6,6 +6,24 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>AUTOSAR 1000问 · 工具链 Q1 如何保证工具链生成的代码就是自己配置的？</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%93%BEQ1-%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%93%BEQ1-%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1</guid>
+    <description><![CDATA[ AUTOSAR 1000问 · 工具链 Q1：如何保证工具链生成的代码就是自己配置的？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 1000问 · 工具链 Q1：如何保证工具链生成的代码就是自己配置的？ 费曼（一句话说清）：工具链是翻译官——你把配置（ARXML）交给它，它吐出代码。真问题不是「它会不会骗你」，而是「你怎么让它说的每句话都可查证」。 西蒙（抓核心）：你证明不了生成器永远正确，但能让「配置→产物」变成可审计、可重放、有断言的确定性过程——把「信任工具」换成「审计过程」。 SQ3R（带着问题读）：先问「配置和产物之间，偏差可能出在哪几环」，答案锁定五... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 13:38:12 GMT</pubDate>
+  </item><item>
+    <title>工具配置实战Q2-模块配置完整性验证</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q2-%E6%A8%A1%E5%9D%97%E9%85%8D%E7%BD%AE%E5%AE%8C%E6%95%B4%E6%80%A7%E9%AA%8C%E8%AF%81</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q2-%E6%A8%A1%E5%9D%97%E9%85%8D%E7%BD%AE%E5%AE%8C%E6%95%B4%E6%80%A7%E9%AA%8C%E8%AF%81</guid>
+    <description><![CDATA[ 工具配置实战 Q2：怎么判断一个模块配置完整？Davinci 有没有「验证配置」功能？ 原始 Flomo：v.flomoapp.com/mine/ 工具配置实战 Q2：怎么判断一个模块配置完整？Davinci 有没有「验证配置」功能？ 判断完整性的四种手段（从软到硬）： 工具验证 / 校验：Davinci 有 Check / Validate Configuration，EB tresos 是 Validation——做一致性检查（必填参数、跨模块引用、schema 合规），列出 error（红）和 warning（黄）。这是第一道、也最快的门。 生成代码是否成功：生成器生成前会做一遍完整性与... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 13:38:08 GMT</pubDate>
+  </item><item>
+    <title>工具配置实战Q1-BSW模块必填参数</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q1-BSW%E6%A8%A1%E5%9D%97%E5%BF%85%E5%A1%AB%E5%8F%82%E6%95%B0</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q1-BSW%E6%A8%A1%E5%9D%97%E5%BF%85%E5%A1%AB%E5%8F%82%E6%95%B0</guid>
+    <description><![CDATA[ 工具配置实战 Q1：新建 BSW 模块配置，哪些参数必填？填错了在哪一层报出来？ 原始 Flomo：v.flomoapp.com/mine/ 工具配置实战 Q1：新建 BSW 模块配置，哪些参数必填？填错了在哪一层报出来？ 哪些算必填： 配置工具里参数分 required（必填）和 optional（可选），工具常用标记区分（必填项带星号 / 标红 / 列为 mandatory）。 必填的一般是模块能否正常工作的关键参数——如 CAN 的波特率、帧 ID、PDU 引用、模块实例关联。缺了这些，模块行为无法确定。 填错了在哪一层被发现（三层，按时间顺序）： 配置 / 验证阶段：工具内的「验证」和... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 13:38:04 GMT</pubDate>
+  </item><item>
     <title>1000问知识体系</title>
     <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
     <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
@@ -47,24 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/1000%E9%97%AE/%E7%AC%AC28%E9%A2%98-CAN%E6%8A%A5%E6%96%87%E6%B3%A8%E5%85%A5%E4%B8%8ESecOC</guid>
     <description><![CDATA[ 自动驾驶 1000问 · 十 · 第 28 题：CAN 报文注入怎么防？SecOC 靠什么工作？ 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 自动驾驶 1000问 · 十 · 第 28 题：CAN 报文注入怎么防？SecOC 靠什么工作？ 先看威胁：CAN 是广播总线，报文没有发送者身份、没有真实性校验——任何人挂上总线，就能伪造 ID 发报文。攻击者注入一条「刹车信号 = 松开」或「车速 = 100」，其他 ECU 分不出真假。 CAN 本身的弱点 无认证：不验发送者。 无加密：明文传输。 无完整性：CRC 只防传输错误，防不了恶意篡改（攻击者能重算 CRC）。 ... ]]></description>
     <pubDate>Sun, 01 Nov 2026 13:35:30 GMT</pubDate>
-  </item><item>
-    <title>自动驾驶 1000问 · 六 · 第 17 题：线控制动比传统液压快在哪？为什么快很重要？</title>
-    <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/1000%E9%97%AE/%E7%AC%AC17%E9%A2%98-%E7%BA%BF%E6%8E%A7%E5%88%B6%E5%8A%A8%E5%93%8D%E5%BA%94%E9%80%9F%E5%BA%A6</link>
-    <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/1000%E9%97%AE/%E7%AC%AC17%E9%A2%98-%E7%BA%BF%E6%8E%A7%E5%88%B6%E5%8A%A8%E5%93%8D%E5%BA%94%E9%80%9F%E5%BA%A6</guid>
-    <description><![CDATA[ 自动驾驶 1000问 · 六 · 第 17 题：线控制动比传统液压快在哪？为什么快很重要？ 原始 Flomo：v.flomoapp.com/mine/ 自动驾驶 1000问 · 六 · 第 17 题：线控制动比传统液压快在哪？为什么快很重要？ 传统液压制动：踩踏板 → 液压助力 → 液体传递压力到卡钳。从「发指令」到「建立压力」要经历液压传递 + 助力建立，几十到上百 ms。 线控制动（EHB 电子液压 / EMB 电子机械）快在： 电信号传递：制动指令用电信号到执行器，几乎瞬时，不用等液压建压。 电机 / 电磁直接建压：EMB 用电机直接推制动，响应几个 ms ~ 十几 ms；EHB 也比传... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 13:35:27 GMT</pubDate>
-  </item><item>
-    <title>自动驾驶 1000问 · 五 · 第 15 题：轨迹规划为什么常用 Frenet 坐标系？</title>
-    <link>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/1000%E9%97%AE/%E7%AC%AC15%E9%A2%98-Frenet%E5%9D%90%E6%A0%87%E7%B3%BB%E4%B8%8E%E8%BD%A8%E8%BF%B9%E8%A7%84%E5%88%92</link>
-    <guid>https://wiki.likui.info/Area/EE/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/1000%E9%97%AE/%E7%AC%AC15%E9%A2%98-Frenet%E5%9D%90%E6%A0%87%E7%B3%BB%E4%B8%8E%E8%BD%A8%E8%BF%B9%E8%A7%84%E5%88%92</guid>
-    <description><![CDATA[ 自动驾驶 1000问 · 五 · 第 15 题：轨迹规划为什么常用 Frenet 坐标系？ 原始 Flomo：v.flomoapp.com/mine/ 自动驾驶 1000问 · 五 · 第 15 题：轨迹规划为什么常用 Frenet 坐标系？ 先定义：Frenet 坐标（SL / 赛道坐标）以道路中心线为参考——s = 沿中心线的纵向弧长，d = 相对中心线的横向偏移。 为什么用它： 纵横向解耦（降维）：笛卡尔下是 2D 自由空间搜索，复杂。Frenet 下纵向（s）和横向（d）天然分开——纵向管速度 / 跟车，横向管换道 / 避让。于是规划被拆成一维纵向 + 一维横向两个简单问题。 贴合道路... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 13:35:23 GMT</pubDate>
-  </item><item>
-    <title>处理器寻址方式：立即、直接、间接、变址与相对寻址</title>
-    <link>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%83%E7%A7%8D%E5%AF%BB%E5%9D%80%E6%96%B9%E5%BC%8F</link>
-    <guid>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%83%E7%A7%8D%E5%AF%BB%E5%9D%80%E6%96%B9%E5%BC%8F</guid>
-    <description><![CDATA[ 处理器寻址方式 原始 Flomo：v.flomoapp.com/mine/ 寻址方式描述指令如何定位操作数。不同 ISA（x86、ARM、PowerPC、RISC-V 等）的寻址模式和汇编语法并不完全相同。下面先解释常见概念，再以传统 x86 16 位地址表达式说明原笔记中的七类形式；不要把这七类当成所有处理器都统一规定的分类。 1. ]]></description>
-    <pubDate>Sun, 01 Nov 2026 13:33:44 GMT</pubDate>
   </item>
     </channel>
   </rss>
