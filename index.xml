@@ -6,12 +6,6 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>EcuM 状态机深入 Q2 PostRun 是干什么用的？SW-C 都停了 EcuM 还在 PostRun 期间哪些模块在工作？正写 NvM 收到 Shutdown 请求，强制掉电还是等写完？</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/EcuM-PostRun%E4%B8%8ENvM%E5%85%B3%E6%9C%BA%E6%97%B6%E5%BA%8F</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/EcuM-PostRun%E4%B8%8ENvM%E5%85%B3%E6%9C%BA%E6%97%B6%E5%BA%8F</guid>
-    <description><![CDATA[ EcuM 状态机深入 Q2：PostRun 是干什么用的？SW-C 都停了 EcuM 还在 PostRun 期间哪些模块在工作？正写 NvM 收到 Shutdown 请求，强制掉电还是等写完？ 原始 Flomo：v.flomoapp.com/mine/ EcuM 状态机深入 Q2：PostRun 是干什么用的？SW-C 都停了 EcuM 还在 PostRun 期间哪些模块在工作？正写 NvM 收到 Shutdown 请求，强制掉电还是等写完？ PostRun 的用途： EcuM 在 RUN 之后、Shutdown 之前的一个过渡态。用于「应用（SW-C）已停止，但系统还需做收尾工作」的场景——... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:55:03 GMT</pubDate>
-  </item><item>
     <title>Dcm 协议多路复用 Q2 用 DoIP 刷写和用 CAN TP 刷写同一个 ECU——Dcm 层处理逻辑一样吗？刷写速率谁快？CAN 路径断电接着刷，DoIP 支持同样的恢复吗？</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Dcm-DoIP%E4%B8%8ECanTp%E5%A4%9A%E8%B7%AF%E5%88%B7%E5%86%99</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Dcm-DoIP%E4%B8%8ECanTp%E5%A4%9A%E8%B7%AF%E5%88%B7%E5%86%99</guid>
@@ -65,6 +59,12 @@
     <guid>https://wiki.likui.info/Project/CEM/</guid>
     <description><![CDATA[ CEM 项目知识地图 CEM（Central Electronic Module / 中央电子模块，具体项目命名以 OEM 架构定义为准）相关记录入口。当前归档来自历史 Flomo 需求和问题线索，尚未等同于完整设计规格；具体接口、诊断和休眠唤醒逻辑仍需结合项目 ARXML、软件架构和 OEM 需求确认。 需求与功能域 CEM功能域与诊断需求：执行器/传感器、Climate、驾驶员信息、ECU 平台、车灯、门锁、低压能源管理、远程控制、安全、TPMS、车窗后视镜等功能域，以及诊断需求线索。 软件架构与问题清单 CEM软件结构与待研究问题：已补充 CEM 分层架构、DTC/DID、NvM、接口配... ]]></description>
     <pubDate>Sun, 01 Nov 2026 04:51:04 GMT</pubDate>
+  </item><item>
+    <title>CEM 软件结构：DTC、DID、NvM、接口配置与通信栈</title>
+    <link>https://wiki.likui.info/Project/CEM/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/CEM%E8%BD%AF%E4%BB%B6%E7%BB%93%E6%9E%84%E4%B8%8E%E5%BE%85%E7%A0%94%E7%A9%B6%E9%97%AE%E9%A2%98</link>
+    <guid>https://wiki.likui.info/Project/CEM/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/CEM%E8%BD%AF%E4%BB%B6%E7%BB%93%E6%9E%84%E4%B8%8E%E5%BE%85%E7%A0%94%E7%A9%B6%E9%97%AE%E9%A2%98</guid>
+    <description><![CDATA[ CEM 软件结构：DTC、DID、NvM、接口配置与通信栈 原始 Flomo：v.flomoapp.com/mine/ 本页把原始“待研究问题”转化为可执行的架构学习与排查说明。CEM 在不同 OEM/项目中可能代表不同的中央电子模块或功能域；以下以 AUTOSAR Classic ECU 的典型分层为参照。实际模块、容器、接口和工具操作必须以项目 ARXML、软件需求、接口矩阵、网络矩阵、供应商配置手册和生成代码为准。 1. ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:50:53 GMT</pubDate>
   </item>
     </channel>
   </rss>
