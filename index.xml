@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>计算机科学自学路线与工具资源</title>
+    <link>https://wiki.likui.info/Area/CS/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E4%B8%8E%E5%B7%A5%E5%85%B7%E8%B5%84%E6%BA%90</link>
+    <guid>https://wiki.likui.info/Area/CS/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E4%B8%8E%E5%B7%A5%E5%85%B7%E8%B5%84%E6%BA%90</guid>
+    <description><![CDATA[ 计算机科学自学路线与工具资源 本页整理 Flomo「CS自学指南」中的学习路线、工具清单与跨领域概念卡。原笔记提及的 C-Free 5.0 属于历史环境记录，不代表当前推荐开发环境；实际使用应优先选择仍受维护的编译器、IDE 与工具链。 计算机科学知识地图 flowchart TD A[计算机科学] --&gt; B[数学基础] A --&gt; C[程序设计与编译] A --&gt; D[计算机系统] A --&gt; E[软件工程] A --&gt; F[网络与分布式] A --&gt; G[数据与智能] D --&gt; D1[体系结构 / 操作系统] D --&gt; D2[并行计算]... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:06:57 GMT</pubDate>
+  </item><item>
     <title>EE</title>
     <link>https://wiki.likui.info/Area/EE/</link>
     <guid>https://wiki.likui.info/Area/EE/</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/%E7%A1%AC%E4%BB%B6/%E7%A1%AC%E4%BB%B6%E4%BB%8E0%E5%88%B0%E7%B2%BE%E9%80%9A</guid>
     <description><![CDATA[ 面向嵌入式与汽车电子工程师的硬件知识专题，包含元器件、电路、电源、信号完整性、MCU、PCB、EMC、调试与首板验证。 ]]></description>
     <pubDate>Sun, 01 Nov 2026 03:51:06 GMT</pubDate>
-  </item><item>
-    <title>微信读书</title>
-    <link>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</link>
-    <guid>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</guid>
-    <description><![CDATA[ 从微信读书自动同步的个人书架与阅读记录索引。 ]]></description>
-    <pubDate>Sat, 31 Oct 2026 20:01:23 GMT</pubDate>
   </item>
     </channel>
   </rss>
