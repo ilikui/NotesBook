@@ -25,3 +25,12 @@ C. AUTOSAR 正路是走 IOC：跨核通信交给 IOC（RTE 转发），内部统
 总表：<https://v.flomoapp.com/mine/?memo_id=MjMxMTQ2NDk4>
 
 #Area/技术/AUTOSAR
+
+## 重要边界修订
+
+- `volatile` 主要约束编译器对可观察访问的优化；它不提供原子读改写、线程间 happens-before、互斥或缓存一致性。
+- 对齐且自然宽度的单次读/写在某些 MCU 上可能是原子的，但这由处理器、总线、内存属性和编译器 ABI 决定；`volatile` 本身不保证。
+- 缓存一致性由硬件一致性协议、非缓存共享区或显式 Cache maintenance 解决；内存屏障用于约束访问顺序，不能替代互斥锁。
+- AUTOSAR 并非禁止所有跨核共享全局内存。受控共享区可以通过 OS-Application/MPU 权限、Spinlock、原子操作或数据一致性协议实现；IOC 是常用且更易审计的通信方式。
+
+设计时先确认共享内存是否 cache-coherent、变量是否自然对齐、读写是否需要原子 RMW、是否存在多写者，以及跨核同步协议；不要把 volatile 当作并发方案。
