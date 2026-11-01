@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>1000问知识体系</title>
+    <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
+    <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
+    <description><![CDATA[ 1000问知识体系 这里集中整理 Flomo 中长期积累的「1000问 / 1000题 / 10000问」问题库、逐题解答和专题卡片。目标不是只保存题目，而是把每个问题沉淀为可检索、可验证、可复用的知识单元。 迁移原则：保留问题原意；合并重复题但记录关联；答案给出原理、适用边界和验证方法；技术内容尽量附 Mermaid 图；未核验的结论明确标注待核验。Flomo 原笔记暂不删除。 知识迁移流程 flowchart TD A[Flomo 原始笔记] --&gt; B[检索与盘点] B --&gt; C[按主题归类] C --&gt; D[识别重复问题] D --&gt; E[读取完整原文] E ... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 05:05:25 GMT</pubDate>
+  </item><item>
     <title>人工智能学习中心</title>
     <link>https://wiki.likui.info/Area/AI/</link>
     <guid>https://wiki.likui.info/Area/AI/</guid>
@@ -23,12 +29,6 @@
     <guid>https://wiki.likui.info/Area/AI/%E4%B8%93%E6%A0%8F%E2%91%AF%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%AF%BC%E8%88%AA-AI1000%E9%97%AE%E5%85%A8%E6%99%AF</guid>
     <description><![CDATA[ 专栏⑯·导航：AI 1000 问全景——从基础概念到大模型落地 原始 Flomo：v.flomoapp.com/mine/ 专栏⑯·导航：AI 1000 问全景——从基础概念到大模型落地 📎 专栏⑮嵌入式导航 → v.flomoapp.com/mine/ ▎目录（10篇） AI 用在哪——对话式索引：让 AI 搜你的笔记，而不是全文搜索 AI 在知识管理里的角色——6 层闭环里最擅长整理和存储 Embedding 与 RAG——文档讲不清、实际用起来完全不一样的两个概念 LLM 架构基础——Transformer、注意力、训练三阶段 RAG 实战——分块、向量、检索、对齐 AI Agent ... ]]></description>
     <pubDate>Sun, 01 Nov 2026 05:04:34 GMT</pubDate>
-  </item><item>
-    <title>1000问知识体系</title>
-    <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
-    <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
-    <description><![CDATA[ 1000问知识体系 这里集中整理 Flomo 中长期积累的「1000问 / 1000题 / 10000问」问题库、逐题解答和专题卡片。目标不是只保存题目，而是把每个问题沉淀为可检索、可验证、可复用的知识单元。 迁移原则：保留问题原意；合并重复题但记录关联；答案给出原理、适用边界和验证方法；技术内容尽量附 Mermaid 图；未核验的结论明确标注待核验。Flomo 原笔记暂不删除。 知识迁移流程 flowchart TD A[Flomo 原始笔记] --&gt; B[检索与盘点] B --&gt; C[按主题归类] C --&gt; D[识别重复问题] D --&gt; E[读取完整原文] E ... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 05:04:28 GMT</pubDate>
   </item><item>
     <title>AI 1000问：RAG、Agent、向量检索与AI应用</title>
     <link>https://wiki.likui.info/Area/AI/1000%E9%97%AE/%E6%A3%80%E7%B4%A2%E6%99%BA%E8%83%BD%E4%BD%93%E4%B8%8EAI%E5%BA%94%E7%94%A8%E5%9F%BA%E7%A1%80</link>
