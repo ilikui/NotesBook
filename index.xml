@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>EE</title>
+    <link>https://wiki.likui.info/Area/EE/</link>
+    <guid>https://wiki.likui.info/Area/EE/</guid>
+    <description><![CDATA[ 电子、电气与嵌入式系统的学习地图。 ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:05:27 GMT</pubDate>
+  </item><item>
     <title>嵌入式工程进阶与实战补充</title>
     <link>https://wiki.likui.info/Area/EE/%E5%B5%8C%E5%85%A5%E5%BC%8F/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B7%A5%E7%A8%8B%E8%BF%9B%E9%98%B6%E4%B8%8E%E5%AE%9E%E6%88%98%E8%A1%A5%E5%85%85</link>
     <guid>https://wiki.likui.info/Area/EE/%E5%B5%8C%E5%85%A5%E5%BC%8F/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B7%A5%E7%A8%8B%E8%BF%9B%E9%98%B6%E4%B8%8E%E5%AE%9E%E6%88%98%E8%A1%A5%E5%85%85</guid>
@@ -35,12 +41,6 @@
     <guid>https://wiki.likui.info/Area/EE/%E7%94%B5%E6%B0%94%E5%B7%A5%E7%A8%8B/10000%E9%97%AE/%E7%94%B5%E8%B7%AF%E5%8E%9F%E7%90%86%E4%B8%8E%E6%A8%A1%E6%8B%9F%E7%94%B5%E5%AD%90%E5%9F%BA%E7%A1%80</guid>
     <description><![CDATA[ 电气工程10000问：电路原理与模拟电子基础 本篇补齐此前电气工程专题中尚未落入 NotesBook 的 7 张基础题卡，涵盖 KCL/KVL、戴维南/诺顿等效、储能元件、RLC 谐振、PN 结、BJT 与运放分析。保留 Flomo 原始答案与来源，后续可继续在此基础上补充推导、仿真和实验验证。 知识关系图 flowchart TD A[电路基础] --&gt; B[KCL 电荷守恒] A --&gt; C[KVL 能量约束] B --&gt; D[节点电压法] C --&gt; E[网孔电流法] A --&gt; F[线性网络等效] F --&gt; G[戴维南 / 诺顿] A --&gt;... ]]></description>
     <pubDate>Sun, 01 Nov 2026 03:56:02 GMT</pubDate>
-  </item><item>
-    <title>EE</title>
-    <link>https://wiki.likui.info/Area/EE/</link>
-    <guid>https://wiki.likui.info/Area/EE/</guid>
-    <description><![CDATA[ 电子、电气与嵌入式系统的学习地图。 ]]></description>
-    <pubDate>Sun, 01 Nov 2026 03:53:00 GMT</pubDate>
   </item><item>
     <title>技术专题补充卡片</title>
     <link>https://wiki.likui.info/Area/EE/%E6%8A%80%E6%9C%AF%E4%B8%93%E9%A2%98%E8%A1%A5%E5%85%85%E5%8D%A1%E7%89%87</link>
