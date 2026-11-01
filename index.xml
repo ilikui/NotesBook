@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>面向对象</title>
+    <link>https://wiki.likui.info/Area/EE/%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1</link>
+    <guid>https://wiki.likui.info/Area/EE/%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1</guid>
+    <description><![CDATA[  一句话定位 OOP = 把数据和操作数据的方法打包成「对象」，用对象之间的协作来构建复杂系统。 知识体系 flowchart TD A[&quot;面向对象 OOP&quot;] --&gt; B[&quot;核心概念&quot;] A --&gt; C[&quot;四大特性&quot;] A --&gt; D[&quot;vs 面向过程&quot;] A --&gt; E[&quot;主流语言&quot;] B --&gt; B1[&quot;类 Class 模板&quot;] B --&gt; B2[&quot;对象 Object 实例&quot;] C --&gt; C1[&quot;... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 05:06:49 GMT</pubDate>
+  </item><item>
     <title>1000问知识体系</title>
     <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
     <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
@@ -53,12 +59,6 @@
     <guid>https://wiki.likui.info/Area/AI/1000%E9%97%AE/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%E4%B8%8E%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0</guid>
     <description><![CDATA[ AI 1000问：机器学习算法、优化与模型评估 本篇对应 AI 全景题库中的监督学习算法、模型评估、优化和无监督学习问题。核心原则是：先明确数据生成过程和业务代价，再选模型与指标；不要只根据单个准确率或排行榜分数判断模型好坏。 一、监督学习算法 Q1. ]]></description>
     <pubDate>Sun, 01 Nov 2026 05:02:24 GMT</pubDate>
-  </item><item>
-    <title>面向对象</title>
-    <link>https://wiki.likui.info/Area/EE/%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1</link>
-    <guid>https://wiki.likui.info/Area/EE/%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1</guid>
-    <description><![CDATA[  一句话定位 OOP = 把数据和操作数据的方法打包成「对象」，用对象之间的协作来构建复杂系统。 知识体系 flowchart TD A[&quot;面向对象 OOP&quot;] --&gt; B[&quot;核心概念&quot;] A --&gt; C[&quot;四大特性&quot;] A --&gt; D[&quot;vs 面向过程&quot;] A --&gt; E[&quot;主流语言&quot;] B --&gt; B1[&quot;类 Class 模板&quot;] B --&gt; B2[&quot;对象 Object 实例&quot;] C --&gt; C1[&quot;... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 05:01:49 GMT</pubDate>
   </item><item>
     <title>AI 1000问：基础概念、机器学习与神经网络入门</title>
     <link>https://wiki.likui.info/Area/AI/1000%E9%97%AE/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8</link>
