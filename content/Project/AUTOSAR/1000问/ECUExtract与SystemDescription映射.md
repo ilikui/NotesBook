@@ -23,3 +23,9 @@ ECU Extract of System Description（ECU 抽取）：从系统描述里抽出「�
 总表：<https://v.flomoapp.com/mine/?memo_id=MjMxMTQ2NDk4>
 
 #Area/技术/AUTOSAR
+
+## System Description / ECU Extract 的边界补充
+
+System Description 并非完全“不含任何 ECU 信息”的抽象 VFB 图。它可包含 ECU 实例、SWC 到 ECU 的部署映射、系统通信、网络和相关系统级约束；但通常还不是某个 ECU 的完整 BSW/MCAL 具体实现配置（例如具体 MCU 驱动参数和最终内存地址布局）。
+
+ECU Extract 是基于系统描述和目标 ECU 选择导出的 ECU 视图，保留该 ECU 及其通信/软件组件集成所需的相关对象和引用；之后还需结合 ECU Configuration Values、供应商模块描述和项目配置完成 BSW/RTE 配置。它不只是简单删除其他 SWC 的 XML 行，需保证跨文件引用、通信映射和系统约束仍然闭合。
