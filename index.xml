@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>1000问知识体系</title>
+    <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
+    <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
+    <description><![CDATA[ 1000问知识体系 这里集中整理 Flomo 中长期积累的「1000问 / 1000题 / 10000问」问题库、逐题解答和专题卡片。目标不是只保存题目，而是把每个问题沉淀为可检索、可验证、可复用的知识单元。 迁移原则：保留问题原意；合并重复题但记录关联；答案给出原理、适用边界和验证方法；技术内容尽量附 Mermaid 图；未核验的结论明确标注待核验。Flomo 原笔记暂不删除。 知识迁移流程 flowchart TD A[Flomo 原始笔记] --&gt; B[检索与盘点] B --&gt; C[按主题归类] C --&gt; D[识别重复问题] D --&gt; E[读取完整原文] E ... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:59:02 GMT</pubDate>
+  </item><item>
     <title>工具链自动化构建 Q1 AUTOSAR 配置工具（Davinci / EB）和代码构建（make/cmake）怎么衔接？怎么跟 CI 集成？有没有 headless 模式？</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%93%BE-Configurator%E4%B8%8ECI%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%93%BE-Configurator%E4%B8%8ECI%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%A4%9A%E6%A0%B8%E5%85%B1%E4%BA%AB%E5%8F%98%E9%87%8F%E4%B8%8Evolatile%E8%BE%B9%E7%95%8C</guid>
     <description><![CDATA[ 多核共享一个变量——只用 volatile 加全局变量行不行？ 原始 Flomo：v.flomoapp.com/mine/ 多核共享一个变量——只用 volatile 加全局变量行不行？ 结论：地址上能通，正确性上不行。volatile 只挡住「编译器优化」，挡不住硬件层的两件事： 缓存一致性：两个核各有自己的 cache。核 A 改了本地 cache 的副本，核 B 还在读自己 cache 里的旧副本，volatile 不会帮你做 cache 失效 / 刷新。 原子性：volatile 不提供原子操作。变量若是 32 位且跨 cache line 或没按字对齐，读写会被拆成多个总线事务，两个... ]]></description>
     <pubDate>Sun, 01 Nov 2026 04:56:16 GMT</pubDate>
-  </item><item>
-    <title>变体管理 Q1：一套 AUTOSAR 代码适配高配 / 低配车——怎么做到不维护两套配置？</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%8F%98%E4%BD%93%E7%AE%A1%E7%90%86-%E9%AB%98%E4%BD%8E%E9%85%8D%E8%BD%A6%E5%9E%8B%E5%A4%8D%E7%94%A8</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%8F%98%E4%BD%93%E7%AE%A1%E7%90%86-%E9%AB%98%E4%BD%8E%E9%85%8D%E8%BD%A6%E5%9E%8B%E5%A4%8D%E7%94%A8</guid>
-    <description><![CDATA[ 变体管理 Q1：一套 AUTOSAR 代码适配高配 / 低配车——怎么做到不维护两套配置？ 原始 Flomo：v.flomoapp.com/mine/ 变体管理 Q1：一套 AUTOSAR 代码适配高配 / 低配车——怎么做到不维护两套配置？ 核心：不是维护两套配置，而是一套配置 + 变体条件（Variant Handling / Variant Point），按「当前激活的变体」解析出需要的部分。 三个关键概念： 变体点（Variant Point）：配置里「可以变化」的元素——一个参数、一个 PDU、一个 SW-C、一个端口、一条连接。 变体条件（Variant Condition）：用 ... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:56:13 GMT</pubDate>
   </item>
     </channel>
   </rss>
