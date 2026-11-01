@@ -192,3 +192,11 @@ flowchart LR
 - [[规范模块]]
 
 - [[MCAL/MCAL配置参数记录]] —— MCAL 配置参数主题入口；具体模块配置逐项补充。
+
+
+## AUTOSAR 1000问质量审查记录（2026-11-01）
+
+- 当前 1000问目录盘点到 53 篇 Markdown 答案页；逐篇检查标题结构和待补充占位，未发现 TODO/待回答占位。
+- 本轮对 ARXML 自动化、ECU Extract、Adaptive/ROS 2 边界、E2E 接收策略、J1939 PGN 映射、OS Task 配置、SWC 并发与 Runnable-Task 映射等页面补充了实现边界和验证方法。
+- 另修订了 PNC bit vector、Post-Build 变体、NvM 冗余、RTE 调度、工具链和性能估算等容易误导工程实践的说法。
+- 结构性检查不等于所有供应商参数已在目标项目实测；涉及 DaVinci/EB 版本、BSW 实现、芯片能力和 OEM 配置时，仍需以项目基线、ARXML、工具手册和实测证据为准。
