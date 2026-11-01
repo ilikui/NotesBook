@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>EE</title>
+    <link>https://wiki.likui.info/Area/EE/</link>
+    <guid>https://wiki.likui.info/Area/EE/</guid>
+    <description><![CDATA[ 电子、电气与嵌入式系统的学习地图。 ]]></description>
+    <pubDate>Sun, 01 Nov 2026 03:51:09 GMT</pubDate>
+  </item><item>
+    <title>硬件从0到精通：从元器件到首板验证</title>
+    <link>https://wiki.likui.info/Area/EE/%E7%A1%AC%E4%BB%B6/%E7%A1%AC%E4%BB%B6%E4%BB%8E0%E5%88%B0%E7%B2%BE%E9%80%9A</link>
+    <guid>https://wiki.likui.info/Area/EE/%E7%A1%AC%E4%BB%B6/%E7%A1%AC%E4%BB%B6%E4%BB%8E0%E5%88%B0%E7%B2%BE%E9%80%9A</guid>
+    <description><![CDATA[ 面向嵌入式与汽车电子工程师的硬件知识专题，包含元器件、电路、电源、信号完整性、MCU、PCB、EMC、调试与首板验证。 ]]></description>
+    <pubDate>Sun, 01 Nov 2026 03:51:06 GMT</pubDate>
+  </item><item>
     <title>微信读书</title>
     <link>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</link>
     <guid>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</guid>
@@ -53,18 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Spinlock%E4%B8%8EMutex%E5%B7%AE%E5%BC%82</guid>
     <description><![CDATA[ Spinlock 与 Mutex 的差异 原始 Flomo：v.flomoapp.com/mine/ Spinlock 和 Mutex 都是互斥原语，差别在「拿不到锁时怎么等」。 Spinlock（自旋锁）：拿不到就原地忙等（busy-wait），不睡、不释放 CPU。适合临界区极短、等待时间可确定、等待方不能被调度的场景。 Mutex（互斥锁）：拿不到就阻塞/睡眠，把 CPU 让给别的任务，由调度器唤醒。适合临界区较长、可能触发阻塞操作（如访问慢速外设）、等待时间不可预估的场景。 多核场景怎么选： 短临界区（保护一条共享变量、一个寄存器、一段共享内存）→ Spinlock，等的时间短，忙等成... ]]></description>
     <pubDate>Sat, 31 Oct 2026 09:18:11 GMT</pubDate>
-  </item><item>
-    <title>OS内存保护与可信分区</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/OS%E5%86%85%E5%AD%98%E4%BF%9D%E6%8A%A4%E4%B8%8E%E5%8F%AF%E4%BF%A1%E5%88%86%E5%8C%BA</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/OS%E5%86%85%E5%AD%98%E4%BF%9D%E6%8A%A4%E4%B8%8E%E5%8F%AF%E4%BF%A1%E5%88%86%E5%8C%BA</guid>
-    <description><![CDATA[ AUTOSAR OS 内存保护与可信分区 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR OS 的 Memory Protection（MPU 配置）与 Trusted / Non-Trusted 差异 MPU 怎么配： AUTOSAR OS 用 MPU 实现内存分区（Memory Partitioning），跟 OS-Application 绑定。每个 OS-Application 分到一个或多个内存分区，各分区有自己的代码 / 数据 / 堆栈段。 OS 为每个任务 / ISR、每个 OS-Application 维护一组访问权限，翻译成 MPU 寄存器配置（re... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 09:17:51 GMT</pubDate>
-  </item><item>
-    <title>ECUExtract与SystemDescription映射</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/ECUExtract%E4%B8%8ESystemDescription%E6%98%A0%E5%B0%84</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/ECUExtract%E4%B8%8ESystemDescription%E6%98%A0%E5%B0%84</guid>
-    <description><![CDATA[ ECU Extract 与 System Description 映射 原始 Flomo：v.flomoapp.com/mine/ VFB 的 System Description 怎么「提取」出单个 ECU 的配置？ECU Extract 是裁剪还是映射？ System Description（系统描述）：在 VFB 层面描述整个系统——所有 SW-C、所有连接、所有接口、所有 ECU 的抽象。它不含任何具体 ECU 的实现信息（内存地址、总线映射、周期细节都没有）。 ECU Extract of System Description（ECU 抽取）：从系统描述里抽出「属于某个特定 ECU」... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 09:17:39 GMT</pubDate>
   </item>
     </channel>
   </rss>
