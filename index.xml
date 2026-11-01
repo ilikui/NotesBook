@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>BSWDistributionGuide</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/BSWDistributionGuide</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/BSWDistributionGuide</guid>
+    <description><![CDATA[ BSWDistributionGuide 是 CP 解释性指南（EXP），讲清一个核心问题：基础软件（BSW）如何分布到多核 CPU 的不同分区（Partition）上，以及在功能安全场景下如何做分区隔离与内存保护。它分两部分：多核分布与安全分布。 一句话定位 学 CP 的第一站：先理解「BSW 怎么摆到多核 / 分区分核」，后面所有模块的部署都以它为背景。 规范信息 项目内容平台CP类别EXP — 解释性指南（Explanation）UID631版本R25-11本地 PDFAUTOSAR_CP_EXP_BSWDistributionGuide.pdf纯文本全文CP_EXP_BSWDistri... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:20:35 GMT</pubDate>
+  </item><item>
     <title>ModeManagementGuide</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/ModeManagementGuide</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/ModeManagementGuide</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/%E7%94%B5%E6%B0%94%E5%B7%A5%E7%A8%8B/10000%E9%97%AE/%E7%94%B5%E8%B7%AF%E5%8E%9F%E7%90%86%E4%B8%8E%E6%A8%A1%E6%8B%9F%E7%94%B5%E5%AD%90%E5%9F%BA%E7%A1%80</guid>
     <description><![CDATA[ 电气工程10000问：电路原理与模拟电子基础 本篇补齐此前电气工程专题中尚未落入 NotesBook 的 7 张基础题卡，涵盖 KCL/KVL、戴维南/诺顿等效、储能元件、RLC 谐振、PN 结、BJT 与运放分析。保留 Flomo 原始答案与来源，后续可继续在此基础上补充推导、仿真和实验验证。 知识关系图 flowchart TD A[电路基础] --&gt; B[KCL 电荷守恒] A --&gt; C[KVL 能量约束] B --&gt; D[节点电压法] C --&gt; E[网孔电流法] A --&gt; F[线性网络等效] F --&gt; G[戴维南 / 诺顿] A --&gt;... ]]></description>
     <pubDate>Sun, 01 Nov 2026 03:56:02 GMT</pubDate>
-  </item><item>
-    <title>技术专题补充卡片</title>
-    <link>https://wiki.likui.info/Area/EE/%E6%8A%80%E6%9C%AF%E4%B8%93%E9%A2%98%E8%A1%A5%E5%85%85%E5%8D%A1%E7%89%87</link>
-    <guid>https://wiki.likui.info/Area/EE/%E6%8A%80%E6%9C%AF%E4%B8%93%E9%A2%98%E8%A1%A5%E5%85%85%E5%8D%A1%E7%89%87</guid>
-    <description><![CDATA[ CEM、Python、C#、数据库、汽车电子电气架构、设计模式与汽车网络安全的 Flomo 技术笔记归档。 ]]></description>
-    <pubDate>Sun, 01 Nov 2026 03:52:57 GMT</pubDate>
   </item>
     </channel>
   </rss>
