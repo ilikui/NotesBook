@@ -27,3 +27,11 @@ SW-C 特别多时的挑战：单核上超周期变长、主循环负载高，需
 总表：<https://v.flomoapp.com/mine/?memo_id=MjMxMTQ2NDk4>
 
 #Area/技术/AUTOSAR
+
+## 调度机制边界补充
+
+不要把“RTE 生成 Runnable 调度”与“OS 一定使用 Schedule Table”画等号。Runnable 通常通过 RTE 的 Event-to-Task Mapping 映射到 OS Task；OS Task 可以由 Alarm、Schedule Table 或其他 OS 机制激活，具体取决于项目设计与 OS 配置。
+
+Runnable 的执行顺序必须从 RTE 生成代码、Task 内部调用序列、Event 配置和数据一致性语义确认，不能笼统认为 RTE 会自动按数据依赖排序。若多个 Runnable 写读同一数据，需明确 implicit/explicit communication、采样时刻、buffering 和执行顺序。
+
+多核调度同步也不能简单归因于 StbM：OS 多核调度、Schedule Table synchronization 和 AUTOSAR 全局时间同步是不同机制，是否使用 StbM 取决于具体架构。
