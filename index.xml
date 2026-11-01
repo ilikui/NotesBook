@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>1000问知识体系</title>
+    <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
+    <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
+    <description><![CDATA[ 1000问知识体系 这里集中整理 Flomo 中长期积累的「1000问 / 1000题 / 10000问」问题库、逐题解答和专题卡片。目标不是只保存题目，而是把每个问题沉淀为可检索、可验证、可复用的知识单元。 迁移原则：保留问题原意；合并重复题但记录关联；答案给出原理、适用边界和验证方法；技术内容尽量附 Mermaid 图；未核验的结论明确标注待核验。Flomo 原笔记暂不删除。 知识迁移流程 flowchart TD A[Flomo 原始笔记] --&gt; B[检索与盘点] B --&gt; C[按主题归类] C --&gt; D[识别重复问题] D --&gt; E[读取完整原文] E ... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 05:11:12 GMT</pubDate>
+  </item><item>
     <title>AUTOSAR</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Adaptive%E4%B8%8EROS2-Node%E5%92%8CExecutionCluster%E5%AF%B9%E6%AF%94</guid>
     <description><![CDATA[ AUTOSAR 与 ROS 2 对比 Q2：ROS 2 的 Node 和 Adaptive 的 Process（Execution Cluster）在架构思维上的最大区别？ROS 2 开发者转 Adaptive 最需要适应什么？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 与 ROS 2 对比 Q2：ROS 2 的 Node 和 Adaptive 的 Process（Execution Cluster）在架构思维上的最大区别？ROS 2 开发者转 Adaptive 最需要适应什么？ 最大区别（三个层面）： 单元性质：ROS 2 Node 是「功能性 / 逻辑」单... ]]></description>
     <pubDate>Sun, 01 Nov 2026 05:10:30 GMT</pubDate>
-  </item><item>
-    <title>AUTOSAR 与 ROS 2 对比 Q1：自动驾驶量产 ECU 能用 ROS 2 代替 AUTOSAR Adaptive 吗？ROS 2 缺了什么？</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Adaptive%E4%B8%8EROS2-%E9%87%8F%E4%BA%A7ECU%E6%9E%B6%E6%9E%84%E9%80%89%E5%9E%8B</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Adaptive%E4%B8%8EROS2-%E9%87%8F%E4%BA%A7ECU%E6%9E%B6%E6%9E%84%E9%80%89%E5%9E%8B</guid>
-    <description><![CDATA[ AUTOSAR 与 ROS 2 对比 Q1：自动驾驶量产 ECU 能用 ROS 2 代替 AUTOSAR Adaptive 吗？ROS 2 缺了什么？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 与 ROS 2 对比 Q1：自动驾驶量产 ECU 能用 ROS 2 代替 AUTOSAR Adaptive 吗？ROS 2 缺了什么？ 结论：不能直接替代。虽然两者都用 DDS 做通信中间件，但 ROS 2 在量产车规的核心需求上缺很多。 ROS 2 相对 AUTOSAR Adaptive 缺的（按量产需求）： 功能安全（ISO 26262）：Adaptive 有完整安... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 05:10:27 GMT</pubDate>
   </item>
     </channel>
   </rss>
