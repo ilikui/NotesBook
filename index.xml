@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>AUTOSAR 基础资料、分层与历史卡片补充</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/%E5%9F%BA%E7%A1%80%E8%B5%84%E6%96%99%E4%B8%8E%E5%88%86%E5%B1%82%E8%A1%A5%E5%85%85</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/%E5%9F%BA%E7%A1%80%E8%B5%84%E6%96%99%E4%B8%8E%E5%88%86%E5%B1%82%E8%A1%A5%E5%85%85</guid>
+    <description><![CDATA[ AUTOSAR 基础资料、分层与历史卡片补充 本页收录此前散落在 Flomo 子标签中的基础资料、分层说明和规范阅读卡片。它们补充 AUTOSAR 1000 问主线，不替代规范模块专题。原文中存在的历史描述按原意保留；涉及标准边界的内容应以对应 AUTOSAR Release 的官方规范和项目配置为准。 AUTOSAR Classic 分层关系 flowchart TB SWC[应用软件组件 SWC] RTE[运行时环境 RTE] SVC[服务层 Services] ECU[ECU抽象层 ECU Abstraction] MCAL[微控制器抽象层 MCAL] HW[微控制器与外设] CDD[复... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:02:42 GMT</pubDate>
+  </item><item>
     <title>1000问知识体系</title>
     <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
     <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/CryptoStackQ2-HSM%E4%B8%8ESHE%E5%B7%AE%E5%BC%82</guid>
     <description><![CDATA[ AUTOSAR 1000问 · CryptoStackQ2：HSM（Hardware Security Module）和 SHE（Secure Hardware Extension）的区别是什么？在 AUTOSAR 里它们对应哪个模块？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 1000问 · CryptoStackQ2：HSM（Hardware Security Module）和 SHE（Secure Hardware Extension）的区别是什么？在 AUTOSAR 里它们对应哪个模块？ ▎ 五大学习法：费曼——把 HSM vs SHE 讲成「独立安全... ]]></description>
     <pubDate>Sat, 31 Oct 2026 09:20:32 GMT</pubDate>
-  </item><item>
-    <title>CryptoStackQ3-软件密码实现</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/CryptoStackQ3-%E8%BD%AF%E4%BB%B6%E5%AF%86%E7%A0%81%E5%AE%9E%E7%8E%B0</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/CryptoStackQ3-%E8%BD%AF%E4%BB%B6%E5%AF%86%E7%A0%81%E5%AE%9E%E7%8E%B0</guid>
-    <description><![CDATA[ AUTOSAR 1000问 · CryptoStackQ3：如果 MCU 没有硬件密码学加速模块，Crypto Stack 还能工作吗？软件实现的性能和安全性跟硬件实现差多少？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 1000问 · CryptoStackQ3：如果 MCU 没有硬件密码学加速模块，Crypto Stack 还能工作吗？软件实现的性能和安全性跟硬件实现差多少？ ▎ 五大学习法：费曼——把「软件 vs 硬件密码」讲成「自己动手 vs 专业保镖」 还能工作吗：能。Crypto Stack 设计上支持纯软件实现——Crypto Driver 用软件... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 09:20:28 GMT</pubDate>
   </item>
     </channel>
   </rss>
