@@ -213,6 +213,8 @@ flowchart TD
 - [ModeManagementGuide](../../Project/AUTOSAR/规范模块/ModeManagementGuide)：补充 8 个工程问答，覆盖 Mode/ModeDeclaration、Manager/User、Application/BSW Mode、BswM 规则与动作、EcuM/ComM、网络、DCM 路由和验证。
 - [BSWDistributionGuide](../../Project/AUTOSAR/规范模块/BSWDistributionGuide)：补充 10 个工程问答，覆盖 Core/OS-Application/Partition、IOC、跨核同步、内存保护、功能安全、任务映射、volatile 边界和多核启动。
 
+- [AI 1000问：基础概念、机器学习与神经网络入门](../../Area/AI/1000问/基础概念与机器学习入门) —— 新增 11 个基础答案，覆盖 AI/ML/DL、学习范式、泛化、神经元、激活函数与反向传播。
+
 ## 本轮全库问题审查记录（2026-11-01）
 
 本轮对 content/ 目录进行重新盘点：仓库共 1,395 个受 Git 跟踪文件，423 个 Markdown 文件；按路径关键词筛出 137 个问题/题库相关 Markdown 文件，并逐批检查文件长度、标题结构和待补充标记。此项是**结构性审查**，不是 137 篇逐题技术审校全部结束。
