@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>MATLAB 与 Simulink 10000问</title>
+    <link>https://wiki.likui.info/Area/EE/MATLAB/</link>
+    <guid>https://wiki.likui.info/Area/EE/MATLAB/</guid>
+    <description><![CDATA[ MATLAB 与 Simulink 10000问 本专题按基础语法、矩阵数值计算、Simulink 建模、代码生成验证、面向对象与高级工具组织。当前 5 篇答案页覆盖 Q1–Q72；每题以原理、代码/模型行为、适用条件和工程验证为主。 题库导航 基础语法矩阵与Simulink建模：Q1–Q12，矩阵基础、索引、脚本/函数、绘图和求解器。 矩阵可视化数值计算与信号处理：Q13–Q24，可视化、数值求解、数据导入、FFT、滤波和符号计算。 Simulink建模控制系统与物理仿真：Q25–Q36，Subsystem、代数环、控制模型、Stateflow、Simscape 和 Model Refere... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 05:17:59 GMT</pubDate>
+  </item><item>
     <title>1000问知识体系</title>
     <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
     <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/1000%E9%97%AE/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E8%BF%9B%E9%98%B6%E7%89%B9%E5%BE%81%E5%80%BC%E5%88%86%E8%A7%A3%E4%B8%8E%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97</guid>
     <description><![CDATA[ 考研数学1000问：特征值、矩阵分解、最小二乘与数值计算 一、行列式、秩与特征值 Q1. ]]></description>
     <pubDate>Sun, 01 Nov 2026 05:13:14 GMT</pubDate>
-  </item><item>
-    <title>考研数学1000问：线性代数基础、矩阵运算与线性方程组</title>
-    <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/1000%E9%97%AE/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%9F%BA%E7%A1%80%E7%9F%A9%E9%98%B5%E4%B8%8E%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84</link>
-    <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/1000%E9%97%AE/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%9F%BA%E7%A1%80%E7%9F%A9%E9%98%B5%E4%B8%8E%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84</guid>
-    <description><![CDATA[ 考研数学1000问：线性代数基础、矩阵运算与线性方程组 一、基础概念与矩阵运算 Q1. ]]></description>
-    <pubDate>Sun, 01 Nov 2026 05:12:37 GMT</pubDate>
   </item>
     </channel>
   </rss>
