@@ -10,7 +10,19 @@
     <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
     <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
     <description><![CDATA[ 1000问知识体系 这里集中整理 Flomo 中长期积累的「1000问 / 1000题 / 10000问」问题库、逐题解答和专题卡片。目标不是只保存题目，而是把每个问题沉淀为可检索、可验证、可复用的知识单元。 迁移原则：保留问题原意；合并重复题但记录关联；答案给出原理、适用边界和验证方法；技术内容尽量附 Mermaid 图；未核验的结论明确标注待核验。Flomo 原笔记暂不删除。 知识迁移流程 flowchart TD A[Flomo 原始笔记] --&gt; B[检索与盘点] B --&gt; C[按主题归类] C --&gt; D[识别重复问题] D --&gt; E[读取完整原文] E ... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 05:12:51 GMT</pubDate>
+    <pubDate>Sun, 01 Nov 2026 05:13:28 GMT</pubDate>
+  </item><item>
+    <title>专栏⑰·导航分卷：线性代数 1000 问（全量问题库）</title>
+    <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%AF%BC%E8%88%AA%E5%88%86%E5%8D%B7-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B01000%E9%97%AE</link>
+    <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%AF%BC%E8%88%AA%E5%88%86%E5%8D%B7-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B01000%E9%97%AE</guid>
+    <description><![CDATA[ 专栏⑰·导航分卷：线性代数 1000 问（全量问题库） 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·导航分卷：线性代数 1000 问（全量问题库） 📎 专栏⑰导航 → v.flomoapp.com/mine/ 记录线性代数学习的1000个问题： ▎ 基础概念 向量和标量最本质的区别是什么？一个数和一个数组，为什么线性代数要把它们区分开？ 矩阵为什么是一个”二维”的东西？它和一维数组（向量）在几何意义上有什么不同？ 零向量和零矩阵看起来都是0，为什么在线性代数里要单独定义它们？ ▎ 矩阵运算 矩阵乘法为什么不是逐元素相乘？它背后的设计意图是什么？ 矩阵乘法不满足交换律（... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 05:13:21 GMT</pubDate>
+  </item><item>
+    <title>考研数学1000问：特征值、矩阵分解、最小二乘与数值计算</title>
+    <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/1000%E9%97%AE/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E8%BF%9B%E9%98%B6%E7%89%B9%E5%BE%81%E5%80%BC%E5%88%86%E8%A7%A3%E4%B8%8E%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97</link>
+    <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/1000%E9%97%AE/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E8%BF%9B%E9%98%B6%E7%89%B9%E5%BE%81%E5%80%BC%E5%88%86%E8%A7%A3%E4%B8%8E%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97</guid>
+    <description><![CDATA[ 考研数学1000问：特征值、矩阵分解、最小二乘与数值计算 一、行列式、秩与特征值 Q1. ]]></description>
+    <pubDate>Sun, 01 Nov 2026 05:13:14 GMT</pubDate>
   </item><item>
     <title>专栏⑰·导航：考研数学 1000 问全景——高数 × 线代 × 概率论</title>
     <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%AF%BC%E8%88%AA-%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A61000%E9%97%AE%E5%85%A8%E6%99%AF</link>
@@ -53,18 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC%E7%B1%BB%E5%9E%8BQ4-Runnable%E4%B8%8ETask%E6%98%A0%E5%B0%84</guid>
     <description><![CDATA[ AUTOSAR 1000问 · SWC类型Q4：Runnable 怎么配、怎么挂到 Task 上？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 1000问 · SWC类型Q4：Runnable 怎么配、怎么挂到 Task 上？ ▎ 五大学习法：费曼——把 Runnable 映射讲成「这段代码挂在哪个时隙上跑」 费曼（一句话本质）：Runnable 是 SWC 里一段可被调度的函数；把它映射到 Task，就是决定这段代码挂在哪个确定的执行时隙上。Task 管「什么时候跑」，Runnable 管「跑什么」。 SQ3R（去哪找） Runnable 本体 + 触发事件：... ]]></description>
     <pubDate>Sun, 01 Nov 2026 05:10:48 GMT</pubDate>
-  </item><item>
-    <title>SWC-C-S调用并发与抢占</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC-C-S%E8%B0%83%E7%94%A8%E5%B9%B6%E5%8F%91%E4%B8%8E%E6%8A%A2%E5%8D%A0</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/SWC-C-S%E8%B0%83%E7%94%A8%E5%B9%B6%E5%8F%91%E4%B8%8E%E6%8A%A2%E5%8D%A0</guid>
-    <description><![CDATA[ SW-C 设计与应用层实践 Q3：Client-Server 并发与抢占 原始 Flomo：v.flomoapp.com/mine/ SW-C 设计与应用层实践 Q3：Client 调了 Server 的 Operation，Server 还没返回时 Client 被抢占——会不会出问题？ 先区分两种 C/S 调用语义： 同步（synchronous）：Rte_Call 是阻塞调用，Client 发起后挂起，等 Server 完成才返回结果，RTE 保证结果正确传回。 异步（asynchronous）：发起后不等结果，Client 继续执行，结果通过 Rte_Result / Buffer 读... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 05:10:44 GMT</pubDate>
-  </item><item>
-    <title>AUTOSAR 1000问 · OS&amp;调度Q2 如何在 DaVinci 新增一个 Task？</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/OS%E8%B0%83%E5%BA%A6Q2-DaVinci%E6%96%B0%E5%A2%9ETask</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/OS%E8%B0%83%E5%BA%A6Q2-DaVinci%E6%96%B0%E5%A2%9ETask</guid>
-    <description><![CDATA[ AUTOSAR 1000问 · OS&amp;调度Q2：如何在 DaVinci 新增一个 Task？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 1000问 · OS&amp;调度Q2：如何在 DaVinci 新增一个 Task？ ▎ 五大学习法：费曼——把「新增 Task」讲成「给 OS 报户口」 费曼（本质一句话）：新增 Task = 告诉 OS「多了一个可被调度的执行单元」——给它身份（名字/优先级）、调度规则（能不能抢、能激活几次）、资源（栈），再由代码给它一个身体。 SQ3R（去哪找）：DaVinci Configurator 配置树 → Os 模块 ... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 05:10:40 GMT</pubDate>
   </item>
     </channel>
   </rss>
