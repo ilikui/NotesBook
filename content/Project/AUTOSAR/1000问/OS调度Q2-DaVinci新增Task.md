@@ -40,3 +40,16 @@ tags:
 📎 AUTOSAR 1000问总表 → [https://v.flomoapp.com/mine/?memo\_id=MjMxMTQ2NDk4](https://v.flomoapp.com/mine/?memo_id=MjMxMTQ2NDk4)
 
 #Area/技术/AUTOSAR
+
+## 关键更正：Basic/Extended Task 与 Activation Count 是不同配置
+
+原答案把 Activation > 1 与“扩展任务”直接关联，这不准确。AUTOSAR OS 的 Task 类型由 OsTaskType（Basic/Extended）定义；Activation Count 是另一个配置，用于限制该 Task 可同时挂起/激活的请求数量。Extended Task 可等待 Event，Basic Task 不等待 Event；Activation Count 大于 1 不会把 Basic Task 自动变成 Extended Task。
+
+新增 Task 时还应确认：
+- OsTaskType、Priority、Activation、Schedule、StackSize 等参数。
+- Task 所属 OS-Application/Partition 和 Core 映射。
+- Autostart、Event、Alarm/ScheduleTable/Counter 激活关系。
+- RTE Event-to-Task Mapping 是否把 Runnable 事件映射到该 Task。
+- OS 生成代码、启动顺序、栈预算和最坏执行时间。
+
+优先级数值的高低语义应按当前 OS 实现/工具说明和项目配置确认，不要只凭其他 RTOS 的习惯判断。新增 Task 通常无需手动修改 linker script，除非项目的内存/栈段布局规则明确要求同步修改。
