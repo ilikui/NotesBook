@@ -6,12 +6,6 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>多核共享变量与volatile边界</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%A4%9A%E6%A0%B8%E5%85%B1%E4%BA%AB%E5%8F%98%E9%87%8F%E4%B8%8Evolatile%E8%BE%B9%E7%95%8C</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%A4%9A%E6%A0%B8%E5%85%B1%E4%BA%AB%E5%8F%98%E9%87%8F%E4%B8%8Evolatile%E8%BE%B9%E7%95%8C</guid>
-    <description><![CDATA[ 多核共享一个变量——只用 volatile 加全局变量行不行？ 原始 Flomo：v.flomoapp.com/mine/ 多核共享一个变量——只用 volatile 加全局变量行不行？ 结论：地址上能通，正确性上不行。volatile 只挡住「编译器优化」，挡不住硬件层的两件事： 缓存一致性：两个核各有自己的 cache。核 A 改了本地 cache 的副本，核 B 还在读自己 cache 里的旧副本，volatile 不会帮你做 cache 失效 / 刷新。 原子性：volatile 不提供原子操作。变量若是 32 位且跨 cache line 或没按字对齐，读写会被拆成多个总线事务，两个... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:56:16 GMT</pubDate>
-  </item><item>
     <title>变体管理 Q1：一套 AUTOSAR 代码适配高配 / 低配车——怎么做到不维护两套配置？</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%8F%98%E4%BD%93%E7%AE%A1%E7%90%86-%E9%AB%98%E4%BD%8E%E9%85%8D%E8%BD%A6%E5%9E%8B%E5%A4%8D%E7%94%A8</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%8F%98%E4%BD%93%E7%AE%A1%E7%90%86-%E9%AB%98%E4%BD%8E%E9%85%8D%E8%BD%A6%E5%9E%8B%E5%A4%8D%E7%94%A8</guid>
@@ -65,6 +59,12 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Dcm-DoIP%E4%B8%8ECanTp%E5%A4%9A%E8%B7%AF%E5%88%B7%E5%86%99</guid>
     <description><![CDATA[ Dcm 协议多路复用 Q2：用 DoIP 刷写和用 CAN TP 刷写同一个 ECU——Dcm 层处理逻辑一样吗？刷写速率谁快？CAN 路径断电接着刷，DoIP 支持同样的恢复吗？ 原始 Flomo：v.flomoapp.com/mine/ Dcm 协议多路复用 Q2：用 DoIP 刷写和用 CAN TP 刷写同一个 ECU——Dcm 层处理逻辑一样吗？刷写速率谁快？CAN 路径断电接着刷，DoIP 支持同样的恢复吗？ Dcm 层处理逻辑一样吗？ 上层 Dcm 的服务处理逻辑（会话、安全访问、0x34 请求下载、0x36 TransferData、0x37 请求退出传输、0x11 复位等刷写流... ]]></description>
     <pubDate>Sun, 01 Nov 2026 04:55:00 GMT</pubDate>
+  </item><item>
+    <title>CryptoStackQ3-软件密码实现</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/CryptoStackQ3-%E8%BD%AF%E4%BB%B6%E5%AF%86%E7%A0%81%E5%AE%9E%E7%8E%B0</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/CryptoStackQ3-%E8%BD%AF%E4%BB%B6%E5%AF%86%E7%A0%81%E5%AE%9E%E7%8E%B0</guid>
+    <description><![CDATA[ AUTOSAR 1000问 · CryptoStackQ3：如果 MCU 没有硬件密码学加速模块，Crypto Stack 还能工作吗？软件实现的性能和安全性跟硬件实现差多少？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 1000问 · CryptoStackQ3：如果 MCU 没有硬件密码学加速模块，Crypto Stack 还能工作吗？软件实现的性能和安全性跟硬件实现差多少？ ▎ 五大学习法：费曼——把「软件 vs 硬件密码」讲成「自己动手 vs 专业保镖」 还能工作吗：能。Crypto Stack 设计上支持纯软件实现——Crypto Driver 用软件... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:54:57 GMT</pubDate>
   </item>
     </channel>
   </rss>
