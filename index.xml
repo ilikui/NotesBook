@@ -6,17 +6,23 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>EE</title>
+    <link>https://wiki.likui.info/Area/EE/</link>
+    <guid>https://wiki.likui.info/Area/EE/</guid>
+    <description><![CDATA[ 电子、电气与嵌入式系统的学习地图。 ]]></description>
+    <pubDate>Sun, 01 Nov 2026 03:53:00 GMT</pubDate>
+  </item><item>
+    <title>技术专题补充卡片</title>
+    <link>https://wiki.likui.info/Area/EE/%E6%8A%80%E6%9C%AF%E4%B8%93%E9%A2%98%E8%A1%A5%E5%85%85%E5%8D%A1%E7%89%87</link>
+    <guid>https://wiki.likui.info/Area/EE/%E6%8A%80%E6%9C%AF%E4%B8%93%E9%A2%98%E8%A1%A5%E5%85%85%E5%8D%A1%E7%89%87</guid>
+    <description><![CDATA[ CEM、Python、C#、数据库、汽车电子电气架构、设计模式与汽车网络安全的 Flomo 技术笔记归档。 ]]></description>
+    <pubDate>Sun, 01 Nov 2026 03:52:57 GMT</pubDate>
+  </item><item>
     <title>电机控制专题：从H桥到FOC</title>
     <link>https://wiki.likui.info/Area/EE/%E7%94%B5%E6%9C%BA%E6%8E%A7%E5%88%B6/%E7%94%B5%E6%9C%BA%E6%8E%A7%E5%88%B6%E4%B8%93%E9%A2%98-%E4%BB%8EH%E6%A1%A5%E5%88%B0FOC</link>
     <guid>https://wiki.likui.info/Area/EE/%E7%94%B5%E6%9C%BA%E6%8E%A7%E5%88%B6/%E7%94%B5%E6%9C%BA%E6%8E%A7%E5%88%B6%E4%B8%93%E9%A2%98-%E4%BB%8EH%E6%A1%A5%E5%88%B0FOC</guid>
     <description><![CDATA[ 电机类型、功率级、PWM调制、FOC算法、位置检测、汽车应用与AUTOSAR集成。 ]]></description>
     <pubDate>Sun, 01 Nov 2026 03:52:07 GMT</pubDate>
-  </item><item>
-    <title>EE</title>
-    <link>https://wiki.likui.info/Area/EE/</link>
-    <guid>https://wiki.likui.info/Area/EE/</guid>
-    <description><![CDATA[ 电子、电气与嵌入式系统的学习地图。 ]]></description>
-    <pubDate>Sun, 01 Nov 2026 03:51:09 GMT</pubDate>
   </item><item>
     <title>硬件从0到精通：从元器件到首板验证</title>
     <link>https://wiki.likui.info/Area/EE/%E7%A1%AC%E4%BB%B6/%E7%A1%AC%E4%BB%B6%E4%BB%8E0%E5%88%B0%E7%B2%BE%E9%80%9A</link>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/PartialNetworking-Cluster%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%94%A4%E9%86%92%E5%8C%B9%E9%85%8D</guid>
     <description><![CDATA[ Partial Network Cluster 配置：一个支持 PN 的 ECU 靠「PN 位匹配」判断该不该醒 原始 Flomo：v.flomoapp.com/mine/ Partial Network Cluster 配置：一个支持 PN 的 ECU 靠「PN 位匹配」判断该不该醒 配置链路四步： 划 Cluster、分 PNC 号：把整车 ECU 按功能分组（如门窗组、动力组、诊断组），每组一个 PNC（Partial Network Cluster）号，是配置里的逻辑身份。 给 ECU 配 filter mask：每个 ECU 声明自己属于哪些 PNC——PnMask（掩码）。收报文时... ]]></description>
     <pubDate>Sat, 31 Oct 2026 09:20:21 GMT</pubDate>
-  </item><item>
-    <title>多核共享变量与volatile边界</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%A4%9A%E6%A0%B8%E5%85%B1%E4%BA%AB%E5%8F%98%E9%87%8F%E4%B8%8Evolatile%E8%BE%B9%E7%95%8C</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%A4%9A%E6%A0%B8%E5%85%B1%E4%BA%AB%E5%8F%98%E9%87%8F%E4%B8%8Evolatile%E8%BE%B9%E7%95%8C</guid>
-    <description><![CDATA[ 多核共享一个变量——只用 volatile 加全局变量行不行？ 原始 Flomo：v.flomoapp.com/mine/ 多核共享一个变量——只用 volatile 加全局变量行不行？ 结论：地址上能通，正确性上不行。volatile 只挡住「编译器优化」，挡不住硬件层的两件事： 缓存一致性：两个核各有自己的 cache。核 A 改了本地 cache 的副本，核 B 还在读自己 cache 里的旧副本，volatile 不会帮你做 cache 失效 / 刷新。 原子性：volatile 不提供原子操作。变量若是 32 位且跨 cache line 或没按字对齐，读写会被拆成多个总线事务，两个... ]]></description>
-    <pubDate>Sat, 31 Oct 2026 09:20:17 GMT</pubDate>
   </item>
     </channel>
   </rss>

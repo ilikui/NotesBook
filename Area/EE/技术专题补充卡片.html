@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="zh"><head><title>技术专题补充卡片</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="数字花园"/><meta property="og:title" content="技术专题补充卡片"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="技术专题补充卡片"/><meta name="twitter:description" content="CEM、Python、C#、数据库、汽车电子电气架构、设计模式与汽车网络安全的 Flomo 技术笔记归档。"/><meta property="og:description" content="CEM、Python、C#、数据库、汽车电子电气架构、设计模式与汽车网络安全的 Flomo 技术笔记归档。"/><meta property="og:image:alt" content="CEM、Python、C#、数据库、汽车电子电气架构、设计模式与汽车网络安全的 Flomo 技术笔记归档。"/><meta property="og:image" content="https://wiki.likui.info/static/og-image.png"/><meta property="og:image:url" content="https://wiki.likui.info/static/og-image.png"/><meta name="twitter:image" content="https://wiki.likui.info/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="wiki.likui.info"/><meta property="og:url" content="https://wiki.likui.info/Area/EE/技术专题补充卡片"/><meta property="twitter:url" content="https://wiki.likui.info/Area/EE/技术专题补充卡片"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="CEM、Python、C#、数据库、汽车电子电气架构、设计模式与汽车网络安全的 Flomo 技术笔记归档。"/><meta name="generator" content="Quartz"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  padding: 2rem;
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcnVubmVyL3dvcmsvTm90ZXNCb29rL05vdGVzQm9vay9xdWFydHovY29tcG9uZW50cy9zdHlsZXMiLCJzb3VyY2VzIjpbIm1lcm1haWQuaW5saW5lLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUdGO0VBQ0U7OztBQUtGO0VBQ0U7RUFDQTs7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcGFkZGluZzogMnJlbTtcbiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgIHRyYW5zZm9ybS1vcmlnaW46IDAgMDtcbiAgICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjFzIGVhc2U7XG4gICAgICBvdmVyZmxvdzogdmlzaWJsZTtcbiAgICAgIG1pbi1oZWlnaHQ6IDIwMHB4O1xuICAgICAgbWluLXdpZHRoOiAyMDBweDtcblxuICAgICAgcHJlIHtcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICB9XG5cbiAgICAgIHN2ZyB7XG4gICAgICAgIG1heC13aWR0aDogbm9uZTtcbiAgICAgICAgaGVpZ2h0OiBhdXRvO1xuICAgICAgfVxuICAgIH1cblxuICAgICYgPiAubWVybWFpZC1jb250cm9scyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBib3R0b206IDIwcHg7XG4gICAgICByaWdodDogMjBweDtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBnYXA6IDhweDtcbiAgICAgIHBhZGRpbmc6IDhweDtcbiAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICBib3JkZXItcmFkaXVzOiA2cHg7XG4gICAgICBib3gtc2hhZG93OiAwIDJweCA0cHggcmdiYSgwLCAwLCAwLCAwLjEpO1xuICAgICAgei1pbmRleDogMjtcblxuICAgICAgLm1lcm1haWQtY29udHJvbC1idXR0b24ge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgd2lkdGg6IDMycHg7XG4gICAgICAgIGhlaWdodDogMzJweDtcbiAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgICBjb2xvcjogdmFyKC0tZGFyayk7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtZmFtaWx5OiB2YXIoLS1ib2R5Rm9udCk7XG4gICAgICAgIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XG5cbiAgICAgICAgJjpob3ZlciB7XG4gICAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgfVxuXG4gICAgICAgICY6YWN0aXZlIHtcbiAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMXB4KTtcbiAgICAgICAgfVxuXG4gICAgICAgIC8vIFN0eWxlIHRoZSByZXNldCBidXR0b24gZGlmZmVyZW50bHlcbiAgICAgICAgJjpudGgtY2hpbGQoMikge1xuICAgICAgICAgIHdpZHRoOiBhdXRvO1xuICAgICAgICAgIHBhZGRpbmc6IDAgMTJweDtcbiAgICAgICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cbiJdfQ== */</style><link href="/static/katex/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://wiki.likui.info/index.xml"/></head><body data-slug="Area/EE/技术专题补充卡片"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">数字花园</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><p>搜索</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索些什么" placeholder="搜索些什么"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-238"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>PARA</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-238" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text explorer-entry-icon" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg><span class="file-title"></span></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder-closed explorer-entry-icon" aria-hidden="true"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path><path d="M2 10h20"></path></svg><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../Area/">Area</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../Area/EE/">EE</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>技术专题补充卡片</a></div></nav><h1 class="article-title">技术专题补充卡片</h1><p show-comma="true" class="content-meta"><time datetime="2026-11-01T03:52:57.000Z">2026年11月01日</time><span>26分钟阅读</span></p><ul class="tags"><li><a href="../../tags/Area/EE" class="internal tag-link">Area/EE</a></li><li><a href="../../tags/技术专题" class="internal tag-link">技术专题</a></li><li><a href="../../tags/工程实践" class="internal tag-link">工程实践</a></li><li><a href="../../tags/Area/技术/CEM" class="internal tag-link">Area/技术/CEM</a></li><li><a href="../../tags/Archive/MigratedWiki" class="internal tag-link">Archive/MigratedWiki</a></li><li><a href="../../tags/Archive/MigratedNotion" class="internal tag-link">Archive/MigratedNotion</a></li><li><a href="../../tags/Area/技术/Python" class="internal tag-link">Area/技术/Python</a></li><li><a href="../../tags/Area/技术/CSharp" class="internal tag-link">Area/技术/CSharp</a></li><li><a href="../../tags/Area/技术/数据库" class="internal tag-link">Area/技术/数据库</a></li><li><a href="../../tags/Area/技术/汽车电子电气架构" class="internal tag-link">Area/技术/汽车电子电气架构</a></li><li><a href="../../tags/Area/技术/设计模式/原则与实践" class="internal tag-link">Area/技术/设计模式/原则与实践</a></li><li><a href="../../tags/Area/技术/设计模式" class="internal tag-link">Area/技术/设计模式</a></li><li><a href="../../tags/Area/技术/网络安全" class="internal tag-link">Area/技术/网络安全</a></li></ul></div></div><article class="popover-hint"><h1 id="技术专题补充卡片">技术专题补充卡片<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#技术专题补充卡片" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>本文件归档此前分散在 Flomo 中、尚未纳入 NotesBook 对应专题目录的技术卡片。按来源标签分组保留原文，避免把短笔记误扩写成未经验证的结论。原始 Flomo 链接与 ID 均保留。</p>
+<h2 id="技术关联图">技术关联图<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#技术关联图" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n  A[汽车电子软件工程] --> B[CEM应用与接口需求]\n  A --> C[汽车电子电气架构]\n  A --> D[网络安全与平台]\n  B --> E[ARXML解析/配置可视化]\n  B --> F[诊断/DTC/DID/NvM/通信栈]\n  C --> G[域控/中央计算/区域控制]\n  D --> H[处理器与操作系统平台]\n  I[开发工具与语言] --> J[Python]\n  I --> K[C#/.NET]\n  I --> L[数据库与事务]\n  I --> M[设计模式与SOLID]&quot;">flowchart TD
+  A[汽车电子软件工程] --> B[CEM应用与接口需求]
+  A --> C[汽车电子电气架构]
+  A --> D[网络安全与平台]
+  B --> E[ARXML解析/配置可视化]
+  B --> F[诊断/DTC/DID/NvM/通信栈]
+  C --> G[域控/中央计算/区域控制]
+  D --> H[处理器与操作系统平台]
+  I[开发工具与语言] --> J[Python]
+  I --> K[C#/.NET]
+  I --> L[数据库与事务]
+  I --> M[设计模式与SOLID]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h2 id="cem">CEM<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cem" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id><p></p></h3>
+<ul>
+<li>Flomo ID：<code>MTc2MTEyODQ0</code></li>
+<li>创建时间：2025-05-14T20:44:00+08:00</li>
+<li>原文：<a href="https://v.flomoapp.com/mine/?memo_id=MTc2MTEyODQ0" class="external">在 Flomo 中打开<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>原始标签：Area/技术/CEM、Archive/MigratedWiki、Archive/MigratedNotion、Archive/DeleteCandidate</li>
+</ul>
+<p></p>
+<p><u>CEM工作的100个问题</u></p>
+<ol>
+<li>
+<p>接口的配置操作？</p>
+</li>
+<li>
+<p>休眠唤醒的相关逻辑是什么？</p>
+</li>
+</ol>
+<p><a href="../../tags/Area/%E6%8A%80%E6%9C%AF/CEM" class="tag-link internal alias" data-slug="tags/Area/技术/CEM">CEM</a></p>
+<p><a href="../../tags/Archive/MigratedWiki" class="tag-link internal alias" data-slug="tags/Archive/MigratedWiki">MigratedWiki</a></p>
+<p><a href="../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h3 id="-1"><p></p><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Flomo ID：<code>MTc1NDQzNzk4</code></li>
+<li>创建时间：2025-05-10T20:03:44+08:00</li>
+<li>原文：<a href="https://v.flomoapp.com/mine/?memo_id=MTc1NDQzNzk4" class="external">在 Flomo 中打开<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>原始标签：Area/技术/CEM、Archive/MigratedWiki、Archive/MigratedNotion、Archive/DeleteCandidate</li>
+</ul>
+<p></p>
+<ul>
+<li>AUTOSAR 中的ARXML文件数据可视化</li>
+</ul>
+<p><a href="../../tags/Area/%E6%8A%80%E6%9C%AF/CEM" class="tag-link internal alias" data-slug="tags/Area/技术/CEM">CEM</a></p>
+<p><a href="../../tags/Archive/MigratedWiki" class="tag-link internal alias" data-slug="tags/Archive/MigratedWiki">MigratedWiki</a></p>
+<p><a href="../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h3 id="-2"><p></p><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-2" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Flomo ID：<code>MTY5NzY2MzIy</code></li>
+<li>创建时间：2025-04-05T20:10:50+08:00</li>
+<li>原文：<a href="https://v.flomoapp.com/mine/?memo_id=MTY5NzY2MzIy" class="external">在 Flomo 中打开<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>原始标签：Area/技术/CEM、Archive/MigratedWiki、Archive/MigratedNotion、Archive/DeleteCandidate</li>
+</ul>
+<p></p>
+<ul>
+<li>
+<p>解析Arxm 文件转换成Json格式的数据</p>
+</li>
+<li>
+<p>搭建n8n实现自动化操作</p>
+</li>
+</ul>
+<p><a href="../../tags/Area/%E6%8A%80%E6%9C%AF/CEM" class="tag-link internal alias" data-slug="tags/Area/技术/CEM">CEM</a></p>
+<p><a href="../../tags/Archive/MigratedWiki" class="tag-link internal alias" data-slug="tags/Archive/MigratedWiki">MigratedWiki</a></p>
+<p><a href="../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h3 id="cem相关的app需求"><u><mark>CEM相关的APP需求</mark></u><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cem相关的app需求" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Flomo ID：<code>MTMxOTY3MTM1</code></li>
+<li>创建时间：2024-08-12T09:48:19+08:00</li>
+<li>原文：<a href="https://v.flomoapp.com/mine/?memo_id=MTMxOTY3MTM1" class="external">在 Flomo 中打开<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>原始标签：Area/技术/CEM、Archive/MigratedWiki、Archive/MigratedNotion、Archive/DeleteCandidate</li>
+</ul>
+<p><u><mark>CEM相关的APP需求</mark></u></p>
+<ul>
+<li>
+<p><u><strong>ActuatorsSensorsOnCEM</strong></u></p>
+</li>
+<li>
+<p><u><strong>Climate</strong></u></p>
+</li>
+<li>
+<p><u><strong>DriverInformationAndPersonalization</strong></u></p>
+</li>
+<li>
+<p><u><strong>ECUPlatform</strong></u></p>
+</li>
+<li>
+<p><strong>ExteriorLight</strong></p>
+</li>
+<li>
+<p><u><strong>InteriorLight</strong></u></p>
+</li>
+<li>
+<p>LockingMgr</p>
+</li>
+<li>
+<p>LowVoltageElectricalEnergyManagement</p>
+</li>
+<li>
+<p>RemoteControl</p>
+</li>
+<li>
+<p>Safety</p>
+</li>
+<li>
+<p>SoundSignalling</p>
+</li>
+<li>
+<p>TheftProtection</p>
+</li>
+<li>
+<p>TPMS</p>
+</li>
+<li>
+<p>UsageAuthorization</p>
+</li>
+<li>
+<p>VehicleModeManagment</p>
+</li>
+<li>
+<p>WindowsMirrorsAndRoof</p>
+</li>
+<li>
+<p>VisibilityMgr</p>
+</li>
+</ul>
+<p><u><mark>诊断相关的需求</mark></u></p>
+<p><a href="../../tags/Area/%E6%8A%80%E6%9C%AF/CEM" class="tag-link internal alias" data-slug="tags/Area/技术/CEM">CEM</a></p>
+<p><a href="../../tags/Archive/MigratedWiki" class="tag-link internal alias" data-slug="tags/Archive/MigratedWiki">MigratedWiki</a></p>
+<p><a href="../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h3 id="思考笔记cem软件相关的结构">思考笔记：CEM软件相关的结构<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#思考笔记cem软件相关的结构" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Flomo ID：<code>MTIyNjM5NjMx</code></li>
+<li>创建时间：2024-06-11T10:09:48+08:00</li>
+<li>原文：<a href="https://v.flomoapp.com/mine/?memo_id=MTIyNjM5NjMx" class="external">在 Flomo 中打开<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>原始标签：Area/技术/CEM、Archive/MigratedWiki、Archive/MigratedNotion、Archive/DeleteCandidate</li>
+</ul>
+<p>思考笔记：CEM软件相关的结构</p>
+<ol>
+<li>
+<p>DTC,DID是怎么实现的？</p>
+</li>
+<li>
+<p>NVM存储从上层到下层的实现逻辑是什么？</p>
+</li>
+<li>
+<p>接口配置如何实现的？</p>
+</li>
+<li>
+<p>协议栈的相关内容？</p>
+</li>
+</ol>
+<p><a href="../../tags/Area/%E6%8A%80%E6%9C%AF/CEM" class="tag-link internal alias" data-slug="tags/Area/技术/CEM">CEM</a></p>
+<p><a href="../../tags/Archive/MigratedWiki" class="tag-link internal alias" data-slug="tags/Archive/MigratedWiki">MigratedWiki</a></p>
+<p><a href="../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h2 id="python">Python<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#python" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="切片是-python-中用于访问序列如列表元组字符串中部分元素的技术通过指定起始索引和结束索引可以提取序列的一部分切片的基本语法如下sequencestartstopstep">切片是 Python 中用于访问序列（如列表、元组、字符串）中部分元素的技术。通过指定起始索引和结束索引，可以提取序列的一部分。切片的基本语法如下：<br/>sequence[start:stop:step]<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#切片是-python-中用于访问序列如列表元组字符串中部分元素的技术通过指定起始索引和结束索引可以提取序列的一部分切片的基本语法如下sequencestartstopstep" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Flomo ID：<code>MjMzNzc5Nzkz</code></li>
+<li>创建时间：2026-04-27T15:54:34+08:00</li>
+<li>原文：<a href="https://v.flomoapp.com/mine/?memo_id=MjMzNzc5Nzkz" class="external">在 Flomo 中打开<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>原始标签：Area/技术/Python、Archive/MigratedWiki、Archive/MigratedNotion、Archive/DeleteCandidate</li>
+</ul>
+<p>切片是 Python 中用于访问序列（如列表、元组、字符串）中部分元素的技术。通过指定起始索引和结束索引，可以提取序列的一部分。切片的基本语法如下：<br/>sequence[start:stop:step]</p>
+<ul>
+<li>
+<p>start：切片的起始索引（包含该索引的元素）。</p>
+</li>
+<li>
+<p>stop：切片的结束索引（不包含该索引的元素）。</p>
+</li>
+<li>
+<p>step：切片的步长，默认为 1。<br/>你可以生成列表的任何子集，甚至可以使用负数索引来从序列的末尾开始切片。切片操作不会修改原始序列，而是返回一个新的序列。</p>
+</li>
+</ul>
+<p><a href="../../tags/Area/%E6%8A%80%E6%9C%AF/Python" class="tag-link internal alias" data-slug="tags/Area/技术/Python">Python</a></p>
+<p><a href="../../tags/Archive/MigratedWiki" class="tag-link internal alias" data-slug="tags/Archive/MigratedWiki">MigratedWiki</a></p>
+<p><a href="../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h3 id="python列表的学习">Python列表的学习<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#python列表的学习" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Flomo ID：<code>MjMzNzc2MTAw</code></li>
+<li>创建时间：2026-04-27T15:33:34+08:00</li>
+<li>原文：<a href="https://v.flomoapp.com/mine/?memo_id=MjMzNzc2MTAw" class="external">在 Flomo 中打开<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>原始标签：Area/技术/Python、Archive/MigratedWiki、Archive/MigratedNotion、Archive/DeleteCandidate</li>
+</ul>
+<p>Python列表的学习</p>
+<p></p>
+<ol>
+<li>
+<p>创建列表：可以创建一个空列表或包含初始元素的列表。</p>
+</li>
+<li>
+<p>访问列表元素：可以通过索引访问列表中的元素。</p>
+</li>
+<li>
+<p>修改列表元素：可以通过索引修改列表中的元素。</p>
+</li>
+<li>
+<p>添加元素：可以使用 append() 方法在列表末尾添加元素，或使用 insert() 方法在指定位置插入元素。</p>
+</li>
+<li>
+<p>删除元素：可以使用 del 语句或 remove() 方法删除列表中的元素。</p>
+</li>
+<li>
+<p>列表切片：可以使用切片操作获取列表的子列表。</p>
+</li>
+<li>
+<p>列表长度：可以使用 len() 函数获取列表的长度。</p>
+<p></p>
+<p></p>
+<p><a href="../../tags/Area/%E6%8A%80%E6%9C%AF/Python" class="tag-link internal alias" data-slug="tags/Area/技术/Python">Python</a></p>
+<p></p>
+<p></p>
+</li>
+</ol>
+<p><a href="../../tags/Archive/MigratedWiki" class="tag-link internal alias" data-slug="tags/Archive/MigratedWiki">MigratedWiki</a></p>
+<p><a href="../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h3 id="-3"><p></p><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-3" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Flomo ID：<code>ODEyODgzMDA</code></li>
+<li>创建时间：2023-09-03T19:53:34+08:00</li>
+<li>原文：<a href="https://v.flomoapp.com/mine/?memo_id=ODEyODgzMDA" class="external">在 Flomo 中打开<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>原始标签：Area/技术/Python、Archive/MigratedWiki、Archive/MigratedNotion、Archive/DeleteCandidate</li>
+</ul>
+<p></p>
+<ul>
+<li>NiceGui 地址 <a href="https://nicegui.io/" class="external">https://nicegui.io/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+<p>这是一个web服务器的地址：可以做一个卡片笔记？</p>
+<p></p>
+<ul>
+<li>通过导入卡片学习相关的知识</li>
+</ul>
+<p><a href="../../tags/Area/%E6%8A%80%E6%9C%AF/Python" class="tag-link internal alias" data-slug="tags/Area/技术/Python">Python</a></p>
+<p><a href="../../tags/Archive/MigratedWiki" class="tag-link internal alias" data-slug="tags/Archive/MigratedWiki">MigratedWiki</a></p>
+<p><a href="../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h2 id="csharp">CSharp<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#csharp" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="--c-开发-httpsdotnetmicrosoftcomen-usdownload">- C# 开发 <a href="https://dotnet.microsoft.com/en-us/download" class="external">https://dotnet.microsoft.com/en-us/download<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#--c-开发-httpsdotnetmicrosoftcomen-usdownload" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Flomo ID：<code>MTkxMjMyNTU3</code></p>
+</li>
+<li>
+<p>创建时间：2025-08-18T09:05:24+08:00</p>
+</li>
+<li>
+<p>原文：<a href="https://v.flomoapp.com/mine/?memo_id=MTkxMjMyNTU3" class="external">在 Flomo 中打开<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>原始标签：Area/技术/CSharp、Archive/MigratedWiki、Archive/MigratedNotion、Archive/DeleteCandidate</p>
+</li>
+<li>
+<p>C# 开发 <a href="https://dotnet.microsoft.com/en-us/download" class="external">https://dotnet.microsoft.com/en-us/download<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>.NET CLI 是一个命令行界面，提供了一系列用于开发、构建、测试和发布.NET 应用程序的命令。这些命令统称为 dotnet 命令。它们允许开发者在各种操作系统上进行.NET 开发，而无需依赖于Visual Studio 等集成开发环境.﻿</p>
+</li>
+<li>
+<p>下面是一些常用的 dotnet 命令：</p>
+</li>
+<li>
+<p><strong>项目和解决方案管理:</strong></p>
+<ul>
+<li>
+<p>dotnet new: 创建新的.NET项目或文件，例如控制台应用程序、类库等。</p>
+</li>
+<li>
+<p>dotnet build: 编译.NET项目及其依赖项。</p>
+</li>
+<li>
+<p>dotnet run: 运行.NET应用程序。</p>
+</li>
+<li>
+<p>dotnet clean: 清理.NET项目的构建输出。</p>
+</li>
+<li>
+<p>dotnet restore: 还原.NET项目所需的依赖项。</p>
+</li>
+<li>
+<p>dotnet pack: 创建NuGet包。</p>
+</li>
+<li>
+<p>dotnet publish: 发布.NET应用程序，生成可部署的文件。</p>
+</li>
+<li>
+<p>dotnet test: 运行.NET项目的单元测试。</p>
+</li>
+<li>
+<p>dotnet sln: 修改Visual Studio解决方案文件。﻿</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>NuGet 包管理:</strong></p>
+<ul>
+<li>
+<p>dotnet add package: 添加NuGet包引用到项目。</p>
+</li>
+<li>
+<p>dotnet remove package: 从项目中删除NuGet包引用。</p>
+</li>
+<li>
+<p>dotnet nuget add source: 添加NuGet源。</p>
+</li>
+<li>
+<p>dotnet nuget list source: 列出所有配置的NuGet源。﻿</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>工具管理:</strong></p>
+<ul>
+<li>
+<p>dotnet tool install: 安装全局或本地的.NET工具。﻿</p>
+</li>
+<li>
+<p>dotnet tool uninstall: 卸载全局或本地的.NET工具。﻿</p>
+</li>
+<li>
+<p>dotnet tool list: 列出已安装的.NET工具。﻿</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>其他命令:</strong></p>
+<ul>
+<li>
+<p>dotnet help: 显示命令行帮助。</p>
+</li>
+<li>
+<p>dotnet msbuild: 提供了对MSBuild命令行的访问。</p>
+</li>
+<li>
+<p>dotnet format: 格式化代码。﻿</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>使用示例:</strong></p>
+<ul>
+<li>
+<p>要创建一个新的控制台应用程序，可以运行 dotnet new console。</p>
+</li>
+<li>
+<p>要编译项目，可以运行 dotnet build。</p>
+</li>
+<li>
+<p>要运行应用程序，可以运行 dotnet run。</p>
+</li>
+<li>
+<p>要添加一个名为Newtonsoft.Json 的NuGet包，可以运行 dotnet add package Newtonsoft.Json。</p>
+</li>
+<li>
+<p>要安装一个名为dotnet-ef 的全局工具，可以运行 dotnet tool install —global dotnet-ef。﻿</p>
+</li>
+</ul>
+</li>
+<li>
+<p>通过使用 .NET CLI，开发者可以有效地管理.NET项目、构建、测试和部署应用程序，而无需依赖于特定的IDE。﻿</p>
+</li>
+</ul>
+<p><a href="../../tags/Area/%E6%8A%80%E6%9C%AF/CSharp" class="tag-link internal alias" data-slug="tags/Area/技术/CSharp">CSharp</a></p>
+<p><a href="../../tags/Archive/MigratedWiki" class="tag-link internal alias" data-slug="tags/Archive/MigratedWiki">MigratedWiki</a></p>
+<p><a href="../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h2 id="数据库">数据库<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#数据库" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="sqlite-数据库工具-httpsdbeaverio">SQLITE 数据库工具： <a href="https://dbeaver.io/" class="external">https://dbeaver.io/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sqlite-数据库工具-httpsdbeaverio" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Flomo ID：<code>MjMxNDM0ODQx</code></li>
+<li>创建时间：2026-04-14T11:27:51+08:00</li>
+<li>原文：<a href="https://v.flomoapp.com/mine/?memo_id=MjMxNDM0ODQx" class="external">在 Flomo 中打开<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>原始标签：Area/技术/数据库、Archive/MigratedWiki、Archive/MigratedNotion、Archive/DeleteCandidate</li>
+</ul>
+<p>SQLITE 数据库工具： <a href="https://dbeaver.io/" class="external">https://dbeaver.io/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>关联自： <a href="https://v.flomoapp.com/mine/?memo_id=ODM2MTM3MDE" class="external">https://v.flomoapp.com/mine/?memo_id=ODM2MTM3MDE<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><a href="../../tags/Area/%E6%8A%80%E6%9C%AF/%E6%95%B0%E6%8D%AE%E5%BA%93" class="tag-link internal alias" data-slug="tags/Area/技术/数据库">数据库</a></p>
+<p><a href="../../tags/Archive/MigratedWiki" class="tag-link internal alias" data-slug="tags/Archive/MigratedWiki">MigratedWiki</a></p>
+<p><a href="../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h3 id="acid原则是数据库事务正常执行的四个分别指原子性一致性独立性及持久性">ACID原则是数据库事务正常执行的四个，分别指原子性、一致性、独立性及持久性<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#acid原则是数据库事务正常执行的四个分别指原子性一致性独立性及持久性" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Flomo ID：<code>ODM2MTM3MDE</code></li>
+<li>创建时间：2023-09-21T20:36:17+08:00</li>
+<li>原文：<a href="https://v.flomoapp.com/mine/?memo_id=ODM2MTM3MDE" class="external">在 Flomo 中打开<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>原始标签：Area/技术/数据库、Archive/MigratedWiki、Archive/MigratedNotion、Archive/DeleteCandidate</li>
+</ul>
+<p>ACID原则是数据库事务正常执行的四个，分别指原子性、一致性、独立性及持久性</p>
+<p><strong>事务的原子性(Atomicity)：</strong> <u>是指一个事务要么全部执行，要么不执行</u>，也就是说一个事务不可能只执行了一半就停止了。比如你从取款机取钱，这个事务可以分成两个步骤：1划卡，2出钱。不可能划了卡，而钱却没出来。这两步必须同时完成，要么就不完成。</p>
+<p><strong>事务的一致性(Consistency)：</strong> 是指事务的运行并不改变数据库中数据的一致性。例如，完整性约束了a+b=10，一个事务改变了a，那么b也应该随之改变。</p>
+<p><strong>独立性(Isolation）：</strong> 事务的独立性也称作隔离性，是指两个以上的事务不会出现交错执行的状态。因为这样可能会导致数据不一致，更加具体的来讲，就是事务之间的操作是独立的。</p>
+<p><strong>持久性(Durability）：</strong> 事务的持久性是指事务执行成功以后，该事务对数据库所作的更改便是持久的保存在数据库之中，不会无缘无故的回滚。</p>
+<p></p>
+<p><a href="../../tags/Area/%E6%8A%80%E6%9C%AF/%E6%95%B0%E6%8D%AE%E5%BA%93" class="tag-link internal alias" data-slug="tags/Area/技术/数据库">数据库</a></p>
+<p><a href="../../tags/Archive/MigratedWiki" class="tag-link internal alias" data-slug="tags/Archive/MigratedWiki">MigratedWiki</a></p>
+<p><a href="../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h2 id="汽车电子电气架构">汽车电子电气架构<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#汽车电子电气架构" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="汽车电控技术核心板块说明">汽车电控技术核心板块说明<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#汽车电控技术核心板块说明" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Flomo ID：<code>MTEzNjQ3NjQ2</code></li>
+<li>创建时间：2024-04-14T19:28:03+08:00</li>
+<li>原文：<a href="https://v.flomoapp.com/mine/?memo_id=MTEzNjQ3NjQ2" class="external">在 Flomo 中打开<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>原始标签：Area/技术/汽车电子电气架构、Archive/MigratedNotion、Archive/DeleteCandidate</li>
+</ul>
+<p><strong>汽车电控技术核心板块说明</strong></p>
+<p>现代汽车电子控制系统（Electronic Control System）是整车的“神经中枢”与“大脑”。根据原图分类及现代汽车电子电气架构（EEA）的演进，全车电控技术主要划分为以下 <strong>四大核心控制域</strong>：</p>
+<p><strong>1. 动力性能控制（Powertrain Domain）</strong></p>
+<ul>
+<li>
+<p><strong>核心功能</strong>：主要控制车辆的动力输出、能量转换及传动效率。</p>
+</li>
+<li>
+<p><strong>主要系统</strong>：</p>
+<ul>
+<li>
+<p><u><strong>发动机管理系统 (EMS)</strong></u>：精确控制燃油喷射、点火提前角及进气量（如电喷系统、节气门控制）。</p>
+</li>
+<li>
+<p><strong>变速器电子控制 (TCU)</strong>：根据车速和发动机负荷，自动选择最佳档位并控制换挡时机。</p>
+</li>
+<li>
+<p><strong>智能巡航/能量管理</strong>：在新能源或混动车型中，负责整车控制器（VCU）的能量分配及巡航控制。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>2. 安全性控制（Chassis &amp; Safety Domain）</strong></p>
+<ul>
+<li>
+<p><strong>核心功能</strong>：保障车辆在各种行驶工况下的主动安全与被动保护。</p>
+</li>
+<li>
+<p><strong>主要系统</strong>：</p>
+<ul>
+<li>
+<p><strong>ABS/ESC 稳定系统</strong>：防止车轮抱死、制动侧滑，并在车辆失控边缘主动分配制动力。</p>
+</li>
+<li>
+<p><strong>安全气囊控制单元 (ACU)</strong>：通过碰撞传感器实时监测冲击力，在毫秒级内触发气囊或安全带收紧。</p>
+</li>
+<li>
+<p><strong>胎压监测系统 (TPMS)</strong>：实时监控每个轮胎的气压与温度，防止爆胎引发事故。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>3. 舒适性控制（Body &amp; Comfort Domain）</strong></p>
+<ul>
+<li>
+<p><strong>核心功能</strong>：提升驾驶舱内的驾乘体验、便利性与车身基础电气管理。</p>
+</li>
+<li>
+<p><strong>主要系统</strong>：</p>
+<ul>
+<li>
+<p><strong>电子自动空调 (HVAC)</strong>：根据车内外温度传感器，自动调节冷热风量与空气循环。</p>
+</li>
+<li>
+<p><strong>车身控制模块 (BCM)</strong>：统一管理电动车窗、中控门锁、后视镜折叠以及智能雨刮。</p>
+</li>
+<li>
+<p><strong>座椅电动调节与记忆</strong>：控制座椅多向调节、加热、通风及多组驾驶员习惯记忆。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>4. 娱乐通讯技术（Infotainment &amp; Connectivity Domain）</strong></p>
+<ul>
+<li>
+<p><strong>核心功能</strong>：负责车内外的信息交互、影音娱乐、导航及智能联网（网联化）。 [1]</p>
+</li>
+<li>
+<p><strong>主要系统</strong>：</p>
+<ul>
+<li>
+<p><strong>智能座舱系统</strong>：包括数字液晶仪表盘、中控大屏的图像渲染与多媒体播放。</p>
+</li>
+<li>
+<p><strong>车载通信与导航</strong>：集成 GPS/北斗定位、车载电话（T-Box）、OTA 远程升级及紧急呼叫（eCall）。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../tags/Area/%E6%8A%80%E6%9C%AF/%E6%B1%BD%E8%BD%A6%E7%94%B5%E5%AD%90%E7%94%B5%E6%B0%94%E6%9E%B6%E6%9E%84" class="tag-link internal alias" data-slug="tags/Area/技术/汽车电子电气架构">汽车电子电气架构</a></p>
+<p><a href="../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h3 id="--概念">- 概念<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#--概念" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Flomo ID：<code>ODMyNTE1ODE</code></p>
+</li>
+<li>
+<p>创建时间：2023-09-19T07:16:12+08:00</p>
+</li>
+<li>
+<p>原文：<a href="https://v.flomoapp.com/mine/?memo_id=ODMyNTE1ODE" class="external">在 Flomo 中打开<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>原始标签：Area/技术/汽车电子电气架构、Archive/MigratedNotion、Archive/DeleteCandidate</p>
+</li>
+<li>
+<p>概念</p>
+<ul>
+<li>驱动力
+<ul>
+<li>
+<p>软件定义汽车</p>
+</li>
+<li>
+<p>智能化，网联化，电动化，共享化</p>
+</li>
+</ul>
+</li>
+<li>平台
+<ul>
+<li>
+<p>整车平台</p>
+</li>
+<li>
+<p>电子电气平台</p>
+</li>
+</ul>
+</li>
+<li>架构
+<ul>
+<li>
+<p>核心思想</p>
+<ul>
+<li>
+<p>分层</p>
+</li>
+<li>
+<p>分离</p>
+</li>
+<li>
+<p>接口</p>
+</li>
+<li>
+<p>领域工程与应用工程</p>
+</li>
+</ul>
+</li>
+<li>
+<p>发展趋势</p>
+</li>
+<li>
+<p>安全体系</p>
+</li>
+<li>
+<p>对标</p>
+</li>
+</ul>
+</li>
+<li>平台架构关系</li>
+</ul>
+</li>
+<li>
+<p>功能架构</p>
+</li>
+<li>
+<p>软件架构</p>
+</li>
+<li>
+<p>网络架构</p>
+</li>
+<li>
+<p>物理架构</p>
+</li>
+<li>
+<p>硬件架构</p>
+</li>
+<li>
+<p>网联架构</p>
+</li>
+<li>
+<p>测试验证</p>
+</li>
+<li>
+<p>开发流程</p>
+</li>
+<li>
+<p>架构评估</p>
+</li>
+<li>
+<p>工具链</p>
+</li>
+</ul>
+<p><a href="../../tags/Area/%E6%8A%80%E6%9C%AF/%E6%B1%BD%E8%BD%A6%E7%94%B5%E5%AD%90%E7%94%B5%E6%B0%94%E6%9E%B6%E6%9E%84" class="tag-link internal alias" data-slug="tags/Area/技术/汽车电子电气架构">汽车电子电气架构</a></p>
+<p><a href="../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h2 id="设计模式">设计模式<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#设计模式" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="solid设计原则">SOLID设计原则<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#solid设计原则" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Flomo ID：<code>MjQ2Njg1Njc1</code></li>
+<li>创建时间：2026-07-14T10:18:15+08:00</li>
+<li>原文：<a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Njg1Njc1" class="external">在 Flomo 中打开<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>原始标签：Area/技术/设计模式/原则与实践、Archive/MigratedNotion、Archive/DeleteCandidate</li>
+</ul>
+<p>SOLID设计原则</p>
+<p>▎ <strong>1. 单一职责原则（SRP）</strong> - Single Responsibility Principle</p>
+<ul>
+<li>
+<p>一个类应该仅有一个引起它变化的原因</p>
+</li>
+<li>
+<p>避免”上帝对象”，分离不同职责到不同的类</p>
+</li>
+<li>
+<p>例：UserService只处理用户逻辑，EmailService只处理邮件逻辑</p>
+</li>
+</ul>
+<p>▎ <strong>2. 开闭原则（OCP）</strong> - Open Closed Principle</p>
+<ul>
+<li>
+<p>软件实体对扩展开放，对修改关闭</p>
+</li>
+<li>
+<p>通过继承、组合、多态实现扩展而不修改原代码</p>
+</li>
+<li>
+<p>例：支付系统，新增支付方式不修改原有代码</p>
+</li>
+</ul>
+<p>▎ <strong>3. 里氏替换原则（LSP）</strong> - Liskov Substitution Principle</p>
+<ul>
+<li>
+<p>子类型必须是超类型的可替换者</p>
+</li>
+<li>
+<p>确保继承体系的健全性，避免破坏基类的契约</p>
+</li>
+<li>
+<p>例：正方形不应继承长方形，因为正方形的宽高相等会破坏长方形的接口</p>
+</li>
+</ul>
+<p>▎ <strong>4. 接口隔离原则（ISP）</strong> - Interface Segregation Principle</p>
+<ul>
+<li>
+<p>客户端不应该被迫依赖它不需要的接口</p>
+</li>
+<li>
+<p>使用多个专用接口代替一个通用接口</p>
+</li>
+<li>
+<p>例：不应该用”Animal”的统一接口，而是”Flyable”、“Swimmable”等</p>
+</li>
+</ul>
+<p>▎ <strong>5. 依赖倒转原则（DIP）</strong> - Dependency Inversion Principle</p>
+<ul>
+<li>
+<p>高层模块不应该依赖于低层模块，两者都应该依赖抽象</p>
+</li>
+<li>
+<p>使用接口或抽象类来实现依赖倒转</p>
+</li>
+<li>
+<p>例：数据库操作应该依赖Repository接口，而不是具体的MySQLRepository</p>
+</li>
+</ul>
+<p><u><mark>模式选择快速指南</mark></u></p>
+<p>问题推荐模式核心价值需要创建复杂对象 <strong>Builder</strong> / AbstractFactory分离构建与表示需要单一全局实例 <strong>Singleton</strong> 确保唯一性需要扩展对象功能 <strong>Decorator</strong> 避免类爆炸需要简化复杂系统 <strong>Facade</strong> 隐藏复杂性需要处理多种算法 <strong>Strategy</strong> 算法可互换需要撤销/重做功能 <strong>Command</strong> / Memento请求对象化需要对象间通信 <strong>Observer</strong> / Mediator解耦通信需要遍历集合元素 <strong>Iterator</strong> 统一遍历接口需要处理请求链 <strong>ChainOfResponsibility</strong> 链式传递需要对象状态切换 <strong>State</strong> 状态驱动行为</p>
+<p>常见模式组合使用</p>
+<p>▎ <strong>工厂 + 单例</strong></p>
+<ul>
+<li>
+<p>工厂方法本身是单例的，生产的对象可以重用</p>
+</li>
+<li>
+<p>应用：Spring的BeanFactory</p>
+</li>
+</ul>
+<p>▎ <strong>观察者 + 中介者</strong></p>
+<ul>
+<li>
+<p>中介者作为中央控制器，协调多个观察者</p>
+</li>
+<li>
+<p>应用：MVVM框架中的ViewModel</p>
+</li>
+</ul>
+<p>▎ <strong>策略 + 工厂</strong></p>
+<ul>
+<li>
+<p>工厂负责创建策略对象，避免客户端依赖具体策略类</p>
+</li>
+<li>
+<p>应用：支付系统中支付策略的工厂</p>
+</li>
+</ul>
+<p>▎ <strong>装饰 + 工厂</strong></p>
+<ul>
+<li>
+<p>工厂负责创建各种装饰组合，简化装饰的创建</p>
+</li>
+<li>
+<p>应用：Java IO流的包装</p>
+</li>
+</ul>
+<p>▎ <strong>模板方法 + 策略</strong></p>
+<ul>
+<li>
+<p>模板方法定义算法框架，策略定义具体算法</p>
+</li>
+<li>
+<p>应用：数据处理流程</p>
+</li>
+</ul>
+<p><u><strong><mark>反面模式（需要避免）</mark></strong></u></p>
+<p>▎ <strong>上帝对象（God Object）</strong></p>
+<ul>
+<li>
+<p>问题：一个类承担太多责任，违反SRP</p>
+</li>
+<li>
+<p>表现：类有数百个方法和字段</p>
+</li>
+<li>
+<p>解决：拆分成多个专注的类</p>
+</li>
+</ul>
+<p>▎ <strong>特性羡慕（Feature Envy）</strong></p>
+<ul>
+<li>
+<p>问题：方法频繁调用其他类的方法或字段</p>
+</li>
+<li>
+<p>表现：说明职责放错了地方</p>
+</li>
+<li>
+<p>解决：移动方法到真正需要它的类</p>
+</li>
+</ul>
+<p>▎ <strong>基本类型偏执（Primitive Obsession）</strong></p>
+<ul>
+<li>
+<p>问题：过度使用基本类型而不是创建合适的类</p>
+</li>
+<li>
+<p>表现：充斥着int、String的方法参数</p>
+</li>
+<li>
+<p>解决：创建值对象（如Money、PhoneNumber）</p>
+</li>
+</ul>
+<p>▎ <strong>过度工程（Over-Engineering）</strong></p>
+<ul>
+<li>
+<p>问题：使用过多、过复杂的设计模式</p>
+</li>
+<li>
+<p>表现：简单问题用复杂解决方案</p>
+</li>
+<li>
+<p>解决：YAGNI原则（You Aren’t Gonna Need It），需要时再添加</p>
+</li>
+</ul>
+<p>▎ <strong>唐老鸭代码（Functional Drift）</strong></p>
+<ul>
+<li>
+<p>问题：类的实际用途与设计意图不符</p>
+</li>
+<li>
+<p>表现：类做的事情与名字不符</p>
+</li>
+<li>
+<p>解决：定期重构，保持代码一致性</p>
+</li>
+</ul>
+<p><u><mark>现代架构中的应用</mark></u></p>
+<p>▎ <strong>微服务架构</strong></p>
+<ul>
+<li>
+<p>APIGateway（Facade）：统一的入口点</p>
+</li>
+<li>
+<p>服务网格（Proxy）：流量控制、熔断、重试</p>
+</li>
+<li>
+<p>事件总线（Observer）：服务间的异步通信</p>
+</li>
+</ul>
+<p>▎ <strong>响应式编程</strong></p>
+<ul>
+<li>
+<p>RxJava/RxJS：本质上是Observer模式的增强</p>
+</li>
+<li>
+<p>Stream API：Strategy用于转换和过滤</p>
+</li>
+</ul>
+<p>▎ <strong>依赖注入与IoC容器</strong></p>
+<ul>
+<li>
+<p>Factory模式：Spring的Bean创建机制</p>
+</li>
+<li>
+<p>单例模式：Spring Bean的默认作用域</p>
+</li>
+</ul>
+<p>▎ <strong>容器化与编排</strong></p>
+<ul>
+<li>
+<p>Factory：创建容器实例</p>
+</li>
+<li>
+<p>Singleton：管理容器的生命周期</p>
+</li>
+<li>
+<p>Proxy：容器间的网络通信</p>
+</li>
+</ul>
+<p>▎ <strong>函数式编程</strong></p>
+<ul>
+<li>
+<p>Strategy：高阶函数替代传统策略对象</p>
+</li>
+<li>
+<p>Command：函数作为一等公民</p>
+</li>
+</ul>
+<p><a href="../../tags/Area/%E6%8A%80%E6%9C%AF/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8E%9F%E5%88%99%E4%B8%8E%E5%AE%9E%E8%B7%B5" class="tag-link internal alias" data-slug="tags/Area/技术/设计模式/原则与实践">原则与实践</a></p>
+<p><a href="../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h3 id="软件设计模式design-patterns-是在软件开发过程中对常见问题的可复用解决方案gof四人帮定义了23种经典设计模式">软件设计模式（Design Patterns）** 是在软件开发过程中对常见问题的可复用解决方案。GoF（四人帮）定义了23种经典设计模式。<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#软件设计模式design-patterns-是在软件开发过程中对常见问题的可复用解决方案gof四人帮定义了23种经典设计模式" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Flomo ID：<code>MjQ2Njg1NTk4</code></li>
+<li>创建时间：2026-07-14T10:17:49+08:00</li>
+<li>原文：<a href="https://v.flomoapp.com/mine/?memo_id=MjQ2Njg1NTk4" class="external">在 Flomo 中打开<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>原始标签：Area/技术/设计模式、Archive/MigratedNotion、Archive/DeleteCandidate</li>
+</ul>
+<p><strong>软件设计模式（Design Patterns）</strong> 是在软件开发过程中对常见问题的可复用解决方案。GoF（四人帮）定义了23种经典设计模式。</p>
+<p><u><mark>创建型模式（Creational）</mark></u></p>
+<p>▎ <strong>单例模式（Singleton）</strong></p>
+<ul>
+<li>
+<p>确保一个类仅有一个实例，并提供全局访问点</p>
+</li>
+<li>
+<p>应用：数据库连接池、日志记录器、配置管理器</p>
+</li>
+<li>
+<p>注意：线程安全、防止反序列化、防止反射攻击</p>
+</li>
+</ul>
+<p>▎ <strong>工厂方法模式（Factory Method）</strong></p>
+<ul>
+<li>
+<p>定义一个用于创建对象的接口，让子类决定实例化哪一个类</p>
+</li>
+<li>
+<p>应用：数据库驱动选择、UI组件创建、支付方式选择</p>
+</li>
+</ul>
+<p>▎ <strong>抽象工厂模式（Abstract Factory）</strong></p>
+<ul>
+<li>
+<p>提供一个接口，用于创建相关或依赖的对象族</p>
+</li>
+<li>
+<p>应用：跨平台UI主题、家具系列产品、数据库连接管理</p>
+</li>
+</ul>
+<p>▎ <strong>建造者模式（Builder）</strong></p>
+<ul>
+<li>
+<p>将一个复杂对象的构建与其表示分离</p>
+</li>
+<li>
+<p>应用：StringBuilder、SQL查询构造、配置对象创建</p>
+</li>
+</ul>
+<p>▎ <strong>原型模式（Prototype）</strong></p>
+<ul>
+<li>
+<p>用原型实例指定创建对象的种类，并通过复制来创建新对象</p>
+</li>
+<li>
+<p>应用：Java的clone()、深拷贝场景、对象池</p>
+</li>
+</ul>
+<p><u><mark>结构型模式（Structural）</mark></u></p>
+<p>▎ <strong>适配器模式（Adapter）</strong></p>
+<ul>
+<li>
+<p>将一个类的接口转换成客户期望的另一个接口</p>
+</li>
+<li>
+<p>应用：电源适配器、数据格式转换、第三方库集成</p>
+</li>
+</ul>
+<p>▎ <strong>装饰者模式（Decorator）</strong></p>
+<ul>
+<li>
+<p>动态地给对象添加一些额外的职责</p>
+</li>
+<li>
+<p>应用：Java IO流、GUI组件装饰</p>
+</li>
+</ul>
+<p>▎ <strong>外观模式（Facade）</strong></p>
+<ul>
+<li>
+<p>为子系统中的一组接口提供一个统一的高层接口</p>
+</li>
+<li>
+<p>应用：Spring框架、数据库访问层、第三方库封装</p>
+</li>
+</ul>
+<p>▎ <strong>享元模式（Flyweight）</strong></p>
+<ul>
+<li>
+<p>运用共享技术有效地支持大量细粒度的对象</p>
+</li>
+<li>
+<p>应用：String常量池、数据库连接池、棋子对象</p>
+</li>
+</ul>
+<p>▎ <strong>代理模式（Proxy）</strong></p>
+<ul>
+<li>
+<p>为某个对象提供一个代理，以控制对这个对象的访问</p>
+</li>
+<li>
+<p>应用：RPC框架、Spring AOP、延迟加载、安全控制</p>
+</li>
+</ul>
+<p>▎ <strong>桥接模式（Bridge）</strong></p>
+<ul>
+<li>
+<p>将抽象部分与实现部分分离，使它们都可以独立地变化</p>
+</li>
+<li>
+<p>应用：JDBC驱动与数据库、日志系统</p>
+</li>
+</ul>
+<p>▎ <strong>组合模式（Composite）</strong></p>
+<ul>
+<li>
+<p>将对象组合成树形结构以表示”部分-整体”的层次关系</p>
+</li>
+<li>
+<p>应用：文件系统、DOM树、菜单项</p>
+</li>
+</ul>
+<p><u><strong><mark>行为型模式（Behavioral</mark></strong></u>）</p>
+<p>▎ <strong>观察者模式（Observer）</strong></p>
+<ul>
+<li>
+<p>定义对象间的一对多的依赖关系，当一个对象的状态改变时，所有依赖于它的对象都得到通知</p>
+</li>
+<li>
+<p>应用：MVC模式、事件监听、消息发布订阅</p>
+</li>
+</ul>
+<p>▎ <strong>策略模式（Strategy）</strong></p>
+<ul>
+<li>
+<p>定义一系列算法，把它们一个个封装起来，并使它们可以相互替换</p>
+</li>
+<li>
+<p>应用：支付方式选择、排序算法选择、促销算法</p>
+</li>
+</ul>
+<p>▎ <strong>命令模式（Command）</strong></p>
+<ul>
+<li>
+<p>将请求封装成一个对象</p>
+</li>
+<li>
+<p>应用：菜单项、按钮点击、任务队列、撤销/重做</p>
+</li>
+</ul>
+<p>▎ <strong>模板方法模式（Template Method）</strong></p>
+<ul>
+<li>
+<p>定义一个操作中的算法的骨架，把一些步骤延迟到子类中</p>
+</li>
+<li>
+<p>应用：Spring的JdbcTemplate、Servlet的生命周期</p>
+</li>
+</ul>
+<p>▎ <strong>状态模式（State）</strong></p>
+<ul>
+<li>
+<p>允许对象在其内部状态改变时改变它的行为</p>
+</li>
+<li>
+<p>应用：订单状态、工作流状态</p>
+</li>
+</ul>
+<p>▎ <strong>迭代器模式（Iterator）</strong></p>
+<ul>
+<li>
+<p>提供一种方法顺序访问一个聚合对象中的各个元素</p>
+</li>
+<li>
+<p>应用：Java的Iterator接口、遍历集合</p>
+</li>
+</ul>
+<p>▎ <strong>中介者模式（Mediator）</strong></p>
+<ul>
+<li>
+<p>用一个中介对象来封装一系列对象间的交互</p>
+</li>
+<li>
+<p>应用：对话框中的控件交互、飞行管制系统</p>
+</li>
+</ul>
+<p>▎ <strong>备忘录模式（Memento）</strong></p>
+<ul>
+<li>
+<p>不破坏一个对象的封装性，捕获并外部化该对象的一个内部状态</p>
+</li>
+<li>
+<p>应用：撤销/重做、事务回滚、保存游戏进度</p>
+</li>
+</ul>
+<p>▎ <strong>职责链模式（Chain of Responsibility）</strong></p>
+<ul>
+<li>
+<p>将多个对象连成一条链，并沿着这条链传递请求</p>
+</li>
+<li>
+<p>应用：Java异常处理、Servlet过滤器链、审批流程</p>
+</li>
+</ul>
+<p>▎ <strong>访问者模式（Visitor）</strong></p>
+<ul>
+<li>
+<p>表示一个作用于某对象结构中各个元素的操作</p>
+</li>
+<li>
+<p>应用：编译器的AST遍历、表达式求值、报表生成</p>
+</li>
+</ul>
+<p><a href="../../tags/Area/%E6%8A%80%E6%9C%AF/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F" class="tag-link internal alias" data-slug="tags/Area/技术/设计模式">设计模式</a></p>
+<p><a href="../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h2 id="网络安全">网络安全<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#网络安全" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="--processors-ti-jacintotda-series-infineon-aurix-series-nxp-imxs32rs32k-series-renesas-rh-series">- <strong>Processors:</strong> TI Jacinto/TDA Series, Infineon Aurix Series, NXP i.MX/S32R/S32K series, Renesas RH series​<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#--processors-ti-jacintotda-series-infineon-aurix-series-nxp-imxs32rs32k-series-renesas-rh-series" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Flomo ID：<code>ODU3Mzg3OTA</code></p>
+</li>
+<li>
+<p>创建时间：2023-10-10T09:01:33+08:00</p>
+</li>
+<li>
+<p>原文：<a href="https://v.flomoapp.com/mine/?memo_id=ODU3Mzg3OTA" class="external">在 Flomo 中打开<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>原始标签：Area/技术/网络安全、Archive/MigratedNotion、Archive/DeleteCandidate</p>
+</li>
+<li>
+<p><strong>Processors:</strong> TI Jacinto/TDA Series, Infineon Aurix Series, NXP i.MX/S32R/S32K series, Renesas RH series​</p>
+</li>
+<li>
+<p><strong>Operating System :</strong> Linux/QNX/Free RTOS/ MICROSAR​</p>
+</li>
+<li>
+<p><strong>Firmware/Image Authentication</strong>: Secure Boot, Secure Update​</p>
+</li>
+<li>
+<p><strong>Debug Protection:</strong> Secure JTAG, UART Security​</p>
+</li>
+<li>
+<p><strong>Logging:</strong> Secure Logging​</p>
+</li>
+<li>
+<p><strong>Diagnostics:</strong> Secure Diagnostics​</p>
+</li>
+<li>
+<p><strong>Secure Communication:</strong> Secure CAN, IP Security, Secure Backend Access, Server Communication​</p>
+</li>
+<li>
+<p><strong>PKI:</strong> Certificate and Key Mgmt.​</p>
+</li>
+<li>
+<p><strong>OS Hardening:</strong> OS Security and Run Time Protection​</p>
+</li>
+<li>
+<p><strong>Application Security:</strong> BT, Wi-Fi Security​</p>
+</li>
+</ul>
+<p><a href="../../tags/Area/%E6%8A%80%E6%9C%AF/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8" class="tag-link internal alias" data-slug="tags/Area/技术/网络安全">网络安全</a></p>
+<p><a href="../../tags/Archive/MigratedNotion" class="tag-link internal alias" data-slug="tags/Archive/MigratedNotion">MigratedNotion</a><br/>
+#Archive/DeleteCandidate</p>
+<hr/>
+<h2 id="迁移记录">迁移记录<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#迁移记录" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>纳入 16 条完整笔记，覆盖 7 个技术主题。</li>
+<li>原文完整读取，无截断；保留 Flomo ID、链接、时间与标签。</li>
+<li>短笔记仅做归档与主题关联，不擅自补写未经来源支持的技术细节。</li>
+</ul></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-53" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#技术专题补充卡片" data-for="技术专题补充卡片">技术专题补充卡片</a></li><li class="depth-1"><a href="#技术关联图" data-for="技术关联图">技术关联图</a></li><li class="depth-1"><a href="#cem" data-for="cem">CEM</a></li><li class="depth-2"><a href="#pp" data-for="pp">&lt;p>&lt;/p></a></li><li class="depth-2"><a href="#pp-1" data-for="pp-1">&lt;p>&lt;/p></a></li><li class="depth-2"><a href="#pp-2" data-for="pp-2">&lt;p>&lt;/p></a></li><li class="depth-2"><a href="#umarkcem相关的app需求marku" data-for="umarkcem相关的app需求marku">&lt;u>&lt;mark>CEM相关的APP需求&lt;/mark>&lt;/u></a></li><li class="depth-2"><a href="#思考笔记cem软件相关的结构" data-for="思考笔记cem软件相关的结构">思考笔记：CEM软件相关的结构</a></li><li class="depth-1"><a href="#python" data-for="python">Python</a></li><li class="depth-2"><a href="#切片是-python-中用于访问序列如列表元组字符串中部分元素的技术通过指定起始索引和结束索引可以提取序列的一部分切片的基本语法如下brsequencestartstopstep" data-for="切片是-python-中用于访问序列如列表元组字符串中部分元素的技术通过指定起始索引和结束索引可以提取序列的一部分切片的基本语法如下brsequencestartstopstep">切片是 Python 中用于访问序列（如列表、元组、字符串）中部分元素的技术。通过指定起始索引和结束索引，可以提取序列的一部分。切片的基本语法如下：&lt;br>sequence[start:stop:step]</a></li><li class="depth-2"><a href="#python列表的学习" data-for="python列表的学习">Python列表的学习</a></li><li class="depth-2"><a href="#pp-3" data-for="pp-3">&lt;p>&lt;/p></a></li><li class="depth-1"><a href="#csharp" data-for="csharp">CSharp</a></li><li class="depth-2"><a href="#--c-开发-httpsdotnetmicrosoftcomen-usdownload" data-for="--c-开发-httpsdotnetmicrosoftcomen-usdownload">- C# 开发 https://dotnet.microsoft.com/en-us/download</a></li><li class="depth-1"><a href="#数据库" data-for="数据库">数据库</a></li><li class="depth-2"><a href="#sqlite-数据库工具-httpsdbeaverio" data-for="sqlite-数据库工具-httpsdbeaverio">SQLITE 数据库工具： https://dbeaver.io/</a></li><li class="depth-2"><a href="#acid原则是数据库事务正常执行的四个分别指原子性一致性独立性及持久性" data-for="acid原则是数据库事务正常执行的四个分别指原子性一致性独立性及持久性">ACID原则是数据库事务正常执行的四个，分别指原子性、一致性、独立性及持久性</a></li><li class="depth-1"><a href="#汽车电子电气架构" data-for="汽车电子电气架构">汽车电子电气架构</a></li><li class="depth-2"><a href="#汽车电控技术核心板块说明" data-for="汽车电控技术核心板块说明">汽车电控技术核心板块说明</a></li><li class="depth-2"><a href="#--概念" data-for="--概念">- 概念</a></li><li class="depth-1"><a href="#设计模式" data-for="设计模式">设计模式</a></li><li class="depth-2"><a href="#solid设计原则" data-for="solid设计原则">SOLID设计原则</a></li><li class="depth-2"><a href="#软件设计模式design-patterns-是在软件开发过程中对常见问题的可复用解决方案gof四人帮定义了23种经典设计模式" data-for="软件设计模式design-patterns-是在软件开发过程中对常见问题的可复用解决方案gof四人帮定义了23种经典设计模式">软件设计模式（Design Patterns）** 是在软件开发过程中对常见问题的可复用解决方案。GoF（四人帮）定义了23种经典设计模式。</a></li><li class="depth-1"><a href="#网络安全" data-for="网络安全">网络安全</a></li><li class="depth-2"><a href="#--processors-ti-jacintotda-series-infineon-aurix-series-nxp-imxs32rs32k-series-renesas-rh-series" data-for="--processors-ti-jacintotda-series-infineon-aurix-series-nxp-imxs32rs32k-series-renesas-rh-series">- Processors: TI Jacinto/TDA Series, Infineon Aurix Series, NXP i.MX/S32R/S32K series, Renesas RH series​</a></li><li class="depth-1"><a href="#迁移记录" data-for="迁移记录">迁移记录</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向链接</h3><ul id="list-2" class="overflow"><li><a href="../../Area/EE/" class="internal">EE</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.1</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module">function f(i,e){if(!i)return;function r(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function t(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}i?.addEventListener("click",r),window.addCleanup(()=>i?.removeEventListener("click",r)),document.addEventListener("keydown",t),window.addCleanup(()=>document.removeEventListener("keydown",t))}function y(i){for(;i.firstChild;)i.removeChild(i.firstChild)}var h=class{constructor(e,r){this.container=e;this.content=r;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),r=this.onMouseMove.bind(this),t=this.onMouseUp.bind(this),o=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",r),document.addEventListener("mouseup",t),window.addEventListener("resize",o),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",r),()=>document.removeEventListener("mouseup",t),()=>window.removeEventListener("resize",o))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let r=this.createButton("+",()=>this.zoom(.1)),t=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(t),e.appendChild(o),e.appendChild(r),this.container.appendChild(e)}createButton(e,r){let t=document.createElement("button");return t.textContent=e,t.className="mermaid-control-button",t.addEventListener("click",r),window.addCleanup(()=>t.removeEventListener("click",r)),t}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}zoom(e){let r=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),t=this.content.getBoundingClientRect(),o=t.width/2,n=t.height/2,c=r-this.scale;this.currentPan.x-=o*c,this.currentPan.y-=n*c,this.scale=r,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){this.scale=1;let e=this.content.querySelector("svg");this.currentPan={x:e.getBoundingClientRect().width/2,y:e.getBoundingClientRect().height/2},this.updateTransform()}},C=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],E;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;E||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let r=E.default,t=new WeakMap;for(let n of e)t.set(n,n.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let a=t.get(s);a&&(s.innerHTML=a)}let n=C.reduce((s,a)=>(s[a]=window.getComputedStyle(document.documentElement).getPropertyValue(a),s),{}),c=document.documentElement.getAttribute("saved-theme")==="dark";r.initialize({startOnLoad:!1,securityLevel:"loose",theme:c?"dark":"base",themeVariables:{fontFamily:n["--codeFont"],primaryColor:n["--light"],primaryTextColor:n["--darkgray"],primaryBorderColor:n["--tertiary"],lineColor:n["--darkgray"],secondaryColor:n["--secondary"],tertiaryColor:n["--tertiary"],clusterBkg:n["--light"],edgeLabelBackground:n["--highlight"]}}),await r.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let n=0;n<e.length;n++){let v=function(){let g=l.querySelector("#mermaid-space"),m=l.querySelector(".mermaid-content");if(!m)return;y(m);let w=c.querySelector("svg").cloneNode(!0);m.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new h(g,m)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},c=e[n],s=c.parentElement,a=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(a),L=a.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),f(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="/static/katex/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../postscript.js" type="module"></script></html>
