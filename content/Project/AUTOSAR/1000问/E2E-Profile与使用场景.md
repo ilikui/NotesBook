@@ -32,3 +32,12 @@ Profile 1 vs Profile 5：
 总表：<https://v.flomoapp.com/mine/?memo_id=MjMxMTQ2NDk4>
 
 #Area/技术/AUTOSAR
+
+## 工程边界与重要更正
+
+- **Profile 编号不能直接映射 ASIL 等级。** Profile 1、2、5、6、7 等定义的是 CRC、Counter、Data ID、数据长度/布局等保护机制，不存在“Profile 1 就是 ASIL A/B、Profile 5 就是 ASIL C/D”的通用标准对应关系。
+- E2E Profile 选择应依据系统安全需求、通信拓扑、数据长度、发送周期、允许的丢失/重复/乱序行为，以及 Safety Manual / Safety Case 中的安全机制分配。
+- E2E 检查器返回的状态通常包括正确、重复、序列错误、无新数据、错误等；超时/无新数据的检测与接收周期、状态机和配置有关，不应简单断言某个 Profile“没有 Timeout”。
+- Profile 的具体 CRC 算法、Data ID 模式、Counter 位宽、长度范围必须查当前 AUTOSAR E2E Library 版本对应的规范和配置工具定义。
+
+**结论修订：** 不要仅凭 ASIL 等级选择 Profile。先由安全需求确定需要检测的通信故障，再按数据长度、周期和 Profile 能力选择，并通过故障注入验证 CRC 错误、重复、丢失、乱序、超时和错误 Data ID。
