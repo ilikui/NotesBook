@@ -42,3 +42,11 @@ tags:
 📎 AUTOSAR 1000问总表 → [https://v.flomoapp.com/mine/?memo\_id=MjMxMTQ2NDk4](https://v.flomoapp.com/mine/?memo_id=MjMxMTQ2NDk4)
 
 #Area/技术/AUTOSAR
+
+## Runnable 与 Task 映射的边界修订
+
+Runnable 的触发来源是 RTE Event（TimingEvent、DataReceivedEvent、OperationInvokedEvent、ModeSwitchEvent、InitEvent 等）；这些 Event 通过 RTE Event-to-Task Mapping 映射到 OS Task。不要把“某种 Event 必须挂某种 Task”写成固定规则：Task 类型、优先级、周期和执行上下文需按系统时序与 OS 配置决定。
+
+一个 Runnable 可关联一个或多个触发事件；若不同事件/任务可能造成并发激活，必须检查 Runnable 的并发可调用属性、RTE 生成限制和共享数据保护。不要笼统断言“一个 Runnable 永远只能映射到一个 Task”。同一 Task 中 Runnable 的执行顺序应以生成的 RTE 调度代码、配置和数据一致性语义为准。
+
+TimingEvent 周期与 Task 激活周期的关系也应结合 RTE/OS 的映射规则和工具校验结果确认；Task 周期不能满足事件频率时会造成调度延迟或配置不合法。最终以 ARXML、生成报告、Rte.c 和 OS Trace 验证。
