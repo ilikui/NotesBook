@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>CEM 项目知识地图</title>
+    <link>https://wiki.likui.info/Project/CEM/</link>
+    <guid>https://wiki.likui.info/Project/CEM/</guid>
+    <description><![CDATA[ CEM 项目知识地图 CEM（Central Electronic Module / 中央电子模块，具体项目命名以 OEM 架构定义为准）相关记录入口。当前归档来自历史 Flomo 需求和问题线索，尚未等同于完整设计规格；具体接口、诊断和休眠唤醒逻辑仍需结合项目 ARXML、软件架构和 OEM 需求确认。 需求与功能域 CEM功能域与诊断需求：执行器/传感器、Climate、驾驶员信息、ECU 平台、车灯、门锁、低压能源管理、远程控制、安全、TPMS、车窗后视镜等功能域，以及诊断需求线索。 软件架构与问题清单 CEM软件结构与待研究问题：已补充 CEM 分层架构、DTC/DID、NvM、接口配... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:51:04 GMT</pubDate>
+  </item><item>
     <title>CEM 软件结构：DTC、DID、NvM、接口配置与通信栈</title>
     <link>https://wiki.likui.info/Project/CEM/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/CEM%E8%BD%AF%E4%BB%B6%E7%BB%93%E6%9E%84%E4%B8%8E%E5%BE%85%E7%A0%94%E7%A9%B6%E9%97%AE%E9%A2%98</link>
     <guid>https://wiki.likui.info/Project/CEM/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/CEM%E8%BD%AF%E4%BB%B6%E7%BB%93%E6%9E%84%E4%B8%8E%E5%BE%85%E7%A0%94%E7%A9%B6%E9%97%AE%E9%A2%98</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/%E9%80%9A%E4%BF%A1/1000%E9%97%AE/CAN%E7%BD%91%E7%BB%9C%E9%80%9A%E7%94%A8%E6%A6%82%E5%BF%B5</guid>
     <description><![CDATA[ CAN网络（通用概念参考，来自Kimi） 原始 Flomo：v.flomoapp.com/mine/ CAN网络（通用概念参考，来自Kimi） 📎 你的实战排查内容在此 → CAN终端电阻物理含义 v.flomoapp.com/mine/ 📎 CAN排查工具箱清单 v.flomoapp.com/mine/ 📎 CAN通信栈七层数据流 v.flomoapp.com/mine/ （原文为2024-06-11 Kimi生成的CAN总线基础介绍，已被后续实战笔记覆盖） 通信 CAN 网络基础问答补全 Q1. ]]></description>
     <pubDate>Sun, 01 Nov 2026 04:23:35 GMT</pubDate>
-  </item><item>
-    <title>CEM工作问题清单</title>
-    <link>https://wiki.likui.info/Project/CEM/100%E9%97%AE/CEM%E5%B7%A5%E4%BD%9C%E9%97%AE%E9%A2%98%E6%B8%85%E5%8D%95</link>
-    <guid>https://wiki.likui.info/Project/CEM/100%E9%97%AE/CEM%E5%B7%A5%E4%BD%9C%E9%97%AE%E9%A2%98%E6%B8%85%E5%8D%95</guid>
-    <description><![CDATA[ CEM 工作问题清单 原始 Flomo：v.flomoapp.com/mine/ CEM工作的100个问题 接口的配置操作？ 休眠唤醒的相关逻辑是什么？ CEM CEM 软件工作问题：接口配置、休眠唤醒与基础软件链路 CEM 在不同 OEM/项目中可能指不同的中央电子模块或功能域。以下以 AUTOSAR Classic ECU 的典型实现说明方法，不把供应商工具的界面步骤写成标准强制流程。最终应以项目 ARXML、接口矩阵、网络矩阵、软件需求和工具版本为准。 Q1. ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:23:32 GMT</pubDate>
   </item>
     </channel>
   </rss>
