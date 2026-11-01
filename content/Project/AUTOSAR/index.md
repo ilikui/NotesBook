@@ -101,6 +101,10 @@ flowchart TD
 - [[1000问/性能优化-RTE调用与PDU端到端开销]] —— RTE、COM、PduR、CanIf 路径开销及性能热点。
 - [[1000问/SWC-C-S调用并发与抢占]] —— 同步/异步 Client-Server 调用、抢占、优先级与可重入性。
 
+## 基础资料与分层补充
+
+- [[基础资料与分层补充]] —— BSW 服务分类、DDS、AUTOSAR 文档阅读、RTE/服务层/ECU 抽象层/MCAL/CDD 与 RTE 规范摘录。
+
 ## MCAL 驱动配置
 
 - [[MCAL/Dma]] —— DMA 通道与数据搬运配置。
