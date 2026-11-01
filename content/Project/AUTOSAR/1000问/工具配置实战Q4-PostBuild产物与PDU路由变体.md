@@ -22,3 +22,11 @@ PostBuild 生成的产物：既有 .c/.h，也有 .arxml。关键区别不在文
 总表：<https://v.flomoapp.com/mine/?memo_id=MjMxMTQ2NDk4>
 
 #Area/技术/AUTOSAR
+
+## 关键更正：Post-Build 不自动等于运行中动态改路由
+
+Post-Build 变体的具体产物和选择时机由 AUTOSAR 变体机制、BSW 模块配置、工具链和项目集成决定。配置工具可能输出 ARXML 中间描述、生成的 C/H 配置数据、变体描述文件或其他产物；不能把“.c + .arxml”作为所有工具链的固定结论。
+
+同样，Post-Build 也不自动意味着运行中可以任意修改 PDU 路由。PduR 的 routing path 是否可作为 Post-Build 可变配置、是否支持加载/切换、何时生效，必须检查 PduR SWS、工具生成模型、供应商扩展和项目的 Post-Build Loadable/Selectable 方案。部分变体只能在启动初始化阶段选择，运行中切换可能要求停止通信、重初始化甚至 ECU 重启。
+
+若需求是诊断切换 PDU 路由，应明确是“启动时选择变体”还是“运行中调用动态路由控制 API”，两者不是同一机制。
