@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>1000问知识体系</title>
+    <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
+    <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
+    <description><![CDATA[ 1000问知识体系 这里集中整理 Flomo 中长期积累的「1000问 / 1000题 / 10000问」问题库、逐题解答和专题卡片。目标不是只保存题目，而是把每个问题沉淀为可检索、可验证、可复用的知识单元。 迁移原则：保留问题原意；合并重复题但记录关联；答案给出原理、适用边界和验证方法；技术内容尽量附 Mermaid 图；未核验的结论明确标注待核验。Flomo 原笔记暂不删除。 知识迁移流程 flowchart TD A[Flomo 原始笔记] --&gt; B[检索与盘点] B --&gt; C[按主题归类] C --&gt; D[识别重复问题] D --&gt; E[读取完整原文] E ... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 13:39:34 GMT</pubDate>
+  </item><item>
     <title>AUTOSAR</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q2-%E6%A8%A1%E5%9D%97%E9%85%8D%E7%BD%AE%E5%AE%8C%E6%95%B4%E6%80%A7%E9%AA%8C%E8%AF%81</guid>
     <description><![CDATA[ 工具配置实战 Q2：怎么判断一个模块配置完整？Davinci 有没有「验证配置」功能？ 原始 Flomo：v.flomoapp.com/mine/ 工具配置实战 Q2：怎么判断一个模块配置完整？Davinci 有没有「验证配置」功能？ 判断完整性的四种手段（从软到硬）： 工具验证 / 校验：Davinci 有 Check / Validate Configuration，EB tresos 是 Validation——做一致性检查（必填参数、跨模块引用、schema 合规），列出 error（红）和 warning（黄）。这是第一道、也最快的门。 生成代码是否成功：生成器生成前会做一遍完整性与... ]]></description>
     <pubDate>Sun, 01 Nov 2026 13:38:08 GMT</pubDate>
-  </item><item>
-    <title>工具配置实战Q1-BSW模块必填参数</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q1-BSW%E6%A8%A1%E5%9D%97%E5%BF%85%E5%A1%AB%E5%8F%82%E6%95%B0</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q1-BSW%E6%A8%A1%E5%9D%97%E5%BF%85%E5%A1%AB%E5%8F%82%E6%95%B0</guid>
-    <description><![CDATA[ 工具配置实战 Q1：新建 BSW 模块配置，哪些参数必填？填错了在哪一层报出来？ 原始 Flomo：v.flomoapp.com/mine/ 工具配置实战 Q1：新建 BSW 模块配置，哪些参数必填？填错了在哪一层报出来？ 哪些算必填： 配置工具里参数分 required（必填）和 optional（可选），工具常用标记区分（必填项带星号 / 标红 / 列为 mandatory）。 必填的一般是模块能否正常工作的关键参数——如 CAN 的波特率、帧 ID、PDU 引用、模块实例关联。缺了这些，模块行为无法确定。 填错了在哪一层被发现（三层，按时间顺序）： 配置 / 验证阶段：工具内的「验证」和... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 13:38:04 GMT</pubDate>
   </item>
     </channel>
   </rss>
