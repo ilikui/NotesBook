@@ -37,3 +37,12 @@ ROS 2 开发者转 Adaptive 最需要适应：
 总表：<https://v.flomoapp.com/mine/?memo_id=MjMxMTQ2NDk4>
 
 #Area/技术/AUTOSAR
+
+## 关键边界补充
+
+- ROS 2 的调度确定性不是固定由 Linux CFS 决定。它取决于底层 OS（PREEMPT_RT Linux、RTOS 等）、executor 类型、callback group、DDS 实现、线程优先级、CPU affinity 和内存锁定等配置。
+- AUTOSAR Adaptive 的 Execution Management 负责进程/功能组生命周期和启动依赖，但实时调度仍由 OS 与应用线程配置共同决定；使用 SCHED_FIFO 不等于自动满足所有 deadline。
+- ROS 2 Node 是逻辑计算单元；Adaptive Process 是部署和生命周期单元，两者不是一一对应的同类对象。一个进程可包含多个 ROS 2 Node；Adaptive 的可执行程序与 Function Group/Execution Manifest 关系由项目部署模型定义。
+- ara::com 服务发现、Manifest 和权限策略的具体行为依赖 Adaptive Release、供应商实现和项目配置；不要笼统描述为“完全静态、无动态发现”。
+
+工程选型应比较确定性测量、功能安全证据、信息安全、生命周期、诊断、升级、资源隔离和生态工具链，而不是只比较中间件名称。
