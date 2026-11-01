@@ -6,6 +6,24 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>历史知识专题</title>
+    <link>https://wiki.likui.info/Resource/History/</link>
+    <guid>https://wiki.likui.info/Resource/History/</guid>
+    <description><![CDATA[ 历史知识专题 历史学习以时间线为主干，以制度、经济、军事、思想、文化、科技、生活和地理为专题。回答问题时区分史料事实、学术解释和价值评价。 1000问逐题解答 上古与夏商周 —— 神话传说、夏代争议、甲骨文、商周制度与史料边界。 军事制度经济思想与文化 —— 战争、中央官制、地方治理、科举、土地经济、宗教思想与文学典籍。 科技生活审美地理与史料 —— 古代科技工程、社会生活、女性史、服饰工艺、疆域人口和史料方法。 flowchart TD A[上古与先秦] --&gt; B[秦汉] B --&gt; C[魏晋南北朝] C --&gt; D[隋唐] D --&gt; E[宋辽金元] E --&g... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 05:18:23 GMT</pubDate>
+  </item><item>
+    <title>Education</title>
+    <link>https://wiki.likui.info/Resource/Education/</link>
+    <guid>https://wiki.likui.info/Resource/Education/</guid>
+    <description><![CDATA[ Education（教育） 汇集小学阶段的学习资料与知识脉络，以思维导图方式梳理各学科的知识点框架，便于家长辅导与孩子查漏补缺。 一句话定位 用一张思维导图看清一个年级、一门学科「到底要学什么」。 儿童教育 1000问 学习习惯语文与数学启蒙 —— 学习阶段、提问法、识字、阅读、写作与数感启蒙。 分科实战语文数学英语与理科 —— 语文、数学、英语、物理、化学和生物的分科学习方法。 年级转折与长期学习规划 —— 幼小衔接、小学到大学的关键转折、学习策略与家庭支持。 flowchart TD A[好奇与兴趣] --&gt; B[提问] B --&gt; C[阅读 / 观察 / 实验] C --&g... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 05:18:16 GMT</pubDate>
+  </item><item>
+    <title>EE</title>
+    <link>https://wiki.likui.info/Area/EE/</link>
+    <guid>https://wiki.likui.info/Area/EE/</guid>
+    <description><![CDATA[ 电子、电气与嵌入式系统的学习地图。 ]]></description>
+    <pubDate>Sun, 01 Nov 2026 05:18:09 GMT</pubDate>
+  </item><item>
     <title>数学与工程数学1000问</title>
     <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/</link>
     <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/</guid>
@@ -47,24 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/1000%E9%97%AE/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E4%B8%93%E9%A2%98%E8%A1%A5%E5%85%85%E6%8A%95%E5%BD%B1Jordan%E5%9B%BE%E8%B0%B1%E4%B8%8E%E7%9F%A9%E9%98%B5%E5%BE%AE%E7%A7%AF%E5%88%86</guid>
     <description><![CDATA[ 考研数学1000问：正交化、Jordan型、图谱理论与矩阵微积分 一、正交化与最小二乘补充 Q1. ]]></description>
     <pubDate>Sun, 01 Nov 2026 05:15:14 GMT</pubDate>
-  </item><item>
-    <title>专栏⑰·导航分卷：概率论与数理统计 1000 问（全量问题库）</title>
-    <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%AF%BC%E8%88%AA%E5%88%86%E5%8D%B7-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A11000%E9%97%AE</link>
-    <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%AF%BC%E8%88%AA%E5%88%86%E5%8D%B7-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A11000%E9%97%AE</guid>
-    <description><![CDATA[ 专栏⑰·导航分卷：概率论与数理统计 1000 问（全量问题库） 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·导航分卷：概率论与数理统计 1000 问（全量问题库） 📎 专栏⑰导航 → v.flomoapp.com/mine/ ▎ 随机事件与概率 古典概型（等可能概型）的”等可能”假设到底意味着什么？抛硬币正反等可能，是因为硬币对称——但如果硬币稍有磨损、重心偏移，还能用古典概型吗？ 条件概率 P(B|A) = P(AB)/P(A)——这个公式是在”缩小样本空间”：已知事件A发生了，样本空间从Ω缩小成A？ 全概率公式和贝叶斯公式到底是什么关系？一个由因推果（已知原因的概... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 05:14:33 GMT</pubDate>
-  </item><item>
-    <title>考研数学1000问：常见分布、参数估计与假设检验</title>
-    <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/1000%E9%97%AE/%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1%E4%B8%8E%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C</link>
-    <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/1000%E9%97%AE/%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1%E4%B8%8E%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C</guid>
-    <description><![CDATA[ 考研数学1000问：常见分布、参数估计与假设检验 一、常见分布 Q1. ]]></description>
-    <pubDate>Sun, 01 Nov 2026 05:14:27 GMT</pubDate>
-  </item><item>
-    <title>考研数学1000问：概率事件、随机变量与常见分布</title>
-    <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/1000%E9%97%AE/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80%E4%BA%8B%E4%BB%B6%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B8%B8%E8%A7%81%E5%88%86%E5%B8%83</link>
-    <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/1000%E9%97%AE/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80%E4%BA%8B%E4%BB%B6%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B8%B8%E8%A7%81%E5%88%86%E5%B8%83</guid>
-    <description><![CDATA[ 考研数学1000问：概率事件、随机变量与常见分布 一、随机事件与概率 Q1. ]]></description>
-    <pubDate>Sun, 01 Nov 2026 05:13:52 GMT</pubDate>
   </item>
     </channel>
   </rss>
