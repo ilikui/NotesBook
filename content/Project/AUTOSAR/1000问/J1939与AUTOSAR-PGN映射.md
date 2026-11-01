@@ -33,3 +33,11 @@ AUTOSAR 与 J1939 集成 Q1：J1939 的 PGN 对应 AUTOSAR 的哪个概念？在
 总表：<https://v.flomoapp.com/mine/?memo_id=MjMxMTQ2NDk4>
 
 #Area/技术/AUTOSAR
+
+## PGN / CAN ID / PDU 的准确关系
+
+PGN（Parameter Group Number）不是完整的 29-bit CAN Identifier。J1939 扩展帧 ID 还包含 Priority、Reserved/Data Page、PF、PS 和 Source Address 等字段；PDU1/PDU2 格式下 PS 字段的含义不同（PDU1 中是 Destination Address，PDU2 中是 Group Extension）。PGN 由相应标识字段构成，需按 J1939 规则屏蔽/组合。
+
+AUTOSAR 中可把 J1939 参数组映射为通信 PDU，把 SPN 映射为信号，但这是系统/BSW 配置层面的映射关系，不代表 PGN 与 AUTOSAR PDU 在标准概念上完全相同。具体还要检查 J1939Tp、地址管理、请求/应答、动态地址和 PDU 路由配置。
+
+验证时用 CANoe 按 29-bit ID 解码 priority、PGN、SA/DA，并与 ARXML 的 PDU、信号和 J1939 配置对照；不要只比较一个十进制 PGN 数字。
