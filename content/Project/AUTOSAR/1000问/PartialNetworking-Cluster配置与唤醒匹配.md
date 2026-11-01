@@ -23,3 +23,15 @@ Partial Network Cluster 配置：一个支持 PN 的 ECU 靠「PN 位匹配」�
 总表：<https://v.flomoapp.com/mine/?memo_id=MjMxMTQ2NDk4>
 
 #Area/技术/AUTOSAR
+
+## 关键更正：PNC 位不等于 CAN ID 仲裁字段
+
+原笔记中“在 CAN ID 预留位打上 PNC 号”的说法不准确。AUTOSAR CAN Partial Networking 的 PNC 信息通常以 **PNC bit vector** 形式承载在配置的 NM PDU 用户数据区域；CAN ID 用于标识 NM 报文/网络，不是把 PNC 编号直接塞进仲裁 ID 的通用做法。
+
+应区分：
+- **PNC**：Partial Network Cluster，逻辑网络功能组。
+- **PNC bit vector**：NM PDU 中表示哪些 PNC 被请求/激活的位向量。
+- **PN filter / selective wake-up**：支持 PN 的收发器根据配置的 CAN ID、数据字节位置和掩码等过滤条件决定是否唤醒；过滤规则由收发器能力和项目配置决定。
+- **CanNm / ComM / CanIf / CanTrcv / EcuM**：软件侧处理 NM、通信模式、收发器模式和唤醒原因；具体职责与接口取决于 AUTOSAR Release 和供应商实现。
+
+**验证方法：** 检查 NM PDU 的 PNC bit vector 布局、PNC 映射表、收发器 selective-wakeup filter 配置；用 CANoe 发送命中/不命中的 NM 报文，并测量 ECU 是否唤醒、唤醒原因和休眠电流。不要只改 CAN ID 位来模拟 PNC。
