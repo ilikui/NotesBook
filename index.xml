@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>KM</title>
+    <link>https://wiki.likui.info/Area/KM/</link>
+    <guid>https://wiki.likui.info/Area/KM/</guid>
+    <description><![CDATA[ KM（Knowledge Management，知识管理） 关注如何高效地收集、理解、组织、连接和复用个人知识。它不只是工具问题，更是一套帮助思考与行动持续改进的方法。 一句话定位 让知识「进得来、找得到、连得上、用得上」，并最终转化为判断、作品与行动。 知识管理地图 flowchart TD A[&quot;知识输入&quot;] --&gt; B[&quot;捕捉与收集&quot;] B --&gt; C[&quot;阅读与理解&quot;] C --&gt; D[&quot;提炼为自己的表达&quot;] D --&gt; E[&quot;组织与连接&quot;] E --&gt; F[... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:59:20 GMT</pubDate>
+  </item><item>
     <title>1000问知识体系</title>
     <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
     <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90Q1-undefined-reference%E9%93%BE%E6%8E%A5%E9%94%99%E8%AF%AF</guid>
     <description><![CDATA[ 生成代码分析与集成 Q1：编译报「undefined reference」——模块没配全还是链接脚本没加源文件？第一步查什么？ 原始 Flomo：v.flomoapp.com/mine/ 生成代码分析与集成 Q1：编译报「undefined reference」——模块没配全还是链接脚本没加源文件？第一步查什么？ undefined reference 通常两类来源： 配置 / 生成问题：生成代码引用了某个函数 / 变量，但配置没配全，导致那个符号根本没被生成——比如某模块的源文件没生成、某个配置未启用（对应函数没被编译进去）。 链接 / 编译清单问题：符号确实生成了，但对应的 .c 文件没被... ]]></description>
     <pubDate>Sun, 01 Nov 2026 04:58:02 GMT</pubDate>
-  </item><item>
-    <title>多核共享变量与volatile边界</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%A4%9A%E6%A0%B8%E5%85%B1%E4%BA%AB%E5%8F%98%E9%87%8F%E4%B8%8Evolatile%E8%BE%B9%E7%95%8C</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%A4%9A%E6%A0%B8%E5%85%B1%E4%BA%AB%E5%8F%98%E9%87%8F%E4%B8%8Evolatile%E8%BE%B9%E7%95%8C</guid>
-    <description><![CDATA[ 多核共享一个变量——只用 volatile 加全局变量行不行？ 原始 Flomo：v.flomoapp.com/mine/ 多核共享一个变量——只用 volatile 加全局变量行不行？ 结论：地址上能通，正确性上不行。volatile 只挡住「编译器优化」，挡不住硬件层的两件事： 缓存一致性：两个核各有自己的 cache。核 A 改了本地 cache 的副本，核 B 还在读自己 cache 里的旧副本，volatile 不会帮你做 cache 失效 / 刷新。 原子性：volatile 不提供原子操作。变量若是 32 位且跨 cache line 或没按字对齐，读写会被拆成多个总线事务，两个... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:56:16 GMT</pubDate>
   </item>
     </channel>
   </rss>
