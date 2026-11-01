@@ -101,6 +101,19 @@ flowchart TD
 - [[1000问/性能优化-RTE调用与PDU端到端开销]] —— RTE、COM、PduR、CanIf 路径开销及性能热点。
 - [[1000问/SWC-C-S调用并发与抢占]] —— 同步/异步 Client-Server 调用、抢占、优先级与可重入性。
 
+## 工程问答补充与版本边界
+
+- [[1000问/标准版本演进与命名规则]] —— Platform Release（Ryy-mm）、内部 R4.x 编号、Schema 版本与当前发布版的区别。
+- [[1000问/PartialNetworking-Cluster配置与唤醒匹配]] —— PNC bit vector、NM PDU、PN filter 与 selective wake-up 的配置边界。
+- [[1000问/E2E-Profile与使用场景]] —— E2E Profile 机制、Profile 选型边界及 R25-11 对 Profile 1 的状态说明。
+- [[1000问/NvM-冗余块与数据完整性]] —— Redundant Block、CRC、底层存储与掉电故障注入。
+- [[1000问/OS内存保护与可信分区]] —— OS-Application、MPU、Trusted Function 与 Freedom from Interference。
+- [[1000问/变体管理-PreCompileLinkPostBuild]] —— Pre-Compile、Link-Time、Post-Build 的选择时机与切换边界。
+- [[1000问/工具配置实战Q4-PostBuild产物与PDU路由变体]] —— Post-Build 产物、PDU 路由配置和运行时切换限制。
+- [[1000问/运行时问题定位Q1-CAN报文发送链路]]、[[1000问/运行时问题定位Q2-PDU周期发送抖动]] —— 发送链路、COM 调度、控制器状态和总线仲裁排查。
+- [[1000问/生成代码分析Q1-undefined-reference链接错误]]、[[1000问/生成代码分析Q2-BSW条件编译宏判断]]、[[1000问/生成代码分析Q3-RteType类型一致性]] —— 生成代码、链接符号、宏和 RTE 数据类型审计。
+- [[1000问/性能优化-RTE调用与PDU端到端开销]]、[[1000问/性能优化-多SWC调度表与Runnable顺序]] —— RTE 路径测量、Task/Event 映射与调度验证。
+
 ## 基础资料与分层补充
 
 - [[基础资料与分层补充]] —— BSW 服务分类、DDS、AUTOSAR 文档阅读、RTE/服务层/ECU 抽象层/MCAL/CDD 与 RTE 规范摘录。
