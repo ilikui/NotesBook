@@ -34,3 +34,9 @@ BswM 的 Action（BswMAction）主要类型：
 总表：<https://v.flomoapp.com/mine/?memo_id=MjMxMTQ2NDk4>
 
 #Area/技术/AUTOSAR
+
+## 配置与版本边界补充
+
+BswM ActionList 不是可在配置里调用任意 C 函数的通用脚本引擎。它执行 AUTOSAR 规范和供应商实现所支持的 Action 类型，例如模式切换、通信/路由相关动作、调用已定义的 BSW 请求接口等；具体 Action 类型和参数由所用 Release、BSW 模块集成及 DaVinci/EB 工具版本决定。
+
+因此，不能把示例中的 PduR、CanIf、NvM API 当成所有项目都能直接放入 ActionList 的通用清单。应在工具的 BswM Action 类型列表、生成代码和模块 SWS 中确认支持范围，并检查动作执行顺序、条件反复触发、立即/延迟执行和失败处理。
