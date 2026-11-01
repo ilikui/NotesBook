@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>1000问知识体系</title>
+    <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
+    <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
+    <description><![CDATA[ 1000问知识体系 这里集中整理 Flomo 中长期积累的「1000问 / 1000题 / 10000问」问题库、逐题解答和专题卡片。目标不是只保存题目，而是把每个问题沉淀为可检索、可验证、可复用的知识单元。 迁移原则：保留问题原意；合并重复题但记录关联；答案给出原理、适用边界和验证方法；技术内容尽量附 Mermaid 图；未核验的结论明确标注待核验。Flomo 原笔记暂不删除。 知识迁移流程 flowchart TD A[Flomo 原始笔记] --&gt; B[检索与盘点] B --&gt; C[按主题归类] C --&gt; D[识别重复问题] D --&gt; E[读取完整原文] E ... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 13:29:29 GMT</pubDate>
+  </item><item>
+    <title>未定义行为专题-Q1-Q4</title>
+    <link>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E6%9C%AA%E5%AE%9A%E4%B9%89%E8%A1%8C%E4%B8%BA%E4%B8%93%E9%A2%98-Q1-Q4</link>
+    <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80/1000%E9%97%AE/%E6%9C%AA%E5%AE%9A%E4%B9%89%E8%A1%8C%E4%B8%BA%E4%B8%93%E9%A2%98-Q1-Q4</guid>
+    <description><![CDATA[ C语言 1000问｜未定义行为专题（Q1–Q4） 来源：Flomo 原始笔记；本页按问题顺序整理，保留原笔记的核心解释、示例与实践建议。 Q1：什么是未定义行为 Q2：序列点与求值顺序 Q3：严格别名规则 Q4：有符号溢出与符号转换 Q1：什么是未定义行为（UB）？ Flomo 原文 ▎ 五大学习法：西蒙学习法——把「UB」钻透 什么是未定义行为（UB） C 标准对某些程序行为「不做任何保证」——标准没说会发生什么，编译器可以任意处理（看起来正常、崩溃、静默算错、甚至把整段代码优化掉）。 UB 不是「结果随机」，而是「标准不约束，实现不保证」。 相邻概念：未指定行为（unspecified，几... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 13:29:11 GMT</pubDate>
+  </item><item>
     <title>ModeManagementGuide</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/ModeManagementGuide</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/ModeManagementGuide</guid>
@@ -48,23 +60,11 @@
     <description><![CDATA[ MATLAB 与 Simulink 10000问 本专题按基础语法、矩阵数值计算、Simulink 建模、代码生成验证、面向对象与高级工具组织。当前 5 篇答案页覆盖 Q1–Q72；每题以原理、代码/模型行为、适用条件和工程验证为主。 题库导航 基础语法矩阵与Simulink建模：Q1–Q12，矩阵基础、索引、脚本/函数、绘图和求解器。 矩阵可视化数值计算与信号处理：Q13–Q24，可视化、数值求解、数据导入、FFT、滤波和符号计算。 Simulink建模控制系统与物理仿真：Q25–Q36，Subsystem、代数环、控制模型、Stateflow、Simscape 和 Model Refere... ]]></description>
     <pubDate>Sun, 01 Nov 2026 05:17:59 GMT</pubDate>
   </item><item>
-    <title>1000问知识体系</title>
-    <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
-    <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
-    <description><![CDATA[ 1000问知识体系 这里集中整理 Flomo 中长期积累的「1000问 / 1000题 / 10000问」问题库、逐题解答和专题卡片。目标不是只保存题目，而是把每个问题沉淀为可检索、可验证、可复用的知识单元。 迁移原则：保留问题原意；合并重复题但记录关联；答案给出原理、适用边界和验证方法；技术内容尽量附 Mermaid 图；未核验的结论明确标注待核验。Flomo 原笔记暂不删除。 知识迁移流程 flowchart TD A[Flomo 原始笔记] --&gt; B[检索与盘点] B --&gt; C[按主题归类] C --&gt; D[识别重复问题] D --&gt; E[读取完整原文] E ... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 05:16:08 GMT</pubDate>
-  </item><item>
     <title>专栏⑰·导航：考研数学 1000 问全景——高数 × 线代 × 概率论</title>
     <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%AF%BC%E8%88%AA-%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A61000%E9%97%AE%E5%85%A8%E6%99%AF</link>
     <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%AF%BC%E8%88%AA-%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A61000%E9%97%AE%E5%85%A8%E6%99%AF</guid>
     <description><![CDATA[ 专栏⑰·导航：考研数学 1000 问全景——高数 × 线代 × 概率论 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·导航：考研数学 1000 问全景——高数 × 线代 × 概率论 📎 专栏⑯AI导航 → v.flomoapp.com/mine/ ▎目录（10篇） 马尔可夫链——无后效性的力量（10 大板块深度专题） 矩阵变换 = 坐标系转换（线代 × 嵌入式，Park 变换 / DBC 解析 / RTE） 堆问题法在数学上的矛盾——先列问题还是先学原理 课本定义 vs 工程实际——最短路径和特征分解的差距 极限与导数实战——微积分 × ADC 采样离散化 线性代数实战... ]]></description>
     <pubDate>Sun, 01 Nov 2026 05:16:02 GMT</pubDate>
-  </item><item>
-    <title>考研数学1000问：多元积分、常微分方程与无穷级数</title>
-    <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/1000%E9%97%AE/%E5%A4%9A%E5%85%83%E7%A7%AF%E5%88%86%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E4%B8%8E%E6%97%A0%E7%A9%B7%E7%BA%A7%E6%95%B0</link>
-    <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/1000%E9%97%AE/%E5%A4%9A%E5%85%83%E7%A7%AF%E5%88%86%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E4%B8%8E%E6%97%A0%E7%A9%B7%E7%BA%A7%E6%95%B0</guid>
-    <description><![CDATA[ 考研数学1000问：多元积分、常微分方程与无穷级数 一、多元积分 Q1. ]]></description>
-    <pubDate>Sun, 01 Nov 2026 05:15:54 GMT</pubDate>
   </item>
     </channel>
   </rss>
