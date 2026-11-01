@@ -35,14 +35,14 @@ flowchart TD
 | C语言 1000问 | 语法、指针、内存、预处理、未定义行为 | [Area/EE/C语言](../../Area/EE/C语言) |
 | AI 1000问 | AI 基础、大模型、训练、推理、RAG、Agent | [Area/AI](../../Area/AI/) |
 | 考研数学 1000问 | 高数、线代、概率论、工程应用 | [Area/EE/数学](../../Area/EE/数学) |
-| 历史上下五千年 | 朝代主线与政治、经济、军事、文化等专题 | Resource/History（待整理） |
-| 软考高级 1000问 | 系统架构师、信息系统项目管理师 | Project/考试管理（待整理） |
-| 儿童教育 1000问 | 从小学到大学、分科方法与学习路径 | Resource/Education（待整理） |
+| 历史上下五千年 | 朝代主线与政治、经济、军事、文化等专题 | [Resource/History](../History/1000问/)（已建立首批问答，待逐题数量核对） |
+| 软考高级 1000问 | 系统架构师、信息系统项目管理师 | [Project/考试管理](../../Project/考试管理/软考高级1000问)（已建立多篇问答，待逐题审校） |
+| 儿童教育 1000问 | 从小学到大学、分科方法与学习路径 | [Resource/Education](../Education/1000问/)（已建立首批问答，待逐题数量核对） |
 | 自动驾驶 1000问 | 感知、融合、规划、执行、计算平台、安全 | [Area/EE/自动驾驶](../../Area/EE/自动驾驶) |
 | MATLAB/Simulink 10000问 | MATLAB、Simulink、建模、仿真、代码生成 | [Area/EE/MATLAB](../../Area/EE/MATLAB/)（已建立专题导航与五篇问答文档，补充官方资源、工具箱和 CI 资料） |
-| 电气工程 10000问 | 电路、电机、电力电子、控制等 | Area/EE/电气工程（待整理） |
-| 数据结构与算法 1000问 | 数据结构、复杂度、算法设计与分析 | Area/CS（待整理） |
-| 考研英语 10000问 | 词汇、语法、阅读、写作 | Resource/Study（待整理） |
+| 电气工程 10000问 | 电路、电机、电力电子、控制等 | [Area/EE/电气工程](../../Area/EE/电气工程/10000问/)（已建立多篇问答，持续补充） |
+| 数据结构与算法 1000问 | 数据结构、复杂度、算法设计与分析 | [Area/CS](../../Area/CS/1000问/数据结构算法基础与线性结构)（已建立首批问答，待扩充） |
+| 考研英语 10000问 | 词汇、语法、阅读、写作 | [Resource/Study](../Study/考研英语/10000问/词汇语法与阅读)（已建立首批问答，待扩充） |
 | 嵌入式通信协议 1000问 | UART、SPI、I2C、CAN 等 | [Area/EE/通信](../../Area/EE/通信/) |
 | Makefile 100问 | GNU Make 语法、工程组织、嵌入式/AUTOSAR 构建 | [Area/EE/构建系统](../../Area/EE/构建系统/Makefile100问) |
 
@@ -182,10 +182,10 @@ flowchart TD
 
 - [x] 完成 Flomo 初步检索，识别主要系列和导航笔记
 - [x] 建立本总索引与统一问答标准
-- [ ] 按系列完整盘点所有 Flomo 笔记（包括分页与日期分段；已发现原始分项总数与汇总数字不一致）
+- [ ] 按系列完整盘点所有 Flomo 笔记（包括分页与日期分段；需继续核对原始分项总数与汇总数字）
 - [x] 已迁移首批问答内容，覆盖 AUTOSAR、C语言、嵌入式、AI、数学、软考、数据结构与算法、通信协议、历史、儿童教育、电气工程、MATLAB/Simulink、考研英语、自动驾驶等专题；另新增 Makefile 100问 30 题，以及电气工程 10000问补充 16 道答案卡。历史分项统计存在口径不一致与重复题可能，最终唯一题数以逐条回读去重结果为准。
-- [ ] 补齐每个专题的 Mermaid 图
-- [ ] 回读 GitHub 文件，检查链接、重复题与答案完整性
+- [ ] 逐篇检查 134 个问答系列相关文件的答案深度、图示、来源和交叉链接；缺项逐批补齐
+- [ ] 回读 GitHub 文件，检查链接、重复题与答案完整性（持续执行；已补全 ModeManagementGuide 与 BSWDistributionGuide 的工程问答）
 - [ ] 对照 Flomo 原始笔记完成最终数量核对
 
 ## 来源
@@ -196,3 +196,19 @@ flowchart TD
 - Flomo「C语言 1000 问全景」：https://v.flomoapp.com/mine/?memo_id=MjQ1NzM0NTk5
 - Flomo「AI 1000 问全景」：https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc0NzUw
 - Flomo「考研数学 1000 问全景」：https://v.flomoapp.com/mine/?memo_id=MjQ2Mzc0OTc2
+
+## 全库问答完善口径（2026-11-01）
+
+本仓库当前 `content/` 下盘点到 443 个文件，其中与 1000问 / 10000问 / 100问命名相关的文件 134 个。**文件数不等于题目数，也不代表每题均已达到完整答案标准。** 后续逐篇验收时，按以下标准补齐：
+
+- 题目必须有明确答案，不以标题、关键词列表或“见某规范”代替回答。
+- 说明原理、关键机制、适用前提和边界条件。
+- 技术题补充可复现的工程案例、代码/配置示例或排障步骤（适用时）。
+- 给出验证方法、预期现象和常见误区。
+- AUTOSAR 题标明 Classic/Adaptive、Release 和标准要求/供应商实现的边界。
+- 保留 Flomo 原始来源；重复题采用主答案 + 交叉链接，不机械复制。
+- 未经来源或实测验证的内容明确标注“待核验”，不能伪装成确定结论。
+
+本轮新增质量补全：
+- [ModeManagementGuide](../../Project/AUTOSAR/规范模块/ModeManagementGuide)：补充 8 个工程问答，覆盖 Mode/ModeDeclaration、Manager/User、Application/BSW Mode、BswM 规则与动作、EcuM/ComM、网络、DCM 路由和验证。
+- [BSWDistributionGuide](../../Project/AUTOSAR/规范模块/BSWDistributionGuide)：补充 10 个工程问答，覆盖 Core/OS-Application/Partition、IOC、跨核同步、内存保护、功能安全、任务映射、volatile 边界和多核启动。
