@@ -6,23 +6,23 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>1000问知识体系</title>
-    <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
-    <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
-    <description><![CDATA[ 1000问知识体系 这里集中整理 Flomo 中长期积累的「1000问 / 1000题 / 10000问」问题库、逐题解答和专题卡片。目标不是只保存题目，而是把每个问题沉淀为可检索、可验证、可复用的知识单元。 迁移原则：保留问题原意；合并重复题但记录关联；答案给出原理、适用边界和验证方法；技术内容尽量附 Mermaid 图；未核验的结论明确标注待核验。Flomo 原笔记暂不删除。 知识迁移流程 flowchart TD A[Flomo 原始笔记] --&gt; B[检索与盘点] B --&gt; C[按主题归类] C --&gt; D[识别重复问题] D --&gt; E[读取完整原文] E ... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 05:14:41 GMT</pubDate>
-  </item><item>
-    <title>专栏⑰·导航分卷：概率论与数理统计 1000 问（全量问题库）</title>
-    <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%AF%BC%E8%88%AA%E5%88%86%E5%8D%B7-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A11000%E9%97%AE</link>
-    <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%AF%BC%E8%88%AA%E5%88%86%E5%8D%B7-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A11000%E9%97%AE</guid>
-    <description><![CDATA[ 专栏⑰·导航分卷：概率论与数理统计 1000 问（全量问题库） 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·导航分卷：概率论与数理统计 1000 问（全量问题库） 📎 专栏⑰导航 → v.flomoapp.com/mine/ ▎ 随机事件与概率 古典概型（等可能概型）的”等可能”假设到底意味着什么？抛硬币正反等可能，是因为硬币对称——但如果硬币稍有磨损、重心偏移，还能用古典概型吗？ 条件概率 P(B|A) = P(AB)/P(A)——这个公式是在”缩小样本空间”：已知事件A发生了，样本空间从Ω缩小成A？ 全概率公式和贝叶斯公式到底是什么关系？一个由因推果（已知原因的概... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 05:14:33 GMT</pubDate>
-  </item><item>
     <title>考研数学1000问：常见分布、参数估计与假设检验</title>
     <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/1000%E9%97%AE/%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1%E4%B8%8E%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C</link>
     <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/1000%E9%97%AE/%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1%E4%B8%8E%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C</guid>
     <description><![CDATA[ 考研数学1000问：常见分布、参数估计与假设检验 一、常见分布 Q1. ]]></description>
     <pubDate>Sun, 01 Nov 2026 05:14:27 GMT</pubDate>
+  </item><item>
+    <title>1000问知识体系</title>
+    <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
+    <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
+    <description><![CDATA[ 1000问知识体系 这里集中整理 Flomo 中长期积累的「1000问 / 1000题 / 10000问」问题库、逐题解答和专题卡片。目标不是只保存题目，而是把每个问题沉淀为可检索、可验证、可复用的知识单元。 迁移原则：保留问题原意；合并重复题但记录关联；答案给出原理、适用边界和验证方法；技术内容尽量附 Mermaid 图；未核验的结论明确标注待核验。Flomo 原笔记暂不删除。 知识迁移流程 flowchart TD A[Flomo 原始笔记] --&gt; B[检索与盘点] B --&gt; C[按主题归类] C --&gt; D[识别重复问题] D --&gt; E[读取完整原文] E ... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 05:14:06 GMT</pubDate>
+  </item><item>
+    <title>专栏⑰·导航分卷：概率论与数理统计 1000 问（全量问题库）</title>
+    <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%AF%BC%E8%88%AA%E5%88%86%E5%8D%B7-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A11000%E9%97%AE</link>
+    <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%AF%BC%E8%88%AA%E5%88%86%E5%8D%B7-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A11000%E9%97%AE</guid>
+    <description><![CDATA[ 专栏⑰·导航分卷：概率论与数理统计 1000 问（全量问题库） 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·导航分卷：概率论与数理统计 1000 问（全量问题库） 📎 专栏⑰导航 → v.flomoapp.com/mine/ ▎ 随机事件与概率 古典概型（等可能概型）的”等可能”假设到底意味着什么？抛硬币正反等可能，是因为硬币对称——但如果硬币稍有磨损、重心偏移，还能用古典概型吗？ 条件概率 P(B|A) = P(AB)/P(A)——这个公式是在”缩小样本空间”：已知事件A发生了，样本空间从Ω缩小成A？ 全概率公式和贝叶斯公式到底是什么关系？一个由因推果（已知原因的概... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 05:13:58 GMT</pubDate>
   </item><item>
     <title>考研数学1000问：概率事件、随机变量与常见分布</title>
     <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/1000%E9%97%AE/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80%E4%BA%8B%E4%BB%B6%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B8%B8%E8%A7%81%E5%88%86%E5%B8%83</link>
