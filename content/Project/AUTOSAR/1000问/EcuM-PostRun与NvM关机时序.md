@@ -36,3 +36,11 @@ PostRun 期间仍在工作的模块：
 总表：<https://v.flomoapp.com/mine/?memo_id=MjMxMTQ2NDk4>
 
 #Area/技术/AUTOSAR
+
+## 配置边界补充
+
+PostRun 是 EcuM 管理运行请求/关机过程中的一种状态概念；不能假定所有项目都在 PostRun 中执行完全相同的 NvM 写入清单。NvM_WriteAll、单块写入、诊断收尾、看门狗服务和 Fee/Fls 作业是否继续运行，取决于 EcuM Shutdown Target、BswM ActionList、NvM 配置和供应商集成。
+
+EcuM 也不一定对每个 NvM 请求都无限等待。工程上必须配置并验证关机时限、写入完成判据、超时处理、掉电预算和失败记录。NvM 作业完成回调是常见协调手段，但具体 API/调用顺序要看版本和集成。
+
+**验证方法：** 在 NvM 写入进行中触发关机，记录 EcuM 状态、NvM 请求结果、Fee/Fls Job 状态、供电掉电时刻和重启后数据完整性；再注入超时和掉电，确认策略符合需求。
