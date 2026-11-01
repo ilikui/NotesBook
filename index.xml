@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>问题树：如何发现、拆解、分析并解决复杂问题</title>
+    <link>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E9%97%AE%E9%A2%98%E6%A0%91%E4%B8%8E%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF</link>
+    <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E9%97%AE%E9%A2%98%E6%A0%91%E4%B8%8E%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF</guid>
+    <description><![CDATA[ 问题树：如何发现、拆解、分析并解决复杂问题 原始 Flomo：v.flomoapp.com/mine/ 一、先把模糊现象改写成可解决的问题 问题不是“系统不好用”或“客户不满意”这种判断，而是现状与目标之间可观察、可度量的差距。建议用一句话写清： 在什么场景、哪个对象、什么时间范围内，实际表现与目标差多少？影响谁？希望达到什么结果？ 例如：“最近两周，某 ECU 在高温环境下偶发 CAN 通信中断，目标是定位可复现根因并把复发率降到项目阈值以下。” 二、问题解决七步法 界定问题：明确范围、影响、时间线、症状、目标和不在范围内的内容。 收集事实：区分观察事实、推测、观点；记录日志、版本、环境、样... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:53:21 GMT</pubDate>
+  </item><item>
     <title>CEM 项目知识地图</title>
     <link>https://wiki.likui.info/Project/CEM/</link>
     <guid>https://wiki.likui.info/Project/CEM/</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/1000%E9%97%AE/DMA%E6%95%B0%E6%8D%AE%E6%90%AC%E8%BF%90%E4%B8%8E%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7</guid>
     <description><![CDATA[ 专栏⑮·补充二：DMA——数据搬运不占 CPU 的隐形引擎 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 专栏⑮·补充二：DMA——数据搬运不占 CPU 的隐形引擎 ▎ 为什么嵌入式高性能离不开 DMA UART 收一串不定长数据、ADC 连续采样 1024 点、SPI 读 Flash 一页——这些如果全用中断逐字节搬，CPU 全耗在搬运上，实时性崩。DMA 把「从外设搬到内存」这件事外包给硬件，搬完再打断你。 ▎ DMA 是什么 直接内存访问：独立于 CPU 的搬运引擎，一条总线主设备 搬运描述：源地址 + 目的地址 + 长度 + 触发源（外设事件） 搬完回调：传输... ]]></description>
     <pubDate>Sun, 01 Nov 2026 04:24:46 GMT</pubDate>
-  </item><item>
-    <title>CAN网络（通用概念参考，来自Kimi）</title>
-    <link>https://wiki.likui.info/Area/EE/%E9%80%9A%E4%BF%A1/1000%E9%97%AE/CAN%E7%BD%91%E7%BB%9C%E9%80%9A%E7%94%A8%E6%A6%82%E5%BF%B5</link>
-    <guid>https://wiki.likui.info/Area/EE/%E9%80%9A%E4%BF%A1/1000%E9%97%AE/CAN%E7%BD%91%E7%BB%9C%E9%80%9A%E7%94%A8%E6%A6%82%E5%BF%B5</guid>
-    <description><![CDATA[ CAN网络（通用概念参考，来自Kimi） 原始 Flomo：v.flomoapp.com/mine/ CAN网络（通用概念参考，来自Kimi） 📎 你的实战排查内容在此 → CAN终端电阻物理含义 v.flomoapp.com/mine/ 📎 CAN排查工具箱清单 v.flomoapp.com/mine/ 📎 CAN通信栈七层数据流 v.flomoapp.com/mine/ （原文为2024-06-11 Kimi生成的CAN总线基础介绍，已被后续实战笔记覆盖） 通信 CAN 网络基础问答补全 Q1. ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:23:35 GMT</pubDate>
   </item>
     </channel>
   </rss>
