@@ -37,3 +37,11 @@ SW-C 生命周期与状态管理 Q1：一个 Application SW-C 从 ECU 上电到�
 总表：<https://v.flomoapp.com/mine/?memo_id=MjMxMTQ2NDk4>
 
 #Area/技术/AUTOSAR
+
+## 关键边界补充
+
+- EcuM 负责 ECU 启动/关机管理，BswM 负责模式仲裁；它们通常不直接“把 Runnable 放进 OS Task”。Runnable 的调度由 RTE 根据 SWC 的 Event-to-Task Mapping 生成/驱动，OS 执行对应 Task。
+- ECU 进入 Sleep/Shutdown 前，Runnable 是否停止、哪些收尾 Runnable 仍可运行，取决于 RTE、OS、BswM/EcuM 状态序列和项目配置；不能简单认为进入 PostRun 后所有应用 Runnable 都立即停止。
+- SWC 生命周期（实例初始化、Runnable 调度、模式切换）与 ECU 生命周期不是一一对应关系。一个 SWC 可能在 ECU RUN 状态下仅部分 Runnable 被触发。
+
+验证时查看 RTE 生成的 Event/Task 映射、OsTask 配置、启动/关机模式请求和实际 OS Trace，确认哪个模块触发哪个 Runnable。
