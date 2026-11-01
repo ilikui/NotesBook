@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>1000问知识体系</title>
+    <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
+    <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
+    <description><![CDATA[ 1000问知识体系 这里集中整理 Flomo 中长期积累的「1000问 / 1000题 / 10000问」问题库、逐题解答和专题卡片。目标不是只保存题目，而是把每个问题沉淀为可检索、可验证、可复用的知识单元。 迁移原则：保留问题原意；合并重复题但记录关联；答案给出原理、适用边界和验证方法；技术内容尽量附 Mermaid 图；未核验的结论明确标注待核验。Flomo 原笔记暂不删除。 知识迁移流程 flowchart TD A[Flomo 原始笔记] --&gt; B[检索与盘点] B --&gt; C[按主题归类] C --&gt; D[识别重复问题] D --&gt; E[读取完整原文] E ... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 05:01:39 GMT</pubDate>
+  </item><item>
+    <title>人工智能学习中心</title>
+    <link>https://wiki.likui.info/Area/AI/</link>
+    <guid>https://wiki.likui.info/Area/AI/</guid>
+    <description><![CDATA[ 人工智能学习中心 从数学、编程和经典算法出发，逐步掌握机器学习、深度学习、大模型、智能体与 AI 工程。这里不仅收集资料，更强调读懂原理、运行代码、复现论文、完成项目、评估结果。 推荐学习方式 每个主题按「概念 → 数学直觉 → 代码实验 → 论文/数据 → 项目复盘」学习。不要只收藏链接；至少留下一个可运行实验和一篇自己的总结。 知识地图 flowchart TD A[&quot;人工智能 AI&quot;] --&gt; B[&quot;数学与编程基础&quot;] B --&gt; C[&quot;AI 基础与搜索推理&quot;] C --&gt; D[&quot;机器学习&quot;... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 05:01:33 GMT</pubDate>
+  </item><item>
     <title>AI 1000问：基础概念、机器学习与神经网络入门</title>
     <link>https://wiki.likui.info/Area/AI/1000%E9%97%AE/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8</link>
     <guid>https://wiki.likui.info/Area/AI/1000%E9%97%AE/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8</guid>
@@ -53,18 +65,6 @@
     <guid>https://wiki.likui.info/Area/KM/</guid>
     <description><![CDATA[ KM（Knowledge Management，知识管理） 关注如何高效地收集、理解、组织、连接和复用个人知识。它不只是工具问题，更是一套帮助思考与行动持续改进的方法。 一句话定位 让知识「进得来、找得到、连得上、用得上」，并最终转化为判断、作品与行动。 知识管理地图 flowchart TD A[&quot;知识输入&quot;] --&gt; B[&quot;捕捉与收集&quot;] B --&gt; C[&quot;阅读与理解&quot;] C --&gt; D[&quot;提炼为自己的表达&quot;] D --&gt; E[&quot;组织与连接&quot;] E --&gt; F[... ]]></description>
     <pubDate>Sun, 01 Nov 2026 04:59:20 GMT</pubDate>
-  </item><item>
-    <title>1000问知识体系</title>
-    <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
-    <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
-    <description><![CDATA[ 1000问知识体系 这里集中整理 Flomo 中长期积累的「1000问 / 1000题 / 10000问」问题库、逐题解答和专题卡片。目标不是只保存题目，而是把每个问题沉淀为可检索、可验证、可复用的知识单元。 迁移原则：保留问题原意；合并重复题但记录关联；答案给出原理、适用边界和验证方法；技术内容尽量附 Mermaid 图；未核验的结论明确标注待核验。Flomo 原笔记暂不删除。 知识迁移流程 flowchart TD A[Flomo 原始笔记] --&gt; B[检索与盘点] B --&gt; C[按主题归类] C --&gt; D[识别重复问题] D --&gt; E[读取完整原文] E ... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:59:02 GMT</pubDate>
-  </item><item>
-    <title>工具链自动化构建 Q1 AUTOSAR 配置工具（Davinci / EB）和代码构建（make/cmake）怎么衔接？怎么跟 CI 集成？有没有 headless 模式？</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%93%BE-Configurator%E4%B8%8ECI%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%93%BE-Configurator%E4%B8%8ECI%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA</guid>
-    <description><![CDATA[ 工具链自动化构建 Q1：AUTOSAR 配置工具（Davinci / EB）和代码构建（make/cmake）怎么衔接？怎么跟 CI 集成？有没有 headless 模式？ 原始 Flomo：v.flomoapp.com/mine/ 工具链自动化构建 Q1：AUTOSAR 配置工具（Davinci / EB）和代码构建（make/cmake）怎么衔接？怎么跟 CI 集成？有没有 headless 模式？ 答案：有，大多数工具支持命令行 / 无头模式（headless / CLI），这是配置生成能进 CI 的关键。 衔接思路（三步）： 用工具的 headless 命令行生成代码： EB tres... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:58:28 GMT</pubDate>
   </item>
     </channel>
   </rss>
