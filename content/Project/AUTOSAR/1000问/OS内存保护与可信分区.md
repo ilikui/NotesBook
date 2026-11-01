@@ -29,3 +29,12 @@ Trusted vs Non-Trusted Function：
 总表：<https://v.flomoapp.com/mine/?memo_id=MjMxMTQ2NDk4>
 
 #Area/技术/AUTOSAR
+
+## 重要边界补充
+
+- Trusted OS-Application 并不意味着“在所有芯片/配置下天然可访问整个物理地址空间”。实际权限仍由 OS 配置、MPU region、内核特权级和芯片实现共同决定。
+- Non-Trusted OS-Application 可通过 AUTOSAR OS 定义的受控机制（例如配置的 Trusted Function）请求执行需要特权的操作；并非所有 OS 服务都只能由 Trusted 应用调用。服务可用性取决于 OS-Application 权限和一致性约束。
+- MPU 内存分区主要实现空间隔离；时间保护、服务保护和硬件安全机制是不同维度，不能把 MPU 单独等同于完整 Freedom from Interference。
+- “Trusted / Non-Trusted”是 AUTOSAR OS 应用可信属性，不应与 ISO 26262 ASIL 等级简单一一对应。
+
+**验证方法：** 对每个 OS-Application 检查内存区、访问权限、栈区、代码区、特权调用路径和保护 Hook；在目标硬件上执行越界读写/非法访问测试，确认保护反应与恢复策略。
