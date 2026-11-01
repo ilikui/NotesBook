@@ -38,3 +38,11 @@ tags:
 总表：<https://v.flomoapp.com/mine/?memo_id=MjMxMTQ2NDk4>
 
 #Area/技术/AUTOSAR
+
+## 工具自动化边界补充
+
+是否支持 headless/CLI、具体命令、是否允许在 CI 服务器运行，以及是否需要 License Server，均依赖 Vector DaVinci/EB tresos 的产品版本、插件、许可证和供应商交付方式。不能把某个版本的命令参数当成通用命令。
+
+落地前先从当前安装包的官方用户手册/命令行帮助确认 batch mode；在 CI 上锁定工具版本、插件、license、环境变量、工程路径和生成参数。若工具不支持稳定无头模式，可考虑供应商提供的自动化接口或受控虚拟机 GUI 自动化，但应把它作为有维护成本的替代方案。
+
+CI 除“生成+编译”外，还应保留配置校验报告、生成日志、工具版本、输入文件 hash、生成物 hash 和构建产物，确保可审计、可复现。
