@@ -27,3 +27,11 @@
 总表：<https://v.flomoapp.com/mine/?memo_id=MjMxMTQ2NDk4>
 
 #Area/技术/AUTOSAR
+
+## 周期与测量边界补充
+
+COM 的 Tx 周期由 PDU/发送模式配置与对应 Com_MainFunctionTx 调度共同决定；周期参数不一定简单等于 MainFunction 周期的整数倍，具体计数、偏移、DIRECT/MIXED/伪随机发送模式和 deadline monitoring 行为按 COM 版本与配置确定。
+
+实际总线时间还会受 CAN 仲裁、帧优先级、总线负载、错误重发、BusOff、控制器 Tx queue 和网关转发影响。用 CANoe/CANalyzer 时间戳分析逻辑报文间隔；示波器用于检查物理层波形/边沿/错误，不应仅凭示波器“波形不齐”推断 COM 调度。
+
+排查时分别记录：OS Task 周期与 jitter、Com_MainFunctionTx 实际调用时间、COM PDU Tx 请求时间、CanIf/Can Tx confirmation 时间和总线 Trace 时间，从而区分软件调度抖动与仲裁延迟。
