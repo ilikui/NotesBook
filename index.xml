@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>电气工程</title>
+    <link>https://wiki.likui.info/Area/EE/%E7%94%B5%E6%B0%94%E5%B7%A5%E7%A8%8B/</link>
+    <guid>https://wiki.likui.info/Area/EE/%E7%94%B5%E6%B0%94%E5%B7%A5%E7%A8%8B/</guid>
+    <description><![CDATA[ 电气工程 电气工程知识体系覆盖电路、模拟/数字电子、自动控制、电机、电力电子、信号系统、电力系统、继电保护、传感器、EMC 和电气安全。 10000问逐题解答 电路模拟与数字电子基础 —— KCL/KVL、等效定理、储能元件、谐振、半导体器件、运放和数字逻辑。 电力系统传感器信号与安全 —— 标幺值、HVAC/HVDC、逻辑完备性、保护接地/接零、采样混叠、传感器原理与测量误差。 电力系统继电保护高压与EMC —— 短路、潮流、继电保护、局部放电、绝缘材料、EMC 与 RCD。 自动控制电机拖动与FOC —— 开闭环、传递函数、PID、稳定性、根轨迹、双闭环调速、FOC 和电机特性。 信号智能... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 13:32:42 GMT</pubDate>
+  </item><item>
     <title>电气工程10000问：传感器、电力系统、控制、电机与PLC</title>
     <link>https://wiki.likui.info/Area/EE/%E7%94%B5%E6%B0%94%E5%B7%A5%E7%A8%8B/10000%E9%97%AE/%E4%BC%A0%E6%84%9F%E5%99%A8%E7%94%B5%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%8E%A7%E5%88%B6%E7%94%B5%E6%9C%BA%E4%B8%8EPLC</link>
     <guid>https://wiki.likui.info/Area/EE/%E7%94%B5%E6%B0%94%E5%B7%A5%E7%A8%8B/10000%E9%97%AE/%E4%BC%A0%E6%84%9F%E5%99%A8%E7%94%B5%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%8E%A7%E5%88%B6%E7%94%B5%E6%9C%BA%E4%B8%8EPLC</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Resource/Education/</guid>
     <description><![CDATA[ Education（教育） 汇集小学阶段的学习资料与知识脉络，以思维导图方式梳理各学科的知识点框架，便于家长辅导与孩子查漏补缺。 一句话定位 用一张思维导图看清一个年级、一门学科「到底要学什么」。 儿童教育 1000问 学习习惯语文与数学启蒙 —— 学习阶段、提问法、识字、阅读、写作与数感启蒙。 分科实战语文数学英语与理科 —— 语文、数学、英语、物理、化学和生物的分科学习方法。 年级转折与长期学习规划 —— 幼小衔接、小学到大学的关键转折、学习策略与家庭支持。 flowchart TD A[好奇与兴趣] --&gt; B[提问] B --&gt; C[阅读 / 观察 / 实验] C --&g... ]]></description>
     <pubDate>Sun, 01 Nov 2026 05:18:16 GMT</pubDate>
-  </item><item>
-    <title>EE</title>
-    <link>https://wiki.likui.info/Area/EE/</link>
-    <guid>https://wiki.likui.info/Area/EE/</guid>
-    <description><![CDATA[ 电子、电气与嵌入式系统的学习地图。 ]]></description>
-    <pubDate>Sun, 01 Nov 2026 05:18:09 GMT</pubDate>
   </item>
     </channel>
   </rss>
