@@ -25,3 +25,9 @@ AUTOSAR 视角：OS 多核用 GetSpinlock / ReleaseSpinlock 这类 API 保护短
 总表：<https://v.flomoapp.com/mine/?memo_id=MjMxMTQ2NDk4>
 
 #Area/技术/AUTOSAR
+
+## 实时系统与 AUTOSAR 术语边界
+
+AUTOSAR OS 的 Resource 与 Spinlock 不应简单等同于通用 OS 的 Mutex。Resource 常用于单核资源访问并配合优先级天花板协议；Spinlock 用于多核共享资源同步，持锁期间应极短且不得执行阻塞操作。是否允许特定 ISR 类别调用相关 API，必须查 AUTOSAR OS 一致性类和 OS 配置约束。
+
+“ISR 里绝对不能使用 Spinlock”也过于绝对：不同 OS/架构对 ISR 类别和 API 调用有明确限制，某些场景可在受限规则下使用，但必须避免持锁者被无法恢复执行的高优先级上下文永久阻塞。设计优先考虑缩短临界区、关中断/中断屏蔽策略、IOC 或无锁消息传递，并分析最坏等待时间。
