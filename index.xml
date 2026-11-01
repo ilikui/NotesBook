@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>AUTOSAR 基础资料、分层与历史卡片补充</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/%E5%9F%BA%E7%A1%80%E8%B5%84%E6%96%99%E4%B8%8E%E5%88%86%E5%B1%82%E8%A1%A5%E5%85%85</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/%E5%9F%BA%E7%A1%80%E8%B5%84%E6%96%99%E4%B8%8E%E5%88%86%E5%B1%82%E8%A1%A5%E5%85%85</guid>
+    <description><![CDATA[ AUTOSAR 基础资料、分层与历史卡片补充 本页收录此前散落在 Flomo 子标签中的基础资料、分层说明和规范阅读卡片。它们补充 AUTOSAR 1000 问主线，不替代规范模块专题。原文中存在的历史描述按原意保留；涉及标准边界的内容应以对应 AUTOSAR Release 的官方规范和项目配置为准。 AUTOSAR Classic 分层关系 flowchart TB SWC[应用软件组件 SWC] RTE[运行时环境 RTE] SVC[服务层 Services] ECU[ECU抽象层 ECU Abstraction] MCAL[微控制器抽象层 MCAL] HW[微控制器与外设] CDD[复... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:07:11 GMT</pubDate>
+  </item><item>
     <title>计算机科学自学路线与工具资源</title>
     <link>https://wiki.likui.info/Area/CS/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E4%B8%8E%E5%B7%A5%E5%85%B7%E8%B5%84%E6%BA%90</link>
     <guid>https://wiki.likui.info/Area/CS/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E4%B8%8E%E5%B7%A5%E5%85%B7%E8%B5%84%E6%BA%90</guid>
@@ -29,12 +35,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/</guid>
     <description><![CDATA[ AUTOSAR（AUTomotive Open System ARchitecture，汽车开放系统架构）是由全球主要汽车厂商、零部件供应商与半导体公司联合制定的汽车电子软件架构标准。它的目标是让汽车软件标准化、可复用、可跨平台移植，是当今智能汽车软件开发的行业基石。 一句话定位 AUTOSAR = 汽车软件的「操作系统级标准」：定义分层架构、组件模型、通信机制与开发流程，让不同厂商的软件能像积木一样拼装。 知识体系 flowchart TD A[AUTOSAR] --&gt; B[核心理念] A --&gt; C[软件架构] A --&gt; D[方法论] A --&gt; E[标准与规范]... ]]></description>
     <pubDate>Sun, 01 Nov 2026 04:02:49 GMT</pubDate>
-  </item><item>
-    <title>AUTOSAR 基础资料、分层与历史卡片补充</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/%E5%9F%BA%E7%A1%80%E8%B5%84%E6%96%99%E4%B8%8E%E5%88%86%E5%B1%82%E8%A1%A5%E5%85%85</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/%E5%9F%BA%E7%A1%80%E8%B5%84%E6%96%99%E4%B8%8E%E5%88%86%E5%B1%82%E8%A1%A5%E5%85%85</guid>
-    <description><![CDATA[ AUTOSAR 基础资料、分层与历史卡片补充 本页收录此前散落在 Flomo 子标签中的基础资料、分层说明和规范阅读卡片。它们补充 AUTOSAR 1000 问主线，不替代规范模块专题。原文中存在的历史描述按原意保留；涉及标准边界的内容应以对应 AUTOSAR Release 的官方规范和项目配置为准。 AUTOSAR Classic 分层关系 flowchart TB SWC[应用软件组件 SWC] RTE[运行时环境 RTE] SVC[服务层 Services] ECU[ECU抽象层 ECU Abstraction] MCAL[微控制器抽象层 MCAL] HW[微控制器与外设] CDD[复... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:02:42 GMT</pubDate>
   </item><item>
     <title>1000问知识体系</title>
     <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
