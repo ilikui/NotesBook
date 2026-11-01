@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>嵌入式工程进阶与实战补充</title>
+    <link>https://wiki.likui.info/Area/EE/%E5%B5%8C%E5%85%A5%E5%BC%8F/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B7%A5%E7%A8%8B%E8%BF%9B%E9%98%B6%E4%B8%8E%E5%AE%9E%E6%88%98%E8%A1%A5%E5%85%85</link>
+    <guid>https://wiki.likui.info/Area/EE/%E5%B5%8C%E5%85%A5%E5%BC%8F/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B7%A5%E7%A8%8B%E8%BF%9B%E9%98%B6%E4%B8%8E%E5%AE%9E%E6%88%98%E8%A1%A5%E5%85%85</guid>
+    <description><![CDATA[ 嵌入式工程进阶与实战补充 本页补齐 Flomo「嵌入式学习」分类中尚未在 NotesBook 找到来源 ID 的 11 条有效卡片。内容横跨指令译码、链接脚本、电源时序、BLDC、FreeRTOS、CAN 故障、调试方法与学习资源。已在硬件、电机控制、通信专题中归档的卡片不重复复制；空白占位卡不作为知识条目迁移。 工程知识关联图 flowchart TD A[嵌入式工程] --&gt; B[处理器与指令集] A --&gt; C[启动与链接] A --&gt; D[硬件电源与信号完整性] A --&gt; E[实时软件] A --&gt; F[通信与调试] C --&gt; C1[Linker... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:05:21 GMT</pubDate>
+  </item><item>
     <title>AUTOSAR</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/</guid>
@@ -58,12 +64,6 @@
     <link>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</link>
     <guid>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</guid>
     <description><![CDATA[ 从微信读书自动同步的个人书架与阅读记录索引。 ]]></description>
-    <pubDate>Sat, 31 Oct 2026 20:01:23 GMT</pubDate>
-  </item><item>
-    <title>认知觉醒：伴随一生的学习方法论（青少年学习版）</title>
-    <link>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/%E4%B9%A6%E7%B1%8D/%E8%AE%A4%E7%9F%A5%E8%A7%89%E9%86%92%E4%BC%B4%E9%9A%8F%E4%B8%80%E7%94%9F%E7%9A%84%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E8%AE%BA%E9%9D%92%E5%B0%91%E5%B9%B4%E5%AD%A6%E4%B9%A0%E7%89%88-e2b779e3</link>
-    <guid>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/%E4%B9%A6%E7%B1%8D/%E8%AE%A4%E7%9F%A5%E8%A7%89%E9%86%92%E4%BC%B4%E9%9A%8F%E4%B8%80%E7%94%9F%E7%9A%84%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E8%AE%BA%E9%9D%92%E5%B0%91%E5%B9%B4%E5%AD%A6%E4%B9%A0%E7%89%88-e2b779e3</guid>
-    <description><![CDATA[ 认知觉醒：伴随一生的学习方法论（青少年学习版） 作者： 周岭 分类： 未分类 个人划线与想法： 24 条 阅读记录 1. 上篇 学习的技法 记录日期：2026-10-31 划线 实际上，元认知能力就是我们习以为常、见怪不怪的自我觉察和反思能力 2. ]]></description>
     <pubDate>Sat, 31 Oct 2026 20:01:23 GMT</pubDate>
   </item>
     </channel>
