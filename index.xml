@@ -6,6 +6,30 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>EcuM 状态机深入 Q2 PostRun 是干什么用的？SW-C 都停了 EcuM 还在 PostRun 期间哪些模块在工作？正写 NvM 收到 Shutdown 请求，强制掉电还是等写完？</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/EcuM-PostRun%E4%B8%8ENvM%E5%85%B3%E6%9C%BA%E6%97%B6%E5%BA%8F</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/EcuM-PostRun%E4%B8%8ENvM%E5%85%B3%E6%9C%BA%E6%97%B6%E5%BA%8F</guid>
+    <description><![CDATA[ EcuM 状态机深入 Q2：PostRun 是干什么用的？SW-C 都停了 EcuM 还在 PostRun 期间哪些模块在工作？正写 NvM 收到 Shutdown 请求，强制掉电还是等写完？ 原始 Flomo：v.flomoapp.com/mine/ EcuM 状态机深入 Q2：PostRun 是干什么用的？SW-C 都停了 EcuM 还在 PostRun 期间哪些模块在工作？正写 NvM 收到 Shutdown 请求，强制掉电还是等写完？ PostRun 的用途： EcuM 在 RUN 之后、Shutdown 之前的一个过渡态。用于「应用（SW-C）已停止，但系统还需做收尾工作」的场景——... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:55:03 GMT</pubDate>
+  </item><item>
+    <title>Dcm 协议多路复用 Q2 用 DoIP 刷写和用 CAN TP 刷写同一个 ECU——Dcm 层处理逻辑一样吗？刷写速率谁快？CAN 路径断电接着刷，DoIP 支持同样的恢复吗？</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Dcm-DoIP%E4%B8%8ECanTp%E5%A4%9A%E8%B7%AF%E5%88%B7%E5%86%99</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/Dcm-DoIP%E4%B8%8ECanTp%E5%A4%9A%E8%B7%AF%E5%88%B7%E5%86%99</guid>
+    <description><![CDATA[ Dcm 协议多路复用 Q2：用 DoIP 刷写和用 CAN TP 刷写同一个 ECU——Dcm 层处理逻辑一样吗？刷写速率谁快？CAN 路径断电接着刷，DoIP 支持同样的恢复吗？ 原始 Flomo：v.flomoapp.com/mine/ Dcm 协议多路复用 Q2：用 DoIP 刷写和用 CAN TP 刷写同一个 ECU——Dcm 层处理逻辑一样吗？刷写速率谁快？CAN 路径断电接着刷，DoIP 支持同样的恢复吗？ Dcm 层处理逻辑一样吗？ 上层 Dcm 的服务处理逻辑（会话、安全访问、0x34 请求下载、0x36 TransferData、0x37 请求退出传输、0x11 复位等刷写流... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:55:00 GMT</pubDate>
+  </item><item>
+    <title>CryptoStackQ3-软件密码实现</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/CryptoStackQ3-%E8%BD%AF%E4%BB%B6%E5%AF%86%E7%A0%81%E5%AE%9E%E7%8E%B0</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/CryptoStackQ3-%E8%BD%AF%E4%BB%B6%E5%AF%86%E7%A0%81%E5%AE%9E%E7%8E%B0</guid>
+    <description><![CDATA[ AUTOSAR 1000问 · CryptoStackQ3：如果 MCU 没有硬件密码学加速模块，Crypto Stack 还能工作吗？软件实现的性能和安全性跟硬件实现差多少？ 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 1000问 · CryptoStackQ3：如果 MCU 没有硬件密码学加速模块，Crypto Stack 还能工作吗？软件实现的性能和安全性跟硬件实现差多少？ ▎ 五大学习法：费曼——把「软件 vs 硬件密码」讲成「自己动手 vs 专业保镖」 还能工作吗：能。Crypto Stack 设计上支持纯软件实现——Crypto Driver 用软件... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:54:57 GMT</pubDate>
+  </item><item>
+    <title>OS内存保护与可信分区</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/OS%E5%86%85%E5%AD%98%E4%BF%9D%E6%8A%A4%E4%B8%8E%E5%8F%AF%E4%BF%A1%E5%88%86%E5%8C%BA</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/OS%E5%86%85%E5%AD%98%E4%BF%9D%E6%8A%A4%E4%B8%8E%E5%8F%AF%E4%BF%A1%E5%88%86%E5%8C%BA</guid>
+    <description><![CDATA[ AUTOSAR OS 内存保护与可信分区 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR OS 的 Memory Protection（MPU 配置）与 Trusted / Non-Trusted 差异 MPU 怎么配： AUTOSAR OS 用 MPU 实现内存分区（Memory Partitioning），跟 OS-Application 绑定。每个 OS-Application 分到一个或多个内存分区，各分区有自己的代码 / 数据 / 堆栈段。 OS 为每个任务 / ISR、每个 OS-Application 维护一组访问权限，翻译成 MPU 寄存器配置（re... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:54:54 GMT</pubDate>
+  </item><item>
     <title>NvM 块管理策略深入 Q1 Redundant 块怎么判断「哪一份是好的」？NvM 用什么机制判断数据完整性？</title>
     <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/NvM-%E5%86%97%E4%BD%99%E5%9D%97%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%AE%8C%E6%95%B4%E6%80%A7</link>
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/NvM-%E5%86%97%E4%BD%99%E5%9D%97%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%AE%8C%E6%95%B4%E6%80%A7</guid>
@@ -41,30 +65,6 @@
     <guid>https://wiki.likui.info/Project/CEM/</guid>
     <description><![CDATA[ CEM 项目知识地图 CEM（Central Electronic Module / 中央电子模块，具体项目命名以 OEM 架构定义为准）相关记录入口。当前归档来自历史 Flomo 需求和问题线索，尚未等同于完整设计规格；具体接口、诊断和休眠唤醒逻辑仍需结合项目 ARXML、软件架构和 OEM 需求确认。 需求与功能域 CEM功能域与诊断需求：执行器/传感器、Climate、驾驶员信息、ECU 平台、车灯、门锁、低压能源管理、远程控制、安全、TPMS、车窗后视镜等功能域，以及诊断需求线索。 软件架构与问题清单 CEM软件结构与待研究问题：已补充 CEM 分层架构、DTC/DID、NvM、接口配... ]]></description>
     <pubDate>Sun, 01 Nov 2026 04:51:04 GMT</pubDate>
-  </item><item>
-    <title>CEM 软件结构：DTC、DID、NvM、接口配置与通信栈</title>
-    <link>https://wiki.likui.info/Project/CEM/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/CEM%E8%BD%AF%E4%BB%B6%E7%BB%93%E6%9E%84%E4%B8%8E%E5%BE%85%E7%A0%94%E7%A9%B6%E9%97%AE%E9%A2%98</link>
-    <guid>https://wiki.likui.info/Project/CEM/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/CEM%E8%BD%AF%E4%BB%B6%E7%BB%93%E6%9E%84%E4%B8%8E%E5%BE%85%E7%A0%94%E7%A9%B6%E9%97%AE%E9%A2%98</guid>
-    <description><![CDATA[ CEM 软件结构：DTC、DID、NvM、接口配置与通信栈 原始 Flomo：v.flomoapp.com/mine/ 本页把原始“待研究问题”转化为可执行的架构学习与排查说明。CEM 在不同 OEM/项目中可能代表不同的中央电子模块或功能域；以下以 AUTOSAR Classic ECU 的典型分层为参照。实际模块、容器、接口和工具操作必须以项目 ARXML、软件需求、接口矩阵、网络矩阵、供应商配置手册和生成代码为准。 1. ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:50:53 GMT</pubDate>
-  </item><item>
-    <title>处理器寻址方式：立即、直接、间接、变址与相对寻址</title>
-    <link>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%83%E7%A7%8D%E5%AF%BB%E5%9D%80%E6%96%B9%E5%BC%8F</link>
-    <guid>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%83%E7%A7%8D%E5%AF%BB%E5%9D%80%E6%96%B9%E5%BC%8F</guid>
-    <description><![CDATA[ 处理器寻址方式 原始 Flomo：v.flomoapp.com/mine/ 寻址方式描述指令如何定位操作数。不同 ISA（x86、ARM、PowerPC、RISC-V 等）的寻址模式和汇编语法并不完全相同。下面先解释常见概念，再以传统 x86 16 位地址表达式说明原笔记中的七类形式；不要把这七类当成所有处理器都统一规定的分类。 1. ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:50:17 GMT</pubDate>
-  </item><item>
-    <title>中断概念与处理流程：从异常入口到 ISR 返回</title>
-    <link>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E4%B8%AD%E6%96%AD%E6%A6%82%E5%BF%B5%E4%B8%8E%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B</link>
-    <guid>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E4%B8%AD%E6%96%AD%E6%A6%82%E5%BF%B5%E4%B8%8E%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B</guid>
-    <description><![CDATA[ 中断概念与处理流程 原始 Flomo：v.flomoapp.com/mine/ 1. ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:49:52 GMT</pubDate>
-  </item><item>
-    <title>基础概念Q2-MCU与MPU选型</title>
-    <link>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5Q2-MCU%E4%B8%8EMPU%E9%80%89%E5%9E%8B</link>
-    <guid>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5Q2-MCU%E4%B8%8EMPU%E9%80%89%E5%9E%8B</guid>
-    <description><![CDATA[ 嵌入式 1000问 · 基础概念Q2：MCU 和 MPU 的核心区别是什么？什么时候该选 MCU，什么时候该选 MPU？ 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 嵌入式 1000问 · 基础概念Q2：MCU 和 MPU 的核心区别是什么？什么时候该选 MCU，什么时候该选 MPU？ ▎ 五大学习法：西蒙学习法——把「MCU vs MPU」钻透 一句话区别 MCU（Microcontroller Unit，微控制器）：把 CPU + Flash + RAM + 外设集成在一颗芯片里，本质是「一台完整的计算机」，上电就能跑程序。 MPU（Microprocessor... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:24:58 GMT</pubDate>
   </item>
     </channel>
   </rss>
