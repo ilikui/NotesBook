@@ -2,6 +2,8 @@
 
 > 来源：<https://zh-v1.d2l.ai/index.html>  
 > 上游项目：<https://github.com/d2l-ai/d2l-zh>  
+> 第一版对应发布：<https://github.com/d2l-ai/d2l-zh/releases/tag/v1.0.0>  
+> 第一版源码归档：<https://github.com/d2l-ai/d2l-zh/archive/refs/tags/v1.0.0.zip>  
 > 书籍 PDF：<https://zh-v1.d2l.ai/d2l-zh.pdf>
 
 ## 同步说明
@@ -32,19 +34,21 @@
 
 ## 版权与引用
 
-上游项目采用 Apache License 2.0（以对应历史版本中的 LICENSE 文件为准）。如将上游正文、图片或代码复制进本仓库，必须一并保留相应版权与许可证文件、作者署名及修改说明。本站索引与自写笔记不代表上游官方内容。
+复制上游正文、图片或代码前，必须以 v1.0.0 对应版本中的 LICENSE、NOTICE（如存在）及各文件头部声明为准；同步时原样保留这些文件、作者署名和修改说明。不要仅凭当前仓库的许可证推断历史版本的授权条件。本站索引与自写笔记不代表上游官方内容。
 
 ## 原始资源入口
 
 - [第一版在线目录](https://zh-v1.d2l.ai/index.html)
 - [第一版 PDF](https://zh-v1.d2l.ai/d2l-zh.pdf)
+- [第一版 v1.0.0 发布说明](https://github.com/d2l-ai/d2l-zh/releases/tag/v1.0.0)
+- [第一版 v1.0.0 源码压缩包](https://github.com/d2l-ai/d2l-zh/archive/refs/tags/v1.0.0.zip)
 - [上游 GitHub 仓库](https://github.com/d2l-ai/d2l-zh)
 - [上游许可证](https://github.com/d2l-ai/d2l-zh/blob/master/LICENSE)
 - [讨论社区](https://discuss.d2l.ai/c/chinese-version/16)
 
 ## 后续同步待办
 
-- [ ] 确认并锁定生成 zh-v1 网站的上游历史 commit / release。
+- [x] 确认第一版 v1.0.0 发布（commit `abb4113`）；网站历史内容与发布包仍需核对。
 - [ ] 将第一版完整 Markdown、图片、公式和 MXNet 代码按原目录结构导入。
 - [ ] 保留上游 LICENSE、NOTICE（如存在）及逐文件版权声明。
 - [ ] 检查相对图片链接、公式渲染、代码文件和数据下载链接。
