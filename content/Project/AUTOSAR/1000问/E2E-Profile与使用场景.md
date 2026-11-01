@@ -41,3 +41,13 @@ Profile 1 vs Profile 5：
 - Profile 的具体 CRC 算法、Data ID 模式、Counter 位宽、长度范围必须查当前 AUTOSAR E2E Library 版本对应的规范和配置工具定义。
 
 **结论修订：** 不要仅凭 ASIL 等级选择 Profile。先由安全需求确定需要检测的通信故障，再按数据长度、周期和 Profile 能力选择，并通过故障注入验证 CRC 错误、重复、丢失、乱序、超时和错误 Data ID。
+
+## 新版规范动态：Profile 1 的状态
+
+AUTOSAR Foundation R25-11 的 E2E Protocol Specification 明确将 Profile 1 标为 **Legacy Profile**，仅为兼容性继续维护，并指出新项目应使用 Profile 11。这个结论属于 R25-11 的规范要求，不能倒推到较早 Release 的既有项目；老项目是否迁移需结合兼容性、供应商实现、Safety Case 和 OEM 要求评估。
+
+因此，本页 Profile 1 / Profile 5 的比较只用于理解历史项目中的配置差异，不构成新项目的选型建议。新项目应从目标 Release 的 E2E 规范重新评估 Profile 11 及其他可用 Profile，而不是简单在 P01/P05 之间按 ASIL 选型。
+
+官方参考：
+- AUTOSAR E2E Protocol Specification R25-11：https://www.autosar.org/fileadmin/standards/R25-11/FO/AUTOSAR_FO_PRS_E2EProtocol.pdf
+- AUTOSAR Classic Platform 当前发布版本：https://www.autosar.org/standards/classic-platform
