@@ -6,12 +6,6 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>专栏⑰·导航分卷：概率论与数理统计 1000 问（全量问题库）</title>
-    <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%AF%BC%E8%88%AA%E5%88%86%E5%8D%B7-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A11000%E9%97%AE</link>
-    <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%AF%BC%E8%88%AA%E5%88%86%E5%8D%B7-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A11000%E9%97%AE</guid>
-    <description><![CDATA[ 专栏⑰·导航分卷：概率论与数理统计 1000 问（全量问题库） 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·导航分卷：概率论与数理统计 1000 问（全量问题库） 📎 专栏⑰导航 → v.flomoapp.com/mine/ ▎ 随机事件与概率 古典概型（等可能概型）的”等可能”假设到底意味着什么？抛硬币正反等可能，是因为硬币对称——但如果硬币稍有磨损、重心偏移，还能用古典概型吗？ 条件概率 P(B|A) = P(AB)/P(A)——这个公式是在”缩小样本空间”：已知事件A发生了，样本空间从Ω缩小成A？ 全概率公式和贝叶斯公式到底是什么关系？一个由因推果（已知原因的概... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 05:13:58 GMT</pubDate>
-  </item><item>
     <title>考研数学1000问：概率事件、随机变量与常见分布</title>
     <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/1000%E9%97%AE/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80%E4%BA%8B%E4%BB%B6%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B8%B8%E8%A7%81%E5%88%86%E5%B8%83</link>
     <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/1000%E9%97%AE/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80%E4%BA%8B%E4%BB%B6%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B8%B8%E8%A7%81%E5%88%86%E5%B8%83</guid>
@@ -65,6 +59,12 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/ECUExtract%E4%B8%8ESystemDescription%E6%98%A0%E5%B0%84</guid>
     <description><![CDATA[ ECU Extract 与 System Description 映射 原始 Flomo：v.flomoapp.com/mine/ VFB 的 System Description 怎么「提取」出单个 ECU 的配置？ECU Extract 是裁剪还是映射？ System Description（系统描述）：在 VFB 层面描述整个系统——所有 SW-C、所有连接、所有接口、所有 ECU 的抽象。它不含任何具体 ECU 的实现信息（内存地址、总线映射、周期细节都没有）。 ECU Extract of System Description（ECU 抽取）：从系统描述里抽出「属于某个特定 ECU」... ]]></description>
     <pubDate>Sun, 01 Nov 2026 05:10:55 GMT</pubDate>
+  </item><item>
+    <title>ARXML 解析与自动化脚本 Q1：用 Python + lxml 自动生成 / 检查 AUTOSAR 配置？常见自动化场景有哪些？</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/ARXML-Python%E4%B8%8Elxml%E8%87%AA%E5%8A%A8%E5%8C%96</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/ARXML-Python%E4%B8%8Elxml%E8%87%AA%E5%8A%A8%E5%8C%96</guid>
+    <description><![CDATA[ ARXML 解析与自动化脚本 Q1：用 Python + lxml 自动生成 / 检查 AUTOSAR 配置？常见自动化场景有哪些？ 原始 Flomo：v.flomoapp.com/mine/ ARXML 解析与自动化脚本 Q1：用 Python + lxml 自动生成 / 检查 AUTOSAR 配置？常见自动化场景有哪些？ 答：可以。ARXML 本质是 XML，用 lxml / xml.etree + XPath 就能解析、生成、检查。 常见自动化场景： 批量重命名 / 修改：批量给 PDU 名称加前后缀、批量改 PDU 的 CAN ID / DLC、批量给 SW-C 加端口。 一致性 / ... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 05:10:52 GMT</pubDate>
   </item>
     </channel>
   </rss>
