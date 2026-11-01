@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>专栏⑯·导航：AI 1000 问全景——从基础概念到大模型落地</title>
+    <link>https://wiki.likui.info/Area/AI/%E4%B8%93%E6%A0%8F%E2%91%AF%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%AF%BC%E8%88%AA-AI1000%E9%97%AE%E5%85%A8%E6%99%AF</link>
+    <guid>https://wiki.likui.info/Area/AI/%E4%B8%93%E6%A0%8F%E2%91%AF%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%AF%BC%E8%88%AA-AI1000%E9%97%AE%E5%85%A8%E6%99%AF</guid>
+    <description><![CDATA[ 专栏⑯·导航：AI 1000 问全景——从基础概念到大模型落地 原始 Flomo：v.flomoapp.com/mine/ 专栏⑯·导航：AI 1000 问全景——从基础概念到大模型落地 📎 专栏⑮嵌入式导航 → v.flomoapp.com/mine/ ▎目录（10篇） AI 用在哪——对话式索引：让 AI 搜你的笔记，而不是全文搜索 AI 在知识管理里的角色——6 层闭环里最擅长整理和存储 Embedding 与 RAG——文档讲不清、实际用起来完全不一样的两个概念 LLM 架构基础——Transformer、注意力、训练三阶段 RAG 实战——分块、向量、检索、对齐 AI Agent ... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 05:02:42 GMT</pubDate>
+  </item><item>
+    <title>1000问知识体系</title>
+    <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
+    <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
+    <description><![CDATA[ 1000问知识体系 这里集中整理 Flomo 中长期积累的「1000问 / 1000题 / 10000问」问题库、逐题解答和专题卡片。目标不是只保存题目，而是把每个问题沉淀为可检索、可验证、可复用的知识单元。 迁移原则：保留问题原意；合并重复题但记录关联；答案给出原理、适用边界和验证方法；技术内容尽量附 Mermaid 图；未核验的结论明确标注待核验。Flomo 原笔记暂不删除。 知识迁移流程 flowchart TD A[Flomo 原始笔记] --&gt; B[检索与盘点] B --&gt; C[按主题归类] C --&gt; D[识别重复问题] D --&gt; E[读取完整原文] E ... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 05:02:36 GMT</pubDate>
+  </item><item>
     <title>人工智能学习中心</title>
     <link>https://wiki.likui.info/Area/AI/</link>
     <guid>https://wiki.likui.info/Area/AI/</guid>
@@ -23,12 +35,6 @@
     <guid>https://wiki.likui.info/Area/EE/%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1</guid>
     <description><![CDATA[  一句话定位 OOP = 把数据和操作数据的方法打包成「对象」，用对象之间的协作来构建复杂系统。 知识体系 flowchart TD A[&quot;面向对象 OOP&quot;] --&gt; B[&quot;核心概念&quot;] A --&gt; C[&quot;四大特性&quot;] A --&gt; D[&quot;vs 面向过程&quot;] A --&gt; E[&quot;主流语言&quot;] B --&gt; B1[&quot;类 Class 模板&quot;] B --&gt; B2[&quot;对象 Object 实例&quot;] C --&gt; C1[&quot;... ]]></description>
     <pubDate>Sun, 01 Nov 2026 05:01:49 GMT</pubDate>
-  </item><item>
-    <title>1000问知识体系</title>
-    <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
-    <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
-    <description><![CDATA[ 1000问知识体系 这里集中整理 Flomo 中长期积累的「1000问 / 1000题 / 10000问」问题库、逐题解答和专题卡片。目标不是只保存题目，而是把每个问题沉淀为可检索、可验证、可复用的知识单元。 迁移原则：保留问题原意；合并重复题但记录关联；答案给出原理、适用边界和验证方法；技术内容尽量附 Mermaid 图；未核验的结论明确标注待核验。Flomo 原笔记暂不删除。 知识迁移流程 flowchart TD A[Flomo 原始笔记] --&gt; B[检索与盘点] B --&gt; C[按主题归类] C --&gt; D[识别重复问题] D --&gt; E[读取完整原文] E ... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 05:01:39 GMT</pubDate>
   </item><item>
     <title>AI 1000问：基础概念、机器学习与神经网络入门</title>
     <link>https://wiki.likui.info/Area/AI/1000%E9%97%AE/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8</link>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E5%AE%9E%E6%88%98Q4-PostBuild%E4%BA%A7%E7%89%A9%E4%B8%8EPDU%E8%B7%AF%E7%94%B1%E5%8F%98%E4%BD%93</guid>
     <description><![CDATA[ 工具配置实战 Q4：PostBuild 生成 .c 还是 .arxml？运行时改 PDU 路由，PreCompile 还是 PostBuild 支持？ 原始 Flomo：v.flomoapp.com/mine/ 工具配置实战 Q4：PostBuild 生成 .c 还是 .arxml？运行时改 PDU 路由，PreCompile 还是 PostBuild 支持？ PostBuild 生成的产物：既有 .c/.h，也有 .arxml。关键区别不在文件格式，而在「配置是静态定死还是运行时可变」。 PreCompile：编译前把配置全部定死，生成的是静态常量配置代码（.c/.h）——改动要重新生成 +... ]]></description>
     <pubDate>Sun, 01 Nov 2026 05:00:07 GMT</pubDate>
-  </item><item>
-    <title>E2E / 端到端通信保护深入 Q1：E2E Profile 1 到 7 的区别？Profile 1 和 Profile 5 用在什么安全等级？</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/E2E-Profile%E4%B8%8E%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/E2E-Profile%E4%B8%8E%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF</guid>
-    <description><![CDATA[ E2E / 端到端通信保护深入 Q1：E2E Profile 1 到 7 的区别？Profile 1 和 Profile 5 用在什么安全等级？ 原始 Flomo：v.flomoapp.com/mine/ E2E / 端到端通信保护深入 Q1：E2E Profile 1 到 7 的区别？Profile 1 和 Profile 5 用在什么安全等级？ 先厘清：E2E 是 ISO 26262 下保护通信数据完整性的机制（E2ELib），Profile 是它定义的不同「保护方案」——区别在「提供哪些保护机制」和「支持的数据长度」。 各 Profile 的核心差异维度： 是否带 CRC、几位 CRC：... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:59:49 GMT</pubDate>
   </item>
     </channel>
   </rss>
