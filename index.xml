@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>AI 1000问：基础概念、机器学习与神经网络入门</title>
+    <link>https://wiki.likui.info/Area/AI/1000%E9%97%AE/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8</link>
+    <guid>https://wiki.likui.info/Area/AI/1000%E9%97%AE/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8</guid>
+    <description><![CDATA[ AI 1000问：基础概念、机器学习与神经网络入门 本篇回答 AI 全景题库中的基础概念、机器学习范式、过拟合/欠拟合和神经网络基础题。题库中的“图灵测试”与已有 大模型RAG与智能体基础 第 16 题重复，本篇直接链接主答案，避免重复维护。 一、人工智能基础概念 Q1. ]]></description>
+    <pubDate>Sun, 01 Nov 2026 05:01:27 GMT</pubDate>
+  </item><item>
+    <title>处理器寻址方式：立即、直接、间接、变址与相对寻址</title>
+    <link>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%83%E7%A7%8D%E5%AF%BB%E5%9D%80%E6%96%B9%E5%BC%8F</link>
+    <guid>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%83%E7%A7%8D%E5%AF%BB%E5%9D%80%E6%96%B9%E5%BC%8F</guid>
+    <description><![CDATA[ 处理器寻址方式 原始 Flomo：v.flomoapp.com/mine/ 寻址方式描述指令如何定位操作数。不同 ISA（x86、ARM、PowerPC、RISC-V 等）的寻址模式和汇编语法并不完全相同。下面先解释常见概念，再以传统 x86 16 位地址表达式说明原笔记中的七类形式；不要把这七类当成所有处理器都统一规定的分类。 1. ]]></description>
+    <pubDate>Sun, 01 Nov 2026 05:00:43 GMT</pubDate>
+  </item><item>
     <title>中断概念与处理流程：从异常入口到 ISR 返回</title>
     <link>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E4%B8%AD%E6%96%AD%E6%A6%82%E5%BF%B5%E4%B8%8E%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B</link>
     <guid>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E4%B8%AD%E6%96%AD%E6%A6%82%E5%BF%B5%E4%B8%8E%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B</guid>
@@ -53,18 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%B7%A5%E5%85%B7%E9%93%BE-Configurator%E4%B8%8ECI%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA</guid>
     <description><![CDATA[ 工具链自动化构建 Q1：AUTOSAR 配置工具（Davinci / EB）和代码构建（make/cmake）怎么衔接？怎么跟 CI 集成？有没有 headless 模式？ 原始 Flomo：v.flomoapp.com/mine/ 工具链自动化构建 Q1：AUTOSAR 配置工具（Davinci / EB）和代码构建（make/cmake）怎么衔接？怎么跟 CI 集成？有没有 headless 模式？ 答案：有，大多数工具支持命令行 / 无头模式（headless / CLI），这是配置生成能进 CI 的关键。 衔接思路（三步）： 用工具的 headless 命令行生成代码： EB tres... ]]></description>
     <pubDate>Sun, 01 Nov 2026 04:58:28 GMT</pubDate>
-  </item><item>
-    <title>性能优化-多SWC调度表与Runnable顺序</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-%E5%A4%9ASWC%E8%B0%83%E5%BA%A6%E8%A1%A8%E4%B8%8ERunnable%E9%A1%BA%E5%BA%8F</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-%E5%A4%9ASWC%E8%B0%83%E5%BA%A6%E8%A1%A8%E4%B8%8ERunnable%E9%A1%BA%E5%BA%8F</guid>
-    <description><![CDATA[ AUTOSAR 性能优化 Q2：多 SW-C 调度表与 Runnable 顺序 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 性能优化 Q2：ECU 部署 50+ 个 SW-C——RTE 生成的 Schedule Table 什么样？Runnable 顺序怎么保证实时性？ 先明确：Schedule Table 是 OS 层的调度机制，RTE（SchM）负责把 runnable 组织进 Task。所以它不是「每个 SW-C 一个表项」，而是按 Task 组织 + 时间轴排布。 Schedule Table 长什么样： RTE 把大量 runnable 映射到若干 T... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:58:25 GMT</pubDate>
-  </item><item>
-    <title>性能优化-RTE调用与PDU端到端开销</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-RTE%E8%B0%83%E7%94%A8%E4%B8%8EPDU%E7%AB%AF%E5%88%B0%E7%AB%AF%E5%BC%80%E9%94%80</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-RTE%E8%B0%83%E7%94%A8%E4%B8%8EPDU%E7%AB%AF%E5%88%B0%E7%AB%AF%E5%BC%80%E9%94%80</guid>
-    <description><![CDATA[ AUTOSAR 性能优化 Q1：RTE 调用开销与 PDU 端到端路径 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 性能优化 Q1：RTE 大量函数调用会不会影响性能？一个 PDU 从应用到总线，四层接口调用总开销大概多少？ 先给结论：会有一点开销，但 AUTOSAR 做了大量优化，实际可控，多数项目不用太担心函数调用本身。 关键性能机制（为什么开销可控）： 直接调用而非运行时分发：同 ECU 内通信，RTE 在编译期就把调用链接成「直接函数调用」，不做运行时查找。 优化编译：生成代码用 -O2 编译，多数函数内联、参数寄存器传递，开销显著下降。 信号打包：CO... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:58:18 GMT</pubDate>
   </item>
     </channel>
   </rss>

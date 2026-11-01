@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh"><head><title>AI 1000问：基础概念、机器学习与神经网络入门</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="数字花园"/><meta property="og:title" content="AI 1000问：基础概念、机器学习与神经网络入门"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="AI 1000问：基础概念、机器学习与神经网络入门"/><meta name="twitter:description" content="AI 1000问：基础概念、机器学习与神经网络入门 本篇回答 AI 全景题库中的基础概念、机器学习范式、过拟合/欠拟合和神经网络基础题。题库中的“图灵测试”与已有 大模型RAG与智能体基础 第 16 题重复，本篇直接链接主答案，避免重复维护。 一、人工智能基础概念 Q1."/><meta property="og:description" content="AI 1000问：基础概念、机器学习与神经网络入门 本篇回答 AI 全景题库中的基础概念、机器学习范式、过拟合/欠拟合和神经网络基础题。题库中的“图灵测试”与已有 大模型RAG与智能体基础 第 16 题重复，本篇直接链接主答案，避免重复维护。 一、人工智能基础概念 Q1."/><meta property="og:image:alt" content="AI 1000问：基础概念、机器学习与神经网络入门 本篇回答 AI 全景题库中的基础概念、机器学习范式、过拟合/欠拟合和神经网络基础题。题库中的“图灵测试”与已有 大模型RAG与智能体基础 第 16 题重复，本篇直接链接主答案，避免重复维护。 一、人工智能基础概念 Q1."/><meta property="og:image" content="https://wiki.likui.info/static/og-image.png"/><meta property="og:image:url" content="https://wiki.likui.info/static/og-image.png"/><meta name="twitter:image" content="https://wiki.likui.info/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="wiki.likui.info"/><meta property="og:url" content="https://wiki.likui.info/Area/AI/1000问/基础概念与机器学习入门"/><meta property="twitter:url" content="https://wiki.likui.info/Area/AI/1000问/基础概念与机器学习入门"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="AI 1000问：基础概念、机器学习与神经网络入门 本篇回答 AI 全景题库中的基础概念、机器学习范式、过拟合/欠拟合和神经网络基础题。题库中的“图灵测试”与已有 大模型RAG与智能体基础 第 16 题重复，本篇直接链接主答案，避免重复维护。 一、人工智能基础概念 Q1."/><meta name="generator" content="Quartz"/><link href="../../../index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  padding: 2rem;
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcnVubmVyL3dvcmsvTm90ZXNCb29rL05vdGVzQm9vay9xdWFydHovY29tcG9uZW50cy9zdHlsZXMiLCJzb3VyY2VzIjpbIm1lcm1haWQuaW5saW5lLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUdGO0VBQ0U7OztBQUtGO0VBQ0U7RUFDQTs7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcGFkZGluZzogMnJlbTtcbiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgIHRyYW5zZm9ybS1vcmlnaW46IDAgMDtcbiAgICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjFzIGVhc2U7XG4gICAgICBvdmVyZmxvdzogdmlzaWJsZTtcbiAgICAgIG1pbi1oZWlnaHQ6IDIwMHB4O1xuICAgICAgbWluLXdpZHRoOiAyMDBweDtcblxuICAgICAgcHJlIHtcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICB9XG5cbiAgICAgIHN2ZyB7XG4gICAgICAgIG1heC13aWR0aDogbm9uZTtcbiAgICAgICAgaGVpZ2h0OiBhdXRvO1xuICAgICAgfVxuICAgIH1cblxuICAgICYgPiAubWVybWFpZC1jb250cm9scyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBib3R0b206IDIwcHg7XG4gICAgICByaWdodDogMjBweDtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBnYXA6IDhweDtcbiAgICAgIHBhZGRpbmc6IDhweDtcbiAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICBib3JkZXItcmFkaXVzOiA2cHg7XG4gICAgICBib3gtc2hhZG93OiAwIDJweCA0cHggcmdiYSgwLCAwLCAwLCAwLjEpO1xuICAgICAgei1pbmRleDogMjtcblxuICAgICAgLm1lcm1haWQtY29udHJvbC1idXR0b24ge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgd2lkdGg6IDMycHg7XG4gICAgICAgIGhlaWdodDogMzJweDtcbiAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgICBjb2xvcjogdmFyKC0tZGFyayk7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtZmFtaWx5OiB2YXIoLS1ib2R5Rm9udCk7XG4gICAgICAgIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XG5cbiAgICAgICAgJjpob3ZlciB7XG4gICAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgfVxuXG4gICAgICAgICY6YWN0aXZlIHtcbiAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMXB4KTtcbiAgICAgICAgfVxuXG4gICAgICAgIC8vIFN0eWxlIHRoZSByZXNldCBidXR0b24gZGlmZmVyZW50bHlcbiAgICAgICAgJjpudGgtY2hpbGQoMikge1xuICAgICAgICAgIHdpZHRoOiBhdXRvO1xuICAgICAgICAgIHBhZGRpbmc6IDAgMTJweDtcbiAgICAgICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cbiJdfQ== */</style><link href="/static/katex/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://wiki.likui.info/index.xml"/></head><body data-slug="Area/AI/1000问/基础概念与机器学习入门"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">数字花园</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><p>搜索</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索些什么" placeholder="搜索些什么"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>PARA</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-4" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text explorer-entry-icon" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg><span class="file-title"></span></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder-closed explorer-entry-icon" aria-hidden="true"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path><path d="M2 10h20"></path></svg><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../Area/">Area</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../Area/AI/">人工智能学习中心</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../Area/AI/1000问/">1000问</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>AI 1000问：基础概念、机器学习与神经网络入门</a></div></nav><h1 class="article-title">AI 1000问：基础概念、机器学习与神经网络入门</h1><p show-comma="true" class="content-meta"><time datetime="2026-11-01T05:01:27.000Z">2026年11月01日</time><span>14分钟阅读</span></p><ul class="tags"><li><a href="../../../tags/AI" class="internal tag-link">AI</a></li><li><a href="../../../tags/机器学习" class="internal tag-link">机器学习</a></li><li><a href="../../../tags/深度学习" class="internal tag-link">深度学习</a></li><li><a href="../../../tags/1000问" class="internal tag-link">1000问</a></li></ul></div></div><article class="popover-hint"><h1 id="ai-1000问基础概念机器学习与神经网络入门">AI 1000问：基础概念、机器学习与神经网络入门<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ai-1000问基础概念机器学习与神经网络入门" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>本篇回答 AI 全景题库中的基础概念、机器学习范式、过拟合/欠拟合和神经网络基础题。题库中的“图灵测试”与已有 <a href="../../../Area/AI/1000问/大模型RAG与智能体基础" class="internal alias" data-slug="Area/AI/1000问/大模型RAG与智能体基础">大模型RAG与智能体基础</a> 第 16 题重复，本篇直接链接主答案，避免重复维护。</p>
+<h2 id="一人工智能基础概念">一、人工智能基础概念<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#一人工智能基础概念" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="q1-人工智能机器学习深度学习三者是什么关系">Q1. 人工智能、机器学习、深度学习三者是什么关系？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#q1-人工智能机器学习深度学习三者是什么关系" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案：</strong> 人工智能（AI）是目标和研究领域，机器学习（ML）是实现 AI 的一类方法，深度学习（DL）是机器学习中使用多层神经网络的一类方法。它们是包含关系，不是三个并列、互斥的技术。</p>
+<ul>
+<li>AI：让机器完成通常需要感知、推理、规划、学习或语言能力的任务。</li>
+<li>ML：从数据中学习模型参数或决策规律，而不是把所有规则都由人手工写死。</li>
+<li>DL：通过多层神经网络自动学习层次化表示，常用于图像、语音、文本和多模态任务。</li>
+</ul>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n  AI[人工智能 AI] --> ML[机器学习 ML]\n  AI --> RULE[搜索 / 规划 / 知识表示 / 规则系统]\n  ML --> DL[深度学习 DL]\n  ML --> CLASSIC[线性模型 / 树模型 / SVM / 聚类]\n  DL --> TRANS[Transformer / CNN / RNN]&quot;">flowchart TD
+  AI[人工智能 AI] --> ML[机器学习 ML]
+  AI --> RULE[搜索 / 规划 / 知识表示 / 规则系统]
+  ML --> DL[深度学习 DL]
+  ML --> CLASSIC[线性模型 / 树模型 / SVM / 聚类]
+  DL --> TRANS[Transformer / CNN / RNN]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<p><strong>例子：</strong> 基于规则的专家系统属于 AI，但不一定是 ML；用随机森林预测故障属于 ML；用 Transformer 理解维修文本属于 DL，也属于 ML 和 AI。</p>
+<h3 id="q2-图灵测试是什么通过测试是否意味着机器真正理解">Q2. 图灵测试是什么？通过测试是否意味着机器真正理解？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#q2-图灵测试是什么通过测试是否意味着机器真正理解" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案：</strong> 图灵测试是一种行为层面的对话判别实验：测试者通过文本与人和机器交互，如果在一定条件下无法可靠区分机器和人，就认为机器在该测试中表现出类似人的对话能力。</p>
+<p>它不能证明机器具有意识、主观体验或人类意义上的理解。测试结果受测试者、对话时长、题目范围、提示方式和判别标准影响。通过测试说明的是可观察行为相似，而不是内部认知机制相同。</p>
+<p>详见 <a href="../../../Area/AI/1000问/大模型RAG与智能体基础" class="internal alias" data-slug="Area/AI/1000问/大模型RAG与智能体基础">大模型RAG与智能体基础</a> 中“图灵测试能否证明理解”的完整答案。</p>
+<h3 id="q3-强-ai-和弱-ai-有什么区别当前大模型属于哪一种">Q3. 强 AI 和弱 AI 有什么区别？当前大模型属于哪一种？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#q3-强-ai-和弱-ai-有什么区别当前大模型属于哪一种" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案：</strong> 弱 AI（Narrow AI）指在特定任务或任务范围内表现出智能能力的系统；强 AI 通常指具备广泛、可迁移、接近人类通用认知能力的系统。不同哲学和研究传统对“强 AI”的定义并不完全一致。</p>
+<p>当前 ChatGPT、图像生成模型和自动驾驶系统都应谨慎归类为现有 AI 系统，不能仅凭语言流畅或某个 benchmark 高分就称为已实现强 AI/AGI。它们在能力、可靠性、长期规划、现实 grounding、持续学习和自主性方面仍存在限制。</p>
+<p><strong>判断时看能力边界：</strong> 是否能跨领域迁移、在新环境中稳健学习、长期规划并自我纠错，而不只是完成训练分布内的特定任务。</p>
+<h3 id="q4-ai-发展经历过哪些春天和寒冬寒冬由什么造成">Q4. AI 发展经历过哪些“春天”和“寒冬”？寒冬由什么造成？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#q4-ai-发展经历过哪些春天和寒冬寒冬由什么造成" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案：</strong> AI 历史并不是严格只有“三次寒冬、两次春天”的统一划分；不同教材对阶段划分略有差异。较常见的脉络如下：</p>
+<ol>
+<li>1950s–1960s：符号主义、搜索和早期神经网络兴起，研究者对机器推理抱有较高期待。</li>
+<li>1970s：第一次 AI 冬天常与早期机器翻译、感知和推理系统未达到预期、算力和数据不足、资金/政策评估收紧有关。</li>
+<li>1980s：专家系统商业化带来复兴；但维护成本高、知识获取瓶颈、系统脆弱和硬件市场变化导致 1980s 末至 1990s 初的第二次寒冬。</li>
+<li>1990s–2000s：统计机器学习、互联网数据和更强计算推动复兴，语音识别、搜索、推荐等逐步落地。</li>
+<li>2010s 以后：大数据、GPU、深度学习和公开数据集推动视觉/语音突破；2020s Transformer、规模化预训练和生成式 AI 再次扩大应用范围。</li>
+</ol>
+<p><strong>共同教训：</strong> 过度承诺、任务定义不清、数据/算力不足、评估方式不可靠、部署成本和实际价值不匹配，都可能让技术热潮退潮。</p>
+<h2 id="二机器学习基础">二、机器学习基础<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#二机器学习基础" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="q5-监督无监督半监督和强化学习有什么区别">Q5. 监督、无监督、半监督和强化学习有什么区别？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#q5-监督无监督半监督和强化学习有什么区别" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案：</strong> 核心区别是训练信号从哪里来，以及模型要优化什么目标。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>范式</th><th>训练信号</th><th>典型任务</th><th>例子</th></tr></thead><tbody><tr><td>监督学习</td><td>输入及人工/系统标签</td><td>分类、回归</td><td>根据传感器特征预测故障类别</td></tr><tr><td>无监督学习</td><td>只有输入数据，寻找结构</td><td>聚类、降维、密度估计</td><td>将车辆运行工况聚类</td></tr><tr><td>半监督学习</td><td>少量标注 + 大量未标注数据</td><td>分类、识别</td><td>少量人工标注缺陷图像，利用大量未标注图像</td></tr><tr><td>强化学习</td><td>与环境交互获得奖励/惩罚</td><td>序贯决策、控制</td><td>智能体通过试错学习策略</td></tr></tbody></table></div>
+<p>“有无标签”是入门区分，但强化学习的关键不是普通标签，而是动作、状态转移和延迟奖励；半监督学习也不等于把未标注数据直接当作标签。</p>
+<h3 id="q6-训练准确率-99测试准确率-60-说明什么">Q6. 训练准确率 99%、测试准确率 60% 说明什么？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#q6-训练准确率-99测试准确率-60-说明什么" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案：</strong> 这通常是过拟合的信号：模型很好地拟合了训练数据，却不能泛化到未见数据。也可能由训练/测试分布不一致、数据泄漏、标签质量差或评估流程错误造成，必须进一步诊断。</p>
+<p>检查顺序：</p>
+<ol>
+<li>确认训练集与测试集没有重复样本或数据泄漏。</li>
+<li>检查划分是否按时间、车辆、用户或设备分组，避免同源数据同时进入训练和测试。</li>
+<li>对比训练/验证/测试分布、标签比例和采集环境。</li>
+<li>查看学习曲线：训练损失持续下降而验证损失上升，是过拟合的典型表现。</li>
+<li>检查模型复杂度、样本量、特征数量和标签噪声。</li>
+</ol>
+<h3 id="q7-欠拟合和过拟合如何平衡如何找到合适复杂度">Q7. 欠拟合和过拟合如何平衡？如何找到合适复杂度？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#q7-欠拟合和过拟合如何平衡如何找到合适复杂度" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案：</strong> 欠拟合是模型表达能力不足，训练集和测试集表现都差；过拟合是模型过度贴合训练样本，训练表现好而泛化表现差。目标不是追求最大模型，而是在独立验证集上选择泛化能力最好的方案。</p>
+<p>常用手段：</p>
+<ul>
+<li>欠拟合：增加合理特征、提高模型容量、减少过强正则化、训练更充分。</li>
+<li>过拟合：增加数据、数据增强、正则化、早停、降模型复杂度、交叉验证。</li>
+<li>选模型：只用训练集拟合、验证集调参、最终测试集只评估一次；不要反复根据测试集调参。</li>
+</ul>
+<h3 id="q8-训练集验证集测试集分别做什么为什么不能用测试集调参">Q8. 训练集、验证集、测试集分别做什么？为什么不能用测试集调参？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#q8-训练集验证集测试集分别做什么为什么不能用测试集调参" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案：</strong></p>
+<ul>
+<li>训练集：用于学习模型参数。</li>
+<li>验证集：用于选择模型、超参数、阈值和训练轮数。</li>
+<li>测试集：用于在模型方案冻结后估计最终泛化表现。</li>
+</ul>
+<p>如果反复用测试集选择模型，模型设计过程就间接“看到了”测试集信息，最终指标会过于乐观，测试集不再是独立评估。数据量有限时可用交叉验证，但仍应保留独立测试集或外部验证集用于最终评估。</p>
+<h2 id="三深度学习基础">三、深度学习基础<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#三深度学习基础" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="q9-神经网络中的一个神经元在数学上做什么">Q9. 神经网络中的一个神经元在数学上做什么？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#q9-神经网络中的一个神经元在数学上做什么" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案：</strong> 一个最简单的人工神经元先对输入做加权求和，再加偏置，最后通过激活函数：</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="text" data-theme="github-light github-dark"><code data-language="text" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>z = w1*x1 + w2*x2 + ... + wn*xn + b</span></span>
+<span data-line><span>y = f(z)</span></span></code></pre></figure>
+<p>其中 x 是输入，w 是可学习权重，b 是偏置，f 是激活函数。一个网络把许多神经元按层连接起来，通过训练调整权重和偏置，使输出接近目标。</p>
+<h3 id="q10-为什么神经网络需要非线性激活函数">Q10. 为什么神经网络需要非线性激活函数？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#q10-为什么神经网络需要非线性激活函数" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案：</strong> 如果每一层都只是线性变换，那么多层线性变换的复合仍然是一个线性变换，堆再多层也无法表示复杂的非线性关系。激活函数引入非线性，使网络能拟合更复杂的决策边界和函数。</p>
+<h3 id="q11-relusigmoidtanh-有什么区别为什么隐藏层常用-relu">Q11. ReLU、Sigmoid、Tanh 有什么区别？为什么隐藏层常用 ReLU？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#q11-relusigmoidtanh-有什么区别为什么隐藏层常用-relu" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案：</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>函数</th><th>形式</th><th>优点</th><th>局限/常见用途</th></tr></thead><tbody><tr><td>Sigmoid</td><td>1/(1+e^-x)</td><td>输出在 (0,1)，可解释为二分类概率参数化的一部分</td><td>大正/负值处梯度饱和；常用于二分类输出层</td></tr><tr><td>Tanh</td><td>(e^x-e^-x)/(e^x+e^-x)</td><td>输出在 (-1,1)，零中心</td><td>仍会在两端饱和；部分循环网络中使用</td></tr><tr><td>ReLU</td><td>max(0,x)</td><td>计算简单，正半轴梯度不饱和，稀疏激活</td><td>负半轴梯度为 0，可能出现“死亡 ReLU”</td></tr></tbody></table></div>
+<p>ReLU 常用于隐藏层是因为简单、计算便宜且在正区间能缓解传统 Sigmoid/Tanh 的梯度消失问题。它不是所有网络的最佳选择，GELU、SiLU、Leaky ReLU 等也很常见。</p>
+<h3 id="q12-反向传播是什么链式法则起什么作用">Q12. 反向传播是什么？链式法则起什么作用？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#q12-反向传播是什么链式法则起什么作用" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>答案：</strong> 反向传播（Backpropagation）是高效计算损失函数对网络参数梯度的算法。前向传播计算预测值和损失；反向传播从输出层向输入方向应用链式法则，逐层计算每个参数对损失的偏导数；优化器再根据梯度更新参数。</p>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart LR\n  A[输入数据] --> B[前向传播]\n  B --> C[预测与损失]\n  C --> D[反向传播：链式法则]\n  D --> E[计算参数梯度]\n  E --> F[优化器更新参数]\n  F --> B&quot;">flowchart LR
+  A[输入数据] --> B[前向传播]
+  B --> C[预测与损失]
+  C --> D[反向传播：链式法则]
+  D --> E[计算参数梯度]
+  E --> F[优化器更新参数]
+  F --> B
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<p>链式法则把复杂函数的导数拆成局部导数的乘积，使每层只需复用后续梯度并计算本层局部梯度。反向传播负责求梯度，SGD/Adam 等优化器负责根据梯度更新参数，两者不是同一个概念。</p>
+<h2 id="工程实践避免只记住术语">工程实践：避免只记住术语<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#工程实践避免只记住术语" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>用 scikit-learn 对同一数据集比较线性模型、决策树和随机森林，观察训练/验证差距。</li>
+<li>绘制训练损失与验证损失曲线，判断欠拟合、过拟合和训练不稳定。</li>
+<li>用 PyTorch 实现一个两层 MLP，打印每层张量形状、loss 和梯度范数。</li>
+<li>对类别不平衡数据同时报告 Precision、Recall、F1、ROC-AUC/PR-AUC，不只看 Accuracy。</li>
+</ul>
+<h2 id="相关专题">相关专题<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#相关专题" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="../../../Area/AI/机器学习" class="internal alias" data-slug="Area/AI/机器学习">机器学习</a></li>
+<li><a href="../../../Area/AI/机器学习实验手册" class="internal alias" data-slug="Area/AI/机器学习实验手册">机器学习实验手册</a></li>
+<li><a href="../../../Area/AI/深度学习" class="internal alias" data-slug="Area/AI/深度学习">深度学习</a></li>
+<li><a href="../../../Area/AI/深度学习实验手册" class="internal alias" data-slug="Area/AI/深度学习实验手册">深度学习实验手册</a></li>
+<li><a href="../../../Area/AI/1000问/大模型RAG与智能体基础" class="internal alias" data-slug="Area/AI/1000问/大模型RAG与智能体基础">大模型RAG与智能体基础</a></li>
+<li><a href="../../../Area/AI/AI专业方向" class="internal alias" data-slug="Area/AI/AI专业方向">AI专业方向</a></li>
+</ul></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-1" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#ai-1000问基础概念机器学习与神经网络入门" data-for="ai-1000问基础概念机器学习与神经网络入门">AI 1000问：基础概念、机器学习与神经网络入门</a></li><li class="depth-1"><a href="#一人工智能基础概念" data-for="一人工智能基础概念">一、人工智能基础概念</a></li><li class="depth-2"><a href="#q1-人工智能机器学习深度学习三者是什么关系" data-for="q1-人工智能机器学习深度学习三者是什么关系">Q1. 人工智能、机器学习、深度学习三者是什么关系？</a></li><li class="depth-2"><a href="#q2-图灵测试是什么通过测试是否意味着机器真正理解" data-for="q2-图灵测试是什么通过测试是否意味着机器真正理解">Q2. 图灵测试是什么？通过测试是否意味着机器真正理解？</a></li><li class="depth-2"><a href="#q3-强-ai-和弱-ai-有什么区别当前大模型属于哪一种" data-for="q3-强-ai-和弱-ai-有什么区别当前大模型属于哪一种">Q3. 强 AI 和弱 AI 有什么区别？当前大模型属于哪一种？</a></li><li class="depth-2"><a href="#q4-ai-发展经历过哪些春天和寒冬寒冬由什么造成" data-for="q4-ai-发展经历过哪些春天和寒冬寒冬由什么造成">Q4. AI 发展经历过哪些“春天”和“寒冬”？寒冬由什么造成？</a></li><li class="depth-1"><a href="#二机器学习基础" data-for="二机器学习基础">二、机器学习基础</a></li><li class="depth-2"><a href="#q5-监督无监督半监督和强化学习有什么区别" data-for="q5-监督无监督半监督和强化学习有什么区别">Q5. 监督、无监督、半监督和强化学习有什么区别？</a></li><li class="depth-2"><a href="#q6-训练准确率-99测试准确率-60-说明什么" data-for="q6-训练准确率-99测试准确率-60-说明什么">Q6. 训练准确率 99%、测试准确率 60% 说明什么？</a></li><li class="depth-2"><a href="#q7-欠拟合和过拟合如何平衡如何找到合适复杂度" data-for="q7-欠拟合和过拟合如何平衡如何找到合适复杂度">Q7. 欠拟合和过拟合如何平衡？如何找到合适复杂度？</a></li><li class="depth-2"><a href="#q8-训练集验证集测试集分别做什么为什么不能用测试集调参" data-for="q8-训练集验证集测试集分别做什么为什么不能用测试集调参">Q8. 训练集、验证集、测试集分别做什么？为什么不能用测试集调参？</a></li><li class="depth-1"><a href="#三深度学习基础" data-for="三深度学习基础">三、深度学习基础</a></li><li class="depth-2"><a href="#q9-神经网络中的一个神经元在数学上做什么" data-for="q9-神经网络中的一个神经元在数学上做什么">Q9. 神经网络中的一个神经元在数学上做什么？</a></li><li class="depth-2"><a href="#q10-为什么神经网络需要非线性激活函数" data-for="q10-为什么神经网络需要非线性激活函数">Q10. 为什么神经网络需要非线性激活函数？</a></li><li class="depth-2"><a href="#q11-relusigmoidtanh-有什么区别为什么隐藏层常用-relu" data-for="q11-relusigmoidtanh-有什么区别为什么隐藏层常用-relu">Q11. ReLU、Sigmoid、Tanh 有什么区别？为什么隐藏层常用 ReLU？</a></li><li class="depth-2"><a href="#q12-反向传播是什么链式法则起什么作用" data-for="q12-反向传播是什么链式法则起什么作用">Q12. 反向传播是什么？链式法则起什么作用？</a></li><li class="depth-1"><a href="#工程实践避免只记住术语" data-for="工程实践避免只记住术语">工程实践：避免只记住术语</a></li><li class="depth-1"><a href="#相关专题" data-for="相关专题">相关专题</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.1</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module">function f(i,e){if(!i)return;function r(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function t(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}i?.addEventListener("click",r),window.addCleanup(()=>i?.removeEventListener("click",r)),document.addEventListener("keydown",t),window.addCleanup(()=>document.removeEventListener("keydown",t))}function y(i){for(;i.firstChild;)i.removeChild(i.firstChild)}var h=class{constructor(e,r){this.container=e;this.content=r;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),r=this.onMouseMove.bind(this),t=this.onMouseUp.bind(this),o=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",r),document.addEventListener("mouseup",t),window.addEventListener("resize",o),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",r),()=>document.removeEventListener("mouseup",t),()=>window.removeEventListener("resize",o))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let r=this.createButton("+",()=>this.zoom(.1)),t=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(t),e.appendChild(o),e.appendChild(r),this.container.appendChild(e)}createButton(e,r){let t=document.createElement("button");return t.textContent=e,t.className="mermaid-control-button",t.addEventListener("click",r),window.addCleanup(()=>t.removeEventListener("click",r)),t}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}zoom(e){let r=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),t=this.content.getBoundingClientRect(),o=t.width/2,n=t.height/2,c=r-this.scale;this.currentPan.x-=o*c,this.currentPan.y-=n*c,this.scale=r,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){this.scale=1;let e=this.content.querySelector("svg");this.currentPan={x:e.getBoundingClientRect().width/2,y:e.getBoundingClientRect().height/2},this.updateTransform()}},C=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],E;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;E||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let r=E.default,t=new WeakMap;for(let n of e)t.set(n,n.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let a=t.get(s);a&&(s.innerHTML=a)}let n=C.reduce((s,a)=>(s[a]=window.getComputedStyle(document.documentElement).getPropertyValue(a),s),{}),c=document.documentElement.getAttribute("saved-theme")==="dark";r.initialize({startOnLoad:!1,securityLevel:"loose",theme:c?"dark":"base",themeVariables:{fontFamily:n["--codeFont"],primaryColor:n["--light"],primaryTextColor:n["--darkgray"],primaryBorderColor:n["--tertiary"],lineColor:n["--darkgray"],secondaryColor:n["--secondary"],tertiaryColor:n["--tertiary"],clusterBkg:n["--light"],edgeLabelBackground:n["--highlight"]}}),await r.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let n=0;n<e.length;n++){let v=function(){let g=l.querySelector("#mermaid-space"),m=l.querySelector(".mermaid-content");if(!m)return;y(m);let w=c.querySelector("svg").cloneNode(!0);m.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new h(g,m)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},c=e[n],s=c.parentElement,a=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(a),L=a.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),f(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="/static/katex/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../../postscript.js" type="module"></script></html>
