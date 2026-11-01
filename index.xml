@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>C语言</title>
+    <link>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80</link>
+    <guid>https://wiki.likui.info/Area/EE/C%E8%AF%AD%E8%A8%80</guid>
+    <description><![CDATA[ C 语言是嵌入式与系统编程的通用语言：它贴近硬件、语法精简、可移植性强，几乎所有操作系统内核、编译器和 MCU 固件都由 C 写成。学 C 不只是学语法，更是理解「内存、指针、编译链接」的入口。 一句话定位 C = 一门「小而深」的语言：语法少，但指针与内存模型足够陪你走完整个职业生涯。 知识体系 flowchart TD A[C 语言] --&gt; B[基础语法] A --&gt; C[核心难点] A --&gt; D[模块化] A --&gt; E[工程实践] B --&gt; B1[&quot;数据类型与变量&quot;] B --&gt; B2[&quot;运算符与表达式&quot;... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 05:07:45 GMT</pubDate>
+  </item><item>
     <title>面向对象</title>
     <link>https://wiki.likui.info/Area/EE/%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1</link>
     <guid>https://wiki.likui.info/Area/EE/%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/AI/1000%E9%97%AE/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%E4%B8%8E%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0</guid>
     <description><![CDATA[ AI 1000问：机器学习算法、优化与模型评估 本篇对应 AI 全景题库中的监督学习算法、模型评估、优化和无监督学习问题。核心原则是：先明确数据生成过程和业务代价，再选模型与指标；不要只根据单个准确率或排行榜分数判断模型好坏。 一、监督学习算法 Q1. ]]></description>
     <pubDate>Sun, 01 Nov 2026 05:02:24 GMT</pubDate>
-  </item><item>
-    <title>AI 1000问：基础概念、机器学习与神经网络入门</title>
-    <link>https://wiki.likui.info/Area/AI/1000%E9%97%AE/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8</link>
-    <guid>https://wiki.likui.info/Area/AI/1000%E9%97%AE/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8</guid>
-    <description><![CDATA[ AI 1000问：基础概念、机器学习与神经网络入门 本篇回答 AI 全景题库中的基础概念、机器学习范式、过拟合/欠拟合和神经网络基础题。题库中的“图灵测试”与已有 大模型RAG与智能体基础 第 16 题重复，本篇直接链接主答案，避免重复维护。 一、人工智能基础概念 Q1. ]]></description>
-    <pubDate>Sun, 01 Nov 2026 05:01:27 GMT</pubDate>
   </item>
     </channel>
   </rss>
