@@ -202,3 +202,5 @@ flowchart LR
 - 结构性检查不等于所有供应商参数已在目标项目实测；涉及 DaVinci/EB 版本、BSW 实现、芯片能力和 OEM 配置时，仍需以项目基线、ARXML、工具手册和实测证据为准。
 
 - [[规范模块/ModeManagementGuide]] 工程问答已扩展至 Q1–Q12，补充网关 ECU、多网络（CAN/LIN/FlexRay/Ethernet）、DCM 路由路径和多核 BswM 协同，并提供测试矩阵。
+
+- 本轮进一步扩展 BswM 规则求值、Partial Networking PNC 位向量/收发器唤醒、SWC ModeSwitch 数据流、车型变体 CI、BSW 条件编译宏追踪、BSW 必填参数、配置完整性验收、生成代码审计和项目基线迁移等单题答案；补入 Mermaid、验证矩阵和版本/供应商边界。
