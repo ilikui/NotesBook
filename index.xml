@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>问题解决树培训：目标、构建步骤与会议实战</title>
+    <link>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%A0%91%E5%9F%B9%E8%AE%AD%E8%B5%84%E6%96%99</link>
+    <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%A0%91%E5%9F%B9%E8%AE%AD%E8%B5%84%E6%96%99</guid>
+    <description><![CDATA[ 问题解决树培训：目标、构建步骤与会议实战 原始 Flomo：v.flomoapp.com/mine/ 培训目标 完成本模块后，参与者应能够： 说明问题解决树的价值、适用条件与局限。 将模糊的重大问题拆成可验证的子问题。 识别事实、假设、待验证事项和决策。 阅读并解释问题树，主持跨团队问题解决会议。 将分析结论转化为负责人明确、可验收的行动项。 为什么推荐使用问题解决树？ 当问题具有以下特征时，问题树尤其有用： 影响范围大、客户关注度高，且需要频繁更新。 多个团队同时参与，专业背景不同，讨论容易发散。 现象复杂，可能涉及硬件、软件、系统集成、制造、供应商或使用环境。 每天需要向管理层或客户汇报进... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:53:41 GMT</pubDate>
+  </item><item>
     <title>问题树：如何发现、拆解、分析并解决复杂问题</title>
     <link>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E9%97%AE%E9%A2%98%E6%A0%91%E4%B8%8E%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF</link>
     <guid>https://wiki.likui.info/Area/KM/%E5%8D%A1%E7%89%87%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%96%B9%E6%B3%95%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E9%97%AE%E9%A2%98%E6%A0%91%E4%B8%8E%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/1000%E9%97%AE/PC%E5%AF%84%E5%AD%98%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD%E5%90%91%E9%87%8F%E8%A1%A8</guid>
     <description><![CDATA[ ①PC(Program Counter):CPU内一定会有的寄存器，不同CPU可能会用不同的名字，如IP(Instruction Pointer);是用来记 录下一个指令的地址。当CPU执行完一个指令后，PC值会自动累加，此外，某些指令（如JUMP）就是通过改变PC的值来改变CPU的执行顺序。 原始 Flomo：v.flomoapp.com/mine/ ①PC(Program Counter):CPU内一定会有的寄存器，不同CPU可能会用不同的名字，如IP(Instruction Pointer);是用来记 录下一个指令的地址。当CPU执行完一个指令后，PC值会自动累加，此外，某些指令（如JU... ]]></description>
     <pubDate>Sun, 01 Nov 2026 04:24:50 GMT</pubDate>
-  </item><item>
-    <title>DMA数据搬运与缓存一致性</title>
-    <link>https://wiki.likui.info/Area/EE/1000%E9%97%AE/DMA%E6%95%B0%E6%8D%AE%E6%90%AC%E8%BF%90%E4%B8%8E%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7</link>
-    <guid>https://wiki.likui.info/Area/EE/1000%E9%97%AE/DMA%E6%95%B0%E6%8D%AE%E6%90%AC%E8%BF%90%E4%B8%8E%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7</guid>
-    <description><![CDATA[ 专栏⑮·补充二：DMA——数据搬运不占 CPU 的隐形引擎 来源：Flomo 原始笔记｜查看原笔记｜迁移日期：2026-10-31 专栏⑮·补充二：DMA——数据搬运不占 CPU 的隐形引擎 ▎ 为什么嵌入式高性能离不开 DMA UART 收一串不定长数据、ADC 连续采样 1024 点、SPI 读 Flash 一页——这些如果全用中断逐字节搬，CPU 全耗在搬运上，实时性崩。DMA 把「从外设搬到内存」这件事外包给硬件，搬完再打断你。 ▎ DMA 是什么 直接内存访问：独立于 CPU 的搬运引擎，一条总线主设备 搬运描述：源地址 + 目的地址 + 长度 + 触发源（外设事件） 搬完回调：传输... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:24:46 GMT</pubDate>
   </item>
     </channel>
   </rss>
