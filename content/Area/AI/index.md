@@ -32,6 +32,7 @@ flowchart TD
 
 ## AI 1000问逐题解答
 
+- [[1000问/检索智能体与AI应用基础]] —— 17 道问答，覆盖 RAG、Agent/ReAct、向量检索、时间序列、AutoML、多模态、知识图谱、异常检测与特征工程。
 - [[1000问/神经网络Transformer与强化学习基础]] —— 16 道问答，覆盖 CNN、RNN、LSTM、Word2Vec、视觉输入、Attention、位置编码、GPT/BERT、上下文窗口与强化学习。
 - [[1000问/机器学习算法与模型评估]] —— 16 道问答，覆盖线性/逻辑回归、决策树、SVM、k-NN、Precision/Recall/F1、ROC-AUC、梯度下降、SGD、K-means 与 PCA。
 - [[1000问/基础概念与机器学习入门]] —— AI/ML/DL 概念边界、AI 历史、监督/无监督学习、过拟合/欠拟合、数据集划分、神经元、激活函数与反向传播。
