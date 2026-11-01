@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>ModeManagementGuide</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/ModeManagementGuide</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9D%97/ModeManagementGuide</guid>
+    <description><![CDATA[ ModeManagementGuide 是 CP 解释性指南（EXP），系统讲解 AUTOSAR 模式管理（Mode Management）：模式是什么、模式切换如何实现、模式管理器（Mode Manager）与模式使用者（Mode User）各自的角色，以及应用模式管理（Application Mode）与基础软件模式管理（BSW Mode）之间的关系。 一句话定位 CP 里「谁在什么条件下切到什么状态」的统一答案，BswM 是其中的中枢。 规范信息 项目内容平台CP类别EXP — 解释性指南（Explanation）UID440版本R25-11本地 PDFAUTOSAR_CP_EXP_Mo... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 13:27:55 GMT</pubDate>
+  </item><item>
     <title>软考高级1000问：系统架构师与项目管理基础</title>
     <link>https://wiki.likui.info/Project/%E8%80%83%E8%AF%95%E7%AE%A1%E7%90%86/%E8%BD%AF%E8%80%83%E9%AB%98%E7%BA%A71000%E9%97%AE</link>
     <guid>https://wiki.likui.info/Project/%E8%80%83%E8%AF%95%E7%AE%A1%E7%90%86/%E8%BD%AF%E8%80%83%E9%AB%98%E7%BA%A71000%E9%97%AE</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/1000%E9%97%AE/%E5%A4%9A%E5%85%83%E7%A7%AF%E5%88%86%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E4%B8%8E%E6%97%A0%E7%A9%B7%E7%BA%A7%E6%95%B0</guid>
     <description><![CDATA[ 考研数学1000问：多元积分、常微分方程与无穷级数 一、多元积分 Q1. ]]></description>
     <pubDate>Sun, 01 Nov 2026 05:15:54 GMT</pubDate>
-  </item><item>
-    <title>专栏⑰·导航分卷：线性代数 1000 问（全量问题库）</title>
-    <link>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%AF%BC%E8%88%AA%E5%88%86%E5%8D%B7-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B01000%E9%97%AE</link>
-    <guid>https://wiki.likui.info/Area/EE/%E6%95%B0%E5%AD%A6/%E4%B8%93%E6%A0%8F%E2%91%B0%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%AF%BC%E8%88%AA%E5%88%86%E5%8D%B7-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B01000%E9%97%AE</guid>
-    <description><![CDATA[ 专栏⑰·导航分卷：线性代数 1000 问（全量问题库） 原始 Flomo：v.flomoapp.com/mine/ 专栏⑰·导航分卷：线性代数 1000 问（全量问题库） 📎 专栏⑰导航 → v.flomoapp.com/mine/ 记录线性代数学习的1000个问题： ▎ 基础概念 向量和标量最本质的区别是什么？一个数和一个数组，为什么线性代数要把它们区分开？ 矩阵为什么是一个”二维”的东西？它和一维数组（向量）在几何意义上有什么不同？ 零向量和零矩阵看起来都是0，为什么在线性代数里要单独定义它们？ ▎ 矩阵运算 矩阵乘法为什么不是逐元素相乘？它背后的设计意图是什么？ 矩阵乘法不满足交换律（... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 05:15:21 GMT</pubDate>
   </item>
     </channel>
   </rss>
