@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>AI 1000问：强化学习、训练优化、端侧部署与前沿模型</title>
+    <link>https://wiki.likui.info/Area/AI/1000%E9%97%AE/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E8%AE%AD%E7%BB%83%E4%BC%98%E5%8C%96%E4%B8%8E%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF</link>
+    <guid>https://wiki.likui.info/Area/AI/1000%E9%97%AE/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E8%AE%AD%E7%BB%83%E4%BC%98%E5%8C%96%E4%B8%8E%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF</guid>
+    <description><![CDATA[ AI 1000问：强化学习、训练优化、端侧部署与前沿模型 一、强化学习进阶 Q1. ]]></description>
+    <pubDate>Sun, 01 Nov 2026 05:05:13 GMT</pubDate>
+  </item><item>
+    <title>专栏⑯·导航：AI 1000 问全景——从基础概念到大模型落地</title>
+    <link>https://wiki.likui.info/Area/AI/%E4%B8%93%E6%A0%8F%E2%91%AF%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%AF%BC%E8%88%AA-AI1000%E9%97%AE%E5%85%A8%E6%99%AF</link>
+    <guid>https://wiki.likui.info/Area/AI/%E4%B8%93%E6%A0%8F%E2%91%AF%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%AF%BC%E8%88%AA-AI1000%E9%97%AE%E5%85%A8%E6%99%AF</guid>
+    <description><![CDATA[ 专栏⑯·导航：AI 1000 问全景——从基础概念到大模型落地 原始 Flomo：v.flomoapp.com/mine/ 专栏⑯·导航：AI 1000 问全景——从基础概念到大模型落地 📎 专栏⑮嵌入式导航 → v.flomoapp.com/mine/ ▎目录（10篇） AI 用在哪——对话式索引：让 AI 搜你的笔记，而不是全文搜索 AI 在知识管理里的角色——6 层闭环里最擅长整理和存储 Embedding 与 RAG——文档讲不清、实际用起来完全不一样的两个概念 LLM 架构基础——Transformer、注意力、训练三阶段 RAG 实战——分块、向量、检索、对齐 AI Agent ... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 05:04:34 GMT</pubDate>
+  </item><item>
     <title>1000问知识体系</title>
     <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
     <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
@@ -23,12 +35,6 @@
     <guid>https://wiki.likui.info/Area/AI/1000%E9%97%AE/%E6%A3%80%E7%B4%A2%E6%99%BA%E8%83%BD%E4%BD%93%E4%B8%8EAI%E5%BA%94%E7%94%A8%E5%9F%BA%E7%A1%80</guid>
     <description><![CDATA[ AI 1000问：RAG、Agent、向量检索与AI应用 一、RAG 与知识检索 Q1. ]]></description>
     <pubDate>Sun, 01 Nov 2026 05:04:12 GMT</pubDate>
-  </item><item>
-    <title>专栏⑯·导航：AI 1000 问全景——从基础概念到大模型落地</title>
-    <link>https://wiki.likui.info/Area/AI/%E4%B8%93%E6%A0%8F%E2%91%AF%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%AF%BC%E8%88%AA-AI1000%E9%97%AE%E5%85%A8%E6%99%AF</link>
-    <guid>https://wiki.likui.info/Area/AI/%E4%B8%93%E6%A0%8F%E2%91%AF%E5%8E%9F%E5%A7%8B%E7%AC%94%E8%AE%B0/%E5%AF%BC%E8%88%AA-AI1000%E9%97%AE%E5%85%A8%E6%99%AF</guid>
-    <description><![CDATA[ 专栏⑯·导航：AI 1000 问全景——从基础概念到大模型落地 原始 Flomo：v.flomoapp.com/mine/ 专栏⑯·导航：AI 1000 问全景——从基础概念到大模型落地 📎 专栏⑮嵌入式导航 → v.flomoapp.com/mine/ ▎目录（10篇） AI 用在哪——对话式索引：让 AI 搜你的笔记，而不是全文搜索 AI 在知识管理里的角色——6 层闭环里最擅长整理和存储 Embedding 与 RAG——文档讲不清、实际用起来完全不一样的两个概念 LLM 架构基础——Transformer、注意力、训练三阶段 RAG 实战——分块、向量、检索、对齐 AI Agent ... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 05:03:28 GMT</pubDate>
   </item><item>
     <title>AI 1000问：CNN、RNN、Transformer、大语言模型与强化学习</title>
     <link>https://wiki.likui.info/Area/AI/1000%E9%97%AE/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9CTransformer%E4%B8%8E%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80</link>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%83%E7%A7%8D%E5%AF%BB%E5%9D%80%E6%96%B9%E5%BC%8F</guid>
     <description><![CDATA[ 处理器寻址方式 原始 Flomo：v.flomoapp.com/mine/ 寻址方式描述指令如何定位操作数。不同 ISA（x86、ARM、PowerPC、RISC-V 等）的寻址模式和汇编语法并不完全相同。下面先解释常见概念，再以传统 x86 16 位地址表达式说明原笔记中的七类形式；不要把这七类当成所有处理器都统一规定的分类。 1. ]]></description>
     <pubDate>Sun, 01 Nov 2026 05:00:43 GMT</pubDate>
-  </item><item>
-    <title>中断概念与处理流程：从异常入口到 ISR 返回</title>
-    <link>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E4%B8%AD%E6%96%AD%E6%A6%82%E5%BF%B5%E4%B8%8E%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B</link>
-    <guid>https://wiki.likui.info/Area/EE/1000%E9%97%AE/%E4%B8%AD%E6%96%AD%E6%A6%82%E5%BF%B5%E4%B8%8E%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B</guid>
-    <description><![CDATA[ 中断概念与处理流程 原始 Flomo：v.flomoapp.com/mine/ 1. ]]></description>
-    <pubDate>Sun, 01 Nov 2026 05:00:37 GMT</pubDate>
   </item>
     </channel>
   </rss>
