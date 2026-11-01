@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>标准版本演进与命名规则</title>
+    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E6%A0%87%E5%87%86%E7%89%88%E6%9C%AC%E6%BC%94%E8%BF%9B%E4%B8%8E%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99</link>
+    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E6%A0%87%E5%87%86%E7%89%88%E6%9C%AC%E6%BC%94%E8%BF%9B%E4%B8%8E%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99</guid>
+    <description><![CDATA[ AUTOSAR 版本演进：命名从 R4.x 切到「年份-月份」 原始 Flomo：v.flomoapp.com/mine/ AUTOSAR 版本演进：命名从 R4.x 切到「年份-月份」 先厘清命名分水岭：R4.0～R4.3 是老式 R4.x 命名；大约从 R4.4 起，AUTOSAR 改成「发布年-月」命名（R19-11 这一档大致对应 R4.4）。所以 R20-11、R21-11 不是全新系列，是 R4.x 的延续，只是换了名字。 各版本最有代表性的变化（大致脉络）： R4.0：Classic 平台分水岭。方法论与 SW-C 接口全面标准化，OS 规范化，把 R3 时代的遗留推到体系化，很... ]]></description>
+    <pubDate>Sun, 01 Nov 2026 04:59:41 GMT</pubDate>
+  </item><item>
     <title>KM</title>
     <link>https://wiki.likui.info/Area/KM/</link>
     <guid>https://wiki.likui.info/Area/KM/</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90Q2-BSW%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91%E5%AE%8F%E5%88%A4%E6%96%AD</guid>
     <description><![CDATA[ 生成代码分析与集成 Q2：BSW 生成代码用宏控制条件编译——怎么确定某配置参数对应宏是 ENABLED 还是 DISABLED？ 原始 Flomo：v.flomoapp.com/mine/ 生成代码分析与集成 Q2：BSW 生成代码用宏控制条件编译——怎么确定某配置参数对应宏是 ENABLED 还是 DISABLED？ 生成器把每个配置参数翻译成预处理器宏，命名有规律（如 XXX_ENABLED / XXX_ACTIVE / XXX_USE_…），值为 STD_ON / STD_OFF 或 TRUE / FALSE。 三个直接手段： 看生成的配置头文件（_Cfg.h）：在生成目录里搜宏名（如... ]]></description>
     <pubDate>Sun, 01 Nov 2026 04:58:05 GMT</pubDate>
-  </item><item>
-    <title>生成代码分析Q1-undefined-reference链接错误</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90Q1-undefined-reference%E9%93%BE%E6%8E%A5%E9%94%99%E8%AF%AF</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90Q1-undefined-reference%E9%93%BE%E6%8E%A5%E9%94%99%E8%AF%AF</guid>
-    <description><![CDATA[ 生成代码分析与集成 Q1：编译报「undefined reference」——模块没配全还是链接脚本没加源文件？第一步查什么？ 原始 Flomo：v.flomoapp.com/mine/ 生成代码分析与集成 Q1：编译报「undefined reference」——模块没配全还是链接脚本没加源文件？第一步查什么？ undefined reference 通常两类来源： 配置 / 生成问题：生成代码引用了某个函数 / 变量，但配置没配全，导致那个符号根本没被生成——比如某模块的源文件没生成、某个配置未启用（对应函数没被编译进去）。 链接 / 编译清单问题：符号确实生成了，但对应的 .c 文件没被... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 04:58:02 GMT</pubDate>
   </item>
     </channel>
   </rss>
