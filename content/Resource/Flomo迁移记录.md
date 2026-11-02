@@ -101,3 +101,5 @@ tags:
 - 更新 `content/Resource/History/index.md` 与 `content/Resource/1000问题系列/index.md`；历史问答页由 6 篇增至 7 篇，连续编辑编号由 Q1–Q81 扩展至 Q1–Q84。
 - 参考 WTO、中国商务部、中国外交部、香港政府年鉴和世界银行数据及研究。
 - Flomo 全量题库仍包含大量尚未处理的古代史和专题题目，因此**不**给整条原始问题清单添加“已迁移”标签；不删除任何 Flomo 原文。
+
+- 本轮最新提交 `3225900c20cca26d856d4aa83bb34e659d2e0736` 的 GitHub Combined Status 再次返回 Vercel `failure`，目标说明仍为 `Account is blocked`；GitHub 文件写入和回读核验成功，但线上部署仍未通过。
