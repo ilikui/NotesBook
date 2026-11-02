@@ -37,6 +37,16 @@ tags:
 - 更新嵌入式工程补充页、Area/KM、Area/AI、Area/EE、Resource 和 1000问总索引的导航链接。
 - 变更已提交到 `main`；最近一次索引提交：本次更新后的 `content/Area/EE/index.md` 提交。
 
+
+
+## 2026-11-02 继续补全历史 1000 问
+
+- 新增 `content/Resource/History/1000问/近代转型抗日战争与共和国成立.md`，完成 NotesBook 连续编辑编号 Q52–Q61。
+- 内容覆盖共和探索、军阀割据、新文化运动、五四运动、北伐、长征、抗日战争、重庆谈判、三大战役和中华人民共和国成立初期。
+- 更新 `content/Resource/History/index.md` 与 `content/Resource/1000问题系列/index.md` 导航；历史问答页由 3 篇增至 4 篇，连续编辑编号由 Q1–Q51 扩展至 Q1–Q61。
+- 来源为 Flomo 历史问题总清单（https://v.flomoapp.com/mine/?memo_id=MjQ3MDc5OTMz）。该清单包含大量尚未处理的问题，因此**没有**给整条原始笔记添加 `#Archive/MigratedWiki`；仅标记已完成整条内容迁移的来源。
+- 新页附有大学与国家档案馆教学资源、学术书目及外交史资料链接，并明确反事实问题与不同历史解释的边界。
+
 ## 暂缓公开的内容
 
 以下内容尚未标记为 `Archive/MigratedWiki`，不会为了追求迁移数量而直接公开：
