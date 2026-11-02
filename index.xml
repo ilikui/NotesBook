@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Flomo 迁移记录</title>
+    <link>https://wiki.likui.info/Resource/Flomo%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95</link>
+    <guid>https://wiki.likui.info/Resource/Flomo%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95</guid>
+    <description><![CDATA[ Flomo 迁移记录 本页记录 Flomo → NotesBook 的增量迁移情况，避免重复导入。迁移标记表示相关内容已被整理、引用或归档到 NotesBook，不表示 Flomo 原文可以删除。 Flomo 原文和既有标签继续保留。 2026-11-02 本批完成 本批（本次续迁）新增核对并标记 #Archive/MigratedWiki 的 Flomo 笔记 34 条： 来源分类本批数量NotesBook 目标历史上下五千年12上古与夏商周、军事制度经济思想与文化、科技生活审美地理与史料；对应原始题库与专题文章来源均已回链Linux / GCC1嵌入式工程进阶与实战补充：新增 GCC 编译... ]]></description>
+    <pubDate>Mon, 02 Nov 2026 11:50:03 GMT</pubDate>
+  </item><item>
+    <title>EE</title>
+    <link>https://wiki.likui.info/Area/EE/</link>
+    <guid>https://wiki.likui.info/Area/EE/</guid>
+    <description><![CDATA[ 电子、电气与嵌入式系统的学习地图。 ]]></description>
+    <pubDate>Mon, 02 Nov 2026 11:50:00 GMT</pubDate>
+  </item><item>
     <title>软件与汽车软件开发生命周期</title>
     <link>https://wiki.likui.info/Area/EE/%E8%BD%AF%E4%BB%B6%E4%B8%8E%E6%B1%BD%E8%BD%A6%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F</link>
     <guid>https://wiki.likui.info/Area/EE/%E8%BD%AF%E4%BB%B6%E4%B8%8E%E6%B1%BD%E8%BD%A6%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F</guid>
@@ -42,23 +54,11 @@
     <description><![CDATA[ 暂无明确项目归属、但值得持续探索的主题与参考材料。 ]]></description>
     <pubDate>Mon, 02 Nov 2026 11:15:26 GMT</pubDate>
   </item><item>
-    <title>Flomo 迁移记录</title>
-    <link>https://wiki.likui.info/Resource/Flomo%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95</link>
-    <guid>https://wiki.likui.info/Resource/Flomo%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95</guid>
-    <description><![CDATA[ Flomo 迁移记录 本页记录 Flomo → NotesBook 的增量迁移情况，避免重复导入。迁移标记表示相关内容已被整理、引用或归档到 NotesBook，不表示 Flomo 原文可以删除。 Flomo 原文和既有标签继续保留。 2026-11-02 本批完成 本批新增核对并标记 #Archive/MigratedWiki 的 Flomo 笔记 27 条： 来源分类本批数量NotesBook 目标历史上下五千年12上古与夏商周、军事制度经济思想与文化、科技生活审美地理与史料；对应原始题库与专题文章来源均已回链Linux / GCC1嵌入式工程进阶与实战补充：新增 GCC 编译阶段、交叉编... ]]></description>
-    <pubDate>Mon, 02 Nov 2026 11:15:20 GMT</pubDate>
-  </item><item>
     <title>开发工具与工程工具链</title>
     <link>https://wiki.likui.info/Resource/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%B7%A5%E5%85%B7%E9%93%BE</link>
     <guid>https://wiki.likui.info/Resource/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%B7%A5%E5%85%B7%E9%93%BE</guid>
     <description><![CDATA[ 开发工具与工程工具链 工具应服务于工作流，而不是反过来决定工作流。选择工具时重点考虑目标平台、团队标准、许可证、可重复构建、数据可追溯和自动化能力。 工具分层 环节常见工具主要用途编辑与开发VS Code、STM32CubeIDE、Keil、IAR编辑、编译、调试 MCU 软件AUTOSAR 配置DaVinci Developer / Configurator、EB tresos Studio配置 SWC、BSW、通信与生成代码；具体能力依版本和授权而异模型开发MATLAB / Simulink、Embedded Coder建模、仿真、代码生成与验证总线分析CANoe网络仿真、报文分析、诊断与... ]]></description>
     <pubDate>Mon, 02 Nov 2026 11:14:29 GMT</pubDate>
-  </item><item>
-    <title>EE</title>
-    <link>https://wiki.likui.info/Area/EE/</link>
-    <guid>https://wiki.likui.info/Area/EE/</guid>
-    <description><![CDATA[ 电子、电气与嵌入式系统的学习地图。 ]]></description>
-    <pubDate>Mon, 02 Nov 2026 11:14:00 GMT</pubDate>
   </item><item>
     <title>RSS 与信息源管理</title>
     <link>https://wiki.likui.info/Resource/RSS%E4%B8%8E%E4%BF%A1%E6%81%AF%E6%BA%90%E7%AE%A1%E7%90%86</link>
