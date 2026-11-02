@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>微信读书</title>
+    <link>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</link>
+    <guid>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</guid>
+    <description><![CDATA[ 从微信读书自动同步的个人书架与阅读记录索引。 ]]></description>
+    <pubDate>Mon, 02 Nov 2026 23:36:59 GMT</pubDate>
+  </item><item>
+    <title>Flomo 迁移记录</title>
+    <link>https://wiki.likui.info/Resource/Flomo%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95</link>
+    <guid>https://wiki.likui.info/Resource/Flomo%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95</guid>
+    <description><![CDATA[ Flomo 迁移记录 本页记录 Flomo → NotesBook 的增量迁移情况，避免重复导入。迁移标记表示相关内容已被整理、引用或归档到 NotesBook，不表示 Flomo 原文可以删除。 Flomo 原文和既有标签继续保留。 2026-11-02 本批完成 本批（本次续迁）新增核对并标记 #Archive/MigratedWiki 的 Flomo 笔记 34 条： 来源分类本批数量NotesBook 目标历史上下五千年12上古与夏商周、军事制度经济思想与文化、科技生活审美地理与史料；对应原始题库与专题文章来源均已回链Linux / GCC1嵌入式工程进阶与实战补充：新增 GCC 编译... ]]></description>
+    <pubDate>Mon, 02 Nov 2026 12:59:36 GMT</pubDate>
+  </item><item>
     <title>丝绸之路与中外文明交流</title>
     <link>https://wiki.likui.info/Resource/History/1000%E9%97%AE/%E4%B8%9D%E7%BB%B8%E4%B9%8B%E8%B7%AF%E4%B8%8E%E4%B8%AD%E5%A4%96%E6%96%87%E6%98%8E%E4%BA%A4%E6%B5%81</link>
     <guid>https://wiki.likui.info/Resource/History/1000%E9%97%AE/%E4%B8%9D%E7%BB%B8%E4%B9%8B%E8%B7%AF%E4%B8%8E%E4%B8%AD%E5%A4%96%E6%96%87%E6%98%8E%E4%BA%A4%E6%B5%81</guid>
@@ -23,12 +35,6 @@
     <guid>https://wiki.likui.info/Resource/History/</guid>
     <description><![CDATA[ 历史知识专题 历史学习以时间线为主干，以制度、经济、军事、思想、文化、科技、生活和地理为专题。回答问题时区分史料事实、学术解释和价值评价。 1000问逐题解答 上古与夏商周 —— 神话传说、夏代争议、甲骨文、商周制度与史料边界。 军事制度经济思想与文化 —— 战争、中央官制、地方治理、科举、土地经济、宗教思想与文学典籍。 科技生活审美地理与史料 —— 古代科技工程、社会生活、女性史、服饰工艺、疆域人口和史料方法。 近代转型抗日战争与共和国成立 —— Q52–Q61：共和探索、军阀割据、新文化与五四、北伐、长征、抗日战争、重庆谈判、三大战役与共和国成立。 新中国成立初期与社会主义改造 —— Q6... ]]></description>
     <pubDate>Mon, 02 Nov 2026 12:59:18 GMT</pubDate>
-  </item><item>
-    <title>Flomo 迁移记录</title>
-    <link>https://wiki.likui.info/Resource/Flomo%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95</link>
-    <guid>https://wiki.likui.info/Resource/Flomo%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95</guid>
-    <description><![CDATA[ Flomo 迁移记录 本页记录 Flomo → NotesBook 的增量迁移情况，避免重复导入。迁移标记表示相关内容已被整理、引用或归档到 NotesBook，不表示 Flomo 原文可以删除。 Flomo 原文和既有标签继续保留。 2026-11-02 本批完成 本批（本次续迁）新增核对并标记 #Archive/MigratedWiki 的 Flomo 笔记 34 条： 来源分类本批数量NotesBook 目标历史上下五千年12上古与夏商周、军事制度经济思想与文化、科技生活审美地理与史料；对应原始题库与专题文章来源均已回链Linux / GCC1嵌入式工程进阶与实战补充：新增 GCC 编译... ]]></description>
-    <pubDate>Mon, 02 Nov 2026 12:37:53 GMT</pubDate>
   </item><item>
     <title>历史上下五千年1000问：军事战争与军事制度</title>
     <link>https://wiki.likui.info/Resource/History/1000%E9%97%AE/%E5%86%9B%E4%BA%8B%E6%88%98%E4%BA%89%E4%B8%8E%E5%86%9B%E4%BA%8B%E5%88%B6%E5%BA%A6</link>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Resource/History/1000%E9%97%AE/%E8%BF%91%E4%BB%A3%E8%BD%AC%E5%9E%8B%E6%8A%97%E6%97%A5%E6%88%98%E4%BA%89%E4%B8%8E%E5%85%B1%E5%92%8C%E5%9B%BD%E6%88%90%E7%AB%8B</guid>
     <description><![CDATA[ 历史上下五千年1000问：近代转型、抗日战争与共和国成立 本篇承接历史问答 Q1–Q51，新增 Q52–Q61，覆盖清末之后的共和探索、军阀割据、新文化运动、五四运动、北伐、长征、抗日战争、战后谈判、国共内战和中华人民共和国成立初期。 阅读原则： 近现代史涉及政治立场、战争记忆和不同群体的历史经验。答案区分可核实事件、学术解释和反事实问题；不把单一因素当作全部原因，也不把“如果当时……”写成可证实的历史结论。 一、共和探索与社会思潮 Q52. ]]></description>
     <pubDate>Mon, 02 Nov 2026 11:59:08 GMT</pubDate>
-  </item><item>
-    <title>EE</title>
-    <link>https://wiki.likui.info/Area/EE/</link>
-    <guid>https://wiki.likui.info/Area/EE/</guid>
-    <description><![CDATA[ 电子、电气与嵌入式系统的学习地图。 ]]></description>
-    <pubDate>Mon, 02 Nov 2026 11:50:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
