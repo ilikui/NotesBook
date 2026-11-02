@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>软件与汽车软件开发生命周期</title>
+    <link>https://wiki.likui.info/Area/EE/%E8%BD%AF%E4%BB%B6%E4%B8%8E%E6%B1%BD%E8%BD%A6%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F</link>
+    <guid>https://wiki.likui.info/Area/EE/%E8%BD%AF%E4%BB%B6%E4%B8%8E%E6%B1%BD%E8%BD%A6%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F</guid>
+    <description><![CDATA[ 软件与汽车软件开发生命周期 软件开发不是简单的“需求—编码—测试—上线”线性过程，而是需求、设计、实现、验证、发布和运维持续反馈的生命周期。汽车软件还需要把功能安全、配置管理、变更控制和软硬件协同验证贯穿其中。 一、通用软件开发生命周期 阶段核心活动典型产出需求分析明确用户、业务目标、约束和验收条件需求规格、用户故事、验收标准系统与软件设计架构分解、接口设计、数据设计和风险分析架构/设计文档、接口定义实现编码、代码评审、静态检查、单元测试代码、构建产物、评审记录验证与确认单元、集成、系统和验收测试测试用例、结果、缺陷记录发布与部署版本冻结、发布审批、部署与回滚准备发布包、版本说明、部署记录运维... ]]></description>
+    <pubDate>Mon, 02 Nov 2026 11:49:39 GMT</pubDate>
+  </item><item>
+    <title>KM</title>
+    <link>https://wiki.likui.info/Area/KM/</link>
+    <guid>https://wiki.likui.info/Area/KM/</guid>
+    <description><![CDATA[ KM（Knowledge Management，知识管理） 关注如何高效地收集、理解、组织、连接和复用个人知识。它不只是工具问题，更是一套帮助思考与行动持续改进的方法。 一句话定位 让知识「进得来、找得到、连得上、用得上」，并最终转化为判断、作品与行动。 知识管理地图 flowchart TD A[&quot;知识输入&quot;] --&gt; B[&quot;捕捉与收集&quot;] B --&gt; C[&quot;阅读与理解&quot;] C --&gt; D[&quot;提炼为自己的表达&quot;] D --&gt; E[&quot;组织与连接&quot;] E --&gt; F[... ]]></description>
+    <pubDate>Mon, 02 Nov 2026 11:48:34 GMT</pubDate>
+  </item><item>
     <title>人工智能学习中心</title>
     <link>https://wiki.likui.info/Area/AI/</link>
     <guid>https://wiki.likui.info/Area/AI/</guid>
@@ -53,18 +65,6 @@
     <guid>https://wiki.likui.info/Resource/RSS%E4%B8%8E%E4%BF%A1%E6%81%AF%E6%BA%90%E7%AE%A1%E7%90%86</guid>
     <description><![CDATA[ RSS 与信息源管理 信息源管理的目标不是订阅越多越好，而是让可靠来源持续进入一个可筛选、可追溯、可复用的输入流程。RSS 适合自动收集更新，但仍需要人工判断来源质量和内容价值。 信息源分层 类型主要用途例子官方标准与规范确认定义、约束和版本AUTOSAR、ISO 标准发布机构、芯片厂商文档专业媒体与技术社区发现新技术和行业动态InfoQ、EEJournal、Hacker News、开源中国论文与课程系统学习和研究大学课程、论文数据库、公开教材开源项目验证工程实现GitHub 仓库、Issue、Release 与示例代码人文与通识资源扩展背景知识博物馆数字资源、数字敦煌、图书与讲座 RSS 工... ]]></description>
     <pubDate>Mon, 02 Nov 2026 11:12:56 GMT</pubDate>
-  </item><item>
-    <title>日常知识基础速查</title>
-    <link>https://wiki.likui.info/Resource/%E6%97%A5%E5%B8%B8%E7%9F%A5%E8%AF%86/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E9%80%9F%E6%9F%A5</link>
-    <guid>https://wiki.likui.info/Resource/%E6%97%A5%E5%B8%B8%E7%9F%A5%E8%AF%86/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E9%80%9F%E6%9F%A5</guid>
-    <description><![CDATA[ 日常知识基础速查 本页将零散的日常知识卡片整理成可检索的参考入口。涉及法规、标准目录和车辆功能时，以官方现行文件、车辆说明书和当地规定为准；历史笔记只作为线索，不直接当作最新规则。 1. ]]></description>
-    <pubDate>Mon, 02 Nov 2026 11:11:02 GMT</pubDate>
-  </item><item>
-    <title>KM</title>
-    <link>https://wiki.likui.info/Area/KM/</link>
-    <guid>https://wiki.likui.info/Area/KM/</guid>
-    <description><![CDATA[ KM（Knowledge Management，知识管理） 关注如何高效地收集、理解、组织、连接和复用个人知识。它不只是工具问题，更是一套帮助思考与行动持续改进的方法。 一句话定位 让知识「进得来、找得到、连得上、用得上」，并最终转化为判断、作品与行动。 知识管理地图 flowchart TD A[&quot;知识输入&quot;] --&gt; B[&quot;捕捉与收集&quot;] B --&gt; C[&quot;阅读与理解&quot;] C --&gt; D[&quot;提炼为自己的表达&quot;] D --&gt; E[&quot;组织与连接&quot;] E --&gt; F[... ]]></description>
-    <pubDate>Mon, 02 Nov 2026 11:09:56 GMT</pubDate>
   </item>
     </channel>
   </rss>
