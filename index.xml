@@ -6,17 +6,17 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Resource</title>
+    <link>https://wiki.likui.info/Resource/</link>
+    <guid>https://wiki.likui.info/Resource/</guid>
+    <description><![CDATA[ 暂无明确项目归属、但值得持续探索的主题与参考材料。 ]]></description>
+    <pubDate>Mon, 02 Nov 2026 11:15:26 GMT</pubDate>
+  </item><item>
     <title>Flomo 迁移记录</title>
     <link>https://wiki.likui.info/Resource/Flomo%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95</link>
     <guid>https://wiki.likui.info/Resource/Flomo%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95</guid>
     <description><![CDATA[ Flomo 迁移记录 本页记录 Flomo → NotesBook 的增量迁移情况，避免重复导入。迁移标记表示相关内容已被整理、引用或归档到 NotesBook，不表示 Flomo 原文可以删除。 Flomo 原文和既有标签继续保留。 2026-11-02 本批完成 本批新增核对并标记 #Archive/MigratedWiki 的 Flomo 笔记 27 条： 来源分类本批数量NotesBook 目标历史上下五千年12上古与夏商周、军事制度经济思想与文化、科技生活审美地理与史料；对应原始题库与专题文章来源均已回链Linux / GCC1嵌入式工程进阶与实战补充：新增 GCC 编译阶段、交叉编... ]]></description>
     <pubDate>Mon, 02 Nov 2026 11:15:20 GMT</pubDate>
-  </item><item>
-    <title>Resource</title>
-    <link>https://wiki.likui.info/Resource/</link>
-    <guid>https://wiki.likui.info/Resource/</guid>
-    <description><![CDATA[ 暂无明确项目归属、但值得持续探索的主题与参考材料。 ]]></description>
-    <pubDate>Mon, 02 Nov 2026 11:14:36 GMT</pubDate>
   </item><item>
     <title>开发工具与工程工具链</title>
     <link>https://wiki.likui.info/Resource/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%B7%A5%E5%85%B7%E9%93%BE</link>
