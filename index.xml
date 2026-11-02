@@ -6,17 +6,23 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Resource</title>
+    <link>https://wiki.likui.info/Resource/</link>
+    <guid>https://wiki.likui.info/Resource/</guid>
+    <description><![CDATA[ 暂无明确项目归属、但值得持续探索的主题与参考材料。 ]]></description>
+    <pubDate>Mon, 02 Nov 2026 11:14:36 GMT</pubDate>
+  </item><item>
+    <title>开发工具与工程工具链</title>
+    <link>https://wiki.likui.info/Resource/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%B7%A5%E5%85%B7%E9%93%BE</link>
+    <guid>https://wiki.likui.info/Resource/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%B7%A5%E5%85%B7%E9%93%BE</guid>
+    <description><![CDATA[ 开发工具与工程工具链 工具应服务于工作流，而不是反过来决定工作流。选择工具时重点考虑目标平台、团队标准、许可证、可重复构建、数据可追溯和自动化能力。 工具分层 环节常见工具主要用途编辑与开发VS Code、STM32CubeIDE、Keil、IAR编辑、编译、调试 MCU 软件AUTOSAR 配置DaVinci Developer / Configurator、EB tresos Studio配置 SWC、BSW、通信与生成代码；具体能力依版本和授权而异模型开发MATLAB / Simulink、Embedded Coder建模、仿真、代码生成与验证总线分析CANoe网络仿真、报文分析、诊断与... ]]></description>
+    <pubDate>Mon, 02 Nov 2026 11:14:29 GMT</pubDate>
+  </item><item>
     <title>EE</title>
     <link>https://wiki.likui.info/Area/EE/</link>
     <guid>https://wiki.likui.info/Area/EE/</guid>
     <description><![CDATA[ 电子、电气与嵌入式系统的学习地图。 ]]></description>
     <pubDate>Mon, 02 Nov 2026 11:14:00 GMT</pubDate>
-  </item><item>
-    <title>Resource</title>
-    <link>https://wiki.likui.info/Resource/</link>
-    <guid>https://wiki.likui.info/Resource/</guid>
-    <description><![CDATA[ 暂无明确项目归属、但值得持续探索的主题与参考材料。 ]]></description>
-    <pubDate>Mon, 02 Nov 2026 11:13:03 GMT</pubDate>
   </item><item>
     <title>RSS 与信息源管理</title>
     <link>https://wiki.likui.info/Resource/RSS%E4%B8%8E%E4%BF%A1%E6%81%AF%E6%BA%90%E7%AE%A1%E7%90%86</link>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</guid>
     <description><![CDATA[ 从微信读书自动同步的个人书架与阅读记录索引。 ]]></description>
     <pubDate>Sun, 01 Nov 2026 20:33:07 GMT</pubDate>
-  </item><item>
-    <title>软考高级1000问：系统架构师与项目管理基础</title>
-    <link>https://wiki.likui.info/Project/%E8%80%83%E8%AF%95%E7%AE%A1%E7%90%86/%E8%BD%AF%E8%80%83%E9%AB%98%E7%BA%A71000%E9%97%AE</link>
-    <guid>https://wiki.likui.info/Project/%E8%80%83%E8%AF%95%E7%AE%A1%E7%90%86/%E8%BD%AF%E8%80%83%E9%AB%98%E7%BA%A71000%E9%97%AE</guid>
-    <description><![CDATA[ 软考高级1000问：系统架构师与项目管理基础 本篇迁移 Flomo 中两份软考高级问题库的首批 20 道基础题。答案采用“定义—原理—计算/判断—易错点”的应试结构。软考大纲、教材版本和当年考试政策可能变化，正式备考应以当年官方考试说明和指定教材为准。 一、系统架构师（SA-Q1–SA-Q10） 本页合并两条独立题目线：系统架构师基础 SA-Q1–SA-Q10，以及项目管理师基础 PM-Q11–PM-Q20。编号前缀用于避免两个方向后续扩展时发生题号冲突。 SA-Q1. ]]></description>
-    <pubDate>Sun, 01 Nov 2026 13:41:31 GMT</pubDate>
   </item>
     </channel>
   </rss>
