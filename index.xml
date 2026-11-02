@@ -6,29 +6,17 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Flomo 迁移记录</title>
-    <link>https://wiki.likui.info/Resource/Flomo%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95</link>
-    <guid>https://wiki.likui.info/Resource/Flomo%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95</guid>
-    <description><![CDATA[ Flomo 迁移记录 本页记录 Flomo → NotesBook 的增量迁移情况，避免重复导入。迁移标记表示相关内容已被整理、引用或归档到 NotesBook，不表示 Flomo 原文可以删除。 Flomo 原文和既有标签继续保留。 2026-11-02 本批完成 本批（本次续迁）新增核对并标记 #Archive/MigratedWiki 的 Flomo 笔记 34 条： 来源分类本批数量NotesBook 目标历史上下五千年12上古与夏商周、军事制度经济思想与文化、科技生活审美地理与史料；对应原始题库与专题文章来源均已回链Linux / GCC1嵌入式工程进阶与实战补充：新增 GCC 编译... ]]></description>
-    <pubDate>Mon, 02 Nov 2026 11:59:26 GMT</pubDate>
-  </item><item>
-    <title>1000问知识体系</title>
-    <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
-    <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
-    <description><![CDATA[ 1000问知识体系 这里集中整理 Flomo 中长期积累的「1000问 / 1000题 / 10000问」问题库、逐题解答和专题卡片。目标不是只保存题目，而是把每个问题沉淀为可检索、可验证、可复用的知识单元。 迁移原则：保留问题原意；合并重复题但记录关联；答案给出原理、适用边界和验证方法；技术内容尽量附 Mermaid 图；未核验的结论明确标注待核验。Flomo 原笔记暂不删除。 知识迁移流程 flowchart TD A[Flomo 原始笔记] --&gt; B[检索与盘点] B --&gt; C[按主题归类] C --&gt; D[识别重复问题] D --&gt; E[读取完整原文] E ... ]]></description>
-    <pubDate>Mon, 02 Nov 2026 11:59:20 GMT</pubDate>
-  </item><item>
-    <title>历史知识专题</title>
-    <link>https://wiki.likui.info/Resource/History/</link>
-    <guid>https://wiki.likui.info/Resource/History/</guid>
-    <description><![CDATA[ 历史知识专题 历史学习以时间线为主干，以制度、经济、军事、思想、文化、科技、生活和地理为专题。回答问题时区分史料事实、学术解释和价值评价。 1000问逐题解答 上古与夏商周 —— 神话传说、夏代争议、甲骨文、商周制度与史料边界。 军事制度经济思想与文化 —— 战争、中央官制、地方治理、科举、土地经济、宗教思想与文学典籍。 科技生活审美地理与史料 —— 古代科技工程、社会生活、女性史、服饰工艺、疆域人口和史料方法。 近代转型抗日战争与共和国成立 —— Q52–Q61：共和探索、军阀割据、新文化与五四、北伐、长征、抗日战争、重庆谈判、三大战役与共和国成立。 flowchart TD A[上古与先秦... ]]></description>
-    <pubDate>Mon, 02 Nov 2026 11:59:16 GMT</pubDate>
-  </item><item>
     <title>历史上下五千年1000问：近代转型、抗日战争与共和国成立</title>
     <link>https://wiki.likui.info/Resource/History/1000%E9%97%AE/%E8%BF%91%E4%BB%A3%E8%BD%AC%E5%9E%8B%E6%8A%97%E6%97%A5%E6%88%98%E4%BA%89%E4%B8%8E%E5%85%B1%E5%92%8C%E5%9B%BD%E6%88%90%E7%AB%8B</link>
     <guid>https://wiki.likui.info/Resource/History/1000%E9%97%AE/%E8%BF%91%E4%BB%A3%E8%BD%AC%E5%9E%8B%E6%8A%97%E6%97%A5%E6%88%98%E4%BA%89%E4%B8%8E%E5%85%B1%E5%92%8C%E5%9B%BD%E6%88%90%E7%AB%8B</guid>
     <description><![CDATA[ 历史上下五千年1000问：近代转型、抗日战争与共和国成立 本篇承接历史问答 Q1–Q51，新增 Q52–Q61，覆盖清末之后的共和探索、军阀割据、新文化运动、五四运动、北伐、长征、抗日战争、战后谈判、国共内战和中华人民共和国成立初期。 阅读原则： 近现代史涉及政治立场、战争记忆和不同群体的历史经验。答案区分可核实事件、学术解释和反事实问题；不把单一因素当作全部原因，也不把“如果当时……”写成可证实的历史结论。 一、共和探索与社会思潮 Q52. ]]></description>
     <pubDate>Mon, 02 Nov 2026 11:59:08 GMT</pubDate>
+  </item><item>
+    <title>Flomo 迁移记录</title>
+    <link>https://wiki.likui.info/Resource/Flomo%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95</link>
+    <guid>https://wiki.likui.info/Resource/Flomo%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95</guid>
+    <description><![CDATA[ Flomo 迁移记录 本页记录 Flomo → NotesBook 的增量迁移情况，避免重复导入。迁移标记表示相关内容已被整理、引用或归档到 NotesBook，不表示 Flomo 原文可以删除。 Flomo 原文和既有标签继续保留。 2026-11-02 本批完成 本批（本次续迁）新增核对并标记 #Archive/MigratedWiki 的 Flomo 笔记 34 条： 来源分类本批数量NotesBook 目标历史上下五千年12上古与夏商周、军事制度经济思想与文化、科技生活审美地理与史料；对应原始题库与专题文章来源均已回链Linux / GCC1嵌入式工程进阶与实战补充：新增 GCC 编译... ]]></description>
+    <pubDate>Mon, 02 Nov 2026 11:50:03 GMT</pubDate>
   </item><item>
     <title>EE</title>
     <link>https://wiki.likui.info/Area/EE/</link>
@@ -65,6 +53,18 @@
     <guid>https://wiki.likui.info/Area/AI/AI%E8%BE%85%E5%8A%A9%E5%B7%A5%E7%A8%8B%E7%9F%A5%E8%AF%86%E5%B7%A5%E4%BD%9C%E6%B5%81</guid>
     <description><![CDATA[ AI辅助工程知识工作流：MCP、需求追溯与工具化 AI 工具的工程价值不在于“接入了模型”，而在于能否把需求、代码、证据、测试和知识连接起来，并让结果可复核、可追踪。 一、MCP 的定位 Model Context Protocol（MCP）是一种让 AI 应用以统一方式访问外部工具和上下文的开放协议。它不是模型本身，也不等于 Agent 框架。 概念主要职责LLM理解输入、生成文本或结构化输出MCP Host承载 AI 交互的应用，例如支持 MCP 的编辑器或桌面应用MCP ClientHost 内负责连接 MCP Server 的协议客户端MCP Server对外提供 Tools、Reso... ]]></description>
     <pubDate>Mon, 02 Nov 2026 11:48:19 GMT</pubDate>
+  </item><item>
+    <title>Resource</title>
+    <link>https://wiki.likui.info/Resource/</link>
+    <guid>https://wiki.likui.info/Resource/</guid>
+    <description><![CDATA[ 暂无明确项目归属、但值得持续探索的主题与参考材料。 ]]></description>
+    <pubDate>Mon, 02 Nov 2026 11:15:26 GMT</pubDate>
+  </item><item>
+    <title>开发工具与工程工具链</title>
+    <link>https://wiki.likui.info/Resource/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%B7%A5%E5%85%B7%E9%93%BE</link>
+    <guid>https://wiki.likui.info/Resource/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%B7%A5%E5%85%B7%E9%93%BE</guid>
+    <description><![CDATA[ 开发工具与工程工具链 工具应服务于工作流，而不是反过来决定工作流。选择工具时重点考虑目标平台、团队标准、许可证、可重复构建、数据可追溯和自动化能力。 工具分层 环节常见工具主要用途编辑与开发VS Code、STM32CubeIDE、Keil、IAR编辑、编译、调试 MCU 软件AUTOSAR 配置DaVinci Developer / Configurator、EB tresos Studio配置 SWC、BSW、通信与生成代码；具体能力依版本和授权而异模型开发MATLAB / Simulink、Embedded Coder建模、仿真、代码生成与验证总线分析CANoe网络仿真、报文分析、诊断与... ]]></description>
+    <pubDate>Mon, 02 Nov 2026 11:14:29 GMT</pubDate>
   </item>
     </channel>
   </rss>
