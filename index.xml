@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>EE</title>
+    <link>https://wiki.likui.info/Area/EE/</link>
+    <guid>https://wiki.likui.info/Area/EE/</guid>
+    <description><![CDATA[ 电子、电气与嵌入式系统的学习地图。 ]]></description>
+    <pubDate>Mon, 02 Nov 2026 11:07:57 GMT</pubDate>
+  </item><item>
     <title>嵌入式工程进阶与实战补充</title>
     <link>https://wiki.likui.info/Area/EE/%E5%B5%8C%E5%85%A5%E5%BC%8F/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B7%A5%E7%A8%8B%E8%BF%9B%E9%98%B6%E4%B8%8E%E5%AE%9E%E6%88%98%E8%A1%A5%E5%85%85</link>
     <guid>https://wiki.likui.info/Area/EE/%E5%B5%8C%E5%85%A5%E5%BC%8F/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B7%A5%E7%A8%8B%E8%BF%9B%E9%98%B6%E4%B8%8E%E5%AE%9E%E6%88%98%E8%A1%A5%E5%85%85</guid>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90Q2-BSW%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91%E5%AE%8F%E5%88%A4%E6%96%AD</guid>
     <description><![CDATA[ 生成代码分析与集成 Q2：BSW 生成代码用宏控制条件编译——怎么确定某配置参数对应宏是 ENABLED 还是 DISABLED？ 原始 Flomo：v.flomoapp.com/mine/ 生成代码分析与集成 Q2：BSW 生成代码用宏控制条件编译——怎么确定某配置参数对应宏是 ENABLED 还是 DISABLED？ 生成器把每个配置参数翻译成预处理器宏，命名有规律（如 XXX_ENABLED / XXX_ACTIVE / XXX_USE_…），值为 STD_ON / STD_OFF 或 TRUE / FALSE。 三个直接手段： 看生成的配置头文件（_Cfg.h）：在生成目录里搜宏名（如... ]]></description>
     <pubDate>Sun, 01 Nov 2026 13:39:16 GMT</pubDate>
-  </item><item>
-    <title>变体管理 Q1：一套 AUTOSAR 代码适配高配 / 低配车——怎么做到不维护两套配置？</title>
-    <link>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%8F%98%E4%BD%93%E7%AE%A1%E7%90%86-%E9%AB%98%E4%BD%8E%E9%85%8D%E8%BD%A6%E5%9E%8B%E5%A4%8D%E7%94%A8</link>
-    <guid>https://wiki.likui.info/Project/AUTOSAR/1000%E9%97%AE/%E5%8F%98%E4%BD%93%E7%AE%A1%E7%90%86-%E9%AB%98%E4%BD%8E%E9%85%8D%E8%BD%A6%E5%9E%8B%E5%A4%8D%E7%94%A8</guid>
-    <description><![CDATA[ 变体管理 Q1：一套 AUTOSAR 代码适配高配 / 低配车——怎么做到不维护两套配置？ 原始 Flomo：v.flomoapp.com/mine/ 变体管理 Q1：一套 AUTOSAR 代码适配高配 / 低配车——怎么做到不维护两套配置？ 核心：不是维护两套配置，而是一套配置 + 变体条件（Variant Handling / Variant Point），按「当前激活的变体」解析出需要的部分。 三个关键概念： 变体点（Variant Point）：配置里「可以变化」的元素——一个参数、一个 PDU、一个 SW-C、一个端口、一条连接。 变体条件（Variant Condition）：用 ... ]]></description>
-    <pubDate>Sun, 01 Nov 2026 13:39:13 GMT</pubDate>
   </item>
     </channel>
   </rss>
