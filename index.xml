@@ -6,12 +6,6 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Resource</title>
-    <link>https://wiki.likui.info/Resource/</link>
-    <guid>https://wiki.likui.info/Resource/</guid>
-    <description><![CDATA[ 暂无明确项目归属、但值得持续探索的主题与参考材料。 ]]></description>
-    <pubDate>Mon, 02 Nov 2026 11:14:36 GMT</pubDate>
-  </item><item>
     <title>开发工具与工程工具链</title>
     <link>https://wiki.likui.info/Resource/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%B7%A5%E5%85%B7%E9%93%BE</link>
     <guid>https://wiki.likui.info/Resource/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%B7%A5%E5%85%B7%E9%93%BE</guid>
@@ -23,6 +17,12 @@
     <guid>https://wiki.likui.info/Area/EE/</guid>
     <description><![CDATA[ 电子、电气与嵌入式系统的学习地图。 ]]></description>
     <pubDate>Mon, 02 Nov 2026 11:14:00 GMT</pubDate>
+  </item><item>
+    <title>Resource</title>
+    <link>https://wiki.likui.info/Resource/</link>
+    <guid>https://wiki.likui.info/Resource/</guid>
+    <description><![CDATA[ 暂无明确项目归属、但值得持续探索的主题与参考材料。 ]]></description>
+    <pubDate>Mon, 02 Nov 2026 11:13:03 GMT</pubDate>
   </item><item>
     <title>RSS 与信息源管理</title>
     <link>https://wiki.likui.info/Resource/RSS%E4%B8%8E%E4%BF%A1%E6%81%AF%E6%BA%90%E7%AE%A1%E7%90%86</link>
