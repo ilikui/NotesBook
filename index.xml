@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Flomo 迁移记录</title>
+    <link>https://wiki.likui.info/Resource/Flomo%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95</link>
+    <guid>https://wiki.likui.info/Resource/Flomo%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95</guid>
+    <description><![CDATA[ Flomo 迁移记录 本页记录 Flomo → NotesBook 的增量迁移情况，避免重复导入。迁移标记表示相关内容已被整理、引用或归档到 NotesBook，不表示 Flomo 原文可以删除。 Flomo 原文和既有标签继续保留。 2026-11-02 本批完成 本批新增核对并标记 #Archive/MigratedWiki 的 Flomo 笔记 27 条： 来源分类本批数量NotesBook 目标历史上下五千年12上古与夏商周、军事制度经济思想与文化、科技生活审美地理与史料；对应原始题库与专题文章来源均已回链Linux / GCC1嵌入式工程进阶与实战补充：新增 GCC 编译阶段、交叉编... ]]></description>
+    <pubDate>Mon, 02 Nov 2026 11:15:20 GMT</pubDate>
+  </item><item>
+    <title>Resource</title>
+    <link>https://wiki.likui.info/Resource/</link>
+    <guid>https://wiki.likui.info/Resource/</guid>
+    <description><![CDATA[ 暂无明确项目归属、但值得持续探索的主题与参考材料。 ]]></description>
+    <pubDate>Mon, 02 Nov 2026 11:14:36 GMT</pubDate>
+  </item><item>
     <title>开发工具与工程工具链</title>
     <link>https://wiki.likui.info/Resource/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%B7%A5%E5%85%B7%E9%93%BE</link>
     <guid>https://wiki.likui.info/Resource/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%B7%A5%E5%85%B7%E9%93%BE</guid>
@@ -17,12 +29,6 @@
     <guid>https://wiki.likui.info/Area/EE/</guid>
     <description><![CDATA[ 电子、电气与嵌入式系统的学习地图。 ]]></description>
     <pubDate>Mon, 02 Nov 2026 11:14:00 GMT</pubDate>
-  </item><item>
-    <title>Resource</title>
-    <link>https://wiki.likui.info/Resource/</link>
-    <guid>https://wiki.likui.info/Resource/</guid>
-    <description><![CDATA[ 暂无明确项目归属、但值得持续探索的主题与参考材料。 ]]></description>
-    <pubDate>Mon, 02 Nov 2026 11:13:03 GMT</pubDate>
   </item><item>
     <title>RSS 与信息源管理</title>
     <link>https://wiki.likui.info/Resource/RSS%E4%B8%8E%E4%BF%A1%E6%81%AF%E6%BA%90%E7%AE%A1%E7%90%86</link>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Area/EE/%E5%B5%8C%E5%85%A5%E5%BC%8F/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B7%A5%E7%A8%8B%E8%BF%9B%E9%98%B6%E4%B8%8E%E5%AE%9E%E6%88%98%E8%A1%A5%E5%85%85</guid>
     <description><![CDATA[ 嵌入式工程进阶与实战补充 本页补齐 Flomo「嵌入式学习」分类中尚未在 NotesBook 找到来源 ID 的 12 条有效卡片。内容横跨指令译码、链接脚本、电源时序、BLDC、FreeRTOS、CAN 故障、调试方法与学习资源。已在硬件、电机控制、通信专题中归档的卡片不重复复制；空白占位卡不作为知识条目迁移。 工程知识关联图 flowchart TD A[嵌入式工程] --&gt; B[处理器与指令集] A --&gt; C[启动与链接] A --&gt; D[硬件电源与信号完整性] A --&gt; E[实时软件] A --&gt; F[通信与调试] C --&gt; C1[Linker... ]]></description>
     <pubDate>Mon, 02 Nov 2026 11:06:42 GMT</pubDate>
-  </item><item>
-    <title>微信读书</title>
-    <link>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</link>
-    <guid>https://wiki.likui.info/Resource/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</guid>
-    <description><![CDATA[ 从微信读书自动同步的个人书架与阅读记录索引。 ]]></description>
-    <pubDate>Sun, 01 Nov 2026 20:33:07 GMT</pubDate>
   </item>
     </channel>
   </rss>
