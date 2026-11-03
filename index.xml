@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Flomo 迁移记录</title>
+    <link>https://wiki.likui.info/Resource/Flomo%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95</link>
+    <guid>https://wiki.likui.info/Resource/Flomo%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95</guid>
+    <description><![CDATA[ Flomo 迁移记录 本页记录 Flomo → NotesBook 的增量迁移情况，避免重复导入。迁移标记表示相关内容已被整理、引用或归档到 NotesBook，不表示 Flomo 原文可以删除。 Flomo 原文和既有标签继续保留。 2026-11-02 本批完成 本批（本次续迁）新增核对并标记 #Archive/MigratedWiki 的 Flomo 笔记 34 条： 来源分类本批数量NotesBook 目标历史上下五千年12上古与夏商周、军事制度经济思想与文化、科技生活审美地理与史料；对应原始题库与专题文章来源均已回链Linux / GCC1嵌入式工程进阶与实战补充：新增 GCC 编译... ]]></description>
+    <pubDate>Tue, 03 Nov 2026 11:23:31 GMT</pubDate>
+  </item><item>
     <title>1000问知识体系</title>
     <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
     <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
@@ -23,12 +29,6 @@
     <guid>https://wiki.likui.info/Resource/History/1000%E9%97%AE/%E4%B8%AD%E5%9B%BD%E5%8F%A4%E4%BB%A3%E6%94%BF%E6%B2%BB%E5%88%B6%E5%BA%A6%E4%B8%8E%E5%AE%98%E5%83%9A%E4%BD%93%E7%B3%BB</guid>
     <description><![CDATA[ 中国古代政治制度与官僚体系 本篇依据 Flomo「专栏⑱·第2篇：制度与官制」整理。讨论古代制度时，区分制度设计、实际运作与后世评价；不把朝代制度简化为一条必然进步或必然衰败的线性道路。 Q121｜秦汉三公九卿制如何分工？它真的是稳定的“三权分立”吗？ 简答： 秦汉中央官制以皇帝为最高权力中心，丞相、太尉、御史大夫等官职承担行政、军事和监察等职能，但它不是现代意义上的三权分立。职权会随皇帝意志、朝代制度和具体时期变化，汉代也逐步出现尚书等中枢机构分割、承接原有权力的过程。 展开： 丞相： 负责统领百官、处理政务，是中央行政体系的重要首长；其实际权力取决于皇帝授权和官僚结构。 太尉： 传统上承担... ]]></description>
     <pubDate>Tue, 03 Nov 2026 11:23:05 GMT</pubDate>
-  </item><item>
-    <title>Flomo 迁移记录</title>
-    <link>https://wiki.likui.info/Resource/Flomo%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95</link>
-    <guid>https://wiki.likui.info/Resource/Flomo%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95</guid>
-    <description><![CDATA[ Flomo 迁移记录 本页记录 Flomo → NotesBook 的增量迁移情况，避免重复导入。迁移标记表示相关内容已被整理、引用或归档到 NotesBook，不表示 Flomo 原文可以删除。 Flomo 原文和既有标签继续保留。 2026-11-02 本批完成 本批（本次续迁）新增核对并标记 #Archive/MigratedWiki 的 Flomo 笔记 34 条： 来源分类本批数量NotesBook 目标历史上下五千年12上古与夏商周、军事制度经济思想与文化、科技生活审美地理与史料；对应原始题库与专题文章来源均已回链Linux / GCC1嵌入式工程进阶与实战补充：新增 GCC 编译... ]]></description>
-    <pubDate>Tue, 03 Nov 2026 10:35:45 GMT</pubDate>
   </item><item>
     <title>晚清外交、义和团与辛亥革命</title>
     <link>https://wiki.likui.info/Resource/History/1000%E9%97%AE/%E6%99%9A%E6%B8%85%E5%A4%96%E4%BA%A4%E4%B9%89%E5%92%8C%E5%9B%A2%E4%B8%8E%E8%BE%9B%E4%BA%A5%E9%9D%A9%E5%91%BD</link>
