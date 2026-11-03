@@ -148,3 +148,19 @@ tags:
 - 更新 `content/Resource/History/index.md` 与 `content/Resource/1000问题系列/index.md`。历史专题答案页由 10 篇增至 11 篇，连续编辑编号由 Q1–Q104 扩展至 Q1–Q112。
 - 本批对 Flomo 原文只读，没有删除、改写或新增迁移标签。原始“军事与对外”笔记同时含古代战役、军制、游牧军事和中外交流等多个子专题；当前已分批覆盖其中部分内容，不能将整篇标记为完整迁移。
 - GitHub 文件写入后将回读核验；仓库提交成功不等于 Vercel 构建或线上部署成功。
+
+
+## 2026-11-03 继续补全晚清外交与辛亥革命（Q113–Q120）
+
+- 新增 content/Resource/History/1000问/晚清外交义和团与辛亥革命.md，完成 NotesBook 连续编辑编号 Q113–Q120。
+- 覆盖近代条约体系与主权限制、总理衙门到外务部、义和团运动的地方社会背景、1900 年清廷对外决策、八国联军、《辛丑条约》赔款与军事外交限制、清末新政、保路运动、武昌起义、清帝退位与袁世凯角色。
+- 重点辨析：八国联军八个军事参与国与《辛丑条约》十一国签约方不同；《辛丑条约》4.5 亿海关两本金按 4% 利息分 39 年偿还；“慈禧向十一国宣战”不是可脱离谕旨和外交档案直接引用的完整解释；义和团暴力与联军侵略暴行均纳入叙述。
+- 更新 content/Resource/History/index.md 与 content/Resource/1000问题系列/index.md；历史答案页由 11 篇增至 12 篇，连续编辑编号由 Q1–Q112 扩展至 Q1–Q120。
+- 参考 Oxford Research Encyclopedia、Oxford University Press、Cambridge University Press、《清史研究》、美国国务院 1901 年外交档案和四川大学学术论文；区分条约文本、外交档案与后世解释。
+- Flomo 原文保持只读，未删除、改写或新增迁移标签。原始历史题库仍有其他古代与近代题目待逐题映射，不能因本批完成而将整条来源标记为全部迁移。
+
+## 部署状态口径纠正（2026-11-03）
+
+- 用户确认 NotesBook 使用 Cloudflare，此前 GitHub Combined Status 中的 Vercel failure / Account is blocked 不属于本项目当前部署验收依据，后续忽略。
+- 已通过 Cloudflare API 核对账户中的 Worker notesbook。最新部署记录：cc9498d0-36d9-4d2a-9790-6cba947e2a2e，创建时间 2026-11-03T10:33:17.519498Z，版本 0d42b481-a245-4ba4-93a2-800b756e74ca，流量比例 100%。
+- 该记录证明 Cloudflare Worker 部署版本已处于 100% 流量分配；不将 Vercel 状态用于判断 NotesBook 是否部署成功。后续继续以 Cloudflare Worker 部署记录、线上 HTTP 可访问性和实际页面内容作为验收依据。
