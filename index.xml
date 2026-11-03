@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Flomo 迁移记录</title>
+    <link>https://wiki.likui.info/Resource/Flomo%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95</link>
+    <guid>https://wiki.likui.info/Resource/Flomo%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95</guid>
+    <description><![CDATA[ Flomo 迁移记录 本页记录 Flomo → NotesBook 的增量迁移情况，避免重复导入。迁移标记表示相关内容已被整理、引用或归档到 NotesBook，不表示 Flomo 原文可以删除。 Flomo 原文和既有标签继续保留。 2026-11-02 本批完成 本批（本次续迁）新增核对并标记 #Archive/MigratedWiki 的 Flomo 笔记 34 条： 来源分类本批数量NotesBook 目标历史上下五千年12上古与夏商周、军事制度经济思想与文化、科技生活审美地理与史料；对应原始题库与专题文章来源均已回链Linux / GCC1嵌入式工程进阶与实战补充：新增 GCC 编译... ]]></description>
+    <pubDate>Tue, 03 Nov 2026 12:08:50 GMT</pubDate>
+  </item><item>
     <title>1000问知识体系</title>
     <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
     <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
@@ -23,12 +29,6 @@
     <guid>https://wiki.likui.info/Resource/History/1000%E9%97%AE/%E4%B8%AD%E5%9B%BD%E5%8F%A4%E4%BB%A3%E5%9C%9F%E5%9C%B0%E5%88%B6%E5%BA%A6%E8%B5%8B%E7%A8%8E%E4%B8%8E%E5%95%86%E4%B8%9A%E7%BB%8F%E6%B5%8E</guid>
     <description><![CDATA[ 中国古代土地制度、赋税与商业经济 来源：Flomo「专栏⑱·第3篇：经济与商业——从井田制到海上丝绸之路」。本篇将原始提问拆成八个可独立检索的问题。土地制度、税制和货币制度在不同地区、时期并非整齐划一；以下结论强调制度的主要趋势，不将复杂变迁简化成单一原因。 Q129｜井田制是什么？它为何在春秋战国时期逐渐瓦解？ 简答： 井田制是后世文献对西周土地与赋役秩序的一种概括性描述，常以“公田”和“私田”说明贵族控制土地、农民承担耕作义务的关系。但它是否曾在整个西周普遍、整齐地按“九百亩、八家”模式运行，学界并无充分证据。春秋战国时期，铁器、牛耕、人口流动、诸侯国财政与战争动员等变化推动土地经营和征税... ]]></description>
     <pubDate>Tue, 03 Nov 2026 12:08:38 GMT</pubDate>
-  </item><item>
-    <title>Flomo 迁移记录</title>
-    <link>https://wiki.likui.info/Resource/Flomo%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95</link>
-    <guid>https://wiki.likui.info/Resource/Flomo%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95</guid>
-    <description><![CDATA[ Flomo 迁移记录 本页记录 Flomo → NotesBook 的增量迁移情况，避免重复导入。迁移标记表示相关内容已被整理、引用或归档到 NotesBook，不表示 Flomo 原文可以删除。 Flomo 原文和既有标签继续保留。 2026-11-02 本批完成 本批（本次续迁）新增核对并标记 #Archive/MigratedWiki 的 Flomo 笔记 34 条： 来源分类本批数量NotesBook 目标历史上下五千年12上古与夏商周、军事制度经济思想与文化、科技生活审美地理与史料；对应原始题库与专题文章来源均已回链Linux / GCC1嵌入式工程进阶与实战补充：新增 GCC 编译... ]]></description>
-    <pubDate>Tue, 03 Nov 2026 11:23:31 GMT</pubDate>
   </item><item>
     <title>中国古代政治制度与官僚体系</title>
     <link>https://wiki.likui.info/Resource/History/1000%E9%97%AE/%E4%B8%AD%E5%9B%BD%E5%8F%A4%E4%BB%A3%E6%94%BF%E6%B2%BB%E5%88%B6%E5%BA%A6%E4%B8%8E%E5%AE%98%E5%83%9A%E4%BD%93%E7%B3%BB</link>
