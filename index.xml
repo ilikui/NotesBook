@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>历史知识专题</title>
+    <link>https://wiki.likui.info/Resource/History/</link>
+    <guid>https://wiki.likui.info/Resource/History/</guid>
+    <description><![CDATA[ 历史知识专题 历史学习以时间线为主干，以制度、经济、军事、思想、文化、科技、生活和地理为专题。回答问题时区分史料事实、学术解释和价值评价。 1000问逐题解答 上古与夏商周 —— 神话传说、夏代争议、甲骨文、商周制度与史料边界。 军事制度经济思想与文化 —— 战争、中央官制、地方治理、科举、土地经济、宗教思想与文学典籍。 科技生活审美地理与史料 —— 古代科技工程、社会生活、女性史、服饰工艺、疆域人口和史料方法。 近代转型抗日战争与共和国成立 —— Q52–Q61：共和探索、军阀割据、新文化与五四、北伐、长征、抗日战争、重庆谈判、三大战役与共和国成立。 新中国成立初期与社会主义改造 —— Q6... ]]></description>
+    <pubDate>Tue, 03 Nov 2026 12:13:07 GMT</pubDate>
+  </item><item>
+    <title>中国古代思想流派与宗教发展</title>
+    <link>https://wiki.likui.info/Resource/History/1000%E9%97%AE/%E4%B8%AD%E5%9B%BD%E5%8F%A4%E4%BB%A3%E6%80%9D%E6%83%B3%E6%B5%81%E6%B4%BE%E4%B8%8E%E5%AE%97%E6%95%99%E5%8F%91%E5%B1%95</link>
+    <guid>https://wiki.likui.info/Resource/History/1000%E9%97%AE/%E4%B8%AD%E5%9B%BD%E5%8F%A4%E4%BB%A3%E6%80%9D%E6%83%B3%E6%B5%81%E6%B4%BE%E4%B8%8E%E5%AE%97%E6%95%99%E5%8F%91%E5%B1%95</guid>
+    <description><![CDATA[ 中国古代思想流派与宗教发展 本篇承接 中国古代政治制度与官僚体系 与 中国古代土地制度赋税与商业经济，从先秦诸子、汉代经学、魏晋玄学与佛教传播切入。讨论思想史时，区分思想家的原始文本、后世学派建构和国家制度化过程；不把复杂思想压缩成单一口号。 编号说明：Q137–Q144 是 NotesBook 连续编辑编号，不是 Flomo 原始题库编号。 Q137 为什么春秋战国时期出现百家争鸣？ 简答： 周王室权威衰落、诸侯竞争加剧、宗族贵族秩序变化，以及士阶层扩大，共同创造了思想竞争的社会条件。诸子提出不同的政治伦理方案，回应的是秩序重建、国家治理和社会生活等现实问题。 展开： 西周以来以宗法、分封和... ]]></description>
+    <pubDate>Tue, 03 Nov 2026 12:12:53 GMT</pubDate>
+  </item><item>
     <title>Flomo 迁移记录</title>
     <link>https://wiki.likui.info/Resource/Flomo%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95</link>
     <guid>https://wiki.likui.info/Resource/Flomo%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95</guid>
@@ -17,12 +29,6 @@
     <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
     <description><![CDATA[ 1000问知识体系 这里集中整理 Flomo 中长期积累的「1000问 / 1000题 / 10000问」问题库、逐题解答和专题卡片。目标不是只保存题目，而是把每个问题沉淀为可检索、可验证、可复用的知识单元。 迁移原则：保留问题原意；合并重复题但记录关联；答案给出原理、适用边界和验证方法；技术内容尽量附 Mermaid 图；未核验的结论明确标注待核验。Flomo 原笔记暂不删除。 知识迁移流程 flowchart TD A[Flomo 原始笔记] --&gt; B[检索与盘点] B --&gt; C[按主题归类] C --&gt; D[识别重复问题] D --&gt; E[读取完整原文] E ... ]]></description>
     <pubDate>Tue, 03 Nov 2026 12:08:45 GMT</pubDate>
-  </item><item>
-    <title>历史知识专题</title>
-    <link>https://wiki.likui.info/Resource/History/</link>
-    <guid>https://wiki.likui.info/Resource/History/</guid>
-    <description><![CDATA[ 历史知识专题 历史学习以时间线为主干，以制度、经济、军事、思想、文化、科技、生活和地理为专题。回答问题时区分史料事实、学术解释和价值评价。 1000问逐题解答 上古与夏商周 —— 神话传说、夏代争议、甲骨文、商周制度与史料边界。 军事制度经济思想与文化 —— 战争、中央官制、地方治理、科举、土地经济、宗教思想与文学典籍。 科技生活审美地理与史料 —— 古代科技工程、社会生活、女性史、服饰工艺、疆域人口和史料方法。 近代转型抗日战争与共和国成立 —— Q52–Q61：共和探索、军阀割据、新文化与五四、北伐、长征、抗日战争、重庆谈判、三大战役与共和国成立。 新中国成立初期与社会主义改造 —— Q6... ]]></description>
-    <pubDate>Tue, 03 Nov 2026 12:08:42 GMT</pubDate>
   </item><item>
     <title>中国古代土地制度、赋税与商业经济</title>
     <link>https://wiki.likui.info/Resource/History/1000%E9%97%AE/%E4%B8%AD%E5%9B%BD%E5%8F%A4%E4%BB%A3%E5%9C%9F%E5%9C%B0%E5%88%B6%E5%BA%A6%E8%B5%8B%E7%A8%8E%E4%B8%8E%E5%95%86%E4%B8%9A%E7%BB%8F%E6%B5%8E</link>
@@ -59,12 +65,6 @@
     <guid>https://wiki.likui.info/Resource/History/1000%E9%97%AE/%E4%B8%9D%E7%BB%B8%E4%B9%8B%E8%B7%AF%E4%B8%8E%E4%B8%AD%E5%A4%96%E6%96%87%E6%98%8E%E4%BA%A4%E6%B5%81</guid>
     <description><![CDATA[ 历史上下五千年 1000问：丝绸之路与中外文明交流 本页为 NotesBook 连续编辑编号 Q95–Q104。题目取自 Flomo「历史上下五千年·中外交流史专题」及专栏⑱第 1 篇。回答将史料事实、学术解释与后世叙事分开；“丝绸之路”不是一条固定道路，也不等于单向的中国输出。 Q95 张骞出使西域：丝绸之路是他“开辟”的吗？ 简答： 张骞出使的直接目标是联络大月氏、共同对抗匈奴，属于汉武帝时期的外交与战略行动，并非一开始就以建立商业通道为目的。他的报告让汉廷更系统地了解中亚诸国、交通条件和物产，推动了汉朝与西域之间的外交、军事和贸易往来。 关键辨析： 《史记·大宛列传》《汉书·张骞李广利传... ]]></description>
     <pubDate>Mon, 02 Nov 2026 12:59:32 GMT</pubDate>
-  </item><item>
-    <title>历史上下五千年1000问：军事战争与军事制度</title>
-    <link>https://wiki.likui.info/Resource/History/1000%E9%97%AE/%E5%86%9B%E4%BA%8B%E6%88%98%E4%BA%89%E4%B8%8E%E5%86%9B%E4%BA%8B%E5%88%B6%E5%BA%A6</link>
-    <guid>https://wiki.likui.info/Resource/History/1000%E9%97%AE/%E5%86%9B%E4%BA%8B%E6%88%98%E4%BA%89%E4%B8%8E%E5%86%9B%E4%BA%8B%E5%88%B6%E5%BA%A6</guid>
-    <description><![CDATA[ 历史上下五千年1000问：军事战争与军事制度 本篇从 Flomo「专栏⑱·第1篇：军事与对外」抽取军事战争史、军事制度演变和游牧军事三个板块，整理 NotesBook 连续编辑编号 Q85–Q94。原始题目中出现的兵力、伤亡、武器射程等数字，若缺少可靠交叉证据，不当作确定事实；对后世叙事与现代研究的差异单独说明。 一、关键战役：战争结果如何形成 Q85. ]]></description>
-    <pubDate>Mon, 02 Nov 2026 12:37:32 GMT</pubDate>
   </item>
     </channel>
   </rss>
