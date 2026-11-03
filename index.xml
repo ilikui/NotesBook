@@ -6,6 +6,12 @@
       <description>最近的10条笔记 on 数字花园</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Flomo 迁移记录</title>
+    <link>https://wiki.likui.info/Resource/Flomo%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95</link>
+    <guid>https://wiki.likui.info/Resource/Flomo%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95</guid>
+    <description><![CDATA[ Flomo 迁移记录 本页记录 Flomo → NotesBook 的增量迁移情况，避免重复导入。迁移标记表示相关内容已被整理、引用或归档到 NotesBook，不表示 Flomo 原文可以删除。 Flomo 原文和既有标签继续保留。 2026-11-02 本批完成 本批（本次续迁）新增核对并标记 #Archive/MigratedWiki 的 Flomo 笔记 34 条： 来源分类本批数量NotesBook 目标历史上下五千年12上古与夏商周、军事制度经济思想与文化、科技生活审美地理与史料；对应原始题库与专题文章来源均已回链Linux / GCC1嵌入式工程进阶与实战补充：新增 GCC 编译... ]]></description>
+    <pubDate>Tue, 03 Nov 2026 10:35:45 GMT</pubDate>
+  </item><item>
     <title>1000问知识体系</title>
     <link>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</link>
     <guid>https://wiki.likui.info/Resource/1000%E9%97%AE%E9%A2%98%E7%B3%BB%E5%88%97/</guid>
@@ -23,12 +29,6 @@
     <guid>https://wiki.likui.info/Resource/History/1000%E9%97%AE/%E6%99%9A%E6%B8%85%E5%A4%96%E4%BA%A4%E4%B9%89%E5%92%8C%E5%9B%A2%E4%B8%8E%E8%BE%9B%E4%BA%A5%E9%9D%A9%E5%91%BD</guid>
     <description><![CDATA[ 晚清外交、义和团与辛亥革命 本篇承接 Q105–Q112 的晚清军事改革，转向条约体系、外交机构、义和团事件、庚子战争、清末新政与王朝终结。阅读时区分条约文本、当事方外交档案、后世叙事和现代学术解释。 Q113｜近代条约体系如何改变清朝的主权与对外贸易？ 简答： 条约体系不是单一条约，而是从战争赔款、通商口岸、协定关税、领事裁判权、最惠国待遇，到租界、租借地和势力范围逐步叠加的制度安排。它使清政府在关税、司法、贸易和部分领土管理上受到外部约束，但各条约的具体权利、适用对象和执行方式并不完全相同。 展开： 通商口岸与贸易规则。 《南京条约》及后续条约开放口岸，允许外国商人居留、贸易，并逐渐形成领... ]]></description>
     <pubDate>Tue, 03 Nov 2026 10:35:08 GMT</pubDate>
-  </item><item>
-    <title>Flomo 迁移记录</title>
-    <link>https://wiki.likui.info/Resource/Flomo%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95</link>
-    <guid>https://wiki.likui.info/Resource/Flomo%E8%BF%81%E7%A7%BB%E8%AE%B0%E5%BD%95</guid>
-    <description><![CDATA[ Flomo 迁移记录 本页记录 Flomo → NotesBook 的增量迁移情况，避免重复导入。迁移标记表示相关内容已被整理、引用或归档到 NotesBook，不表示 Flomo 原文可以删除。 Flomo 原文和既有标签继续保留。 2026-11-02 本批完成 本批（本次续迁）新增核对并标记 #Archive/MigratedWiki 的 Flomo 笔记 34 条： 来源分类本批数量NotesBook 目标历史上下五千年12上古与夏商周、军事制度经济思想与文化、科技生活审美地理与史料；对应原始题库与专题文章来源均已回链Linux / GCC1嵌入式工程进阶与实战补充：新增 GCC 编译... ]]></description>
-    <pubDate>Tue, 03 Nov 2026 10:30:54 GMT</pubDate>
   </item><item>
     <title>晚清军事变革与甲午战争</title>
     <link>https://wiki.likui.info/Resource/History/1000%E9%97%AE/%E6%99%9A%E6%B8%85%E5%86%9B%E4%BA%8B%E5%8F%98%E9%9D%A9%E4%B8%8E%E7%94%B2%E5%8D%88%E6%88%98%E4%BA%89</link>
